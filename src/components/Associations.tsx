@@ -1,12 +1,13 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 export default function Associations() {
-  const associations = [
-    "/marcas/16.png",
-    "/marcas/17.png",
-    "/marcas/18.png"
+  const staticPhotos = [
+    { src: "/marcas/16.png", alt: "APA Certification Logo" },
+    { src: "/marcas/17.png", alt: "International Association Logo" },
+    { src: "/marcas/18.png", alt: "Security Association Logo" }
   ];
 
   return (
@@ -32,39 +33,45 @@ export default function Associations() {
         {/* Text / H2 Title */}
         <h2
           style={{
-            margin: "0 auto 50px auto",
+            margin: "0 auto 32px auto",
             padding: 0,
-            fontSize: "30px",
+            fontSize: "40px",
             fontWeight: "bold",
-            lineHeight: "42px",
+            lineHeight: "52px",
             color: "#48255A",
             textAlign: "center",
             fontFamily: "var(--font-montserrat), sans-serif",
             boxSizing: "border-box",
-            maxWidth: "800px",
+            maxWidth: "850px",
             width: "100%",
           }}
         >
           Somos miembros activos de las organizaciones más prestigiosas de la industria:
         </h2>
 
-        {/* Logos Grid: 3 centered transparent logos */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24 max-w-4xl mx-auto py-4">
-          {associations.map((logo, idx) => (
-            <div key={idx} className="flex items-center justify-center p-4 bg-white rounded-lg transition-all duration-300 hover:scale-105">
-              <img
-                src={logo}
-                alt={`Asociación ${idx + 1}`}
-                className="h-20 md:h-28 w-auto object-contain transition-all duration-300 filter grayscale opacity-75 hover:grayscale-0 hover:opacity-100 flex-shrink-0"
-                style={{
-                  mixBlendMode: "multiply", // Eliminate any white backgrounds transparently
-                }}
-                onError={(e) => {
-                  e.currentTarget.style.display = "none";
-                }}
-              />
-            </div>
-          ))}
+        {/* Centered Grid of Logos (Squared Border Matrix Style) */}
+        <div className="flex justify-center">
+          <div className="grid grid-cols-3 border-l border-t border-black/10 w-full max-w-2xl">
+            {staticPhotos.map((photo, index) => (
+              <div
+                key={index}
+                className="relative aspect-square border-r border-b border-black/10 flex items-center justify-center bg-transparent"
+              >
+                <div className="relative w-[92%] h-[92%] flex items-center justify-center">
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    className="object-contain transition-all duration-300 hover:grayscale hover:opacity-60 cursor-pointer"
+                    sizes="33vw"
+                    style={{
+                      mixBlendMode: "multiply", // Eliminate any white backgrounds transparently
+                    }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
       </div>
