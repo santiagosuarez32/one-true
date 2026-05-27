@@ -4,6 +4,8 @@ import Clients from "@/components/Clients";
 import Associations from "@/components/Associations";
 import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import Testimonials from "@/components/Testimonials";
+import Resources from "@/components/Resources";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 export default function Home() {
@@ -26,6 +28,12 @@ export default function Home() {
 
       {/* Associations Section */}
       <Associations />
+
+      {/* Testimonials Section */}
+      <Testimonials />
+
+      {/* Resources / Blog Section */}
+      <Resources />
 
       {/* Footer Section */}
       <section className="py-32 flex items-center justify-center bg-black border-t border-neutral-900">

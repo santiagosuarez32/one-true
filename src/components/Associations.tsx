@@ -11,7 +11,7 @@ export default function Associations() {
   ];
 
   return (
-    <section className="bg-white py-20 md:py-24 border-t border-neutral-100">
+    <section className="bg-[#fcfafc] py-20 md:py-24 border-t border-neutral-100">
       <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16 text-center">
         
         {/* Label: Respaldo Institucional Internacional */}
@@ -49,21 +49,21 @@ export default function Associations() {
           Somos miembros activos de las organizaciones más prestigiosas de la industria:
         </h2>
 
-        {/* Centered Grid of Logos (Squared Border Matrix Style) */}
-        <div className="flex justify-center">
-          <div className="grid grid-cols-3 border-l border-t border-black/10 w-full max-w-2xl">
+        {/* Centered Logos without borders */}
+        <div className="flex justify-center mt-8">
+          <div className="flex flex-wrap items-center justify-center gap-16 md:gap-24 w-full max-w-5xl">
             {staticPhotos.map((photo, index) => (
               <div
                 key={index}
-                className="relative aspect-square border-r border-b border-black/10 flex items-center justify-center bg-transparent"
+                className="relative flex items-center justify-center bg-transparent"
               >
-                <div className="relative w-[92%] h-[92%] flex items-center justify-center">
+                <div className="relative w-48 h-48 md:w-64 md:h-64 flex items-center justify-center">
                   <Image
                     src={photo.src}
                     alt={photo.alt}
                     fill
                     className="object-contain transition-all duration-300 hover:grayscale hover:opacity-60 cursor-pointer"
-                    sizes="33vw"
+                    sizes="(max-width: 768px) 192px, 256px"
                     style={{
                       mixBlendMode: "multiply", // Eliminate any white backgrounds transparently
                     }}

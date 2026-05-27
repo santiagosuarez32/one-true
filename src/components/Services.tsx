@@ -45,11 +45,17 @@ export default function Services() {
       desc: "Conviértase en un experto en Poligrafía y evaluador Forense de la Credibilidad. Certifíquese como poligrafista profesional con nuestro programa de 400 horas, diseñado bajo los más altos estándares científicos y avalado internacionalmente por la APA.",
       image: "/servicios/7.jpg",
       cta: "Ver formación en poligrafía"
+    },
+    {
+      title: "Prueba de Integridad, Ética y Valores",
+      desc: "Un entorno empresarial seguro se construye con personas confiables. Nuestra Prueba de Honestidad, Ética y Valores es una herramienta psicométrica avanzada, compuesta por 90 reactivos estratégicos, diseñada para identificar conductas de riesgo y medir la alineación ética de los evaluados de manera ágil y precisa.",
+      image: "/servicios/8.png",
+      cta: "Ver detalles del servicio"
     }
   ];
 
   return (
-    <section id="services" className="bg-white pt-10 pb-24">
+    <section id="services" className="bg-[#fcfafc] pt-10 pb-24">
       <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1650px] mx-auto px-4 md:px-6 lg:px-6">
         
         {/* Centered Header Section */}
@@ -97,10 +103,25 @@ export default function Services() {
             <div 
               id={`service-${idx}`}
               key={idx}
-              className="group flex flex-col bg-white border border-neutral-100 rounded overflow-hidden shadow-[0_4px_25px_rgba(0,0,0,0.02)] cursor-pointer scroll-mt-28"
+              onMouseMove={(e) => {
+                const rect = e.currentTarget.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                e.currentTarget.style.setProperty('--mouse-x', `${x}px`);
+                e.currentTarget.style.setProperty('--mouse-y', `${y}px`);
+              }}
+              className="relative group flex flex-col bg-white border border-neutral-100 rounded-2xl overflow-hidden shadow-[0_4px_25px_rgba(0,0,0,0.02)] transition-all duration-500 cursor-pointer scroll-mt-28"
             >
+              {/* Efecto de resplandor morado que sigue al cursor */}
+              <div 
+                className="pointer-events-none absolute -inset-px z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                style={{
+                  background: 'radial-gradient(500px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(112, 15, 163, 0.15), transparent 40%)'
+                }}
+              />
+
               {/* Card Image Cover (Full Bleed on Top/Left/Right) */}
-              <div className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-100 rounded-t">
+              <div className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-100 rounded-t-2xl z-0">
                 <img
                   src={item.image}
                   alt={item.title}
