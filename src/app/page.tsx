@@ -6,6 +6,9 @@ import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Testimonials from "@/components/Testimonials";
 import Resources from "@/components/Resources";
+import Podcast from "@/components/Podcast";
+import Ebook from "@/components/Ebook";
+import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 export default function Home() {
@@ -35,12 +38,14 @@ export default function Home() {
       {/* Resources / Blog Section */}
       <Resources />
 
+      {/* Podcast Section */}
+      <Podcast />
+
+      {/* Ebook Section */}
+      <Ebook />
+
       {/* Footer Section */}
-      <section className="py-32 flex items-center justify-center bg-black border-t border-neutral-900">
-        <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-t from-neutral-800 to-white opacity-50 hover:opacity-100 transition-opacity duration-1000">
-          The End.
-        </h2>
-      </section>
+      <Footer />
 
       {/* Floating WhatsApp Action Button */}
       <FloatingWhatsApp />

@@ -1,8 +1,35 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function Clients() {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const ctx = gsap.context(() => {
+      if (cardRef.current) {
+        gsap.fromTo(
+          cardRef.current,
+          { x: -80, opacity: 0 },
+          {
+            x: 0,
+            opacity: 1,
+            duration: 0.5,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: cardRef.current,
+              start: "top 85%",
+              toggleActions: "play none none none"
+            }
+          }
+        );
+      }
+    });
+    return () => ctx.revert();
+  }, []);
   // 15 logos from public/marcas (1.png to 15.png)
   const logos = Array.from({ length: 15 }, (_, i) => `/marcas/${i + 1}.png`);
 
@@ -49,49 +76,54 @@ export default function Clients() {
         <style dangerouslySetInnerHTML={{ __html: `
           @keyframes marquee {
             0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            100% { transform: translateX(-100%); }
           }
-          .animate-marquee {
+          .marquee-track {
             display: flex;
             width: max-content;
-            animation: marquee 35s linear infinite;
           }
-          .animate-marquee:hover {
-            animation-play-state: paused;
+          .marquee-content {
+            display: flex;
+            flex-shrink: 0;
+            animation: marquee 20s linear infinite;
           }
         `}} />
 
         {/* Infinite Loop Marquee Container */}
-        <div className="relative w-full overflow-hidden py-4">
+        <div ref={cardRef} className="relative w-full overflow-hidden py-4 flex">
           {/* Symmetrical visual fade masks at the left/right edges for studio finish */}
           <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#fcfafc] to-transparent z-10 pointer-events-none" />
           <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#fcfafc] to-transparent z-10 pointer-events-none" />
 
-          <div className="animate-marquee gap-10 flex items-center">
+          <div className="marquee-track">
             {/* First Set of Logos */}
-            {logos.map((logo, idx) => (
-              <img
-                key={`logo-1-${idx}`}
-                src={logo}
-                alt={`Marca ${idx + 1}`}
-                className="h-28 md:h-44 w-auto object-contain transition-all duration-300 filter grayscale opacity-65 hover:grayscale-0 hover:opacity-100 flex-shrink-0"
-                onError={(e) => {
-                  e.currentTarget.style.display = "none";
-                }}
-              />
-            ))}
+            <div className="marquee-content gap-10 pr-10 items-center flex-nowrap">
+              {logos.map((logo, idx) => (
+                <img
+                  key={`logo-1-${idx}`}
+                  src={logo}
+                  alt={`Marca ${idx + 1}`}
+                  className="h-28 md:h-44 w-auto object-contain transition-all duration-300 filter grayscale opacity-65 hover:grayscale-0 hover:opacity-100 flex-shrink-0"
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                  }}
+                />
+              ))}
+            </div>
             {/* Second Set of Logos (Duplicate to complete infinite scroll seamless seam) */}
-            {logos.map((logo, idx) => (
-              <img
-                key={`logo-2-${idx}`}
-                src={logo}
-                alt={`Marca ${idx + 1}-duplicate`}
-                className="h-28 md:h-44 w-auto object-contain transition-all duration-300 filter grayscale opacity-65 hover:grayscale-0 hover:opacity-100 flex-shrink-0"
-                onError={(e) => {
-                  e.currentTarget.style.display = "none";
-                }}
-              />
-            ))}
+            <div className="marquee-content gap-10 pr-10 items-center flex-nowrap">
+              {logos.map((logo, idx) => (
+                <img
+                  key={`logo-2-${idx}`}
+                  src={logo}
+                  alt={`Marca ${idx + 1}-duplicate`}
+                  className="h-28 md:h-44 w-auto object-contain transition-all duration-300 filter grayscale opacity-65 hover:grayscale-0 hover:opacity-100 flex-shrink-0"
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                  }}
+                />
+              ))}
+            </div>
           </div>
         </div>
 

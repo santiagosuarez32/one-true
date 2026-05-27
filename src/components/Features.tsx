@@ -16,16 +16,16 @@ export default function Features() {
         const cards = gsap.utils.toArray(".feature-card");
         gsap.fromTo(
           cards,
-          { y: 100, opacity: 0 },
+          { x: -80, opacity: 0 },
           {
-            y: 0,
+            x: 0,
             opacity: 1,
-            duration: 1,
-            stagger: 0.2,
-            ease: "power3.out",
+            duration: 0.5,
+            stagger: 0.15,
+            ease: "power2.out",
             scrollTrigger: {
               trigger: cardsRef.current,
-              start: "top 80%",
+              start: "top 85%",
             },
           }
         );

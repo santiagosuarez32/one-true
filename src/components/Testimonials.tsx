@@ -1,8 +1,37 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function Testimonials() {
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const ctx = gsap.context(() => {
+      cardsRef.current.forEach((card) => {
+        if (card) {
+          gsap.fromTo(
+            card,
+            { x: -80, opacity: 0 },
+            {
+              x: 0,
+              opacity: 1,
+              duration: 0.5,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: card,
+                start: "top 85%",
+                toggleActions: "play none none none"
+              }
+            }
+          );
+        }
+      });
+    });
+    return () => ctx.revert();
+  }, []);
   const testimonials = [
     {
       text: "Excelente servicio y muy profesional, de gran ayuda para tener un mejor conocimiento de los perfiles a contratar.",
@@ -79,6 +108,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial, idx) => (
             <div 
               key={idx}
+              ref={(el) => { cardsRef.current[idx] = el; }}
               className="w-full md:w-[350px] flex flex-col items-start border border-neutral-200 p-6 rounded-2xl bg-white shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-transform duration-300 hover:-translate-y-1"
             >
               {/* Quote Icon */}

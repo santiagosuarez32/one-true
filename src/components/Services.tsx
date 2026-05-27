@@ -1,8 +1,46 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function Services() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const ctx = gsap.context(() => {
+      cardsRef.current.forEach((card, index) => {
+        if (card) {
+          gsap.fromTo(
+            card,
+            {
+              x: -80,
+              opacity: 0,
+            },
+            {
+              x: 0,
+              opacity: 1,
+              duration: 0.5,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: card,
+                start: "top 85%", // Trigger when the top of the card is 85% down the viewport
+                toggleActions: "play none none none",
+              },
+            }
+          );
+        }
+      });
+    });
+
+    return () => {
+      ctx.revert();
+    };
+  }, []);
+
   const serviceItems = [
     {
       title: "Pruebas de Polígrafo Profesionales.",
@@ -41,16 +79,16 @@ export default function Services() {
       cta: "Ver detalles del servicio"
     },
     {
-      title: "Formación en Poligrafía Acreditada por APA",
-      desc: "Conviértase en un experto en Poligrafía y evaluador Forense de la Credibilidad. Certifíquese como poligrafista profesional con nuestro programa de 400 horas, diseñado bajo los más altos estándares científicos y avalado internacionalmente por la APA.",
-      image: "/servicios/7.jpg",
-      cta: "Ver formación en poligrafía"
-    },
-    {
       title: "Prueba de Integridad, Ética y Valores",
       desc: "Un entorno empresarial seguro se construye con personas confiables. Nuestra Prueba de Honestidad, Ética y Valores es una herramienta psicométrica avanzada, compuesta por 90 reactivos estratégicos, diseñada para identificar conductas de riesgo y medir la alineación ética de los evaluados de manera ágil y precisa.",
       image: "/servicios/8.png",
       cta: "Ver detalles del servicio"
+    },
+    {
+      title: "Formación en Poligrafía Acreditada por APA",
+      desc: "Conviértase en un experto en Poligrafía y evaluador Forense de la Credibilidad. Certifíquese como poligrafista profesional con nuestro programa de 400 horas, diseñado bajo los más altos estándares científicos y avalado internacionalmente por la APA.",
+      image: "/servicios/7.jpg",
+      cta: "Ver formación en poligrafía"
     }
   ];
 
@@ -101,6 +139,7 @@ export default function Services() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {serviceItems.map((item, idx) => (
             <div 
+              ref={(el) => { cardsRef.current[idx] = el; }}
               id={`service-${idx}`}
               key={idx}
               onMouseMove={(e) => {

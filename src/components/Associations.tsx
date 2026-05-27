@@ -1,9 +1,38 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function Associations() {
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const ctx = gsap.context(() => {
+      cardsRef.current.forEach((card) => {
+        if (card) {
+          gsap.fromTo(
+            card,
+            { x: -80, opacity: 0 },
+            {
+              x: 0,
+              opacity: 1,
+              duration: 0.5,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: card,
+                start: "top 85%",
+                toggleActions: "play none none none"
+              }
+            }
+          );
+        }
+      });
+    });
+    return () => ctx.revert();
+  }, []);
   const staticPhotos = [
     { src: "/marcas/16.png", alt: "APA Certification Logo" },
     { src: "/marcas/17.png", alt: "International Association Logo" },
@@ -55,6 +84,7 @@ export default function Associations() {
             {staticPhotos.map((photo, index) => (
               <div
                 key={index}
+                ref={(el) => { cardsRef.current[index] = el; }}
                 className="relative flex items-center justify-center bg-transparent"
               >
                 <div className="relative w-48 h-48 md:w-64 md:h-64 flex items-center justify-center">

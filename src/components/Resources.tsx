@@ -1,6 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 interface Article {
   title: string;
@@ -8,8 +10,9 @@ interface Article {
   link: string;
 }
 
-const BlogCard = ({ article, className = "", isWide = false }: { article: Article, className?: string, isWide?: boolean }) => (
+const BlogCard = ({ article, className = "", isWide = false, cardRef }: { article: Article, className?: string, isWide?: boolean, cardRef?: (el: HTMLDivElement | null) => void }) => (
   <div 
+    ref={cardRef}
     className={`flex ${isWide ? 'flex-col md:flex-row' : 'flex-col'} bg-white border border-neutral-100 rounded-2xl overflow-hidden shadow-[0_4px_25px_rgba(0,0,0,0.04)] transition-transform duration-300 hover:-translate-y-1 group cursor-pointer ${className}`}
   >
     {/* Image Container with Label */}
@@ -28,7 +31,7 @@ const BlogCard = ({ article, className = "", isWide = false }: { article: Articl
     {/* Content */}
     <div className={`px-6 py-8 flex flex-col flex-1 justify-between gap-6 ${isWide ? 'md:w-[55%]' : ''}`}>
       <h3 
-        className="text-[16px] font-bold text-[#48255A] group-hover:text-[#700FA3] transition-colors duration-300 leading-[1.4]"
+        className="text-[14px] font-bold text-[#48255A] group-hover:text-[#700FA3] transition-colors duration-300 leading-[1.4]"
         style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
       >
         {article.title}
@@ -57,6 +60,34 @@ const BlogCard = ({ article, className = "", isWide = false }: { article: Articl
 );
 
 export default function Resources() {
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const ctx = gsap.context(() => {
+      cardsRef.current.forEach((card) => {
+        if (card) {
+          gsap.fromTo(
+            card,
+            { x: -80, opacity: 0 },
+            {
+              x: 0,
+              opacity: 1,
+              duration: 0.5,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: card,
+                start: "top 85%",
+                toggleActions: "play none none none"
+              }
+            }
+          );
+        }
+      });
+    });
+    return () => ctx.revert();
+  }, []);
+
   const articles: Article[] = [
     {
       title: "¿Verdad o Mentira? Todo lo que debes saber antes de contratar una prueba de Polígrafo.",
@@ -72,97 +103,66 @@ export default function Resources() {
       title: "Garantiza la Verdad: 10 Requisitos Clave para una Prueba de Polígrafo Confiable y Exitosa.",
       image: "/blog/3.png",
       link: "#"
-    },
-    {
-      title: "¿Cuál es el beneficio de un estudio de confiabilidad?",
-      image: "/blog/PODCAST.png",
-      link: "#"
     }
   ];
 
   return (
     <section className="bg-[#fcfafc] py-24 border-t border-neutral-100">
       <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16">
-        <div className="flex flex-col lg:flex-row items-stretch gap-16 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
           
-          {/* Left Column: Text & CTA & 3rd Card */}
-          <div className="w-full lg:w-[30%] flex flex-col items-start text-left">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-[3px] bg-[#700FA3]" />
-              <span
+          {/* First Grid Item: Text & CTA */}
+          <div className="flex flex-col items-start text-left w-full h-full justify-between pb-4">
+            <div>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-[3px] bg-[#700FA3]" />
+                <span
+                  style={{
+                    letterSpacing: "0.5px",
+                    fontSize: "18px",
+                    color: "#700FA3",
+                    fontWeight: "600",
+                    fontFamily: "var(--font-montserrat), sans-serif",
+                  }}
+                >
+                  Recursos
+                </span>
+              </div>
+              
+              <h2
+                className="text-3xl lg:text-[32px]"
                 style={{
-                  letterSpacing: "0.5px",
-                  fontSize: "18px",
-                  color: "#700FA3",
-                  fontWeight: "600",
+                  margin: 0,
+                  padding: 0,
+                  fontWeight: "bold",
+                  lineHeight: "1.25",
+                  color: "#48255A",
                   fontFamily: "var(--font-montserrat), sans-serif",
+                  marginBottom: "48px",
                 }}
               >
-                Recursos
-              </span>
+                Información de valor para evaluación forense de la credibilidad y gestión de riesgos
+              </h2>
             </div>
             
-            <h2
-              className="text-3xl lg:text-[32px]"
-              style={{
-                margin: 0,
-                padding: 0,
-                fontWeight: "bold",
-                lineHeight: "1.25",
-                color: "#48255A",
-                fontFamily: "var(--font-montserrat), sans-serif",
-                marginBottom: "48px",
-              }}
-            >
-              Información de valor para evaluación forense de la credibilidad y gestión de riesgos
-            </h2>
-            
             <button
-              className="px-6 py-3 bg-[#FFC107] text-[#411A56] font-bold rounded transition-colors duration-300 text-sm hover:bg-[#700FA3] hover:text-white mb-12"
+              className="px-6 py-3 bg-[#FFC107] text-[#411A56] font-bold rounded transition-colors duration-300 text-sm hover:bg-[#700FA3] hover:text-white"
               style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
             >
               Conoce más
             </button>
-
-            {/* 3rd Card in Left Column (Desktop Only) */}
-            <div className="w-full mt-auto hidden lg:block">
-              <BlogCard article={articles[2]} className="w-full max-w-[550px] mx-auto lg:mx-0" />
-            </div>
           </div>
 
-          {/* Right Column: 1st, 2nd and 4th Cards */}
-          <div className="w-full lg:w-[70%] flex flex-col gap-6">
-            
-            {/* Top row: 1st and 2nd cards */}
-            <div className="flex flex-col md:flex-row gap-6 flex-none">
-              {articles.slice(0, 2).map((article, idx) => (
-                <BlogCard 
-                  key={idx} 
-                  article={article} 
-                  className="w-full md:w-1/2 max-w-[550px] mx-auto lg:mx-0 h-full" 
-                />
-              ))}
-            </div>
+          {/* Remaining 3 Grid Items: Blog Cards */}
+          {articles.map((article, idx) => (
+            <BlogCard 
+              key={idx} 
+              article={article} 
+              className="w-full h-full flex" 
+              cardRef={(el) => { cardsRef.current[idx] = el; }}
+            />
+          ))}
 
-            {/* Bottom row: 4th card (Desktop - Wide Style) */}
-            <div className="hidden lg:flex w-full flex-1">
-              <BlogCard 
-                article={articles[3]} 
-                className="w-full h-full" 
-                isWide={true}
-              />
-            </div>
-
-            {/* Mobile/Tablet Fallbacks */}
-            <div className="w-full md:w-1/2 max-w-[550px] mx-auto lg:mx-0 lg:hidden block">
-              <BlogCard article={articles[2]} className="w-full" />
-            </div>
-            <div className="w-full md:w-1/2 max-w-[550px] mx-auto lg:mx-0 lg:hidden block">
-              <BlogCard article={articles[3]} className="w-full" />
-            </div>
-
-          </div>
-          
         </div>
       </div>
     </section>

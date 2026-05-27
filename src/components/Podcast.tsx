@@ -1,0 +1,112 @@
+"use client";
+
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+export default function Podcast() {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const ctx = gsap.context(() => {
+      if (cardRef.current) {
+        gsap.fromTo(
+          cardRef.current,
+          { x: -80, opacity: 0 },
+          {
+            x: 0,
+            opacity: 1,
+            duration: 0.5,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: cardRef.current,
+              start: "top 85%",
+              toggleActions: "play none none none"
+            }
+          }
+        );
+      }
+    });
+    return () => ctx.revert();
+  }, []);
+  return (
+    <section className="bg-[#fcfafc] py-24 border-t border-neutral-100 overflow-hidden relative">
+      <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16 flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+        
+        {/* Left: Podcast Image with effects */}
+        <div ref={cardRef} className="w-full md:w-1/2 relative flex justify-center group cursor-pointer">
+          <div className="absolute inset-0 bg-[#700FA3] blur-[100px] opacity-20 rounded-full group-hover:opacity-40 transition-opacity duration-700"></div>
+          <div className="relative w-full max-w-[500px] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl transition-transform duration-700 group-hover:scale-105 border border-neutral-200/50">
+            <img
+              src="/blog/PODCAST.png"
+              alt="Podcast: ¿Cuál es el beneficio de un estudio de confiabilidad?"
+              className="w-full h-full object-cover"
+            />
+            {/* Play Button Overlay */}
+            <div className="absolute inset-0 bg-[#48255A]/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-[2px]">
+              <div className="w-20 h-20 bg-[#FFC107] rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(255,193,7,0.5)] transform scale-50 group-hover:scale-100 transition-transform duration-500 delay-100">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="#411A56" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+            {/* Badge */}
+            <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-md text-white text-[10px] font-bold tracking-wider px-4 py-1.5 rounded-full uppercase">
+              Podcast
+            </div>
+          </div>
+        </div>
+
+        {/* Right: Content */}
+        <div className="w-full md:w-1/2 flex flex-col items-start text-left z-10">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-[3px] bg-[#700FA3]" />
+            <span
+              style={{
+                letterSpacing: "0.5px",
+                fontSize: "18px",
+                color: "#700FA3",
+                fontWeight: "600",
+                fontFamily: "var(--font-montserrat), sans-serif",
+              }}
+            >
+              Podcast
+            </span>
+          </div>
+          
+          <h2
+            className="text-3xl lg:text-[40px]"
+            style={{
+              margin: 0,
+              padding: 0,
+              fontWeight: "bold",
+              lineHeight: "1.25",
+              color: "#48255A",
+              fontFamily: "var(--font-montserrat), sans-serif",
+              marginBottom: "24px",
+            }}
+          >
+            Podcast en el que te cuento sobre el maravilloso mundo de la detección de mentiras.
+          </h2>
+
+          <p className="text-lg text-neutral-600 mb-10 leading-relaxed max-w-lg">
+            Descubre en este episodio cómo un estudio de confiabilidad puede proteger tu empresa, reducir riesgos y asegurar que estás tomando las mejores decisiones en la gestión de tu talento humano.
+          </p>
+          
+          <button
+            className="px-8 py-4 bg-[#FFC107] text-[#411A56] font-bold rounded flex items-center gap-3 transition-all duration-300 hover:bg-[#700FA3] hover:text-white shadow-[0_4px_20px_rgba(255,193,7,0.2)] hover:shadow-[0_4px_25px_rgba(112,15,163,0.3)] hover:-translate-y-1"
+            style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+          >
+            <span>ESCUCHAR AHORA</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+               <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+               <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </section>
+  );
+}
