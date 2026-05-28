@@ -12,7 +12,7 @@ type Props = {
 };
 
 export default function FloatingWhatsApp({
-  phone = "5492323654996",
+  phone = "593981296179",
   message = "¡Hola! Vengo desde la web y quiero más info 🙌",
   right = 20,
   bottom = 24,

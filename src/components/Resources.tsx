@@ -107,7 +107,7 @@ export default function Resources() {
   ];
 
   return (
-    <section className="bg-[#fcfafc] py-24 border-t border-neutral-100">
+    <section id="recursos" className="bg-[#fcfafc] py-24 border-t border-neutral-100 scroll-mt-20">
       <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
           
