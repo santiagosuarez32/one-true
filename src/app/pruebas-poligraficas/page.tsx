@@ -227,14 +227,11 @@ export default function PruebasPoligraficasPage() {
           }}
         />
 
-        <div 
-          className="absolute inset-0 z-0 opacity-40 mix-blend-overlay"
-          style={{
-            backgroundImage: `url('/pruebas-poligrafo/hero.png')`,
-            backgroundPosition: "right top",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat"
-          }}
+        <img 
+          src="/pruebas-poligrafo/hero.webp"
+          alt="One True Pruebas de Polígrafo"
+          fetchPriority="high"
+          className="absolute inset-0 w-full h-full object-cover object-right-top z-0 opacity-40 mix-blend-overlay pointer-events-none"
         />
 
         {/* Centered Grid Container */}
@@ -415,8 +412,9 @@ export default function PruebasPoligraficasPage() {
               {/* Main Image */}
               <div className="rounded-3xl overflow-hidden shadow-2xl relative z-10 border-4 border-white">
                 <img 
-                  src="/pruebas-poligrafo/primer.png" 
+                  src="/pruebas-poligrafo/primer.webp" 
                   alt="Profesional de poligrafía" 
+                  loading="lazy"
                   className="w-full h-auto object-cover aspect-[4/5]"
                 />
               </div>
@@ -424,8 +422,9 @@ export default function PruebasPoligraficasPage() {
               {/* Secondary Overlapping Image */}
               <div className="absolute -bottom-12 -right-12 w-2/3 rounded-3xl overflow-hidden shadow-xl z-20 border-4 border-white hidden md:block">
                 <img 
-                  src="/pruebas-poligrafo/segunda.PNG" 
+                  src="/pruebas-poligrafo/segunda.webp" 
                   alt="Análisis de resultados" 
+                  loading="lazy"
                   className="w-full h-auto object-cover aspect-square"
                 />
               </div>
@@ -689,7 +688,7 @@ export default function PruebasPoligraficasPage() {
             <div className="lg:col-span-6 flex flex-col text-left">
               {/* Logo de One True */}
               <div className="mb-4 flex justify-start">
-                <img src="/footer.png" alt="One True Logo" className="h-20 md:h-24 w-auto object-contain" />
+                <img src="/footer.webp" alt="One True Logo" loading="lazy" className="h-20 md:h-24 w-auto object-contain" />
               </div>
 
               {/* Título adaptado al estilo estándar de la página */}
