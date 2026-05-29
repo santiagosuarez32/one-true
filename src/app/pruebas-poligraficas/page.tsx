@@ -148,6 +148,7 @@ export default function PruebasPoligraficasPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [country, setCountry] = useState("ec");
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const toggleVideo = () => {
@@ -212,7 +213,7 @@ export default function PruebasPoligraficasPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#fcfafc] text-[#525252] selection:bg-[#FFC107] selection:text-[#411A56]">
+    <main className="min-h-screen bg-white text-[#525252] selection:bg-[#FFC107] selection:text-[#411A56]">
       {/* Navbar */}
       <Navbar />
 
@@ -334,7 +335,7 @@ export default function PruebasPoligraficasPage() {
       </section>
 
       {/* Sobre el Servicio Section */}
-      <section className="bg-white py-20 border-b border-neutral-100">
+      <section className="bg-white py-20">
         <div className="w-full max-w-4xl mx-auto px-8">
           
           {/* Centered Small Header */}
@@ -402,11 +403,11 @@ export default function PruebasPoligraficasPage() {
       </section>
 
       {/* ¿Por qué contratarnos? Section - Based on Globalwork Beneficios style */}
-      <section className="bg-white py-24 border-b border-neutral-100 overflow-hidden relative">
+      <section className="bg-white py-12 md:py-16 overflow-hidden relative">
         {/* Decorative background elements */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#700FA3]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
         
-        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16 flex flex-col lg:flex-row items-center gap-16 relative z-10">
+        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16 flex flex-col lg:flex-row items-center gap-8 lg:gap-12 relative z-10">
           
           {/* Left Column: Images / Visuals */}
           <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-start">
@@ -414,7 +415,7 @@ export default function PruebasPoligraficasPage() {
               {/* Main Image */}
               <div className="rounded-3xl overflow-hidden shadow-2xl relative z-10 border-4 border-white">
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" 
+                  src="/pruebas-poligrafo/primer.png" 
                   alt="Profesional de poligrafía" 
                   className="w-full h-auto object-cover aspect-[4/5]"
                 />
@@ -423,7 +424,7 @@ export default function PruebasPoligraficasPage() {
               {/* Secondary Overlapping Image */}
               <div className="absolute -bottom-12 -right-12 w-2/3 rounded-3xl overflow-hidden shadow-xl z-20 border-4 border-white hidden md:block">
                 <img 
-                  src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80" 
+                  src="/pruebas-poligrafo/segunda.PNG" 
                   alt="Análisis de resultados" 
                   className="w-full h-auto object-cover aspect-square"
                 />
@@ -458,7 +459,7 @@ export default function PruebasPoligraficasPage() {
             </div>
             
             <h2
-              className="text-4xl md:text-[42px] mb-8"
+              className="text-4xl md:text-[42px] mb-6"
               style={{
                 fontWeight: "bold",
                 lineHeight: "1.2",
@@ -470,14 +471,14 @@ export default function PruebasPoligraficasPage() {
             </h2>
 
             {/* Benefit List */}
-            <ul className="flex flex-col gap-5 w-full mb-10">
+            <ul className="flex flex-col gap-3 w-full mb-6">
               {[
                 "Te ayudamos a eliminar riesgos críticos en tus nuevas contrataciones.",
                 "Identificamos responsables de fraudes con certeza técnica.",
                 "Resultados en 24 horas o menos.",
                 "Detectamos la deshonestidad interna."
               ].map((text, idx) => (
-                <li key={idx} className="flex items-start gap-4 p-4 rounded-xl hover:bg-neutral-50 transition-colors duration-300">
+                <li key={idx} className="flex items-start gap-3 py-1">
                   <div className="w-6 h-6 rounded flex items-center justify-center bg-[#700FA3] text-white shrink-0 mt-0.5 shadow-md">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
@@ -493,13 +494,30 @@ export default function PruebasPoligraficasPage() {
               ))}
             </ul>
 
+            <a
+              href="#contacto"
+              className="px-8 py-3 rounded transition-all hover:brightness-110 shadow-lg inline-block text-center cursor-pointer"
+              style={{
+                fontFamily: "var(--font-montserrat), sans-serif",
+                lineHeight: "1",
+                fontSize: "14px",
+                fontWeight: "600",
+                color: "#5F0091",
+                backgroundColor: "#FFC107",
+                textDecoration: "none",
+                border: "none"
+              }}
+            >
+              <span className="elementor-button-text">Cotizar mi evaluación ahora</span>
+            </a>
+
           </div>
 
         </div>
       </section>
 
       {/* ── NUESTRAS SOLUCIONES ── */}
-      <section className="bg-[#fcfafc] py-24 overflow-hidden relative border-b border-neutral-100">
+      <section className="bg-white py-24 overflow-hidden relative">
         <div className="mx-auto max-w-6xl lg:max-w-7xl xl:max-w-[1350px] px-8 md:px-12 lg:px-16 relative z-10">
 
           {/* ── SECTION HEADER ── */}
@@ -601,7 +619,7 @@ export default function PruebasPoligraficasPage() {
       </section>
 
       {/* Sobre Nosotros - Video Section */}
-      <section className="bg-white py-24 relative border-b border-neutral-100">
+      <section className="bg-white py-24 relative">
         <div className="w-full max-w-4xl mx-auto px-8 flex flex-col items-center">
           
           {/* Centered Small Header */}
@@ -654,10 +672,9 @@ export default function PruebasPoligraficasPage() {
       {/* ── FORMULARIO DE CONTACTO (ESTILO EXACTO GLOBALWORK #NOSOTROS - ADAPTADO A ONE TRUE) ── */}
       <section 
         id="contacto" 
-        className="py-24 relative overflow-hidden"
+        className="py-12 md:py-16 relative overflow-hidden"
         style={{
           backgroundImage: "linear-gradient(60deg, #700FA3 50%, #8A15C4 90%)",
-          borderRadius: "0px 50px 0px 50px",
           fontFamily: "var(--font-montserrat), sans-serif"
         }}
       >
@@ -666,56 +683,37 @@ export default function PruebasPoligraficasPage() {
         <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full bg-[#FFC107]/5 blur-[120px] pointer-events-none" />
 
         <div className="max-w-6xl lg:max-w-7xl xl:max-w-[1200px] mx-auto px-6 md:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             
             {/* LADO IZQUIERDO: Información Comercial */}
             <div className="lg:col-span-6 flex flex-col text-left">
               {/* Logo de One True */}
-              <div className="mb-6 flex justify-start">
-                <img src="/footer.png" alt="One True Logo" className="h-16 md:h-20 w-auto object-contain" />
-              </div>
-
-              {/* Header con línea amarilla estilizada como la página */}
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-[2px] bg-[#FFC107]" />
-                <span
-                  style={{
-                    letterSpacing: "0.5px",
-                    fontSize: "16px",
-                    fontWeight: "bold",
-                    color: "#FFC107",
-                    fontFamily: "var(--font-montserrat), sans-serif",
-                    textTransform: "uppercase"
-                  }}
-                >
-                  Contactos
-                </span>
+              <div className="mb-4 flex justify-start">
+                <img src="/footer.png" alt="One True Logo" className="h-20 md:h-24 w-auto object-contain" />
               </div>
 
               {/* Título adaptado al estilo estándar de la página */}
               <h2
                 style={{
-                  fontSize: "36px",
+                  fontSize: "32px",
                   fontWeight: "bold",
-                  lineHeight: "46px",
+                  lineHeight: "40px",
                   color: "#ffffff",
                   fontFamily: "var(--font-montserrat), sans-serif",
                   marginTop: "10px",
-                  marginBottom: "40px"
+                  marginBottom: "20px"
                 }}
               >
                 Contactos
               </h2>
 
               {/* Items List */}
-              <div className="flex flex-col gap-8">
+              <div className="flex flex-col gap-5">
                 {/* 1. Teléfono */}
                 <div className="flex items-start gap-5">
-                  <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-white flex-shrink-0 border border-white/15 shadow-inner">
-                    <svg className="w-6 h-6 text-[#FFC107]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.73.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                  </div>
+                  <svg className="w-8 h-8 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.387a12.035 12.035 0 01-7.108-7.108c-.155-.44.011-.928.387-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                  </svg>
                   <div className="flex flex-col">
                     <h3 
                       style={{ 
@@ -745,12 +743,9 @@ export default function PruebasPoligraficasPage() {
 
                 {/* 2. Agencia Quito */}
                 <div className="flex items-start gap-5">
-                  <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-white flex-shrink-0 border border-white/15 shadow-inner">
-                    <svg className="w-6 h-6 text-[#FFC107]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
+                  <svg className="w-8 h-8 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75m3-3h.75m-.75 3h.75m-6 3h.75m3 0h.75m3 0h.75" />
+                  </svg>
                   <div className="flex flex-col">
                     <h3 
                       style={{ 
@@ -779,12 +774,10 @@ export default function PruebasPoligraficasPage() {
 
                 {/* 3. Agencia Guayaquil */}
                 <div className="flex items-start gap-5">
-                  <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-white flex-shrink-0 border border-white/15 shadow-inner">
-                    <svg className="w-6 h-6 text-[#FFC107]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
+                  <svg className="w-8 h-8 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                  </svg>
                   <div className="flex flex-col">
                     <h3 
                       style={{ 
@@ -813,11 +806,9 @@ export default function PruebasPoligraficasPage() {
 
                 {/* 4. Correo */}
                 <div className="flex items-start gap-5">
-                  <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-white flex-shrink-0 border border-white/15 shadow-inner">
-                    <svg className="w-6 h-6 text-[#FFC107]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
+                  <svg className="w-8 h-8 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                  </svg>
                   <div className="flex flex-col">
                     <h3 
                       style={{ 
@@ -846,55 +837,28 @@ export default function PruebasPoligraficasPage() {
                 </div>
               </div>
 
-              {/* Botón WhatsApp de Acción Directa */}
-              <div className="flex flex-col items-start gap-3 mt-10 pt-8 border-t border-white/10 w-full">
-                <span 
-                  style={{ 
-                    fontSize: "12px", 
-                    fontWeight: "bold", 
-                    color: "rgba(255,255,255,0.6)", 
-                    textTransform: "uppercase",
-                    letterSpacing: "1px",
-                    fontFamily: "var(--font-montserrat), sans-serif"
-                  }}
-                >
-                  o escríbenos a:
-                </span>
-                <a
-                  href="https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2.5 px-6 py-4 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold rounded-2xl shadow-lg transition-all duration-300 text-base w-full max-w-[320px] hover:scale-[1.02]"
-                  style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                >
-                  <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                    <path d="M12.012 2c-5.506 0-9.988 4.482-9.988 9.988 0 1.758.459 3.473 1.33 4.982L2 22l5.176-1.357c1.468.8 3.111 1.22 4.826 1.22 5.506 0 9.988-4.482 9.988-9.988C22 6.482 17.518 2 12.012 2zm6.262 14.186c-.258.73-1.298 1.348-1.785 1.404-.473.055-.947.25-3.053-.574-2.535-.992-4.15-3.567-4.277-3.738-.127-.171-1.047-1.393-1.047-2.658 0-1.265.663-1.89.897-2.138.234-.248.513-.31.684-.31.171 0 .343.003.492.01.157.007.369-.06.577.444.214.52.73 1.785.793 1.916.063.13.105.283.018.45-.087.17-.184.28-.316.444-.13.166-.277.37-.396.496-.13.136-.267.284-.114.546.152.262.676 1.115 1.448 1.802.996.885 1.836 1.158 2.098 1.29.262.13.415.108.57-.072.152-.18.663-.77.838-1.033.177-.262.354-.22.597-.13.244.09 1.547.73 1.81.86.263.13.438.196.505.31.067.114.067.662-.19 1.393z"/>
-                  </svg>
-                  <span>098 129 6179</span>
-                </a>
-              </div>
+
 
               {/* Redes Sociales y Síguenos */}
-              <div className="flex flex-col items-start gap-3 mt-8 pt-6 border-t border-white/10 w-full">
-                <span 
+              <div className="flex flex-col items-start gap-3 mt-6 pt-4 border-t border-white/10 w-full">
+                <h3 
                   style={{ 
-                    fontSize: "12px", 
+                    fontSize: "18px", 
                     fontWeight: "bold", 
-                    color: "rgba(255,255,255,0.6)", 
-                    textTransform: "uppercase",
-                    letterSpacing: "1px",
-                    fontFamily: "var(--font-montserrat), sans-serif"
+                    color: "#ffffff", 
+                    fontFamily: "var(--font-montserrat), sans-serif",
+                    marginBottom: "4px"
                   }}
                 >
                   Síguenos:
-                </span>
+                </h3>
                 <div className="flex items-center gap-3">
                   {/* Facebook */}
                   <a 
                     href="https://www.facebook.com/somosonetrue" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-white/10 rounded-xl hover:bg-[#FFC107] hover:text-[#4b2354] transition-all duration-300 flex items-center justify-center text-white border border-white/15 shadow-inner"
+                    className="w-10 h-10 bg-white rounded-full hover:scale-110 transition-all duration-300 flex items-center justify-center text-[#700FA3] shadow-md hover:shadow-lg"
                   >
                     <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
                       <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
@@ -905,7 +869,7 @@ export default function PruebasPoligraficasPage() {
                     href="https://www.instagram.com/somosonetrue" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-white/10 rounded-xl hover:bg-[#FFC107] hover:text-[#4b2354] transition-all duration-300 flex items-center justify-center text-white border border-white/15 shadow-inner"
+                    className="w-10 h-10 bg-white rounded-full hover:scale-110 transition-all duration-300 flex items-center justify-center text-[#700FA3] shadow-md hover:shadow-lg"
                   >
                     <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
                       <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
@@ -916,7 +880,7 @@ export default function PruebasPoligraficasPage() {
                     href="https://www.linkedin.com/company/somosonetrue" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-white/10 rounded-xl hover:bg-[#FFC107] hover:text-[#4b2354] transition-all duration-300 flex items-center justify-center text-white border border-white/15 shadow-inner"
+                    className="w-10 h-10 bg-white rounded-full hover:scale-110 transition-all duration-300 flex items-center justify-center text-[#700FA3] shadow-md hover:shadow-lg"
                   >
                     <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
                       <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
@@ -928,45 +892,37 @@ export default function PruebasPoligraficasPage() {
 
             {/* LADO DERECHO: Tarjeta de Formulario */}
             <div className="lg:col-span-6 relative">
-              <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-[0_25px_60px_rgba(0,0,0,0.35)] border border-neutral-100 relative overflow-hidden transition-all duration-500">
+              <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.35)] border border-neutral-100 relative overflow-hidden transition-all duration-500">
                 
                 {!formSubmitted ? (
                   /* FORMULARIO ACTIVO */
                   <div>
-                    <div className="mb-8">
-                      <h3 className="text-2xl font-bold text-[#48255A] mb-2" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                        Cotiza aquí tu servicio
-                      </h3>
-                      <p className="text-sm text-neutral-500 font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                        Un representante se comunicará contigo lo antes posible para darte información más personalizada.
-                      </p>
-                    </div>
 
                     <form 
                       onSubmit={(e) => {
                         e.preventDefault();
                         setFormSubmitted(true);
                       }}
-                      className="flex flex-col gap-5"
+                      className="flex flex-col gap-3"
                     >
                       {/* Fila 1: Nombre y Apellido */}
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div className="flex flex-col gap-1.5">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                        <div className="flex flex-col gap-1">
                           <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Nombre *</label>
                           <input 
                             type="text" 
                             placeholder="Tu nombre" 
-                            className="px-4 py-3 rounded-xl border border-neutral-200 bg-neutral-50/30 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all w-full text-sm font-medium" 
+                            className="px-4 py-2.5 rounded-xl border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                             required 
                           />
                         </div>
-                        <div className="flex flex-col gap-1.5">
+                        <div className="flex flex-col gap-1">
                           <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Apellido *</label>
                           <input 
                             type="text" 
                             placeholder="Tu apellido" 
-                            className="px-4 py-3 rounded-xl border border-neutral-200 bg-neutral-50/30 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all w-full text-sm font-medium" 
+                            className="px-4 py-2.5 rounded-xl border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                             required 
                           />
@@ -974,75 +930,93 @@ export default function PruebasPoligraficasPage() {
                       </div>
 
                       {/* Correo electrónico */}
-                      <div className="flex flex-col gap-1.5">
+                      <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Correo electrónico *</label>
                         <div className="relative">
                           <input 
                             type="email" 
                             placeholder="correo@empresa.com" 
-                            className="px-4 py-3 pr-10 rounded-xl border border-neutral-200 bg-neutral-50/30 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all w-full text-sm font-medium" 
+                            className="px-4 py-2.5 pr-10 rounded-xl border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                             required 
                           />
-                          <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-neutral-400">
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                          <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-[#700FA3]">
+                            <svg className="w-5 h-5 text-[#700FA3]" viewBox="0 0 20 20" fill="currentColor">
+                              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                             </svg>
                           </div>
                         </div>
                       </div>
 
-                      {/* Teléfono con Selector Bandera Ecuador */}
-                      <div className="flex flex-col gap-1.5">
+                      {/* Teléfono con Selector Bandera y Prefijo Real de Países */}
+                      <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Número de teléfono *</label>
-                        <div className="relative flex items-center border border-neutral-200 rounded-xl bg-neutral-50/10 focus-within:ring-2 focus-within:ring-[#700FA3]/20 focus-within:border-[#700FA3] transition-all overflow-hidden animate-none">
-                          {/* Selector Mock de Bandera Ecuador */}
-                          <div className="flex items-center gap-2 px-3 py-3 border-r border-neutral-200 bg-neutral-50 cursor-pointer select-none">
-                            <div className="w-5 h-3 flex flex-col rounded-sm overflow-hidden border border-neutral-200/50">
-                              <div className="h-1.5 bg-[#FFD100]" style={{ height: "50%" }}></div>
-                              <div className="bg-[#002F6C]" style={{ height: "25%" }}></div>
-                              <div className="bg-[#CF142B]" style={{ height: "25%" }}></div>
-                            </div>
-                            <span className="text-sm font-semibold text-neutral-700" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>+593</span>
-                            <svg className="w-3 h-3 text-neutral-400" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                            </svg>
+                        <div className="relative flex items-center border-0 rounded-xl bg-neutral-50 focus-within:ring-2 focus-within:ring-[#700FA3]/20 focus-within:bg-white focus-within:shadow-md transition-all overflow-hidden">
+                          {/* Selector de Bandera y Prefijo Real de Países */}
+                          <div className="flex items-center gap-2 pl-3 border-r border-neutral-200/60 bg-transparent shrink-0">
+                            <img 
+                              src={`https://flagcdn.com/w20/${country}.png`} 
+                              alt={country} 
+                              className="w-5 h-auto object-contain select-none" 
+                            />
+                            <select 
+                              value={country}
+                              onChange={(e) => setCountry(e.target.value)}
+                              className="bg-transparent border-0 py-2.5 pl-1 pr-6 text-sm font-semibold text-neutral-700 outline-none focus:ring-0 cursor-pointer appearance-none"
+                              style={{ 
+                                fontFamily: "var(--font-montserrat), sans-serif",
+                                backgroundImage: `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E")`,
+                                backgroundPosition: 'right 0.1rem center',
+                                backgroundSize: '1.1em 1.1em',
+                                backgroundRepeat: 'no-repeat',
+                              }}
+                            >
+                              <option value="ec">+593</option>
+                              <option value="co">+57</option>
+                              <option value="pe">+51</option>
+                              <option value="cl">+56</option>
+                              <option value="ar">+54</option>
+                              <option value="mx">+52</option>
+                              <option value="es">+34</option>
+                              <option value="us">+1</option>
+                            </select>
                           </div>
                           {/* Input */}
                           <input 
                             type="tel" 
                             placeholder="098 129 6179" 
-                            className="flex-1 px-4 py-3 bg-transparent border-none text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-0 text-sm font-medium" 
+                            className="flex-1 px-4 py-2.5 bg-transparent border-none text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-0 text-sm font-medium" 
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                             required 
                           />
-                          <div className="pr-3 text-neutral-400 pointer-events-none">
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.387a12.035 12.035 0 01-7.108-7.108c-.155-.44.011-.928.387-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                          <div className="pr-3 text-[#700FA3] pointer-events-none">
+                            <svg className="w-5 h-5 text-[#700FA3]" viewBox="0 0 20 20" fill="currentColor">
+                              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                             </svg>
                           </div>
                         </div>
                       </div>
 
                       {/* Ciudad */}
-                      <div className="flex flex-col gap-1.5">
+                      <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Ciudad *</label>
                         <input 
                           type="text" 
                           placeholder="Tu ciudad" 
-                          className="px-4 py-3 rounded-xl border border-neutral-200 bg-neutral-50/30 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all w-full text-sm font-medium" 
+                          className="px-4 py-2.5 rounded-xl border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                           style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                           required 
                         />
                       </div>
 
                       {/* Mensaje */}
-                      <div className="flex flex-col gap-1.5">
+                      <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Mensaje *</label>
                         <textarea 
                           placeholder="Escribe tu mensaje aquí..." 
-                          rows={4} 
-                          className="px-4 py-3 rounded-xl border border-neutral-200 bg-neutral-50/30 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all w-full text-sm font-medium resize-none" 
+                          rows={2} 
+                          className="px-4 py-2.5 rounded-xl border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium resize-none" 
                           style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                           required 
                         ></textarea>
@@ -1082,11 +1056,54 @@ export default function PruebasPoligraficasPage() {
                       {/* Botón de Cotización */}
                       <button
                         type="submit"
-                        className="mt-4 px-8 py-4 bg-[#700FA3] hover:bg-[#5C0B87] text-white font-bold rounded-xl transition-all duration-300 w-full shadow-lg shadow-[#700FA3]/25 hover:scale-[1.01] active:scale-[0.99] text-base"
+                        className="mt-2 px-8 py-3.5 bg-[#700FA3] hover:bg-[#5C0B87] text-white font-bold rounded-xl transition-all duration-300 w-full shadow-lg shadow-[#700FA3]/25 hover:scale-[1.01] active:scale-[0.99] text-base"
                         style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                       >
                         Cotizar ahora
                       </button>
+
+                      {/* WhatsApp Callout inside the Form */}
+                      <div className="flex flex-col items-center gap-1.5 mt-5 pt-4 border-t border-neutral-100 w-full">
+                        <span 
+                          style={{ 
+                            fontFamily: "var(--font-montserrat), sans-serif",
+                            fontSize: "14px",
+                            fontWeight: "bold",
+                            color: "#48255A"
+                          }}
+                        >
+                          O escríbenos
+                        </span>
+                        <div className="elementor-button-wrapper flex justify-center w-auto mt-1">
+                          <a 
+                            className="elementor-button elementor-button-link elementor-size-sm flex items-center justify-center gap-2 px-6 py-2.5 bg-[#00C233] hover:bg-[#00a82c] text-white font-bold transition-all duration-300 rounded shadow-sm hover:shadow hover:scale-[1.02]"
+                            href="https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ 
+                              fontFamily: "var(--font-montserrat), sans-serif", 
+                              fontSize: "15px", 
+                              fontWeight: "bold",
+                              color: "#ffffff" 
+                            }}
+                          >
+                            <span className="elementor-button-content-wrapper flex items-center justify-center gap-2" style={{ color: "#ffffff" }}>
+                              <span className="elementor-button-icon flex items-center">
+                                <svg 
+                                  aria-hidden="true" 
+                                  className="e-font-icon-svg e-fab-whatsapp w-4.5 h-4.5 fill-current" 
+                                  viewBox="0 0 448 512" 
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  style={{ fill: "#ffffff", color: "#ffffff" }}
+                                >
+                                  <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L3 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path>
+                                </svg>
+                              </span>
+                              <span className="elementor-button-text font-bold" style={{ color: "#ffffff", fontWeight: "bold" }}>+593 98 129 6179</span>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
                     </form>
                   </div>
                 ) : (
