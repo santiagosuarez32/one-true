@@ -131,7 +131,7 @@ export default function Testimonials() {
               
               <div className="flex items-center mt-6">
                 <div>
-                  <h2 className="text-[15px] text-[#48255A] font-bold" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>{testimonial.author}</h2>
+                  <h4 className="text-[15px] text-[#48255A] font-bold" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>{testimonial.author}</h4>
                   <p className="text-[13px] text-[#700FA3] font-medium">{testimonial.company}</p>
                 </div>
               </div>

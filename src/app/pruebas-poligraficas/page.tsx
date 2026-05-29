@@ -93,37 +93,37 @@ const NUESTRAS_SOLUCIONES = [
   {
     title: "Vetting (Verificación de Antecedentes)",
     desc: "Proteja la integridad de su empresa desde el primer día. Filtramos riesgos mediante el rastreo exhaustivo en más de 190 bases de datos nacionales e internacionales (Interpol/OFAC) para garantizar contrataciones 100% seguras.",
-    image: "/servicios/2.png",
+    image: "/servicios/2.webp",
     cta: "Ver detalles del servicio"
   },
   {
     title: "Estudio de Confiabilidad 360°",
     desc: "Confirmamos la honestidad y estabilidad de sus candidatos. Validamos trayectorias (laborales y académicas) y realizamos un análisis profundo de salud financiera y endeudamiento en +190 bases de datos para asegurar un equipo confiable y libre de riesgos.",
-    image: "/servicios/3.png",
+    image: "/servicios/3.webp",
     cta: "Ver detalles del servicio"
   },
   {
     title: "Visitas Domiciliarias",
     desc: "Evaluamos el entorno socioeconómico y familiar de sus candidatos en el terreno. Prevenimos riesgos de vulnerabilidad y confirmamos la coherencia entre el estilo de vida y el perfil declarado para garantizar contrataciones íntegras.",
-    image: "/servicios/4.png",
+    image: "/servicios/4.webp",
     cta: "Ver detalles del servicio"
   },
   {
     title: "Pruebas Toxicológicas",
     desc: "Garantice un ambiente laboral seguro y productivo. Detectamos el consumo de sustancias con un 99% de nivel de confianza, asegurando que su equipo humano opere con la sobriedad y responsabilidad que su empresa exige.",
-    image: "/servicios/5.png",
+    image: "/servicios/5.webp",
     cta: "Ver detalles del servicio"
   },
   {
     title: "Evaluaciones Psicométricas",
     desc: "Análisis profundo de la personalidad, aptitudes, comportamiento ético del personal para asegurar el ajuste al cargo.",
-    image: "/servicios/6.png",
+    image: "/servicios/6.webp",
     cta: "Ver detalles del servicio"
   },
   {
     title: "Prueba de Honestidad, Ética y Valores",
     desc: "Un entorno empresarial seguro se construye con personas confiables. Nuestra Prueba de Honestidad, Ética y Valores es una herramienta psicométrica avanzada, compuesta por 90 reactivos estratégicos, diseñada para identificar conductas de riesgo y medir la alineación ética de los evaluados de manera ágil y precisa.",
-    image: "/servicios/8.png",
+    image: "/servicios/8.webp",
     cta: "Ver detalles del servicio"
   },
 ];
@@ -235,7 +235,7 @@ export default function PruebasPoligraficasPage() {
 
         <img 
           src="/pruebas-poligrafo/hero.webp"
-          alt="One True Pruebas de Polígrafo"
+          alt="Fondo de hero: Pruebas de Polígrafo en Ecuador - One True"
           fetchPriority="high"
           className="absolute inset-0 w-full h-full object-cover object-right-top z-0 opacity-40 mix-blend-overlay pointer-events-none"
         />
@@ -261,14 +261,12 @@ export default function PruebasPoligraficasPage() {
             </div>
 
             <h1
-              className="mb-6"
+              className="mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-semibold"
               style={{
                 textAlign: "start",
                 fontFamily: "var(--font-montserrat), sans-serif",
                 margin: "0 0 28px 0",
                 padding: 0,
-                fontSize: "52px",
-                fontWeight: "600",
                 lineHeight: "1.1",
                 color: "#FFFFFF",
                 textShadow: "0 2px 4px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.18)"
@@ -278,12 +276,10 @@ export default function PruebasPoligraficasPage() {
             </h1>
 
             <p
-              className="mb-6 opacity-95"
+              className="mb-6 opacity-95 text-sm sm:text-base md:text-lg font-medium"
               style={{
                 textAlign: "start",
                 fontFamily: "var(--font-montserrat), sans-serif",
-                fontSize: "18px",
-                fontWeight: "500",
                 lineHeight: "30px",
                 color: "#FFFFFF" // Force color to override global CSS leaks
               }}
@@ -382,9 +378,8 @@ export default function PruebasPoligraficasPage() {
             </div>
             
             <h2
+              className="text-2xl sm:text-3xl md:text-[36px] font-bold"
               style={{
-                fontSize: "36px",
-                fontWeight: "bold",
                 lineHeight: "46px",
                 color: "#48255A",
                 fontFamily: "var(--font-montserrat), sans-serif",
@@ -898,6 +893,7 @@ export default function PruebasPoligraficasPage() {
                     href="https://www.facebook.com/somosonetrue" 
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Síguenos en Facebook"
                     className="w-10 h-10 bg-white rounded-full hover:scale-110 transition-all duration-300 flex items-center justify-center text-[#700FA3] shadow-md hover:shadow-lg"
                   >
                     <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -909,6 +905,7 @@ export default function PruebasPoligraficasPage() {
                     href="https://www.instagram.com/somosonetrue" 
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Síguenos en Instagram"
                     className="w-10 h-10 bg-white rounded-full hover:scale-110 transition-all duration-300 flex items-center justify-center text-[#700FA3] shadow-md hover:shadow-lg"
                   >
                     <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -920,6 +917,7 @@ export default function PruebasPoligraficasPage() {
                     href="https://www.linkedin.com/company/somosonetrue" 
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Síguenos en LinkedIn"
                     className="w-10 h-10 bg-white rounded-full hover:scale-110 transition-all duration-300 flex items-center justify-center text-[#700FA3] shadow-md hover:shadow-lg"
                   >
                     <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">

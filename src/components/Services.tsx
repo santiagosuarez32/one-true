@@ -43,52 +43,60 @@ export default function Services() {
 
   const serviceItems = [
     {
-      title: "Pruebas de Polígrafo Profesionales.",
+      title: "Pruebas de Polígrafo Profesionales",
       desc: "Certeza técnica con un 95% de exactitud. Revelamos la verdad en procesos críticos de seguridad y confianza.",
-      image: "/servicios/1.png",
-      cta: "Ver detalles del servicio"
+      image: "/servicios/1.webp",
+      cta: "Ver detalles del servicio",
+      href: "/pruebas-poligraficas"
     },
     {
       title: "Vetting (Verificación de Antecedentes)",
       desc: "Proteja la integridad de su empresa desde el primer día. Filtramos riesgos mediante el rastreo exhaustivo en más de 190 bases de datos nacionales e internacionales (Interpol/OFAC) para garantizar contrataciones 100% seguras.",
-      image: "/servicios/2.png",
-      cta: "Ver detalles del servicio"
+      image: "/servicios/2.webp",
+      cta: "Ver detalles del servicio",
+      href: "/vetting"
     },
     {
       title: "Estudio de Confiabilidad 360°",
       desc: "Confirmamos la honestidad y estabilidad de sus candidatos. Validamos trayectorias (laborales y académicas) y realizamos un análisis profundo de salud financiera y endeudamiento en +190 bases de datos para asegurar un equipo confiable y libre de riesgos.",
-      image: "/servicios/3.png",
-      cta: "Ver detalles del servicio"
+      image: "/servicios/3.webp",
+      cta: "Ver detalles del servicio",
+      href: "/estudio-de-confiabilidad-360"
     },
     {
       title: "Visitas Domiciliarias",
       desc: "Evaluamos el entorno socioeconómico y familiar de sus candidatos en el terreno. Prevenimos riesgos de vulnerabilidad y confirmamos la coherencia entre el estilo de vida y el perfil declarado para garantizar contrataciones íntegras.",
-      image: "/servicios/4.png",
-      cta: "Ver detalles del servicio"
+      image: "/servicios/4.webp",
+      cta: "Ver detalles del servicio",
+      href: "/#service-3"
     },
     {
       title: "Pruebas Toxicológicas",
       desc: "Garantice un ambiente laboral seguro y productivo. Detectamos el consumo de sustancias con un 99% de nivel de confianza, asegurando que su equipo humano opere con la sobriedad y responsabilidad que su empresa exige.",
-      image: "/servicios/5.png",
-      cta: "Ver detalles del servicio"
+      image: "/servicios/5.webp",
+      cta: "Ver detalles del servicio",
+      href: "/#service-4"
     },
     {
       title: "Evaluaciones Psicométricas",
       desc: "Análisis profundo de la personalidad, aptitudes, comportamiento ético del personal para asegurar el ajuste al cargo.",
-      image: "/servicios/6.png",
-      cta: "Ver detalles del servicio"
+      image: "/servicios/6.webp",
+      cta: "Ver detalles del servicio",
+      href: "/#service-5"
     },
     {
       title: "Prueba de Honestidad, Ética y Valores",
       desc: "Un entorno empresarial seguro se construye con personas confiables. Nuestra Prueba de Honestidad, Ética y Valores es una herramienta psicométrica avanzada, compuesta por 90 reactivos estratégicos, diseñada para identificar conductas de riesgo y medir la alineación ética de los evaluados de manera ágil y precisa.",
-      image: "/servicios/8.png",
-      cta: "Ver detalles del servicio"
+      image: "/servicios/8.webp",
+      cta: "Ver detalles del servicio",
+      href: "/#service-6"
     },
     {
       title: "Formación en Poligrafía Acreditada por APA",
       desc: "Conviértase en un experto en Poligrafía y evaluador Forense de la Credibilidad. Certifíquese como poligrafista profesional con nuestro programa de 400 horas, diseñado bajo los más altos estándares científicos y avalado internacionalmente por la APA.",
-      image: "/servicios/7.jpg",
-      cta: "Ver formación en poligrafía"
+      image: "/servicios/7.webp",
+      cta: "Ver formación en poligrafía",
+      href: "/#service-7"
     }
   ];
 
@@ -149,6 +157,11 @@ export default function Services() {
                 e.currentTarget.style.setProperty('--mouse-x', `${x}px`);
                 e.currentTarget.style.setProperty('--mouse-y', `${y}px`);
               }}
+              onClick={() => {
+                if (typeof window !== "undefined") {
+                  window.location.href = item.href;
+                }
+              }}
               className="relative group flex flex-col bg-white border border-neutral-100 rounded-2xl overflow-hidden shadow-[0_4px_25px_rgba(0,0,0,0.02)] transition-all duration-500 cursor-pointer scroll-mt-28"
             >
               {/* Efecto de resplandor morado que sigue al cursor */}
@@ -163,7 +176,7 @@ export default function Services() {
               <div className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-100 rounded-t-2xl z-0">
                 <img
                   src={item.image}
-                  alt={item.title}
+                  alt={`Servicio de ${item.title} en Ecuador - One True`}
                   className="w-full h-full object-cover transition-all duration-700 group-hover:brightness-75"
                   loading="lazy"
                   onError={(e) => {
@@ -179,7 +192,9 @@ export default function Services() {
                   className="text-xl font-bold mb-5 text-[#48255A] group-hover:text-[#700FA3] hover:text-[#700FA3] transition-colors duration-300"
                   style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}
                 >
-                  {item.title}
+                  <a href={item.href} className="hover:underline focus:outline-none">
+                    {item.title}
+                  </a>
                 </h3>
                 
                 {/* Description Paragraph */}
@@ -191,17 +206,18 @@ export default function Services() {
                 </p>
                 
                 {/* CTA Button: Styled exactly like the "Cotiza gratis" button but compact & left-aligned */}
-                <button
-                  className="px-4 py-2 bg-[#FFC107] text-[#411A56] font-bold rounded transition-colors duration-300 text-xs whitespace-nowrap w-auto self-start mt-auto group-hover:bg-[#700FA3] group-hover:text-white"
+                <a
+                  href={item.href}
+                  aria-label={`${item.cta} para ${item.title}`}
+                  className="px-4 py-2 bg-[#FFC107] text-[#411A56] font-bold rounded transition-colors duration-300 text-xs whitespace-nowrap w-auto self-start mt-auto group-hover:bg-[#700FA3] group-hover:text-white flex items-center justify-center"
                   style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                 >
                   {item.cta}
-                </button>
+                </a>
               </div>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

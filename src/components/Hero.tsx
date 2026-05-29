@@ -13,7 +13,7 @@ const slides = [
     ),
     subtitle: "Brindamos certeza total en tus procesos de contratación, investigaciones de incidentes y evaluaciones de rutina con tecnología de última generación.",
     cta: "Cotizar mi evaluación ahora",
-    image: "/hero/slider-1.png",
+    image: "/hero/slider-1.webp",
     filter: "none"
   },
   {
@@ -29,7 +29,7 @@ const slides = [
       </>
     ),
     cta: "Contactar a un experto ahora",
-    image: "/hero/slider-2.png",
+    image: "/hero/slider-2.webp",
     filter: "none"
   },
   {
@@ -45,7 +45,7 @@ const slides = [
       </>
     ),
     cta: "Certificarme como Experto",
-    image: "/hero/slider-3.jpg",
+    image: "/hero/slider-3.webp",
     filter: "none"
   }
 ];
@@ -122,24 +122,45 @@ export default function Hero() {
               }`}
             >
               {/* Slide Title */}
-              <h1 
-                className="mb-6"
-                style={{
-                  WebkitTextSizeAdjust: "100%",
-                  WebkitTapHighlightColor: "transparent",
-                  textAlign: "start",
-                  fontFamily: "var(--font-montserrat), sans-serif",
-                  margin: "0 0 28px 0",
-                  padding: 0,
-                  fontSize: "46px",
-                  fontWeight: "600",
-                  lineHeight: "1.1",
-                  color: "#FFFFFF",
-                  textShadow: "0 2px 4px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.18), 0 8px 16px rgba(0,0,0,0.2)",
-                }}
-              >
-                {slide.title}
-              </h1>
+              {slide.id === 1 ? (
+                <h1 
+                  className="mb-6"
+                  style={{
+                    WebkitTextSizeAdjust: "100%",
+                    WebkitTapHighlightColor: "transparent",
+                    textAlign: "start",
+                    fontFamily: "var(--font-montserrat), sans-serif",
+                    margin: "0 0 28px 0",
+                    padding: 0,
+                    fontSize: "46px",
+                    fontWeight: "600",
+                    lineHeight: "1.1",
+                    color: "#FFFFFF",
+                    textShadow: "0 2px 4px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.18), 0 8px 16px rgba(0,0,0,0.2)",
+                  }}
+                >
+                  {slide.title}
+                </h1>
+              ) : (
+                <h2 
+                  className="mb-6"
+                  style={{
+                    WebkitTextSizeAdjust: "100%",
+                    WebkitTapHighlightColor: "transparent",
+                    textAlign: "start",
+                    fontFamily: "var(--font-montserrat), sans-serif",
+                    margin: "0 0 28px 0",
+                    padding: 0,
+                    fontSize: "46px",
+                    fontWeight: "600",
+                    lineHeight: "1.1",
+                    color: "#FFFFFF",
+                    textShadow: "0 2px 4px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.18), 0 8px 16px rgba(0,0,0,0.2)",
+                  }}
+                >
+                  {slide.title}
+                </h2>
+              )}
 
               {/* Slide Subtitle */}
               <p 
@@ -163,6 +184,7 @@ export default function Hero() {
               {/* Slide CTA Buttons */}
               <div className="flex flex-wrap items-center gap-6">
                 <button 
+                  aria-label={slide.cta}
                   className="px-8 py-3 rounded transition-all hover:brightness-110 shadow-lg"
                   style={{
                     WebkitTextSizeAdjust: "100%",
@@ -185,6 +207,7 @@ export default function Hero() {
                 </button>
                 <a 
                   href="#nosotros" 
+                  aria-label="Leer más acerca de nosotros"
                   className="hover:underline transition-all"
                   style={{
                     WebkitTextSizeAdjust: "100%",
@@ -215,6 +238,7 @@ export default function Hero() {
           <button
             key={idx}
             onClick={() => setActiveIndex(idx)}
+            aria-label={`Ver diapositiva ${idx + 1}`}
             className="group cursor-pointer focus:outline-none py-2"
             style={{ width: "60px" }}
           >

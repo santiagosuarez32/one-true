@@ -7,6 +7,7 @@ export default function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isAcademiaOpen, setIsAcademiaOpen] = useState(false);
   const [isAprendeOpen, setIsAprendeOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,7 +48,7 @@ export default function Navbar() {
 
   const evaluationsList = [
     { label: "Vetting", href: "/vetting" },
-    { label: "Estudio de Confiabilidad 360º", href: "/#service-2" },
+    { label: "Estudio de Confiabilidad 360º", href: "/estudio-de-confiabilidad-360" },
     { label: "Visitas Domiciliarias", href: "/#service-3" },
     { label: "Pruebas Toxicológicas", href: "/#service-4" },
     { label: "Evaluaciones Psicométricas", href: "/#service-5" },
@@ -77,7 +78,7 @@ export default function Navbar() {
       <div className="w-full max-w-[1600px] mx-auto flex items-center justify-between relative">
         {/* Left Column: Logo */}
         <div className="w-[180px] lg:w-[220px] flex items-center justify-start shrink-0">
-          <img src="/navbar.png" alt="Globalwork Logo" className="h-14 md:h-18 w-auto object-contain" />
+          <img src="/navbar.webp" alt="One True Ecuador Logo" className="h-14 md:h-18 w-auto object-contain" />
         </div>
 
         {/* Centered Column: Links */}
@@ -230,9 +231,93 @@ export default function Navbar() {
           </nav>
         </div>
 
-        {/* Right Column: Action Button */}
-        <div className="w-[180px] xl:w-[280px] flex justify-end shrink-0">
-          <button className="hidden md:block px-6 py-2 bg-[#FFC107] text-[#411A56] font-bold rounded hover:bg-[#FFD54F] transition-colors text-sm whitespace-nowrap">
+        {/* Right Column: Action Button & Hamburger Toggle */}
+        <div className="flex items-center gap-4 justify-end shrink-0">
+          <button 
+            aria-label="Cotizar gratis servicio de poligrafía y seguridad"
+            className="hidden md:block px-6 py-2 bg-[#FFC107] text-[#411A56] font-bold rounded hover:bg-[#FFD54F] transition-colors text-sm whitespace-nowrap"
+          >
+            Cotiza gratis
+          </button>
+          
+          {/* Hamburger Menu Toggle (visible only on mobile/tablet) */}
+          <button 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="lg:hidden text-white hover:text-[#FFC107] focus:outline-none transition-colors p-1 z-50 relative"
+            aria-label="Toggle Menu"
+          >
+            {isMobileMenuOpen ? (
+              // Close Icon
+              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" strokeWidth="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              // Hamburger Icon
+              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" strokeWidth="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            )}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu Drawer Overlay */}
+      <div 
+        className={`fixed inset-y-0 right-0 z-40 w-full sm:w-80 bg-[#700FA3] border-l border-[#9b51e0]/20 shadow-2xl p-8 flex flex-col transition-all duration-300 transform lg:hidden ${
+          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex justify-between items-center mb-8 mt-4">
+          <img src="/navbar.webp" alt="One True Ecuador Logo" className="h-10 w-auto object-contain" />
+          <button 
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="text-white hover:text-[#FFC107] focus:outline-none"
+            aria-label="Cerrar menú de navegación"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" strokeWidth="2.5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <nav className="flex flex-col gap-6 overflow-y-auto pr-2">
+          {/* Inicio */}
+          <a href="/" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+            Inicio
+          </a>
+
+          {/* Pruebas Poligráficas */}
+          <a href="/pruebas-poligraficas" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+            Pruebas Poligráficas
+          </a>
+
+          {/* Vetting */}
+          <a href="/vetting" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+            Vetting
+          </a>
+
+          {/* Confiabilidad 360 */}
+          <a href="/estudio-de-confiabilidad-360" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+            Confiabilidad 360°
+          </a>
+
+          {/* Comunidad */}
+          <a href="/#podcast" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+            Comunidad
+          </a>
+
+          {/* Blog */}
+          <a href="/#recursos" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+            Blog
+          </a>
+        </nav>
+
+        {/* Mobile Action Button */}
+        <div className="mt-auto">
+          <button 
+            aria-label="Cotizar gratis servicio de poligrafía y seguridad"
+            className="w-full py-3 bg-[#FFC107] text-[#411A56] font-bold rounded hover:bg-[#FFD54F] transition-colors text-base shadow-lg"
+          >
             Cotiza gratis
           </button>
         </div>

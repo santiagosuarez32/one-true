@@ -39,8 +39,8 @@ export default function Podcast() {
           <div className="absolute inset-0 bg-[#700FA3] blur-[100px] opacity-20 rounded-full group-hover:opacity-40 transition-opacity duration-700"></div>
           <div className="relative w-full max-w-[500px] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl transition-transform duration-700 group-hover:scale-105 border border-neutral-200/50">
             <img
-              src="/blog/PODCAST.png"
-              alt="Podcast: ¿Cuál es el beneficio de un estudio de confiabilidad?"
+              src="/blog/PODCAST.webp"
+              alt="Podcast One True: Beneficio de un estudio de confiabilidad en Ecuador"
               className="w-full h-full object-cover"
             />
             {/* Play Button Overlay */}
@@ -95,6 +95,7 @@ export default function Podcast() {
           </p>
           
           <button
+            aria-label="Escuchar el episodio del podcast ahora sobre detección de mentiras y poligrafía"
             className="px-8 py-4 bg-[#FFC107] text-[#411A56] font-bold rounded flex items-center gap-3 transition-all duration-300 hover:bg-[#700FA3] hover:text-white shadow-[0_4px_20px_rgba(255,193,7,0.2)] hover:shadow-[0_4px_25px_rgba(112,15,163,0.3)] hover:-translate-y-1"
             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
           >

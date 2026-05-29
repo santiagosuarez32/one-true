@@ -90,8 +90,8 @@ export default function Ebook() {
               {/* Fallback pattern / gradient instead of image so it doesn't look broken */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#700FA3]/10 to-[#FFC107]/10"></div>
               <img 
-                src="/blog/1.png" 
-                alt="Ebook Mockup" 
+                src="/blog/1.webp" 
+                alt="Portada del Ebook One True: Guía práctica para contratar un servicio de poligrafía confiable en Ecuador" 
                 className="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-multiply"
               />
             </div>
@@ -131,6 +131,7 @@ export default function Ebook() {
               
               <button 
                 type="submit"
+                aria-label="Descargar u obtener Ebook gratuito de Poligrafía"
                 className="w-full mt-2 px-6 py-4 bg-[#700FA3] text-white font-bold rounded-xl hover:bg-[#5a0c82] transition-colors duration-300 text-lg shadow-[0_4px_20px_rgba(112,15,163,0.3)]"
                 style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
               >

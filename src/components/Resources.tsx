@@ -14,12 +14,17 @@ const BlogCard = ({ article, className = "", isWide = false, cardRef }: { articl
   <div 
     ref={cardRef}
     className={`flex ${isWide ? 'flex-col md:flex-row' : 'flex-col'} bg-white border border-neutral-100 rounded-2xl overflow-hidden shadow-[0_4px_25px_rgba(0,0,0,0.04)] transition-transform duration-300 hover:-translate-y-1 group cursor-pointer ${className}`}
+    onClick={() => {
+      if (typeof window !== "undefined") {
+        window.location.href = article.link;
+      }
+    }}
   >
     {/* Image Container with Label */}
     <div className={`relative overflow-hidden bg-neutral-100 ${isWide ? 'w-full md:w-[45%] min-h-[280px] rounded-t-2xl md:rounded-tr-none md:rounded-l-2xl' : 'w-full aspect-[4/3] rounded-t-2xl'}`}>
       <img
         src={article.image}
-        alt={article.title}
+        alt={`Imagen representativa del artículo: ${article.title} - One True Ecuador`}
         className="w-full h-full object-cover absolute inset-0 transition-transform duration-700 group-hover:scale-105"
       />
       {/* Blog Badge */}
@@ -34,10 +39,14 @@ const BlogCard = ({ article, className = "", isWide = false, cardRef }: { articl
         className="text-[14px] font-bold text-[#48255A] group-hover:text-[#700FA3] transition-colors duration-300 leading-[1.4]"
         style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
       >
-        {article.title}
+        <a href={article.link} className="hover:underline focus:outline-none">
+          {article.title}
+        </a>
       </h3>
       
-      <button
+      <a
+        href={article.link}
+        aria-label={`Leer artículo completo: ${article.title}`}
         className="px-4 py-2 bg-[#700FA3] text-[#FFC107] hover:bg-[#FFC107] hover:text-[#48255A] font-bold rounded transition-colors duration-300 text-xs whitespace-nowrap w-auto self-start flex items-center gap-1 uppercase"
         style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
       >
@@ -54,7 +63,7 @@ const BlogCard = ({ article, className = "", isWide = false, cardRef }: { articl
         >
           <path d="M13 5l7 7-7 7M5 5l7 7-7 7" />
         </svg>
-      </button>
+      </a>
     </div>
   </div>
 );
@@ -91,17 +100,17 @@ export default function Resources() {
   const articles: Article[] = [
     {
       title: "¿Verdad o Mentira? Todo lo que debes saber antes de contratar una prueba de Polígrafo.",
-      image: "/blog/1.png",
+      image: "/blog/1.webp",
       link: "#"
     },
     {
       title: "¿Preempleo, Rutina o Investigación? Descubre qué prueba de polígrafo necesitas realmente.",
-      image: "/blog/2.png",
+      image: "/blog/2.webp",
       link: "#"
     },
     {
       title: "Garantiza la Verdad: 10 Requisitos Clave para una Prueba de Polígrafo Confiable y Exitosa.",
-      image: "/blog/3.png",
+      image: "/blog/3.webp",
       link: "#"
     }
   ];
@@ -146,6 +155,7 @@ export default function Resources() {
             </div>
             
             <button
+              aria-label="Conocer más recursos y artículos del blog de One True"
               className="px-6 py-3 bg-[#FFC107] text-[#411A56] font-bold rounded transition-colors duration-300 text-sm hover:bg-[#700FA3] hover:text-white"
               style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
             >
