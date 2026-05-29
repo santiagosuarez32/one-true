@@ -14,6 +14,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
+
 interface CounterProps {
   end: number;
   suffix?: string;
@@ -89,46 +90,52 @@ function AnimatedCounter({ end, suffix = "", duration = 2000, fontSize = "42px" 
   );
 }
 
-const NUESTRAS_SOLUCIONES = [
+const OTRAS_SOLUCIONES = [
   {
-    title: "Vetting (Verificación de Antecedentes)",
-    desc: "Proteja la integridad de su empresa desde el primer día. Filtramos riesgos mediante el rastreo exhaustivo en más de 190 bases de datos nacionales e internacionales (Interpol/OFAC) para garantizar contrataciones 100% seguras.",
-    image: "/servicios/2.png",
-    cta: "Ver detalles del servicio"
+    title: "Pruebas de Polígrafo Profesionales",
+    desc: "Certeza técnica forense con un 95% de exactitud. Validamos la integridad en procesos de selección, monitoreo preventivo y esclarecimiento de incidentes internos.",
+    image: "/servicios/1.png",
+    cta: "Ver detalles del servicio",
+    href: "/pruebas-poligraficas"
   },
   {
     title: "Estudio de Confiabilidad 360°",
-    desc: "Confirmamos la honestidad y estabilidad de sus candidatos. Validamos trayectorias (laborales y académicas) y realizamos un análisis profundo de salud financiera y endeudamiento en +190 bases de datos para asegurar un equipo confiable y libre de riesgos.",
+    desc: "Confirmamos la honestidad y estabilidad de sus candidatos. Validamos trayectorias (laborales y académicas) y realizamos un análisis profundo de salud financiera y endeudamiento en +190 bases de datos.",
     image: "/servicios/3.png",
-    cta: "Ver detalles del servicio"
+    cta: "Ver detalles del servicio",
+    href: "/#service-2"
   },
   {
     title: "Visitas Domiciliarias",
-    desc: "Evaluamos el entorno socioeconómico y familiar de sus candidatos en el terreno. Prevenimos riesgos de vulnerabilidad y confirmamos la coherencia entre el estilo de vida y el perfil declarado para garantizar contrataciones íntegras.",
+    desc: "Evaluamos el entorno socioeconómico y familiar de sus candidatos en el terreno. Prevenimos riesgos de vulnerabilidad y confirmamos la coherencia entre el estilo de vida y el perfil declarado.",
     image: "/servicios/4.png",
-    cta: "Ver detalles del servicio"
+    cta: "Ver detalles del servicio",
+    href: "/#service-3"
   },
   {
     title: "Pruebas Toxicológicas",
-    desc: "Garantice un ambiente laboral seguro y productivo. Detectamos el consumo de sustancias con un 99% de nivel de confianza, asegurando que su equipo humano opere con la sobriedad y responsabilidad que su empresa exige.",
+    desc: "Garantice un ambiente laboral seguro y productivo. Detectamos el consumo de sustancias con un 99% de nivel de confianza, asegurando que su equipo humano opere con sobriedad.",
     image: "/servicios/5.png",
-    cta: "Ver detalles del servicio"
+    cta: "Ver detalles del servicio",
+    href: "/#service-4"
   },
   {
     title: "Evaluaciones Psicométricas",
     desc: "Análisis profundo de la personalidad, aptitudes, comportamiento ético del personal para asegurar el ajuste al cargo.",
     image: "/servicios/6.png",
-    cta: "Ver detalles del servicio"
+    cta: "Ver detalles del servicio",
+    href: "/#service-5"
   },
   {
     title: "Prueba de Honestidad, Ética y Valores",
-    desc: "Un entorno empresarial seguro se construye con personas confiables. Nuestra Prueba de Honestidad, Ética y Valores es una herramienta psicométrica avanzada, compuesta por 90 reactivos estratégicos, diseñada para identificar conductas de riesgo y medir la alineación ética de los evaluados de manera ágil y precisa.",
+    desc: "Un entorno empresarial seguro se construye con personas confiables. Herramienta avanzada psicométrica compuesta por 90 reactivos diseñada para identificar conductas de riesgo.",
     image: "/servicios/8.png",
-    cta: "Ver detalles del servicio"
-  },
+    cta: "Ver detalles del servicio",
+    href: "/#service-6"
+  }
 ];
 
-export default function PruebasPoligraficasPage() {
+export default function VettingPage() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
@@ -151,81 +158,60 @@ export default function PruebasPoligraficasPage() {
     { scope: containerRef }
   );
 
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [country, setCountry] = useState("ec");
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  const toggleVideo = () => {
-    if (videoRef.current) {
-      if (isVideoPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsVideoPlaying(!isVideoPlaying);
-    }
-  };
-
-  const toggleFaq = (index: number) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
 
   const testTypes = [
     {
-      title: "Evaluaciones de Preempleo",
-      subtitle: "Filtro de Selección Confiable",
-      desc: "Proteja los activos de su empresa desde el primer momento. Esta evaluación está diseñada para identificar conductas de riesgo, antecedentes no declarados y evaluar el nivel de honestidad de los postulantes antes de ocupar cargos críticos o de alta responsabilidad.",
+      title: "Vetting de Preempleo",
+      subtitle: "Filtro inicial riguroso",
+      desc: "Evite contratar riesgos potenciales. Este análisis se enfoca en verificar la validez de la información proporcionada por el candidato en su hoja de vida y examinar sus antecedentes en más de 190 bases de datos nacionales e internacionales.",
       image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
-      details: ["Verificación de honestidad en hoja de vida.", "Detección de vínculos con actividades ilícitas.", "Evaluación de consumo de sustancias no declaradas.", "Prevención de filtración de información o fraudes internos."],
+      details: [
+        "Verificación de antecedentes penales y judiciales.",
+        "Análisis de listas restrictivas internacionales (OFAC, Clinton).",
+        "Rastreo de deudas e historial crediticio/financiero.",
+        "Validación de títulos y trayectoria académica."
+      ],
       cta: "Cotizar preempleo"
     },
     {
-      title: "Evaluaciones de Rutina o Permanencia",
-      subtitle: "Prevención y Control Continuo",
-      desc: "Salvaguarde la integridad corporativa de forma preventiva. Diseñada para evaluar periódicamente al personal activo que tiene acceso a recursos financieros, bases de datos confidenciales o áreas estratégicas, reforzando la cultura de transparencia y lealtad.",
+      title: "Vetting de Proveedores",
+      subtitle: "Garantía en su Cadena de Suministro",
+      desc: "Proteja la reputación de su organización asegurando que sus aliados comerciales, contratistas y proveedores operen bajo estándares de cumplimiento ético y legal intachables.",
       image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600&q=80",
-      details: ["Evaluaciones periódicas de honestidad laboral.", "Detección temprana de fugas de información.", "Disuasión eficaz contra malas prácticas y fraudes.", "Mantenimiento de estándares éticos elevados."],
-      cta: "Cotizar rutina"
+      details: [
+        "Verificación legal de la constitución empresarial.",
+        "Monitoreo de deudas tributarias y solvencia financiera.",
+        "Rastreo de litigios comerciales o laborales activos.",
+        "Prevención de vínculos con actividades fraudulentas."
+      ],
+      cta: "Cotizar proveedores"
     },
     {
-      title: "Evaluaciones Específicas / Investigación",
-      subtitle: "Resolución Técnica de Incidentes",
-      desc: "Certeza técnica y forense ante pérdidas o dudas específicas. Se ejecuta de manera rigurosa y objetiva para esclarecer responsabilidades en incidentes específicos de seguridad como robos, fraudes, sabotajes o filtración de información clasificada.",
+      title: "Vetting de Cargos Críticos",
+      subtitle: "Máxima Seguridad Corporativa",
+      desc: "Diseñado específicamente para directores, ejecutivos de finanzas, seguridad y personal con acceso directo a activos clave. Realizamos un estudio exhaustivo y de alta especificidad.",
       image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80",
-      details: ["Metodología forense de diagnóstico altamente precisa.", "Esclarecimiento técnico de sospechas e incidentes.", "Análisis objetivo libre de sesgos y presiones.", "Emisión de informes con validez técnica certificada."],
-      cta: "Cotizar investigación"
+      details: [
+        "Análisis patrimonial exhaustivo.",
+        "Declaración de conflictos de interés.",
+        "Búsqueda internacional en Interpol y listas antiterrorismo.",
+        "Historial reputacional en registros públicos."
+      ],
+      cta: "Cotizar cargos críticos"
     }
   ];
 
-  const faqs = [
-    {
-      q: "¿Cuál es el nivel de exactitud de las pruebas de polígrafo?",
-      a: "Bajo los estándares científicos de la American Polygraph Association (APA), y utilizando técnicas y metodologías validadas modernas (como el sistema de puntuación ESS-M), nuestras pruebas tienen un nivel de exactitud comprobado del 92% al 98%, promediando una certeza técnica superior al 95%."
-    },
-    {
-      q: "¿Es legal realizar pruebas de polígrafo a empleados?",
-      a: "Sí, es legal siempre que se cumplan las normativas de derechos humanos y laborales de cada país. La evaluación requiere de manera obligatoria el consentimiento expreso y firmado del evaluado. En One True operamos bajo estrictos códigos éticos internacionales de la APA que garantizan la confidencialidad, la dignidad y el trato justo en cada etapa del proceso."
-    },
-    {
-      q: "¿Cuánto tiempo toma realizar una evaluación completa?",
-      a: "Una prueba típica de polígrafo tiene una duración aproximada de 90 a 120 minutos. El proceso incluye tres fases rigurosas: una entrevista previa (pre-test) para explicar los temas y revisar la salud del evaluado, la fase de adquisición de gráficas (donde se registraron los sensores), y la fase posterior (post-test) de análisis de datos."
-    },
-    {
-      q: "¿Qué sensores y canales mide el polígrafo?",
-      a: "El polígrafo computarizado forense de última generación monitorea múltiples canales fisiológicos de manera simultánea: actividad respiratoria torácica y abdominal (mediante neumógrafos), actividad electrodérmica o conductancia de la piel (GSR), y actividad cardiovascular (flujo sanguíneo y presión mediante brazalete neumático), además de sensores de detección de contramedidas físicas."
-    }
-  ];
-
+  
   return (
     <main className="min-h-screen bg-white text-[#525252] selection:bg-[#FFC107] selection:text-[#411A56]">
       {/* Navbar */}
       <Navbar />
 
-      {/* Hero Section - Matching the home Hero styling and colors but static */}
+      {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-32 pb-24 bg-[#700FA3]">
-        {/* Purple Overlay with smooth cubic-bezier easing gradient matching home exactly */}
+        {/* Purple Overlay */}
         <div 
           className="absolute inset-0 z-0 pointer-events-none"
           style={{
@@ -234,8 +220,8 @@ export default function PruebasPoligraficasPage() {
         />
 
         <img 
-          src="/pruebas-poligrafo/hero.webp"
-          alt="One True Pruebas de Polígrafo"
+          src="/servicios/2.webp"
+          alt="One True Vetting y Verificación de Antecedentes"
           fetchPriority="high"
           className="absolute inset-0 w-full h-full object-cover object-right-top z-0 opacity-40 mix-blend-overlay pointer-events-none"
         />
@@ -250,13 +236,13 @@ export default function PruebasPoligraficasPage() {
               <span
                 style={{
                   letterSpacing: "0.5px",
-                  fontSize: "18px",
+                  fontSize: "16px",
                   color: "#FFC107",
                   fontWeight: "600",
                   fontFamily: "var(--font-montserrat), sans-serif",
                 }}
               >
-                Nuestras soluciones
+                Transformamos la incertidumbre en decisiones seguras.
               </span>
             </div>
 
@@ -274,7 +260,7 @@ export default function PruebasPoligraficasPage() {
                 textShadow: "0 2px 4px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.18)"
               }}
             >
-              Pruebas de <strong style={{ fontWeight: "800", textDecoration: "underline", textDecorationColor: "#FFC107", textUnderlineOffset: "6px" }}>Polígrafo</strong>
+              Verificación Integral de <strong style={{ fontWeight: "800", textDecoration: "underline", textDecorationColor: "#FFC107", textUnderlineOffset: "6px" }}>Candidatos</strong>
             </h1>
 
             <p
@@ -285,54 +271,14 @@ export default function PruebasPoligraficasPage() {
                 fontSize: "18px",
                 fontWeight: "500",
                 lineHeight: "30px",
-                color: "#FFFFFF" // Force color to override global CSS leaks
+                color: "#FFFFFF"
               }}
             >
-              Aseguramos su toma de decisiones mediante pruebas de polígrafo con un 95% de exactitud. Validamos la integridad en procesos de selección, monitoreo preventivo de su personal y esclarecimiento de incidentes internos bajo estándares internacionales. Obtenga resultados técnicos en tiempo récord para asegurar la transparencia y proteger los activos de su empresa.
+              No se conforme con la buena impresión de una entrevista. Validamos la integridad de su futuro talento humano con un análisis profundo de antecedentes y riesgos.
             </p>
 
-            {/* Premium Counters Block */}
-            <div className="flex flex-wrap items-center gap-10 mt-6 mb-8 border-t border-white/10 pt-6 w-full max-w-xl">
-              {/* Counter 1 */}
-              <div className="flex flex-col text-left">
-                <AnimatedCounter end={95} suffix="%" />
-                <span 
-                  style={{ 
-                    color: "#FFFFFF", 
-                    fontSize: "13px", 
-                    fontWeight: "600", 
-                    fontFamily: "var(--font-montserrat), sans-serif",
-                    marginTop: "4px",
-                    opacity: 0.9
-                  }}
-                >
-                  Confiables
-                </span>
-              </div>
-
-              {/* Vertical Divider */}
-              <div className="hidden sm:block w-[1px] h-10 bg-white/20" />
-
-              {/* Counter 2 */}
-              <div className="flex flex-col text-left">
-                <AnimatedCounter end={24} suffix="H" />
-                <span 
-                  style={{ 
-                    color: "#FFFFFF", 
-                    fontSize: "13px", 
-                    fontWeight: "600", 
-                    fontFamily: "var(--font-montserrat), sans-serif",
-                    marginTop: "4px",
-                    opacity: 0.9
-                  }}
-                >
-                  Resultados en tiempo récord
-                </span>
-              </div>
-            </div>
-
             {/* Hero CTA Button */}
-            <div className="flex flex-wrap items-center gap-6 mt-4 mb-4">
+            <div className="flex flex-wrap items-center gap-6 mt-6 mb-8">
               <a 
                 href="#contacto"
                 className="px-8 py-3 rounded transition-all hover:brightness-110 shadow-lg"
@@ -391,24 +337,31 @@ export default function PruebasPoligraficasPage() {
                 marginTop: "10px"
               }}
             >
-              ¿Qué resolvemos para su organización?
+              ¿Qué analizamos?
             </h2>
+
+            <p 
+              className="text-[#525252] text-base mt-4 max-w-2xl font-light"
+              style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+            >
+              Cruzamos información en tiempo real en <strong className="font-bold underline decoration-[#FFC107] underline-offset-2">+190 bases de datos</strong> para detectar alertas legales, financieras o de reputación:
+            </p>
           </div>
 
           {/* Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: "Polígrafo Específico",
-                text: "Utilizada en procesos investigativos. Esclarezca incidentes internos, pérdidas, robos, asaltos, fuga de información, temas personales, con absoluta objetividad y confidencialidad."
+                title: "Historial Legal",
+                text: "Función Judicial, Policía Nacional y SUPA."
               },
               {
-                title: "Polígrafo Pre-empleo",
-                text: "Identificamos riesgos críticos como vínculos ilícitos, consumo de sustancias, omisión de antecedentes, entre otras conductas contraproducentes. Asegure la honestidad de su talento desde el primer día."
+                title: "Perfil Ciudadano",
+                text: "Registro Civil y Agencia Nacional de Tránsito."
               },
               {
-                title: "Polígrafo de Rutina",
-                text: "Monitoreo preventivo para personal que labora en la empresa. Fortalece la lealtad y disuade conductas irregulares internas."
+                title: "Seguridad Global",
+                text: "Listas de control internacional (OFAC, Interpol y Europol)."
               }
             ].map((item, idx) => (
               <div 
@@ -440,37 +393,33 @@ export default function PruebasPoligraficasPage() {
         </div>
       </section>
 
-      {/* ¿Por qué contratarnos? Section - Based on Globalwork Beneficios style */}
+      {/* ¿Por qué contratarnos? Section */}
       <section className="bg-white py-12 md:py-16 overflow-hidden relative">
-        {/* Decorative background elements */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#700FA3]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
         
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16 flex flex-col lg:flex-row items-center gap-8 lg:gap-12 relative z-10">
           
-          {/* Left Column: Images / Visuals */}
+          {/* Left Column: Images */}
           <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-start">
             <div className="relative w-full max-w-md">
-              {/* Main Image */}
               <div className="rounded-3xl overflow-hidden shadow-2xl relative z-10 border-4 border-white">
                 <img 
                   src="/pruebas-poligrafo/primer.webp" 
-                  alt="Profesional de poligrafía" 
+                  alt="Profesional verificando antecedentes" 
                   loading="lazy"
                   className="w-full h-auto object-cover aspect-[4/5]"
                 />
               </div>
               
-              {/* Secondary Overlapping Image */}
               <div className="absolute -bottom-12 -right-12 w-2/3 rounded-3xl overflow-hidden shadow-xl z-20 border-4 border-white hidden md:block">
                 <img 
                   src="/pruebas-poligrafo/segunda.webp" 
-                  alt="Análisis de resultados" 
+                  alt="Rastreo en bases de datos" 
                   loading="lazy"
                   className="w-full h-auto object-cover aspect-square"
                 />
               </div>
 
-              {/* Decorative Dots Pattern */}
               <div className="absolute -top-8 -left-8 w-24 h-24 z-0 opacity-20"
                 style={{
                   backgroundImage: 'radial-gradient(#700FA3 2px, transparent 2px)',
@@ -482,7 +431,6 @@ export default function PruebasPoligraficasPage() {
 
           {/* Right Column: Content */}
           <div className="w-full lg:w-1/2 flex flex-col items-start lg:pl-10">
-            {/* Small Header */}
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-[2px] bg-[#700FA3]" />
               <span
@@ -507,17 +455,15 @@ export default function PruebasPoligraficasPage() {
                 fontFamily: "var(--font-montserrat), sans-serif",
               }}
             >
-              ¿Por qué contratarnos?
+              El Valor para su Empresa
             </h2>
 
-            {/* Benefit List */}
             <ul className="flex flex-col gap-3 w-full mb-6">
               {[
-                "Te ayudamos a eliminar riesgos críticos en tus nuevas contrataciones.",
-                "Identificamos responsables de fraudes con certeza técnica.",
-                "Resultados en 24 horas o menos.",
-                "Detectamos la deshonestidad interna."
-              ].map((text, idx) => (
+                { title: "Reducción de Riesgos", text: "Evite infiltraciones, fraudes o personal no apto." },
+                { title: "Reportes Ágiles", text: "Resultados técnicos, claros y listos para la toma de decisiones." },
+                { title: "Cumplimiento", text: "Estándares de Compliance para su departamento de RR.HH." }
+              ].map((item, idx) => (
                 <li key={idx} className="flex items-start gap-3 py-1">
                   <div className="w-6 h-6 rounded flex items-center justify-center bg-[#700FA3] text-white shrink-0 mt-0.5 shadow-md">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -528,7 +474,8 @@ export default function PruebasPoligraficasPage() {
                     className="text-base text-[#525252] font-medium leading-relaxed"
                     style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                   >
-                    {text}
+                    <strong className="font-bold text-[#48255A]">{item.title}: </strong>
+                    {item.text}
                   </span>
                 </li>
               ))}
@@ -548,166 +495,12 @@ export default function PruebasPoligraficasPage() {
                 border: "none"
               }}
             >
-              <span className="elementor-button-text">Cotizar mi evaluación ahora</span>
+              <span>Cotizar mi servicio de Vetting</span>
             </a>
 
           </div>
-
         </div>
       </section>
-
-      {/* ── NUESTRAS SOLUCIONES ── */}
-      <section className="bg-white py-24 overflow-hidden relative">
-        <div className="mx-auto max-w-6xl lg:max-w-7xl xl:max-w-[1350px] px-8 md:px-12 lg:px-16 relative z-10">
-
-          {/* ── SECTION HEADER ── */}
-          <div className="mb-16 flex flex-col items-center text-center">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-[3px] bg-[#700FA3]" />
-              <span
-                style={{
-                  letterSpacing: "0.5px",
-                  fontSize: "18px",
-                  color: "#700FA3",
-                  fontWeight: "600",
-                  fontFamily: "var(--font-montserrat), sans-serif",
-                }}
-              >
-                Servicios Integrales
-              </span>
-            </div>
-            
-            <h2 
-              className="text-4xl md:text-[42px]"
-              style={{
-                fontWeight: "bold",
-                lineHeight: "1.2",
-                color: "#48255A",
-                fontFamily: "var(--font-montserrat), sans-serif",
-              }}
-            >
-              Nuestras Soluciones
-            </h2>
-
-            <p className="text-[#525252] text-base mt-4 max-w-xl font-light">
-              Respaldamos sus decisiones corporativas con tecnología forense y análisis de confianza.
-            </p>
-          </div>
-
-          {/* ── CARDS GRID ── */}
-          <div className="flex flex-wrap justify-center gap-6 max-w-[1100px] mx-auto">
-            {NUESTRAS_SOLUCIONES.map((item, idx) => (
-              <div 
-                key={idx}
-                className="solucion-card relative group flex flex-col bg-white border border-neutral-100 rounded-2xl overflow-hidden shadow-[0_4px_25px_rgba(0,0,0,0.02)] transition-all duration-500 cursor-pointer scroll-mt-28 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.3333%-16px)]"
-                onMouseMove={(e) => {
-                  const rect = e.currentTarget.getBoundingClientRect();
-                  const x = e.clientX - rect.left;
-                  const y = e.clientY - rect.top;
-                  e.currentTarget.style.setProperty('--mouse-x', `${x}px`);
-                  e.currentTarget.style.setProperty('--mouse-y', `${y}px`);
-                }}
-              >
-                {/* Efecto de resplandor morado que sigue al cursor */}
-                <div 
-                  className="pointer-events-none absolute -inset-px z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  style={{
-                    background: 'radial-gradient(500px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(112, 15, 163, 0.15), transparent 40%)'
-                  }}
-                />
-
-                {/* Card Image Cover */}
-                <div className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-100 rounded-t-2xl z-0">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover transition-all duration-700 group-hover:brightness-75"
-                    loading="lazy"
-                  />
-                </div>
-
-                {/* Text & Button Padding Container */}
-                <div className="p-6 flex flex-col flex-1 relative z-20">
-                  {/* Title (Hover turns morado) */}
-                  <h3 
-                    className="text-xl font-bold mb-5 text-[#48255A] group-hover:text-[#700FA3] hover:text-[#700FA3] transition-colors duration-300"
-                    style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}
-                  >
-                    {item.title}
-                  </h3>
-                  
-                  {/* Description Paragraph */}
-                  <p 
-                    className="text-[#525252] text-sm leading-relaxed mb-6 font-light flex-1"
-                    style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                  >
-                    {item.desc}
-                  </p>
-                  
-                  {/* CTA Button */}
-                  <button
-                    className="px-4 py-2 bg-[#FFC107] text-[#411A56] font-bold rounded transition-colors duration-300 text-xs w-auto self-start mt-auto group-hover:bg-[#700FA3] group-hover:text-white"
-                    style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                  >
-                    {item.cta}
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Sobre Nosotros - Video Section */}
-      <section className="bg-white py-24 relative">
-        <div className="w-full max-w-4xl mx-auto px-8 flex flex-col items-center">
-          
-          {/* Centered Small Header */}
-          <div className="flex flex-col items-center text-center mb-10">
-            <h2
-              style={{
-                fontSize: "32px",
-                fontWeight: "bold",
-                color: "#48255A",
-                fontFamily: "var(--font-montserrat), sans-serif",
-              }}
-            >
-              Sobre Nosotros
-            </h2>
-          </div>
-
-          {/* Custom Video Player */}
-          <div className="relative w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center group cursor-pointer" onClick={toggleVideo}>
-            <video 
-              ref={videoRef}
-              src="/video/video.mp4" 
-              className="w-full h-full object-cover"
-              playsInline
-              onEnded={() => setIsVideoPlaying(false)}
-            />
-            
-            {/* Custom Vimeo-style Transparent Play/Pause Button */}
-            <div 
-              className={`absolute flex items-center justify-center w-16 h-12 bg-black/60 backdrop-blur-sm rounded-lg transition-all duration-300 ${isVideoPlaying ? 'opacity-0 group-hover:opacity-100' : 'opacity-100'} hover:bg-[#700FA3] hover:scale-105`}
-            >
-              {!isVideoPlaying ? (
-                <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              ) : (
-                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-                </svg>
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Additional Sections ── */}
-      <Resources />
-      <Podcast />
-      <Ebook />
 
       {/* ── FORMULARIO DE CONTACTO (ESTILO EXACTO GLOBALWORK #NOSOTROS - ADAPTADO A ONE TRUE) ── */}
       <section 
@@ -1182,8 +975,8 @@ export default function PruebasPoligraficasPage() {
 
       {/* Footer */}
       <Footer />
-
-      {/* Floating WhatsApp Action Button */}
+      
+      {/* WhatsApp Button */}
       <FloatingWhatsApp />
     </main>
   );

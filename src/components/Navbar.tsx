@@ -6,6 +6,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isAcademiaOpen, setIsAcademiaOpen] = useState(false);
+  const [isAprendeOpen, setIsAprendeOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,21 +45,26 @@ export default function Navbar() {
     fill: "#FFFFFF",
   };
 
-  const servicesList = [
-    "Pruebas de Polígrafo Profesionales.",
-    "Vetting (Verificación de Antecedentes)",
-    "Estudio de Confiabilidad 360°",
-    "Visitas Domiciliarias",
-    "Pruebas Toxicológicas",
-    "Evaluaciones Psicométricas",
-    "Formación en Poligrafía Acreditada por APA"
+  const evaluationsList = [
+    { label: "Vetting", href: "/vetting" },
+    { label: "Estudio de Confiabilidad 360º", href: "/#service-2" },
+    { label: "Visitas Domiciliarias", href: "/#service-3" },
+    { label: "Pruebas Toxicológicas", href: "/#service-4" },
+    { label: "Evaluaciones Psicométricas", href: "/#service-5" },
+    { label: "Prueba de honestidad ética y valores", href: "/#service-6" }
   ];
 
   const academiaList = [
-    { label: "Curso Básico", href: "/#service-7" },
-    { label: "Curso Avanzado de Poligrafía", href: "/#service-7" },
+    { label: "Curso Básico en Poligrafía 400 H", href: "/#service-7" },
+    { label: "Cursos Avanzados en Poligrafía", href: "/#service-7" },
     { label: "Formaciones Complementarias", href: "/#service-7" },
     { label: "Calendario Académico", href: "/#service-7" }
+  ];
+
+  const aprendeList = [
+    { label: "Blog", href: "/#recursos" },
+    { label: "Podcast", href: "/#podcast" },
+    { label: "Ebook", href: "/#ebook" }
   ];
 
   return (
@@ -87,14 +93,14 @@ export default function Navbar() {
               Pruebas Poligráficas
             </a>
             
-            {/* Dropdown Servicios Accordion wrapper */}
+            {/* Dropdown Evaluaciones Accordion wrapper */}
             <div 
               className="relative"
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
               <a href="/#services" style={navLinkStyle} className="flex items-center hover:!text-[#FFC107] transition-colors duration-300 lg:!text-[13px] xl:!text-[15px] 2xl:!text-[16px] lg:!px-1.5 xl:!px-3 2xl:!px-3.5">
-                Servicios 
+                Evaluaciones 
                 <svg 
                   className={`w-3 h-3 ml-1.5 transition-transform duration-300 ${isDropdownOpen ? "rotate-180" : ""}`}
                   fill="none" 
@@ -109,7 +115,7 @@ export default function Navbar() {
 
               {/* Dropdown Menu Overlay - Wrapped with padding-top bridge to guarantee continuous hover focus */}
               <div 
-                className={`absolute top-full left-1/2 -translate-x-1/2 pt-2 w-80 transition-all duration-300 origin-top z-50 ${
+                className={`absolute top-full left-1/2 -translate-x-1/2 pt-2 w-64 transition-all duration-300 origin-top z-50 ${
                   isDropdownOpen 
                     ? "opacity-100 scale-100 pointer-events-auto translate-y-0" 
                     : "opacity-0 scale-95 pointer-events-none -translate-y-2"
@@ -117,14 +123,14 @@ export default function Navbar() {
               >
                 {/* Styled Dropdown Card: Rounded matching the Cotiza gratis buttons (rounded / 4px) & outer borders removed */}
                 <div className="bg-white rounded border border-neutral-100 shadow-[0_10px_40px_rgba(0,0,0,0.12)] py-2 overflow-hidden">
-                  {servicesList.map((service, index) => (
+                  {evaluationsList.map((item, index) => (
                     <a
                       key={index}
-                      href={`/#service-${index}`}
-                      className="block px-6 py-2.5 text-xs font-semibold text-[#48255A] hover:bg-[#FFC107] hover:text-[#411A56] transition-colors duration-200"
+                      href={item.href}
+                      className="block px-4 py-2.5 text-xs font-semibold text-[#48255A] hover:bg-[#FFC107] hover:text-[#411A56] transition-colors duration-200"
                       style={{ fontFamily: "var(--font-montserrat), sans-serif", textAlign: "left", whiteSpace: "normal" }}
                     >
-                      {service}
+                      {item.label}
                     </a>
                   ))}
                 </div>
@@ -153,7 +159,7 @@ export default function Navbar() {
 
               {/* Dropdown Menu Overlay */}
               <div 
-                className={`absolute top-full left-1/2 -translate-x-1/2 pt-2 w-80 transition-all duration-300 origin-top z-50 ${
+                className={`absolute top-full left-1/2 -translate-x-1/2 pt-2 w-64 transition-all duration-300 origin-top z-50 ${
                   isAcademiaOpen 
                     ? "opacity-100 scale-100 pointer-events-auto translate-y-0" 
                     : "opacity-0 scale-95 pointer-events-none -translate-y-2"
@@ -164,7 +170,7 @@ export default function Navbar() {
                     <a
                       key={index}
                       href={item.href}
-                      className="block px-6 py-2.5 text-xs font-semibold text-[#48255A] hover:bg-[#FFC107] hover:text-[#411A56] transition-colors duration-200"
+                      className="block px-4 py-2.5 text-xs font-semibold text-[#48255A] hover:bg-[#FFC107] hover:text-[#411A56] transition-colors duration-200"
                       style={{ fontFamily: "var(--font-montserrat), sans-serif", textAlign: "left", whiteSpace: "normal" }}
                     >
                       {item.label}
@@ -179,21 +185,48 @@ export default function Navbar() {
               Comunidad
             </a>
 
-            {/* Cotiza aquí */}
-            <a 
-              href="https://wa.me/593981296179?text=Hola!%20Quiero%20cotizar%20un%20servicio%20de%20poligraf%C3%ADa." 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              style={navLinkStyle} 
-              className="hover:!text-[#FFC107] transition-colors duration-300 lg:!text-[13px] xl:!text-[15px] 2xl:!text-[16px] lg:!px-1.5 xl:!px-3 2xl:!px-3.5"
+            {/* Dropdown Aprende gratis Accordion wrapper */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsAprendeOpen(true)}
+              onMouseLeave={() => setIsAprendeOpen(false)}
             >
-              Cotiza aquí
-            </a>
+              <a href="/#recursos" style={navLinkStyle} className="flex items-center hover:!text-[#FFC107] transition-colors duration-300 lg:!text-[13px] xl:!text-[15px] 2xl:!text-[16px] lg:!px-1.5 xl:!px-3 2xl:!px-3.5">
+                Aprende gratis 
+                <svg 
+                  className={`w-3 h-3 ml-1.5 transition-transform duration-300 ${isAprendeOpen ? "rotate-180" : ""}`}
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24" 
+                  xmlns="http://www.w3.org/2000/svg"
+                  style={{ strokeWidth: 4 }}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
+              </a>
 
-            {/* Aprende gratis */}
-            <a href="/#recursos" style={navLinkStyle} className="hover:!text-[#FFC107] transition-colors duration-300 lg:!text-[13px] xl:!text-[15px] 2xl:!text-[16px] lg:!px-1.5 xl:!px-3 2xl:!px-3.5">
-              Aprende gratis
-            </a>
+              {/* Dropdown Menu Overlay */}
+              <div 
+                className={`absolute top-full left-1/2 -translate-x-1/2 pt-2 w-36 transition-all duration-300 origin-top z-50 ${
+                  isAprendeOpen 
+                    ? "opacity-100 scale-100 pointer-events-auto translate-y-0" 
+                    : "opacity-0 scale-95 pointer-events-none -translate-y-2"
+                }`}
+              >
+                <div className="bg-white rounded border border-neutral-100 shadow-[0_10px_40px_rgba(0,0,0,0.12)] py-2 overflow-hidden">
+                  {aprendeList.map((item, index) => (
+                    <a
+                      key={index}
+                      href={item.href}
+                      className="block px-4 py-2.5 text-xs font-semibold text-[#48255A] hover:bg-[#FFC107] hover:text-[#411A56] transition-colors duration-200"
+                      style={{ fontFamily: "var(--font-montserrat), sans-serif", textAlign: "left", whiteSpace: "normal" }}
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
           </nav>
         </div>
 

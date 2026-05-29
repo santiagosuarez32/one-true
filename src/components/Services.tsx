@@ -79,7 +79,7 @@ export default function Services() {
       cta: "Ver detalles del servicio"
     },
     {
-      title: "Prueba de Integridad, Ética y Valores",
+      title: "Prueba de Honestidad, Ética y Valores",
       desc: "Un entorno empresarial seguro se construye con personas confiables. Nuestra Prueba de Honestidad, Ética y Valores es una herramienta psicométrica avanzada, compuesta por 90 reactivos estratégicos, diseñada para identificar conductas de riesgo y medir la alineación ética de los evaluados de manera ágil y precisa.",
       image: "/servicios/8.png",
       cta: "Ver detalles del servicio"
