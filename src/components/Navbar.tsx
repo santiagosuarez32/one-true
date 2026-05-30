@@ -49,10 +49,10 @@ export default function Navbar() {
   const evaluationsList = [
     { label: "Vetting", href: "/vetting" },
     { label: "Estudio de Confiabilidad 360º", href: "/estudio-de-confiabilidad-360" },
-    { label: "Visitas Domiciliarias", href: "/#service-3" },
-    { label: "Pruebas Toxicológicas", href: "/#service-4" },
-    { label: "Evaluaciones Psicométricas", href: "/#service-5" },
-    { label: "Prueba de honestidad ética y valores", href: "/#service-6" }
+    { label: "Visitas Domiciliarias", href: "/visitas-domiciliarias" },
+    { label: "Pruebas Toxicológicas", href: "/pruebas-toxicologicas" },
+    { label: "Evaluaciones Psicométricas", href: "/evaluaciones-psicometricas" },
+    { label: "Prueba de honestidad ética y valores", href: "/prueba-de-honestidad-etica-y-valores" }
   ];
 
   const academiaList = [
@@ -299,6 +299,26 @@ export default function Navbar() {
           {/* Confiabilidad 360 */}
           <a href="/estudio-de-confiabilidad-360" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
             Confiabilidad 360°
+          </a>
+
+          {/* Visitas Domiciliarias */}
+          <a href="/visitas-domiciliarias" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+            Visitas Domiciliarias
+          </a>
+
+          {/* Pruebas Toxicológicas */}
+          <a href="/pruebas-toxicologicas" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+            Pruebas Toxicológicas
+          </a>
+
+          {/* Evaluaciones Psicométricas */}
+          <a href="/evaluaciones-psicometricas" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+            Evaluaciones Psicométricas
+          </a>
+
+          {/* Prueba de Honestidad, Ética y Valores */}
+          <a href="/prueba-de-honestidad-etica-y-valores" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+            Prueba de Honestidad, Ética y Valores
           </a>
 
           {/* Comunidad */}

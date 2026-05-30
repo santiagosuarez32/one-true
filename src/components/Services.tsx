@@ -68,28 +68,28 @@ export default function Services() {
       desc: "Evaluamos el entorno socioeconómico y familiar de sus candidatos en el terreno. Prevenimos riesgos de vulnerabilidad y confirmamos la coherencia entre el estilo de vida y el perfil declarado para garantizar contrataciones íntegras.",
       image: "/servicios/4.webp",
       cta: "Ver detalles del servicio",
-      href: "/#service-3"
+      href: "/visitas-domiciliarias"
     },
     {
       title: "Pruebas Toxicológicas",
       desc: "Garantice un ambiente laboral seguro y productivo. Detectamos el consumo de sustancias con un 99% de nivel de confianza, asegurando que su equipo humano opere con la sobriedad y responsabilidad que su empresa exige.",
       image: "/servicios/5.webp",
       cta: "Ver detalles del servicio",
-      href: "/#service-4"
+      href: "/pruebas-toxicologicas"
     },
     {
       title: "Evaluaciones Psicométricas",
       desc: "Análisis profundo de la personalidad, aptitudes, comportamiento ético del personal para asegurar el ajuste al cargo.",
       image: "/servicios/6.webp",
       cta: "Ver detalles del servicio",
-      href: "/#service-5"
+      href: "/evaluaciones-psicometricas"
     },
     {
       title: "Prueba de Honestidad, Ética y Valores",
       desc: "Un entorno empresarial seguro se construye con personas confiables. Nuestra Prueba de Honestidad, Ética y Valores es una herramienta psicométrica avanzada, compuesta por 90 reactivos estratégicos, diseñada para identificar conductas de riesgo y medir la alineación ética de los evaluados de manera ágil y precisa.",
       image: "/servicios/8.webp",
       cta: "Ver detalles del servicio",
-      href: "/#service-6"
+      href: "/prueba-de-honestidad-etica-y-valores"
     },
     {
       title: "Formación en Poligrafía Acreditada por APA",

@@ -1,209 +1,14 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import Resources from "@/components/Resources";
-import Podcast from "@/components/Podcast";
-import Ebook from "@/components/Ebook";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-}
-
-interface CounterProps {
-  end: number;
-  suffix?: string;
-  duration?: number;
-  fontSize?: string;
-}
-
-function AnimatedCounter({ end, suffix = "", duration = 2000, fontSize = "42px" }: CounterProps) {
-  const [count, setCount] = useState(0);
-  const elementRef = useRef<HTMLDivElement>(null);
-  const [hasStarted, setHasStarted] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setHasStarted(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    const currentRef = elementRef.current;
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
-
-    return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!hasStarted) return;
-
-    let startTime: number | null = null;
-
-    const animate = (timestamp: number) => {
-      if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / duration, 1);
-      
-      // Easing: easeOutQuad
-      const easeProgress = progress * (2 - progress);
-      const currentCount = Math.floor(easeProgress * end);
-      
-      setCount(currentCount);
-
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      }
-    };
-
-    requestAnimationFrame(animate);
-  }, [hasStarted, end, duration]);
-
-  return (
-    <span 
-      ref={elementRef} 
-      style={{ 
-        color: "#FFC107", 
-        fontSize: fontSize, 
-        fontWeight: "900", 
-        lineHeight: "1",
-        fontFamily: "var(--font-montserrat), sans-serif",
-        letterSpacing: "-1px",
-        userSelect: "none"
-      }}
-    >
-      {count.toLocaleString("es-ES")}{suffix}
-    </span>
-  );
-}
-
-const OTRAS_SOLUCIONES = [
-  {
-    title: "Pruebas de Polígrafo Profesionales",
-    desc: "Certeza técnica forense con un 95% de exactitud. Validamos la integridad en procesos de selección, monitoreo preventivo y esclarecimiento de incidentes internos.",
-    image: "/servicios/1.webp",
-    cta: "Ver detalles del servicio",
-    href: "/pruebas-poligraficas"
-  },
-  {
-    title: "Estudio de Confiabilidad 360°",
-    desc: "Confirmamos la honestidad y estabilidad de sus candidatos. Validamos trayectorias (laborales y académicas) y realizamos un análisis profundo de salud financiera y endeudamiento en +190 bases de datos.",
-    image: "/servicios/3.webp",
-    cta: "Ver detalles del servicio",
-    href: "/estudio-de-confiabilidad-360"
-  },
-  {
-    title: "Visitas Domiciliarias",
-    desc: "Evaluamos el entorno socioeconómico y familiar de sus candidatos en el terreno. Prevenimos riesgos de vulnerabilidad y confirmamos la coherencia entre el estilo de vida y el perfil declarado.",
-    image: "/servicios/4.webp",
-    cta: "Ver detalles del servicio",
-    href: "/visitas-domiciliarias"
-  },
-  {
-    title: "Pruebas Toxicológicas",
-    desc: "Garantice un ambiente laboral seguro y productivo. Detectamos el consumo de sustancias con un 99% de nivel de confianza, asegurando que su equipo humano opere con sobriedad.",
-    image: "/servicios/5.webp",
-    cta: "Ver detalles del servicio",
-    href: "/pruebas-toxicologicas"
-  },
-  {
-    title: "Evaluaciones Psicométricas",
-    desc: "Análisis profundo de la personalidad, aptitudes, comportamiento ético del personal para asegurar el ajuste al cargo.",
-    image: "/servicios/6.webp",
-    cta: "Ver detalles del servicio",
-    href: "/evaluaciones-psicometricas"
-  },
-  {
-    title: "Prueba de Honestidad, Ética y Valores",
-    desc: "Un entorno empresarial seguro se construye con personas confiables. Herramienta avanzada psicométrica compuesta por 90 reactivos diseñada para identificar conductas de riesgo.",
-    image: "/servicios/8.webp",
-    cta: "Ver detalles del servicio",
-    href: "/prueba-de-honestidad-etica-y-valores"
-  }
-];
-
-export default function VettingPage() {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(
-    () => {
-      if (!containerRef.current) return;
-      
-      gsap.from(".solucion-card", {
-        opacity: 0,
-        y: 40,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-      });
-    },
-    { scope: containerRef }
-  );
-
+export default function PruebaDeHonestidadEticaYValoresPage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [country, setCountry] = useState("ec");
 
-  const testTypes = [
-    {
-      title: "Vetting de Preempleo",
-      subtitle: "Filtro inicial riguroso",
-      desc: "Evite contratar riesgos potenciales. Este análisis se enfoca en verificar la validez de la información proporcionada por el candidato en su hoja de vida y examinar sus antecedentes en más de 190 bases de datos nacionales e internacionales.",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
-      details: [
-        "Verificación de antecedentes penales y judiciales.",
-        "Análisis de listas restrictivas internacionales (OFAC, Clinton).",
-        "Rastreo de deudas e historial crediticio/financiero.",
-        "Validación de títulos y trayectoria académica."
-      ],
-      cta: "Cotizar preempleo"
-    },
-    {
-      title: "Vetting de Proveedores",
-      subtitle: "Garantía en su Cadena de Suministro",
-      desc: "Proteja la reputación de su organización asegurando que sus aliados comerciales, contratistas y proveedores operen bajo estándares de cumplimiento ético y legal intachables.",
-      image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600&q=80",
-      details: [
-        "Verificación legal de la constitución empresarial.",
-        "Monitoreo de deudas tributarias y solvencia financiera.",
-        "Rastreo de litigios comerciales o laborales activos.",
-        "Prevención de vínculos con actividades fraudulentas."
-      ],
-      cta: "Cotizar proveedores"
-    },
-    {
-      title: "Vetting de Cargos Críticos",
-      subtitle: "Máxima Seguridad Corporativa",
-      desc: "Diseñado específicamente para directores, ejecutivos de finanzas, seguridad y personal con acceso directo a activos clave. Realizamos un estudio exhaustivo y de alta especificidad.",
-      image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80",
-      details: [
-        "Análisis patrimonial exhaustivo.",
-        "Declaración de conflictos de interés.",
-        "Búsqueda internacional en Interpol y listas antiterrorismo.",
-        "Historial reputacional en registros públicos."
-      ],
-      cta: "Cotizar cargos críticos"
-    }
-  ];
-
-  
   return (
     <main className="min-h-screen bg-white text-[#525252] selection:bg-[#FFC107] selection:text-[#411A56]">
       {/* Navbar */}
@@ -220,15 +25,15 @@ export default function VettingPage() {
         />
 
         <img 
-          src="/servicios/2.webp"
-          alt="One True Vetting y Verificación de Antecedentes"
+          src="/servicios/8.webp"
+          alt="One True Prueba de Honestidad, Ética y Valores Laborales"
           fetchPriority="high"
           className="absolute inset-0 w-full h-full object-cover object-right-top z-0 opacity-40 mix-blend-overlay pointer-events-none"
         />
 
         {/* Centered Grid Container */}
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16 z-10 flex justify-start items-center">
-          <div className="max-w-3xl text-left">
+          <div className="max-w-5xl text-left">
             
             {/* Tag Prefix */}
             <div className="flex items-center gap-3 mb-6">
@@ -242,7 +47,7 @@ export default function VettingPage() {
                   fontFamily: "var(--font-montserrat), sans-serif",
                 }}
               >
-                Transformamos la incertidumbre en decisiones seguras.
+                Evalúa la Integridad Colectiva y Mitiga el Riesgo Interno en tu Organización.
               </span>
             </div>
 
@@ -260,7 +65,7 @@ export default function VettingPage() {
                 textShadow: "0 2px 4px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.18)"
               }}
             >
-              Verificación Integral de <strong style={{ fontWeight: "800", textDecoration: "underline", textDecorationColor: "#FFC107", textUnderlineOffset: "6px" }}>Candidatos</strong>
+              Prueba de <strong style={{ fontWeight: "800", textDecoration: "underline", textDecorationColor: "#FFC107", textUnderlineOffset: "6px" }}>Honestidad, Ética y Valores</strong>
             </h1>
 
             <p
@@ -274,7 +79,9 @@ export default function VettingPage() {
                 color: "#FFFFFF"
               }}
             >
-              No se conforme con la buena impresión de una entrevista. Validamos la integridad de su futuro talento humano con un análisis profundo de antecedentes y riesgos.
+              Un entorno empresarial seguro se construye con personas confiables. Nuestra Prueba de Honestidad, Ética y Valores es una herramienta psicométrica avanzada, compuesta por 90 reactivos estratégicos, diseñada para identificar conductas de riesgo y medir la alineación ética de los evaluados de manera ágil y precisa.
+              <br /><br />
+              Esta evaluación no pretende emitir juicios absolutos, sino proporcionar un indicador científico y objetivo que sirve como un pilar de referencia clave. Al integrarla con tus procesos actuales como entrevistas especializadas y verificación de antecedentes, optimizas la toma de decisiones críticas en el capital humano.
             </p>
 
             {/* Hero CTA Button */}
@@ -310,86 +117,235 @@ export default function VettingPage() {
       <section className="bg-[#fcfafc] py-20">
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16">
           
-          {/* Centered Small Header */}
-          <div className="flex flex-col items-center text-center mb-16">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-[3px] bg-[#700FA3]" />
-              <span
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            
+            {/* LADO IZQUIERDO: Título, Descripción e Impacto (Métricas) */}
+            <div className="lg:col-span-5 flex flex-col text-left">
+              {/* Tag Prefix */}
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-[3px] bg-[#700FA3]" />
+                <span
+                  style={{
+                    letterSpacing: "0.5px",
+                    fontSize: "16px",
+                    color: "#700FA3",
+                    fontWeight: "600",
+                    fontFamily: "var(--font-montserrat), sans-serif",
+                  }}
+                >
+                  Conoce nuestra evaluación
+                </span>
+              </div>
+
+              <h2
+                className="mb-6"
                 style={{
-                  letterSpacing: "0.5px",
-                  fontSize: "18px",
-                  color: "#700FA3",
-                  fontWeight: "600",
                   fontFamily: "var(--font-montserrat), sans-serif",
+                  fontSize: "40px",
+                  fontWeight: "700",
+                  lineHeight: "1.2",
+                  color: "#48255A",
                 }}
               >
-                Sobre el Servicio
-              </span>
-            </div>
-            
-            <h2
-              style={{
-                fontSize: "36px",
-                fontWeight: "bold",
-                lineHeight: "46px",
-                color: "#48255A",
-                fontFamily: "var(--font-montserrat), sans-serif",
-                marginTop: "10px"
-              }}
-            >
-              ¿Qué analizamos?
-            </h2>
+                Soluciones desarrolladas para mitigar el riesgo interno en tu organización
+              </h2>
 
-            <p 
-              className="text-[#525252] text-base mt-4 max-w-2xl font-light"
-              style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-            >
-              Cruzamos información en tiempo real en <strong className="font-bold underline decoration-[#FFC107] underline-offset-2">+190 bases de datos</strong> para detectar alertas legales, financieras o de reputación:
-            </p>
-          </div>
-
-          {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Historial Legal",
-                text: "Función Judicial, Policía Nacional y SUPA."
-              },
-              {
-                title: "Perfil Ciudadano",
-                text: "Registro Civil y Agencia Nacional de Tránsito."
-              },
-              {
-                title: "Seguridad Global",
-                text: "Listas de control internacional (OFAC, Interpol y Europol)."
-              }
-            ].map((item, idx) => (
-              <div 
-                key={idx} 
-                className="flex flex-col bg-white border border-neutral-200/80 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-neutral-300 transition-all duration-300 relative pl-4"
+              <p
+                className="text-[#525252] text-[16px] leading-[28px] font-light mb-8"
+                style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
               >
-                {/* Elegant left gold accent bar */}
-                <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#FFC107] rounded-l-xl" />
-                
-                {/* Card Title */}
-                <h3 
-                  className="text-lg font-bold mb-3 text-[#48255A]"
-                  style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}
-                >
-                  {item.title}
-                </h3>
-                
-                {/* Description Text */}
-                <p 
-                  className="text-[#525252] text-sm leading-relaxed font-light flex-1"
-                  style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                >
-                  {item.text}
-                </p>
-              </div>
-            ))}
-          </div>
+                Nuestra prueba analiza de manera integral la orientación conductual y los valores de los evaluados a través de dimensiones críticas estructuradas en tres grandes ejes de riesgo corporativo.
+              </p>
 
+              {/* Stacked Stats */}
+              <div className="flex flex-col gap-8 mt-4">
+                <div className="flex items-center gap-6">
+                  <span 
+                    className="text-5xl md:text-6xl font-black text-[#700FA3] shrink-0" 
+                    style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                  >
+                    90
+                  </span>
+                  <p 
+                    className="text-sm font-medium text-[#525252]" 
+                    style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "22px" }}
+                  >
+                    <strong className="font-bold text-[#48255A] block">Reactivos estratégicos</strong>
+                    diseñados para predecir conductas críticas de forma objetiva.
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-6">
+                  <span 
+                    className="text-5xl md:text-6xl font-black text-[#700FA3] shrink-0" 
+                    style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                  >
+                    100%
+                  </span>
+                  <p 
+                    className="text-sm font-medium text-[#525252]" 
+                    style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "22px" }}
+                  >
+                    <strong className="font-bold text-[#48255A] block">Evaluación online ágil</strong>
+                    con reportes automáticos e inmediatos aplicables desde cualquier dispositivo.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* LADO DERECHO: Los Tres Ejes de Evaluación */}
+            <div className="lg:col-span-7 flex flex-col gap-10">
+              
+              {/* EJE 1 */}
+              <div className="flex flex-col sm:flex-row items-start gap-6 bg-white p-6 sm:p-8 rounded-2xl border border-neutral-100 shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_15px_35px_rgba(112,15,163,0.04)] transition-all duration-300">
+                <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-[#700FA3]/5 border border-[#700FA3]/15 flex items-center justify-center text-[#700FA3] shadow-sm">
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <h3 
+                    className="text-lg md:text-xl font-bold text-[#48255A] mb-3"
+                    style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}
+                  >
+                    Factores de Integridad y Ética Laboral
+                  </h3>
+                  <p 
+                    className="text-sm text-[#525252] leading-relaxed mb-4 font-light"
+                    style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                  >
+                    Mide la transparencia, rectitud y solidez de los valores morales de los evaluados frente a presiones externas, identificando si el perfil tiende a la consistencia y honestidad o si intenta simular una deseabilidad social.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span 
+                      className="px-3 py-1 text-xs font-semibold text-[#700FA3] bg-[#700FA3]/5 border border-[#700FA3]/15 rounded-full transition-all duration-300 hover:bg-[#FFC107] hover:text-[#411A56] hover:border-transparent cursor-default"
+                      style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                    >
+                      Honestidad
+                    </span>
+                    <span 
+                      className="px-3 py-1 text-xs font-semibold text-[#700FA3] bg-[#700FA3]/5 border border-[#700FA3]/15 rounded-full transition-all duration-300 hover:bg-[#FFC107] hover:text-[#411A56] hover:border-transparent cursor-default"
+                      style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                    >
+                      Moralidad
+                    </span>
+                    <span 
+                      className="px-3 py-1 text-xs font-semibold text-[#700FA3] bg-[#700FA3]/5 border border-[#700FA3]/15 rounded-full transition-all duration-300 hover:bg-[#FFC107] hover:text-[#411A56] hover:border-transparent cursor-default"
+                      style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                    >
+                      Deseabilidad Social
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* EJE 2 */}
+              <div className="flex flex-col sm:flex-row items-start gap-6 bg-white p-6 sm:p-8 rounded-2xl border border-neutral-100 shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_15px_35px_rgba(112,15,163,0.04)] transition-all duration-300">
+                <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-[#700FA3]/5 border border-[#700FA3]/15 flex items-center justify-center text-[#700FA3] shadow-sm">
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <h3 
+                    className="text-lg md:text-xl font-bold text-[#48255A] mb-3"
+                    style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}
+                  >
+                    Identificación de Comportamientos Riesgosos
+                  </h3>
+                  <p 
+                    className="text-sm text-[#525252] leading-relaxed mb-4 font-light"
+                    style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                  >
+                    Detecta perfiles con mayor propensión estadística a cometer robos, manipulación, daño o sabotaje de activos, o a incurrir en conductas de descuido y normalización de errores perjudiciales.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span 
+                      className="px-3 py-1 text-xs font-semibold text-[#700FA3] bg-[#700FA3]/5 border border-[#700FA3]/15 rounded-full transition-all duration-300 hover:bg-[#FFC107] hover:text-[#411A56] hover:border-transparent cursor-default"
+                      style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                    >
+                      Propensión al Robo
+                    </span>
+                    <span 
+                      className="px-3 py-1 text-xs font-semibold text-[#700FA3] bg-[#700FA3]/5 border border-[#700FA3]/15 rounded-full transition-all duration-300 hover:bg-[#FFC107] hover:text-[#411A56] hover:border-transparent cursor-default"
+                      style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                    >
+                      Abuso o Manipulación
+                    </span>
+                    <span 
+                      className="px-3 py-1 text-xs font-semibold text-[#700FA3] bg-[#700FA3]/5 border border-[#700FA3]/15 rounded-full transition-all duration-300 hover:bg-[#FFC107] hover:text-[#411A56] hover:border-transparent cursor-default"
+                      style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                    >
+                      Daño y Sabotaje
+                    </span>
+                    <span 
+                      className="px-3 py-1 text-xs font-semibold text-[#700FA3] bg-[#700FA3]/5 border border-[#700FA3]/15 rounded-full transition-all duration-300 hover:bg-[#FFC107] hover:text-[#411A56] hover:border-transparent cursor-default"
+                      style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                    >
+                      Conductas de Descuido
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* EJE 3 */}
+              <div className="flex flex-col sm:flex-row items-start gap-6 bg-white p-6 sm:p-8 rounded-2xl border border-neutral-100 shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_15px_35px_rgba(112,15,163,0.04)] transition-all duration-300">
+                <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-[#700FA3]/5 border border-[#700FA3]/15 flex items-center justify-center text-[#700FA3] shadow-sm">
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.03 0 1.9.693 2.166 1.638m-7.377 2.24V19.5a2.25 2.25 0 002.25 2.25h3m-8.25-16.5A2.25 2.25 0 003 6.108V19.5a2.25 2.25 0 002.25 2.25h3" />
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <h3 
+                    className="text-lg md:text-xl font-bold text-[#48255A] mb-3"
+                    style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}
+                  >
+                    Alineación y Cultura Organizacional
+                  </h3>
+                  <p 
+                    className="text-sm text-[#525252] leading-relaxed mb-4 font-light"
+                    style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                  >
+                    Determina el respeto por las normas internas, el sentido de justicia e igualdad, la capacidad de colaboración grupal y el grado de compromiso frente al interés egocéntrico.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span 
+                      className="px-3 py-1 text-xs font-semibold text-[#700FA3] bg-[#700FA3]/5 border border-[#700FA3]/15 rounded-full transition-all duration-300 hover:bg-[#FFC107] hover:text-[#411A56] hover:border-transparent cursor-default"
+                      style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                    >
+                      Apego a Reglas
+                    </span>
+                    <span 
+                      className="px-3 py-1 text-xs font-semibold text-[#700FA3] bg-[#700FA3]/5 border border-[#700FA3]/15 rounded-full transition-all duration-300 hover:bg-[#FFC107] hover:text-[#411A56] hover:border-transparent cursor-default"
+                      style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                    >
+                      Equidad y Justicia
+                    </span>
+                    <span 
+                      className="px-3 py-1 text-xs font-semibold text-[#700FA3] bg-[#700FA3]/5 border border-[#700FA3]/15 rounded-full transition-all duration-300 hover:bg-[#FFC107] hover:text-[#411A56] hover:border-transparent cursor-default"
+                      style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                    >
+                      Trabajo en Equipo
+                    </span>
+                    <span 
+                      className="px-3 py-1 text-xs font-semibold text-[#700FA3] bg-[#700FA3]/5 border border-[#700FA3]/15 rounded-full transition-all duration-300 hover:bg-[#FFC107] hover:text-[#411A56] hover:border-transparent cursor-default"
+                      style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                    >
+                      Compromiso Laboral
+                    </span>
+                    <span 
+                      className="px-3 py-1 text-xs font-semibold text-[#700FA3] bg-[#700FA3]/5 border border-[#700FA3]/15 rounded-full transition-all duration-300 hover:bg-[#FFC107] hover:text-[#411A56] hover:border-transparent cursor-default"
+                      style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                    >
+                      Interés Egocéntrico
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
         </div>
       </section>
 
@@ -405,7 +361,7 @@ export default function VettingPage() {
               <div className="rounded-3xl overflow-hidden shadow-2xl relative z-10 border-4 border-white">
                 <img 
                   src="/pruebas-poligrafo/primer.webp" 
-                  alt="Profesional verificando antecedentes" 
+                  alt="Profesional realizando análisis de muestras" 
                   loading="lazy"
                   className="w-full h-auto object-cover aspect-[4/5]"
                 />
@@ -414,7 +370,7 @@ export default function VettingPage() {
               <div className="absolute -bottom-12 -right-12 w-2/3 rounded-3xl overflow-hidden shadow-xl z-20 border-4 border-white hidden md:block">
                 <img 
                   src="/pruebas-poligrafo/segunda.webp" 
-                  alt="Rastreo en bases de datos" 
+                  alt="Análisis psicométrico profesional" 
                   loading="lazy"
                   className="w-full h-auto object-cover aspect-square"
                 />
@@ -455,14 +411,14 @@ export default function VettingPage() {
                 fontFamily: "var(--font-montserrat), sans-serif",
               }}
             >
-              El Valor para su Empresa
+              Beneficios para su Organización
             </h2>
 
             <ul className="flex flex-col gap-3 w-full mb-6">
               {[
-                { title: "Reducción de Riesgos", text: "Evite infiltraciones, fraudes o personal no apto." },
-                { title: "Reportes Ágiles", text: "Resultados técnicos, claros y listos para la toma de decisiones." },
-                { title: "Cumplimiento", text: "Estándares de Compliance para su departamento de RR.HH." }
+                { title: "Reducción de Riesgos y Pérdidas", text: "Prevenga de manera efectiva el robo hormiga, filtración de datos y malas prácticas financieras." },
+                { title: "Cultura de Integridad y Respeto", text: "Fomente un clima laboral seguro y transparente donde la confianza y el respeto mutuo sean pilares del equipo." },
+                { title: "Selección Objetiva y Eficiente", text: "Elimine sesgos de contratación basándose en reactivos psicométricos probados con reportes ágiles y digitales." }
               ].map((item, idx) => (
                 <li key={idx} className="flex items-start gap-3 py-1">
                   <div className="w-6 h-6 rounded flex items-center justify-center bg-[#700FA3] text-white shrink-0 mt-0.5 shadow-md">
@@ -495,14 +451,14 @@ export default function VettingPage() {
                 border: "none"
               }}
             >
-              <span>Cotizar mi servicio de Vetting</span>
+              <span>Cotizar mi evaluación de honestidad</span>
             </a>
 
           </div>
         </div>
       </section>
 
-      {/* ── FORMULARIO DE CONTACTO (ESTILO EXACTO GLOBALWORK #NOSOTROS - ADAPTADO A ONE TRUE) ── */}
+      {/* ── FORMULARIO DE CONTACTO ── */}
       <section 
         id="contacto" 
         className="py-12 md:py-16 relative overflow-hidden"
@@ -670,8 +626,6 @@ export default function VettingPage() {
                 </div>
               </div>
 
-
-
               {/* Redes Sociales y Síguenos */}
               <div className="flex flex-col items-start gap-3 mt-6 pt-4 border-t border-white/10 w-full">
                 <h3 
@@ -707,7 +661,7 @@ export default function VettingPage() {
                     className="w-10 h-10 bg-white rounded-full hover:scale-110 transition-all duration-300 flex items-center justify-center text-[#700FA3] shadow-md hover:shadow-lg"
                   >
                     <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                     </svg>
                   </a>
                   {/* LinkedIn */}
@@ -733,7 +687,6 @@ export default function VettingPage() {
                 {!formSubmitted ? (
                   /* FORMULARIO ACTIVO */
                   <div>
-
                     <form 
                       onSubmit={(e) => {
                         e.preventDefault();

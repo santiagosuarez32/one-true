@@ -1,209 +1,16 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import Resources from "@/components/Resources";
-import Podcast from "@/components/Podcast";
-import Ebook from "@/components/Ebook";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-}
-
-interface CounterProps {
-  end: number;
-  suffix?: string;
-  duration?: number;
-  fontSize?: string;
-}
-
-function AnimatedCounter({ end, suffix = "", duration = 2000, fontSize = "42px" }: CounterProps) {
-  const [count, setCount] = useState(0);
-  const elementRef = useRef<HTMLDivElement>(null);
-  const [hasStarted, setHasStarted] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setHasStarted(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    const currentRef = elementRef.current;
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
-
-    return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!hasStarted) return;
-
-    let startTime: number | null = null;
-
-    const animate = (timestamp: number) => {
-      if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / duration, 1);
-      
-      // Easing: easeOutQuad
-      const easeProgress = progress * (2 - progress);
-      const currentCount = Math.floor(easeProgress * end);
-      
-      setCount(currentCount);
-
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      }
-    };
-
-    requestAnimationFrame(animate);
-  }, [hasStarted, end, duration]);
-
-  return (
-    <span 
-      ref={elementRef} 
-      style={{ 
-        color: "#FFC107", 
-        fontSize: fontSize, 
-        fontWeight: "900", 
-        lineHeight: "1",
-        fontFamily: "var(--font-montserrat), sans-serif",
-        letterSpacing: "-1px",
-        userSelect: "none"
-      }}
-    >
-      {count.toLocaleString("es-ES")}{suffix}
-    </span>
-  );
-}
-
-const OTRAS_SOLUCIONES = [
-  {
-    title: "Pruebas de Polígrafo Profesionales",
-    desc: "Certeza técnica forense con un 95% de exactitud. Validamos la integridad en procesos de selección, monitoreo preventivo y esclarecimiento de incidentes internos.",
-    image: "/servicios/1.webp",
-    cta: "Ver detalles del servicio",
-    href: "/pruebas-poligraficas"
-  },
-  {
-    title: "Estudio de Confiabilidad 360°",
-    desc: "Confirmamos la honestidad y estabilidad de sus candidatos. Validamos trayectorias (laborales y académicas) y realizamos un análisis profundo de salud financiera y endeudamiento en +190 bases de datos.",
-    image: "/servicios/3.webp",
-    cta: "Ver detalles del servicio",
-    href: "/estudio-de-confiabilidad-360"
-  },
-  {
-    title: "Visitas Domiciliarias",
-    desc: "Evaluamos el entorno socioeconómico y familiar de sus candidatos en el terreno. Prevenimos riesgos de vulnerabilidad y confirmamos la coherencia entre el estilo de vida y el perfil declarado.",
-    image: "/servicios/4.webp",
-    cta: "Ver detalles del servicio",
-    href: "/visitas-domiciliarias"
-  },
-  {
-    title: "Pruebas Toxicológicas",
-    desc: "Garantice un ambiente laboral seguro y productivo. Detectamos el consumo de sustancias con un 99% de nivel de confianza, asegurando que su equipo humano opere con sobriedad.",
-    image: "/servicios/5.webp",
-    cta: "Ver detalles del servicio",
-    href: "/pruebas-toxicologicas"
-  },
-  {
-    title: "Evaluaciones Psicométricas",
-    desc: "Análisis profundo de la personalidad, aptitudes, comportamiento ético del personal para asegurar el ajuste al cargo.",
-    image: "/servicios/6.webp",
-    cta: "Ver detalles del servicio",
-    href: "/evaluaciones-psicometricas"
-  },
-  {
-    title: "Prueba de Honestidad, Ética y Valores",
-    desc: "Un entorno empresarial seguro se construye con personas confiables. Herramienta avanzada psicométrica compuesta por 90 reactivos diseñada para identificar conductas de riesgo.",
-    image: "/servicios/8.webp",
-    cta: "Ver detalles del servicio",
-    href: "/prueba-de-honestidad-etica-y-valores"
-  }
-];
-
-export default function VettingPage() {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(
-    () => {
-      if (!containerRef.current) return;
-      
-      gsap.from(".solucion-card", {
-        opacity: 0,
-        y: 40,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-      });
-    },
-    { scope: containerRef }
-  );
-
+export default function EvaluacionesPsicometricasPage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [country, setCountry] = useState("ec");
 
-  const testTypes = [
-    {
-      title: "Vetting de Preempleo",
-      subtitle: "Filtro inicial riguroso",
-      desc: "Evite contratar riesgos potenciales. Este análisis se enfoca en verificar la validez de la información proporcionada por el candidato en su hoja de vida y examinar sus antecedentes en más de 190 bases de datos nacionales e internacionales.",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
-      details: [
-        "Verificación de antecedentes penales y judiciales.",
-        "Análisis de listas restrictivas internacionales (OFAC, Clinton).",
-        "Rastreo de deudas e historial crediticio/financiero.",
-        "Validación de títulos y trayectoria académica."
-      ],
-      cta: "Cotizar preempleo"
-    },
-    {
-      title: "Vetting de Proveedores",
-      subtitle: "Garantía en su Cadena de Suministro",
-      desc: "Proteja la reputación de su organización asegurando que sus aliados comerciales, contratistas y proveedores operen bajo estándares de cumplimiento ético y legal intachables.",
-      image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600&q=80",
-      details: [
-        "Verificación legal de la constitución empresarial.",
-        "Monitoreo de deudas tributarias y solvencia financiera.",
-        "Rastreo de litigios comerciales o laborales activos.",
-        "Prevención de vínculos con actividades fraudulentas."
-      ],
-      cta: "Cotizar proveedores"
-    },
-    {
-      title: "Vetting de Cargos Críticos",
-      subtitle: "Máxima Seguridad Corporativa",
-      desc: "Diseñado específicamente para directores, ejecutivos de finanzas, seguridad y personal con acceso directo a activos clave. Realizamos un estudio exhaustivo y de alta especificidad.",
-      image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80",
-      details: [
-        "Análisis patrimonial exhaustivo.",
-        "Declaración de conflictos de interés.",
-        "Búsqueda internacional en Interpol y listas antiterrorismo.",
-        "Historial reputacional en registros públicos."
-      ],
-      cta: "Cotizar cargos críticos"
-    }
-  ];
 
-  
+
   return (
     <main className="min-h-screen bg-white text-[#525252] selection:bg-[#FFC107] selection:text-[#411A56]">
       {/* Navbar */}
@@ -220,8 +27,8 @@ export default function VettingPage() {
         />
 
         <img 
-          src="/servicios/2.webp"
-          alt="One True Vetting y Verificación de Antecedentes"
+          src="/servicios/6.webp"
+          alt="One True Evaluaciones Psicométricas Laborales"
           fetchPriority="high"
           className="absolute inset-0 w-full h-full object-cover object-right-top z-0 opacity-40 mix-blend-overlay pointer-events-none"
         />
@@ -242,7 +49,7 @@ export default function VettingPage() {
                   fontFamily: "var(--font-montserrat), sans-serif",
                 }}
               >
-                Transformamos la incertidumbre en decisiones seguras.
+                Ciencia de datos aplicada a la selección de personal.
               </span>
             </div>
 
@@ -260,7 +67,7 @@ export default function VettingPage() {
                 textShadow: "0 2px 4px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.18)"
               }}
             >
-              Verificación Integral de <strong style={{ fontWeight: "800", textDecoration: "underline", textDecorationColor: "#FFC107", textUnderlineOffset: "6px" }}>Candidatos</strong>
+              Evaluaciones <strong style={{ fontWeight: "800", textDecoration: "underline", textDecorationColor: "#FFC107", textUnderlineOffset: "6px" }}>Psicométricas</strong>
             </h1>
 
             <p
@@ -274,7 +81,7 @@ export default function VettingPage() {
                 color: "#FFFFFF"
               }}
             >
-              No se conforme con la buena impresión de una entrevista. Validamos la integridad de su futuro talento humano con un análisis profundo de antecedentes y riesgos.
+              No deje la cultura de su empresa al azar. Nuestras más de 150 evaluaciones psicométricas online permiten predecir el desempeño y la conducta ética de un candidato, garantizando que su perfil psicológico esté alineado con los valores y exigencias de su organización.
             </p>
 
             {/* Hero CTA Button */}
@@ -298,7 +105,7 @@ export default function VettingPage() {
                   cursor: "pointer",
                 }}
               >
-                <span className="elementor-button-text">Cotizar mi evaluación ahora</span>
+                <span className="elementor-button-text">Cotizar mis evaluaciones ahora</span>
               </a>
             </div>
 
@@ -337,36 +144,44 @@ export default function VettingPage() {
                 marginTop: "10px"
               }}
             >
-              ¿Qué analizamos?
+              ¿Qué medimos con precisión?
             </h2>
 
             <p 
-              className="text-[#525252] text-base mt-4 max-w-2xl font-light"
+              className="text-[#525252] text-base mt-4 max-w-3xl font-light animate-fade-in"
               style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
             >
-              Cruzamos información en tiempo real en <strong className="font-bold underline decoration-[#FFC107] underline-offset-2">+190 bases de datos</strong> para detectar alertas legales, financieras o de reputación:
+              A través de herramientas digitales de alta confiabilidad, evaluamos dimensiones clave:
             </p>
           </div>
 
-          {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Cards Grid - Laid out as 3 on top row and 2 centered on bottom row */}
+          <div className="flex flex-wrap justify-center gap-8">
             {[
               {
-                title: "Historial Legal",
-                text: "Función Judicial, Policía Nacional y SUPA."
+                title: "Comportamiento Ético y Honestidad",
+                text: "Identificamos tendencias hacia la integridad, el respeto a las normas y la prevención de conductas contraproducentes."
               },
               {
-                title: "Perfil Ciudadano",
-                text: "Registro Civil y Agencia Nacional de Tránsito."
+                title: "Personalidad y Perfil Psicológico",
+                text: "Analizamos rasgos de carácter, manejo de estrés, liderazgo y estabilidad emocional."
               },
               {
-                title: "Seguridad Global",
-                text: "Listas de control internacional (OFAC, Interpol y Europol)."
+                title: "Aptitudes y Competencias",
+                text: "Medimos la capacidad cognitiva, resolución de problemas y habilidades específicas para el cargo."
+              },
+              {
+                title: "Ajuste al Cargo",
+                text: "Determinamos si el candidato tiene la estructura mental necesaria para tener éxito en su puesto."
+              },
+              {
+                title: "Evaluaciones a medida",
+                text: "Podemos aplicar evaluaciones psicométricas a tu medida y según la necesidad y perfil del candidato, puedes elegir entre nuestro portafolio de más de 150 evaluaciones."
               }
             ].map((item, idx) => (
               <div 
                 key={idx} 
-                className="flex flex-col bg-white border border-neutral-200/80 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-neutral-300 transition-all duration-300 relative pl-4"
+                className="flex flex-col bg-white border border-neutral-200/80 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-neutral-300 transition-all duration-300 relative pl-4 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] min-h-[170px]"
               >
                 {/* Elegant left gold accent bar */}
                 <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#FFC107] rounded-l-xl" />
@@ -393,6 +208,8 @@ export default function VettingPage() {
         </div>
       </section>
 
+
+
       {/* ¿Por qué contratarnos? Section */}
       <section className="bg-white py-12 md:py-16 overflow-hidden relative">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#700FA3]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
@@ -405,7 +222,7 @@ export default function VettingPage() {
               <div className="rounded-3xl overflow-hidden shadow-2xl relative z-10 border-4 border-white">
                 <img 
                   src="/pruebas-poligrafo/primer.webp" 
-                  alt="Profesional verificando antecedentes" 
+                  alt="Profesional realizando análisis de muestras" 
                   loading="lazy"
                   className="w-full h-auto object-cover aspect-[4/5]"
                 />
@@ -414,7 +231,7 @@ export default function VettingPage() {
               <div className="absolute -bottom-12 -right-12 w-2/3 rounded-3xl overflow-hidden shadow-xl z-20 border-4 border-white hidden md:block">
                 <img 
                   src="/pruebas-poligrafo/segunda.webp" 
-                  alt="Rastreo en bases de datos" 
+                  alt="Análisis psicométrico profesional" 
                   loading="lazy"
                   className="w-full h-auto object-cover aspect-square"
                 />
@@ -455,14 +272,14 @@ export default function VettingPage() {
                 fontFamily: "var(--font-montserrat), sans-serif",
               }}
             >
-              El Valor para su Empresa
+              Beneficios para su Organización
             </h2>
 
             <ul className="flex flex-col gap-3 w-full mb-6">
               {[
-                { title: "Reducción de Riesgos", text: "Evite infiltraciones, fraudes o personal no apto." },
-                { title: "Reportes Ágiles", text: "Resultados técnicos, claros y listos para la toma de decisiones." },
-                { title: "Cumplimiento", text: "Estándares de Compliance para su departamento de RR.HH." }
+                { title: "Resultados Inmediatos", text: "Pruebas 100% online que agilizan sus procesos de selección sin perder profundidad técnica." },
+                { title: "Reducción de la Rotación", text: "Asegure contrataciones que encajen con la cultura de su equipo a largo plazo." },
+                { title: "Objetividad Total", text: "Elimine los sesgos en las entrevistas con datos científicos y reportes comparativos." }
               ].map((item, idx) => (
                 <li key={idx} className="flex items-start gap-3 py-1">
                   <div className="w-6 h-6 rounded flex items-center justify-center bg-[#700FA3] text-white shrink-0 mt-0.5 shadow-md">
@@ -495,14 +312,14 @@ export default function VettingPage() {
                 border: "none"
               }}
             >
-              <span>Cotizar mi servicio de Vetting</span>
+              <span>Cotizar evaluaciones psicométricas</span>
             </a>
 
           </div>
         </div>
       </section>
 
-      {/* ── FORMULARIO DE CONTACTO (ESTILO EXACTO GLOBALWORK #NOSOTROS - ADAPTADO A ONE TRUE) ── */}
+      {/* ── FORMULARIO DE CONTACTO ── */}
       <section 
         id="contacto" 
         className="py-12 md:py-16 relative overflow-hidden"
@@ -670,8 +487,6 @@ export default function VettingPage() {
                 </div>
               </div>
 
-
-
               {/* Redes Sociales y Síguenos */}
               <div className="flex flex-col items-start gap-3 mt-6 pt-4 border-t border-white/10 w-full">
                 <h3 
@@ -707,7 +522,7 @@ export default function VettingPage() {
                     className="w-10 h-10 bg-white rounded-full hover:scale-110 transition-all duration-300 flex items-center justify-center text-[#700FA3] shadow-md hover:shadow-lg"
                   >
                     <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                     </svg>
                   </a>
                   {/* LinkedIn */}
@@ -733,7 +548,6 @@ export default function VettingPage() {
                 {!formSubmitted ? (
                   /* FORMULARIO ACTIVO */
                   <div>
-
                     <form 
                       onSubmit={(e) => {
                         e.preventDefault();

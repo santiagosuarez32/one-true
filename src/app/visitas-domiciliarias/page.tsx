@@ -4,16 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import Resources from "@/components/Resources";
-import Podcast from "@/components/Podcast";
-import Ebook from "@/components/Ebook";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-}
 
 interface CounterProps {
   end: number;
@@ -90,120 +81,52 @@ function AnimatedCounter({ end, suffix = "", duration = 2000, fontSize = "42px" 
   );
 }
 
-const OTRAS_SOLUCIONES = [
-  {
-    title: "Pruebas de Polígrafo Profesionales",
-    desc: "Certeza técnica forense con un 95% de exactitud. Validamos la integridad en procesos de selección, monitoreo preventivo y esclarecimiento de incidentes internos.",
-    image: "/servicios/1.webp",
-    cta: "Ver detalles del servicio",
-    href: "/pruebas-poligraficas"
-  },
-  {
-    title: "Estudio de Confiabilidad 360°",
-    desc: "Confirmamos la honestidad y estabilidad de sus candidatos. Validamos trayectorias (laborales y académicas) y realizamos un análisis profundo de salud financiera y endeudamiento en +190 bases de datos.",
-    image: "/servicios/3.webp",
-    cta: "Ver detalles del servicio",
-    href: "/estudio-de-confiabilidad-360"
-  },
-  {
-    title: "Visitas Domiciliarias",
-    desc: "Evaluamos el entorno socioeconómico y familiar de sus candidatos en el terreno. Prevenimos riesgos de vulnerabilidad y confirmamos la coherencia entre el estilo de vida y el perfil declarado.",
-    image: "/servicios/4.webp",
-    cta: "Ver detalles del servicio",
-    href: "/visitas-domiciliarias"
-  },
-  {
-    title: "Pruebas Toxicológicas",
-    desc: "Garantice un ambiente laboral seguro y productivo. Detectamos el consumo de sustancias con un 99% de nivel de confianza, asegurando que su equipo humano opere con sobriedad.",
-    image: "/servicios/5.webp",
-    cta: "Ver detalles del servicio",
-    href: "/pruebas-toxicologicas"
-  },
-  {
-    title: "Evaluaciones Psicométricas",
-    desc: "Análisis profundo de la personalidad, aptitudes, comportamiento ético del personal para asegurar el ajuste al cargo.",
-    image: "/servicios/6.webp",
-    cta: "Ver detalles del servicio",
-    href: "/evaluaciones-psicometricas"
-  },
-  {
-    title: "Prueba de Honestidad, Ética y Valores",
-    desc: "Un entorno empresarial seguro se construye con personas confiables. Herramienta avanzada psicométrica compuesta por 90 reactivos diseñada para identificar conductas de riesgo.",
-    image: "/servicios/8.webp",
-    cta: "Ver detalles del servicio",
-    href: "/prueba-de-honestidad-etica-y-valores"
-  }
-];
-
-export default function VettingPage() {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(
-    () => {
-      if (!containerRef.current) return;
-      
-      gsap.from(".solucion-card", {
-        opacity: 0,
-        y: 40,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-      });
-    },
-    { scope: containerRef }
-  );
-
+export default function VisitasDomiciliariasPage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [country, setCountry] = useState("ec");
 
   const testTypes = [
     {
-      title: "Vetting de Preempleo",
-      subtitle: "Filtro inicial riguroso",
-      desc: "Evite contratar riesgos potenciales. Este análisis se enfoca en verificar la validez de la información proporcionada por el candidato en su hoja de vida y examinar sus antecedentes en más de 190 bases de datos nacionales e internacionales.",
+      title: "Visita Domiciliaria de Preempleo",
+      subtitle: "Filtro inicial de seguridad y entorno",
+      desc: "Verifique la honestidad de sus candidatos antes de la contratación. Confirmamos su lugar de residencia, referencias vecinales y las condiciones reales de su entorno sociofamiliar.",
+      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80",
+      details: [
+        "Validación del croquis de ubicación y dirección exacta.",
+        "Evaluación de las condiciones de habitabilidad y servicios.",
+        "Constatación de relaciones y convivencia familiar.",
+        "Entrevista vecinal discreta sobre conducta y reputación."
+      ],
+      cta: "Cotizar visita preempleo"
+    },
+    {
+      title: "Visita Domiciliaria de Control / Rutina",
+      subtitle: "Monitoreo continuo para puestos críticos",
+      desc: "Evaluación periódica diseñada para colaboradores activos que manejan información confidencial, dinero o activos críticos. Previene vulnerabilidades sobrevenidas en el tiempo.",
       image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
       details: [
-        "Verificación de antecedentes penales y judiciales.",
-        "Análisis de listas restrictivas internacionales (OFAC, Clinton).",
-        "Rastreo de deudas e historial crediticio/financiero.",
-        "Validación de títulos y trayectoria académica."
+        "Análisis de cambios drásticos en el nivel socioeconómico.",
+        "Actualización de residencia y composición del grupo familiar.",
+        "Identificación de nuevas deudas u obligaciones críticas.",
+        "Detección de presiones externas en el entorno habitacional."
       ],
-      cta: "Cotizar preempleo"
+      cta: "Cotizar visita de control"
     },
     {
-      title: "Vetting de Proveedores",
-      subtitle: "Garantía en su Cadena de Suministro",
-      desc: "Proteja la reputación de su organización asegurando que sus aliados comerciales, contratistas y proveedores operen bajo estándares de cumplimiento ético y legal intachables.",
-      image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600&q=80",
-      details: [
-        "Verificación legal de la constitución empresarial.",
-        "Monitoreo de deudas tributarias y solvencia financiera.",
-        "Rastreo de litigios comerciales o laborales activos.",
-        "Prevención de vínculos con actividades fraudulentas."
-      ],
-      cta: "Cotizar proveedores"
-    },
-    {
-      title: "Vetting de Cargos Críticos",
-      subtitle: "Máxima Seguridad Corporativa",
-      desc: "Diseñado específicamente para directores, ejecutivos de finanzas, seguridad y personal con acceso directo a activos clave. Realizamos un estudio exhaustivo y de alta especificidad.",
+      title: "Estudio Socioeconómico Completo 360°",
+      subtitle: "Auditoría integral del perfil sociofamiliar",
+      desc: "El análisis más profundo del entorno de un candidato. Combina la visita de campo presencial con validaciones rigurosas en más de 190 bases de datos legales y financieras.",
       image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80",
       details: [
-        "Análisis patrimonial exhaustivo.",
-        "Declaración de conflictos de interés.",
-        "Búsqueda internacional en Interpol y listas antiterrorismo.",
-        "Historial reputacional en registros públicos."
+        "Auditoría patrimonial y de estilo de vida en campo.",
+        "Cruce con bases de datos financieras y tributarias.",
+        "Entrevistas estructuradas al candidato y grupo familiar.",
+        "Informe forense de confiabilidad y nivel de riesgo."
       ],
-      cta: "Cotizar cargos críticos"
+      cta: "Cotizar estudio completo"
     }
   ];
 
-  
   return (
     <main className="min-h-screen bg-white text-[#525252] selection:bg-[#FFC107] selection:text-[#411A56]">
       {/* Navbar */}
@@ -220,8 +143,8 @@ export default function VettingPage() {
         />
 
         <img 
-          src="/servicios/2.webp"
-          alt="One True Vetting y Verificación de Antecedentes"
+          src="/domicilio/hero.PNG"
+          alt="One True Visitas Domiciliarias y Estudios Socioeconómicos"
           fetchPriority="high"
           className="absolute inset-0 w-full h-full object-cover object-right-top z-0 opacity-40 mix-blend-overlay pointer-events-none"
         />
@@ -242,7 +165,7 @@ export default function VettingPage() {
                   fontFamily: "var(--font-montserrat), sans-serif",
                 }}
               >
-                Transformamos la incertidumbre en decisiones seguras.
+                Verificación de campo para una visión 360° de su futuro colaborador
               </span>
             </div>
 
@@ -260,7 +183,7 @@ export default function VettingPage() {
                 textShadow: "0 2px 4px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.18)"
               }}
             >
-              Verificación Integral de <strong style={{ fontWeight: "800", textDecoration: "underline", textDecorationColor: "#FFC107", textUnderlineOffset: "6px" }}>Candidatos</strong>
+              Visitas <strong style={{ fontWeight: "800", textDecoration: "underline", textDecorationColor: "#FFC107", textUnderlineOffset: "6px" }}>Domiciliarias</strong>
             </h1>
 
             <p
@@ -274,7 +197,7 @@ export default function VettingPage() {
                 color: "#FFFFFF"
               }}
             >
-              No se conforme con la buena impresión de una entrevista. Validamos la integridad de su futuro talento humano con un análisis profundo de antecedentes y riesgos.
+              La seguridad de su empresa no termina en la oficina. Nuestro servicio de visita domiciliaria permite conocer el entorno real del candidato, identificando factores de riesgo, niveles de vulnerabilidad y la veracidad de su situación socioeconómica.
             </p>
 
             {/* Hero CTA Button */}
@@ -337,31 +260,35 @@ export default function VettingPage() {
                 marginTop: "10px"
               }}
             >
-              ¿Qué analizamos?
+              ¿Qué evaluamos en el terreno?
             </h2>
 
             <p 
               className="text-[#525252] text-base mt-4 max-w-2xl font-light"
               style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
             >
-              Cruzamos información en tiempo real en <strong className="font-bold underline decoration-[#FFC107] underline-offset-2">+190 bases de datos</strong> para detectar alertas legales, financieras o de reputación:
+              Nuestros especialistas realizan una inspección profesional y ética centrada en:
             </p>
           </div>
 
           {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               {
-                title: "Historial Legal",
-                text: "Función Judicial, Policía Nacional y SUPA."
+                title: "Verificación de Entorno",
+                text: "Validación de la ubicación geográfica y condiciones de habitabilidad del candidato."
               },
               {
-                title: "Perfil Ciudadano",
-                text: "Registro Civil y Agencia Nacional de Tránsito."
+                title: "Análisis Socio-Familiar",
+                text: "Identificación del núcleo familiar y detección de posibles conflictos de interés o riesgos externos."
               },
               {
-                title: "Seguridad Global",
-                text: "Listas de control internacional (OFAC, Interpol y Europol)."
+                title: "Coherencia de Vida",
+                text: "Contrastamos que el nivel de vida sea consistente con los ingresos y el cargo al que postula."
+              },
+              {
+                title: "Referencias de Vecindad",
+                text: "Obtención de información complementaria sobre la conducta y reputación del candidato en su comunidad."
               }
             ].map((item, idx) => (
               <div 
@@ -405,7 +332,7 @@ export default function VettingPage() {
               <div className="rounded-3xl overflow-hidden shadow-2xl relative z-10 border-4 border-white">
                 <img 
                   src="/pruebas-poligrafo/primer.webp" 
-                  alt="Profesional verificando antecedentes" 
+                  alt="Profesional verificando entorno residencial" 
                   loading="lazy"
                   className="w-full h-auto object-cover aspect-[4/5]"
                 />
@@ -414,7 +341,7 @@ export default function VettingPage() {
               <div className="absolute -bottom-12 -right-12 w-2/3 rounded-3xl overflow-hidden shadow-xl z-20 border-4 border-white hidden md:block">
                 <img 
                   src="/pruebas-poligrafo/segunda.webp" 
-                  alt="Rastreo en bases de datos" 
+                  alt="Rastreo y entrevista en terreno" 
                   loading="lazy"
                   className="w-full h-auto object-cover aspect-square"
                 />
@@ -455,14 +382,14 @@ export default function VettingPage() {
                 fontFamily: "var(--font-montserrat), sans-serif",
               }}
             >
-              El Valor para su Empresa
+              Beneficios para su Organización
             </h2>
 
             <ul className="flex flex-col gap-3 w-full mb-6">
               {[
-                { title: "Reducción de Riesgos", text: "Evite infiltraciones, fraudes o personal no apto." },
-                { title: "Reportes Ágiles", text: "Resultados técnicos, claros y listos para la toma de decisiones." },
-                { title: "Cumplimiento", text: "Estándares de Compliance para su departamento de RR.HH." }
+                { title: "Prevención de Vulnerabilidades", text: "Detecte a tiempo situaciones personales que puedan comprometer la lealtad del empleado." },
+                { title: "Mitigación de Riesgos", text: "Evite la contratación de personal con entornos que faciliten actos ilícitos o fugas de información." },
+                { title: "Seguridad Patrimonial", text: "Proteja sus activos asegurándose de que el entorno del candidato sea estable y confiable." }
               ].map((item, idx) => (
                 <li key={idx} className="flex items-start gap-3 py-1">
                   <div className="w-6 h-6 rounded flex items-center justify-center bg-[#700FA3] text-white shrink-0 mt-0.5 shadow-md">
@@ -495,14 +422,14 @@ export default function VettingPage() {
                 border: "none"
               }}
             >
-              <span>Cotizar mi servicio de Vetting</span>
+              <span>Cotizar mi visita domiciliaria</span>
             </a>
 
           </div>
         </div>
       </section>
 
-      {/* ── FORMULARIO DE CONTACTO (ESTILO EXACTO GLOBALWORK #NOSOTROS - ADAPTADO A ONE TRUE) ── */}
+      {/* ── FORMULARIO DE CONTACTO ── */}
       <section 
         id="contacto" 
         className="py-12 md:py-16 relative overflow-hidden"
@@ -670,8 +597,6 @@ export default function VettingPage() {
                 </div>
               </div>
 
-
-
               {/* Redes Sociales y Síguenos */}
               <div className="flex flex-col items-start gap-3 mt-6 pt-4 border-t border-white/10 w-full">
                 <h3 
@@ -733,7 +658,6 @@ export default function VettingPage() {
                 {!formSubmitted ? (
                   /* FORMULARIO ACTIVO */
                   <div>
-
                     <form 
                       onSubmit={(e) => {
                         e.preventDefault();
@@ -975,6 +899,8 @@ export default function VettingPage() {
           </div>
         </div>
       </section>
+
+
 
       {/* Footer */}
       <Footer />
