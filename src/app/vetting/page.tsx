@@ -220,7 +220,7 @@ export default function VettingPage() {
         />
 
         <img 
-          src="/servicios/2.webp"
+          src="/blog/3.webp"
           alt="One True Vetting y Verificación de Antecedentes"
           fetchPriority="high"
           className="absolute inset-0 w-full h-full object-cover object-right-top z-0 opacity-40 mix-blend-overlay pointer-events-none"

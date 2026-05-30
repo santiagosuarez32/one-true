@@ -25,7 +25,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
         />
 
         <img 
-          src="/servicios/8.webp"
+          src="/pruebas-poligrafo/primer.webp"
           alt="One True Prueba de Honestidad, Ética y Valores Laborales"
           fetchPriority="high"
           className="absolute inset-0 w-full h-full object-cover object-right-top z-0 opacity-40 mix-blend-overlay pointer-events-none"

@@ -27,7 +27,7 @@ export default function EvaluacionesPsicometricasPage() {
         />
 
         <img 
-          src="/servicios/6.webp"
+          src="/blog/1.webp"
           alt="One True Evaluaciones Psicométricas Laborales"
           fetchPriority="high"
           className="absolute inset-0 w-full h-full object-cover object-right-top z-0 opacity-40 mix-blend-overlay pointer-events-none"
