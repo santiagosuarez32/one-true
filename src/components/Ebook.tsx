@@ -31,12 +31,12 @@ export default function Ebook() {
     return () => ctx.revert();
   }, []);
   return (
-    <section id="ebook" className="bg-[#fcfafc] py-24 relative overflow-hidden scroll-mt-20">
+    <section id="ebook" className="bg-[#fcfafc] py-16 md:py-24 relative overflow-hidden scroll-mt-20">
       {/* Decorative background blobs matching the screenshot vibe but with brand colors */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-[#700FA3] opacity-5 rounded-full blur-[80px] -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#FFC107] opacity-5 rounded-full blur-[100px] translate-x-1/3 translate-y-1/3" />
 
-      <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16 flex flex-col lg:flex-row items-center gap-16 lg:gap-24 relative z-10">
+      <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 flex flex-col lg:flex-row items-center gap-16 lg:gap-24 relative z-10">
         
         {/* Left Column: Content */}
         <div className="w-full lg:w-1/2 flex flex-col items-start text-left">
@@ -45,9 +45,9 @@ export default function Ebook() {
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-[3px] bg-[#700FA3]" />
             <span
+              className="text-sm sm:text-base md:text-[18px]"
               style={{
                 letterSpacing: "0.5px",
-                fontSize: "18px",
                 color: "#700FA3",
                 fontWeight: "600",
                 fontFamily: "var(--font-montserrat), sans-serif",
@@ -58,7 +58,7 @@ export default function Ebook() {
           </div>
           
           <h2
-            className="text-3xl lg:text-[40px]"
+            className="text-2xl sm:text-3xl lg:text-[40px]"
             style={{
               margin: 0,
               padding: 0,
@@ -83,7 +83,7 @@ export default function Ebook() {
 
         {/* Right Column: Form Card */}
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-          <div ref={cardRef} className="bg-white rounded-3xl p-8 md:p-10 shadow-[0_20px_50px_rgba(72,37,90,0.08)] border border-neutral-100 w-full max-w-[550px]">
+          <div ref={cardRef} className="bg-white rounded-3xl p-5 sm:p-8 md:p-10 shadow-[0_20px_50px_rgba(72,37,90,0.08)] border border-neutral-100 w-full max-w-[550px]">
             
             {/* Ebook Mockup Image Container */}
             <div className="w-full h-[220px] bg-neutral-100 rounded-xl mb-8 relative overflow-hidden flex items-center justify-center">

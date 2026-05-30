@@ -79,7 +79,7 @@ export default function Hero() {
   return (
     <section 
       ref={heroRef} 
-      className="relative h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen md:h-screen flex items-start md:items-center justify-center overflow-hidden pt-24 sm:pt-28 md:pt-0"
     >
       {/* Background Images Cross-fade */}
       {slides.map((slide, idx) => (
@@ -107,10 +107,10 @@ export default function Hero() {
       />
       
       {/* Centered Grid Container matching a wider content boundary */}
-      <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] px-8 md:px-12 lg:px-16 z-10 flex justify-start items-center mt-16">
+      <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] px-4 sm:px-8 md:px-12 lg:px-16 z-10 flex justify-start items-center mt-6 md:mt-16">
         <div 
           ref={textContainerRef}
-          className="relative w-full max-w-xl md:max-w-2xl text-left min-h-[380px] md:min-h-[290px] flex items-center"
+          className="relative w-full max-w-xl md:max-w-2xl text-left min-h-[460px] sm:min-h-[380px] md:min-h-[290px] flex items-center"
         >
           {slides.map((slide, idx) => (
             <div
@@ -124,7 +124,7 @@ export default function Hero() {
               {/* Slide Title */}
               {slide.id === 1 ? (
                 <h1 
-                  className="mb-6"
+                  className="mb-6 !text-2xl sm:!text-3xl md:!text-4xl lg:!text-[46px] leading-[1.2] md:leading-[1.1]"
                   style={{
                     WebkitTextSizeAdjust: "100%",
                     WebkitTapHighlightColor: "transparent",
@@ -132,9 +132,7 @@ export default function Hero() {
                     fontFamily: "var(--font-montserrat), sans-serif",
                     margin: "0 0 28px 0",
                     padding: 0,
-                    fontSize: "46px",
                     fontWeight: "600",
-                    lineHeight: "1.1",
                     color: "#FFFFFF",
                     textShadow: "0 2px 4px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.18), 0 8px 16px rgba(0,0,0,0.2)",
                   }}
@@ -143,7 +141,7 @@ export default function Hero() {
                 </h1>
               ) : (
                 <h2 
-                  className="mb-6"
+                  className="mb-6 !text-2xl sm:!text-3xl md:!text-4xl lg:!text-[46px] leading-[1.2] md:leading-[1.1]"
                   style={{
                     WebkitTextSizeAdjust: "100%",
                     WebkitTapHighlightColor: "transparent",
@@ -151,9 +149,7 @@ export default function Hero() {
                     fontFamily: "var(--font-montserrat), sans-serif",
                     margin: "0 0 28px 0",
                     padding: 0,
-                    fontSize: "46px",
                     fontWeight: "600",
-                    lineHeight: "1.1",
                     color: "#FFFFFF",
                     textShadow: "0 2px 4px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.18), 0 8px 16px rgba(0,0,0,0.2)",
                   }}
@@ -164,7 +160,7 @@ export default function Hero() {
 
               {/* Slide Subtitle */}
               <p 
-                className="mb-10"
+                className="mb-10 !text-sm sm:!text-base md:!text-lg leading-relaxed md:leading-[30px]"
                 style={{
                   WebkitTextSizeAdjust: "100%",
                   WebkitTapHighlightColor: "transparent",
@@ -172,9 +168,7 @@ export default function Hero() {
                   fontFamily: "var(--font-montserrat), sans-serif",
                   margin: "0 0 40px 0",
                   padding: 0,
-                  fontSize: "18px",
                   fontWeight: "500",
-                  lineHeight: "30px",
                   color: "#FFFFFF",
                 }}
               >
@@ -233,7 +227,7 @@ export default function Hero() {
       </div>
 
       {/* Slider Selectors at the bottom */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] px-8 md:px-12 lg:px-16 z-20 flex justify-start items-center gap-6">
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] px-4 sm:px-8 md:px-12 lg:px-16 z-20 flex justify-start items-center gap-6">
         {slides.map((_, idx) => (
           <button
             key={idx}

@@ -70,15 +70,15 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 px-8 transition-all duration-500 ${isScrolled
+      className={`fixed top-0 left-0 w-full z-50 px-4 sm:px-6 md:px-8 transition-all duration-500 ${isScrolled
           ? "py-3 bg-[#700FA3] shadow-2xl border-[#9b51e0]/20"
           : "py-6 bg-transparent"
         }`}
     >
       <div className="w-full max-w-[1600px] mx-auto flex items-center justify-between relative">
         {/* Left Column: Logo */}
-        <div className="w-[180px] lg:w-[220px] flex items-center justify-start shrink-0">
-          <img src="/navbar.webp" alt="One True Ecuador Logo" className="h-14 md:h-18 w-auto object-contain" />
+        <div className="w-[140px] sm:w-[180px] lg:w-[220px] flex items-center justify-start shrink-0">
+          <img src="/navbar.webp" alt="One True Ecuador Logo" className="h-10 sm:h-14 md:h-18 w-auto object-contain" />
         </div>
 
         {/* Centered Column: Links */}
@@ -263,7 +263,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Drawer Overlay */}
       <div 
-        className={`fixed inset-y-0 right-0 z-40 w-full sm:w-80 bg-[#700FA3] border-l border-[#9b51e0]/20 shadow-2xl p-8 flex flex-col transition-all duration-300 transform lg:hidden ${
+        className={`fixed inset-y-0 right-0 z-40 w-full sm:w-80 bg-[#700FA3] border-l border-[#9b51e0]/20 shadow-2xl p-6 sm:p-8 flex flex-col transition-all duration-300 transform lg:hidden ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

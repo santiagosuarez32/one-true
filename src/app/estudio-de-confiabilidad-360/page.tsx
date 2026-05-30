@@ -164,7 +164,7 @@ export default function Confiabilidad360Page() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-32 pb-24 bg-[#700FA3]">
+      <section className="relative min-h-[80vh] flex items-start md:items-center justify-center overflow-hidden pt-32 pb-24 bg-[#700FA3]">
         {/* Purple Overlay */}
         <div 
           className="absolute inset-0 z-0 pointer-events-none"
@@ -181,16 +181,16 @@ export default function Confiabilidad360Page() {
         />
 
         {/* Centered Grid Container */}
-        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16 z-10 flex justify-start items-center">
+        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 z-10 flex justify-start items-center">
           <div className="max-w-3xl text-left">
             
             {/* Tag Prefix */}
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-[3px] bg-[#FFC107]" />
               <span
+                className="text-xs sm:text-sm md:text-base"
                 style={{
                   letterSpacing: "0.5px",
-                  fontSize: "16px",
                   color: "#FFC107",
                   fontWeight: "600",
                   fontFamily: "var(--font-montserrat), sans-serif",
@@ -201,7 +201,7 @@ export default function Confiabilidad360Page() {
             </div>
 
             <h1
-              className="mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-semibold"
+              className="mb-6 !text-3xl sm:!text-4xl md:!text-5xl lg:!text-[52px] font-semibold"
               style={{
                 textAlign: "start",
                 fontFamily: "var(--font-montserrat), sans-serif",

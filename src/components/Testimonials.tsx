@@ -66,8 +66,8 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="bg-[#fcfafc] py-24 border-t border-neutral-100">
-      <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16 text-center">
+    <section className="bg-[#fcfafc] py-16 md:py-24 border-t border-neutral-100">
+      <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 text-center">
         
         {/* Header Section */}
         <div className="flex flex-col items-center mb-16 text-center">
@@ -75,9 +75,9 @@ export default function Testimonials() {
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-12 h-[3px] bg-[#700FA3]" />
             <span
+              className="text-sm sm:text-base md:text-[18px]"
               style={{
                 letterSpacing: "0.5px",
-                fontSize: "18px",
                 color: "#700FA3",
                 fontWeight: "600",
                 fontFamily: "var(--font-montserrat), sans-serif",
@@ -88,12 +88,11 @@ export default function Testimonials() {
           </div>
 
           <h2
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] leading-tight sm:leading-snug md:leading-[52px]"
             style={{
               margin: 0,
               padding: 0,
-              fontSize: "40px",
               fontWeight: "bold",
-              lineHeight: "52px",
               color: "#48255A",
               fontFamily: "var(--font-montserrat), sans-serif",
               maxWidth: "850px",

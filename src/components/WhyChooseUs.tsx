@@ -61,10 +61,9 @@ function AnimatedCounter({ end, suffix = "", duration = 2000 }: CounterProps) {
   return (
     <div 
       ref={elementRef} 
-      className="font-black mb-2 select-none tracking-tight"
+      className="text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-black mb-2 select-none tracking-tight"
       style={{ 
         color: "#FFC107", 
-        fontSize: "64px", 
         lineHeight: "1",
         fontFamily: "var(--font-montserrat), sans-serif" 
       }}
@@ -111,9 +110,9 @@ export default function WhyChooseUs() {
         <div className="flex items-center gap-3 mb-6">
           <div className="w-12 h-[3px] bg-[#FFC107]" />
           <span
+            className="text-sm sm:text-base md:text-[18px]"
             style={{
               letterSpacing: "0.5px",
-              fontSize: "18px",
               color: "#FFC107",
               fontWeight: "600",
               fontFamily: "var(--font-montserrat), sans-serif",
@@ -125,12 +124,10 @@ export default function WhyChooseUs() {
 
         {/* Title Heading - Forced color to white to completely bypass aggressive global CSS style leaks */}
         <h2 
-          className="max-w-4xl mb-12" 
+          className="max-w-4xl mb-12 text-2xl sm:text-3xl md:text-4xl lg:text-[40px] leading-tight sm:leading-snug md:leading-[52px]" 
           style={{
             color: "#FFFFFF",
-            fontSize: "40px",
             fontWeight: "bold",
-            lineHeight: "52px",
             textAlign: "center",
             fontFamily: "var(--font-montserrat), sans-serif",
             margin: "0px 0px 48px 0px",

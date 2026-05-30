@@ -34,16 +34,16 @@ export default function Clients() {
   const logos = Array.from({ length: 15 }, (_, i) => `/marcas/${i + 1}.png`);
 
   return (
-    <section className="bg-[#fcfafc] py-24 overflow-hidden">
-      <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16 text-center">
+    <section className="bg-[#fcfafc] py-16 md:py-24 overflow-hidden">
+      <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 text-center">
         
         {/* Label: Algunos de nuestros clientes */}
         <div className="flex items-center justify-center gap-3 mb-4">
           <div className="w-12 h-[3px] bg-[#700FA3]" />
           <span
+            className="text-sm sm:text-base md:text-[18px]"
             style={{
               letterSpacing: "0.5px",
-              fontSize: "18px",
               color: "#700FA3", // Premium brand purple
               fontWeight: "600",
               fontFamily: "var(--font-montserrat), sans-serif",
@@ -55,12 +55,11 @@ export default function Clients() {
 
         {/* H2 Title */}
         <h2
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] leading-tight sm:leading-snug md:leading-[52px]"
           style={{
             margin: "0 auto 50px auto",
             padding: 0,
-            fontSize: "40px",
             fontWeight: "bold",
-            lineHeight: "52px",
             color: "#48255A",
             textAlign: "center",
             fontFamily: "var(--font-montserrat), sans-serif",
@@ -103,7 +102,7 @@ export default function Clients() {
                   key={`logo-1-${idx}`}
                   src={logo}
                   alt={`Marca ${idx + 1}`}
-                  className="h-28 md:h-44 w-auto object-contain transition-all duration-300 filter grayscale opacity-65 hover:grayscale-0 hover:opacity-100 flex-shrink-0"
+                  className="h-16 sm:h-24 md:h-36 lg:h-44 w-auto object-contain transition-all duration-300 filter grayscale opacity-65 hover:grayscale-0 hover:opacity-100 flex-shrink-0"
                   onError={(e) => {
                     e.currentTarget.style.display = "none";
                   }}
@@ -117,7 +116,7 @@ export default function Clients() {
                   key={`logo-2-${idx}`}
                   src={logo}
                   alt={`Marca ${idx + 1}-duplicate`}
-                  className="h-28 md:h-44 w-auto object-contain transition-all duration-300 filter grayscale opacity-65 hover:grayscale-0 hover:opacity-100 flex-shrink-0"
+                  className="h-16 sm:h-24 md:h-36 lg:h-44 w-auto object-contain transition-all duration-300 filter grayscale opacity-65 hover:grayscale-0 hover:opacity-100 flex-shrink-0"
                   onError={(e) => {
                     e.currentTarget.style.display = "none";
                   }}

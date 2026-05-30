@@ -102,7 +102,7 @@ export default function Services() {
 
   return (
     <section id="services" className="bg-[#fcfafc] pt-10 pb-24">
-      <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1650px] mx-auto px-4 md:px-6 lg:px-6">
+      <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1650px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Centered Header Section */}
         <div className="flex flex-col items-center text-center mb-16">
@@ -111,9 +111,9 @@ export default function Services() {
           <div className="flex items-center gap-3 mb-4">
             <div className="w-12 h-[3px] bg-[#700FA3]" />
             <span
+              className="text-sm sm:text-base md:text-[18px]"
               style={{
                 letterSpacing: "0.5px",
-                fontSize: "18px",
                 color: "#700FA3",
                 fontWeight: "600",
                 fontFamily: "var(--font-montserrat), sans-serif",
@@ -125,12 +125,11 @@ export default function Services() {
 
           {/* H2 Title */}
           <h2
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] leading-tight sm:leading-snug md:leading-[52px]"
             style={{
               margin: 0,
               padding: 0,
-              fontSize: "40px",
               fontWeight: "bold",
-              lineHeight: "52px",
               color: "#48255A",
               fontFamily: "var(--font-montserrat), sans-serif",
               boxSizing: "border-box",

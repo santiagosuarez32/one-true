@@ -116,8 +116,8 @@ export default function Resources() {
   ];
 
   return (
-    <section id="recursos" className="bg-[#fcfafc] py-24 border-t border-neutral-100 scroll-mt-20">
-      <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16">
+    <section id="recursos" className="bg-[#fcfafc] py-16 md:py-24 border-t border-neutral-100 scroll-mt-20">
+      <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
           
           {/* First Grid Item: Text & CTA */}
@@ -126,9 +126,9 @@ export default function Resources() {
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-[3px] bg-[#700FA3]" />
                 <span
+                  className="text-sm sm:text-base md:text-[18px]"
                   style={{
                     letterSpacing: "0.5px",
-                    fontSize: "18px",
                     color: "#700FA3",
                     fontWeight: "600",
                     fontFamily: "var(--font-montserrat), sans-serif",
@@ -139,7 +139,7 @@ export default function Resources() {
               </div>
               
               <h2
-                className="text-3xl lg:text-[32px]"
+                className="text-2xl sm:text-3xl lg:text-[32px] mb-6 md:mb-12"
                 style={{
                   margin: 0,
                   padding: 0,
@@ -147,7 +147,6 @@ export default function Resources() {
                   lineHeight: "1.25",
                   color: "#48255A",
                   fontFamily: "var(--font-montserrat), sans-serif",
-                  marginBottom: "48px",
                 }}
               >
                 Información de valor para evaluación forense de la credibilidad y gestión de riesgos

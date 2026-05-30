@@ -133,7 +133,7 @@ export default function VisitasDomiciliariasPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-32 pb-24 bg-[#700FA3]">
+      <section className="relative min-h-[80vh] flex items-start md:items-center justify-center overflow-hidden pt-32 pb-24 bg-[#700FA3]">
         {/* Purple Overlay */}
         <div 
           className="absolute inset-0 z-0 pointer-events-none"
@@ -150,16 +150,16 @@ export default function VisitasDomiciliariasPage() {
         />
 
         {/* Centered Grid Container */}
-        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16 z-10 flex justify-start items-center">
+        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 z-10 flex justify-start items-center">
           <div className="max-w-3xl text-left">
             
             {/* Tag Prefix */}
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-[3px] bg-[#FFC107]" />
               <span
+                className="text-xs sm:text-sm md:text-base"
                 style={{
                   letterSpacing: "0.5px",
-                  fontSize: "16px",
                   color: "#FFC107",
                   fontWeight: "600",
                   fontFamily: "var(--font-montserrat), sans-serif",
@@ -170,15 +170,12 @@ export default function VisitasDomiciliariasPage() {
             </div>
 
             <h1
-              className="mb-6"
+              className="mb-6 !text-3xl sm:!text-4xl md:!text-5xl lg:!text-[52px] font-semibold"
               style={{
                 textAlign: "start",
                 fontFamily: "var(--font-montserrat), sans-serif",
                 margin: "0 0 28px 0",
                 padding: 0,
-                fontSize: "52px",
-                fontWeight: "600",
-                lineHeight: "1.1",
                 color: "#FFFFFF",
                 textShadow: "0 2px 4px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.18)"
               }}
@@ -187,13 +184,10 @@ export default function VisitasDomiciliariasPage() {
             </h1>
 
             <p
-              className="mb-6 opacity-95"
+              className="mb-6 opacity-95 !text-sm sm:!text-base md:!text-lg font-medium"
               style={{
                 textAlign: "start",
                 fontFamily: "var(--font-montserrat), sans-serif",
-                fontSize: "18px",
-                fontWeight: "500",
-                lineHeight: "30px",
                 color: "#FFFFFF"
               }}
             >

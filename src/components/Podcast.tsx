@@ -31,8 +31,8 @@ export default function Podcast() {
     return () => ctx.revert();
   }, []);
   return (
-    <section id="podcast" className="bg-[#fcfafc] py-24 border-t border-neutral-100 overflow-hidden relative scroll-mt-20">
-      <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16 flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+    <section id="podcast" className="bg-[#fcfafc] py-16 md:py-24 border-t border-neutral-100 overflow-hidden relative scroll-mt-20">
+      <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 flex flex-col md:flex-row items-center gap-12 lg:gap-20">
         
         {/* Left: Podcast Image with effects */}
         <div ref={cardRef} className="w-full md:w-1/2 relative flex justify-center group cursor-pointer">
@@ -63,9 +63,9 @@ export default function Podcast() {
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-[3px] bg-[#700FA3]" />
             <span
+              className="text-sm sm:text-base md:text-[18px]"
               style={{
                 letterSpacing: "0.5px",
-                fontSize: "18px",
                 color: "#700FA3",
                 fontWeight: "600",
                 fontFamily: "var(--font-montserrat), sans-serif",
@@ -76,7 +76,7 @@ export default function Podcast() {
           </div>
           
           <h2
-            className="text-3xl lg:text-[40px]"
+            className="text-2xl sm:text-3xl lg:text-[40px]"
             style={{
               margin: 0,
               padding: 0,
