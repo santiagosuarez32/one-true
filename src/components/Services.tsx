@@ -96,7 +96,7 @@ export default function Services() {
       desc: "Conviértase en un experto en Poligrafía y evaluador Forense de la Credibilidad. Certifíquese como poligrafista profesional con nuestro programa de 400 horas, diseñado bajo los más altos estándares científicos y avalado internacionalmente por la APA.",
       image: "/servicios/7.webp",
       cta: "Ver formación en poligrafía",
-      href: "/#service-7"
+      href: "/curso-basico-en-poligrafia"
     }
   ];
 

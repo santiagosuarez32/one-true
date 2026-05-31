@@ -56,7 +56,7 @@ export default function Navbar() {
   ];
 
   const academiaList = [
-    { label: "Curso Básico en Poligrafía 400 H", href: "/#service-7" },
+    { label: "Curso Básico en Poligrafía 400 H", href: "/curso-basico-en-poligrafia" },
     { label: "Cursos Avanzados en Poligrafía", href: "/#service-7" },
     { label: "Formaciones Complementarias", href: "/#service-7" },
     { label: "Calendario Académico", href: "/#service-7" }
