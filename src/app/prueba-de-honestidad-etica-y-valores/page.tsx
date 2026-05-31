@@ -108,13 +108,13 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
       </section>
 
       {/* Sobre el Servicio Section */}
-      <section className="bg-[#fcfafc] py-20">
+      <section className="bg-white py-20">
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16">
           <div className="flex flex-col gap-16">
             
-            {/* ENCABEZADO — Título + Métricas */}
-            <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
-              <div className="lg:w-[55%] flex flex-col text-left">
+            {/* ENCABEZADO — Título */}
+            <div className="flex flex-col gap-12 items-start">
+              <div className="w-full max-w-4xl flex flex-col text-left">
                 {/* Tag Prefix con línea */}
                 <div className="flex items-center gap-3 mb-5">
                   <div className="w-12 h-[2px] bg-[#700FA3]" />
@@ -125,7 +125,6 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
                       color: "#700FA3",
                       fontWeight: "600",
                       fontFamily: "var(--font-montserrat), sans-serif",
-                      textTransform: "uppercase",
                     }}
                   >
                     Conoce nuestra evaluación
@@ -151,41 +150,6 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
                 >
                   Nuestra prueba analiza de manera integral la orientación conductual y los valores de los evaluados a través de dimensiones críticas estructuradas en tres grandes ejes de riesgo corporativo.
                 </p>
-              </div>
-
-              <div className="lg:w-[45%] flex flex-col gap-6 lg:pt-14 w-full">
-                {/* Stacked Stats */}
-                <div className="flex items-center gap-5">
-                  <span 
-                    className="text-5xl md:text-6xl font-black text-[#700FA3] shrink-0 leading-none" 
-                    style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                  >
-                    90
-                  </span>
-                  <p 
-                    className="text-sm text-[#525252]" 
-                    style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "20px" }}
-                  >
-                    Reactivos estratégicos diseñados para predecir conductas críticas de forma objetiva.
-                  </p>
-                </div>
-
-                <div className="w-full h-px bg-neutral-200" />
-
-                <div className="flex items-center gap-5">
-                  <span 
-                    className="text-5xl md:text-6xl font-black text-[#700FA3] shrink-0 leading-none" 
-                    style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                  >
-                    100<span className="text-4xl">%</span>
-                  </span>
-                  <p 
-                    className="text-sm text-[#525252]" 
-                    style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "20px" }}
-                  >
-                    Evaluación online ágil con reportes automáticos e inmediatos desde cualquier dispositivo.
-                  </p>
-                </div>
               </div>
             </div>
 
@@ -298,7 +262,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
       </section>
 
       {/* Características Generales Section */}
-      <section className="bg-white py-16 md:py-24 border-t border-neutral-100">
+      <section className="bg-white py-16 md:py-24">
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1000px] mx-auto px-8 md:px-12 lg:px-16">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-12 h-[2px] bg-[#700FA3]" />
@@ -309,7 +273,6 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
                 color: "#700FA3",
                 fontWeight: "600",
                 fontFamily: "var(--font-montserrat), sans-serif",
-                textTransform: "uppercase",
               }}
             >
               Ficha Técnica
@@ -317,36 +280,36 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
           </div>
 
           <h2
-            className="text-3xl md:text-4xl font-bold text-[#48255A] mb-12 flex items-center gap-3"
+            className="text-3xl md:text-4xl font-bold text-[#48255A] mb-12"
             style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.2" }}
           >
-            <span>⚙️</span> Características Generales de la Aplicación
+            Características Generales de la Aplicación
           </h2>
 
-          <div className="overflow-hidden rounded-2xl border border-[#700FA3]/20 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
+          <div className="overflow-hidden rounded border border-[#700FA3]/20 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
             <table className="w-full text-left border-collapse bg-white">
               <thead>
-                <tr className="bg-[#fcfafc] border-b border-[#700FA3]/20">
-                  <th className="py-5 px-6 font-bold text-[#48255A] text-lg w-1/3" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Característica</th>
-                  <th className="py-5 px-6 font-bold text-[#48255A] text-lg w-2/3 border-l border-[#700FA3]/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Especificación Técnica</th>
+                <tr className="bg-[#700FA3] border-b-2 border-[#FFC107]">
+                  <th className="py-5 px-6 font-bold text-white text-lg w-1/3" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Característica</th>
+                  <th className="py-5 px-6 font-bold text-white text-lg w-2/3 border-l border-[#700FA3]/30" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Especificación Técnica</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#700FA3]/10">
-                <tr className="hover:bg-[#700FA3]/5 transition-colors duration-200">
-                  <td className="py-5 px-6 font-semibold text-[#525252]" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Volumen de Evaluación</td>
-                  <td className="py-5 px-6 text-[#525252] font-light border-l border-[#700FA3]/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>90 reactivos dinámicos y validados psicométricamente.</td>
+              <tbody className="divide-y divide-[#700FA3]/20">
+                <tr className="bg-white">
+                  <td className="py-5 px-6 font-semibold text-[#48255A]" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Volumen de Evaluación</td>
+                  <td className="py-5 px-6 text-[#525252] font-light border-l border-[#700FA3]/20" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>90 reactivos dinámicos y validados psicométricamente.</td>
                 </tr>
-                <tr className="hover:bg-[#700FA3]/5 transition-colors duration-200">
-                  <td className="py-5 px-6 font-semibold text-[#525252]" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Modalidad de Aplicación</td>
-                  <td className="py-5 px-6 text-[#525252] font-light border-l border-[#700FA3]/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Formato flexible: 100% online.</td>
+                <tr className="bg-[#700FA3]/5">
+                  <td className="py-5 px-6 font-semibold text-[#48255A]" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Modalidad de Aplicación</td>
+                  <td className="py-5 px-6 text-[#525252] font-light border-l border-[#700FA3]/20" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Formato flexible: 100% online.</td>
                 </tr>
-                <tr className="hover:bg-[#700FA3]/5 transition-colors duration-200">
-                  <td className="py-5 px-6 font-semibold text-[#525252]" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Entrega de Resultados</td>
-                  <td className="py-5 px-6 text-[#525252] font-light border-l border-[#700FA3]/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Reportes analíticos disponibles de forma inmediata tras finalizar la prueba.</td>
+                <tr className="bg-white">
+                  <td className="py-5 px-6 font-semibold text-[#48255A]" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Entrega de Resultados</td>
+                  <td className="py-5 px-6 text-[#525252] font-light border-l border-[#700FA3]/20" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Reportes analíticos disponibles de forma inmediata tras finalizar la prueba.</td>
                 </tr>
-                <tr className="hover:bg-[#700FA3]/5 transition-colors duration-200">
-                  <td className="py-5 px-6 font-semibold text-[#525252]" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Metodología</td>
-                  <td className="py-5 px-6 text-[#525252] font-light border-l border-[#700FA3]/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Indicador referencial de alta precisión para complementar filtros de seguridad y selección.</td>
+                <tr className="bg-[#700FA3]/5">
+                  <td className="py-5 px-6 font-semibold text-[#48255A]" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Metodología</td>
+                  <td className="py-5 px-6 text-[#525252] font-light border-l border-[#700FA3]/20" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Indicador referencial de alta precisión para complementar filtros de seguridad y selección.</td>
                 </tr>
               </tbody>
             </table>
@@ -355,7 +318,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
       </section>
 
       {/* ¿Cuándo implementar esta evaluación? Section */}
-      <section className="bg-[#fcfafc] py-16 md:py-24 border-t border-neutral-100">
+      <section className="bg-white py-16 md:py-24">
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16">
           <div className="flex items-center gap-3 mb-6 justify-center">
             <div className="w-12 h-[2px] bg-[#700FA3]" />
@@ -366,19 +329,17 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
                 color: "#700FA3",
                 fontWeight: "600",
                 fontFamily: "var(--font-montserrat), sans-serif",
-                textTransform: "uppercase",
               }}
             >
               Aplicabilidad
             </span>
-            <div className="w-12 h-[2px] bg-[#700FA3]" />
           </div>
 
           <h2
             className="text-3xl md:text-4xl font-bold text-[#48255A] mb-12 text-center"
             style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.2" }}
           >
-            🎯 ¿Cuándo implementar esta evaluación?
+            ¿Cuándo implementar esta evaluación?
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -419,114 +380,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
         </div>
       </section>
 
-      {/* ¿Por qué contratarnos? Section */}
-      <section className="bg-white py-12 md:py-16 overflow-hidden relative">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#700FA3]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
-        
-        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16 flex flex-col lg:flex-row items-center gap-8 lg:gap-12 relative z-10">
-          
-          {/* Left Column: Images */}
-          <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-start">
-            <div className="relative w-full max-w-md">
-              <div className="rounded-3xl overflow-hidden shadow-2xl relative z-10 border-4 border-white">
-                <img 
-                  src="/pruebas-poligrafo/primer.webp" 
-                  alt="Profesional realizando análisis de muestras" 
-                  loading="lazy"
-                  className="w-full h-auto object-cover aspect-[4/5]"
-                />
-              </div>
-              
-              <div className="absolute -bottom-12 -right-12 w-2/3 rounded-3xl overflow-hidden shadow-xl z-20 border-4 border-white hidden md:block">
-                <img 
-                  src="/pruebas-poligrafo/segunda.webp" 
-                  alt="Análisis psicométrico profesional" 
-                  loading="lazy"
-                  className="w-full h-auto object-cover aspect-square"
-                />
-              </div>
 
-              <div className="absolute -top-8 -left-8 w-24 h-24 z-0 opacity-20"
-                style={{
-                  backgroundImage: 'radial-gradient(#700FA3 2px, transparent 2px)',
-                  backgroundSize: '12px 12px'
-                }}
-              />
-            </div>
-          </div>
-
-          {/* Right Column: Content */}
-          <div className="w-full lg:w-1/2 flex flex-col items-start lg:pl-10">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-[2px] bg-[#700FA3]" />
-              <span
-                style={{
-                  letterSpacing: "0.5px",
-                  fontSize: "16px",
-                  color: "#700FA3",
-                  fontWeight: "600",
-                  fontFamily: "var(--font-montserrat), sans-serif",
-                }}
-              >
-                Beneficios
-              </span>
-            </div>
-            
-            <h2
-              className="text-4xl md:text-[42px] mb-6"
-              style={{
-                fontWeight: "bold",
-                lineHeight: "1.2",
-                color: "#48255A",
-                fontFamily: "var(--font-montserrat), sans-serif",
-              }}
-            >
-              Beneficios para su Organización
-            </h2>
-
-            <ul className="flex flex-col gap-3 w-full mb-6">
-              {[
-                { title: "Reducción de Riesgos y Pérdidas", text: "Prevenga de manera efectiva el robo hormiga, filtración de datos y malas prácticas financieras." },
-                { title: "Cultura de Integridad y Respeto", text: "Fomente un clima laboral seguro y transparente donde la confianza y el respeto mutuo sean pilares del equipo." },
-                { title: "Selección Objetiva y Eficiente", text: "Elimine sesgos de contratación basándose en reactivos psicométricos probados con reportes ágiles y digitales." }
-              ].map((item, idx) => (
-                <li key={idx} className="flex items-start gap-3 py-1">
-                  <div className="w-6 h-6 rounded flex items-center justify-center bg-[#700FA3] text-white shrink-0 mt-0.5 shadow-md">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span 
-                    className="text-base text-[#525252] font-medium leading-relaxed"
-                    style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                  >
-                    <strong className="font-bold text-[#48255A]">{item.title}: </strong>
-                    {item.text}
-                  </span>
-                </li>
-              ))}
-            </ul>
-
-            <a
-              href="#contacto"
-              className="px-8 py-3 rounded transition-all hover:brightness-110 shadow-lg inline-block text-center cursor-pointer"
-              style={{
-                fontFamily: "var(--font-montserrat), sans-serif",
-                lineHeight: "1",
-                fontSize: "14px",
-                fontWeight: "600",
-                color: "#5F0091",
-                backgroundColor: "#FFC107",
-                textDecoration: "none",
-                border: "none"
-              }}
-            >
-              <span>Cotizar mi evaluación de honestidad</span>
-            </a>
-
-          </div>
-        </div>
-      </section>
 
       {/* ── FORMULARIO DE CONTACTO ── */}
       <section 
@@ -548,7 +402,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
             <div className="lg:col-span-6 flex flex-col text-left">
               {/* Logo de One True */}
               <div className="mb-4 flex justify-start">
-                <img src="/footer.webp" alt="One True Logo" loading="lazy" className="h-20 md:h-24 w-auto object-contain" />
+                <img src="/FORM.webp" alt="One True Logo" loading="lazy" className="h-20 md:h-24 w-auto object-contain" />
               </div>
 
               {/* Título adaptado al estilo estándar de la página */}
@@ -752,7 +606,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
 
             {/* LADO DERECHO: Tarjeta de Formulario */}
             <div className="lg:col-span-6 relative">
-              <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.35)] border border-neutral-100 relative overflow-hidden transition-all duration-500">
+              <div className="bg-white rounded p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.35)] border border-neutral-100 relative overflow-hidden transition-all duration-500">
                 
                 {!formSubmitted ? (
                   /* FORMULARIO ACTIVO */
@@ -771,7 +625,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
                           <input 
                             type="text" 
                             placeholder="Tu nombre" 
-                            className="px-4 py-2.5 rounded-xl border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
+                            className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                             required 
                           />
@@ -781,7 +635,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
                           <input 
                             type="text" 
                             placeholder="Tu apellido" 
-                            className="px-4 py-2.5 rounded-xl border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
+                            className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                             required 
                           />
@@ -795,7 +649,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
                           <input 
                             type="email" 
                             placeholder="correo@empresa.com" 
-                            className="px-4 py-2.5 pr-10 rounded-xl border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
+                            className="px-4 py-2.5 pr-10 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                             required 
                           />
@@ -811,7 +665,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
                       {/* Teléfono con Selector Bandera y Prefijo Real de Países */}
                       <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Número de teléfono *</label>
-                        <div className="relative flex items-center border-0 rounded-xl bg-neutral-50 focus-within:ring-2 focus-within:ring-[#700FA3]/20 focus-within:bg-white focus-within:shadow-md transition-all overflow-hidden">
+                        <div className="relative flex items-center border-0 rounded bg-neutral-50 focus-within:ring-2 focus-within:ring-[#700FA3]/20 focus-within:bg-white focus-within:shadow-md transition-all overflow-hidden">
                           {/* Selector de Bandera y Prefijo Real de Países */}
                           <div className="flex items-center gap-2 pl-3 border-r border-neutral-200/60 bg-transparent shrink-0">
                             <img 
@@ -863,7 +717,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
                         <input 
                           type="text" 
                           placeholder="Tu ciudad" 
-                          className="px-4 py-2.5 rounded-xl border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
+                          className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                           style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                           required 
                         />
@@ -875,7 +729,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
                         <textarea 
                           placeholder="Escribe tu mensaje aquí..." 
                           rows={2} 
-                          className="px-4 py-2.5 rounded-xl border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium resize-none" 
+                          className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium resize-none" 
                           style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                           required 
                         ></textarea>
@@ -915,7 +769,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
                       {/* Botón de Cotización */}
                       <button
                         type="submit"
-                        className="mt-2 px-8 py-3.5 bg-[#700FA3] hover:bg-[#5C0B87] text-white font-bold rounded-xl transition-all duration-300 w-full shadow-lg shadow-[#700FA3]/25 hover:scale-[1.01] active:scale-[0.99] text-base"
+                        className="mt-2 px-8 py-3.5 bg-[#700FA3] hover:bg-[#5C0B87] text-white font-bold rounded transition-all duration-300 w-full shadow-lg shadow-[#700FA3]/25 hover:scale-[1.01] active:scale-[0.99] text-base"
                         style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                       >
                         Cotizar ahora
@@ -984,7 +838,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
 
                     <button
                       onClick={() => setFormSubmitted(false)}
-                      className="px-6 py-3 border-2 border-[#700FA3] text-[#700FA3] hover:bg-[#700FA3] hover:text-white font-bold rounded-xl transition-all duration-300 text-sm"
+                      className="px-6 py-3 border-2 border-[#700FA3] text-[#700FA3] hover:bg-[#700FA3] hover:text-white font-bold rounded transition-all duration-300 text-sm"
                       style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                     >
                       Volver al formulario

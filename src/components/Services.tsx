@@ -101,7 +101,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="bg-[#fcfafc] pt-10 pb-24">
+    <section id="services" className="bg-white pt-10 pb-24">
       <style dangerouslySetInnerHTML={{ __html: `
         .service-card:hover .service-cta-btn {
           background-color: #700FA3 !important;

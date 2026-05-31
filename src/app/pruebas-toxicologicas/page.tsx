@@ -149,7 +149,7 @@ export default function PruebasToxicologicasPage() {
       </section>
 
       {/* Sobre el Servicio Section */}
-      <section className="bg-[#fcfafc] py-20">
+      <section className="bg-white py-20">
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16">
           
           {/* Centered Small Header */}
@@ -368,7 +368,7 @@ export default function PruebasToxicologicasPage() {
             <div className="lg:col-span-6 flex flex-col text-left">
               {/* Logo de One True */}
               <div className="mb-4 flex justify-start">
-                <img src="/footer.webp" alt="One True Logo" loading="lazy" className="h-20 md:h-24 w-auto object-contain" />
+                <img src="/FORM.webp" alt="One True Logo" loading="lazy" className="h-20 md:h-24 w-auto object-contain" />
               </div>
 
               {/* Título adaptado al estilo estándar de la página */}
@@ -572,7 +572,7 @@ export default function PruebasToxicologicasPage() {
 
             {/* LADO DERECHO: Tarjeta de Formulario */}
             <div className="lg:col-span-6 relative">
-              <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.35)] border border-neutral-100 relative overflow-hidden transition-all duration-500">
+              <div className="bg-white rounded p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.35)] border border-neutral-100 relative overflow-hidden transition-all duration-500">
                 
                 {!formSubmitted ? (
                   /* FORMULARIO ACTIVO */
@@ -591,7 +591,7 @@ export default function PruebasToxicologicasPage() {
                           <input 
                             type="text" 
                             placeholder="Tu nombre" 
-                            className="px-4 py-2.5 rounded-xl border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
+                            className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                             required 
                           />
@@ -601,7 +601,7 @@ export default function PruebasToxicologicasPage() {
                           <input 
                             type="text" 
                             placeholder="Tu apellido" 
-                            className="px-4 py-2.5 rounded-xl border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
+                            className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                             required 
                           />
@@ -615,7 +615,7 @@ export default function PruebasToxicologicasPage() {
                           <input 
                             type="email" 
                             placeholder="correo@empresa.com" 
-                            className="px-4 py-2.5 pr-10 rounded-xl border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
+                            className="px-4 py-2.5 pr-10 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                             required 
                           />
@@ -631,7 +631,7 @@ export default function PruebasToxicologicasPage() {
                       {/* Teléfono con Selector Bandera y Prefijo Real de Países */}
                       <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Número de teléfono *</label>
-                        <div className="relative flex items-center border-0 rounded-xl bg-neutral-50 focus-within:ring-2 focus-within:ring-[#700FA3]/20 focus-within:bg-white focus-within:shadow-md transition-all overflow-hidden">
+                        <div className="relative flex items-center border-0 rounded bg-neutral-50 focus-within:ring-2 focus-within:ring-[#700FA3]/20 focus-within:bg-white focus-within:shadow-md transition-all overflow-hidden">
                           {/* Selector de Bandera y Prefijo Real de Países */}
                           <div className="flex items-center gap-2 pl-3 border-r border-neutral-200/60 bg-transparent shrink-0">
                             <img 
@@ -683,7 +683,7 @@ export default function PruebasToxicologicasPage() {
                         <input 
                           type="text" 
                           placeholder="Tu ciudad" 
-                          className="px-4 py-2.5 rounded-xl border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
+                          className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                           style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                           required 
                         />
@@ -695,7 +695,7 @@ export default function PruebasToxicologicasPage() {
                         <textarea 
                           placeholder="Escribe tu mensaje aquí..." 
                           rows={2} 
-                          className="px-4 py-2.5 rounded-xl border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium resize-none" 
+                          className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium resize-none" 
                           style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                           required 
                         ></textarea>
@@ -735,7 +735,7 @@ export default function PruebasToxicologicasPage() {
                       {/* Botón de Cotización */}
                       <button
                         type="submit"
-                        className="mt-2 px-8 py-3.5 bg-[#700FA3] hover:bg-[#5C0B87] text-white font-bold rounded-xl transition-all duration-300 w-full shadow-lg shadow-[#700FA3]/25 hover:scale-[1.01] active:scale-[0.99] text-base"
+                        className="mt-2 px-8 py-3.5 bg-[#700FA3] hover:bg-[#5C0B87] text-white font-bold rounded transition-all duration-300 w-full shadow-lg shadow-[#700FA3]/25 hover:scale-[1.01] active:scale-[0.99] text-base"
                         style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                       >
                         Cotizar ahora
@@ -804,7 +804,7 @@ export default function PruebasToxicologicasPage() {
 
                     <button
                       onClick={() => setFormSubmitted(false)}
-                      className="px-6 py-3 border-2 border-[#700FA3] text-[#700FA3] hover:bg-[#700FA3] hover:text-white font-bold rounded-xl transition-all duration-300 text-sm"
+                      className="px-6 py-3 border-2 border-[#700FA3] text-[#700FA3] hover:bg-[#700FA3] hover:text-white font-bold rounded transition-all duration-300 text-sm"
                       style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                     >
                       Volver al formulario

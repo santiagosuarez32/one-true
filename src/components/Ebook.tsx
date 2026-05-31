@@ -31,7 +31,7 @@ export default function Ebook() {
     return () => ctx.revert();
   }, []);
   return (
-    <section id="ebook" className="bg-[#fcfafc] py-16 md:py-24 relative overflow-hidden scroll-mt-20">
+    <section id="ebook" className="bg-white py-16 md:py-24 relative overflow-hidden scroll-mt-20">
       {/* Decorative background blobs matching the screenshot vibe but with brand colors */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-[#700FA3] opacity-5 rounded-full blur-[80px] -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#FFC107] opacity-5 rounded-full blur-[100px] translate-x-1/3 translate-y-1/3" />
@@ -83,10 +83,10 @@ export default function Ebook() {
 
         {/* Right Column: Form Card */}
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-          <div ref={cardRef} className="bg-white rounded-3xl p-5 sm:p-8 md:p-10 shadow-[0_20px_50px_rgba(72,37,90,0.08)] border border-neutral-100 w-full max-w-[550px]">
+          <div ref={cardRef} className="bg-white rounded p-5 sm:p-8 md:p-10 shadow-[0_20px_50px_rgba(72,37,90,0.08)] border border-neutral-100 w-full max-w-[550px]">
             
             {/* Ebook Mockup Image Container */}
-            <div className="w-full h-[220px] bg-neutral-100 rounded-xl mb-8 relative overflow-hidden flex items-center justify-center">
+            <div className="w-full h-[220px] bg-neutral-100 rounded mb-8 relative overflow-hidden flex items-center justify-center">
               {/* Fallback pattern / gradient instead of image so it doesn't look broken */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#700FA3]/10 to-[#FFC107]/10"></div>
               <img 
@@ -101,38 +101,38 @@ export default function Ebook() {
               <input 
                 type="email" 
                 placeholder="Correo" 
-                className="w-full px-5 py-4 rounded-xl border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all"
+                className="w-full px-5 py-4 rounded border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all"
                 required
               />
               <input 
                 type="tel" 
                 placeholder="WhatsApp" 
-                className="w-full px-5 py-4 rounded-xl border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all"
+                className="w-full px-5 py-4 rounded border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all"
                 required
               />
               <input 
                 type="text" 
                 placeholder="¿Qué puesto tienes en tu empresa?" 
-                className="w-full px-5 py-4 rounded-xl border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all"
+                className="w-full px-5 py-4 rounded border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all"
                 required
               />
               <input 
                 type="text" 
                 placeholder="¿A qué se dedica tu empresa?" 
-                className="w-full px-5 py-4 rounded-xl border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all"
+                className="w-full px-5 py-4 rounded border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all"
                 required
               />
               <input 
                 type="text" 
                 placeholder="¿Cuántas personas trabajan en tu empresa?" 
-                className="w-full px-5 py-4 rounded-xl border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all"
+                className="w-full px-5 py-4 rounded border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all"
                 required
               />
               
               <button 
                 type="submit"
                 aria-label="Descargar u obtener Ebook gratuito de Poligrafía"
-                className="w-full mt-2 px-6 py-4 bg-[#700FA3] text-white font-bold rounded-xl hover:bg-[#5a0c82] transition-colors duration-300 text-lg shadow-[0_4px_20px_rgba(112,15,163,0.3)]"
+                className="w-full mt-2 px-6 py-4 bg-[#700FA3] text-white font-bold rounded hover:bg-[#5a0c82] transition-colors duration-300 text-lg shadow-[0_4px_20px_rgba(112,15,163,0.3)]"
                 style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
               >
                 Obtener Ebook Gratis

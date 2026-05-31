@@ -34,7 +34,7 @@ export default function Clients() {
   const logos = Array.from({ length: 15 }, (_, i) => `/marcas/${i + 1}.png`);
 
   return (
-    <section className="bg-[#fcfafc] py-16 md:py-24 overflow-hidden">
+    <section className="bg-white py-16 md:py-24 overflow-hidden">
       <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 text-center">
         
         {/* Label: Algunos de nuestros clientes */}
@@ -91,8 +91,8 @@ export default function Clients() {
         {/* Infinite Loop Marquee Container */}
         <div ref={cardRef} className="relative w-full overflow-hidden py-4 flex">
           {/* Symmetrical visual fade masks at the left/right edges for studio finish */}
-          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#fcfafc] to-transparent z-10 pointer-events-none" />
-          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#fcfafc] to-transparent z-10 pointer-events-none" />
+          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
           <div className="marquee-track">
             {/* First Set of Logos */}

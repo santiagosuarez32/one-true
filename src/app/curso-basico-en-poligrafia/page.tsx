@@ -161,7 +161,7 @@ export default function CursoBasicoPoligrafiaPage() {
       </section>
 
       {/* Sección Curricular: "¿Qué obtendrá en esta formación?" (Grid en Fila de Estilo Vetting) */}
-      <section className="bg-[#fcfafc] py-24 border-b border-neutral-100">
+      <section className="bg-white py-24">
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1650px] mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Centered Small Header */}
@@ -354,7 +354,7 @@ export default function CursoBasicoPoligrafiaPage() {
       </section>
 
       {/* Sección: Ventajas de formarse con nosotros (Estilo Vetting con imágenes superpuestas) */}
-      <section className="bg-white py-20 overflow-hidden relative border-b border-neutral-100">
+      <section className="bg-white py-20 overflow-hidden relative">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#700FA3]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
         
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1650px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12 lg:gap-20 relative z-10">
@@ -534,7 +534,7 @@ export default function CursoBasicoPoligrafiaPage() {
             {/* LADO IZQUIERDO: Información Académica e Institucional */}
             <div className="lg:col-span-5 flex flex-col">
               <div className="mb-6 flex justify-start">
-                <img src="/footer.webp" alt="One True Academia Logo" loading="lazy" className="h-16 w-auto object-contain" />
+                <img src="/FORM.webp" alt="One True Academia Logo" loading="lazy" className="h-16 w-auto object-contain" />
               </div>
 
               <span 
@@ -600,7 +600,7 @@ export default function CursoBasicoPoligrafiaPage() {
 
             {/* LADO DERECHO: Tarjeta de Registro del Estudiante */}
             <div className="lg:col-span-7">
-              <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.35)] border border-neutral-100 relative overflow-hidden transition-all duration-500">
+              <div className="bg-white rounded p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.35)] border border-neutral-100 relative overflow-hidden transition-all duration-500">
                 
                 {!formSubmitted ? (
                   /* FORMULARIO ACTIVO */
@@ -626,7 +626,7 @@ export default function CursoBasicoPoligrafiaPage() {
                           <input 
                             type="text" 
                             placeholder="Nombre del estudiante" 
-                            className="px-4 py-2.5 rounded-xl border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
+                            className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                             required 
                           />
@@ -636,7 +636,7 @@ export default function CursoBasicoPoligrafiaPage() {
                           <input 
                             type="text" 
                             placeholder="Apellido del estudiante" 
-                            className="px-4 py-2.5 rounded-xl border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
+                            className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                             required 
                           />
@@ -650,7 +650,7 @@ export default function CursoBasicoPoligrafiaPage() {
                           <input 
                             type="email" 
                             placeholder="correo@ejemplo.com" 
-                            className="px-4 py-2.5 pr-10 rounded-xl border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
+                            className="px-4 py-2.5 pr-10 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                             required 
                           />
@@ -666,7 +666,7 @@ export default function CursoBasicoPoligrafiaPage() {
                       {/* Teléfono con Selector Bandera */}
                       <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Número de teléfono *</label>
-                        <div className="relative flex items-center border-0 rounded-xl bg-neutral-50 focus-within:ring-2 focus-within:ring-[#700FA3]/20 focus-within:bg-white focus-within:shadow-md transition-all overflow-hidden">
+                        <div className="relative flex items-center border-0 rounded bg-neutral-50 focus-within:ring-2 focus-within:ring-[#700FA3]/20 focus-within:bg-white focus-within:shadow-md transition-all overflow-hidden">
                           <div className="flex items-center gap-2 pl-3 border-r border-neutral-200/60 bg-transparent shrink-0">
                             <img 
                               src={`https://flagcdn.com/w20/${country}.png`} 
@@ -716,7 +716,7 @@ export default function CursoBasicoPoligrafiaPage() {
                         <input 
                           type="text" 
                           placeholder="Ciudad de residencia" 
-                          className="px-4 py-2.5 rounded-xl border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
+                          className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                           style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                           required 
                         />
@@ -728,7 +728,7 @@ export default function CursoBasicoPoligrafiaPage() {
                         <textarea 
                           placeholder="Indícanos tu perfil académico y tus preguntas sobre requisitos, fechas y opciones de financiamiento..." 
                           rows={2} 
-                          className="px-4 py-2.5 rounded-xl border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium resize-none" 
+                          className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium resize-none" 
                           style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                           required 
                         ></textarea>
@@ -768,7 +768,7 @@ export default function CursoBasicoPoligrafiaPage() {
                       {/* Botón de Envío */}
                       <button
                         type="submit"
-                        className="mt-2 px-8 py-3.5 bg-[#700FA3] hover:bg-[#5C0B87] text-white font-bold rounded-xl transition-all duration-300 w-full shadow-lg shadow-[#700FA3]/25 hover:scale-[1.01] active:scale-[0.99] text-base"
+                        className="mt-2 px-8 py-3.5 bg-[#700FA3] hover:bg-[#5C0B87] text-white font-bold rounded transition-all duration-300 w-full shadow-lg shadow-[#700FA3]/25 hover:scale-[1.01] active:scale-[0.99] text-base"
                         style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                       >
                         Enviar Inscripción Académica
@@ -837,7 +837,7 @@ export default function CursoBasicoPoligrafiaPage() {
 
                     <button
                       onClick={() => setFormSubmitted(false)}
-                      className="px-6 py-3 border-2 border-[#700FA3] text-[#700FA3] hover:bg-[#700FA3] hover:text-white font-bold rounded-xl transition-all duration-300 text-sm"
+                      className="px-6 py-3 border-2 border-[#700FA3] text-[#700FA3] hover:bg-[#700FA3] hover:text-white font-bold rounded transition-all duration-300 text-sm"
                       style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                     >
                       Volver al formulario
@@ -852,7 +852,7 @@ export default function CursoBasicoPoligrafiaPage() {
       </section>
 
       {/* Otras soluciones */}
-      <section ref={containerRef} className="py-20 bg-[#fcfafc]">
+      <section ref={containerRef} className="py-20 bg-white">
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16">
           <div className="flex flex-col items-center text-center mb-16">
             <div className="flex items-center gap-3 mb-4">

@@ -31,7 +31,7 @@ export default function Podcast() {
     return () => ctx.revert();
   }, []);
   return (
-    <section id="podcast" className="bg-[#fcfafc] py-16 md:py-24 border-t border-neutral-100 overflow-hidden relative scroll-mt-20">
+    <section id="podcast" className="bg-white py-16 md:py-24 overflow-hidden relative scroll-mt-20">
       <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 flex flex-col md:flex-row items-center gap-12 lg:gap-20">
         
         {/* Left: Podcast Image (Static) */}

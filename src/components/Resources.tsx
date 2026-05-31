@@ -116,7 +116,7 @@ export default function Resources() {
   ];
 
   return (
-    <section id="recursos" className="bg-[#fcfafc] py-16 md:py-24 border-t border-neutral-100 scroll-mt-20">
+    <section id="recursos" className="bg-white py-16 md:py-24 scroll-mt-20">
       <style dangerouslySetInnerHTML={{ __html: `
         .blog-card:hover .blog-cta-btn {
           background-color: #700FA3 !important;
