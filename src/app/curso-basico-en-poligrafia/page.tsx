@@ -162,7 +162,7 @@ export default function CursoBasicoPoligrafiaPage() {
 
       {/* Sección Curricular: "¿Qué obtendrá en esta formación?" (Grid en Fila de Estilo Vetting) */}
       <section className="bg-[#fcfafc] py-24 border-b border-neutral-100">
-        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16">
+        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1650px] mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Centered Small Header */}
           <div className="flex flex-col items-center text-center mb-16">
@@ -226,15 +226,15 @@ export default function CursoBasicoPoligrafiaPage() {
             ].map((item, idx) => (
               <div 
                 key={idx} 
-                className="group flex flex-col bg-white border border-neutral-200/80 rounded-xl p-8 shadow-sm hover:shadow-md hover:border-neutral-300 transition-all duration-300 relative pl-6 pt-8 text-left"
+                className="flex flex-col bg-white border border-neutral-200/80 rounded-xl p-8 shadow-sm relative pl-6 pt-8 text-left"
               >
                 {/* Elegant left gold accent bar */}
                 <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#FFC107] rounded-l-xl" />
                 
-                {/* Icon Container with elegant soft glow background and group-hover micro-animation */}
+                {/* Icon Container with elegant soft glow background */}
                 <div className="flex justify-start mb-6 h-[76px] items-center text-[#700FA3] relative">
-                  <div className="absolute -left-2 w-16 h-16 rounded-full bg-[#700FA3]/5 blur-[8px] pointer-events-none group-hover:scale-125 transition-all duration-500" />
-                  <div className="relative z-10 group-hover:-translate-y-1 transition-transform duration-300">
+                  <div className="absolute -left-2 w-16 h-16 rounded-full bg-[#700FA3]/5 blur-[8px] pointer-events-none" />
+                  <div className="relative z-10">
                     {item.icon}
                   </div>
                 </div>
@@ -261,115 +261,9 @@ export default function CursoBasicoPoligrafiaPage() {
         </div>
       </section>
 
-      {/* Sección de Ventajas de formarse con nosotros (Estilo Centrado e Institucional con Phosphor Icons en Peso Light) */}
-      <section className="bg-[#fcf9fc] py-24 border-b border-neutral-100">
-        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16">
-          
-          {/* Centered Small Header */}
-          <div className="flex flex-col items-center text-center mb-16">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-[3px] bg-[#700FA3]" />
-              <span
-                style={{
-                  letterSpacing: "0.5px",
-                  fontSize: "18px",
-                  color: "#700FA3",
-                  fontWeight: "600",
-                  fontFamily: "var(--font-montserrat), sans-serif",
-                }}
-              >
-                Integridad y Soporte Académico
-              </span>
-            </div>
-            
-            <h2
-              style={{
-                fontSize: "36px",
-                fontWeight: "bold",
-                lineHeight: "46px",
-                color: "#48255A",
-                fontFamily: "var(--font-montserrat), sans-serif",
-                marginTop: "10px"
-              }}
-            >
-              Ventajas de formarse con nosotros
-            </h2>
-
-            <p 
-              className="text-[#525252] text-sm mt-4 max-w-2xl font-light"
-              style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-            >
-              Recursos académicos y beneficios diseñados para garantizar tu éxito profesional continuo:
-            </p>
-          </div>
-
-          {/* Symmetrical 3-Column Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Experiencia Docente",
-                desc: "Aprenda de instructores activos con amplia trayectoria en el ámbito forense y de seguridad.",
-                icon: <Chalkboard size={72} weight="thin" color="#700FA3" className="shrink-0" />
-              },
-              {
-                title: "Networking de Élite",
-                desc: "Forme parte de una comunidad profesional de poligrafistas en toda la región.",
-                icon: <UsersThree size={72} weight="thin" color="#700FA3" className="shrink-0" />
-              },
-              {
-                title: "Carrera de Futuro",
-                desc: "Acceda a oportunidades laborales en agencias gubernamentales, inteligencia y seguridad corporativa privada.",
-                icon: <Briefcase size={72} weight="thin" color="#700FA3" className="shrink-0" />
-              }
-            ].map((item, idx) => (
-              <div 
-                key={idx} 
-                className="group flex flex-col bg-white border border-neutral-200/80 rounded-xl p-8 shadow-sm hover:shadow-md hover:border-neutral-300 transition-all duration-300 relative pl-6 pt-8 text-left"
-              >
-                {/* Elegant left gold accent bar */}
-                <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#FFC107] rounded-l-xl" />
-                
-                {/* Icon Container with elegant soft glow background and group-hover micro-animation */}
-                <div className="flex justify-start mb-6 h-[76px] items-center text-[#700FA3] relative">
-                  <div className="absolute -left-2 w-16 h-16 rounded-full bg-[#700FA3]/5 blur-[8px] pointer-events-none group-hover:scale-125 transition-all duration-500" />
-                  <div className="relative z-10 group-hover:-translate-y-1 transition-transform duration-300">
-                    {item.icon}
-                  </div>
-                </div>
-                
-                {/* Card Title */}
-                <h3 
-                  className="text-lg font-bold mb-3 text-[#48255A]"
-                  style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}
-                >
-                  {item.title}
-                </h3>
-                
-                {/* Description Text */}
-                <p 
-                  className="text-[#525252] text-sm leading-relaxed font-light mb-6 flex-1"
-                  style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                >
-                  {item.desc}
-                </p>
-
-                {/* Elegant action button at the bottom of each card */}
-                <a 
-                  href="#contacto"
-                  className="inline-block w-fit px-6 py-2 bg-[#FFC107] text-[#411A56] font-bold rounded-lg hover:bg-[#FFD54F] transition-all shadow-sm text-sm"
-                  style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                >
-                  Conoce más
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Cuadrícula de Requisitos y Recursos (2x2 Soft Grid) */}
       <section className="bg-white py-24 relative overflow-hidden">
-        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1100px] mx-auto px-8">
+        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1650px] mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Section Header */}
           <div className="flex flex-col items-center text-center mb-16">
@@ -401,8 +295,8 @@ export default function CursoBasicoPoligrafiaPage() {
             </h2>
           </div>
 
-          {/* 2x2 Soft Grid Cards - Rediseñadas con estilo similar a la sección anterior (borde de acento, resplandor e iconos thin) pero diferente (acento superior y estructura de 2x2) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Grid Cards - Rediseñadas en una sola fila (4 columnas en escritorio) con fondo amarillo y sin hover */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 title: "Perfil y Requisitos",
@@ -427,15 +321,12 @@ export default function CursoBasicoPoligrafiaPage() {
             ].map((item, idx) => (
               <div 
                 key={idx} 
-                className="group flex flex-col bg-white border border-neutral-200/80 rounded-3xl p-8 shadow-sm hover:shadow-xl hover:border-neutral-300 transition-all duration-300 relative pt-8 text-left"
+                className="flex flex-col bg-[#FFC107] rounded-3xl p-6 shadow-sm relative text-left"
               >
-                {/* Elegant top gold accent bar - Similar a la sección anterior pero arriba y adaptado a las esquinas redondeadas */}
-                <div className="absolute top-0 left-0 right-0 h-[4px] bg-[#FFC107] rounded-t-3xl" />
-                
-                {/* Icon Container with elegant soft glow background and group-hover micro-animation */}
+                {/* Icon Container with elegant soft glow background */}
                 <div className="flex justify-start mb-6 h-[76px] items-center text-[#700FA3] relative">
-                  <div className="absolute -left-2 w-16 h-16 rounded-full bg-[#700FA3]/5 blur-[8px] pointer-events-none group-hover:scale-125 transition-all duration-500" />
-                  <div className="relative z-10 group-hover:-translate-y-1 transition-transform duration-300">
+                  <div className="absolute -left-2 w-16 h-16 rounded-full bg-[#700FA3]/10 blur-[6px] pointer-events-none" />
+                  <div className="relative z-10">
                     {item.icon}
                   </div>
                 </div>
@@ -450,7 +341,7 @@ export default function CursoBasicoPoligrafiaPage() {
                 
                 {/* Description Text */}
                 <p 
-                  className="text-neutral-500 text-sm leading-relaxed font-light flex-1"
+                  className="text-[#411A56] text-sm leading-relaxed font-medium flex-1"
                   style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                 >
                   {item.text}
@@ -462,9 +353,127 @@ export default function CursoBasicoPoligrafiaPage() {
         </div>
       </section>
 
+      {/* Sección: Ventajas de formarse con nosotros (Estilo Vetting con imágenes superpuestas) */}
+      <section className="bg-white py-20 overflow-hidden relative border-b border-neutral-100">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#700FA3]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
+        
+        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1650px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12 lg:gap-20 relative z-10">
+          
+          {/* Left Column: Images */}
+          <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-start">
+            <div className="relative w-full max-w-md">
+              <div className="rounded-3xl overflow-hidden shadow-2xl relative z-10 border-4 border-white">
+                <img 
+                  src="/pruebas-poligrafo/primer.webp" 
+                  alt="Estudiante de poligrafía en formación técnica" 
+                  loading="lazy"
+                  className="w-full h-auto object-cover aspect-[4/5]"
+                />
+              </div>
+              
+              <div className="absolute -bottom-12 -right-12 w-2/3 rounded-3xl overflow-hidden shadow-xl z-20 border-4 border-white hidden md:block">
+                <img 
+                  src="/pruebas-poligrafo/segunda.webp" 
+                  alt="Práctica pericial con polígrafo" 
+                  loading="lazy"
+                  className="w-full h-auto object-cover aspect-square"
+                />
+              </div>
+
+              <div className="absolute -top-8 -left-8 w-24 h-24 z-0 opacity-20"
+                style={{
+                  backgroundImage: 'radial-gradient(#700FA3 2px, transparent 2px)',
+                  backgroundSize: '12px 12px'
+                }}
+              />
+            </div>
+          </div>
+
+          {/* Right Column: Content */}
+          <div className="w-full lg:w-1/2 flex flex-col items-start lg:pl-10 text-left">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-[2px] bg-[#700FA3]" />
+              <span
+                style={{
+                  letterSpacing: "0.5px",
+                  fontSize: "16px",
+                  color: "#700FA3",
+                  fontWeight: "600",
+                  fontFamily: "var(--font-montserrat), sans-serif",
+                }}
+              >
+                Ventajas Exclusivas
+              </span>
+            </div>
+            
+            <h2
+              className="text-4xl md:text-[42px] mb-6"
+              style={{
+                fontWeight: "bold",
+                lineHeight: "1.2",
+                color: "#48255A",
+                fontFamily: "var(--font-montserrat), sans-serif",
+              }}
+            >
+              Ventajas de formarse con nosotros
+            </h2>
+
+            <ul className="flex flex-col gap-5 w-full mb-8">
+              {[
+                { 
+                  title: "Experiencia Docente", 
+                  text: "Aprenda de instructores activos con amplia trayectoria en el ámbito forense y de seguridad." 
+                },
+                { 
+                  title: "Networking de Élite", 
+                  text: "Forme parte de una comunidad profesional de poligrafistas en toda la región." 
+                },
+                { 
+                  title: "Carrera de Futuro", 
+                  text: "Acceda a oportunidades laborales en agencias gubernamentales, inteligencia y seguridad corporativa privada." 
+                }
+              ].map((item, idx) => (
+                <li key={idx} className="flex items-start gap-4 py-1">
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center bg-[#700FA3] text-white shrink-0 mt-0.5 shadow-md">
+                    <svg className="w-5 h-5 text-[#FFC107]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3.5" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span 
+                    className="text-base text-[#525252] font-light leading-relaxed"
+                    style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                  >
+                    <strong className="font-bold text-[#48255A]">{item.title}: </strong>
+                    {item.text}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href="#contacto"
+              className="px-8 py-3.5 rounded transition-all hover:brightness-110 shadow-lg inline-block text-center cursor-pointer hover:scale-[1.02]"
+              style={{
+                fontFamily: "var(--font-montserrat), sans-serif",
+                lineHeight: "1",
+                fontSize: "14px",
+                fontWeight: "600",
+                color: "#5F0091",
+                backgroundColor: "#FFC107",
+                textDecoration: "none",
+                border: "none"
+              }}
+            >
+              <span>Solicitar Admisión e Información</span>
+            </a>
+
+          </div>
+        </div>
+      </section>
+
       {/* Banner de Matrículas Abiertas ("Llamado a la Acción") */}
       <section className="bg-white py-12">
-        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1100px] mx-auto px-8">
+        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1650px] mx-auto px-4 sm:px-6 lg:px-8">
           <div 
             className="relative rounded-3xl p-8 md:p-12 overflow-hidden shadow-2xl text-left border border-white/10"
             style={{

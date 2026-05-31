@@ -13,7 +13,7 @@ interface Article {
 const BlogCard = ({ article, className = "", isWide = false, cardRef }: { article: Article, className?: string, isWide?: boolean, cardRef?: (el: HTMLDivElement | null) => void }) => (
   <div 
     ref={cardRef}
-    className={`flex ${isWide ? 'flex-col md:flex-row' : 'flex-col'} bg-white border border-neutral-100 rounded-2xl overflow-hidden shadow-[0_4px_25px_rgba(0,0,0,0.04)] transition-transform duration-300 hover:-translate-y-1 group cursor-pointer ${className}`}
+    className={`blog-card flex ${isWide ? 'flex-col md:flex-row' : 'flex-col'} bg-white border border-neutral-100 rounded-2xl overflow-hidden shadow-[0_4px_25px_rgba(0,0,0,0.04)] transition-transform duration-300 hover:-translate-y-1 group cursor-pointer ${className}`}
     onClick={() => {
       if (typeof window !== "undefined") {
         window.location.href = article.link;
@@ -47,10 +47,10 @@ const BlogCard = ({ article, className = "", isWide = false, cardRef }: { articl
       <a
         href={article.link}
         aria-label={`Leer artículo completo: ${article.title}`}
-        className="px-4 py-2 bg-[#700FA3] text-[#FFC107] hover:bg-[#FFC107] hover:text-[#48255A] font-bold rounded transition-colors duration-300 text-xs whitespace-nowrap w-auto self-start flex items-center gap-1 uppercase"
+        className="blog-cta-btn px-4 py-2 bg-[#FFC107] text-[#411A56] font-bold rounded transition-colors duration-300 text-xs whitespace-nowrap w-auto self-start flex items-center justify-center gap-1"
         style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
       >
-        LEER MÁS 
+        Leer más 
         <svg 
           width="12" 
           height="12" 
@@ -117,45 +117,49 @@ export default function Resources() {
 
   return (
     <section id="recursos" className="bg-[#fcfafc] py-16 md:py-24 border-t border-neutral-100 scroll-mt-20">
+      <style dangerouslySetInnerHTML={{ __html: `
+        .blog-card:hover .blog-cta-btn {
+          background-color: #700FA3 !important;
+          color: #FFC107 !important;
+        }
+      `}} />
       <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
           
           {/* First Grid Item: Text & CTA */}
-          <div className="flex flex-col items-start text-left w-full h-full justify-between pb-4">
-            <div>
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-[3px] bg-[#700FA3]" />
-                <span
-                  className="text-sm sm:text-base md:text-[18px]"
-                  style={{
-                    letterSpacing: "0.5px",
-                    color: "#700FA3",
-                    fontWeight: "600",
-                    fontFamily: "var(--font-montserrat), sans-serif",
-                  }}
-                >
-                  Recursos
-                </span>
-              </div>
-              
-              <h2
-                className="text-2xl sm:text-3xl lg:text-[32px] mb-6 md:mb-12"
+          <div className="flex flex-col items-start justify-center text-left w-full h-full pb-4">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-[3px] bg-[#700FA3]" />
+              <span
+                className="text-sm sm:text-base md:text-[18px]"
                 style={{
-                  margin: 0,
-                  padding: 0,
-                  fontWeight: "bold",
-                  lineHeight: "1.25",
-                  color: "#48255A",
+                  letterSpacing: "0.5px",
+                  color: "#700FA3",
+                  fontWeight: "600",
                   fontFamily: "var(--font-montserrat), sans-serif",
                 }}
               >
-                Información de valor para evaluación forense de la credibilidad y gestión de riesgos
-              </h2>
+                Recursos
+              </span>
             </div>
+            
+            <h2
+              className="text-2xl sm:text-3xl lg:text-[32px]"
+              style={{
+                margin: 0,
+                padding: 0,
+                fontWeight: "bold",
+                lineHeight: "1.25",
+                color: "#48255A",
+                fontFamily: "var(--font-montserrat), sans-serif",
+              }}
+            >
+              Recursos de Valor y Blog
+            </h2>
             
             <button
               aria-label="Conocer más recursos y artículos del blog de One True"
-              className="px-6 py-3 bg-[#FFC107] text-[#411A56] font-bold rounded transition-colors duration-300 text-sm hover:bg-[#700FA3] hover:text-white"
+              className="px-6 py-3 bg-[#FFC107] text-[#411A56] font-bold rounded transition-colors duration-300 text-sm hover:bg-[#700FA3] hover:text-[#FFC107] mt-8"
               style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
             >
               Conoce más

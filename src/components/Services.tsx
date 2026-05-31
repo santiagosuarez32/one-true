@@ -102,6 +102,12 @@ export default function Services() {
 
   return (
     <section id="services" className="bg-[#fcfafc] pt-10 pb-24">
+      <style dangerouslySetInnerHTML={{ __html: `
+        .service-card:hover .service-cta-btn {
+          background-color: #700FA3 !important;
+          color: #FFC107 !important;
+        }
+      `}} />
       <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1650px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Centered Header Section */}
@@ -161,7 +167,7 @@ export default function Services() {
                   window.location.href = item.href;
                 }
               }}
-              className="relative group flex flex-col bg-white border border-neutral-100 rounded-2xl overflow-hidden shadow-[0_4px_25px_rgba(0,0,0,0.02)] transition-all duration-500 cursor-pointer scroll-mt-28"
+              className="service-card relative group flex flex-col bg-white border border-neutral-100 rounded-2xl overflow-hidden shadow-[0_4px_25px_rgba(0,0,0,0.02)] transition-all duration-500 cursor-pointer scroll-mt-28"
             >
               {/* Efecto de resplandor morado que sigue al cursor */}
               <div 
@@ -208,7 +214,7 @@ export default function Services() {
                 <a
                   href={item.href}
                   aria-label={`${item.cta} para ${item.title}`}
-                  className="px-4 py-2 bg-[#FFC107] text-[#411A56] font-bold rounded transition-colors duration-300 text-xs whitespace-nowrap w-auto self-start mt-auto group-hover:bg-[#700FA3] group-hover:text-white flex items-center justify-center"
+                  className="service-cta-btn px-4 py-2 bg-[#FFC107] text-[#411A56] font-bold rounded transition-colors duration-300 text-xs whitespace-nowrap w-auto self-start mt-auto group-hover:bg-[#700FA3] group-hover:text-[#FFC107] flex items-center justify-center"
                   style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                 >
                   {item.cta}
