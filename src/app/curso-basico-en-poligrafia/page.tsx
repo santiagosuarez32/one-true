@@ -1,69 +1,12 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import Resources from "@/components/Resources";
-import Podcast from "@/components/Podcast";
-import Ebook from "@/components/Ebook";
-import { Monitor, Brain, Fingerprint, Globe, Chalkboard, UsersThree, Briefcase, UserFocus, Devices, BookOpen, Certificate } from "@phosphor-icons/react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-}
-
-const OTRAS_SOLUCIONES = [
-  {
-    title: "Pruebas de Polígrafo Profesionales",
-    desc: "Certeza técnica forense con un 95% de exactitud. Validamos la integridad en procesos de selección, monitoreo preventivo y esclarecimiento de incidentes internos.",
-    image: "/servicios/1.webp",
-    cta: "Ver detalles del servicio",
-    href: "/pruebas-poligraficas"
-  },
-  {
-    title: "Vetting (Verificación de Antecedentes)",
-    desc: "Proteja la integridad de su empresa desde el primer día. Filtramos riesgos mediante el rastreo exhaustivo en más de 190 bases de datos nacionales e internacionales.",
-    image: "/servicios/2.webp",
-    cta: "Ver detalles del servicio",
-    href: "/vetting"
-  },
-  {
-    title: "Estudio de Confiabilidad 360°",
-    desc: "Confirmamos la honestidad y estabilidad de sus candidatos. Validamos trayectorias (laborales y académicas) y realizamos un análisis profundo de salud financiera.",
-    image: "/servicios/3.webp",
-    cta: "Ver detalles del servicio",
-    href: "/estudio-de-confiabilidad-360"
-  }
-];
+import { Monitor, Brain, Fingerprint, Globe, UserFocus, Devices, BookOpen, Certificate } from "@phosphor-icons/react";
 
 export default function CursoBasicoPoligrafiaPage() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const timelineRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(
-    () => {
-      if (!containerRef.current) return;
-      
-      gsap.from(".solucion-card", {
-        opacity: 0,
-        y: 40,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-      });
-    },
-    { scope: containerRef }
-  );
-
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [country, setCountry] = useState("ec");
 
@@ -353,11 +296,11 @@ export default function CursoBasicoPoligrafiaPage() {
         </div>
       </section>
 
-      {/* Sección: Ventajas de formarse con nosotros (Estilo Vetting con imágenes superpuestas) */}
-      <section className="bg-white py-20 overflow-hidden relative">
+      {/* Sección: Ventajas de formarse con nosotros (Estilo Beneficios Vetting) */}
+      <section className="bg-white py-12 md:py-16 overflow-hidden relative">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#700FA3]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
         
-        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1650px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12 lg:gap-20 relative z-10">
+        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16 flex flex-col lg:flex-row items-center gap-8 lg:gap-12 relative z-10">
           
           {/* Left Column: Images */}
           <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-start">
@@ -390,7 +333,7 @@ export default function CursoBasicoPoligrafiaPage() {
           </div>
 
           {/* Right Column: Content */}
-          <div className="w-full lg:w-1/2 flex flex-col items-start lg:pl-10 text-left">
+          <div className="w-full lg:w-1/2 flex flex-col items-start lg:pl-10">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-[2px] bg-[#700FA3]" />
               <span
@@ -418,7 +361,7 @@ export default function CursoBasicoPoligrafiaPage() {
               Ventajas de formarse con nosotros
             </h2>
 
-            <ul className="flex flex-col gap-5 w-full mb-8">
+            <ul className="flex flex-col gap-3 w-full mb-6">
               {[
                 { 
                   title: "Experiencia Docente", 
@@ -433,14 +376,14 @@ export default function CursoBasicoPoligrafiaPage() {
                   text: "Acceda a oportunidades laborales en agencias gubernamentales, inteligencia y seguridad corporativa privada." 
                 }
               ].map((item, idx) => (
-                <li key={idx} className="flex items-start gap-4 py-1">
-                  <div className="w-8 h-8 rounded-full flex items-center justify-center bg-[#700FA3] text-white shrink-0 mt-0.5 shadow-md">
-                    <svg className="w-5 h-5 text-[#FFC107]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3.5" d="M5 13l4 4L19 7" />
+                <li key={idx} className="flex items-start gap-3 py-1">
+                  <div className="w-6 h-6 rounded flex items-center justify-center bg-[#700FA3] text-white shrink-0 mt-0.5 shadow-md">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
                   <span 
-                    className="text-base text-[#525252] font-light leading-relaxed"
+                    className="text-base text-[#525252] font-medium leading-relaxed"
                     style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                   >
                     <strong className="font-bold text-[#48255A]">{item.title}: </strong>
@@ -452,7 +395,7 @@ export default function CursoBasicoPoligrafiaPage() {
 
             <a
               href="#contacto"
-              className="px-8 py-3.5 rounded transition-all hover:brightness-110 shadow-lg inline-block text-center cursor-pointer hover:scale-[1.02]"
+              className="px-8 py-3 rounded transition-all hover:brightness-110 shadow-lg inline-block text-center cursor-pointer"
               style={{
                 fontFamily: "var(--font-montserrat), sans-serif",
                 lineHeight: "1",
@@ -471,54 +414,10 @@ export default function CursoBasicoPoligrafiaPage() {
         </div>
       </section>
 
-      {/* Banner de Matrículas Abiertas ("Llamado a la Acción") */}
-      <section className="bg-white py-12">
-        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1650px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div 
-            className="relative rounded-3xl p-8 md:p-12 overflow-hidden shadow-2xl text-left border border-white/10"
-            style={{
-              backgroundImage: "linear-gradient(135deg, #700FA3 40%, #8A15C4 100%)",
-            }}
-          >
-            {/* Background glow effects */}
-            <div className="absolute -top-1/2 -right-1/4 w-[400px] h-[400px] rounded-full bg-[#FFC107]/10 blur-[80px] pointer-events-none" />
-            <div className="absolute -bottom-1/2 -left-1/4 w-[300px] h-[300px] rounded-full bg-white/5 blur-[60px] pointer-events-none" />
-
-            <div className="relative z-10 max-w-2xl">
-              <span 
-                className="text-xs font-bold text-[#FFC107] uppercase tracking-widest mb-3 block"
-                style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-              >
-                ¡INSCRIPCIONES ABIERTAS PERIODO ACTUAL!
-              </span>
-              <h2 
-                className="text-2xl sm:text-3xl md:text-4xl text-white font-extrabold mb-4 leading-tight"
-                style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-              >
-                Inicie su Especialidad Forense
-              </h2>
-              <p 
-                className="text-white/80 text-sm md:text-base font-light leading-relaxed mb-6"
-                style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-              >
-                Financiamiento directo sin intereses y facilidades de pago para matrículas anticipadas. Consulte por nuestro plan de becas institucionales.
-              </p>
-              <a 
-                href="#contacto"
-                className="px-6 py-3 bg-[#FFC107] text-[#411A56] font-bold rounded-xl hover:bg-[#FFD54F] transition-colors text-sm inline-block shadow-md"
-                style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-              >
-                Reservar mi cupo o consultar becas
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── FORMULARIO DE ADMISIÓN (Diseñado en 2 Columnas de Estilo Institucional) ── */}
+      {/* ── FORMULARIO DE CONTACTO (Estilo Vetting) ── */}
       <section 
         id="contacto" 
-        className="py-20 relative overflow-hidden"
+        className="py-12 md:py-16 relative overflow-hidden"
         style={{
           backgroundImage: "linear-gradient(60deg, #700FA3 50%, #8A15C4 90%)",
           fontFamily: "var(--font-montserrat), sans-serif"
@@ -529,89 +428,216 @@ export default function CursoBasicoPoligrafiaPage() {
         <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full bg-[#FFC107]/5 blur-[120px] pointer-events-none" />
 
         <div className="max-w-6xl lg:max-w-7xl xl:max-w-[1200px] mx-auto px-6 md:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center text-left">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             
-            {/* LADO IZQUIERDO: Información Académica e Institucional */}
-            <div className="lg:col-span-5 flex flex-col">
-              <div className="mb-6 flex justify-start">
-                <img src="/FORM.webp" alt="One True Academia Logo" loading="lazy" className="h-16 w-auto object-contain" />
+            {/* LADO IZQUIERDO: Información Comercial */}
+            <div className="lg:col-span-6 flex flex-col text-left">
+              {/* Logo de One True */}
+              <div className="mb-4 flex justify-start">
+                <img src="/FORM.webp" alt="One True Logo" loading="lazy" className="h-20 md:h-24 w-auto object-contain" />
               </div>
 
-              <span 
-                className="text-xs font-bold text-[#FFC107] uppercase tracking-widest mb-2"
-                style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-              >
-                DEPARTAMENTO DE ADMISIONES
-              </span>
               <h2
                 style={{
-                  fontSize: "36px",
+                  fontSize: "32px",
                   fontWeight: "bold",
-                  lineHeight: "44px",
+                  lineHeight: "40px",
                   color: "#ffffff",
                   fontFamily: "var(--font-montserrat), sans-serif",
-                  marginTop: "5px",
-                  marginBottom: "24px"
+                  marginTop: "10px",
+                  marginBottom: "20px"
                 }}
               >
-                Inscripciones
+                Contactos
               </h2>
 
-              <p 
-                className="text-white/80 text-sm md:text-base font-light leading-relaxed mb-8"
-                style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-              >
-                Rellene el formulario de pre-inscripción académica. Un asesor de admisiones le contactará en menos de 24 horas laborables para agendar su entrevista y enviarle el programa completo de la formación.
-              </p>
-
               {/* Items List */}
-              <div className="flex flex-col gap-6 border-t border-white/10 pt-8 w-full">
+              <div className="flex flex-col gap-5">
                 {/* 1. Teléfono */}
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white shrink-0">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.387a12.035 12.035 0 01-7.108-7.108c-.155-.44.011-.928.387-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-                    </svg>
-                  </div>
+                <div className="flex items-start gap-5">
+                  <svg className="w-8 h-8 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.387a12.035 12.035 0 01-7.108-7.108c-.155-.44.011-.928.387-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                  </svg>
                   <div className="flex flex-col">
-                    <span className="text-[10px] font-bold text-white/60 tracking-wider uppercase">Llamada Directa</span>
-                    <a href="tel:0981296179" className="text-white hover:text-[#FFC107] font-bold text-base transition-colors" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                    <h3 
+                      style={{ 
+                        fontSize: "18px", 
+                        fontWeight: "bold", 
+                        color: "#ffffff", 
+                        fontFamily: "var(--font-montserrat), sans-serif",
+                        marginBottom: "4px"
+                      }}
+                    >
+                      Teléfono
+                    </h3>
+                    <a 
+                      href="tel:0981296179" 
+                      style={{ 
+                        color: "rgba(255, 255, 255, 0.85)", 
+                        fontSize: "16px", 
+                        fontWeight: "300", 
+                        fontFamily: "var(--font-montserrat), sans-serif" 
+                      }}
+                      className="hover:text-[#FFC107] transition-colors"
+                    >
                       098 129 6179
                     </a>
                   </div>
                 </div>
 
-                {/* 2. Correo */}
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white shrink-0">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-                    </svg>
-                  </div>
+                {/* 2. Agencia Quito */}
+                <div className="flex items-start gap-5">
+                  <svg className="w-8 h-8 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75m3-3h.75m-.75 3h.75m-6 3h.75m3 0h.75m3 0h.75" />
+                  </svg>
                   <div className="flex flex-col">
-                    <span className="text-[10px] font-bold text-white/60 tracking-wider uppercase">Email Académico</span>
-                    <a href="mailto:info@somosonetrue.com" className="text-white hover:text-[#FFC107] font-bold text-base transition-colors" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                    <h3 
+                      style={{ 
+                        fontSize: "18px", 
+                        fontWeight: "bold", 
+                        color: "#ffffff", 
+                        fontFamily: "var(--font-montserrat), sans-serif",
+                        marginBottom: "4px"
+                      }}
+                    >
+                      Agencia Quito
+                    </h3>
+                    <p 
+                      style={{ 
+                        color: "rgba(255, 255, 255, 0.85)", 
+                        fontSize: "15px", 
+                        fontWeight: "300", 
+                        fontFamily: "var(--font-montserrat), sans-serif",
+                        lineHeight: "1.4"
+                      }}
+                    >
+                      Av. Pérez Guerreo OE3-124 y San Gregorio, Instituto de Diagnóstico Médico, tercer piso, oficina #303, Quito-Ecuador.
+                    </p>
+                  </div>
+                </div>
+
+                {/* 3. Agencia Guayaquil */}
+                <div className="flex items-start gap-5">
+                  <svg className="w-8 h-8 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                  </svg>
+                  <div className="flex flex-col">
+                    <h3 
+                      style={{ 
+                        fontSize: "18px", 
+                        fontWeight: "bold", 
+                        color: "#ffffff", 
+                        fontFamily: "var(--font-montserrat), sans-serif",
+                        marginBottom: "4px"
+                      }}
+                    >
+                      Agencia Guayaquil
+                    </h3>
+                    <p 
+                      style={{ 
+                        color: "rgba(255, 255, 255, 0.85)", 
+                        fontSize: "15px", 
+                        fontWeight: "300", 
+                        fontFamily: "var(--font-montserrat), sans-serif",
+                        lineHeight: "1.4"
+                      }}
+                    >
+                      Solar 26, Mz. 1022, Las Orquídeas, entre lavandería Perfect Wash y Dash Óptica.
+                    </p>
+                  </div>
+                </div>
+
+                {/* 4. Correo */}
+                <div className="flex items-start gap-5">
+                  <svg className="w-8 h-8 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                  </svg>
+                  <div className="flex flex-col">
+                    <h3 
+                      style={{ 
+                        fontSize: "18px", 
+                        fontWeight: "bold", 
+                        color: "#ffffff", 
+                        fontFamily: "var(--font-montserrat), sans-serif",
+                        marginBottom: "4px"
+                      }}
+                    >
+                      Correo
+                    </h3>
+                    <a 
+                      href="mailto:info@somosonetrue.com" 
+                      style={{ 
+                        color: "rgba(255, 255, 255, 0.85)", 
+                        fontSize: "16px", 
+                        fontWeight: "300", 
+                        fontFamily: "var(--font-montserrat), sans-serif" 
+                      }}
+                      className="hover:text-[#FFC107] transition-colors"
+                    >
                       info@somosonetrue.com
                     </a>
                   </div>
                 </div>
               </div>
+
+              {/* Redes Sociales y Síguenos */}
+              <div className="flex flex-col items-start gap-3 mt-6 pt-4 border-t border-white/10 w-full">
+                <h3 
+                  style={{ 
+                    fontSize: "18px", 
+                    fontWeight: "bold", 
+                    color: "#ffffff", 
+                    fontFamily: "var(--font-montserrat), sans-serif",
+                    marginBottom: "4px"
+                  }}
+                >
+                  Síguenos:
+                </h3>
+                <div className="flex items-center gap-3">
+                  <a 
+                    href="https://www.facebook.com/somosonetrue" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Síguenos en Facebook"
+                    className="w-10 h-10 bg-white rounded-full hover:scale-110 transition-all duration-300 flex items-center justify-center text-[#700FA3] shadow-md hover:shadow-lg"
+                  >
+                    <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                      <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+                    </svg>
+                  </a>
+                  <a 
+                    href="https://www.instagram.com/somosonetrue" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Síguenos en Instagram"
+                    className="w-10 h-10 bg-white rounded-full hover:scale-110 transition-all duration-300 flex items-center justify-center text-[#700FA3] shadow-md hover:shadow-lg"
+                  >
+                    <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                  </a>
+                  <a 
+                    href="https://www.linkedin.com/company/somosonetrue" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Síguenos en LinkedIn"
+                    className="w-10 h-10 bg-white rounded-full hover:scale-110 transition-all duration-300 flex items-center justify-center text-[#700FA3] shadow-md hover:shadow-lg"
+                  >
+                    <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
 
-            {/* LADO DERECHO: Tarjeta de Registro del Estudiante */}
-            <div className="lg:col-span-7">
+            {/* LADO DERECHO: Tarjeta de Formulario */}
+            <div className="lg:col-span-6 relative">
               <div className="bg-white rounded p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.35)] border border-neutral-100 relative overflow-hidden transition-all duration-500">
                 
                 {!formSubmitted ? (
-                  /* FORMULARIO ACTIVO */
                   <div>
-                    <h3 
-                      className="text-2xl font-black text-[#48255A] mb-6 text-left"
-                      style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                    >
-                      Pre-Inscripción al Programa
-                    </h3>
-
                     <form 
                       onSubmit={(e) => {
                         e.preventDefault();
@@ -619,13 +645,12 @@ export default function CursoBasicoPoligrafiaPage() {
                       }}
                       className="flex flex-col gap-3"
                     >
-                      {/* Fila 1: Nombre y Apellido */}
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                         <div className="flex flex-col gap-1">
                           <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Nombre *</label>
                           <input 
                             type="text" 
-                            placeholder="Nombre del estudiante" 
+                            placeholder="Tu nombre" 
                             className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                             required 
@@ -635,7 +660,7 @@ export default function CursoBasicoPoligrafiaPage() {
                           <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Apellido *</label>
                           <input 
                             type="text" 
-                            placeholder="Apellido del estudiante" 
+                            placeholder="Tu apellido" 
                             className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                             required 
@@ -643,13 +668,12 @@ export default function CursoBasicoPoligrafiaPage() {
                         </div>
                       </div>
 
-                      {/* Correo electrónico */}
                       <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Correo electrónico *</label>
                         <div className="relative">
                           <input 
                             type="email" 
-                            placeholder="correo@ejemplo.com" 
+                            placeholder="correo@empresa.com" 
                             className="px-4 py-2.5 pr-10 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                             required 
@@ -663,7 +687,6 @@ export default function CursoBasicoPoligrafiaPage() {
                         </div>
                       </div>
 
-                      {/* Teléfono con Selector Bandera */}
                       <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Número de teléfono *</label>
                         <div className="relative flex items-center border-0 rounded bg-neutral-50 focus-within:ring-2 focus-within:ring-[#700FA3]/20 focus-within:bg-white focus-within:shadow-md transition-all overflow-hidden">
@@ -710,23 +733,21 @@ export default function CursoBasicoPoligrafiaPage() {
                         </div>
                       </div>
 
-                      {/* Ciudad */}
                       <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Ciudad *</label>
                         <input 
                           type="text" 
-                          placeholder="Ciudad de residencia" 
+                          placeholder="Tu ciudad" 
                           className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                           style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                           required 
                         />
                       </div>
 
-                      {/* Mensaje */}
                       <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Mensaje *</label>
                         <textarea 
-                          placeholder="Indícanos tu perfil académico y tus preguntas sobre requisitos, fechas y opciones de financiamiento..." 
+                          placeholder="Escribe tu mensaje aquí..." 
                           rows={2} 
                           className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium resize-none" 
                           style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
@@ -734,47 +755,38 @@ export default function CursoBasicoPoligrafiaPage() {
                         ></textarea>
                       </div>
 
-                      {/* Cláusula de Aceptación */}
                       <div className="flex flex-col gap-4 mt-2">
                         <p className="text-[11px] text-neutral-500 leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                           Al enviar este formulario, acepto que mis datos personales sean tratados de acuerdo con la{" "}
-                          <a 
-                            href="#" 
-                            className="text-[#700FA3] hover:underline font-bold"
-                          >
+                          <a href="#" className="text-[#700FA3] hover:underline font-bold">
                             Política de tratamiento de datos personales
                           </a>{" "}
                           y los{" "}
-                          <a 
-                            href="#" 
-                            className="text-[#700FA3] hover:underline font-bold"
-                          >
+                          <a href="#" className="text-[#700FA3] hover:underline font-bold">
                             términos establecidos en ella
                           </a>.
                         </p>
                         <div className="flex items-center gap-3">
                           <input 
                             type="checkbox" 
-                            id="aceptar" 
+                            id="aceptar-curso" 
                             className="w-4 h-4 rounded border-neutral-300 text-[#700FA3] focus:ring-[#700FA3] cursor-pointer" 
                             required 
                           />
-                          <label htmlFor="aceptar" className="text-xs font-bold text-neutral-700 cursor-pointer select-none" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                          <label htmlFor="aceptar-curso" className="text-xs font-bold text-neutral-700 cursor-pointer select-none" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                             Aceptar
                           </label>
                         </div>
                       </div>
 
-                      {/* Botón de Envío */}
                       <button
                         type="submit"
                         className="mt-2 px-8 py-3.5 bg-[#700FA3] hover:bg-[#5C0B87] text-white font-bold rounded transition-all duration-300 w-full shadow-lg shadow-[#700FA3]/25 hover:scale-[1.01] active:scale-[0.99] text-base"
                         style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                       >
-                        Enviar Inscripción Académica
+                        Cotizar ahora
                       </button>
 
-                      {/* WhatsApp Callout */}
                       <div className="flex flex-col items-center gap-1.5 mt-5 pt-4 border-t border-neutral-100 w-full">
                         <span 
                           style={{ 
@@ -784,7 +796,7 @@ export default function CursoBasicoPoligrafiaPage() {
                             color: "#48255A"
                           }}
                         >
-                          Conversar con un asesor de admisiones
+                          O escríbenos
                         </span>
                         <div className="elementor-button-wrapper flex justify-center w-auto mt-1">
                           <a 
@@ -819,7 +831,6 @@ export default function CursoBasicoPoligrafiaPage() {
                     </form>
                   </div>
                 ) : (
-                  /* PANTALLA DE ÉXITO */
                   <div className="flex flex-col items-center text-center py-10">
                     <div className="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mb-6 animate-bounce">
                       <svg className="w-10 h-10 text-green-500" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -828,11 +839,11 @@ export default function CursoBasicoPoligrafiaPage() {
                     </div>
 
                     <h3 className="text-3xl font-extrabold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                      ¡Pre-Inscripción Recibida!
+                      ¡Cotización Solicitada!
                     </h3>
 
                     <p className="text-neutral-500 text-sm font-light max-w-sm mb-8 leading-relaxed" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                      Muchas gracias por interesarse en nuestra academia. Tu mensaje ha sido recibido con éxito. Un coordinador de admisiones de **One True** se comunicará contigo lo antes posible para entregarte el plan de estudios completo, fechas de inicio y detalles de matrícula.
+                      Muchas gracias por ponerte en contacto con nosotros. Tu mensaje ha sido recibido con éxito. Un representante de **One True** se comunicará contigo lo antes posible para darte información personalizada.
                     </p>
 
                     <button
@@ -844,88 +855,10 @@ export default function CursoBasicoPoligrafiaPage() {
                     </button>
                   </div>
                 )}
+
               </div>
             </div>
 
-          </div>
-        </div>
-      </section>
-
-      {/* Otras soluciones */}
-      <section ref={containerRef} className="py-20 bg-white">
-        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16">
-          <div className="flex flex-col items-center text-center mb-16">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-[3px] bg-[#700FA3]" />
-              <span
-                style={{
-                  letterSpacing: "0.5px",
-                  fontSize: "18px",
-                  color: "#700FA3",
-                  fontWeight: "600",
-                  fontFamily: "var(--font-montserrat), sans-serif",
-                }}
-              >
-                Nuestras Soluciones Corporativas
-              </span>
-            </div>
-            
-            <h2
-              style={{
-                fontSize: "36px",
-                fontWeight: "bold",
-                lineHeight: "46px",
-                color: "#48255A",
-                fontFamily: "var(--font-montserrat), sans-serif",
-                marginTop: "10px"
-              }}
-            >
-              Otros Servicios de One True
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {OTRAS_SOLUCIONES.map((solucion, index) => (
-              <div 
-                key={index} 
-                className="solucion-card flex flex-col bg-white border border-neutral-100 rounded-3xl overflow-hidden shadow-[0_4px_25px_rgba(0,0,0,0.02)] hover:shadow-lg transition-all duration-300 cursor-pointer"
-                onClick={() => {
-                  if (typeof window !== "undefined") {
-                    window.location.href = solucion.href;
-                  }
-                }}
-              >
-                <div className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-100">
-                  <img
-                    src={solucion.image}
-                    alt={solucion.title}
-                    className="w-full h-full object-cover transition-all duration-500 hover:scale-105"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="p-6 flex flex-col flex-1">
-                  <h3 
-                    className="text-lg font-bold mb-3 text-[#48255A]"
-                    style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}
-                  >
-                    {solucion.title}
-                  </h3>
-                  <p 
-                    className="text-[#525252] text-sm leading-relaxed mb-6 font-light flex-1"
-                    style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                  >
-                    {solucion.desc}
-                  </p>
-                  <a
-                    href={solucion.href}
-                    className="px-4 py-2 bg-[#FFC107] text-[#411A56] font-bold rounded text-xs self-start"
-                    style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                  >
-                    {solucion.cta}
-                  </a>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
