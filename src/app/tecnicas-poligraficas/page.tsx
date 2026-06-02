@@ -52,7 +52,7 @@ const focusAreas = [
 
 
 
-export default function EntrevistaPretestPage() {
+export default function TecnicasPoligraficasPage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [country, setCountry] = useState("ec");
 
@@ -70,8 +70,8 @@ export default function EntrevistaPretestPage() {
         />
 
         <img
-          src="/pruebas-poligrafo/primer.webp"
-          alt="Entrevista Pretest en Poligrafía - One True Academia"
+          src="/servicios/1.webp"
+          alt="Técnicas Poligráficas - One True Academia"
           fetchPriority="high"
           className="absolute inset-0 w-full h-full object-cover object-right-top z-0 opacity-40 mix-blend-overlay pointer-events-none"
         />
@@ -89,7 +89,7 @@ export default function EntrevistaPretestPage() {
                   fontFamily: "var(--font-montserrat), sans-serif",
                 }}
               >
-                Especialización avanzada para poligrafistas certificados.
+                Domine los protocolos estándar con base en evidencia científica.
               </span>
             </div>
 
@@ -104,7 +104,7 @@ export default function EntrevistaPretestPage() {
                 textShadow: "0 2px 4px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.18)",
               }}
             >
-              Curso Avanzado: <strong style={{ fontWeight: "800", textDecoration: "underline", textDecorationColor: "#FFC107", textUnderlineOffset: "6px" }}>Entrevista Pretest</strong>
+              Curso Avanzado: <strong style={{ fontWeight: "800", textDecoration: "underline", textDecorationColor: "#FFC107", textUnderlineOffset: "6px" }}>Técnicas Poligráficas</strong>
             </h1>
 
             <p
@@ -115,10 +115,7 @@ export default function EntrevistaPretestPage() {
                 color: "#FFFFFF",
               }}
             >
-              ¿Buscas perfeccionar tu técnica de entrevista pretest y dominar una de las la fases más críticas del examen poligráfico?
-              <br />
-              <br />
-              Esta formación especializada está diseñada para llevar tus habilidades al siguiente nivel.
+              ¿Quiere asegurar que sus evaluaciones cumplan con los más altos estándares de validez? En el campo de la poligrafía, la correcta administración y calificación de la técnica es lo que separa a un examinador promedio de un experto forense. Esta formación especializada profundiza en los formatos validados más utilizados globalmente.
             </p>
 
             <div className="flex flex-wrap items-center gap-6 mt-6 mb-8">
@@ -185,7 +182,7 @@ export default function EntrevistaPretestPage() {
                   className="text-[#525252] text-[15px] leading-[26px] font-light"
                   style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                 >
-                  Profundice en los estándares, principios y procesos metodológicos que sostienen una entrevista pretest clara, técnica y alineada al tipo de evaluación poligráfica.
+                  Profundice en los protocolos comparativos, de conocimiento y de screening bajo estándares APA.
                 </p>
               </div>
             </div>

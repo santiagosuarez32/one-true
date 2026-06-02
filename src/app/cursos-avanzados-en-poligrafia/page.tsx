@@ -16,6 +16,7 @@ const MODULOS_AVANZADOS = [
     title: "Técnicas Poligráficas",
     desc: "Dominio de protocolos comparativos, de conocimiento y de screening bajo estándares APA. Aplicación de técnicas especializadas en distintos contextos periciales y operativos.",
     image: "/servicios/1.webp",
+    href: "/tecnicas-poligraficas",
   },
   {
     title: "Calificación de Gráficas - Análisis de Datos",
