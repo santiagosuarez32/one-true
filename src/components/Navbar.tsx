@@ -63,7 +63,7 @@ export default function Navbar() {
   ];
 
   const aprendeList = [
-    { label: "Blog", href: "/#recursos" },
+    { label: "Blog", href: "/blog" },
     { label: "Podcast", href: "/#podcast" },
     { label: "Ebook", href: "/#ebook" }
   ];
