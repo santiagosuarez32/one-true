@@ -226,7 +226,7 @@ export default function PodcastPage() {
             {/* Left content */}
             <div className="flex flex-col justify-between h-full">
               {/* Logo at top */}
-              <div className="mt-8">
+              <div className="mt-16">
                 <img
                   src="/logo-podcast.png"
                   alt="DETECTAR Podcast Logo"
