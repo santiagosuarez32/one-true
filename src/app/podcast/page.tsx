@@ -222,7 +222,7 @@ export default function PodcastPage() {
         <div className="absolute inset-0 bg-black/50"></div>
 
         <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-8 md:px-12 py-20" ref={heroRef}>
-          <div className="max-w-2xl">
+          <div className="max-w-2xl bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
             {/* Left content */}
             <div className="flex flex-col justify-between h-full">
               {/* Logo at top */}
