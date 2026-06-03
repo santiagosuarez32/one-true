@@ -228,9 +228,9 @@ export default function PodcastPage() {
               {/* Logo */}
               <div className="mb-12">
                 <img
-                  src="/logo-podcast.png"
+                  src="/podcast-logo.png"
                   alt="DETECTAR Podcast Logo"
-                  className="h-32 md:h-40 w-auto object-contain"
+                  className="h-48 md:h-64 w-auto object-contain"
                 />
               </div>
 
