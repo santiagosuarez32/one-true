@@ -215,43 +215,11 @@ export default function PodcastPage() {
 
       {/* Hero Section */}
       <section
-        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#700FA3] bg-cover bg-center"
+        className="relative min-h-screen flex flex-col items-center justify-end overflow-hidden bg-cover bg-center"
         style={{ backgroundImage: "url('/blog/podcast-hero.png')" }}
       >
-        {/* Background overlay */}
-        <div className="absolute inset-0 bg-[#700FA3]/70"></div>
-        {/* Background decorative elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#FFC107]/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3" />
-
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-8 md:px-12 items-center" ref={heroRef}>
-          {/* Content */}
-          <div className="flex flex-col justify-center">
-            {/* Title with styled boxes */}
-            <div className="mb-8 flex flex-col gap-2">
-              <div className="flex items-center gap-2 flex-wrap">
-                <div className="bg-white/20 text-white px-4 py-2 rounded-full text-2xl md:text-3xl font-bold backdrop-blur-sm" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                  ¿Cómo
-                </div>
-              </div>
-              <div className="flex items-center gap-2 flex-wrap">
-                <div className="bg-[#FFC107] text-[#411A56] px-6 py-3 rounded-full text-4xl md:text-5xl font-bold" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                  FUNCIONA
-                </div>
-              </div>
-              <div className="flex items-center gap-2 flex-wrap">
-                <div className="bg-white/20 text-white px-4 py-2 rounded-full text-2xl md:text-3xl font-bold backdrop-blur-sm" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                  tu
-                </div>
-                <div className="bg-[#FFC107] text-[#411A56] px-6 py-3 rounded-full text-4xl md:text-5xl font-bold" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                  NEGOCIO?
-                </div>
-              </div>
-              <div className="text-white text-xl md:text-2xl font-bold mt-4" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                con <span className="text-[#FFC107]">DAVID COLI</span>
-              </div>
-            </div>
-
+        <div className="relative z-10 w-full h-full flex flex-col justify-end px-4 sm:px-8 md:px-12 pb-12" ref={heroRef}>
+          <div className="max-w-4xl mx-auto w-full">
             {/* Description */}
             <p
               className="text-base md:text-lg leading-relaxed mb-6"
@@ -261,7 +229,7 @@ export default function PodcastPage() {
             </p>
 
             <p
-              className="text-base md:text-lg leading-relaxed mb-8"
+              className="text-base md:text-lg leading-relaxed mb-12"
               style={{ fontFamily: "var(--font-montserrat), sans-serif", color: "#FFFFFF" }}
             >
               Disfruta todos los episodios y descubre el maravilloso mundo de la evaluación forense de la credibilidad y la detección de mentiras. Escucha todos los capítulos de la primera temporada en Spotify.
@@ -277,7 +245,6 @@ export default function PodcastPage() {
               </a>
             </div>
           </div>
-
         </div>
       </section>
 
