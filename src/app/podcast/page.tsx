@@ -236,11 +236,6 @@ export default function PodcastPage() {
 
               {/* Content at bottom */}
               <div>
-                {/* Presenter */}
-                <p className="text-white text-xl md:text-2xl font-bold mb-8" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                  con <span className="text-[#FFC107]">DAVID COLI</span>
-                </p>
-
                 {/* Description */}
                 <p
                   className="text-base md:text-lg leading-relaxed mb-6"
