@@ -215,37 +215,78 @@ export default function PodcastPage() {
 
       {/* Hero Section */}
       <section
-        className="relative min-h-screen flex flex-col items-center justify-end overflow-hidden bg-cover bg-center"
-        style={{ backgroundImage: "url('/blog/podcast-hero.png')" }}
+        className="relative min-h-screen flex items-center overflow-hidden"
+        style={{ backgroundImage: "url('/blog/podcast-hero.png')", backgroundSize: "cover", backgroundPosition: "center" }}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
 
-        <div className="relative z-10 w-full h-full flex flex-col justify-end items-center px-4 sm:px-8 md:px-12 pb-20" ref={heroRef}>
-          <div className="max-w-3xl w-full text-center">
-            {/* Description */}
-            <p
-              className="text-lg md:text-xl leading-relaxed mb-6"
-              style={{ fontFamily: "var(--font-montserrat), sans-serif", color: "#FFFFFF", fontWeight: "900" }}
-            >
-              Este podcast auspiciado por ONE TRUE y creado por nuestro gerente general David Coli, tiene la intención de pensar, aprender juntos, resolver dudas y tener nuevas respuestas ante el maravilloso mundo de la detección de mentiras.
-            </p>
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-8 md:px-12 py-20" ref={heroRef}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            {/* Left content */}
+            <div className="flex flex-col justify-center">
+              {/* Title with styled boxes */}
+              <div className="mb-8 flex flex-col gap-3">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <div className="bg-[#700FA3] text-white px-4 py-2 rounded-full text-2xl md:text-3xl font-black" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                    ¿Cómo
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 flex-wrap">
+                  <div className="bg-[#FFC107] text-[#411A56] px-6 py-3 rounded-full text-4xl md:text-5xl font-black" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                    FUNCIONA
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 flex-wrap">
+                  <div className="bg-cyan-400 text-white px-4 py-2 rounded-full text-2xl md:text-3xl font-black" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                    tu
+                  </div>
+                  <div className="bg-[#A855F7] text-white px-6 py-3 rounded-full text-4xl md:text-5xl font-black" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                    NEGOCIO?
+                  </div>
+                </div>
+              </div>
 
-            <p
-              className="text-lg md:text-xl leading-relaxed mb-12"
-              style={{ fontFamily: "var(--font-montserrat), sans-serif", color: "#FFFFFF", fontWeight: "900" }}
-            >
-              Disfruta todos los episodios y descubre el maravilloso mundo de la evaluación forense de la credibilidad y la detección de mentiras. Escucha todos los capítulos de la primera temporada en Spotify.
-            </p>
+              {/* Presenter */}
+              <p className="text-white text-xl md:text-2xl font-bold mb-8" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                con <span className="text-[#FFC107]">DAVID COLI</span>
+              </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-              <a href="#" className="px-8 py-3 bg-[#FFC107] text-[#411A56] font-bold rounded hover:shadow-lg transition-all duration-300 hover:scale-105 text-center" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                Ir a Spotify
-              </a>
-              <a href="#" className="px-8 py-3 bg-white text-[#700FA3] font-bold rounded hover:shadow-lg transition-all duration-300 hover:scale-105 text-center" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                Ir a YouTube
-              </a>
+              {/* Description */}
+              <p
+                className="text-base md:text-lg leading-relaxed mb-6"
+                style={{ fontFamily: "var(--font-montserrat), sans-serif", color: "#FFFFFF", fontWeight: "700" }}
+              >
+                Este podcast auspiciado por ONE TRUE y creado por nuestro gerente general David Coli, tiene la intención de pensar, aprender juntos, resolver dudas y tener nuevas respuestas ante el maravilloso mundo de la detección de mentiras.
+              </p>
+
+              <p
+                className="text-base md:text-lg leading-relaxed mb-8"
+                style={{ fontFamily: "var(--font-montserrat), sans-serif", color: "#FFFFFF", fontWeight: "700" }}
+              >
+                Disfruta todos los episodios y descubre el maravilloso mundo de la evaluación forense de la credibilidad y la detección de mentiras. Escucha todos los capítulos de la primera temporada en Spotify.
+              </p>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 items-start">
+                <a href="#" className="px-8 py-3 bg-[#FFC107] text-[#411A56] font-bold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                  Ir a YouTube
+                </a>
+                <a href="#" className="px-8 py-3 bg-[#A855F7] text-white font-bold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                  Ir a Spotify
+                </a>
+              </div>
+            </div>
+
+            {/* Right side - Image */}
+            <div className="hidden md:flex items-center justify-center">
+              <div className="relative w-full max-w-sm aspect-square rounded-2xl overflow-hidden">
+                <img
+                  src="/blog/podcast-hero.png"
+                  alt="David Coli - Podcast DETECTAR"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
