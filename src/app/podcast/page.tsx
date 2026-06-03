@@ -214,13 +214,18 @@ export default function PodcastPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#700FA3]">
+      <section
+        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#700FA3] bg-cover bg-center"
+        style={{ backgroundImage: "url('/blog/PODCAST.webp')" }}
+      >
+        {/* Background overlay */}
+        <div className="absolute inset-0 bg-[#700FA3]/70"></div>
         {/* Background decorative elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#FFC107]/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3" />
 
-        <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 sm:px-8 md:px-12 items-center" ref={heroRef}>
-          {/* Left content */}
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-8 md:px-12 items-center" ref={heroRef}>
+          {/* Content */}
           <div className="flex flex-col justify-center">
             {/* Title with styled boxes */}
             <div className="mb-8 flex flex-col gap-2">
@@ -273,17 +278,6 @@ export default function PodcastPage() {
             </div>
           </div>
 
-          {/* Right side - Image */}
-          <div className="relative hidden md:flex items-center justify-center">
-            <div className="relative w-full aspect-square max-w-sm">
-              <img
-                src="/PODCAST.webp"
-                alt="David Coli - Podcast DETECTAR"
-                className="w-full h-full object-cover rounded-2xl shadow-2xl"
-              />
-              <div className="absolute inset-0 bg-black/20 rounded-2xl"></div>
-            </div>
-          </div>
         </div>
       </section>
 
