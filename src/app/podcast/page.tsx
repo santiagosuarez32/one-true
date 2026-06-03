@@ -218,8 +218,8 @@ export default function PodcastPage() {
         className="relative min-h-screen flex flex-col items-center justify-end overflow-hidden bg-cover bg-center"
         style={{ backgroundImage: "url('/blog/podcast-hero.png')" }}
       >
-        <div className="relative z-10 w-full h-full flex flex-col justify-end px-4 sm:px-8 md:px-12 pb-20" ref={heroRef}>
-          <div className="max-w-2xl w-full">
+        <div className="relative z-10 w-full h-full flex flex-col justify-end items-start px-4 sm:px-8 md:px-12 pb-20" ref={heroRef}>
+          <div className="max-w-2xl w-full ml-auto mr-20">
             {/* Description */}
             <p
               className="text-base md:text-lg leading-relaxed mb-6"
