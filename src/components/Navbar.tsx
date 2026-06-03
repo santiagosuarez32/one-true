@@ -65,7 +65,7 @@ export default function Navbar() {
   const aprendeList = [
     { label: "Blog", href: "/blog" },
     { label: "Podcast", href: "/podcast" },
-    { label: "Ebook", href: "/#ebook" }
+    { label: "Ebook", href: "/ebook" }
   ];
 
   return (
@@ -327,8 +327,18 @@ export default function Navbar() {
           </a>
 
           {/* Blog */}
-          <a href="/#recursos" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+          <a href="/blog" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
             Blog
+          </a>
+
+          {/* Podcast */}
+          <a href="/podcast" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+            Podcast
+          </a>
+
+          {/* Ebook */}
+          <a href="/ebook" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+            Ebook
           </a>
         </nav>
 

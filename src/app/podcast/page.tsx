@@ -239,25 +239,25 @@ export default function PodcastPage() {
                 {/* Description */}
                 <p
                   className="text-base md:text-lg leading-relaxed mb-6"
-                  style={{ fontFamily: "var(--font-montserrat), sans-serif", color: "#FFC107", fontWeight: "700" }}
+                  style={{ fontFamily: "var(--font-montserrat), sans-serif", color: "#FFFFFF", fontWeight: "700" }}
                 >
                   Este podcast auspiciado por ONE TRUE y creado por nuestro gerente general David Coli, tiene la intención de pensar, aprender juntos, resolver dudas y tener nuevas respuestas ante el maravilloso mundo de la detección de mentiras.
                 </p>
 
                 <p
                   className="text-base md:text-lg leading-relaxed mb-8"
-                  style={{ fontFamily: "var(--font-montserrat), sans-serif", color: "#FFC107", fontWeight: "700" }}
+                  style={{ fontFamily: "var(--font-montserrat), sans-serif", color: "#FFFFFF", fontWeight: "700" }}
                 >
                   Disfruta todos los episodios y descubre el maravilloso mundo de la evaluación forense de la credibilidad y la detección de mentiras. Escucha todos los capítulos de la primera temporada en Spotify.
                 </p>
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 items-start">
-                  <a href="#" className="px-8 py-3 bg-[#FFC107] text-[#411A56] font-bold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                  <a href="#" className="px-8 py-3 bg-[#FFC107] text-[#411A56] font-bold rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                     Ir a YouTube
                   </a>
-                  <a href="#" className="px-8 py-3 bg-[#A855F7] text-white font-bold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                    Ir a Spotify
+                  <a href="#" className="px-8 py-3 bg-[#1DB954] text-white font-bold rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                    Escuchar en Spotify
                   </a>
                 </div>
               </div>
@@ -267,152 +267,6 @@ export default function PodcastPage() {
         </div>
       </section>
 
-      {/* Episodes Grid */}
-      <section className="w-full max-w-6xl mx-auto px-4 sm:px-8 md:px-12 py-16">
-        <div className="flex items-center gap-3 mb-8">
-          <div className="w-10 h-0.75 bg-[#700FA3]" />
-          <h2
-            className="text-3xl md:text-4xl font-bold text-[#48255A]"
-            style={{
-              fontFamily: "var(--font-montserrat), sans-serif",
-            }}
-          >
-            Últimos Episodios
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {episodes.map((episode, index) => (
-            <PodcastCard
-              key={episode.id}
-              episode={episode}
-              cardRef={(el) => {
-                if (el) cardsRef.current[index] = el;
-              }}
-            />
-          ))}
-        </div>
-      </section>
-
-      {/* Featured Episode */}
-      <section className="w-full max-w-6xl mx-auto px-4 sm:px-8 md:px-12 py-20 border-t border-neutral-200">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="relative rounded-2xl overflow-hidden aspect-square">
-            <img
-              src="/podcast/featured.jpg"
-              alt="Episodio destacado"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black/40"></div>
-            <button className="absolute inset-0 flex items-center justify-center group">
-              <div className="w-20 h-20 bg-[#FFC107] rounded-full flex items-center justify-center text-black transition-transform duration-300 group-hover:scale-110">
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="ml-1"
-                >
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </button>
-          </div>
-
-          <div>
-            <span
-              className="text-xs uppercase tracking-widest text-[#700FA3] font-bold mb-4 block"
-              style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-            >
-              Episodio Destacado
-            </span>
-
-            <h2
-              className="text-4xl font-bold text-[#48255A] mb-4 leading-tight"
-              style={{
-                fontFamily: "var(--font-montserrat), sans-serif",
-              }}
-            >
-              Cómo Funciona tu Negocio: Fundamentos de la Confianza Corporativa
-            </h2>
-
-            <p
-              className="text-[#525252] text-lg leading-relaxed mb-6"
-              style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-            >
-              En este episodio especial, exploramos cómo la confianza es el pilar fundamental de cualquier negocio exitoso. Analizamos casos reales de empresas que han transformado su cultura organizacional a través de procesos rigurosos de evaluación y selección de personal.
-            </p>
-
-            <div className="flex gap-4 mb-8">
-              <div>
-                <p className="text-gray-500 text-sm" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                  Duración
-                </p>
-                <p className="text-[#48255A] font-bold text-lg" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                  32 minutos
-                </p>
-              </div>
-              <div>
-                <p className="text-gray-500 text-sm" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                  Publicado
-                </p>
-                <p className="text-[#48255A] font-bold text-lg" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                  15 Jun, 2024
-                </p>
-              </div>
-            </div>
-
-            <button
-              className="px-8 py-3 bg-[#FFC107] text-[#411A56] font-bold rounded hover:shadow-lg transition-all duration-300 hover:scale-105"
-              style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-            >
-              Escuchar Ahora
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="w-full max-w-6xl mx-auto px-4 sm:px-8 md:px-12 py-20">
-        <div className="bg-[#700FA3] rounded-2xl p-12 text-center">
-          <h2
-            className="text-3xl md:text-4xl font-bold text-white mb-4"
-            style={{
-              fontFamily: "var(--font-montserrat), sans-serif",
-            }}
-          >
-            No te pierdas ningún episodio
-          </h2>
-
-          <p
-            className="text-white text-lg mb-8 max-w-2xl mx-auto"
-            style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-          >
-            Suscríbete a nuestro podcast para recibir notificaciones de nuevos episodios directamente en tu app favorita.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              className="px-8 py-3 bg-[#FFC107] text-[#411A56] font-bold rounded hover:shadow-lg transition-all duration-300 hover:scale-105"
-              style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-            >
-              Spotify
-            </button>
-            <button
-              className="px-8 py-3 bg-white text-[#700FA3] font-bold rounded hover:shadow-lg transition-all duration-300 hover:scale-105"
-              style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-            >
-              Apple Podcasts
-            </button>
-            <button
-              className="px-8 py-3 bg-white text-[#700FA3] font-bold rounded hover:shadow-lg transition-all duration-300 hover:scale-105"
-              style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-            >
-              Google Podcasts
-            </button>
-          </div>
-        </div>
-      </section>
 
       <Footer />
       <FloatingWhatsApp />
