@@ -218,25 +218,28 @@ export default function PodcastPage() {
         className="relative min-h-screen flex flex-col items-center justify-end overflow-hidden bg-cover bg-center"
         style={{ backgroundImage: "url('/blog/podcast-hero.png')" }}
       >
-        <div className="relative z-10 w-full h-full flex flex-col justify-end items-start px-4 sm:px-8 md:px-12 pb-20" ref={heroRef}>
-          <div className="max-w-2xl w-full ml-auto mr-20">
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40"></div>
+
+        <div className="relative z-10 w-full h-full flex flex-col justify-end items-center px-4 sm:px-8 md:px-12 pb-20" ref={heroRef}>
+          <div className="max-w-3xl w-full text-center">
             {/* Description */}
             <p
-              className="text-base md:text-lg leading-relaxed mb-6"
+              className="text-lg md:text-xl leading-relaxed mb-6 font-bold"
               style={{ fontFamily: "var(--font-montserrat), sans-serif", color: "#FFFFFF" }}
             >
               Este podcast auspiciado por ONE TRUE y creado por nuestro gerente general David Coli, tiene la intención de pensar, aprender juntos, resolver dudas y tener nuevas respuestas ante el maravilloso mundo de la detección de mentiras.
             </p>
 
             <p
-              className="text-base md:text-lg leading-relaxed mb-12"
+              className="text-lg md:text-xl leading-relaxed mb-12 font-bold"
               style={{ fontFamily: "var(--font-montserrat), sans-serif", color: "#FFFFFF" }}
             >
               Disfruta todos los episodios y descubre el maravilloso mundo de la evaluación forense de la credibilidad y la detección de mentiras. Escucha todos los capítulos de la primera temporada en Spotify.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 items-start">
+            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
               <a href="#" className="px-8 py-3 bg-[#FFC107] text-[#411A56] font-bold rounded hover:shadow-lg transition-all duration-300 hover:scale-105 text-center" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                 Ir a Spotify
               </a>
