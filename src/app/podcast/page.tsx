@@ -224,16 +224,7 @@ export default function PodcastPage() {
         <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-8 md:px-12 py-20" ref={heroRef}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             {/* Left content */}
-            <div className="flex flex-col justify-center">
-              {/* Logo */}
-              <div className="mb-20">
-                <img
-                  src="/logo-podcast.png"
-                  alt="DETECTAR Podcast Logo"
-                  className="h-48 md:h-64 w-auto object-contain"
-                />
-              </div>
-
+            <div className="flex flex-col justify-end h-full">
               {/* Presenter */}
               <p className="text-white text-xl md:text-2xl font-bold mb-8" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                 con <span className="text-[#FFC107]">DAVID COLI</span>
@@ -253,6 +244,15 @@ export default function PodcastPage() {
               >
                 Disfruta todos los episodios y descubre el maravilloso mundo de la evaluación forense de la credibilidad y la detección de mentiras. Escucha todos los capítulos de la primera temporada en Spotify.
               </p>
+
+              {/* Logo */}
+              <div className="mb-8">
+                <img
+                  src="/logo-podcast.png"
+                  alt="DETECTAR Podcast Logo"
+                  className="h-48 md:h-64 w-auto object-contain"
+                />
+              </div>
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 items-start">
