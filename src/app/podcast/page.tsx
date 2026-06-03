@@ -214,81 +214,74 @@ export default function PodcastPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-start md:items-center justify-center overflow-hidden pt-32 pb-24 bg-[#700FA3]">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-8 md:px-12" ref={heroRef}>
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="w-12 h-[3px] bg-[#FFC107]" />
-            <span
-              className="text-sm md:text-base uppercase tracking-wider"
-              style={{
-                letterSpacing: "0.5px",
-                color: "#FFC107",
-                fontWeight: "600",
-                fontFamily: "var(--font-montserrat), sans-serif",
-              }}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#700FA3]">
+        {/* Background decorative elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#FFC107]/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3" />
+
+        <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 sm:px-8 md:px-12 items-center" ref={heroRef}>
+          {/* Left content */}
+          <div className="flex flex-col justify-center">
+            {/* Title with styled boxes */}
+            <div className="mb-8 flex flex-col gap-2">
+              <div className="flex items-center gap-2 flex-wrap">
+                <div className="bg-white/20 text-white px-4 py-2 rounded-full text-2xl md:text-3xl font-bold backdrop-blur-sm" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                  ¿Cómo
+                </div>
+              </div>
+              <div className="flex items-center gap-2 flex-wrap">
+                <div className="bg-[#FFC107] text-[#411A56] px-6 py-3 rounded-full text-4xl md:text-5xl font-bold" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                  FUNCIONA
+                </div>
+              </div>
+              <div className="flex items-center gap-2 flex-wrap">
+                <div className="bg-white/20 text-white px-4 py-2 rounded-full text-2xl md:text-3xl font-bold backdrop-blur-sm" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                  tu
+                </div>
+                <div className="bg-[#FFC107] text-[#411A56] px-6 py-3 rounded-full text-4xl md:text-5xl font-bold" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                  NEGOCIO?
+                </div>
+              </div>
+              <div className="text-white text-xl md:text-2xl font-bold mt-4" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                con <span className="text-[#FFC107]">DAVID COLI</span>
+              </div>
+            </div>
+
+            {/* Description */}
+            <p
+              className="text-base md:text-lg leading-relaxed mb-6"
+              style={{ fontFamily: "var(--font-montserrat), sans-serif", color: "#FFFFFF" }}
             >
-              DETECTAR
-            </span>
-            <div className="w-12 h-[3px] bg-[#FFC107]" />
+              Este podcast auspiciado por ONE TRUE y creado por nuestro gerente general David Coli, tiene la intención de pensar, aprender juntos, resolver dudas y tener nuevas respuestas ante el maravilloso mundo de la detección de mentiras.
+            </p>
+
+            <p
+              className="text-base md:text-lg leading-relaxed mb-8"
+              style={{ fontFamily: "var(--font-montserrat), sans-serif", color: "#FFFFFF" }}
+            >
+              Disfruta todos los episodios y descubre el maravilloso mundo de la evaluación forense de la credibilidad y la detección de mentiras. Escucha todos los capítulos de la primera temporada en Spotify.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 items-start">
+              <a href="#" className="px-8 py-3 bg-[#FFC107] text-[#411A56] font-bold rounded hover:shadow-lg transition-all duration-300 hover:scale-105 text-center" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                Ir a Spotify
+              </a>
+              <a href="#" className="px-8 py-3 bg-white text-[#700FA3] font-bold rounded hover:shadow-lg transition-all duration-300 hover:scale-105 text-center" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                Ir a YouTube
+              </a>
+            </div>
           </div>
 
-          <h1
-            className="text-5xl md:text-6xl font-bold mb-6"
-            style={{
-              color: "#FFFFFF",
-              fontFamily: "var(--font-montserrat), sans-serif",
-              lineHeight: "1.2",
-            }}
-          >
-            Cómo Funciona
-            <br />
-            <span style={{ color: "#FFC107" }}>tu Negocio</span>
-          </h1>
-
-          <p
-            className="text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-8"
-            style={{
-              fontFamily: "var(--font-montserrat), sans-serif",
-              color: "#FFFFFF"
-            }}
-          >
-            Este podcast auspiciado por ONE TRUE y creado por nuestro gerente general David Coli, tiene la intención de pensar, aprender juntos, resolver dudas y tener nuevas respuestas ante el maravilloso mundo de la detección de mentiras.
-          </p>
-
-          <p
-            className="text-base md:text-lg max-w-2xl mx-auto leading-relaxed"
-            style={{
-              fontFamily: "var(--font-montserrat), sans-serif",
-              color: "#FFFFFF"
-            }}
-          >
-            Disfruta todos los episodios y descubre el maravilloso mundo de la evaluación forense de la credibilidad y la detección de mentiras. Escucha todos los capítulos de la primera temporada en Spotify.
-          </p>
-
-          {/* Subscribe CTA */}
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button
-              className="px-8 py-3 bg-[#FFC107] text-[#411A56] font-bold rounded hover:shadow-lg transition-all duration-300 hover:scale-105"
-              style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-            >
-              Suscribirse
-            </button>
-            <div className="flex gap-3">
-              <a href="#" className="p-3 border-2 border-[#FFC107] rounded-full hover:bg-[#FFC107] text-white hover:text-[#411A56] transition-colors duration-300">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19 13h-6v6h-2v-6h-6v-2h6V5h2v6h6v2z" />
-                </svg>
-              </a>
-              <a href="#" className="p-3 border-2 border-[#FFC107] rounded-full hover:bg-[#FFC107] text-white hover:text-[#411A56] transition-colors duration-300">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </a>
-              <a href="#" className="p-3 border-2 border-[#FFC107] rounded-full hover:bg-[#FFC107] text-white hover:text-[#411A56] transition-colors duration-300">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z" />
-                </svg>
-              </a>
+          {/* Right side - Image */}
+          <div className="relative hidden md:flex items-center justify-center">
+            <div className="relative w-full aspect-square max-w-sm">
+              <img
+                src="/PODCAST.webp"
+                alt="David Coli - Podcast DETECTAR"
+                className="w-full h-full object-cover rounded-2xl shadow-2xl"
+              />
+              <div className="absolute inset-0 bg-black/20 rounded-2xl"></div>
             </div>
           </div>
         </div>
