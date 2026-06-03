@@ -235,7 +235,7 @@ export default function PodcastPage() {
               </div>
 
               {/* Content at bottom */}
-              <div>
+              <div className="mt-0">
                 {/* Description */}
                 <p
                   className="text-base md:text-lg leading-relaxed mb-6"
