@@ -6,9 +6,7 @@
     },
     "stitch": {
       "command": "npx",
-      "args": ["-y", "@getbridge/mcp-stitch"],
-      "env": {
-      }
+      "args": ["-y", "@getbridge/mcp-stitch"]
     }
   }
 }
