@@ -1,0 +1,984 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e5]:
+        - link "Flaticon logo" [ref=e6] [cursor=pointer]:
+          - /url: https://www.flaticon.com/
+          - img "Flaticon logo" [ref=e7]
+        - navigation [ref=e8]:
+          - generic [ref=e10] [cursor=pointer]: 
+          - text:   
+        - generic [ref=e12]:
+          - button "" [ref=e14] [cursor=pointer]:
+            - generic [ref=e15]: 
+          - list [ref=e16]:
+            - listitem [ref=e17]:
+              - generic [ref=e18]: Notifications
+              - generic [ref=e19] [cursor=pointer]: 
+            - listitem [ref=e20]:
+              - generic [ref=e22]: 
+              - paragraph [ref=e23]: No notifications to show yet
+              - paragraph [ref=e24]: You’ll see useful information here soon. Stay tuned!
+          - link "" [ref=e26] [cursor=pointer]:
+            - /url: https://id.magnific.com/v2/log-in?client_id=flaticon&lang=en
+            - generic [ref=e27]: 
+      - generic [ref=e30]:
+        - generic [ref=e33] [cursor=pointer]: 
+        - generic [ref=e37]:
+          - button "Icons " [ref=e40] [cursor=pointer]:
+            - text: 
+            - generic [ref=e41]: Icons
+            - generic [ref=e42]: 
+          - searchbox "Search for icons" [active] [ref=e44]: evaluation
+          - button "" [ref=e45] [cursor=pointer]:
+            - generic [ref=e46]: 
+          - button "" [ref=e47] [cursor=pointer]:
+            - generic [ref=e48]: 
+        - button " 0" [ref=e49] [cursor=pointer]:
+          - generic [ref=e50]: 
+          - generic [ref=e51]: "0"
+    - complementary [ref=e52]:
+      - generic [ref=e53]:
+        - button "" [ref=e54] [cursor=pointer]:
+          - generic [ref=e55]: 
+        - generic [ref=e56]:
+          - img [ref=e57]
+          - generic [ref=e58]:
+            - paragraph [ref=e59]: You have no collections yet
+            - paragraph [ref=e60]: All collections displayed here
+            - paragraph [ref=e61]: What can I do with my collections?
+          - list [ref=e62]:
+            - listitem [ref=e63]:
+              - generic [ref=e64] [cursor=pointer]:
+                - generic [ref=e65]: 
+                - text: Add icons
+                - generic [ref=e66]: 
+                - text: 
+              - paragraph [ref=e67]: Click on any icon you'd like to add to the collection.
+            - listitem [ref=e68]:
+              - generic [ref=e69] [cursor=pointer]:
+                - generic [ref=e70]: 
+                - text: Organize
+                - generic [ref=e71]: 
+                - text: 
+              - paragraph [ref=e72]: Organize your collections by projects, add, remove, edit, and rename icons.
+            - listitem [ref=e73]:
+              - generic [ref=e74] [cursor=pointer]:
+                - generic [ref=e75]: 
+                - text: Edit
+                - generic [ref=e76]: 
+                - text: 
+              - paragraph [ref=e77]: Use the "Paint collection" feature and change the color of the whole collection or do it icon by icon.
+            - listitem [ref=e78]:
+              - generic [ref=e79] [cursor=pointer]:
+                - generic [ref=e80]: 
+                - text: Download Icon font or SVG
+                - generic [ref=e81]: 
+                - text: 
+              - paragraph [ref=e82]: Download your collections in the code format compatible with all browsers, and use icons on your website.
+            - listitem [ref=e83]:
+              - generic [ref=e84] [cursor=pointer]:
+                - generic [ref=e85]: 
+                - text: Share and Save
+                - generic [ref=e86]: 
+                - text: 
+              - paragraph [ref=e87]: Save a backup copy of your collections or share them with others- with just one click!
+          - paragraph [ref=e88]:
+            - link "More info" [ref=e89] [cursor=pointer]:
+              - /url: https://www.flaticon.com/collections
+            - text: about Collections
+      - generic [ref=e90]:
+        - button "" [ref=e91] [cursor=pointer]:
+          - generic [ref=e92]: 
+        - text: Collections
+        - generic [ref=e93]: "1"
+        - button "" [ref=e95] [cursor=pointer]:
+          - generic [ref=e96]: 
+        - generic: 
+        - button "" [disabled] [ref=e98]:
+          - generic [ref=e99]: 
+        - button "" [disabled] [ref=e101]:
+          - generic [ref=e102]: 
+      - generic [ref=e104]:
+        - generic [ref=e105] [cursor=pointer]:
+          - generic "My icons collection" [ref=e106]
+          - generic [ref=e107]: "0"
+          - generic [ref=e110]:
+            - button "" [ref=e111]:
+              - generic [ref=e112]: 
+            - text:       
+          - text: 
+        - text:    
+        - generic [ref=e113]:
+          - generic [ref=e114]:
+            - text: Edit mode
+            - button " Back" [ref=e115] [cursor=pointer]:
+              - generic [ref=e116]: 
+              - text: Back
+          - generic [ref=e117]:
+            - generic [ref=e118]: Sort mode (Drag&Drop)
+            - button " Back" [ref=e119] [cursor=pointer]:
+              - generic [ref=e120]: 
+              - text: Back
+          - text:       
+          - generic [ref=e123]:
+            - img [ref=e124]
+            - paragraph [ref=e125]: Create custom collections
+            - paragraph [ref=e126]: Do you want to make a personalized icon pack?
+            - paragraph [ref=e127]:
+              - text: Just add the icons you want to the collection and download them in the format you need.
+              - link "More info" [ref=e128] [cursor=pointer]:
+                - /url: https://www.flaticon.com/collections
+            - link "Register for free" [ref=e129] [cursor=pointer]:
+              - /url: https://id.magnific.com/v2/sign-up?client_id=flaticon&lang=en
+            - paragraph [ref=e130]:
+              - generic [ref=e131]: 
+              - text: Create up to 3 collections
+            - paragraph [ref=e132]:
+              - generic [ref=e133]: 
+              - text: Add 256 icons per collection
+            - paragraph [ref=e134]:
+              - generic [ref=e135]: 
+              - text: Save and customize your icons
+          - text:          
+    - text:  
+    - generic:     
+    - text:                           
+    - generic [ref=e137]:
+      - complementary:    
+      - generic [ref=e138]:
+        - generic [ref=e140]:
+          - link "Icons" [ref=e141] [cursor=pointer]:
+            - /url: https://www.flaticon.com/search?word=evaluation
+          - link "Stickers" [ref=e142] [cursor=pointer]:
+            - /url: https://www.flaticon.com/search?word=evaluation&type=sticker
+          - link "Animated icons" [ref=e143] [cursor=pointer]:
+            - /url: https://www.flaticon.com/search?word=evaluation&type=animated-icon
+          - link "Interface icons" [ref=e144] [cursor=pointer]:
+            - /url: https://www.flaticon.com/search?word=evaluation&type=uicon
+          - generic [ref=e145]:
+            - generic [ref=e146]: "Group by:"
+            - generic [ref=e149]:
+              - button " All icons " [ref=e150] [cursor=pointer]:
+                - generic [ref=e151]:
+                  - generic [ref=e152]: 
+                  - text: All icons
+                - generic [ref=e153]: 
+              - text:   
+        - generic [ref=e156]:
+          - generic [ref=e158]:
+            - paragraph [ref=e159]: 23,827
+            - heading "Evaluation Icons" [level=1] [ref=e160]
+          - list [ref=e161]:
+            - listitem
+        - generic [ref=e162]:
+          - list [ref=e163]:
+            - listitem [ref=e164]:
+              - generic [ref=e165]:
+                - link "Evaluation" [ref=e166] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/evaluation_1844921
+                  - img "Evaluation" [ref=e167]
+                - text:      
+            - listitem [ref=e168]:
+              - generic [ref=e169]:
+                - link "Check list" [ref=e170] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/check-list_1721936
+                  - img "Check list" [ref=e171]
+                - text:      
+            - listitem [ref=e172]:
+              - generic [ref=e173]:
+                - link "Assessment" [ref=e174] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/assessment_8929862
+                  - img "Assessment" [ref=e175]
+                - text:      
+            - listitem [ref=e176]:
+              - generic [ref=e177]:
+                - link "Check list" [ref=e178] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/check-list_1721929
+                  - img "Check list" [ref=e179]
+                - text:      
+            - listitem [ref=e180]:
+              - generic [ref=e181]:
+                - link "Assessment" [ref=e182] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/assessment_8901485
+                  - img "Assessment" [ref=e183]
+                - text:      
+            - listitem [ref=e184]:
+              - generic [ref=e185]:
+                - link "Check list" [ref=e186] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/check-list_3406866
+                  - img "Check list" [ref=e187]
+                - text:      
+            - listitem [ref=e188]:
+              - generic [ref=e189]:
+                - link "Good feedback" [ref=e190] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/good-feedback_9751072
+                  - img "Good feedback" [ref=e191]
+                - text:      
+            - listitem [ref=e192]:
+              - generic [ref=e193]:
+                - link "Good feedback" [ref=e194] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/good-feedback_9732828
+                  - img "Good feedback" [ref=e195]
+                - text:      
+            - listitem [ref=e196]:
+              - generic [ref=e197]:
+                - link "Check" [ref=e198] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/check_8780646
+                  - img "Check" [ref=e199]
+                - text:      
+            - listitem [ref=e200]:
+              - generic [ref=e201]:
+                - link "Data" [ref=e202] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/data_9070873
+                  - img "Data" [ref=e203]
+                - text:      
+            - listitem [ref=e204]:
+              - generic [ref=e205]:
+                - link "Assessment" [ref=e206] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/assessment_11112891
+                  - img "Assessment" [ref=e207]
+                - text:      
+            - listitem [ref=e208]:
+              - generic [ref=e209]:
+                - link "Assessment" [ref=e210] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/assessment_12443240
+                  - img "Assessment" [ref=e211]
+                - text:      
+            - listitem [ref=e212]
+            - listitem [ref=e214]:
+              - generic [ref=e215]:
+                - link "List" [ref=e216] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/list_2645882
+                  - img "List" [ref=e217]
+                - text:      
+            - listitem [ref=e218]:
+              - generic [ref=e219]:
+                - link "Business report" [ref=e220] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/business-report_16362012
+                  - img "Business report" [ref=e221]
+                - text:      
+            - listitem [ref=e222]:
+              - generic [ref=e223]:
+                - link "Checklist" [ref=e224] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/checklist_2666505
+                  - img "Checklist" [ref=e225]
+                - text:      
+            - listitem [ref=e226]:
+              - generic [ref=e227]:
+                - link "Evaluation" [ref=e228] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/evaluation_9334438
+                  - img "Evaluation" [ref=e229]
+                - text:      
+            - listitem [ref=e230]:
+              - generic [ref=e231]:
+                - link "Evaluation" [ref=e232] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/evaluation_6757112
+                  - img "Evaluation" [ref=e233]
+                - text:      
+            - listitem [ref=e234]:
+              - generic [ref=e235]:
+                - link "Surveyor" [ref=e236] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/surveyor_17276756
+                  - img "Surveyor" [ref=e237]
+                - text:      
+            - listitem [ref=e238]:
+              - generic [ref=e239]:
+                - link "Satisfaction" [ref=e240] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/satisfaction_1312304
+                  - img "Satisfaction" [ref=e241]
+                - text:      
+            - listitem [ref=e242]:
+              - generic [ref=e243]:
+                - link "Evaluation" [ref=e244] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/evaluation_5261030
+                  - img "Evaluation" [ref=e245]
+                - text:      
+            - listitem [ref=e246]:
+              - generic [ref=e247]:
+                - link "Evaluation" [ref=e248] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/evaluation_9912341
+                  - img "Evaluation" [ref=e249]
+                - text:      
+            - listitem [ref=e250]:
+              - generic [ref=e251]:
+                - link "Risk management" [ref=e252] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/risk-management_17485692
+                  - img "Risk management" [ref=e253]
+                - text:      
+            - listitem [ref=e254]:
+              - generic [ref=e255]:
+                - link "Good feedback" [ref=e256] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/good-feedback_9732825
+                  - img "Good feedback" [ref=e257]
+                - text:      
+            - listitem [ref=e258]:
+              - generic [ref=e259]:
+                - link "Audit" [ref=e260] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/audit_10986669
+                  - img "Audit" [ref=e261]
+                - text:      
+            - listitem [ref=e262]:
+              - generic [ref=e263]:
+                - link "Assessment" [ref=e264] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/assessment_5431453
+                  - img "Assessment" [ref=e265]
+                - text:      
+            - listitem [ref=e266]:
+              - generic [ref=e267]:
+                - link "Check list" [ref=e268] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/check-list_9133130
+                  - img "Check list" [ref=e269]
+                - text:      
+            - listitem [ref=e270]:
+              - generic [ref=e271]:
+                - link "Camera" [ref=e272] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/camera_16385700
+                  - img "Camera" [ref=e273]
+                - text:      
+            - listitem [ref=e274]:
+              - generic [ref=e275]:
+                - link "Good feedback" [ref=e276] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/good-feedback_9733233
+                  - img "Good feedback" [ref=e277]
+                - text:      
+            - listitem [ref=e278]:
+              - generic [ref=e279]:
+                - link "Evaluation" [ref=e280] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/evaluation_9926288
+                  - img "Evaluation" [ref=e281]
+                - text:      
+            - listitem [ref=e282]:
+              - generic [ref=e283]:
+                - link "Satisfaction" [ref=e284] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/satisfaction_1312202
+                  - img "Satisfaction" [ref=e285]
+                - text:      
+            - listitem [ref=e286]:
+              - generic [ref=e287]:
+                - link "Bone research" [ref=e288] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/bone-research_15756177
+                  - img "Bone research" [ref=e289]
+                - text:      
+            - listitem [ref=e290]:
+              - generic [ref=e291]:
+                - link "Proficiency" [ref=e292] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/proficiency_12199350
+                  - img "Proficiency" [ref=e293]
+                - text:      
+            - listitem [ref=e294]:
+              - generic [ref=e295]:
+                - link "Evaluation" [ref=e296] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/evaluation_7330990
+                  - img "Evaluation" [ref=e297]
+                - text:      
+            - listitem [ref=e298]:
+              - generic [ref=e299]:
+                - link "Evaluation" [ref=e300] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/evaluation_16743108
+                  - img "Evaluation" [ref=e301]
+                - text:      
+            - listitem [ref=e302]:
+              - generic [ref=e303]:
+                - link "Chart" [ref=e304] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/chart_13641576
+                  - img "Chart" [ref=e305]
+                - text:      
+            - listitem [ref=e306]:
+              - generic [ref=e307]:
+                - link "Evaluation" [ref=e308] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/evaluation_2974222
+                  - img "Evaluation" [ref=e309]
+                - text:      
+            - listitem [ref=e310]
+            - listitem [ref=e312]:
+              - generic [ref=e313]:
+                - link "Service" [ref=e314] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/service_16258824
+                  - img "Service" [ref=e315]
+                - text:      
+            - listitem [ref=e316]:
+              - generic [ref=e317]:
+                - link "Security audit" [ref=e318] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/security-audit_16189811
+                  - img "Security audit" [ref=e319]
+                - text:      
+            - listitem [ref=e320]:
+              - generic [ref=e321]:
+                - link "Assessment" [ref=e322] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/assessment_11112877
+                  - img "Assessment" [ref=e323]
+                - text:      
+            - listitem [ref=e324]:
+              - generic [ref=e325]:
+                - link "Check list" [ref=e326] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/check-list_4337557
+                  - img "Check list" [ref=e327]
+                - text:      
+            - listitem [ref=e328]:
+              - generic [ref=e329]:
+                - link "Assessment" [ref=e330] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/assessment_8899500
+                  - img "Assessment" [ref=e331]
+                - text:      
+            - listitem [ref=e332]:
+              - generic [ref=e333]:
+                - link "Bone research" [ref=e334] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/bone-research_15756294
+                  - img "Bone research" [ref=e335]
+                - text:      
+            - listitem [ref=e336]:
+              - generic [ref=e337]:
+                - link "Quality control" [ref=e338] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/quality-control_9599184
+                  - img "Quality control" [ref=e339]
+                - text:      
+            - listitem [ref=e340]:
+              - generic [ref=e341]:
+                - link "Evaluation" [ref=e342] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/evaluation_9912366
+                  - img "Evaluation" [ref=e343]
+                - text:      
+            - listitem [ref=e344]:
+              - generic [ref=e345]:
+                - link "Project" [ref=e346] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/project_9258060
+                  - img "Project" [ref=e347]
+                - text:      
+            - listitem [ref=e348]:
+              - generic [ref=e349]:
+                - link "Evaluation" [ref=e350] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/evaluation_14639640
+                  - img "Evaluation" [ref=e351]
+                - text:      
+            - listitem [ref=e352]:
+              - generic [ref=e353]:
+                - link "Analysis" [ref=e354] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/analysis_15785599
+                  - img "Analysis" [ref=e355]
+                - text:      
+            - listitem [ref=e356]:
+              - generic [ref=e357]:
+                - link "Assessment" [ref=e358] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/assessment_11112902
+                  - img "Assessment" [ref=e359]
+                - text:      
+            - listitem [ref=e360]:
+              - generic [ref=e361]:
+                - link "Analysis" [ref=e362] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/analysis_15569905
+                  - img "Analysis" [ref=e363]
+                - text:      
+            - listitem [ref=e364]:
+              - generic [ref=e365]:
+                - link "Evaluation" [ref=e366] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/evaluation_9746093
+                  - img "Evaluation" [ref=e367]
+                - text:      
+            - listitem [ref=e368]:
+              - generic [ref=e369]:
+                - link "Analysis" [ref=e370] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/analysis_10209240
+                  - img "Analysis" [ref=e371]
+                - text:      
+            - listitem [ref=e372]:
+              - generic [ref=e373]:
+                - link "Recruitment" [ref=e374] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/recruitment_15325652
+                  - img "Recruitment" [ref=e375]
+                - text:      
+            - listitem [ref=e376]:
+              - generic [ref=e377]:
+                - link "Compliance" [ref=e378] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/compliance_5951440
+                  - img "Compliance" [ref=e379]
+                - text:      
+            - listitem [ref=e380]:
+              - generic [ref=e381]:
+                - link "Risk" [ref=e382] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/risk_9155725
+                  - img "Risk" [ref=e383]
+                - text:      
+            - listitem [ref=e384]:
+              - generic [ref=e385]:
+                - link "Risk management" [ref=e386] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/risk-management_17485699
+                  - img "Risk management" [ref=e387]
+                - text:      
+            - listitem [ref=e388]:
+              - generic [ref=e389]:
+                - link "Behavior" [ref=e390] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/behavior_2631358
+                  - img "Behavior" [ref=e391]
+                - text:      
+            - listitem [ref=e392]:
+              - generic [ref=e393]:
+                - link "Customer feedback" [ref=e394] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/customer-feedback_8453795
+                  - img "Customer feedback" [ref=e395]
+                - text:      
+            - listitem [ref=e396]:
+              - generic [ref=e397]:
+                - link "Exam" [ref=e398] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/exam_17897735
+                  - img "Exam" [ref=e399]
+                - text:      
+            - listitem [ref=e400]:
+              - generic [ref=e401]:
+                - link "Performance appraisal" [ref=e402] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/performance-appraisal_12278438
+                  - img "Performance appraisal" [ref=e403]
+                - text:      
+            - listitem [ref=e404]:
+              - generic [ref=e405]:
+                - link "Project management" [ref=e406] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/project-management_4946385
+                  - img "Project management" [ref=e407]
+                - text:      
+            - listitem [ref=e408]:
+              - generic [ref=e409]:
+                - link "Risk evaluation" [ref=e410] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/risk-evaluation_12121769
+                  - img "Risk evaluation" [ref=e411]
+                - text:      
+            - listitem [ref=e412]:
+              - generic [ref=e413]:
+                - link "Risk analysis" [ref=e414] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/risk-analysis_17980637
+                  - img "Risk analysis" [ref=e415]
+                - text:      
+            - listitem [ref=e416]:
+              - generic [ref=e417]:
+                - link "Compliance" [ref=e418] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/compliance_4460641
+                  - img "Compliance" [ref=e419]
+                - text:      
+            - listitem [ref=e420]:
+              - generic [ref=e421]:
+                - link "Satisfaction" [ref=e422] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/satisfaction_1312253
+                  - img "Satisfaction" [ref=e423]
+                - text:      
+            - listitem [ref=e424]:
+              - generic [ref=e425]:
+                - link "Recruitment" [ref=e426] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/recruitment_15325678
+                  - img "Recruitment" [ref=e427]
+                - text:      
+            - listitem [ref=e428]:
+              - generic [ref=e429]:
+                - link "Evaluation" [ref=e430] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/evaluation_15550335
+                  - img "Evaluation" [ref=e431]
+                - text:      
+            - listitem [ref=e432]:
+              - generic [ref=e433]:
+                - link "Camera" [ref=e434] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/camera_16385794
+                  - img "Camera" [ref=e435]
+                - text:      
+            - listitem [ref=e436]:
+              - generic [ref=e437]:
+                - link "Evaluation" [ref=e438] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/evaluation_10822554
+                  - img "Evaluation" [ref=e439]
+                - text:      
+            - listitem [ref=e440]:
+              - generic [ref=e441]:
+                - link "Exam" [ref=e442] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/exam_17898148
+                  - img "Exam" [ref=e443]
+                - text:      
+            - listitem [ref=e444]:
+              - generic [ref=e445]:
+                - link "Evaluation" [ref=e446] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/evaluation_1844938
+                  - img "Evaluation" [ref=e447]
+                - text:      
+            - listitem [ref=e448]:
+              - generic [ref=e449]:
+                - link "Test" [ref=e450] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/test_1790014
+                  - img "Test" [ref=e451]
+                - text:      
+            - listitem [ref=e452]:
+              - generic [ref=e453]:
+                - link "Chart" [ref=e454] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/chart_11354270
+                  - img "Chart" [ref=e455]
+                - text:      
+            - listitem [ref=e456]:
+              - generic [ref=e457]:
+                - link "Clipboard" [ref=e458] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/clipboard_3022148
+                  - img "Clipboard" [ref=e459]
+                - text:      
+            - listitem [ref=e460]:
+              - generic [ref=e461]:
+                - link "Checklist" [ref=e462] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/checklist_6607433
+                  - img "Checklist" [ref=e463]
+                - text:      
+            - listitem [ref=e464]:
+              - generic [ref=e465]:
+                - link "Assessment" [ref=e466] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/assessment_11112887
+                  - img "Assessment" [ref=e467]
+                - text:      
+            - listitem [ref=e468]:
+              - generic [ref=e469]:
+                - link "Survey" [ref=e470] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/survey_10425319
+                  - img "Survey" [ref=e471]
+                - text:      
+            - listitem [ref=e472]:
+              - generic [ref=e473]:
+                - link "Analysis" [ref=e474] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/analysis_14490637
+                  - img "Analysis" [ref=e475]
+                - text:      
+            - listitem [ref=e476]:
+              - generic [ref=e477]:
+                - link "Project management" [ref=e478] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/project-management_4946348
+                  - img "Project management" [ref=e479]
+                - text:      
+            - listitem [ref=e480]:
+              - generic [ref=e481]:
+                - link "Project management" [ref=e482] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/project-management_17340223
+                  - img "Project management" [ref=e483]
+                - text:      
+            - listitem [ref=e484]:
+              - generic [ref=e485]:
+                - link "Checklist" [ref=e486] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/checklist_2666469
+                  - img "Checklist" [ref=e487]
+                - text:      
+            - listitem [ref=e488]:
+              - generic [ref=e489]:
+                - link "Impact" [ref=e490] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/impact_17814770
+                  - img "Impact" [ref=e491]
+                - text:      
+            - listitem [ref=e492]:
+              - generic [ref=e493]:
+                - link "Camera" [ref=e494] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/camera_16381148
+                  - img "Camera" [ref=e495]
+                - text:      
+            - listitem [ref=e496]:
+              - generic [ref=e497]:
+                - link "Evaluation" [ref=e498] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/evaluation_9746038
+                  - img "Evaluation" [ref=e499]
+                - text:      
+            - listitem [ref=e500]:
+              - generic [ref=e501]:
+                - link "Glass" [ref=e502] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/glass_10687894
+                  - img "Glass" [ref=e503]
+                - text:      
+            - listitem [ref=e504]:
+              - generic [ref=e505]:
+                - link "Survey" [ref=e506] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/survey_10266430
+                  - img "Survey" [ref=e507]
+                - text:      
+            - listitem [ref=e508]:
+              - generic [ref=e509]:
+                - link "Test" [ref=e510] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/test_4153545
+                  - img "Test" [ref=e511]
+                - text:      
+            - listitem [ref=e512]:
+              - generic [ref=e513]:
+                - link "Risk assessment" [ref=e514] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/risk-assessment_13479906
+                  - img "Risk assessment" [ref=e515]
+                - text:      
+            - listitem [ref=e516]:
+              - generic [ref=e517]:
+                - link "Data assessment" [ref=e518] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/data-assessment_8992414
+                  - img "Data assessment" [ref=e519]
+                - text:      
+            - listitem [ref=e520]:
+              - generic [ref=e521]:
+                - link "Assessment" [ref=e522] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/assessment_12199381
+                  - img "Assessment" [ref=e523]
+                - text:      
+            - listitem [ref=e524]:
+              - generic [ref=e525]:
+                - link "Data" [ref=e526] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/data_18816519
+                  - img "Data" [ref=e527]
+                - text:      
+            - listitem [ref=e528]:
+              - generic [ref=e529]:
+                - link "Assessment" [ref=e530] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/assessment_12199336
+                  - img "Assessment" [ref=e531]
+                - text:      
+            - listitem [ref=e532]:
+              - generic [ref=e533]:
+                - link "Skills" [ref=e534] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/skills_12210011
+                  - img "Skills" [ref=e535]
+                - text:      
+            - listitem [ref=e536]:
+              - generic [ref=e537]:
+                - link "Risk assessment" [ref=e538] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/risk-assessment_14254794
+                  - img "Risk assessment" [ref=e539]
+                - text:      
+            - listitem [ref=e540]:
+              - generic [ref=e541]:
+                - link "Risk mitigation" [ref=e542] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/risk-mitigation_16648619
+                  - img "Risk mitigation" [ref=e543]
+                - text:      
+            - listitem [ref=e544]:
+              - generic [ref=e545]:
+                - link "Security audit" [ref=e546] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/security-audit_16196328
+                  - img "Security audit" [ref=e547]
+                - text:      
+            - listitem [ref=e548]:
+              - generic [ref=e549]:
+                - link "Evaluation" [ref=e550] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/evaluation_5360720
+                  - img "Evaluation" [ref=e551]
+                - text:      
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+          - text: 
+          - generic [ref=e552]:
+            - paragraph [ref=e553]: Related tags
+            - generic [ref=e554]:
+              - link "analysis" [ref=e555] [cursor=pointer]:
+                - /url: https://www.flaticon.com/free-icons/analysis
+              - link "feedback" [ref=e556] [cursor=pointer]:
+                - /url: https://www.flaticon.com/free-icons/feedback
+              - link "monitoring" [ref=e557] [cursor=pointer]:
+                - /url: https://www.flaticon.com/free-icons/monitoring
+              - link "check" [ref=e558] [cursor=pointer]:
+                - /url: https://www.flaticon.com/free-icons/check
+              - link "arrow" [ref=e559] [cursor=pointer]:
+                - /url: https://www.flaticon.com/free-icons/arrow
+          - generic [ref=e560]:
+            - generic [ref=e561]:
+              - generic: 
+            - generic [ref=e564]:
+              - text: 
+              - link "Next page " [ref=e565] [cursor=pointer]:
+                - /url: https://www.flaticon.com/search/2?word=evaluation&type=standard
+                - generic [ref=e566]:
+                  - text: Next
+                  - strong [ref=e567]: page
+                - generic [ref=e568]: 
+            - generic [ref=e572]:
+              - textbox [ref=e573]: "1"
+              - text: of
+              - generic [ref=e574]: "249"
+              - generic [ref=e575]:
+                - link "":
+                  - /url: https://www.flaticon.com/search?word=evaluation&type=standard
+                  - generic: 
+                - link "" [ref=e576] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/search/2?word=evaluation&type=standard
+                  - generic [ref=e577]: 
+    - generic [ref=e578]:
+      - generic [ref=e579]:
+        - generic [ref=e580]:
+          - link "Flaticon logo" [ref=e581] [cursor=pointer]:
+            - /url: https://www.flaticon.com
+            - img "Flaticon logo" [ref=e582]
+          - generic [ref=e584]:
+            - link "Contributor access" [ref=e585] [cursor=pointer]:
+              - /url: https://contributor.flaticon.com/?utm_source=home_en&utm_medium=home_en_footer&utm_campaign=earn_money_en2
+            - link "Go Premium" [ref=e586] [cursor=pointer]:
+              - /url: https://www.flaticon.com/pricing
+        - generic [ref=e587]:
+          - generic [ref=e588]:
+            - paragraph [ref=e589]:
+              - generic [ref=e590]: Content 
+            - list [ref=e591]:
+              - listitem [ref=e592]:
+                - link "Authors" [ref=e593] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/authors
+              - listitem [ref=e594]:
+                - link "Icons" [ref=e595] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/most-downloaded
+              - listitem [ref=e596]:
+                - link "Stickers" [ref=e597] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/stickers-most-downloaded
+              - listitem [ref=e598]:
+                - link "Interface icons" [ref=e599] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/icon-fonts-most-downloaded
+              - listitem [ref=e600]:
+                - link "Animated icons" [ref=e601] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/animated-icons-most-downloaded
+              - listitem [ref=e602]:
+                - link "Icon tags" [ref=e603] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/tags
+              - listitem [ref=e604]:
+                - link "Stickers tags" [ref=e605] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/tags/stickers
+          - generic [ref=e606]:
+            - paragraph [ref=e607]:
+              - generic [ref=e608]: Tools 
+            - list [ref=e609]:
+              - listitem [ref=e610]:
+                - link "API" [ref=e611] [cursor=pointer]:
+                  - /url: https://www.magnific.com/api
+              - listitem [ref=e612]:
+                - link "Google Workspace" [ref=e613] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/for-google
+          - generic [ref=e614]:
+            - paragraph [ref=e615]:
+              - generic [ref=e616]: Help 
+            - list [ref=e617]:
+              - listitem [ref=e618]:
+                - link "Support" [ref=e619] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/profile/support
+              - listitem [ref=e620]:
+                - link "FAQs" [ref=e621] [cursor=pointer]:
+                  - /url: https://support.flaticon.com/s/?language=en_US
+              - listitem [ref=e622]:
+                - link "Icon styles" [ref=e623] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/styles
+              - listitem [ref=e624]:
+                - link "Icons editor" [ref=e625] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/icons-editor
+              - listitem [ref=e626]:
+                - link "Flaticon Collections" [ref=e627] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/collections
+              - listitem [ref=e628]:
+                - link "Follow" [ref=e629] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/follow
+              - listitem [ref=e630]:
+                - link "Merchandising License" [ref=e631] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/merchandising-license
+          - generic [ref=e632]:
+            - paragraph [ref=e633]:
+              - generic [ref=e634]: Company 
+            - list [ref=e635]:
+              - listitem [ref=e636]:
+                - link "About" [ref=e637] [cursor=pointer]:
+                  - /url: https://www.magnific.com/company/about-us
+              - listitem [ref=e638]:
+                - link "Contact us" [ref=e639] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/profile/support
+              - listitem [ref=e640]:
+                - link "Our license" [ref=e641] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/legal
+              - listitem [ref=e642]:
+                - link "Blog" [ref=e643] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/blog/
+              - listitem [ref=e644]:
+                - link "Plans and Pricing" [ref=e645] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/pricing
+              - listitem [ref=e646]:
+                - link "What’s new" [ref=e647] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/whats-new
+          - generic [ref=e648]:
+            - paragraph [ref=e649]:
+              - generic [ref=e650]: Social media
+            - list [ref=e651]:
+              - listitem [ref=e652]:
+                - link "" [ref=e653] [cursor=pointer]:
+                  - /url: https://www.facebook.com/flaticon
+              - listitem [ref=e654]:
+                - link "twitter logo" [ref=e655] [cursor=pointer]:
+                  - /url: https://twitter.com/flaticon
+                  - img "twitter logo" [ref=e656]
+              - listitem [ref=e657]:
+                - link "" [ref=e658] [cursor=pointer]:
+                  - /url: https://www.pinterest.com/flaticon
+              - listitem [ref=e659]:
+                - link "" [ref=e660] [cursor=pointer]:
+                  - /url: https://www.instagram.com/flaticon/?hl=en
+              - listitem [ref=e661]:
+                - link "" [ref=e662] [cursor=pointer]:
+                  - /url: https://www.youtube.com/channel/UC9wPXN2TIWoUamqONb7v8Pw
+            - generic [ref=e663]:
+              - paragraph [ref=e664]: Get exclusive resources straight to your inbox
+              - link "Sign up" [ref=e665] [cursor=pointer]:
+                - /url: https://id.magnific.com/v2/sign-up?client_id=flaticon&lang=en
+        - list [ref=e666]:
+          - listitem [ref=e667]:
+            - link "Terms & conditions" [ref=e668] [cursor=pointer]:
+              - /url: https://www.flaticon.com/legal
+          - listitem [ref=e669]:
+            - link "Privacy policy" [ref=e670] [cursor=pointer]:
+              - /url: https://www.magnific.com/legal/privacy
+          - listitem [ref=e671]:
+            - link "Cookies policy" [ref=e672] [cursor=pointer]:
+              - /url: https://www.flaticon.com/legal/cookies
+          - listitem [ref=e673]:
+            - link "Copyrights Notification" [ref=e674] [cursor=pointer]:
+              - /url: https://www.magnific.com/legal/copyright
+          - listitem [ref=e675]:
+            - button "Configuración de cookies" [ref=e676] [cursor=pointer]
+        - generic [ref=e678]:
+          - paragraph [ref=e681]: Copyright © 2010-2026 Freepik Company S.L.U. All rights reserved.
+          - button "English " [ref=e685] [cursor=pointer]:
+            - generic [ref=e686]: English
+            - generic [ref=e687]: 
+      - generic [ref=e689]:
+        - text: Freepik company projects
+        - list [ref=e690]:
+          - listitem [ref=e691]:
+            - link "Magnific" [ref=e692] [cursor=pointer]:
+              - /url: https://www.magnific.com
+          - listitem [ref=e693]:
+            - link "Flaticon" [ref=e694] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e695]:
+            - link "Slidesgo" [ref=e696] [cursor=pointer]:
+              - /url: https://slidesgo.com
+  - text: ×  
+  - generic [ref=e697]:
+    - generic [ref=e700] [cursor=pointer]: 
+    - generic [ref=e701]:
+      - paragraph [ref=e702]: How likely are you to recommend Flaticon to a friend?
+      - generic [ref=e703]:
+        - generic [ref=e704] [cursor=pointer]: "0"
+        - generic [ref=e705] [cursor=pointer]: "1"
+        - generic [ref=e706] [cursor=pointer]: "2"
+        - generic [ref=e707] [cursor=pointer]: "3"
+        - generic [ref=e708] [cursor=pointer]: "4"
+        - generic [ref=e709] [cursor=pointer]: "5"
+        - generic [ref=e710] [cursor=pointer]: "6"
+        - generic [ref=e711] [cursor=pointer]: "7"
+        - generic [ref=e712] [cursor=pointer]: "8"
+        - generic [ref=e713] [cursor=pointer]: "9"
+        - generic [ref=e714] [cursor=pointer]: "10"
+      - generic [ref=e715]:
+        - generic [ref=e716]: Not likely
+        - generic [ref=e717]: Very likely

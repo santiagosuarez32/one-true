@@ -1,0 +1,1692 @@
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - banner [ref=e7]:
+      - navigation [ref=e9]:
+        - list [ref=e10]:
+          - listitem [ref=e11]:
+            - generic [ref=e12]:
+              - button [ref=e14] [cursor=pointer]:
+                - img [ref=e15]
+              - generic [ref=e17]:
+                - button "3D Icons" [ref=e19] [cursor=pointer]:
+                  - generic [ref=e20]: 3D Icons
+                  - img [ref=e21]
+                - button "Lottie Animations" [ref=e24] [cursor=pointer]:
+                  - generic [ref=e25]: Lottie Animations
+                  - img [ref=e26]
+                - button "Illustrations" [ref=e29] [cursor=pointer]:
+                  - generic [ref=e30]: Illustrations
+                  - img [ref=e31]
+                - button "Icons" [ref=e34] [cursor=pointer]:
+                  - generic [ref=e35]: Icons
+                  - img [ref=e36]
+                - button "AI Suite" [ref=e39] [cursor=pointer]:
+                  - generic [ref=e40]: AI Suite
+                  - img [ref=e41]
+                - separator [ref=e43]
+                - button "Tools" [ref=e45] [cursor=pointer]:
+                  - generic [ref=e46]: Tools
+                  - img [ref=e47]
+                - link "Free Assets" [ref=e49] [cursor=pointer]:
+                  - /url: /freebies
+                - link "Blog" [ref=e50] [cursor=pointer]:
+                  - /url: /blog
+                - link "Pricing" [ref=e51] [cursor=pointer]:
+                  - /url: /pricing
+          - listitem [ref=e52]:
+            - link "iconscout-logo" [ref=e53] [cursor=pointer]:
+              - /url: /
+              - img "iconscout-logo" [ref=e54]
+          - listitem [ref=e55]:
+            - button "Log in" [ref=e56] [cursor=pointer]
+          - listitem [ref=e57]:
+            - button "Sign up" [ref=e58] [cursor=pointer]
+    - main [ref=e59]:
+      - generic [ref=e60]:
+        - generic [ref=e61]:
+          - generic [ref=e62]:
+            - heading "Shipping And Delivery Icon Pack" [level=1] [ref=e64]
+            - generic [ref=e65]: 100 Icons
+            - button "Get Started - It's Free" [ref=e67] [cursor=pointer]
+            - group [ref=e68]:
+              - button "Add to collection" [ref=e71] [cursor=pointer]:
+                - img [ref=e72]
+                - generic [ref=e74]: Add to collection
+              - button [ref=e76] [cursor=pointer]:
+                - img [ref=e77]
+              - button [ref=e79] [cursor=pointer]:
+                - img [ref=e80]
+            - generic [ref=e82]:
+              - separator [ref=e83]
+              - generic [ref=e84]:
+                - generic [ref=e85]: Download formats
+                - generic [ref=e86]:
+                  - text: Download in
+                  - generic [ref=e87]: svg, png and 5 more
+                  - text: formats
+              - separator [ref=e88]
+              - generic [ref=e89]: License
+              - generic [ref=e90]:
+                - text: Digital License
+                - link "more info" [ref=e91] [cursor=pointer]:
+                  - /url: /licenses
+              - separator [ref=e92]
+              - generic [ref=e93]: Style
+              - link "Colored Outline Style" [ref=e94] [cursor=pointer]:
+                - /url: /icon-styles/colored-outline
+              - separator [ref=e95]
+              - generic [ref=e96]:
+                - link "Bricks Stock Bricks Stock 23,007 Assets" [ref=e97] [cursor=pointer]:
+                  - /url: /contributors/bricks-stock/icons
+                  - img "Bricks Stock" [ref=e98]
+                  - generic [ref=e99]:
+                    - paragraph [ref=e100]: Bricks Stock
+                    - generic [ref=e101]: 23,007 Assets
+                - link "Follow" [ref=e102] [cursor=pointer]:
+                  - /url: "#"
+          - generic [ref=e103]:
+            - heading "AI Icon Generator" [level=5] [ref=e104]
+            - generic [ref=e105]: Use AI to create new customizable icon based on this pack as a reference.
+            - button "Sparkle Generate" [ref=e106] [cursor=pointer]:
+              - img "Sparkle" [ref=e107]
+              - text: Generate
+              - img [ref=e109]:
+                - img [ref=e111]
+        - generic [ref=e122]:
+          - generic [ref=e123]:
+            - list [ref=e125]:
+              - listitem "Home" [ref=e126]:
+                - link "Home" [ref=e127] [cursor=pointer]:
+                  - /url: /
+              - listitem "Icons" [ref=e128]:
+                - text: ›
+                - link "Icons" [ref=e129] [cursor=pointer]:
+                  - /url: /icons
+              - listitem "Miscellaneous Icon Packs" [ref=e130]:
+                - text: ›
+                - link "Miscellaneous Icon Packs" [ref=e131] [cursor=pointer]:
+                  - /url: /icon-packs/miscellaneous
+              - listitem "Delivery Icon Packs" [ref=e132]:
+                - text: ›
+                - link "Delivery Icon Packs" [ref=e133] [cursor=pointer]:
+                  - /url: /icon-packs/delivery
+            - button "Color Palette" [ref=e136] [cursor=pointer]:
+              - img "Color Palette" [ref=e138]
+              - img [ref=e139]
+          - generic [ref=e142]:
+            - article "24/7 Service Icon" [ref=e144]:
+              - link "24/7 Service Icon" [ref=e145] [cursor=pointer]:
+                - /url: /icon/247-service-icon_9701197
+                - generic [ref=e146]:
+                  - img "24/7 Service Icon"
+            - article "Air Delivery Icon" [ref=e148]:
+              - link "Air Delivery Icon" [ref=e149] [cursor=pointer]:
+                - /url: /icon/air-delivery-icon_9701163
+                - generic [ref=e150]:
+                  - img "Air Delivery Icon"
+            - article "Air Shipping Icon" [ref=e152]:
+              - link "Air Shipping Icon" [ref=e153] [cursor=pointer]:
+                - /url: /icon/air-shipping-icon_9701116
+                - generic [ref=e154]:
+                  - img "Air Shipping Icon"
+            - article "Arrival Package Icon" [ref=e156]:
+              - link "Arrival Package Icon" [ref=e157] [cursor=pointer]:
+                - /url: /icon/arrival-package-icon_9701198
+                - generic [ref=e158]:
+                  - img "Arrival Package Icon"
+            - article "Bar Code Scanning Icon" [ref=e160]:
+              - link "Bar Code Scanning Icon" [ref=e161] [cursor=pointer]:
+                - /url: /icon/bar-code-scanning-icon_9701123
+                - generic [ref=e162]:
+                  - img "Bar Code Scanning Icon"
+            - article "Bar code Scanning Icon" [ref=e164]:
+              - link "Bar code Scanning Icon" [ref=e165] [cursor=pointer]:
+                - /url: /icon/bar-code-scanning-icon_9701141
+                - generic [ref=e166]:
+                  - img "Bar code Scanning Icon"
+            - article "Barcode Icon" [ref=e168]:
+              - link "Barcode Icon" [ref=e169] [cursor=pointer]:
+                - /url: /icon/barcode-icon_9701177
+                - generic [ref=e170]:
+                  - img "Barcode Icon"
+            - article "Bike Delivery Icon" [ref=e172]:
+              - link "Bike Delivery Icon" [ref=e173] [cursor=pointer]:
+                - /url: /icon/bike-delivery-icon_9701114
+                - generic [ref=e174]:
+                  - img "Bike Delivery Icon"
+            - article "Cancel Delivery Icon" [ref=e176]:
+              - link "Cancel Delivery Icon" [ref=e177] [cursor=pointer]:
+                - /url: /icon/cancel-delivery-icon_9701133
+                - generic [ref=e178]:
+                  - img "Cancel Delivery Icon"
+            - article "Card Payment Icon" [ref=e180]:
+              - link "Card Payment Icon" [ref=e181] [cursor=pointer]:
+                - /url: /icon/card-payment-icon_9701212
+                - generic [ref=e182]:
+                  - img "Card Payment Icon"
+            - article "Cartons Icon" [ref=e184]:
+              - link "Cartons Icon" [ref=e185] [cursor=pointer]:
+                - /url: /icon/cartons-icon_9701146
+                - generic [ref=e186]:
+                  - img "Cartons Icon"
+            - article "Cash On Delivery Icon" [ref=e188]:
+              - link "Cash On Delivery Icon" [ref=e189] [cursor=pointer]:
+                - /url: /icon/cash-on-delivery-icon_9701144
+                - generic [ref=e190]:
+                  - img "Cash On Delivery Icon"
+            - article "Chat Icon" [ref=e192]:
+              - link "Chat Icon" [ref=e193] [cursor=pointer]:
+                - /url: /icon/chat-icon_9701188
+                - generic [ref=e194]:
+                  - img "Chat Icon"
+            - article "Clothes Delivery Icon" [ref=e196]:
+              - link "Clothes Delivery Icon" [ref=e197] [cursor=pointer]:
+                - /url: /icon/clothes-delivery-icon_9701189
+                - generic [ref=e198]:
+                  - img "Clothes Delivery Icon"
+            - article "Conveyors Icon" [ref=e200]:
+              - link "Conveyors Icon" [ref=e201] [cursor=pointer]:
+                - /url: /icon/conveyors-icon_9701211
+                - generic [ref=e202]:
+                  - img "Conveyors Icon"
+            - article "Courier Boy Icon" [ref=e204]:
+              - link "Courier Boy Icon" [ref=e205] [cursor=pointer]:
+                - /url: /icon/courier-boy-icon_9701199
+                - generic [ref=e206]:
+                  - img "Courier Boy Icon"
+            - article "Crane Hook Icon" [ref=e208]:
+              - link "Crane Hook Icon" [ref=e209] [cursor=pointer]:
+                - /url: /icon/crane-hook-icon_9701162
+                - generic [ref=e210]:
+                  - img "Crane Hook Icon"
+            - article "Customer Office Icon" [ref=e212]:
+              - link "Customer Office Icon" [ref=e213] [cursor=pointer]:
+                - /url: /icon/customer-office-icon_9701195
+                - generic [ref=e214]:
+                  - img "Customer Office Icon"
+            - article "Customer Services Icon" [ref=e216]:
+              - link "Customer Services Icon" [ref=e217] [cursor=pointer]:
+                - /url: /icon/customer-services-icon_9701200
+                - generic [ref=e218]:
+                  - img "Customer Services Icon"
+            - article "Delivery Icon" [ref=e220]:
+              - link "Delivery Icon" [ref=e221] [cursor=pointer]:
+                - /url: /icon/delivery-icon_9701147
+                - generic [ref=e222]:
+                  - img "Delivery Icon"
+            - article "Delivery Icon" [ref=e224]:
+              - link "Delivery Icon" [ref=e225] [cursor=pointer]:
+                - /url: /icon/delivery-icon_9701176
+                - generic [ref=e226]:
+                  - img "Delivery Icon"
+            - article "Delivery Burn Icon" [ref=e228]:
+              - link "Delivery Burn Icon" [ref=e229] [cursor=pointer]:
+                - /url: /icon/delivery-burn-icon_9701152
+                - generic [ref=e230]:
+                  - img "Delivery Burn Icon"
+            - article "Delivery Calculation Icon" [ref=e232]:
+              - link "Delivery Calculation Icon" [ref=e233] [cursor=pointer]:
+                - /url: /icon/delivery-calculation-icon_9701148
+                - generic [ref=e234]:
+                  - img "Delivery Calculation Icon"
+            - article "Delivery Cancel Icon" [ref=e236]:
+              - link "Delivery Cancel Icon" [ref=e237] [cursor=pointer]:
+                - /url: /icon/delivery-cancel-icon_9701161
+                - generic [ref=e238]:
+                  - img "Delivery Cancel Icon"
+            - article "Delivery Care Icon" [ref=e240]:
+              - link "Delivery Care Icon" [ref=e241] [cursor=pointer]:
+                - /url: /icon/delivery-care-icon_9701134
+                - generic [ref=e242]:
+                  - img "Delivery Care Icon"
+            - article "Delivery Care Icon" [ref=e244]:
+              - link "Delivery Care Icon" [ref=e245] [cursor=pointer]:
+                - /url: /icon/delivery-care-icon_9701170
+                - generic [ref=e246]:
+                  - img "Delivery Care Icon"
+            - article "Delivery Confirmation Icon" [ref=e248]:
+              - link "Delivery Confirmation Icon" [ref=e249] [cursor=pointer]:
+                - /url: /icon/delivery-confirmation-icon_9701135
+                - generic [ref=e250]:
+                  - img "Delivery Confirmation Icon"
+            - article "Delivery Date Icon" [ref=e252]:
+              - link "Delivery Date Icon" [ref=e253] [cursor=pointer]:
+                - /url: /icon/delivery-date-icon_9701136
+                - generic [ref=e254]:
+                  - img "Delivery Date Icon"
+            - article "Delivery Done Icon" [ref=e256]:
+              - link "Delivery Done Icon" [ref=e257] [cursor=pointer]:
+                - /url: /icon/delivery-done-icon_9701128
+                - generic [ref=e258]:
+                  - img "Delivery Done Icon"
+            - article "Delivery Feedback Icon" [ref=e260]:
+              - link "Delivery Feedback Icon" [ref=e261] [cursor=pointer]:
+                - /url: /icon/delivery-feedback-icon_9701145
+                - generic [ref=e262]:
+                  - img "Delivery Feedback Icon"
+            - article "Delivery Feedback Icon" [ref=e264]:
+              - link "Delivery Feedback Icon" [ref=e265] [cursor=pointer]:
+                - /url: /icon/delivery-feedback-icon_9701182
+                - generic [ref=e266]:
+                  - img "Delivery Feedback Icon"
+            - article "Delivery Insurance Icon" [ref=e268]:
+              - link "Delivery Insurance Icon" [ref=e269] [cursor=pointer]:
+                - /url: /icon/delivery-insurance-icon_9701149
+                - generic [ref=e270]:
+                  - img "Delivery Insurance Icon"
+            - article "Delivery Invoice Icon" [ref=e272]:
+              - link "Delivery Invoice Icon" [ref=e273] [cursor=pointer]:
+                - /url: /icon/delivery-invoice-icon_9701158
+                - generic [ref=e274]:
+                  - img "Delivery Invoice Icon"
+            - article "Delivery List Icon" [ref=e276]:
+              - link "Delivery List Icon" [ref=e277] [cursor=pointer]:
+                - /url: /icon/delivery-list-icon_9701201
+                - generic [ref=e278]:
+                  - img "Delivery List Icon"
+            - article "Delivery Location Icon" [ref=e280]:
+              - link "Delivery Location Icon" [ref=e281] [cursor=pointer]:
+                - /url: /icon/delivery-location-icon_9701124
+                - generic [ref=e282]:
+                  - img "Delivery Location Icon"
+            - article "Delivery Loss Icon" [ref=e284]:
+              - link "Delivery Loss Icon" [ref=e285] [cursor=pointer]:
+                - /url: /icon/delivery-loss-icon_9701196
+                - generic [ref=e286]:
+                  - img "Delivery Loss Icon"
+            - article "Delivery management Icon" [ref=e288]:
+              - link "Delivery management Icon" [ref=e289] [cursor=pointer]:
+                - /url: /icon/delivery-management-icon_9701192
+                - generic [ref=e290]:
+                  - img "Delivery management Icon"
+            - article "Delivery Move Icon" [ref=e292]:
+              - link "Delivery Move Icon" [ref=e293] [cursor=pointer]:
+                - /url: /icon/delivery-move-icon_9701169
+                - generic [ref=e294]:
+                  - img "Delivery Move Icon"
+            - article "Delivery Network Icon" [ref=e296]:
+              - link "Delivery Network Icon" [ref=e297] [cursor=pointer]:
+                - /url: /icon/delivery-network-icon_9701151
+                - generic [ref=e298]:
+                  - img "Delivery Network Icon"
+            - article "Delivery On Time Icon" [ref=e300]:
+              - link "Delivery On Time Icon" [ref=e301] [cursor=pointer]:
+                - /url: /icon/delivery-on-time-icon_9701183
+                - generic [ref=e302]:
+                  - img "Delivery On Time Icon"
+            - article "Delivery Payment Icon" [ref=e304]:
+              - link "Delivery Payment Icon" [ref=e305] [cursor=pointer]:
+                - /url: /icon/delivery-payment-icon_9701137
+                - generic [ref=e306]:
+                  - img "Delivery Payment Icon"
+            - article "Delivery Payment Icon" [ref=e308]:
+              - link "Delivery Payment Icon" [ref=e309] [cursor=pointer]:
+                - /url: /icon/delivery-payment-icon_9701187
+                - generic [ref=e310]:
+                  - img "Delivery Payment Icon"
+            - article "Delivery Person Icon" [ref=e312]:
+              - link "Delivery Person Icon" [ref=e313] [cursor=pointer]:
+                - /url: /icon/delivery-person-icon_9701193
+                - generic [ref=e314]:
+                  - img "Delivery Person Icon"
+            - article "Delivery Refresh Icon" [ref=e316]:
+              - link "Delivery Refresh Icon" [ref=e317] [cursor=pointer]:
+                - /url: /icon/delivery-refresh-icon_9701209
+                - generic [ref=e318]:
+                  - img "Delivery Refresh Icon"
+            - article "Delivery Route Icon" [ref=e320]:
+              - link "Delivery Route Icon" [ref=e321] [cursor=pointer]:
+                - /url: /icon/delivery-route-icon_9701119
+                - generic [ref=e322]:
+                  - img "Delivery Route Icon"
+            - article "Delivery Security Icon" [ref=e324]:
+              - link "Delivery Security Icon" [ref=e325] [cursor=pointer]:
+                - /url: /icon/delivery-security-icon_9701206
+                - generic [ref=e326]:
+                  - img "Delivery Security Icon"
+            - article "Delivery target Icon" [ref=e328]:
+              - link "Delivery target Icon" [ref=e329] [cursor=pointer]:
+                - /url: /icon/delivery-target-icon_9701142
+                - generic [ref=e330]:
+                  - img "Delivery target Icon"
+            - article "Delivery Time Icon" [ref=e332]:
+              - link "Delivery Time Icon" [ref=e333] [cursor=pointer]:
+                - /url: /icon/delivery-time-icon_9701208
+                - generic [ref=e334]:
+                  - img "Delivery Time Icon"
+            - article "Delivery Truck Icon" [ref=e336]:
+              - link "Delivery Truck Icon" [ref=e337] [cursor=pointer]:
+                - /url: /icon/delivery-truck-icon_9701113
+                - generic [ref=e338]:
+                  - img "Delivery Truck Icon"
+            - article "Direction Icon" [ref=e340]:
+              - link "Direction Icon" [ref=e341] [cursor=pointer]:
+                - /url: /icon/direction-icon_9701180
+                - generic [ref=e342]:
+                  - img "Direction Icon"
+            - article "Distribution Icon" [ref=e344]:
+              - link "Distribution Icon" [ref=e345] [cursor=pointer]:
+                - /url: /icon/distribution-icon_9701129
+                - generic [ref=e346]:
+                  - img "Distribution Icon"
+            - article "Drone Delivery Icon" [ref=e348]:
+              - link "Drone Delivery Icon" [ref=e349] [cursor=pointer]:
+                - /url: /icon/drone-delivery-icon_9701130
+                - generic [ref=e350]:
+                  - img "Drone Delivery Icon"
+            - article "Empty Box Icon" [ref=e352]:
+              - link "Empty Box Icon" [ref=e353] [cursor=pointer]:
+                - /url: /icon/empty-box-icon_9701127
+                - generic [ref=e354]:
+                  - img "Empty Box Icon"
+            - article "Fast Delivery Icon" [ref=e356]:
+              - link "Fast Delivery Icon" [ref=e357] [cursor=pointer]:
+                - /url: /icon/fast-delivery-icon_9701157
+                - generic [ref=e358]:
+                  - img "Fast Delivery Icon"
+            - article "Favourite List Icon" [ref=e360]:
+              - link "Favourite List Icon" [ref=e361] [cursor=pointer]:
+                - /url: /icon/favourite-list-icon_9701178
+                - generic [ref=e362]:
+                  - img "Favourite List Icon"
+            - article "Feedback Icon" [ref=e364]:
+              - link "Feedback Icon" [ref=e365] [cursor=pointer]:
+                - /url: /icon/feedback-icon_9701165
+                - generic [ref=e366]:
+                  - img "Feedback Icon"
+            - article "Food Delivery Icon" [ref=e368]:
+              - link "Food Delivery Icon" [ref=e369] [cursor=pointer]:
+                - /url: /icon/food-delivery-icon_9701126
+                - generic [ref=e370]:
+                  - img "Food Delivery Icon"
+            - article "Forklift Icon" [ref=e372]:
+              - link "Forklift Icon" [ref=e373] [cursor=pointer]:
+                - /url: /icon/forklift-icon_9701203
+                - generic [ref=e374]:
+                  - img "Forklift Icon"
+            - article "Fragile Package Icon" [ref=e376]:
+              - link "Fragile Package Icon" [ref=e377] [cursor=pointer]:
+                - /url: /icon/fragile-package-icon_9701175
+                - generic [ref=e378]:
+                  - img "Fragile Package Icon"
+            - article "Free Delivery Icon" [ref=e380]:
+              - link "Free Delivery Icon" [ref=e381] [cursor=pointer]:
+                - /url: /icon/free-delivery-icon_9701138
+                - generic [ref=e382]:
+                  - img "Free Delivery Icon"
+            - article "Gift Delivery Icon" [ref=e384]:
+              - link "Gift Delivery Icon" [ref=e385] [cursor=pointer]:
+                - /url: /icon/gift-delivery-icon_9701150
+                - generic [ref=e386]:
+                  - img "Gift Delivery Icon"
+            - article "Global Delivery Icon" [ref=e388]:
+              - link "Global Delivery Icon" [ref=e389] [cursor=pointer]:
+                - /url: /icon/global-delivery-icon_9701117
+                - generic [ref=e390]:
+                  - img "Global Delivery Icon"
+            - article "Global Package Icon" [ref=e392]:
+              - link "Global Package Icon" [ref=e393] [cursor=pointer]:
+                - /url: /icon/global-package-icon_9701171
+                - generic [ref=e394]:
+                  - img "Global Package Icon"
+            - article "House Delivery Icon" [ref=e396]:
+              - link "House Delivery Icon" [ref=e397] [cursor=pointer]:
+                - /url: /icon/house-delivery-icon_9701120
+                - generic [ref=e398]:
+                  - img "House Delivery Icon"
+            - article "Loading Icon" [ref=e400]:
+              - link "Loading Icon" [ref=e401] [cursor=pointer]:
+                - /url: /icon/loading-icon_9701204
+                - generic [ref=e402]:
+                  - img "Loading Icon"
+            - article "Loading Truck Icon" [ref=e404]:
+              - link "Loading Truck Icon" [ref=e405] [cursor=pointer]:
+                - /url: /icon/loading-truck-icon_9701185
+                - generic [ref=e406]:
+                  - img "Loading Truck Icon"
+            - article "Location Icon" [ref=e408]:
+              - link "Location Icon" [ref=e409] [cursor=pointer]:
+                - /url: /icon/location-icon_9701205
+                - generic [ref=e410]:
+                  - img "Location Icon"
+            - article "Luggage Cart Icon" [ref=e412]:
+              - link "Luggage Cart Icon" [ref=e413] [cursor=pointer]:
+                - /url: /icon/luggage-cart-icon_9701139
+                - generic [ref=e414]:
+                  - img "Luggage Cart Icon"
+            - article "Mail Icon" [ref=e416]:
+              - link "Mail Icon" [ref=e417] [cursor=pointer]:
+                - /url: /icon/mail-icon_9701164
+                - generic [ref=e418]:
+                  - img "Mail Icon"
+            - article "Map Location Icon" [ref=e420]:
+              - link "Map Location Icon" [ref=e421] [cursor=pointer]:
+                - /url: /icon/map-location-icon_9701184
+                - generic [ref=e422]:
+                  - img "Map Location Icon"
+            - article "New Product Icon" [ref=e424]:
+              - link "New Product Icon" [ref=e425] [cursor=pointer]:
+                - /url: /icon/new-product-icon_9701181
+                - generic [ref=e426]:
+                  - img "New Product Icon"
+            - article "Oil Barrel Icon" [ref=e428]:
+              - link "Oil Barrel Icon" [ref=e429] [cursor=pointer]:
+                - /url: /icon/oil-barrel-icon_9701173
+                - generic [ref=e430]:
+                  - img "Oil Barrel Icon"
+            - article "Oil Truck Icon" [ref=e432]:
+              - link "Oil Truck Icon" [ref=e433] [cursor=pointer]:
+                - /url: /icon/oil-truck-icon_9701160
+                - generic [ref=e434]:
+                  - img "Oil Truck Icon"
+            - article "Online Package Icon" [ref=e436]:
+              - link "Online Package Icon" [ref=e437] [cursor=pointer]:
+                - /url: /icon/online-package-icon_9701168
+                - generic [ref=e438]:
+                  - img "Online Package Icon"
+            - article "Online Shipping Icon" [ref=e440]:
+              - link "Online Shipping Icon" [ref=e441] [cursor=pointer]:
+                - /url: /icon/online-shipping-icon_9701131
+                - generic [ref=e442]:
+                  - img "Online Shipping Icon"
+            - article "Online Shopping Icon" [ref=e444]:
+              - link "Online Shopping Icon" [ref=e445] [cursor=pointer]:
+                - /url: /icon/online-shopping-icon_9701186
+                - generic [ref=e446]:
+                  - img "Online Shopping Icon"
+            - article "Online Tracking Icon" [ref=e448]:
+              - link "Online Tracking Icon" [ref=e449] [cursor=pointer]:
+                - /url: /icon/online-tracking-icon_9701121
+                - generic [ref=e450]:
+                  - img "Online Tracking Icon"
+            - article "Open Package Icon" [ref=e452]:
+              - link "Open Package Icon" [ref=e453] [cursor=pointer]:
+                - /url: /icon/open-package-icon_9701179
+                - generic [ref=e454]:
+                  - img "Open Package Icon"
+            - article "Order Checklist Icon" [ref=e456]:
+              - link "Order Checklist Icon" [ref=e457] [cursor=pointer]:
+                - /url: /icon/order-checklist-icon_9701140
+                - generic [ref=e458]:
+                  - img "Order Checklist Icon"
+            - article "Package Location Icon" [ref=e460]:
+              - link "Package Location Icon" [ref=e461] [cursor=pointer]:
+                - /url: /icon/package-location-icon_9701166
+                - generic [ref=e462]:
+                  - img "Package Location Icon"
+            - article "Package Scanning Icon" [ref=e464]:
+              - link "Package Scanning Icon" [ref=e465] [cursor=pointer]:
+                - /url: /icon/package-scanning-icon_9701174
+                - generic [ref=e466]:
+                  - img "Package Scanning Icon"
+            - article "Package Shopping Icon" [ref=e468]:
+              - link "Package Shopping Icon" [ref=e469] [cursor=pointer]:
+                - /url: /icon/package-shopping-icon_9701172
+                - generic [ref=e470]:
+                  - img "Package Shopping Icon"
+            - article "Package Storage Icon" [ref=e472]:
+              - link "Package Storage Icon" [ref=e473] [cursor=pointer]:
+                - /url: /icon/package-storage-icon_9701143
+                - generic [ref=e474]:
+                  - img "Package Storage Icon"
+            - article "Package Weight Icon" [ref=e476]:
+              - link "Package Weight Icon" [ref=e477] [cursor=pointer]:
+                - /url: /icon/package-weight-icon_9701125
+                - generic [ref=e478]:
+                  - img "Package Weight Icon"
+            - article "Package Weight Icon" [ref=e480]:
+              - link "Package Weight Icon" [ref=e481] [cursor=pointer]:
+                - /url: /icon/package-weight-icon_9701190
+                - generic [ref=e482]:
+                  - img "Package Weight Icon"
+            - article "Package Weight Icon" [ref=e484]:
+              - link "Package Weight Icon" [ref=e485] [cursor=pointer]:
+                - /url: /icon/package-weight-icon_9701207
+                - generic [ref=e486]:
+                  - img "Package Weight Icon"
+            - article "Parcel Direction Icon" [ref=e488]:
+              - link "Parcel Direction Icon" [ref=e489] [cursor=pointer]:
+                - /url: /icon/parcel-direction-icon_9701153
+                - generic [ref=e490]:
+                  - img "Parcel Direction Icon"
+            - article "Parcel Management Icon" [ref=e492]:
+              - link "Parcel Management Icon" [ref=e493] [cursor=pointer]:
+                - /url: /icon/parcel-management-icon_9701122
+                - generic [ref=e494]:
+                  - img "Parcel Management Icon"
+            - article "Parcel Tracking Icon" [ref=e496]:
+              - link "Parcel Tracking Icon" [ref=e497] [cursor=pointer]:
+                - /url: /icon/parcel-tracking-icon_9701154
+                - generic [ref=e498]:
+                  - img "Parcel Tracking Icon"
+            - article "Post Office Icon" [ref=e500]:
+              - link "Post Office Icon" [ref=e501] [cursor=pointer]:
+                - /url: /icon/post-office-icon_9701159
+                - generic [ref=e502]:
+                  - img "Post Office Icon"
+            - article "Qr Code Icon" [ref=e504]:
+              - link "Qr Code Icon" [ref=e505] [cursor=pointer]:
+                - /url: /icon/qr-code-icon_9701132
+                - generic [ref=e506]:
+                  - img "Qr Code Icon"
+            - article "Remove Parcel Icon" [ref=e508]:
+              - link "Remove Parcel Icon" [ref=e509] [cursor=pointer]:
+                - /url: /icon/remove-parcel-icon_9701155
+                - generic [ref=e510]:
+                  - img "Remove Parcel Icon"
+            - article "Search Box Icon" [ref=e512]:
+              - link "Search Box Icon" [ref=e513] [cursor=pointer]:
+                - /url: /icon/search-box-icon_9701191
+                - generic [ref=e514]:
+                  - img "Search Box Icon"
+            - article "Send Mail Icon" [ref=e516]:
+              - link "Send Mail Icon" [ref=e517] [cursor=pointer]:
+                - /url: /icon/send-mail-icon_9701156
+                - generic [ref=e518]:
+                  - img "Send Mail Icon"
+            - article "Ship Loading Icon" [ref=e520]:
+              - link "Ship Loading Icon" [ref=e521] [cursor=pointer]:
+                - /url: /icon/ship-loading-icon_9701194
+                - generic [ref=e522]:
+                  - img "Ship Loading Icon"
+            - article "Shipping Icon" [ref=e524]:
+              - link "Shipping Icon" [ref=e525] [cursor=pointer]:
+                - /url: /icon/shipping-icon_9701210
+                - generic [ref=e526]:
+                  - img "Shipping Icon"
+            - article "Truck Icon" [ref=e528]:
+              - link "Truck Icon" [ref=e529] [cursor=pointer]:
+                - /url: /icon/truck-icon_9701202
+                - generic [ref=e530]:
+                  - img "Truck Icon"
+            - article "Warehouse Icon" [ref=e532]:
+              - link "Warehouse Icon" [ref=e533] [cursor=pointer]:
+                - /url: /icon/warehouse-icon_9701118
+                - generic [ref=e534]:
+                  - img "Warehouse Icon"
+            - article "Web Delivery Icon" [ref=e536]:
+              - link "Web Delivery Icon" [ref=e537] [cursor=pointer]:
+                - /url: /icon/web-delivery-icon_9701167
+                - generic [ref=e538]:
+                  - img "Web Delivery Icon"
+            - article "Wooden Box Icon" [ref=e540]:
+              - link "Wooden Box Icon" [ref=e541] [cursor=pointer]:
+                - /url: /icon/wooden-box-icon_9701115
+                - generic [ref=e542]:
+                  - img "Wooden Box Icon"
+      - generic [ref=e546]:
+        - list [ref=e547]:
+          - listitem [ref=e548]:
+            - heading "Delivery Icon Packs" [level=2] [ref=e549]:
+              - link "Delivery Icon Packs" [ref=e550] [cursor=pointer]:
+                - /url: /icon-packs/delivery
+          - listitem [ref=e551]:
+            - heading "Shipping Icon Packs" [level=2] [ref=e552]:
+              - link "Shipping Icon Packs" [ref=e553] [cursor=pointer]:
+                - /url: /icon-packs/shipping
+          - listitem [ref=e554]:
+            - heading "Logistics Icon Packs" [level=2] [ref=e555]:
+              - link "Logistics Icon Packs" [ref=e556] [cursor=pointer]:
+                - /url: /icon-packs/logistics
+          - listitem [ref=e557]:
+            - heading "Package Icon Packs" [level=2] [ref=e558]:
+              - link "Package Icon Packs" [ref=e559] [cursor=pointer]:
+                - /url: /icon-packs/package
+          - listitem [ref=e560]:
+            - heading "Courier Icon Packs" [level=2] [ref=e561]:
+              - link "Courier Icon Packs" [ref=e562] [cursor=pointer]:
+                - /url: /icon-packs/courier
+          - listitem [ref=e563]:
+            - heading "Parcel Icon Packs" [level=2] [ref=e564]:
+              - link "Parcel Icon Packs" [ref=e565] [cursor=pointer]:
+                - /url: /icon-packs/parcel
+          - listitem [ref=e566]:
+            - heading "Cargo Icon Packs" [level=2] [ref=e567]:
+              - link "Cargo Icon Packs" [ref=e568] [cursor=pointer]:
+                - /url: /icon-packs/cargo
+          - listitem [ref=e569]:
+            - heading "Logistic Icon Packs" [level=2] [ref=e570]:
+              - link "Logistic Icon Packs" [ref=e571] [cursor=pointer]:
+                - /url: /icon-packs/logistic
+          - listitem [ref=e572]:
+            - heading "Box Icon Packs" [level=2] [ref=e573]:
+              - link "Box Icon Packs" [ref=e574] [cursor=pointer]:
+                - /url: /icon-packs/box
+          - listitem [ref=e575]:
+            - heading "Service Icon Packs" [level=2] [ref=e576]:
+              - link "Service Icon Packs" [ref=e577] [cursor=pointer]:
+                - /url: /icon-packs/service
+          - listitem [ref=e578]:
+            - heading "Delivery Service Icon Packs" [level=2] [ref=e579]:
+              - link "Delivery Service Icon Packs" [ref=e580] [cursor=pointer]:
+                - /url: /icon-packs/delivery-service
+          - listitem [ref=e581]:
+            - heading "Transport Icon Packs" [level=2] [ref=e582]:
+              - link "Transport Icon Packs" [ref=e583] [cursor=pointer]:
+                - /url: /icon-packs/transport
+          - listitem [ref=e584]:
+            - heading "Location Icon Packs" [level=2] [ref=e585]:
+              - link "Location Icon Packs" [ref=e586] [cursor=pointer]:
+                - /url: /icon-packs/location
+          - listitem [ref=e587]:
+            - heading "Transportation Icon Packs" [level=2] [ref=e588]:
+              - link "Transportation Icon Packs" [ref=e589] [cursor=pointer]:
+                - /url: /icon-packs/transportation
+          - listitem [ref=e590]:
+            - heading "Delivery Location Icon Packs" [level=2] [ref=e591]:
+              - link "Delivery Location Icon Packs" [ref=e592] [cursor=pointer]:
+                - /url: /icon-packs/delivery-location
+          - listitem [ref=e593]:
+            - heading "Shopping Icon Packs" [level=2] [ref=e594]:
+              - link "Shopping Icon Packs" [ref=e595] [cursor=pointer]:
+                - /url: /icon-packs/shopping
+          - listitem [ref=e596]:
+            - heading "Delivery Truck Icon Packs" [level=2] [ref=e597]:
+              - link "Delivery Truck Icon Packs" [ref=e598] [cursor=pointer]:
+                - /url: /icon-packs/delivery-truck
+          - listitem [ref=e599]:
+            - heading "Parcel Tracking Icon Packs" [level=2] [ref=e600]:
+              - link "Parcel Tracking Icon Packs" [ref=e601] [cursor=pointer]:
+                - /url: /icon-packs/parcel-tracking
+          - listitem [ref=e602]:
+            - heading "Delivery Boy Icon Packs" [level=2] [ref=e603]:
+              - link "Delivery Boy Icon Packs" [ref=e604] [cursor=pointer]:
+                - /url: /icon-packs/delivery-boy
+          - listitem [ref=e605]:
+            - heading "Truck Icon Packs" [level=2] [ref=e606]:
+              - link "Truck Icon Packs" [ref=e607] [cursor=pointer]:
+                - /url: /icon-packs/truck
+          - listitem [ref=e608]:
+            - heading "Money Icon Packs" [level=2] [ref=e609]:
+              - link "Money Icon Packs" [ref=e610] [cursor=pointer]:
+                - /url: /icon-packs/money
+          - listitem [ref=e611]:
+            - heading "Delivery Box Icon Packs" [level=2] [ref=e612]:
+              - link "Delivery Box Icon Packs" [ref=e613] [cursor=pointer]:
+                - /url: /icon-packs/delivery-box
+          - listitem [ref=e614]:
+            - heading "Remove Icon Packs" [level=2] [ref=e615]:
+              - link "Remove Icon Packs" [ref=e616] [cursor=pointer]:
+                - /url: /icon-packs/remove
+          - listitem [ref=e617]:
+            - heading "Cancel Delivery Icon Packs" [level=2] [ref=e618]:
+              - link "Cancel Delivery Icon Packs" [ref=e619] [cursor=pointer]:
+                - /url: /icon-packs/cancel-delivery
+          - listitem [ref=e620]:
+            - heading "Order Tracking Icon Packs" [level=2] [ref=e621]:
+              - link "Order Tracking Icon Packs" [ref=e622] [cursor=pointer]:
+                - /url: /icon-packs/order-tracking
+          - listitem [ref=e623]:
+            - heading "Email Icon Packs" [level=2] [ref=e624]:
+              - link "Email Icon Packs" [ref=e625] [cursor=pointer]:
+                - /url: /icon-packs/email
+          - listitem [ref=e626]:
+            - heading "Rating Icon Packs" [level=2] [ref=e627]:
+              - link "Rating Icon Packs" [ref=e628] [cursor=pointer]:
+                - /url: /icon-packs/rating
+          - listitem [ref=e629]:
+            - heading "Message Icon Packs" [level=2] [ref=e630]:
+              - link "Message Icon Packs" [ref=e631] [cursor=pointer]:
+                - /url: /icon-packs/message
+          - listitem [ref=e632]:
+            - heading "Weighing Scale Icon Packs" [level=2] [ref=e633]:
+              - link "Weighing Scale Icon Packs" [ref=e634] [cursor=pointer]:
+                - /url: /icon-packs/weighing-scale
+          - listitem [ref=e635]:
+            - heading "Letter Icon Packs" [level=2] [ref=e636]:
+              - link "Letter Icon Packs" [ref=e637] [cursor=pointer]:
+                - /url: /icon-packs/letter
+        - button [ref=e638] [cursor=pointer]:
+          - img [ref=e639]
+    - generic [ref=e642]:
+      - button "Previous" [ref=e643] [cursor=pointer]
+      - generic [ref=e645]:
+        - link [ref=e649] [cursor=pointer]:
+          - /url: /ai/3d-illustration-generator
+          - img [ref=e652]
+          - generic [ref=e653]:
+            - heading [level=3] [ref=e654]: IconScout AI
+            - generic [ref=e655]:
+              - text: Try Now
+              - img [ref=e656]
+        - link [ref=e661] [cursor=pointer]:
+          - /url: /ai/icon-generator
+          - img [ref=e664]
+          - generic [ref=e665]:
+            - heading [level=3] [ref=e666]: AI Icon Generator
+            - generic [ref=e667]:
+              - text: Try Now
+              - img [ref=e668]
+        - link [ref=e673] [cursor=pointer]:
+          - /url: /unicons/solid-icons
+          - img [ref=e676]
+          - generic [ref=e677]:
+            - heading [level=3] [ref=e678]: Use icons as fonts with unicons
+            - generic [ref=e679]:
+              - text: Download unicons
+              - img [ref=e680]
+        - link [ref=e685] [cursor=pointer]:
+          - /url: /reverse-image-search
+          - img [ref=e688]
+          - generic [ref=e689]:
+            - heading [level=3] [ref=e690]: Reverse Image Search
+            - generic [ref=e691]:
+              - text: Try Reverse Image Search
+              - img [ref=e692]
+        - link [ref=e697] [cursor=pointer]:
+          - /url: /animated-icons
+          - img [ref=e700]
+          - generic [ref=e701]:
+            - heading [level=3] [ref=e702]: High quality animated icons
+            - generic [ref=e703]:
+              - text: Get animated icons
+              - img [ref=e704]
+        - link [ref=e709] [cursor=pointer]:
+          - /url: /notion-icons
+          - img [ref=e712]
+          - generic [ref=e713]:
+            - heading [level=3] [ref=e714]: Delightfully minimalistic Notion icons
+            - generic [ref=e715]:
+              - text: Get Notion icons
+              - img [ref=e716]
+        - link [ref=e721] [cursor=pointer]:
+          - /url: /plugins
+          - img [ref=e724]
+          - generic [ref=e725]:
+            - heading [level=3] [ref=e726]: Plugins for all your favorite design and developer tools
+            - generic [ref=e727]:
+              - text: Try our plugins
+              - img [ref=e728]
+        - link "IconScout AI Try Now" [ref=e733] [cursor=pointer]:
+          - /url: /ai/3d-illustration-generator
+          - img [ref=e736]
+          - generic [ref=e737]:
+            - heading "IconScout AI" [level=3] [ref=e738]
+            - generic [ref=e739]:
+              - text: Try Now
+              - img [ref=e740]
+        - link [ref=e745] [cursor=pointer]:
+          - /url: /ai/icon-generator
+          - img [ref=e748]
+          - generic [ref=e749]:
+            - heading [level=3] [ref=e750]: AI Icon Generator
+            - generic [ref=e751]:
+              - text: Try Now
+              - img [ref=e752]
+        - link [ref=e757] [cursor=pointer]:
+          - /url: /unicons/solid-icons
+          - img [ref=e760]
+          - generic [ref=e761]:
+            - heading [level=3] [ref=e762]: Use icons as fonts with unicons
+            - generic [ref=e763]:
+              - text: Download unicons
+              - img [ref=e764]
+        - link [ref=e769] [cursor=pointer]:
+          - /url: /reverse-image-search
+          - img [ref=e772]
+          - generic [ref=e773]:
+            - heading [level=3] [ref=e774]: Reverse Image Search
+            - generic [ref=e775]:
+              - text: Try Reverse Image Search
+              - img [ref=e776]
+        - link [ref=e781] [cursor=pointer]:
+          - /url: /animated-icons
+          - img [ref=e784]
+          - generic [ref=e785]:
+            - heading [level=3] [ref=e786]: High quality animated icons
+            - generic [ref=e787]:
+              - text: Get animated icons
+              - img [ref=e788]
+        - link [ref=e793] [cursor=pointer]:
+          - /url: /notion-icons
+          - img [ref=e796]
+          - generic [ref=e797]:
+            - heading [level=3] [ref=e798]: Delightfully minimalistic Notion icons
+            - generic [ref=e799]:
+              - text: Get Notion icons
+              - img [ref=e800]
+        - link [ref=e805] [cursor=pointer]:
+          - /url: /plugins
+          - img [ref=e808]
+          - generic [ref=e809]:
+            - heading [level=3] [ref=e810]: Plugins for all your favorite design and developer tools
+            - generic [ref=e811]:
+              - text: Try our plugins
+              - img [ref=e812]
+        - link [ref=e817] [cursor=pointer]:
+          - /url: /ai/3d-illustration-generator
+          - img [ref=e820]
+          - generic [ref=e821]:
+            - heading [level=3] [ref=e822]: IconScout AI
+            - generic [ref=e823]:
+              - text: Try Now
+              - img [ref=e824]
+        - link [ref=e829] [cursor=pointer]:
+          - /url: /ai/icon-generator
+          - img [ref=e832]
+          - generic [ref=e833]:
+            - heading [level=3] [ref=e834]: AI Icon Generator
+            - generic [ref=e835]:
+              - text: Try Now
+              - img [ref=e836]
+        - link [ref=e841] [cursor=pointer]:
+          - /url: /unicons/solid-icons
+          - img [ref=e844]
+          - generic [ref=e845]:
+            - heading [level=3] [ref=e846]: Use icons as fonts with unicons
+            - generic [ref=e847]:
+              - text: Download unicons
+              - img [ref=e848]
+        - link [ref=e853] [cursor=pointer]:
+          - /url: /reverse-image-search
+          - img [ref=e856]
+          - generic [ref=e857]:
+            - heading [level=3] [ref=e858]: Reverse Image Search
+            - generic [ref=e859]:
+              - text: Try Reverse Image Search
+              - img [ref=e860]
+        - link [ref=e865] [cursor=pointer]:
+          - /url: /animated-icons
+          - img [ref=e868]
+          - generic [ref=e869]:
+            - heading [level=3] [ref=e870]: High quality animated icons
+            - generic [ref=e871]:
+              - text: Get animated icons
+              - img [ref=e872]
+        - link [ref=e877] [cursor=pointer]:
+          - /url: /notion-icons
+          - img [ref=e880]
+          - generic [ref=e881]:
+            - heading [level=3] [ref=e882]: Delightfully minimalistic Notion icons
+            - generic [ref=e883]:
+              - text: Get Notion icons
+              - img [ref=e884]
+        - link [ref=e889] [cursor=pointer]:
+          - /url: /plugins
+          - img [ref=e892]
+          - generic [ref=e893]:
+            - heading [level=3] [ref=e894]: Plugins for all your favorite design and developer tools
+            - generic [ref=e895]:
+              - text: Try our plugins
+              - img [ref=e896]
+      - button "Next" [ref=e898] [cursor=pointer]
+    - generic [ref=e900]:
+      - generic [ref=e901]:
+        - heading "More Icon Packs from Color outline Icons Bundle" [level=2] [ref=e902]
+        - link "View Bundle" [ref=e904] [cursor=pointer]:
+          - /url: /contributors/bricks-stock/icons/free-color-outline-icons-icon-collection_23451
+      - generic [ref=e906]:
+        - generic [ref=e907]:
+          - article "Ramadan Icon Pack" [ref=e909]:
+            - generic [ref=e910]:
+              - generic [ref=e911]:
+                - generic:
+                  - img "Ramadan Icon Pack"
+              - generic [ref=e912]:
+                - generic [ref=e913]:
+                  - button [ref=e915] [cursor=pointer]:
+                    - link [ref=e916]:
+                      - /url: "#"
+                      - img [ref=e917]
+                  - button [ref=e921] [cursor=pointer]:
+                    - img [ref=e922]
+                - button "Create Icon with AI" [ref=e925] [cursor=pointer]:
+                  - img "Sparkle" [ref=e926]
+            - link [ref=e927] [cursor=pointer]:
+              - /url: /icon-pack/ramadan-icon-pack_329882
+            - generic [ref=e928]:
+              - heading "Ramadan Icon Pack" [level=2] [ref=e929]
+              - generic [ref=e930]: 30 Icons
+          - article "User Interface Icon Pack" [ref=e932]:
+            - generic [ref=e933]:
+              - generic [ref=e934]:
+                - generic:
+                  - img "User Interface Icon Pack"
+              - generic [ref=e935]:
+                - generic [ref=e936]:
+                  - button [ref=e938] [cursor=pointer]:
+                    - link [ref=e939]:
+                      - /url: "#"
+                      - img [ref=e940]
+                  - button [ref=e944] [cursor=pointer]:
+                    - img [ref=e945]
+                - button "Create Icon with AI" [ref=e948] [cursor=pointer]:
+                  - img "Sparkle" [ref=e949]
+            - link [ref=e950] [cursor=pointer]:
+              - /url: /icon-pack/user-interface-icon-pack_325297
+            - generic [ref=e951]:
+              - heading "User Interface Icon Pack" [level=2] [ref=e952]
+              - generic [ref=e953]: 50 Icons
+          - article "Real Estate Icon Pack" [ref=e955]:
+            - generic [ref=e956]:
+              - generic [ref=e957]:
+                - generic:
+                  - img "Real Estate Icon Pack"
+              - generic [ref=e958]:
+                - generic [ref=e959]:
+                  - button [ref=e961] [cursor=pointer]:
+                    - link [ref=e962]:
+                      - /url: "#"
+                      - img [ref=e963]
+                  - button [ref=e967] [cursor=pointer]:
+                    - img [ref=e968]
+                - button "Create Icon with AI" [ref=e971] [cursor=pointer]:
+                  - img "Sparkle" [ref=e972]
+            - link [ref=e973] [cursor=pointer]:
+              - /url: /icon-pack/real-estate-icon-pack_288102
+            - generic [ref=e974]:
+              - heading "Real Estate Icon Pack" [level=2] [ref=e975]
+              - generic [ref=e976]: 99 Icons
+          - article "Digital Marketing Icon Pack" [ref=e978]:
+            - generic [ref=e979]:
+              - generic [ref=e980]:
+                - generic:
+                  - img "Digital Marketing Icon Pack"
+              - generic [ref=e981]:
+                - generic [ref=e982]:
+                  - button [ref=e984] [cursor=pointer]:
+                    - link [ref=e985]:
+                      - /url: "#"
+                      - img [ref=e986]
+                  - button [ref=e990] [cursor=pointer]:
+                    - img [ref=e991]
+                - button "Create Icon with AI" [ref=e994] [cursor=pointer]:
+                  - img "Sparkle" [ref=e995]
+            - link [ref=e996] [cursor=pointer]:
+              - /url: /icon-pack/digital-marketing-icon-pack_224863
+            - generic [ref=e997]:
+              - heading "Digital Marketing Icon Pack" [level=2] [ref=e998]
+              - generic [ref=e999]: 70 Icons
+          - article "Business And Finance Icon Pack" [ref=e1001]:
+            - generic [ref=e1002]:
+              - generic [ref=e1003]:
+                - generic:
+                  - img "Business And Finance Icon Pack"
+              - generic [ref=e1004]:
+                - generic [ref=e1005]:
+                  - button [ref=e1007] [cursor=pointer]:
+                    - link [ref=e1008]:
+                      - /url: "#"
+                      - img [ref=e1009]
+                  - button [ref=e1013] [cursor=pointer]:
+                    - img [ref=e1014]
+                - button "Create Icon with AI" [ref=e1017] [cursor=pointer]:
+                  - img "Sparkle" [ref=e1018]
+            - link [ref=e1019] [cursor=pointer]:
+              - /url: /icon-pack/business-and-finance-icon-pack_215711
+            - generic [ref=e1020]:
+              - heading "Business And Finance Icon Pack" [level=2] [ref=e1021]
+              - generic [ref=e1022]: 110 Icons
+          - article "Database Icon Pack" [ref=e1024]:
+            - generic [ref=e1025]:
+              - generic [ref=e1026]:
+                - generic:
+                  - img "Database Icon Pack"
+              - generic [ref=e1027]:
+                - generic [ref=e1028]:
+                  - button [ref=e1030] [cursor=pointer]:
+                    - link [ref=e1031]:
+                      - /url: "#"
+                      - img [ref=e1032]
+                  - button [ref=e1036] [cursor=pointer]:
+                    - img [ref=e1037]
+                - button "Create Icon with AI" [ref=e1040] [cursor=pointer]:
+                  - img "Sparkle" [ref=e1041]
+            - link [ref=e1042] [cursor=pointer]:
+              - /url: /icon-pack/database-icon-pack_347402
+            - generic [ref=e1043]:
+              - heading "Database Icon Pack" [level=2] [ref=e1044]
+              - generic [ref=e1045]: 30 Icons
+          - article "File Document Icon Pack" [ref=e1047]:
+            - generic [ref=e1048]:
+              - generic [ref=e1049]:
+                - generic:
+                  - img "File Document Icon Pack"
+              - generic [ref=e1050]:
+                - generic [ref=e1051]:
+                  - button [ref=e1053] [cursor=pointer]:
+                    - link [ref=e1054]:
+                      - /url: "#"
+                      - img [ref=e1055]
+                  - button [ref=e1059] [cursor=pointer]:
+                    - img [ref=e1060]
+                - button "Create Icon with AI" [ref=e1063] [cursor=pointer]:
+                  - img "Sparkle" [ref=e1064]
+            - link [ref=e1065] [cursor=pointer]:
+              - /url: /icon-pack/file-document-icon-pack_347396
+            - generic [ref=e1066]:
+              - heading "File Document Icon Pack" [level=2] [ref=e1067]
+              - generic [ref=e1068]: 30 Icons
+          - article "Camera Icon Pack" [ref=e1070]:
+            - generic [ref=e1071]:
+              - generic [ref=e1072]:
+                - generic:
+                  - img "Camera Icon Pack"
+              - generic [ref=e1073]:
+                - generic [ref=e1074]:
+                  - button [ref=e1076] [cursor=pointer]:
+                    - link [ref=e1077]:
+                      - /url: "#"
+                      - img [ref=e1078]
+                  - button [ref=e1082] [cursor=pointer]:
+                    - img [ref=e1083]
+                - button "Create Icon with AI" [ref=e1086] [cursor=pointer]:
+                  - img "Sparkle" [ref=e1087]
+            - link [ref=e1088] [cursor=pointer]:
+              - /url: /icon-pack/camera-icon-pack_422222
+            - generic [ref=e1089]:
+              - heading "Camera Icon Pack" [level=2] [ref=e1090]
+              - generic [ref=e1091]: 40 Icons
+          - article "Bank Icon Pack" [ref=e1093]:
+            - generic [ref=e1094]:
+              - generic [ref=e1095]:
+                - generic:
+                  - img "Bank Icon Pack"
+              - generic [ref=e1096]:
+                - generic [ref=e1097]:
+                  - button [ref=e1099] [cursor=pointer]:
+                    - link [ref=e1100]:
+                      - /url: "#"
+                      - img [ref=e1101]
+                  - button [ref=e1105] [cursor=pointer]:
+                    - img [ref=e1106]
+                - button "Create Icon with AI" [ref=e1109] [cursor=pointer]:
+                  - img "Sparkle" [ref=e1110]
+            - link [ref=e1111] [cursor=pointer]:
+              - /url: /icon-pack/bank-icon-pack_347423
+            - generic [ref=e1112]:
+              - heading "Bank Icon Pack" [level=2] [ref=e1113]
+              - generic [ref=e1114]: 30 Icons
+          - article "Ecology Icon Pack" [ref=e1116]:
+            - generic [ref=e1117]:
+              - generic [ref=e1118]:
+                - generic:
+                  - img "Ecology Icon Pack"
+              - generic [ref=e1119]:
+                - generic [ref=e1120]:
+                  - button [ref=e1122] [cursor=pointer]:
+                    - link [ref=e1123]:
+                      - /url: "#"
+                      - img [ref=e1124]
+                  - button [ref=e1128] [cursor=pointer]:
+                    - img [ref=e1129]
+                - button "Create Icon with AI" [ref=e1132] [cursor=pointer]:
+                  - img "Sparkle" [ref=e1133]
+            - link [ref=e1134] [cursor=pointer]:
+              - /url: /icon-pack/ecology-icon-pack_347398
+            - generic [ref=e1135]:
+              - heading "Ecology Icon Pack" [level=2] [ref=e1136]
+              - generic [ref=e1137]: 30 Icons
+          - article "Pharmacy Icon Pack" [ref=e1139]:
+            - generic [ref=e1140]:
+              - generic [ref=e1141]:
+                - generic:
+                  - img "Pharmacy Icon Pack"
+              - generic [ref=e1142]:
+                - generic [ref=e1143]:
+                  - button [ref=e1145] [cursor=pointer]:
+                    - link [ref=e1146]:
+                      - /url: "#"
+                      - img [ref=e1147]
+                  - button [ref=e1151] [cursor=pointer]:
+                    - img [ref=e1152]
+                - button "Create Icon with AI" [ref=e1155] [cursor=pointer]:
+                  - img "Sparkle" [ref=e1156]
+            - link [ref=e1157] [cursor=pointer]:
+              - /url: /icon-pack/pharmacy-icon-pack_364049
+            - generic [ref=e1158]:
+              - heading "Pharmacy Icon Pack" [level=2] [ref=e1159]
+              - generic [ref=e1160]: 30 Icons
+          - article "Nature And Ecology Icon Pack" [ref=e1162]:
+            - generic [ref=e1163]:
+              - generic [ref=e1164]:
+                - generic:
+                  - img "Nature And Ecology Icon Pack"
+              - generic [ref=e1165]:
+                - generic [ref=e1166]:
+                  - button [ref=e1168] [cursor=pointer]:
+                    - link [ref=e1169]:
+                      - /url: "#"
+                      - img [ref=e1170]
+                  - button [ref=e1174] [cursor=pointer]:
+                    - img [ref=e1175]
+                - button "Create Icon with AI" [ref=e1178] [cursor=pointer]:
+                  - img "Sparkle" [ref=e1179]
+            - link [ref=e1180] [cursor=pointer]:
+              - /url: /icon-pack/nature-and-ecology-icon-pack_229919
+            - generic [ref=e1181]:
+              - heading "Nature And Ecology Icon Pack" [level=2] [ref=e1182]
+              - generic [ref=e1183]: 110 Icons
+        - button [ref=e1184] [cursor=pointer]:
+          - img [ref=e1185]
+    - heading "Shipping and Delivery Icons Pack" [level=2] [ref=e1188]
+    - generic [ref=e1189]:
+      - generic [ref=e1190]: "Trending Searches:"
+      - list [ref=e1191]:
+        - listitem [ref=e1192]:
+          - link "embedded icon" [ref=e1193] [cursor=pointer]:
+            - /url: /icons/embed-code
+            - img [ref=e1194]
+            - text: embedded icon
+        - listitem [ref=e1196]:
+          - link "freddy krueger svg free" [ref=e1197] [cursor=pointer]:
+            - /url: /icons/freddy-krueger
+            - img [ref=e1198]
+            - text: freddy krueger svg free
+        - listitem [ref=e1200]:
+          - link "pii icon" [ref=e1201] [cursor=pointer]:
+            - /url: /icons/pii
+            - img [ref=e1202]
+            - text: pii icon
+        - listitem [ref=e1204]:
+          - link "bomberman logo" [ref=e1205] [cursor=pointer]:
+            - /url: /icons/bomberman
+            - img [ref=e1206]
+            - text: bomberman logo
+        - listitem [ref=e1208]:
+          - link "hotdog icon" [ref=e1209] [cursor=pointer]:
+            - /url: /icons/hotdog-menu
+            - img [ref=e1210]
+            - text: hotdog icon
+        - listitem [ref=e1212]:
+          - link "sds icon" [ref=e1213] [cursor=pointer]:
+            - /url: /icons/sds
+            - img [ref=e1214]
+            - text: sds icon
+        - listitem [ref=e1216]:
+          - link "inkscape icon" [ref=e1217] [cursor=pointer]:
+            - /url: /icons/inkscape
+            - img [ref=e1218]
+            - text: inkscape icon
+        - listitem [ref=e1220]:
+          - link "centroid symbol" [ref=e1221] [cursor=pointer]:
+            - /url: /icons/centroid
+            - img [ref=e1222]
+            - text: centroid symbol
+        - listitem [ref=e1224]:
+          - link "eevee icon" [ref=e1225] [cursor=pointer]:
+            - /url: /icons/eevee
+            - img [ref=e1226]
+            - text: eevee icon
+        - listitem [ref=e1228]:
+          - link "romper logo" [ref=e1229] [cursor=pointer]:
+            - /url: /icons/rompers
+            - img [ref=e1230]
+            - text: romper logo
+        - listitem [ref=e1232]:
+          - link "founded icon" [ref=e1233] [cursor=pointer]:
+            - /url: /icons/founded
+            - img [ref=e1234]
+            - text: founded icon
+        - listitem [ref=e1236]:
+          - link "harley quinn svg free" [ref=e1237] [cursor=pointer]:
+            - /url: /icons/harley-quinn
+            - img [ref=e1238]
+            - text: harley quinn svg free
+        - listitem [ref=e1240]:
+          - link "stake icon" [ref=e1241] [cursor=pointer]:
+            - /url: /icons/crypto-proof-stake
+            - img [ref=e1242]
+            - text: stake icon
+        - listitem [ref=e1244]:
+          - link "eventbrite icon" [ref=e1245] [cursor=pointer]:
+            - /url: /icons/eventbrite
+            - img [ref=e1246]
+            - text: eventbrite icon
+        - listitem [ref=e1248]:
+          - link "captions logo" [ref=e1249] [cursor=pointer]:
+            - /url: /icons/captions
+            - img [ref=e1250]
+            - text: captions logo
+        - listitem [ref=e1252]:
+          - link "iagram" [ref=e1253] [cursor=pointer]:
+            - /url: /icons/iagram
+            - img [ref=e1254]
+            - text: iagram
+        - listitem [ref=e1256]:
+          - link "mac mini icon" [ref=e1257] [cursor=pointer]:
+            - /url: /icons/apple-mac-mini
+            - img [ref=e1258]
+            - text: mac mini icon
+        - listitem [ref=e1260]:
+          - link "mlb icon" [ref=e1261] [cursor=pointer]:
+            - /url: /icons/mlb
+            - img [ref=e1262]
+            - text: mlb icon
+        - listitem [ref=e1264]:
+          - link "clustering icon" [ref=e1265] [cursor=pointer]:
+            - /url: /icons/clustering-analysis
+            - img [ref=e1266]
+            - text: clustering icon
+        - listitem [ref=e1268]:
+          - link "voice memo icon" [ref=e1269] [cursor=pointer]:
+            - /url: /icons/voice-memos
+            - img [ref=e1270]
+            - text: voice memo icon
+        - listitem [ref=e1272]:
+          - link "blood pressure emoji" [ref=e1273] [cursor=pointer]:
+            - /url: /icons/high-blood-pressure
+            - img [ref=e1274]
+            - text: blood pressure emoji
+        - listitem [ref=e1276]:
+          - link "storm chaser logo" [ref=e1277] [cursor=pointer]:
+            - /url: /icons/storm-chaser
+            - img [ref=e1278]
+            - text: storm chaser logo
+        - listitem [ref=e1280]:
+          - link "75% off chart" [ref=e1281] [cursor=pointer]:
+            - /url: /icons/75-percentage-off-sale
+            - img [ref=e1282]
+            - text: 75% off chart
+        - listitem [ref=e1284]:
+          - link "fox news icon" [ref=e1285] [cursor=pointer]:
+            - /url: /icons/fox-news
+            - img [ref=e1286]
+            - text: fox news icon
+        - listitem [ref=e1288]:
+          - link "pokemon egg png" [ref=e1289] [cursor=pointer]:
+            - /url: /icons/pokemon-egg
+            - img [ref=e1290]
+            - text: pokemon egg png
+        - listitem [ref=e1292]:
+          - link "riddle logo" [ref=e1293] [cursor=pointer]:
+            - /url: /icons/riddle-game
+            - img [ref=e1294]
+            - text: riddle logo
+        - listitem [ref=e1296]:
+          - link "tracking notifications icon" [ref=e1297] [cursor=pointer]:
+            - /url: /icons/tracking-notifications
+            - img [ref=e1298]
+            - text: tracking notifications icon
+        - listitem [ref=e1300]:
+          - link "teacher table icon" [ref=e1301] [cursor=pointer]:
+            - /url: /icons/teacher-table
+            - img [ref=e1302]
+            - text: teacher table icon
+        - listitem [ref=e1304]:
+          - link "metaphysics symbol" [ref=e1305] [cursor=pointer]:
+            - /url: /icons/metaphysics
+            - img [ref=e1306]
+            - text: metaphysics symbol
+        - listitem [ref=e1308]:
+          - link "narcissist logo" [ref=e1309] [cursor=pointer]:
+            - /url: /icons/narcissist
+            - img [ref=e1310]
+            - text: narcissist logo
+    - generic [ref=e1312]:
+      - generic [ref=e1313]: "People Also Search:"
+      - list [ref=e1314]:
+        - listitem [ref=e1315]:
+          - link "cute ui icon collection" [ref=e1316] [cursor=pointer]:
+            - /url: /icon-packs/ui
+            - img [ref=e1317]
+            - text: cute ui icon collection
+        - listitem [ref=e1319]:
+          - link "royalty free comparison icons" [ref=e1320] [cursor=pointer]:
+            - /url: /icon-packs/comparison
+            - img [ref=e1321]
+            - text: royalty free comparison icons
+        - listitem [ref=e1323]:
+          - link "solid overdose icons bundle" [ref=e1324] [cursor=pointer]:
+            - /url: /icon-packs/overdose
+            - img [ref=e1325]
+            - text: solid overdose icons bundle
+        - listitem [ref=e1327]:
+          - link "comparision web icon set" [ref=e1328] [cursor=pointer]:
+            - /url: /icon-packs/comparision
+            - img [ref=e1329]
+            - text: comparision web icon set
+        - listitem [ref=e1331]:
+          - link "user-interface icon pack" [ref=e1332] [cursor=pointer]:
+            - /url: /icon-packs/user-interface
+            - img [ref=e1333]
+            - text: user-interface icon pack
+        - listitem [ref=e1335]:
+          - link "universal remote png icon pack" [ref=e1336] [cursor=pointer]:
+            - /url: /icon-packs/universal-remote
+            - img [ref=e1337]
+            - text: universal remote png icon pack
+        - listitem [ref=e1339]:
+          - link "complete portable tech icon pack" [ref=e1340] [cursor=pointer]:
+            - /url: /icon-packs/portable-tech
+            - img [ref=e1341]
+            - text: complete portable tech icon pack
+        - listitem [ref=e1343]:
+          - link "line kids swimming icon set" [ref=e1344] [cursor=pointer]:
+            - /url: /icon-packs/kids-swimming
+            - img [ref=e1345]
+            - text: line kids swimming icon set
+        - listitem [ref=e1347]:
+          - link "download wearable tech icons bundle" [ref=e1348] [cursor=pointer]:
+            - /url: /icon-packs/wearable-tech
+            - img [ref=e1349]
+            - text: download wearable tech icons bundle
+        - listitem [ref=e1351]:
+          - link "landscape mode app icons bundle" [ref=e1352] [cursor=pointer]:
+            - /url: /icon-packs/landscape-mode
+            - img [ref=e1353]
+            - text: landscape mode app icons bundle
+        - listitem [ref=e1355]:
+          - link "wearable technology UI icon kit" [ref=e1356] [cursor=pointer]:
+            - /url: /icon-packs/wearable-technology
+            - img [ref=e1357]
+            - text: wearable technology UI icon kit
+        - listitem [ref=e1359]:
+          - link "minimalist water drum icons" [ref=e1360] [cursor=pointer]:
+            - /url: /icon-packs/water-drum
+            - img [ref=e1361]
+            - text: minimalist water drum icons
+        - listitem [ref=e1363]:
+          - link "high quality reading child icon set" [ref=e1364] [cursor=pointer]:
+            - /url: /icon-packs/reading-child
+            - img [ref=e1365]
+            - text: high quality reading child icon set
+        - listitem [ref=e1367]:
+          - link "free sushi rool icon pack" [ref=e1368] [cursor=pointer]:
+            - /url: /icon-packs/sushi-rool
+            - img [ref=e1369]
+            - text: free sushi rool icon pack
+        - listitem [ref=e1371]:
+          - link "user intrface icon set" [ref=e1372] [cursor=pointer]:
+            - /url: /icon-packs/user-intrface
+            - img [ref=e1373]
+            - text: user intrface icon set
+        - listitem [ref=e1375]:
+          - link "sushi roll icons svg bundle" [ref=e1376] [cursor=pointer]:
+            - /url: /icon-packs/sushi-roll
+            - img [ref=e1377]
+            - text: sushi roll icons svg bundle
+        - listitem [ref=e1379]:
+          - link "landscape layout vector icons set" [ref=e1380] [cursor=pointer]:
+            - /url: /icon-packs/landscape-layout
+            - img [ref=e1381]
+            - text: landscape layout vector icons set
+        - listitem [ref=e1383]:
+          - link "premium user inerface icon set" [ref=e1384] [cursor=pointer]:
+            - /url: /icon-packs/user-inerface
+            - img [ref=e1385]
+            - text: premium user inerface icon set
+        - listitem [ref=e1387]:
+          - link "flat comperison icon pack" [ref=e1388] [cursor=pointer]:
+            - /url: /icon-packs/comperison
+            - img [ref=e1389]
+            - text: flat comperison icon pack
+        - listitem [ref=e1391]:
+          - link "universal remote controller system icons pack" [ref=e1392] [cursor=pointer]:
+            - /url: /icon-packs/universal-remote-controller
+            - img [ref=e1393]
+            - text: universal remote controller system icons pack
+        - listitem [ref=e1395]:
+          - link "cute human interface icon collection" [ref=e1396] [cursor=pointer]:
+            - /url: /icon-packs/human-interface
+            - img [ref=e1397]
+            - text: cute human interface icon collection
+        - listitem [ref=e1399]:
+          - link "royalty free comparation icons" [ref=e1400] [cursor=pointer]:
+            - /url: /icon-packs/comparation
+            - img [ref=e1401]
+            - text: royalty free comparation icons
+        - listitem [ref=e1403]:
+          - link "solid travel vlog icons bundle" [ref=e1404] [cursor=pointer]:
+            - /url: /icon-packs/travel-vlog
+            - img [ref=e1405]
+            - text: solid travel vlog icons bundle
+        - listitem [ref=e1407]:
+          - link "shield hammer web icon set" [ref=e1408] [cursor=pointer]:
+            - /url: /icon-packs/shield-hammer
+            - img [ref=e1409]
+            - text: shield hammer web icon set
+        - listitem [ref=e1411]:
+          - link "ros icon pack" [ref=e1412] [cursor=pointer]:
+            - /url: /icon-packs/ros
+            - img [ref=e1413]
+            - text: ros icon pack
+        - listitem [ref=e1415]:
+          - link "uiinterface png icon pack" [ref=e1416] [cursor=pointer]:
+            - /url: /icon-packs/uiinterface
+            - img [ref=e1417]
+            - text: uiinterface png icon pack
+        - listitem [ref=e1419]:
+          - link "complete comp icon pack" [ref=e1420] [cursor=pointer]:
+            - /url: /icon-packs/comp
+            - img [ref=e1421]
+            - text: complete comp icon pack
+        - listitem [ref=e1423]:
+          - link "line comparsion icon set" [ref=e1424] [cursor=pointer]:
+            - /url: /icon-packs/comparsion
+            - img [ref=e1425]
+            - text: line comparsion icon set
+        - listitem [ref=e1427]:
+          - link "download children swimming icons bundle" [ref=e1428] [cursor=pointer]:
+            - /url: /icon-packs/children-swimming
+            - img [ref=e1429]
+            - text: download children swimming icons bundle
+        - listitem [ref=e1431]:
+          - link "law academics app icons bundle" [ref=e1432] [cursor=pointer]:
+            - /url: /icon-packs/law-academics
+            - img [ref=e1433]
+            - text: law academics app icons bundle
+    - generic [ref=e1437]:
+      - generic [ref=e1439]:
+        - img [ref=e1440]
+        - text: Save 33%
+      - generic [ref=e1441]:
+        - 'heading "Access the world''s largest Design Ecosystem: Assets, Integrations, and Motion." [level=2] [ref=e1442]'
+        - button "Get Started - It's Free" [ref=e1443] [cursor=pointer]
+    - contentinfo [ref=e1445]:
+      - generic [ref=e1446]:
+        - generic [ref=e1447]:
+          - generic [ref=e1448]:
+            - img "IconScout Logo" [ref=e1449]
+            - generic [ref=e1450]: Design Resource Marketplace
+          - generic [ref=e1451]:
+            - emphasis [ref=e1452]: 14,066,493
+            - text: graphic resources & counting
+        - separator [ref=e1453]
+        - generic [ref=e1454]:
+          - generic [ref=e1455]:
+            - heading "IconScout" [level=5] [ref=e1456]
+            - list [ref=e1457]:
+              - listitem [ref=e1458]:
+                - link "Blog" [ref=e1459] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=e1460]:
+                - link "About" [ref=e1461] [cursor=pointer]:
+                  - /url: https://lottiefiles.com/team?utm_source=iconscout&utm_medium=footer
+              - listitem [ref=e1462]:
+                - link "Features" [ref=e1463] [cursor=pointer]:
+                  - /url: /access
+              - listitem [ref=e1464]:
+                - link "Sell on IconScout" [ref=e1465] [cursor=pointer]:
+                  - /url: /become-contributor
+              - listitem [ref=e1466]:
+                - link "We’re hiring" [ref=e1467] [cursor=pointer]:
+                  - /url: https://lottiefiles.com/careers?utm_source=iconscout&utm_medium=footer
+          - generic [ref=e1468]:
+            - heading "Design Assets" [level=5] [ref=e1469]
+            - list [ref=e1470]:
+              - listitem [ref=e1471]:
+                - link "3D Icons" [ref=e1472] [cursor=pointer]:
+                  - /url: /3d-icons
+              - listitem [ref=e1473]:
+                - link "Lottie Animations" [ref=e1474] [cursor=pointer]:
+                  - /url: /lottie-animations
+              - listitem [ref=e1475]:
+                - link "Vector Illustrations" [ref=e1476] [cursor=pointer]:
+                  - /url: /illustrations
+              - listitem [ref=e1477]:
+                - link "AI Images" [ref=e1478] [cursor=pointer]:
+                  - /url: /ai-images
+              - listitem [ref=e1479]:
+                - link "Illustration Kits" [ref=e1480] [cursor=pointer]:
+                  - /url: /illustration-kit
+              - listitem [ref=e1481]:
+                - link "Icons" [ref=e1482] [cursor=pointer]:
+                  - /url: /icons
+              - listitem [ref=e1483]:
+                - link "Unicons - Icon Fonts" [ref=e1484] [cursor=pointer]:
+                  - /url: /unicons
+              - listitem [ref=e1485]:
+                - link "Free Design Templates" [ref=e1486] [cursor=pointer]:
+                  - /url: /free-templates
+          - generic [ref=e1487]:
+            - heading "Tools" [level=5] [ref=e1488]
+            - list [ref=e1489]:
+              - listitem [ref=e1490]:
+                - link "Illustration Kit Editor" [ref=e1491] [cursor=pointer]:
+                  - /url: /illustration-kit
+              - listitem [ref=e1492]:
+                - link "glTF 3D Editor" [ref=e1493] [cursor=pointer]:
+                  - /url: /gltf-3d-editor
+              - listitem [ref=e1494]:
+                - link "SVG Editor" [ref=e1495] [cursor=pointer]:
+                  - /url: /svg-editor
+              - listitem [ref=e1496]:
+                - link "Lottie Editor" [ref=e1497] [cursor=pointer]:
+                  - /url: https://lottiefiles.com/editor
+              - listitem [ref=e1498]:
+                - link "SVG to PNG" [ref=e1499] [cursor=pointer]:
+                  - /url: /converter/svg-to-png
+              - listitem [ref=e1500]:
+                - link "AI Reimagine" [ref=e1501] [cursor=pointer]:
+                  - /url: /ai/reimagine
+              - listitem [ref=e1502]:
+                - link "IconScout API" [ref=e1503] [cursor=pointer]:
+                  - /url: /api
+              - listitem [ref=e1504]:
+                - link "Lottie Preview" [ref=e1505] [cursor=pointer]:
+                  - /url: /tools/lottie-preview
+              - listitem [ref=e1506]:
+                - link "Color Palette Generator" [ref=e1507] [cursor=pointer]:
+                  - /url: /tools/color-palette-generator
+          - generic [ref=e1508]:
+            - heading "Plugins" [level=5] [ref=e1509]
+            - list [ref=e1510]:
+              - listitem [ref=e1511]:
+                - link "Figma" [ref=e1512] [cursor=pointer]:
+                  - /url: /plugins/for-figma
+              - listitem [ref=e1513]:
+                - link "Canva" [ref=e1514] [cursor=pointer]:
+                  - /url: /plugins/iconscout-for-canva
+              - listitem [ref=e1515]:
+                - link "PowerPoint" [ref=e1516] [cursor=pointer]:
+                  - /url: /plugins/for-powerpoint
+              - listitem [ref=e1517]:
+                - link "Google Slides" [ref=e1518] [cursor=pointer]:
+                  - /url: /plugins/for-google-slides
+              - listitem [ref=e1519]:
+                - link "Unicons for Figma" [ref=e1520] [cursor=pointer]:
+                  - /url: https://www.figma.com/community/plugin/1334018023334266887
+              - listitem [ref=e1521]:
+                - link "Adobe XD" [ref=e1522] [cursor=pointer]:
+                  - /url: /plugins/for-adobe-xd
+        - generic [ref=e1523]:
+          - generic [ref=e1524]:
+            - heading "Get IconScout for desktop" [level=5] [ref=e1525]
+            - list [ref=e1526]:
+              - listitem [ref=e1527]:
+                - link [ref=e1528] [cursor=pointer]:
+                  - /url: /desktop-app/for-mac
+                  - img [ref=e1529]
+              - listitem [ref=e1531]:
+                - link [ref=e1532] [cursor=pointer]:
+                  - /url: /desktop-app/for-windows
+                  - img [ref=e1533]
+          - generic [ref=e1535]:
+            - heading "Design Resources" [level=5] [ref=e1536]
+            - list [ref=e1537]:
+              - listitem [ref=e1538]:
+                - link "Free 3D Icons" [ref=e1539] [cursor=pointer]:
+                  - /url: /free-3d-icons
+              - listitem [ref=e1540]:
+                - link "Free Lottie Animations" [ref=e1541] [cursor=pointer]:
+                  - /url: /free-lottie-animations
+              - listitem [ref=e1542]:
+                - link "Free Illustrations" [ref=e1543] [cursor=pointer]:
+                  - /url: /free-illustrations
+              - listitem [ref=e1544]:
+                - link "Free Icons" [ref=e1545] [cursor=pointer]:
+                  - /url: /free-icons
+              - listitem [ref=e1546]:
+                - link "Freebies" [ref=e1547] [cursor=pointer]:
+                  - /url: /freebies
+              - listitem [ref=e1548]:
+                - link "Calendar of Festivities" [ref=e1549] [cursor=pointer]:
+                  - /url: /holidays-festivals-celebrations-design-assets
+              - listitem [ref=e1550]:
+                - link "Trending Keywords" [ref=e1551] [cursor=pointer]:
+                  - /url: /keywords
+              - listitem [ref=e1552]:
+                - link "Curated Collections" [ref=e1553] [cursor=pointer]:
+                  - /url: /collections
+          - generic [ref=e1554]:
+            - heading "Legal" [level=5] [ref=e1555]
+            - list [ref=e1556]:
+              - listitem [ref=e1557]:
+                - link "Terms of use" [ref=e1558] [cursor=pointer]:
+                  - /url: /legal/terms-of-use
+              - listitem [ref=e1559]:
+                - link "Privacy policy" [ref=e1560] [cursor=pointer]:
+                  - /url: /legal/privacy-policy
+              - listitem [ref=e1561]:
+                - link "License agreeement" [ref=e1562] [cursor=pointer]:
+                  - /url: /licenses
+              - listitem [ref=e1563]:
+                - link "Contributor terms" [ref=e1564] [cursor=pointer]:
+                  - /url: /legal/contributor-terms
+              - listitem [ref=e1565]:
+                - link "Join discord community" [ref=e1566] [cursor=pointer]:
+                  - /url: https://discord.gg/RfXAwxXXU9
+          - generic [ref=e1567]:
+            - heading "Support" [level=5] [ref=e1568]
+            - list [ref=e1569]:
+              - listitem [ref=e1570]:
+                - link "Support center" [ref=e1571] [cursor=pointer]:
+                  - /url: https://help.iconscout.com/hc/en-gb
+              - listitem [ref=e1572]:
+                - link "FAQ" [ref=e1573] [cursor=pointer]:
+                  - /url: https://help.iconscout.com/hc/en-gb/categories/6888506744857-Design-Asset-FAQs
+              - listitem [ref=e1574]:
+                - link "Contact us" [ref=e1575] [cursor=pointer]:
+                  - /url: mailto:support@iconscout.com
+        - separator [ref=e1576]
+        - generic [ref=e1577]:
+          - list [ref=e1578]:
+            - listitem [ref=e1579]:
+              - link [ref=e1580] [cursor=pointer]:
+                - /url: https://www.facebook.com/iconscout
+                - img [ref=e1581]
+            - listitem [ref=e1583]:
+              - link [ref=e1584] [cursor=pointer]:
+                - /url: https://www.instagram.com/iconscout
+                - img [ref=e1585]
+            - listitem [ref=e1587]:
+              - link [ref=e1588] [cursor=pointer]:
+                - /url: https://twitter.com/iconscout
+                - img [ref=e1589]
+            - listitem [ref=e1591]:
+              - link [ref=e1592] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/iconscout
+                - img [ref=e1593]
+            - listitem [ref=e1595]:
+              - link [ref=e1596] [cursor=pointer]:
+                - /url: https://dribbble.com/iconscout
+                - img [ref=e1597]
+          - 'button "Selected Language: English" [ref=e1601] [cursor=pointer]':
+            - generic [ref=e1602]: "Selected Language: English"
+            - generic [ref=e1603]:
+              - img [ref=e1604]
+              - paragraph [ref=e1606]: en
+              - img [ref=e1607]
+      - generic [ref=e1614]:
+        - img [ref=e1615]
+        - generic [ref=e1617]: Secure Payment
+        - img "Stripe" [ref=e1618]
+  - generic [ref=e1619]:
+    - paragraph [ref=e1620]: We care about you data, and we’ll be using cookies to make your experience better.
+    - link "Privacy Policy" [ref=e1622] [cursor=pointer]:
+      - /url: /legal/privacy-policy
+  - button "Help & resources" [ref=e1625] [cursor=pointer]:
+    - generic [ref=e1626]:
+      - img [ref=e1627]
+      - text: Help & resources

@@ -1,0 +1,2294 @@
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - banner [ref=e7]:
+      - navigation [ref=e9]:
+        - list [ref=e10]:
+          - listitem [ref=e11]:
+            - generic [ref=e12]:
+              - button [ref=e14] [cursor=pointer]:
+                - img [ref=e15]
+              - generic [ref=e17]:
+                - button "3D Icons" [ref=e19] [cursor=pointer]:
+                  - generic [ref=e20]: 3D Icons
+                  - img [ref=e21]
+                - button "Lottie Animations" [ref=e24] [cursor=pointer]:
+                  - generic [ref=e25]: Lottie Animations
+                  - img [ref=e26]
+                - button "Illustrations" [ref=e29] [cursor=pointer]:
+                  - generic [ref=e30]: Illustrations
+                  - img [ref=e31]
+                - button "Icons" [ref=e34] [cursor=pointer]:
+                  - generic [ref=e35]: Icons
+                  - img [ref=e36]
+                - button "AI Suite" [ref=e39] [cursor=pointer]:
+                  - generic [ref=e40]: AI Suite
+                  - img [ref=e41]
+                - separator [ref=e43]
+                - button "Tools" [ref=e45] [cursor=pointer]:
+                  - generic [ref=e46]: Tools
+                  - img [ref=e47]
+                - link "Free Assets" [ref=e49] [cursor=pointer]:
+                  - /url: /freebies
+                - link "Blog" [ref=e50] [cursor=pointer]:
+                  - /url: /blog
+                - separator [ref=e51]
+                - link "premium Get Unlimited Downloads" [ref=e53] [cursor=pointer]:
+                  - /url: /pricing
+                  - img "premium" [ref=e54]
+                  - generic [ref=e55]: Get Unlimited Downloads
+          - listitem [ref=e56]:
+            - link "iconscout-logo" [ref=e57] [cursor=pointer]:
+              - /url: /
+              - img "iconscout-logo" [ref=e58]
+          - listitem [ref=e59]:
+            - button "Santiago Suárez+personal" [ref=e61] [cursor=pointer]:
+              - img "Santiago Suárez+personal" [ref=e63]
+    - generic [ref=e65]:
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - link "Discover IconScout’s suite of AI powered tools" [ref=e68] [cursor=pointer]:
+            - /url: https://iconscout.com/ai-suite/3d-illustration-generator
+            - generic [ref=e69]: Discover IconScout’s suite of AI powered tools
+          - button "Hide banner" [ref=e70] [cursor=pointer]:
+            - generic [ref=e71]: Hide banner
+            - img [ref=e72]
+        - heading "Over 14M+ Design Assets" [level=1] [ref=e74]
+        - generic [ref=e75]:
+          - text: The ultimate marketplace for 3D Icons, Lottie Animations, Vector Illustrations & SVG Icons.
+          - text: Sync 10,000+ new daily assets - including Animated Icons, Stickers & Emojis - directly with Figma, Canva, & Adobe.
+      - generic [ref=e77]:
+        - generic [ref=e79]:
+          - button "All Assets" [ref=e81] [cursor=pointer]:
+            - generic [ref=e82]: All Assets
+            - img [ref=e83]
+          - textbox "Search from 14,066,493 Design Assets" [active] [ref=e85]
+          - generic [ref=e86]:
+            - button [ref=e87] [cursor=pointer]:
+              - img [ref=e88]
+            - button "Image Search Try Reverse Image Search" [ref=e90] [cursor=pointer]:
+              - img "Image Search" [ref=e91]
+              - text: Try Reverse Image Search
+        - generic [ref=e93]:
+          - generic [ref=e94]: "Trending:"
+          - list [ref=e95]:
+            - listitem [ref=e96]:
+              - link "Loading ," [ref=e97] [cursor=pointer]:
+                - /url: /all-assets/loading
+                - generic [ref=e98]:
+                  - text: Loading
+                  - generic [ref=e99]: ","
+            - listitem [ref=e100]:
+              - link "Business ," [ref=e101] [cursor=pointer]:
+                - /url: /all-assets/business
+                - generic [ref=e102]:
+                  - text: Business
+                  - generic [ref=e103]: ","
+            - listitem [ref=e104]:
+              - link "Instagram Follow ," [ref=e105] [cursor=pointer]:
+                - /url: /all-assets/instagram-follow
+                - generic [ref=e106]:
+                  - text: Instagram Follow
+                  - generic [ref=e107]: ","
+            - listitem [ref=e108]:
+              - link "Confetti ," [ref=e109] [cursor=pointer]:
+                - /url: /all-assets/confetti
+                - generic [ref=e110]:
+                  - text: Confetti
+                  - generic [ref=e111]: ","
+            - listitem [ref=e112]:
+              - link "User Interface ," [ref=e113] [cursor=pointer]:
+                - /url: /all-assets/user-interface
+                - generic [ref=e114]:
+                  - text: User Interface
+                  - generic [ref=e115]: ","
+            - listitem [ref=e116]:
+              - link "Ai ," [ref=e117] [cursor=pointer]:
+                - /url: /all-assets/ai
+                - generic [ref=e118]:
+                  - text: Ai
+                  - generic [ref=e119]: ","
+            - listitem [ref=e120]:
+              - link "Success ," [ref=e121] [cursor=pointer]:
+                - /url: /all-assets/success
+                - generic [ref=e122]:
+                  - text: Success
+                  - generic [ref=e123]: ","
+            - listitem [ref=e124]:
+              - link "Arrow ," [ref=e125] [cursor=pointer]:
+                - /url: /all-assets/arrow
+                - generic [ref=e126]:
+                  - text: Arrow
+                  - generic [ref=e127]: ","
+            - listitem [ref=e128]:
+              - link "Subscribe Button ," [ref=e129] [cursor=pointer]:
+                - /url: /all-assets/subscribe-button
+                - generic [ref=e130]:
+                  - text: Subscribe Button
+                  - generic [ref=e131]: ","
+            - listitem [ref=e132]:
+              - link "5 Second Timer" [ref=e133] [cursor=pointer]:
+                - /url: /all-assets/5-second-timer
+    - generic [ref=e135]:
+      - link "3D Icons Get 805K+ royalty-free 3D icons in PNG & glTF. 3D Icons" [ref=e136] [cursor=pointer]:
+        - /url: /3d-icons
+        - generic [ref=e137]:
+          - heading "3D Icons" [level=4] [ref=e138]
+          - generic [ref=e139]: Get 805K+ royalty-free 3D icons in PNG & glTF.
+        - img "3D Icons" [ref=e142]
+      - link "Lottie Animations 968K+ lightweight JSON animations for Web & Apps." [ref=e143] [cursor=pointer]:
+        - /url: /lottie-animations
+        - generic [ref=e144]:
+          - heading "Lottie Animations" [level=4] [ref=e145]
+          - generic [ref=e146]: 968K+ lightweight JSON animations for Web & Apps.
+      - link "Vector Illustrations Download 752K+ editable, royalty-free SVG vectors. Vector Illustrations" [ref=e147] [cursor=pointer]:
+        - /url: /illustrations
+        - generic [ref=e148]:
+          - heading "Vector Illustrations" [level=4] [ref=e149]
+          - generic [ref=e150]: Download 752K+ editable, royalty-free SVG vectors.
+        - img "Vector Illustrations" [ref=e153]
+      - link "SVG Icons 11.3M+ scalable vector icons (SVG & PNG) in all styles." [ref=e154] [cursor=pointer]:
+        - /url: /icons
+        - generic [ref=e155]:
+          - heading "SVG Icons" [level=4] [ref=e156]
+          - generic [ref=e157]: 11.3M+ scalable vector icons (SVG & PNG) in all styles.
+        - img [ref=e159]
+      - link "AI Suite NEW Generate Icons, Vector Illustrations, 3D & Images with AI. AI Suite" [ref=e179] [cursor=pointer]:
+        - /url: /ai-suite/3d-illustration-generator
+        - generic [ref=e180]:
+          - heading "AI Suite NEW" [level=4] [ref=e181]
+          - generic [ref=e182]: Generate Icons, Vector Illustrations, 3D & Images with AI.
+        - img "AI Suite" [ref=e185]
+    - generic [ref=e188]:
+      - heading "Trusted by 8.6 Million+ users worldwide" [level=2] [ref=e189]
+      - generic [ref=e190]:
+        - img "Google" [ref=e191]
+        - img "Disney" [ref=e192]
+        - img "Nike" [ref=e193]
+        - img "Uber" [ref=e194]
+        - img "Spotify" [ref=e195]
+        - img "Netflix" [ref=e196]
+        - img "Microsoft" [ref=e197]
+        - img "Airbnb" [ref=e198]
+        - img "Amazon" [ref=e199]
+        - img "Tiktok" [ref=e200]
+    - generic [ref=e201]:
+      - heading "Bring AI into your workflow" [level=2] [ref=e202]
+      - generic [ref=e203]: From creation to editing, our AI tools streamline your workflow helping you work smarter, not harder.
+      - generic [ref=e204]:
+        - generic [ref=e207]:
+          - generic [ref=e208]:
+            - generic [ref=e209]:
+              - img "3D Illustration Generator" [ref=e210]
+              - heading "3D Illustration Generator" [level=4] [ref=e211]
+            - heading "High-resolution 3D visuals in minutes" [level=2] [ref=e212]
+            - generic [ref=e213]: Turn text prompts into 3D illustrations for instant design assets that match your projects.
+            - link "Generate 3D Illustrations" [ref=e214] [cursor=pointer]:
+              - /url: /ai-suite/3d-illustration-generator
+              - text: Generate 3D Illustrations
+              - img [ref=e215]
+          - img "3D Illustration Generator" [ref=e218]
+        - link "Image Generator Image Generator NEW Generate ready to use images in seconds" [ref=e219] [cursor=pointer]:
+          - /url: /ai-suite/image-generator
+          - generic [ref=e220]:
+            - img "Image Generator" [ref=e221]
+            - generic [ref=e222]:
+              - generic [ref=e223]: Image Generator NEW
+              - generic [ref=e224]: Generate ready to use images in seconds
+        - link "Icon Generator Icon Generator Turn your ideas into ready to use icons in just seconds" [ref=e225] [cursor=pointer]:
+          - /url: /ai-suite/icon-generator
+          - generic [ref=e226]:
+            - img "Icon Generator" [ref=e227]
+            - generic [ref=e228]:
+              - generic [ref=e229]: Icon Generator
+              - generic [ref=e230]: Turn your ideas into ready to use icons in just seconds
+        - link "Illustration Generator Illustration Generator Generate vector illustrations with text prompts" [ref=e231] [cursor=pointer]:
+          - /url: /ai-suite/illustration-generator
+          - generic [ref=e232]:
+            - img "Illustration Generator" [ref=e233]
+            - generic [ref=e234]:
+              - generic [ref=e235]: Illustration Generator
+              - generic [ref=e236]: Generate vector illustrations with text prompts
+        - link "3D Character Generator 3D Character Generator Visualize and customize 3D Characters with text prompts" [ref=e237] [cursor=pointer]:
+          - /url: /ai-suite/3d-illustration-generator?style=character
+          - generic [ref=e238]:
+            - img "3D Character Generator" [ref=e239]
+            - generic [ref=e240]:
+              - generic [ref=e241]: 3D Character Generator
+              - generic [ref=e242]: Visualize and customize 3D Characters with text prompts
+        - link "3D Avatar Generator 3D Avatar Generator Personalize and customize 3D Avatars with text prompts" [ref=e243] [cursor=pointer]:
+          - /url: /ai-suite/3d-illustration-generator?style=avatar
+          - generic [ref=e244]:
+            - img "3D Avatar Generator" [ref=e245]
+            - generic [ref=e246]:
+              - generic [ref=e247]: 3D Avatar Generator
+              - generic [ref=e248]: Personalize and customize 3D Avatars with text prompts
+        - link "Vectorizer Vectorizer Convert low-quality images into scalable vectors" [ref=e249] [cursor=pointer]:
+          - /url: /ai-suite/vectorizer
+          - generic [ref=e250]:
+            - img "Vectorizer" [ref=e251]
+            - generic [ref=e252]:
+              - generic [ref=e253]: Vectorizer
+              - generic [ref=e254]: Convert low-quality images into scalable vectors
+        - link "Background Remover Background Remover Remove backgrounds instantly from any image" [ref=e255] [cursor=pointer]:
+          - /url: /ai-suite/background-remover
+          - generic [ref=e256]:
+            - img "Background Remover" [ref=e257]
+            - generic [ref=e258]:
+              - generic [ref=e259]: Background Remover
+              - generic [ref=e260]: Remove backgrounds instantly from any image
+        - link "AI Reimagine AI Reimagine NEW Transform style, remove elements, or replace objects from your asset" [ref=e261] [cursor=pointer]:
+          - /url: /ai-suite/reimagine
+          - generic [ref=e262]:
+            - img "AI Reimagine" [ref=e263]
+            - generic [ref=e264]:
+              - generic [ref=e265]: AI Reimagine NEW
+              - generic [ref=e266]: Transform style, remove elements, or replace objects from your asset
+      - generic [ref=e267]:
+        - heading "Powered by industry leading AI models" [level=2] [ref=e268]
+        - generic [ref=e269]:
+          - generic [ref=e270]:
+            - img "Flux 2 Pro" [ref=e271]
+            - generic [ref=e272]: Flux 2 Pro
+          - generic [ref=e273]:
+            - img "Recraft" [ref=e274]
+            - generic [ref=e275]: Recraft
+          - generic [ref=e276]:
+            - img "Grok" [ref=e277]
+            - generic [ref=e278]: Grok
+          - generic [ref=e279]:
+            - img "GPT" [ref=e280]
+            - generic [ref=e281]: GPT
+          - generic [ref=e282]:
+            - img "Seedream" [ref=e283]
+            - generic [ref=e284]: Seedream
+          - generic [ref=e285]:
+            - img "Qwen" [ref=e286]
+            - generic [ref=e287]: Qwen
+          - generic [ref=e288]:
+            - img "Nano Banana 2" [ref=e289]
+            - generic [ref=e290]: Nano Banana 2
+    - generic [ref=e291]:
+      - generic [ref=e292]:
+        - heading "Top Category" [level=2] [ref=e293]
+        - generic [ref=e294]: Discover trending 3D icons, animations, icons, and illustrations across our most popular categories.
+      - generic [ref=e295]:
+        - link "AI 3D Illustration Generator AI 3D Illustration Generator Create AI 3D illustrations art from text prompts." [ref=e296] [cursor=pointer]:
+          - /url: /ai-suite/3d-illustration-generator
+          - generic [ref=e298]:
+            - img "AI 3D Illustration Generator"
+          - heading "AI 3D Illustration Generator" [level=3] [ref=e299]
+          - generic [ref=e300]: Create AI 3D illustrations art from text prompts.
+        - link "AI Icon Generator AI Icon Generator Generate custom SVG & PNG vector icons from text instantly." [ref=e301] [cursor=pointer]:
+          - /url: /ai-suite/icon-generator
+          - generic [ref=e303]:
+            - img "AI Icon Generator"
+          - heading "AI Icon Generator" [level=3] [ref=e304]
+          - generic [ref=e305]: Generate custom SVG & PNG vector icons from text instantly.
+        - link "3D Illustrations 3D Illustrations Download 335,000+ 3D assets for Web, Mobile Apps & Figma." [ref=e306] [cursor=pointer]:
+          - /url: /3d-illustrations
+          - generic [ref=e308]:
+            - img "3D Illustrations"
+          - heading "3D Illustrations" [level=3] [ref=e309]
+          - generic [ref=e310]: Download 335,000+ 3D assets for Web, Mobile Apps & Figma.
+        - link "Emojis Emojis Get 80,000+ 3D & animated emojis for social media & UI." [ref=e311] [cursor=pointer]:
+          - /url: /emoji
+          - generic [ref=e313]:
+            - img "Emojis"
+          - heading "Emojis" [level=3] [ref=e314]
+          - generic [ref=e315]: Get 80,000+ 3D & animated emojis for social media & UI.
+        - link "Animated Icons Download 160,000+ Lottie, JSON & GIF animations for apps." [ref=e316] [cursor=pointer]:
+          - /url: /animated-icons
+          - heading "Animated Icons" [level=3] [ref=e317]
+          - generic [ref=e318]: Download 160,000+ Lottie, JSON & GIF animations for apps.
+        - link "Unicons Icon Library Get 7,000+ vector icons & icon fonts for UI/UX design." [ref=e319] [cursor=pointer]:
+          - /url: /unicons
+          - heading "Unicons Icon Library" [level=3] [ref=e320]
+          - generic [ref=e321]: Get 7,000+ vector icons & icon fonts for UI/UX design.
+        - link "3D Characters 3D Characters Get 356,500+ 3D characters & avatars for games & sites." [ref=e322] [cursor=pointer]:
+          - /url: /3d-characters
+          - generic [ref=e324]:
+            - img "3D Characters"
+          - heading "3D Characters" [level=3] [ref=e325]
+          - generic [ref=e326]: Get 356,500+ 3D characters & avatars for games & sites.
+        - link "Notion Icons Notion Icons 1,300+ aesthetic icons & covers to style Notion pages." [ref=e327] [cursor=pointer]:
+          - /url: /notion-icons
+          - generic [ref=e329]:
+            - img "Notion Icons"
+          - heading "Notion Icons" [level=3] [ref=e330]
+          - generic [ref=e331]: 1,300+ aesthetic icons & covers to style Notion pages.
+    - generic [ref=e332]:
+      - generic [ref=e333]:
+        - heading "Featured Packs" [level=2] [ref=e334]
+        - generic [ref=e335]: Handpicked asset collections to inspire your next project, perfect for every creative need.
+      - generic [ref=e336]:
+        - generic [ref=e337]:
+          - generic [ref=e338]:
+            - heading "3D Icons" [level=2] [ref=e339]
+            - generic [ref=e340]: 805K+ Assets
+          - link "View all" [ref=e341] [cursor=pointer]:
+            - /url: /featured-3d-icon-packs
+        - generic [ref=e343]:
+          - generic [ref=e344]:
+            - article "Office Stuff 3D Icon Pack" [ref=e346]:
+              - generic [ref=e355]:
+                - generic [ref=e356]:
+                  - button [ref=e358] [cursor=pointer]:
+                    - link [ref=e359]:
+                      - /url: "#"
+                      - img [ref=e360]
+                  - button [ref=e364] [cursor=pointer]:
+                    - img [ref=e365]
+                - button "Create 3D with AI" [ref=e368] [cursor=pointer]:
+                  - img "Sparkle" [ref=e369]
+              - link [ref=e370] [cursor=pointer]:
+                - /url: /3d-icon-pack/office-stuff-3d-icon-pack_419048
+              - generic [ref=e371]:
+                - heading "Office Stuff 3D Icon Pack" [level=2] [ref=e372]
+                - generic [ref=e373]: 50 3D Icons
+            - article "Graphic Design 3D Icon Pack" [ref=e375]:
+              - generic [ref=e384]:
+                - generic [ref=e385]:
+                  - button [ref=e387] [cursor=pointer]:
+                    - link [ref=e388]:
+                      - /url: "#"
+                      - img [ref=e389]
+                  - button [ref=e393] [cursor=pointer]:
+                    - img [ref=e394]
+                - button "Create 3D with AI" [ref=e397] [cursor=pointer]:
+                  - img "Sparkle" [ref=e398]
+              - link [ref=e399] [cursor=pointer]:
+                - /url: /3d-icon-pack/graphic-design-3d-icon-pack_415878
+              - generic [ref=e400]:
+                - heading "Graphic Design 3D Icon Pack" [level=2] [ref=e401]
+                - generic [ref=e402]: 20 3D Icons
+            - article "Mother's Day 3D Icon Pack" [ref=e404]:
+              - generic [ref=e413]:
+                - generic [ref=e414]:
+                  - button [ref=e416] [cursor=pointer]:
+                    - link [ref=e417]:
+                      - /url: "#"
+                      - img [ref=e418]
+                  - button [ref=e422] [cursor=pointer]:
+                    - img [ref=e423]
+                - button "Create 3D with AI" [ref=e426] [cursor=pointer]:
+                  - img "Sparkle" [ref=e427]
+              - link [ref=e428] [cursor=pointer]:
+                - /url: /3d-icon-pack/mothers-day-3d-icon-pack_419113
+              - generic [ref=e429]:
+                - heading "Mother's Day 3D Icon Pack" [level=2] [ref=e430]
+                - generic [ref=e431]: 20 3D Icons
+            - article "Summer Holiday 3D Icon Pack" [ref=e433]:
+              - generic [ref=e442]:
+                - generic [ref=e443]:
+                  - button [ref=e445] [cursor=pointer]:
+                    - link [ref=e446]:
+                      - /url: "#"
+                      - img [ref=e447]
+                  - button [ref=e451] [cursor=pointer]:
+                    - img [ref=e452]
+                - button "Create 3D with AI" [ref=e455] [cursor=pointer]:
+                  - img "Sparkle" [ref=e456]
+              - link [ref=e457] [cursor=pointer]:
+                - /url: /3d-icon-pack/summer-holiday-3d-icon-pack_418482
+              - generic [ref=e458]:
+                - heading "Summer Holiday 3D Icon Pack" [level=2] [ref=e459]
+                - generic [ref=e460]: 26 3D Icons
+            - article "Spring Day 3D Icon Pack" [ref=e462]:
+              - generic [ref=e471]:
+                - generic [ref=e472]:
+                  - button [ref=e474] [cursor=pointer]:
+                    - link [ref=e475]:
+                      - /url: "#"
+                      - img [ref=e476]
+                  - button [ref=e480] [cursor=pointer]:
+                    - img [ref=e481]
+                - button "Create 3D with AI" [ref=e484] [cursor=pointer]:
+                  - img "Sparkle" [ref=e485]
+              - link [ref=e486] [cursor=pointer]:
+                - /url: /3d-icon-pack/spring-day-3d-icon-pack_418332
+              - generic [ref=e487]:
+                - heading "Spring Day 3D Icon Pack" [level=2] [ref=e488]
+                - generic [ref=e489]: 20 3D Icons
+            - article "World Environment Day 3D Icon Pack" [ref=e491]:
+              - generic [ref=e500]:
+                - generic [ref=e501]:
+                  - button [ref=e503] [cursor=pointer]:
+                    - link [ref=e504]:
+                      - /url: "#"
+                      - img [ref=e505]
+                  - button [ref=e509] [cursor=pointer]:
+                    - img [ref=e510]
+                - button "Create 3D with AI" [ref=e513] [cursor=pointer]:
+                  - img "Sparkle" [ref=e514]
+              - link [ref=e515] [cursor=pointer]:
+                - /url: /3d-icon-pack/world-environment-day-3d-icon-pack_418871
+              - generic [ref=e516]:
+                - heading "World Environment Day 3D Icon Pack" [level=2] [ref=e517]
+                - generic [ref=e518]: 20 3D Icons
+            - article "Football 3D Icon Pack" [ref=e520]:
+              - generic [ref=e529]:
+                - generic [ref=e530]:
+                  - button [ref=e532] [cursor=pointer]:
+                    - link [ref=e533]:
+                      - /url: "#"
+                      - img [ref=e534]
+                  - button [ref=e538] [cursor=pointer]:
+                    - img [ref=e539]
+                - button "Create 3D with AI" [ref=e542] [cursor=pointer]:
+                  - img "Sparkle" [ref=e543]
+              - link [ref=e544] [cursor=pointer]:
+                - /url: /3d-icon-pack/football-3d-icon-pack_422277
+              - generic [ref=e545]:
+                - heading "Football 3D Icon Pack" [level=2] [ref=e546]
+                - generic [ref=e547]: 41 3D Icons
+            - article "Football 3D Icon Pack" [ref=e549]:
+              - generic [ref=e558]:
+                - generic [ref=e559]:
+                  - button [ref=e561] [cursor=pointer]:
+                    - link [ref=e562]:
+                      - /url: "#"
+                      - img [ref=e563]
+                  - button [ref=e567] [cursor=pointer]:
+                    - img [ref=e568]
+                - button "Create 3D with AI" [ref=e571] [cursor=pointer]:
+                  - img "Sparkle" [ref=e572]
+              - link [ref=e573] [cursor=pointer]:
+                - /url: /3d-icon-pack/football-3d-icon-pack_422264
+              - generic [ref=e574]:
+                - heading "Football 3D Icon Pack" [level=2] [ref=e575]
+                - generic [ref=e576]: 17 3D Icons
+            - article "Soccer 3D Icon Pack" [ref=e578]:
+              - generic [ref=e587]:
+                - generic [ref=e588]:
+                  - button [ref=e590] [cursor=pointer]:
+                    - link [ref=e591]:
+                      - /url: "#"
+                      - img [ref=e592]
+                  - button [ref=e596] [cursor=pointer]:
+                    - img [ref=e597]
+                - button "Create 3D with AI" [ref=e600] [cursor=pointer]:
+                  - img "Sparkle" [ref=e601]
+              - link [ref=e602] [cursor=pointer]:
+                - /url: /3d-icon-pack/soccer-3d-icon-pack_422278
+              - generic [ref=e603]:
+                - heading "Soccer 3D Icon Pack" [level=2] [ref=e604]
+                - generic [ref=e605]: 18 3D Icons
+            - article "Football Soccer Sports 3D Icon Pack" [ref=e607]:
+              - generic [ref=e616]:
+                - generic [ref=e617]:
+                  - button [ref=e619] [cursor=pointer]:
+                    - link [ref=e620]:
+                      - /url: "#"
+                      - img [ref=e621]
+                  - button [ref=e625] [cursor=pointer]:
+                    - img [ref=e626]
+                - button "Create 3D with AI" [ref=e629] [cursor=pointer]:
+                  - img "Sparkle" [ref=e630]
+              - link [ref=e631] [cursor=pointer]:
+                - /url: /3d-icon-pack/football-soccer-sports-3d-icon-pack_422279
+              - generic [ref=e632]:
+                - heading "Football Soccer Sports 3D Icon Pack" [level=2] [ref=e633]
+                - generic [ref=e634]: 25 3D Icons
+            - article "Weather 3D Icon Pack" [ref=e636]:
+              - generic [ref=e645]:
+                - generic [ref=e646]:
+                  - button [ref=e648] [cursor=pointer]:
+                    - link [ref=e649]:
+                      - /url: "#"
+                      - img [ref=e650]
+                  - button [ref=e654] [cursor=pointer]:
+                    - img [ref=e655]
+                - button "Create 3D with AI" [ref=e658] [cursor=pointer]:
+                  - img "Sparkle" [ref=e659]
+              - link [ref=e660] [cursor=pointer]:
+                - /url: /3d-icon-pack/weather-3d-icon-pack_417554
+              - generic [ref=e661]:
+                - heading "Weather 3D Icon Pack" [level=2] [ref=e662]
+                - generic [ref=e663]: 25 3D Icons
+            - article "GROCERY 3D Icon Pack" [ref=e665]:
+              - generic [ref=e674]:
+                - generic [ref=e675]:
+                  - button [ref=e677] [cursor=pointer]:
+                    - link [ref=e678]:
+                      - /url: "#"
+                      - img [ref=e679]
+                  - button [ref=e683] [cursor=pointer]:
+                    - img [ref=e684]
+                - button "Create 3D with AI" [ref=e687] [cursor=pointer]:
+                  - img "Sparkle" [ref=e688]
+              - link [ref=e689] [cursor=pointer]:
+                - /url: /3d-icon-pack/grocery-3d-icon-pack_422239
+              - generic [ref=e690]:
+                - heading "GROCERY 3D Icon Pack" [level=2] [ref=e691]
+                - generic [ref=e692]: 25 3D Icons
+          - button [ref=e693] [cursor=pointer]:
+            - img [ref=e694]
+      - generic [ref=e696]:
+        - generic [ref=e697]:
+          - generic [ref=e698]:
+            - heading "Lottie Animations" [level=2] [ref=e699]
+            - generic [ref=e700]: 968K+ Assets
+          - link "View all" [ref=e701] [cursor=pointer]:
+            - /url: /featured-lottie-animation-packs
+        - generic [ref=e703]:
+          - generic [ref=e704]:
+            - article "Ai Animation Pack" [ref=e706]:
+              - generic [ref=e715]:
+                - generic [ref=e716]:
+                  - button [ref=e718] [cursor=pointer]:
+                    - link [ref=e719]:
+                      - /url: "#"
+                      - img [ref=e720]
+                  - button [ref=e724] [cursor=pointer]:
+                    - img [ref=e725]
+                - button "Create Illustration with AI" [ref=e728] [cursor=pointer]:
+                  - img "Sparkle" [ref=e729]
+              - link [ref=e730] [cursor=pointer]:
+                - /url: /lottie-animation-pack/ai-animation-pack_379633
+              - generic [ref=e731]:
+                - heading "Ai Animation Pack" [level=2] [ref=e732]
+                - generic [ref=e733]: 35 Lottie Animations
+            - article "E Commerce Animation Pack" [ref=e735]:
+              - generic [ref=e744]:
+                - generic [ref=e745]:
+                  - button [ref=e747] [cursor=pointer]:
+                    - link [ref=e748]:
+                      - /url: "#"
+                      - img [ref=e749]
+                  - button [ref=e753] [cursor=pointer]:
+                    - img [ref=e754]
+                - button "Create Illustration with AI" [ref=e757] [cursor=pointer]:
+                  - img "Sparkle" [ref=e758]
+              - link [ref=e759] [cursor=pointer]:
+                - /url: /lottie-animation-pack/e-commerce-animation-pack_377833
+              - generic [ref=e760]:
+                - heading "E Commerce Animation Pack" [level=2] [ref=e761]
+                - generic [ref=e762]: 40 Lottie Animations
+            - article "E-Commerce Animation Pack" [ref=e764]:
+              - generic [ref=e773]:
+                - generic [ref=e774]:
+                  - button [ref=e776] [cursor=pointer]:
+                    - link [ref=e777]:
+                      - /url: "#"
+                      - img [ref=e778]
+                  - button [ref=e782] [cursor=pointer]:
+                    - img [ref=e783]
+                - button "Create Illustration with AI" [ref=e786] [cursor=pointer]:
+                  - img "Sparkle" [ref=e787]
+              - link [ref=e788] [cursor=pointer]:
+                - /url: /lottie-animation-pack/e-commerce-animation-pack_380865
+              - generic [ref=e789]:
+                - heading "E-Commerce Animation Pack" [level=2] [ref=e790]
+                - generic [ref=e791]: 41 Lottie Animations
+            - article "Chat And Social Media Animation Pack" [ref=e793]:
+              - generic [ref=e802]:
+                - generic [ref=e803]:
+                  - button [ref=e805] [cursor=pointer]:
+                    - link [ref=e806]:
+                      - /url: "#"
+                      - img [ref=e807]
+                  - button [ref=e811] [cursor=pointer]:
+                    - img [ref=e812]
+                - button "Create Illustration with AI" [ref=e815] [cursor=pointer]:
+                  - img "Sparkle" [ref=e816]
+              - link [ref=e817] [cursor=pointer]:
+                - /url: /lottie-animation-pack/chat-and-social-media-animation-pack_377764
+              - generic [ref=e818]:
+                - heading "Chat And Social Media Animation Pack" [level=2] [ref=e819]
+                - generic [ref=e820]: 44 Lottie Animations
+            - article "SaaS Animation Pack" [ref=e822]:
+              - generic [ref=e831]:
+                - generic [ref=e832]:
+                  - button [ref=e834] [cursor=pointer]:
+                    - link [ref=e835]:
+                      - /url: "#"
+                      - img [ref=e836]
+                  - button [ref=e840] [cursor=pointer]:
+                    - img [ref=e841]
+                - button "Create Illustration with AI" [ref=e844] [cursor=pointer]:
+                  - img "Sparkle" [ref=e845]
+              - link [ref=e846] [cursor=pointer]:
+                - /url: /lottie-animation-pack/saas-animation-pack_321817
+              - generic [ref=e847]:
+                - heading "SaaS Animation Pack" [level=2] [ref=e848]
+                - generic [ref=e849]: 10 Lottie Animations
+            - article "Glassmorphism Pack Animation Pack" [ref=e851]:
+              - generic [ref=e860]:
+                - generic [ref=e861]:
+                  - button [ref=e863] [cursor=pointer]:
+                    - link [ref=e864]:
+                      - /url: "#"
+                      - img [ref=e865]
+                  - button [ref=e869] [cursor=pointer]:
+                    - img [ref=e870]
+                - button "Create Illustration with AI" [ref=e873] [cursor=pointer]:
+                  - img "Sparkle" [ref=e874]
+              - link [ref=e875] [cursor=pointer]:
+                - /url: /lottie-animation-pack/glassmorphism-pack-animation-pack_318427
+              - generic [ref=e876]:
+                - heading "Glassmorphism Pack Animation Pack" [level=2] [ref=e877]
+                - generic [ref=e878]: 9 Lottie Animations
+            - article "Emoji Animation Pack" [ref=e880]:
+              - generic [ref=e889]:
+                - generic [ref=e890]:
+                  - button [ref=e892] [cursor=pointer]:
+                    - link [ref=e893]:
+                      - /url: "#"
+                      - img [ref=e894]
+                  - button [ref=e898] [cursor=pointer]:
+                    - img [ref=e899]
+                - button "Create Illustration with AI" [ref=e902] [cursor=pointer]:
+                  - img "Sparkle" [ref=e903]
+              - link [ref=e904] [cursor=pointer]:
+                - /url: /lottie-animation-pack/emoji-animation-pack_104656
+              - generic [ref=e905]:
+                - heading "Emoji Animation Pack" [level=2] [ref=e906]
+                - generic [ref=e907]: 34 Lottie Animations
+            - article "Valentines Day Animation Pack" [ref=e909]:
+              - generic [ref=e918]:
+                - generic [ref=e919]:
+                  - button [ref=e921] [cursor=pointer]:
+                    - link [ref=e922]:
+                      - /url: "#"
+                      - img [ref=e923]
+                  - button [ref=e927] [cursor=pointer]:
+                    - img [ref=e928]
+                - button "Create Illustration with AI" [ref=e931] [cursor=pointer]:
+                  - img "Sparkle" [ref=e932]
+              - link [ref=e933] [cursor=pointer]:
+                - /url: /lottie-animation-pack/valentines-day-animation-pack_128323
+              - generic [ref=e934]:
+                - heading "Valentines Day Animation Pack" [level=2] [ref=e935]
+                - generic [ref=e936]: 8 Lottie Animations
+            - article "Loading Animation Pack" [ref=e938]:
+              - generic [ref=e947]:
+                - generic [ref=e948]:
+                  - button [ref=e950] [cursor=pointer]:
+                    - link [ref=e951]:
+                      - /url: "#"
+                      - img [ref=e952]
+                  - button [ref=e956] [cursor=pointer]:
+                    - img [ref=e957]
+                - button "Create Illustration with AI" [ref=e960] [cursor=pointer]:
+                  - img "Sparkle" [ref=e961]
+              - link [ref=e962] [cursor=pointer]:
+                - /url: /lottie-animation-pack/loading-animation-pack_376577
+              - generic [ref=e963]:
+                - heading "Loading Animation Pack" [level=2] [ref=e964]
+                - generic [ref=e965]: 36 Lottie Animations
+            - article "Business Growth & Teamwork Animation Pack" [ref=e967]:
+              - generic [ref=e976]:
+                - generic [ref=e977]:
+                  - button [ref=e979] [cursor=pointer]:
+                    - link [ref=e980]:
+                      - /url: "#"
+                      - img [ref=e981]
+                  - button [ref=e985] [cursor=pointer]:
+                    - img [ref=e986]
+                - button "Create Illustration with AI" [ref=e989] [cursor=pointer]:
+                  - img "Sparkle" [ref=e990]
+              - link [ref=e991] [cursor=pointer]:
+                - /url: /lottie-animation-pack/business-growth-teamwork-animation-pack_379613
+              - generic [ref=e992]:
+                - heading "Business Growth & Teamwork Animation Pack" [level=2] [ref=e993]
+                - generic [ref=e994]: 5 Lottie Animations
+            - article "Christmas Animation Pack" [ref=e996]:
+              - generic [ref=e1005]:
+                - generic [ref=e1006]:
+                  - button [ref=e1008] [cursor=pointer]:
+                    - link [ref=e1009]:
+                      - /url: "#"
+                      - img [ref=e1010]
+                  - button [ref=e1014] [cursor=pointer]:
+                    - img [ref=e1015]
+                - button "Create Illustration with AI" [ref=e1018] [cursor=pointer]:
+                  - img "Sparkle" [ref=e1019]
+              - link [ref=e1020] [cursor=pointer]:
+                - /url: /lottie-animation-pack/christmas-animation-pack_160511
+              - generic [ref=e1021]:
+                - heading "Christmas Animation Pack" [level=2] [ref=e1022]
+                - generic [ref=e1023]: 8 Lottie Animations
+            - article "Christmas Animation Pack" [ref=e1025]:
+              - generic [ref=e1034]:
+                - generic [ref=e1035]:
+                  - button [ref=e1037] [cursor=pointer]:
+                    - link [ref=e1038]:
+                      - /url: "#"
+                      - img [ref=e1039]
+                  - button [ref=e1043] [cursor=pointer]:
+                    - img [ref=e1044]
+                - button "Create Illustration with AI" [ref=e1047] [cursor=pointer]:
+                  - img "Sparkle" [ref=e1048]
+              - link [ref=e1049] [cursor=pointer]:
+                - /url: /lottie-animation-pack/christmas-animation-pack_159954
+              - generic [ref=e1050]:
+                - heading "Christmas Animation Pack" [level=2] [ref=e1051]
+                - generic [ref=e1052]: 18 Lottie Animations
+          - button [ref=e1053] [cursor=pointer]:
+            - img [ref=e1054]
+      - generic [ref=e1056]:
+        - generic [ref=e1057]:
+          - generic [ref=e1058]:
+            - heading "Unicons" [level=2] [ref=e1059]
+            - generic [ref=e1060]: 7000+ Assets
+          - link "View all" [ref=e1061] [cursor=pointer]:
+            - /url: /unicons/free-line-icons
+        - generic [ref=e1063]:
+          - generic [ref=e1064]:
+            - article "Location And Map Icon Pack" [ref=e1066]:
+              - generic [ref=e1067]:
+                - img "Location And Map Icon Pack" [ref=e1069]
+                - generic [ref=e1070]:
+                  - generic [ref=e1071]:
+                    - button [ref=e1073] [cursor=pointer]:
+                      - link [ref=e1074]:
+                        - /url: "#"
+                        - img [ref=e1075]
+                    - button [ref=e1079] [cursor=pointer]:
+                      - img [ref=e1080]
+                  - button "Create Icon with AI" [ref=e1083] [cursor=pointer]:
+                    - img "Sparkle" [ref=e1084]
+              - link [ref=e1085] [cursor=pointer]:
+                - /url: /icon-pack/location-and-map-icon-pack_77767
+              - generic [ref=e1086]:
+                - heading "Location And Map Icon Pack" [level=2] [ref=e1087]
+                - generic [ref=e1088]: 21 Icons
+            - article "Medical Icon Pack" [ref=e1090]:
+              - generic [ref=e1091]:
+                - img "Medical Icon Pack" [ref=e1093]
+                - generic [ref=e1094]:
+                  - generic [ref=e1095]:
+                    - button [ref=e1097] [cursor=pointer]:
+                      - link [ref=e1098]:
+                        - /url: "#"
+                        - img [ref=e1099]
+                    - button [ref=e1103] [cursor=pointer]:
+                      - img [ref=e1104]
+                  - button "Create Icon with AI" [ref=e1107] [cursor=pointer]:
+                    - img "Sparkle" [ref=e1108]
+              - link [ref=e1109] [cursor=pointer]:
+                - /url: /icon-pack/medical-icon-pack_38417
+              - generic [ref=e1110]:
+                - heading "Medical Icon Pack" [level=2] [ref=e1111]
+                - generic [ref=e1112]: 43 Icons
+            - article "User Interface Icon Pack" [ref=e1114]:
+              - generic [ref=e1115]:
+                - img "User Interface Icon Pack" [ref=e1117]
+                - generic [ref=e1118]:
+                  - generic [ref=e1119]:
+                    - button [ref=e1121] [cursor=pointer]:
+                      - link [ref=e1122]:
+                        - /url: "#"
+                        - img [ref=e1123]
+                    - button [ref=e1127] [cursor=pointer]:
+                      - img [ref=e1128]
+                  - button "Create Icon with AI" [ref=e1131] [cursor=pointer]:
+                    - img "Sparkle" [ref=e1132]
+              - link [ref=e1133] [cursor=pointer]:
+                - /url: /icon-pack/user-interface-icon-pack_25625
+              - generic [ref=e1134]:
+                - heading "User Interface Icon Pack" [level=2] [ref=e1135]
+                - generic [ref=e1136]: 226 Icons
+            - article "User Interface Icon Pack" [ref=e1138]:
+              - generic [ref=e1139]:
+                - img "User Interface Icon Pack" [ref=e1141]
+                - generic [ref=e1142]:
+                  - generic [ref=e1143]:
+                    - button [ref=e1145] [cursor=pointer]:
+                      - link [ref=e1146]:
+                        - /url: "#"
+                        - img [ref=e1147]
+                    - button [ref=e1151] [cursor=pointer]:
+                      - img [ref=e1152]
+                  - button "Create Icon with AI" [ref=e1155] [cursor=pointer]:
+                    - img "Sparkle" [ref=e1156]
+              - link [ref=e1157] [cursor=pointer]:
+                - /url: /icon-pack/user-interface-icon-pack_55506
+              - generic [ref=e1158]:
+                - heading "User Interface Icon Pack" [level=2] [ref=e1159]
+                - generic [ref=e1160]: 228 Icons
+            - article "Business Icon Pack" [ref=e1162]:
+              - generic [ref=e1163]:
+                - img "Business Icon Pack" [ref=e1165]
+                - generic [ref=e1166]:
+                  - generic [ref=e1167]:
+                    - button [ref=e1169] [cursor=pointer]:
+                      - link [ref=e1170]:
+                        - /url: "#"
+                        - img [ref=e1171]
+                    - button [ref=e1175] [cursor=pointer]:
+                      - img [ref=e1176]
+                  - button "Create Icon with AI" [ref=e1179] [cursor=pointer]:
+                    - img "Sparkle" [ref=e1180]
+              - link [ref=e1181] [cursor=pointer]:
+                - /url: /icon-pack/business-icon-pack_55465
+              - generic [ref=e1182]:
+                - heading "Business Icon Pack" [level=2] [ref=e1183]
+                - generic [ref=e1184]: 64 Icons
+            - article "Design Tools Icon Pack" [ref=e1186]:
+              - generic [ref=e1187]:
+                - img "Design Tools Icon Pack" [ref=e1189]
+                - generic [ref=e1190]:
+                  - generic [ref=e1191]:
+                    - button [ref=e1193] [cursor=pointer]:
+                      - link [ref=e1194]:
+                        - /url: "#"
+                        - img [ref=e1195]
+                    - button [ref=e1199] [cursor=pointer]:
+                      - img [ref=e1200]
+                  - button "Create Icon with AI" [ref=e1203] [cursor=pointer]:
+                    - img "Sparkle" [ref=e1204]
+              - link [ref=e1205] [cursor=pointer]:
+                - /url: /icon-pack/design-tools-icon-pack_36513
+              - generic [ref=e1206]:
+                - heading "Design Tools Icon Pack" [level=2] [ref=e1207]
+                - generic [ref=e1208]: 58 Icons
+            - article "User Interface Icon Pack" [ref=e1210]:
+              - generic [ref=e1211]:
+                - img "User Interface Icon Pack" [ref=e1213]
+                - generic [ref=e1214]:
+                  - generic [ref=e1215]:
+                    - button [ref=e1217] [cursor=pointer]:
+                      - link [ref=e1218]:
+                        - /url: "#"
+                        - img [ref=e1219]
+                    - button [ref=e1223] [cursor=pointer]:
+                      - img [ref=e1224]
+                  - button "Create Icon with AI" [ref=e1227] [cursor=pointer]:
+                    - img "Sparkle" [ref=e1228]
+              - link [ref=e1229] [cursor=pointer]:
+                - /url: /icon-pack/user-interface-icon-pack_36508
+              - generic [ref=e1230]:
+                - heading "User Interface Icon Pack" [level=2] [ref=e1231]
+                - generic [ref=e1232]: 229 Icons
+            - article "Free Brand Logos Icon Pack" [ref=e1234]:
+              - generic [ref=e1235]:
+                - img "Free Brand Logos Icon Pack" [ref=e1237]
+                - generic [ref=e1238]:
+                  - generic [ref=e1239]:
+                    - button [ref=e1241] [cursor=pointer]:
+                      - link [ref=e1242]:
+                        - /url: "#"
+                        - img [ref=e1243]
+                    - button [ref=e1247] [cursor=pointer]:
+                      - img [ref=e1248]
+                  - button "Create Icon with AI" [ref=e1251] [cursor=pointer]:
+                    - img "Sparkle" [ref=e1252]
+              - link [ref=e1253] [cursor=pointer]:
+                - /url: /free-icon-pack/free-brand-logos-icon-pack_37188
+              - generic [ref=e1254]:
+                - heading "Free Brand Logos Icon Pack" [level=2] [ref=e1255]
+                - generic [ref=e1256]: 87 Icons
+            - article "Free Sports Icon Pack" [ref=e1258]:
+              - generic [ref=e1259]:
+                - img "Free Sports Icon Pack" [ref=e1261]
+                - generic [ref=e1262]:
+                  - generic [ref=e1263]:
+                    - button [ref=e1265] [cursor=pointer]:
+                      - link [ref=e1266]:
+                        - /url: "#"
+                        - img [ref=e1267]
+                    - button [ref=e1271] [cursor=pointer]:
+                      - img [ref=e1272]
+                  - button "Create Icon with AI" [ref=e1275] [cursor=pointer]:
+                    - img "Sparkle" [ref=e1276]
+              - link [ref=e1277] [cursor=pointer]:
+                - /url: /free-icon-pack/free-sports-icon-pack_25617
+              - generic [ref=e1278]:
+                - heading "Free Sports Icon Pack" [level=2] [ref=e1279]
+                - generic [ref=e1280]: 23 Icons
+            - article "Medical Icon Pack" [ref=e1282]:
+              - generic [ref=e1283]:
+                - img "Medical Icon Pack" [ref=e1285]
+                - generic [ref=e1286]:
+                  - generic [ref=e1287]:
+                    - button [ref=e1289] [cursor=pointer]:
+                      - link [ref=e1290]:
+                        - /url: "#"
+                        - img [ref=e1291]
+                    - button [ref=e1295] [cursor=pointer]:
+                      - img [ref=e1296]
+                  - button "Create Icon with AI" [ref=e1299] [cursor=pointer]:
+                    - img "Sparkle" [ref=e1300]
+              - link [ref=e1301] [cursor=pointer]:
+                - /url: /icon-pack/medical-icon-pack_55488
+              - generic [ref=e1302]:
+                - heading "Medical Icon Pack" [level=2] [ref=e1303]
+                - generic [ref=e1304]: 43 Icons
+            - article "File And Folder Icon Pack" [ref=e1306]:
+              - generic [ref=e1307]:
+                - img "File And Folder Icon Pack" [ref=e1309]
+                - generic [ref=e1310]:
+                  - generic [ref=e1311]:
+                    - button [ref=e1313] [cursor=pointer]:
+                      - link [ref=e1314]:
+                        - /url: "#"
+                        - img [ref=e1315]
+                    - button [ref=e1319] [cursor=pointer]:
+                      - img [ref=e1320]
+                  - button "Create Icon with AI" [ref=e1323] [cursor=pointer]:
+                    - img "Sparkle" [ref=e1324]
+              - link [ref=e1325] [cursor=pointer]:
+                - /url: /icon-pack/file-and-folder-icon-pack_25623
+              - generic [ref=e1326]:
+                - heading "File And Folder Icon Pack" [level=2] [ref=e1327]
+                - generic [ref=e1328]: 65 Icons
+            - article "Users Icon Pack" [ref=e1330]:
+              - generic [ref=e1331]:
+                - img "Users Icon Pack" [ref=e1333]
+                - generic [ref=e1334]:
+                  - generic [ref=e1335]:
+                    - button [ref=e1337] [cursor=pointer]:
+                      - link [ref=e1338]:
+                        - /url: "#"
+                        - img [ref=e1339]
+                    - button [ref=e1343] [cursor=pointer]:
+                      - img [ref=e1344]
+                  - button "Create Icon with AI" [ref=e1347] [cursor=pointer]:
+                    - img "Sparkle" [ref=e1348]
+              - link [ref=e1349] [cursor=pointer]:
+                - /url: /icon-pack/users-icon-pack_25629
+              - generic [ref=e1350]:
+                - heading "Users Icon Pack" [level=2] [ref=e1351]
+                - generic [ref=e1352]: 11 Icons
+          - button [ref=e1353] [cursor=pointer]:
+            - img [ref=e1354]
+      - generic [ref=e1356]:
+        - generic [ref=e1357]:
+          - generic [ref=e1358]:
+            - heading "Illustration Kits" [level=2] [ref=e1359]
+            - generic [ref=e1360]: 210+ Assets
+          - link "View all" [ref=e1361] [cursor=pointer]:
+            - /url: /illustration-kits/packs
+        - generic [ref=e1363]:
+          - generic [ref=e1364]:
+            - article "Review & Feedback Illustration Pack" [ref=e1366]:
+              - generic [ref=e1375]:
+                - generic [ref=e1376]:
+                  - button [ref=e1378] [cursor=pointer]:
+                    - link [ref=e1379]:
+                      - /url: "#"
+                      - img [ref=e1380]
+                  - button [ref=e1384] [cursor=pointer]:
+                    - img [ref=e1385]
+                - button "Create Illustration with AI" [ref=e1388] [cursor=pointer]:
+                  - img "Sparkle" [ref=e1389]
+              - link [ref=e1390] [cursor=pointer]:
+                - /url: /illustration-kit/review-feedback-illustration-pack_248024
+              - generic [ref=e1391]:
+                - heading "Review & Feedback Illustration Pack" [level=2] [ref=e1392]
+                - generic [ref=e1393]: 5 Illustrations
+            - article "Marketing Illustration Pack" [ref=e1395]:
+              - generic [ref=e1404]:
+                - generic [ref=e1405]:
+                  - button [ref=e1407] [cursor=pointer]:
+                    - link [ref=e1408]:
+                      - /url: "#"
+                      - img [ref=e1409]
+                  - button [ref=e1413] [cursor=pointer]:
+                    - img [ref=e1414]
+                - button "Create Illustration with AI" [ref=e1417] [cursor=pointer]:
+                  - img "Sparkle" [ref=e1418]
+              - link [ref=e1419] [cursor=pointer]:
+                - /url: /illustration-kit/marketing-illustration-pack_265469
+              - generic [ref=e1420]:
+                - heading "Marketing Illustration Pack" [level=2] [ref=e1421]
+                - generic [ref=e1422]: 6 Illustrations
+            - article "Free Business People Illustration Pack" [ref=e1424]:
+              - generic [ref=e1433]:
+                - generic [ref=e1434]:
+                  - button [ref=e1436] [cursor=pointer]:
+                    - link [ref=e1437]:
+                      - /url: "#"
+                      - img [ref=e1438]
+                  - button [ref=e1442] [cursor=pointer]:
+                    - img [ref=e1443]
+                - button "Create Illustration with AI" [ref=e1446] [cursor=pointer]:
+                  - img "Sparkle" [ref=e1447]
+              - link [ref=e1448] [cursor=pointer]:
+                - /url: /illustration-kit/free-business-people-illustration-pack_207436
+              - generic [ref=e1449]:
+                - heading "Free Business People Illustration Pack" [level=2] [ref=e1450]
+                - generic [ref=e1451]: 5 Illustrations
+            - article "Social Media Illustration Pack" [ref=e1453]:
+              - generic [ref=e1462]:
+                - generic [ref=e1463]:
+                  - button [ref=e1465] [cursor=pointer]:
+                    - link [ref=e1466]:
+                      - /url: "#"
+                      - img [ref=e1467]
+                  - button [ref=e1471] [cursor=pointer]:
+                    - img [ref=e1472]
+                - button "Create Illustration with AI" [ref=e1475] [cursor=pointer]:
+                  - img "Sparkle" [ref=e1476]
+              - link [ref=e1477] [cursor=pointer]:
+                - /url: /illustration-kit/social-media-illustration-pack_290211
+              - generic [ref=e1478]:
+                - heading "Social Media Illustration Pack" [level=2] [ref=e1479]
+                - generic [ref=e1480]: 5 Illustrations
+            - article "Travel Illustration Pack" [ref=e1482]:
+              - generic [ref=e1491]:
+                - generic [ref=e1492]:
+                  - button [ref=e1494] [cursor=pointer]:
+                    - link [ref=e1495]:
+                      - /url: "#"
+                      - img [ref=e1496]
+                  - button [ref=e1500] [cursor=pointer]:
+                    - img [ref=e1501]
+                - button "Create Illustration with AI" [ref=e1504] [cursor=pointer]:
+                  - img "Sparkle" [ref=e1505]
+              - link [ref=e1506] [cursor=pointer]:
+                - /url: /illustration-kit/travel-illustration-pack_209818
+              - generic [ref=e1507]:
+                - heading "Travel Illustration Pack" [level=2] [ref=e1508]
+                - generic [ref=e1509]: 6 Illustrations
+            - article "Online Shopping Illustration Pack" [ref=e1511]:
+              - generic [ref=e1520]:
+                - generic [ref=e1521]:
+                  - button [ref=e1523] [cursor=pointer]:
+                    - link [ref=e1524]:
+                      - /url: "#"
+                      - img [ref=e1525]
+                  - button [ref=e1529] [cursor=pointer]:
+                    - img [ref=e1530]
+                - button "Create Illustration with AI" [ref=e1533] [cursor=pointer]:
+                  - img "Sparkle" [ref=e1534]
+              - link [ref=e1535] [cursor=pointer]:
+                - /url: /illustration-kit/online-shopping-illustration-pack_264989
+              - generic [ref=e1536]:
+                - heading "Online Shopping Illustration Pack" [level=2] [ref=e1537]
+                - generic [ref=e1538]: 5 Illustrations
+            - article "Healthcare Illustration Pack" [ref=e1540]:
+              - generic [ref=e1549]:
+                - generic [ref=e1550]:
+                  - button [ref=e1552] [cursor=pointer]:
+                    - link [ref=e1553]:
+                      - /url: "#"
+                      - img [ref=e1554]
+                  - button [ref=e1558] [cursor=pointer]:
+                    - img [ref=e1559]
+                - button "Create Illustration with AI" [ref=e1562] [cursor=pointer]:
+                  - img "Sparkle" [ref=e1563]
+              - link [ref=e1564] [cursor=pointer]:
+                - /url: /illustration-kit/healthcare-illustration-pack_290216
+              - generic [ref=e1565]:
+                - heading "Healthcare Illustration Pack" [level=2] [ref=e1566]
+                - generic [ref=e1567]: 5 Illustrations
+            - article "Social Media Illustration Pack" [ref=e1569]:
+              - generic [ref=e1578]:
+                - generic [ref=e1579]:
+                  - button [ref=e1581] [cursor=pointer]:
+                    - link [ref=e1582]:
+                      - /url: "#"
+                      - img [ref=e1583]
+                  - button [ref=e1587] [cursor=pointer]:
+                    - img [ref=e1588]
+                - button "Create Illustration with AI" [ref=e1591] [cursor=pointer]:
+                  - img "Sparkle" [ref=e1592]
+              - link [ref=e1593] [cursor=pointer]:
+                - /url: /illustration-kit/social-media-illustration-pack_273042
+              - generic [ref=e1594]:
+                - heading "Social Media Illustration Pack" [level=2] [ref=e1595]
+                - generic [ref=e1596]: 5 Illustrations
+            - article "People Illustration Pack" [ref=e1598]:
+              - generic [ref=e1607]:
+                - generic [ref=e1608]:
+                  - button [ref=e1610] [cursor=pointer]:
+                    - link [ref=e1611]:
+                      - /url: "#"
+                      - img [ref=e1612]
+                  - button [ref=e1616] [cursor=pointer]:
+                    - img [ref=e1617]
+                - button "Create Illustration with AI" [ref=e1620] [cursor=pointer]:
+                  - img "Sparkle" [ref=e1621]
+              - link [ref=e1622] [cursor=pointer]:
+                - /url: /illustration-kit/people-illustration-pack_212754
+              - generic [ref=e1623]:
+                - heading "People Illustration Pack" [level=2] [ref=e1624]
+                - generic [ref=e1625]: 7 Illustrations
+            - article "Finance & Investment Illustration Pack" [ref=e1627]:
+              - generic [ref=e1636]:
+                - generic [ref=e1637]:
+                  - button [ref=e1639] [cursor=pointer]:
+                    - link [ref=e1640]:
+                      - /url: "#"
+                      - img [ref=e1641]
+                  - button [ref=e1645] [cursor=pointer]:
+                    - img [ref=e1646]
+                - button "Create Illustration with AI" [ref=e1649] [cursor=pointer]:
+                  - img "Sparkle" [ref=e1650]
+              - link [ref=e1651] [cursor=pointer]:
+                - /url: /illustration-kit/finance-investment-illustration-pack_265470
+              - generic [ref=e1652]:
+                - heading "Finance & Investment Illustration Pack" [level=2] [ref=e1653]
+                - generic [ref=e1654]: 5 Illustrations
+            - article "Shopping Illustration Pack" [ref=e1656]:
+              - generic [ref=e1665]:
+                - generic [ref=e1666]:
+                  - button [ref=e1668] [cursor=pointer]:
+                    - link [ref=e1669]:
+                      - /url: "#"
+                      - img [ref=e1670]
+                  - button [ref=e1674] [cursor=pointer]:
+                    - img [ref=e1675]
+                - button "Create Illustration with AI" [ref=e1678] [cursor=pointer]:
+                  - img "Sparkle" [ref=e1679]
+              - link [ref=e1680] [cursor=pointer]:
+                - /url: /illustration-kit/shopping-illustration-pack_281853
+              - generic [ref=e1681]:
+                - heading "Shopping Illustration Pack" [level=2] [ref=e1682]
+                - generic [ref=e1683]: 5 Illustrations
+            - article "Metaverse Illustration Pack" [ref=e1685]:
+              - generic [ref=e1694]:
+                - generic [ref=e1695]:
+                  - button [ref=e1697] [cursor=pointer]:
+                    - link [ref=e1698]:
+                      - /url: "#"
+                      - img [ref=e1699]
+                  - button [ref=e1703] [cursor=pointer]:
+                    - img [ref=e1704]
+                - button "Create Illustration with AI" [ref=e1707] [cursor=pointer]:
+                  - img "Sparkle" [ref=e1708]
+              - link [ref=e1709] [cursor=pointer]:
+                - /url: /illustration-kit/metaverse-illustration-pack_253553
+              - generic [ref=e1710]:
+                - heading "Metaverse Illustration Pack" [level=2] [ref=e1711]
+                - generic [ref=e1712]: 5 Illustrations
+          - button [ref=e1713] [cursor=pointer]:
+            - img [ref=e1714]
+      - generic [ref=e1716]:
+        - generic [ref=e1717]:
+          - generic [ref=e1718]:
+            - heading "Icons" [level=2] [ref=e1719]
+            - generic [ref=e1720]: 11.3M+ Assets
+          - link "View all" [ref=e1721] [cursor=pointer]:
+            - /url: /featured-icon-packs
+        - generic [ref=e1723]:
+          - generic [ref=e1724]:
+            - article "User Interface Icon Pack" [ref=e1726]:
+              - generic [ref=e1727]:
+                - generic [ref=e1728]:
+                  - generic:
+                    - img "User Interface Icon Pack"
+                - generic [ref=e1729]:
+                  - generic [ref=e1730]:
+                    - button [ref=e1732] [cursor=pointer]:
+                      - link [ref=e1733]:
+                        - /url: "#"
+                        - img [ref=e1734]
+                    - button [ref=e1738] [cursor=pointer]:
+                      - img [ref=e1739]
+                  - button "Create Icon with AI" [ref=e1742] [cursor=pointer]:
+                    - img "Sparkle" [ref=e1743]
+              - link [ref=e1744] [cursor=pointer]:
+                - /url: /icon-pack/user-interface-icon-pack_412102
+              - generic [ref=e1745]:
+                - heading "User Interface Icon Pack" [level=2] [ref=e1746]
+                - generic [ref=e1747]: 84 Icons
+            - article "Fast Food Icon Pack" [ref=e1749]:
+              - generic [ref=e1750]:
+                - generic [ref=e1751]:
+                  - generic:
+                    - img "Fast Food Icon Pack"
+                - generic [ref=e1752]:
+                  - generic [ref=e1753]:
+                    - button [ref=e1755] [cursor=pointer]:
+                      - link [ref=e1756]:
+                        - /url: "#"
+                        - img [ref=e1757]
+                    - button [ref=e1761] [cursor=pointer]:
+                      - img [ref=e1762]
+                  - button "Create Icon with AI" [ref=e1765] [cursor=pointer]:
+                    - img "Sparkle" [ref=e1766]
+              - link [ref=e1767] [cursor=pointer]:
+                - /url: /icon-pack/fast-food-icon-pack_419920
+              - generic [ref=e1768]:
+                - heading "Fast Food Icon Pack" [level=2] [ref=e1769]
+                - generic [ref=e1770]: 30 Icons
+            - article "Sports Icon Pack" [ref=e1772]:
+              - generic [ref=e1773]:
+                - generic [ref=e1774]:
+                  - generic:
+                    - img "Sports Icon Pack"
+                - generic [ref=e1775]:
+                  - generic [ref=e1776]:
+                    - button [ref=e1778] [cursor=pointer]:
+                      - link [ref=e1779]:
+                        - /url: "#"
+                        - img [ref=e1780]
+                    - button [ref=e1784] [cursor=pointer]:
+                      - img [ref=e1785]
+                  - button "Create Icon with AI" [ref=e1788] [cursor=pointer]:
+                    - img "Sparkle" [ref=e1789]
+              - link [ref=e1790] [cursor=pointer]:
+                - /url: /icon-pack/sports-icon-pack_417647
+              - generic [ref=e1791]:
+                - heading "Sports Icon Pack" [level=2] [ref=e1792]
+                - generic [ref=e1793]: 41 Icons
+            - article "Travelling Icon Pack" [ref=e1795]:
+              - generic [ref=e1796]:
+                - generic [ref=e1797]:
+                  - generic:
+                    - img "Travelling Icon Pack"
+                - generic [ref=e1798]:
+                  - generic [ref=e1799]:
+                    - button [ref=e1801] [cursor=pointer]:
+                      - link [ref=e1802]:
+                        - /url: "#"
+                        - img [ref=e1803]
+                    - button [ref=e1807] [cursor=pointer]:
+                      - img [ref=e1808]
+                  - button "Create Icon with AI" [ref=e1811] [cursor=pointer]:
+                    - img "Sparkle" [ref=e1812]
+              - link [ref=e1813] [cursor=pointer]:
+                - /url: /icon-pack/travelling-icon-pack_421755
+              - generic [ref=e1814]:
+                - heading "Travelling Icon Pack" [level=2] [ref=e1815]
+                - generic [ref=e1816]: 50 Icons
+            - article "Core Business Icon Pack" [ref=e1818]:
+              - generic [ref=e1819]:
+                - generic [ref=e1820]:
+                  - generic:
+                    - img "Core Business Icon Pack"
+                - generic [ref=e1821]:
+                  - generic [ref=e1822]:
+                    - button [ref=e1824] [cursor=pointer]:
+                      - link [ref=e1825]:
+                        - /url: "#"
+                        - img [ref=e1826]
+                    - button [ref=e1830] [cursor=pointer]:
+                      - img [ref=e1831]
+                  - button "Create Icon with AI" [ref=e1834] [cursor=pointer]:
+                    - img "Sparkle" [ref=e1835]
+              - link [ref=e1836] [cursor=pointer]:
+                - /url: /icon-pack/core-business-icon-pack_413491
+              - generic [ref=e1837]:
+                - heading "Core Business Icon Pack" [level=2] [ref=e1838]
+                - generic [ref=e1839]: 25 Icons
+            - article "User Interface Icon Pack" [ref=e1841]:
+              - generic [ref=e1842]:
+                - generic [ref=e1843]:
+                  - generic:
+                    - img "User Interface Icon Pack"
+                - generic [ref=e1844]:
+                  - generic [ref=e1845]:
+                    - button [ref=e1847] [cursor=pointer]:
+                      - link [ref=e1848]:
+                        - /url: "#"
+                        - img [ref=e1849]
+                    - button [ref=e1853] [cursor=pointer]:
+                      - img [ref=e1854]
+                  - button "Create Icon with AI" [ref=e1857] [cursor=pointer]:
+                    - img "Sparkle" [ref=e1858]
+              - link [ref=e1859] [cursor=pointer]:
+                - /url: /icon-pack/user-interface-icon-pack_417712
+              - generic [ref=e1860]:
+                - heading "User Interface Icon Pack" [level=2] [ref=e1861]
+                - generic [ref=e1862]: 50 Icons
+            - article "Engineering And Manufacturing Icon Pack" [ref=e1864]:
+              - generic [ref=e1865]:
+                - generic [ref=e1866]:
+                  - generic:
+                    - img "Engineering And Manufacturing Icon Pack"
+                - generic [ref=e1867]:
+                  - generic [ref=e1868]:
+                    - button [ref=e1870] [cursor=pointer]:
+                      - link [ref=e1871]:
+                        - /url: "#"
+                        - img [ref=e1872]
+                    - button [ref=e1876] [cursor=pointer]:
+                      - img [ref=e1877]
+                  - button "Create Icon with AI" [ref=e1880] [cursor=pointer]:
+                    - img "Sparkle" [ref=e1881]
+              - link [ref=e1882] [cursor=pointer]:
+                - /url: /icon-pack/engineering-and-manufacturing-icon-pack_411616
+              - generic [ref=e1883]:
+                - heading "Engineering And Manufacturing Icon Pack" [level=2] [ref=e1884]
+                - generic [ref=e1885]: 50 Icons
+            - article "Future Technology Icon Pack" [ref=e1887]:
+              - generic [ref=e1888]:
+                - generic [ref=e1889]:
+                  - generic:
+                    - img "Future Technology Icon Pack"
+                - generic [ref=e1890]:
+                  - generic [ref=e1891]:
+                    - button [ref=e1893] [cursor=pointer]:
+                      - link [ref=e1894]:
+                        - /url: "#"
+                        - img [ref=e1895]
+                    - button [ref=e1899] [cursor=pointer]:
+                      - img [ref=e1900]
+                  - button "Create Icon with AI" [ref=e1903] [cursor=pointer]:
+                    - img "Sparkle" [ref=e1904]
+              - link [ref=e1905] [cursor=pointer]:
+                - /url: /icon-pack/future-technology-icon-pack_412907
+              - generic [ref=e1906]:
+                - heading "Future Technology Icon Pack" [level=2] [ref=e1907]
+                - generic [ref=e1908]: 50 Icons
+            - article "Payment Icon Pack" [ref=e1910]:
+              - generic [ref=e1911]:
+                - generic [ref=e1912]:
+                  - generic:
+                    - img "Payment Icon Pack"
+                - generic [ref=e1913]:
+                  - generic [ref=e1914]:
+                    - button [ref=e1916] [cursor=pointer]:
+                      - link [ref=e1917]:
+                        - /url: "#"
+                        - img [ref=e1918]
+                    - button [ref=e1922] [cursor=pointer]:
+                      - img [ref=e1923]
+                  - button "Create Icon with AI" [ref=e1926] [cursor=pointer]:
+                    - img "Sparkle" [ref=e1927]
+              - link [ref=e1928] [cursor=pointer]:
+                - /url: /icon-pack/payment-icon-pack_409898
+              - generic [ref=e1929]:
+                - heading "Payment Icon Pack" [level=2] [ref=e1930]
+                - generic [ref=e1931]: 20 Icons
+            - article "Liquid Glass - User Interface - Vol 2 Icon Pack" [ref=e1933]:
+              - generic [ref=e1934]:
+                - generic [ref=e1935]:
+                  - generic:
+                    - img "Liquid Glass - User Interface - Vol 2 Icon Pack"
+                - generic [ref=e1936]:
+                  - generic [ref=e1937]:
+                    - button [ref=e1939] [cursor=pointer]:
+                      - link [ref=e1940]:
+                        - /url: "#"
+                        - img [ref=e1941]
+                    - button [ref=e1945] [cursor=pointer]:
+                      - img [ref=e1946]
+                  - button "Create Icon with AI" [ref=e1949] [cursor=pointer]:
+                    - img "Sparkle" [ref=e1950]
+              - link [ref=e1951] [cursor=pointer]:
+                - /url: /icon-pack/liquid-glass-user-interface-vol-2-icon-pack_410936
+              - generic [ref=e1952]:
+                - heading "Liquid Glass - User Interface - Vol 2 Icon Pack" [level=2] [ref=e1953]
+                - generic [ref=e1954]: 100 Icons
+            - article "User Interface Icon Pack" [ref=e1956]:
+              - generic [ref=e1957]:
+                - generic [ref=e1958]:
+                  - generic:
+                    - img "User Interface Icon Pack"
+                - generic [ref=e1959]:
+                  - generic [ref=e1960]:
+                    - button [ref=e1962] [cursor=pointer]:
+                      - link [ref=e1963]:
+                        - /url: "#"
+                        - img [ref=e1964]
+                    - button [ref=e1968] [cursor=pointer]:
+                      - img [ref=e1969]
+                  - button "Create Icon with AI" [ref=e1972] [cursor=pointer]:
+                    - img "Sparkle" [ref=e1973]
+              - link [ref=e1974] [cursor=pointer]:
+                - /url: /icon-pack/user-interface-icon-pack_413492
+              - generic [ref=e1975]:
+                - heading "User Interface Icon Pack" [level=2] [ref=e1976]
+                - generic [ref=e1977]: 50 Icons
+            - article "Devices - Vol 2 Icon Pack" [ref=e1979]:
+              - generic [ref=e1980]:
+                - generic [ref=e1981]:
+                  - generic:
+                    - img "Devices - Vol 2 Icon Pack"
+                - generic [ref=e1982]:
+                  - generic [ref=e1983]:
+                    - button [ref=e1985] [cursor=pointer]:
+                      - link [ref=e1986]:
+                        - /url: "#"
+                        - img [ref=e1987]
+                    - button [ref=e1991] [cursor=pointer]:
+                      - img [ref=e1992]
+                  - button "Create Icon with AI" [ref=e1995] [cursor=pointer]:
+                    - img "Sparkle" [ref=e1996]
+              - link [ref=e1997] [cursor=pointer]:
+                - /url: /icon-pack/devices-vol-2-icon-pack_407952
+              - generic [ref=e1998]:
+                - heading "Devices - Vol 2 Icon Pack" [level=2] [ref=e1999]
+                - generic [ref=e2000]: 71 Icons
+          - button [ref=e2001] [cursor=pointer]:
+            - img [ref=e2002]
+      - generic [ref=e2004]:
+        - generic [ref=e2005]:
+          - generic [ref=e2006]:
+            - heading "Illustrations" [level=2] [ref=e2007]
+            - generic [ref=e2008]: 752K+ Assets
+          - link "View all" [ref=e2009] [cursor=pointer]:
+            - /url: /featured-illustration-packs
+        - generic [ref=e2011]:
+          - generic [ref=e2012]:
+            - article "Startup Illustration Pack" [ref=e2014]:
+              - generic [ref=e2023]:
+                - generic [ref=e2024]:
+                  - button [ref=e2026] [cursor=pointer]:
+                    - link [ref=e2027]:
+                      - /url: "#"
+                      - img [ref=e2028]
+                  - button [ref=e2032] [cursor=pointer]:
+                    - img [ref=e2033]
+                - button "Create Illustration with AI" [ref=e2036] [cursor=pointer]:
+                  - img "Sparkle" [ref=e2037]
+              - link [ref=e2038] [cursor=pointer]:
+                - /url: /illustration-pack/startup-illustration-pack_387995
+              - generic [ref=e2039]:
+                - heading "Startup Illustration Pack" [level=2] [ref=e2040]
+                - generic [ref=e2041]: 30 Illustrations
+            - article "Reward Success Illustration Pack" [ref=e2043]:
+              - generic [ref=e2052]:
+                - generic [ref=e2053]:
+                  - button [ref=e2055] [cursor=pointer]:
+                    - link [ref=e2056]:
+                      - /url: "#"
+                      - img [ref=e2057]
+                  - button [ref=e2061] [cursor=pointer]:
+                    - img [ref=e2062]
+                - button "Create Illustration with AI" [ref=e2065] [cursor=pointer]:
+                  - img "Sparkle" [ref=e2066]
+              - link [ref=e2067] [cursor=pointer]:
+                - /url: /illustration-pack/reward-success-illustration-pack_388613
+              - generic [ref=e2068]:
+                - heading "Reward Success Illustration Pack" [level=2] [ref=e2069]
+                - generic [ref=e2070]: 15 Illustrations
+            - article "Children Celebrate Ramadan Kareem Illustration Pack" [ref=e2072]:
+              - generic [ref=e2081]:
+                - generic [ref=e2082]:
+                  - button [ref=e2084] [cursor=pointer]:
+                    - link [ref=e2085]:
+                      - /url: "#"
+                      - img [ref=e2086]
+                  - button [ref=e2090] [cursor=pointer]:
+                    - img [ref=e2091]
+                - button "Create Illustration with AI" [ref=e2094] [cursor=pointer]:
+                  - img "Sparkle" [ref=e2095]
+              - link [ref=e2096] [cursor=pointer]:
+                - /url: /illustration-pack/children-celebrate-ramadan-kareem-illustration-pack_406784
+              - generic [ref=e2097]:
+                - heading "Children Celebrate Ramadan Kareem Illustration Pack" [level=2] [ref=e2098]
+                - generic [ref=e2099]: 38 Illustrations
+            - article "Enjoy Christmas Day Illustration Pack" [ref=e2101]:
+              - generic [ref=e2110]:
+                - generic [ref=e2111]:
+                  - button [ref=e2113] [cursor=pointer]:
+                    - link [ref=e2114]:
+                      - /url: "#"
+                      - img [ref=e2115]
+                  - button [ref=e2119] [cursor=pointer]:
+                    - img [ref=e2120]
+                - button "Create Illustration with AI" [ref=e2123] [cursor=pointer]:
+                  - img "Sparkle" [ref=e2124]
+              - link [ref=e2125] [cursor=pointer]:
+                - /url: /illustration-pack/enjoy-christmas-day-illustration-pack_85471
+              - generic [ref=e2126]:
+                - heading "Enjoy Christmas Day Illustration Pack" [level=2] [ref=e2127]
+                - generic [ref=e2128]: 10 Illustrations
+            - article "Christmas Illustration Pack" [ref=e2130]:
+              - generic [ref=e2139]:
+                - generic [ref=e2140]:
+                  - button [ref=e2142] [cursor=pointer]:
+                    - link [ref=e2143]:
+                      - /url: "#"
+                      - img [ref=e2144]
+                  - button [ref=e2148] [cursor=pointer]:
+                    - img [ref=e2149]
+                - button "Create Illustration with AI" [ref=e2152] [cursor=pointer]:
+                  - img "Sparkle" [ref=e2153]
+              - link [ref=e2154] [cursor=pointer]:
+                - /url: /illustration-pack/christmas-illustration-pack_160820
+              - generic [ref=e2155]:
+                - heading "Christmas Illustration Pack" [level=2] [ref=e2156]
+                - generic [ref=e2157]: 18 Illustrations
+            - article "Valentines Day Illustration Pack" [ref=e2159]:
+              - generic [ref=e2168]:
+                - generic [ref=e2169]:
+                  - button [ref=e2171] [cursor=pointer]:
+                    - link [ref=e2172]:
+                      - /url: "#"
+                      - img [ref=e2173]
+                  - button [ref=e2177] [cursor=pointer]:
+                    - img [ref=e2178]
+                - button "Create Illustration with AI" [ref=e2181] [cursor=pointer]:
+                  - img "Sparkle" [ref=e2182]
+              - link [ref=e2183] [cursor=pointer]:
+                - /url: /illustration-pack/valentines-day-illustration-pack_292718
+              - generic [ref=e2184]:
+                - heading "Valentines Day Illustration Pack" [level=2] [ref=e2185]
+                - generic [ref=e2186]: 25 Illustrations
+            - article "New Year Illustration Pack" [ref=e2188]:
+              - generic [ref=e2197]:
+                - generic [ref=e2198]:
+                  - button [ref=e2200] [cursor=pointer]:
+                    - link [ref=e2201]:
+                      - /url: "#"
+                      - img [ref=e2202]
+                  - button [ref=e2206] [cursor=pointer]:
+                    - img [ref=e2207]
+                - button "Create Illustration with AI" [ref=e2210] [cursor=pointer]:
+                  - img "Sparkle" [ref=e2211]
+              - link [ref=e2212] [cursor=pointer]:
+                - /url: /illustration-pack/new-year-illustration-pack_165248
+              - generic [ref=e2213]:
+                - heading "New Year Illustration Pack" [level=2] [ref=e2214]
+                - generic [ref=e2215]: 8 Illustrations
+            - article "Couple In Love Illustration Pack" [ref=e2217]:
+              - generic [ref=e2226]:
+                - generic [ref=e2227]:
+                  - button [ref=e2229] [cursor=pointer]:
+                    - link [ref=e2230]:
+                      - /url: "#"
+                      - img [ref=e2231]
+                  - button [ref=e2235] [cursor=pointer]:
+                    - img [ref=e2236]
+                - button "Create Illustration with AI" [ref=e2239] [cursor=pointer]:
+                  - img "Sparkle" [ref=e2240]
+              - link [ref=e2241] [cursor=pointer]:
+                - /url: /illustration-pack/couple-in-love-illustration-pack_175148
+              - generic [ref=e2242]:
+                - heading "Couple In Love Illustration Pack" [level=2] [ref=e2243]
+                - generic [ref=e2244]: 10 Illustrations
+            - article "Christmas Illustration Pack" [ref=e2246]:
+              - generic [ref=e2255]:
+                - generic [ref=e2256]:
+                  - button [ref=e2258] [cursor=pointer]:
+                    - link [ref=e2259]:
+                      - /url: "#"
+                      - img [ref=e2260]
+                  - button [ref=e2264] [cursor=pointer]:
+                    - img [ref=e2265]
+                - button "Create Illustration with AI" [ref=e2268] [cursor=pointer]:
+                  - img "Sparkle" [ref=e2269]
+              - link [ref=e2270] [cursor=pointer]:
+                - /url: /illustration-pack/christmas-illustration-pack_159223
+              - generic [ref=e2271]:
+                - heading "Christmas Illustration Pack" [level=2] [ref=e2272]
+                - generic [ref=e2273]: 20 Illustrations
+            - article "Working Divisions Illustration Pack" [ref=e2275]:
+              - generic [ref=e2284]:
+                - generic [ref=e2285]:
+                  - button [ref=e2287] [cursor=pointer]:
+                    - link [ref=e2288]:
+                      - /url: "#"
+                      - img [ref=e2289]
+                  - button [ref=e2293] [cursor=pointer]:
+                    - img [ref=e2294]
+                - button "Create Illustration with AI" [ref=e2297] [cursor=pointer]:
+                  - img "Sparkle" [ref=e2298]
+              - link [ref=e2299] [cursor=pointer]:
+                - /url: /illustration-pack/working-divisions-illustration-pack_388178
+              - generic [ref=e2300]:
+                - heading "Working Divisions Illustration Pack" [level=2] [ref=e2301]
+                - generic [ref=e2302]: 15 Illustrations
+            - article "Love And Relationships Illustration Pack" [ref=e2304]:
+              - generic [ref=e2313]:
+                - generic [ref=e2314]:
+                  - button [ref=e2316] [cursor=pointer]:
+                    - link [ref=e2317]:
+                      - /url: "#"
+                      - img [ref=e2318]
+                  - button [ref=e2322] [cursor=pointer]:
+                    - img [ref=e2323]
+                - button "Create Illustration with AI" [ref=e2326] [cursor=pointer]:
+                  - img "Sparkle" [ref=e2327]
+              - link [ref=e2328] [cursor=pointer]:
+                - /url: /illustration-pack/love-and-relationships-illustration-pack_185891
+              - generic [ref=e2329]:
+                - heading "Love And Relationships Illustration Pack" [level=2] [ref=e2330]
+                - generic [ref=e2331]: 10 Illustrations
+            - article "Business Workflow & Data Management Illustration Pack" [ref=e2333]:
+              - generic [ref=e2342]:
+                - generic [ref=e2343]:
+                  - button [ref=e2345] [cursor=pointer]:
+                    - link [ref=e2346]:
+                      - /url: "#"
+                      - img [ref=e2347]
+                  - button [ref=e2351] [cursor=pointer]:
+                    - img [ref=e2352]
+                - button "Create Illustration with AI" [ref=e2355] [cursor=pointer]:
+                  - img "Sparkle" [ref=e2356]
+              - link [ref=e2357] [cursor=pointer]:
+                - /url: /illustration-pack/business-workflow-data-management-illustration-pack_386288
+              - generic [ref=e2358]:
+                - heading "Business Workflow & Data Management Illustration Pack" [level=2] [ref=e2359]
+                - generic [ref=e2360]: 20 Illustrations
+          - button [ref=e2361] [cursor=pointer]:
+            - img [ref=e2362]
+      - generic [ref=e2364]:
+        - generic [ref=e2365]:
+          - generic [ref=e2366]:
+            - heading "AI Images" [level=2] [ref=e2367]
+            - generic [ref=e2368]: 131K+ Assets
+          - link "View all" [ref=e2369] [cursor=pointer]:
+            - /url: /featured-ai-image-packs
+        - generic [ref=e2371]:
+          - generic [ref=e2372]:
+            - article "AI Woman Travel Image 3D Illustration Pack" [ref=e2374]:
+              - generic [ref=e2383]:
+                - generic [ref=e2384]:
+                  - button [ref=e2386] [cursor=pointer]:
+                    - link [ref=e2387]:
+                      - /url: "#"
+                      - img [ref=e2388]
+                  - button [ref=e2392] [cursor=pointer]:
+                    - img [ref=e2393]
+                - button "Create Illustration with AI" [ref=e2396] [cursor=pointer]:
+                  - img "Sparkle" [ref=e2397]
+              - link [ref=e2398] [cursor=pointer]:
+                - /url: /ai-image-pack/ai-woman-travel-3d-illustration-pack_399597
+              - generic [ref=e2399]:
+                - heading "AI Woman Travel Image 3D Illustration Pack" [level=2] [ref=e2400]
+                - generic [ref=e2401]: 10 AI Images
+            - article "AI Art & Craft Image 3D Illustration Pack" [ref=e2403]:
+              - generic [ref=e2412]:
+                - generic [ref=e2413]:
+                  - button [ref=e2415] [cursor=pointer]:
+                    - link [ref=e2416]:
+                      - /url: "#"
+                      - img [ref=e2417]
+                  - button [ref=e2421] [cursor=pointer]:
+                    - img [ref=e2422]
+                - button "Create Illustration with AI" [ref=e2425] [cursor=pointer]:
+                  - img "Sparkle" [ref=e2426]
+              - link [ref=e2427] [cursor=pointer]:
+                - /url: /ai-image-pack/ai-art-craft-3d-illustration-pack_392864
+              - generic [ref=e2428]:
+                - heading "AI Art & Craft Image 3D Illustration Pack" [level=2] [ref=e2429]
+                - generic [ref=e2430]: 10 AI Images
+            - article "AI Emergency Medical Services Image 3D Icon Pack" [ref=e2432]:
+              - generic [ref=e2441]:
+                - generic [ref=e2442]:
+                  - button [ref=e2444] [cursor=pointer]:
+                    - link [ref=e2445]:
+                      - /url: "#"
+                      - img [ref=e2446]
+                  - button [ref=e2450] [cursor=pointer]:
+                    - img [ref=e2451]
+                - button "Create Illustration with AI" [ref=e2454] [cursor=pointer]:
+                  - img "Sparkle" [ref=e2455]
+              - link [ref=e2456] [cursor=pointer]:
+                - /url: /ai-image-pack/ai-emergency-medical-services-3d-icon-pack_395097
+              - generic [ref=e2457]:
+                - heading "AI Emergency Medical Services Image 3D Icon Pack" [level=2] [ref=e2458]
+                - generic [ref=e2459]: 12 AI Images
+            - article "AI Inflatable Office Image 3D Icon Pack" [ref=e2461]:
+              - generic [ref=e2470]:
+                - generic [ref=e2471]:
+                  - button [ref=e2473] [cursor=pointer]:
+                    - link [ref=e2474]:
+                      - /url: "#"
+                      - img [ref=e2475]
+                  - button [ref=e2479] [cursor=pointer]:
+                    - img [ref=e2480]
+                - button "Create Illustration with AI" [ref=e2483] [cursor=pointer]:
+                  - img "Sparkle" [ref=e2484]
+              - link [ref=e2485] [cursor=pointer]:
+                - /url: /ai-image-pack/ai-inflatable-office-3d-icon-pack_402308
+              - generic [ref=e2486]:
+                - heading "AI Inflatable Office Image 3D Icon Pack" [level=2] [ref=e2487]
+                - generic [ref=e2488]: 13 AI Images
+            - article "AI Valentine Day Image 3D Icon Pack" [ref=e2490]:
+              - generic [ref=e2499]:
+                - generic [ref=e2500]:
+                  - button [ref=e2502] [cursor=pointer]:
+                    - link [ref=e2503]:
+                      - /url: "#"
+                      - img [ref=e2504]
+                  - button [ref=e2508] [cursor=pointer]:
+                    - img [ref=e2509]
+                - button "Create Illustration with AI" [ref=e2512] [cursor=pointer]:
+                  - img "Sparkle" [ref=e2513]
+              - link [ref=e2514] [cursor=pointer]:
+                - /url: /ai-image-pack/ai-valentine-day-3d-icon-pack_387269
+              - generic [ref=e2515]:
+                - heading "AI Valentine Day Image 3D Icon Pack" [level=2] [ref=e2516]
+                - generic [ref=e2517]: 27 AI Images
+            - article "AI Empty State Image 3D Illustration Pack" [ref=e2519]:
+              - generic [ref=e2528]:
+                - generic [ref=e2529]:
+                  - button [ref=e2531] [cursor=pointer]:
+                    - link [ref=e2532]:
+                      - /url: "#"
+                      - img [ref=e2533]
+                  - button [ref=e2537] [cursor=pointer]:
+                    - img [ref=e2538]
+                - button "Create Illustration with AI" [ref=e2541] [cursor=pointer]:
+                  - img "Sparkle" [ref=e2542]
+              - link [ref=e2543] [cursor=pointer]:
+                - /url: /ai-image-pack/ai-empty-state-3d-illustration-pack_391513
+              - generic [ref=e2544]:
+                - heading "AI Empty State Image 3D Illustration Pack" [level=2] [ref=e2545]
+                - generic [ref=e2546]: 10 AI Images
+            - article "AI UX Interface Image 3D Icon Pack" [ref=e2548]:
+              - generic [ref=e2557]:
+                - generic [ref=e2558]:
+                  - button [ref=e2560] [cursor=pointer]:
+                    - link [ref=e2561]:
+                      - /url: "#"
+                      - img [ref=e2562]
+                  - button [ref=e2566] [cursor=pointer]:
+                    - img [ref=e2567]
+                - button "Create Illustration with AI" [ref=e2570] [cursor=pointer]:
+                  - img "Sparkle" [ref=e2571]
+              - link [ref=e2572] [cursor=pointer]:
+                - /url: /ai-image-pack/ai-ux-interface-3d-icon-pack_392229
+              - generic [ref=e2573]:
+                - heading "AI UX Interface Image 3D Icon Pack" [level=2] [ref=e2574]
+                - generic [ref=e2575]: 31 AI Images
+            - article "AI Cyber Security Image 3D Illustration Pack" [ref=e2577]:
+              - generic [ref=e2586]:
+                - generic [ref=e2587]:
+                  - button [ref=e2589] [cursor=pointer]:
+                    - link [ref=e2590]:
+                      - /url: "#"
+                      - img [ref=e2591]
+                  - button [ref=e2595] [cursor=pointer]:
+                    - img [ref=e2596]
+                - button "Create Illustration with AI" [ref=e2599] [cursor=pointer]:
+                  - img "Sparkle" [ref=e2600]
+              - link [ref=e2601] [cursor=pointer]:
+                - /url: /ai-image-pack/ai-cyber-security-3d-illustration-pack_398311
+              - generic [ref=e2602]:
+                - heading "AI Cyber Security Image 3D Illustration Pack" [level=2] [ref=e2603]
+                - generic [ref=e2604]: 36 AI Images
+            - article "AI Business Image 3D Icon Pack" [ref=e2606]:
+              - generic [ref=e2615]:
+                - generic [ref=e2616]:
+                  - button [ref=e2618] [cursor=pointer]:
+                    - link [ref=e2619]:
+                      - /url: "#"
+                      - img [ref=e2620]
+                  - button [ref=e2624] [cursor=pointer]:
+                    - img [ref=e2625]
+                - button "Create Illustration with AI" [ref=e2628] [cursor=pointer]:
+                  - img "Sparkle" [ref=e2629]
+              - link [ref=e2630] [cursor=pointer]:
+                - /url: /ai-image-pack/ai-business-3d-icon-pack_393254
+              - generic [ref=e2631]:
+                - heading "AI Business Image 3D Icon Pack" [level=2] [ref=e2632]
+                - generic [ref=e2633]: 23 AI Images
+            - article "AI Technology Image 3D Icon Pack" [ref=e2635]:
+              - generic [ref=e2644]:
+                - generic [ref=e2645]:
+                  - button [ref=e2647] [cursor=pointer]:
+                    - link [ref=e2648]:
+                      - /url: "#"
+                      - img [ref=e2649]
+                  - button [ref=e2653] [cursor=pointer]:
+                    - img [ref=e2654]
+                - button "Create Illustration with AI" [ref=e2657] [cursor=pointer]:
+                  - img "Sparkle" [ref=e2658]
+              - link [ref=e2659] [cursor=pointer]:
+                - /url: /ai-image-pack/ai-technology-3d-icon-pack_396297
+              - generic [ref=e2660]:
+                - heading "AI Technology Image 3D Icon Pack" [level=2] [ref=e2661]
+                - generic [ref=e2662]: 25 AI Images
+            - article "AI Start Up Image 3D Icon Pack" [ref=e2664]:
+              - generic [ref=e2673]:
+                - generic [ref=e2674]:
+                  - button [ref=e2676] [cursor=pointer]:
+                    - link [ref=e2677]:
+                      - /url: "#"
+                      - img [ref=e2678]
+                  - button [ref=e2682] [cursor=pointer]:
+                    - img [ref=e2683]
+                - button "Create Illustration with AI" [ref=e2686] [cursor=pointer]:
+                  - img "Sparkle" [ref=e2687]
+              - link [ref=e2688] [cursor=pointer]:
+                - /url: /ai-image-pack/ai-start-up-3d-icon-pack_392672
+              - generic [ref=e2689]:
+                - heading "AI Start Up Image 3D Icon Pack" [level=2] [ref=e2690]
+                - generic [ref=e2691]: 20 AI Images
+            - article "AI Cyber Security Image 3D Illustration Pack" [ref=e2693]:
+              - generic [ref=e2702]:
+                - generic [ref=e2703]:
+                  - button [ref=e2705] [cursor=pointer]:
+                    - link [ref=e2706]:
+                      - /url: "#"
+                      - img [ref=e2707]
+                  - button [ref=e2711] [cursor=pointer]:
+                    - img [ref=e2712]
+                - button "Create Illustration with AI" [ref=e2715] [cursor=pointer]:
+                  - img "Sparkle" [ref=e2716]
+              - link [ref=e2717] [cursor=pointer]:
+                - /url: /ai-image-pack/ai-cyber-security-3d-illustration-pack_393757
+              - generic [ref=e2718]:
+                - heading "AI Cyber Security Image 3D Illustration Pack" [level=2] [ref=e2719]
+                - generic [ref=e2720]: 36 AI Images
+          - button [ref=e2721] [cursor=pointer]:
+            - img [ref=e2722]
+    - generic [ref=e2727]:
+      - heading "Unlock unlimited creative assets for your projects" [level=2] [ref=e2728]
+      - link "Get Unlimited Downloads" [ref=e2729] [cursor=pointer]:
+        - /url: /pricing
+    - generic [ref=e2730]:
+      - heading "Access your assets on your favorite design tools" [level=2] [ref=e2731]
+      - paragraph [ref=e2732]: Get any design asset without leaving your favorite tools. IconScout has plugins and integrations for popular design and developer platforms.
+      - generic [ref=e2733]:
+        - link "Figma Figma" [ref=e2734] [cursor=pointer]:
+          - /url: /plugins/for-figma
+          - img "Figma" [ref=e2735]
+          - heading "Figma" [level=3] [ref=e2736]
+        - link "Canva Canva" [ref=e2737] [cursor=pointer]:
+          - /url: /plugins/iconscout-for-canva
+          - img "Canva" [ref=e2738]
+          - heading "Canva" [level=3] [ref=e2739]
+        - link "Adobe XD Adobe XD" [ref=e2740] [cursor=pointer]:
+          - /url: /plugins/for-adobe-xd
+          - img "Adobe XD" [ref=e2741]
+          - heading "Adobe XD" [level=3] [ref=e2742]
+        - link "Sketch Sketch" [ref=e2743] [cursor=pointer]:
+          - /url: /plugins/for-sketch
+          - img "Sketch" [ref=e2744]
+          - heading "Sketch" [level=3] [ref=e2745]
+        - link "Adobe Photoshop Adobe Photoshop" [ref=e2746] [cursor=pointer]:
+          - /url: /plugins/for-photoshop
+          - img "Adobe Photoshop" [ref=e2747]
+          - heading "Adobe Photoshop" [level=3] [ref=e2748]
+        - link "Adobe Illustrator Adobe Illustrator" [ref=e2749] [cursor=pointer]:
+          - /url: /plugins/for-illustrator
+          - img "Adobe Illustrator" [ref=e2750]
+          - heading "Adobe Illustrator" [level=3] [ref=e2751]
+        - link "Google Docs Google Docs" [ref=e2752] [cursor=pointer]:
+          - /url: /plugins/for-google-docs
+          - img "Google Docs" [ref=e2753]
+          - heading "Google Docs" [level=3] [ref=e2754]
+        - link "Windows Windows" [ref=e2755] [cursor=pointer]:
+          - /url: /desktop/for-windows
+          - img "Windows" [ref=e2756]
+          - heading "Windows" [level=3] [ref=e2757]
+        - link "Apple Apple" [ref=e2758] [cursor=pointer]:
+          - /url: /desktop/for-mac
+          - img "Apple" [ref=e2759]
+          - heading "Apple" [level=3] [ref=e2760]
+        - link "Microsoft Word Microsoft Word" [ref=e2761] [cursor=pointer]:
+          - /url: /plugins/for-word
+          - img "Microsoft Word" [ref=e2762]
+          - heading "Microsoft Word" [level=3] [ref=e2763]
+        - link "Elementor Elementor" [ref=e2764] [cursor=pointer]:
+          - /url: /plugins/for-elementor
+          - img "Elementor" [ref=e2765]
+          - heading "Elementor" [level=3] [ref=e2766]
+        - link "Webflow Webflow" [ref=e2767] [cursor=pointer]:
+          - /url: /plugins/for-webflow
+          - img "Webflow" [ref=e2768]
+          - heading "Webflow" [level=3] [ref=e2769]
+        - link "Wordpress Wordpress" [ref=e2770] [cursor=pointer]:
+          - /url: /plugins/for-wordpress
+          - img "Wordpress" [ref=e2771]
+          - heading "Wordpress" [level=3] [ref=e2772]
+    - generic [ref=e2773]:
+      - generic [ref=e2774]:
+        - heading "Customize assets with our best Editors" [level=2] [ref=e2775]
+        - generic [ref=e2776]: Easily tailor 3Ds, icons, and illustrations to fit your brand with our intuitive editing tools.
+      - generic [ref=e2777]:
+        - generic [ref=e2778]:
+          - heading "3D Editor" [level=3] [ref=e2779]
+          - generic [ref=e2780]: Edit and create stunning 3D icons in no time
+          - link "Open 3D Editor" [ref=e2781] [cursor=pointer]:
+            - /url: /gltf-3d-editor
+            - text: Open 3D Editor
+            - img [ref=e2782]
+        - generic [ref=e2784]:
+          - heading "SVG Editor" [level=3] [ref=e2785]
+          - generic [ref=e2786]: Customize vector icons and illustrations with ease
+          - link "Open SVG Editor" [ref=e2787] [cursor=pointer]:
+            - /url: /svg-editor
+            - text: Open SVG Editor
+            - img [ref=e2788]
+        - generic [ref=e2790]:
+          - heading "Kit Editor" [level=3] [ref=e2791]
+          - generic [ref=e2792]: Create an unlimited combination of unique illustrations
+          - link "Open Kit Editor" [ref=e2793] [cursor=pointer]:
+            - /url: /illustration-kit
+            - text: Open Kit Editor
+            - img [ref=e2794]
+    - generic [ref=e2797]:
+      - generic [ref=e2799]:
+        - generic [ref=e2800]:
+          - heading "Integrate millions of design assets into your app" [level=3] [ref=e2801]
+          - generic [ref=e2802]: Power your website, app, or project with millions of assets and advanced search tools.
+          - link "Explore IconScout API" [ref=e2804] [cursor=pointer]:
+            - /url: /api
+            - text: Explore IconScout API
+            - img [ref=e2805]
+        - generic [ref=e2807]:
+          - generic:
+            - img "Integrate millions of design assets into your app"
+      - generic [ref=e2809]:
+        - generic [ref=e2810]:
+          - 'heading "From the IconScout Blog: Community Stories, and Tips" [level=3] [ref=e2811]'
+          - generic [ref=e2812]: Fuel your design journey with expert advice and fresh perspectives.
+          - link "Read the Blog" [ref=e2814] [cursor=pointer]:
+            - /url: /blog
+            - text: Read the Blog
+            - img [ref=e2815]
+        - generic [ref=e2817]:
+          - generic:
+            - 'img "From the IconScout Blog: Community Stories, and Tips"'
+      - generic [ref=e2819]:
+        - generic [ref=e2820]:
+          - heading "Discover Unique Assets from Creators Worldwide" [level=3] [ref=e2821]
+          - generic [ref=e2822]: Tap into a global community of artists offering exclusive designs.
+          - generic [ref=e2823]:
+            - link "Become a Contributor" [ref=e2824] [cursor=pointer]:
+              - /url: /become-contributor
+              - text: Become a Contributor
+              - img [ref=e2825]
+            - link "Meet the Artists" [ref=e2827] [cursor=pointer]:
+              - /url: /contributors
+              - text: Meet the Artists
+              - img [ref=e2828]
+        - generic [ref=e2830]:
+          - generic:
+            - img "Discover Unique Assets from Creators Worldwide"
+    - generic [ref=e2833]:
+      - generic [ref=e2835]:
+        - img [ref=e2836]
+        - text: Save 33%
+      - generic [ref=e2837]:
+        - 'heading "Access the world''s largest Design Ecosystem: Assets, Integrations, and Motion." [level=2] [ref=e2838]'
+        - link "Get Unlimited Downloads" [ref=e2839] [cursor=pointer]:
+          - /url: /pricing
+    - generic [ref=e2841]:
+      - heading "Browse assets by keywords" [level=2] [ref=e2842]
+      - generic [ref=e2843]:
+        - button "Top searches" [ref=e2845] [cursor=pointer]
+        - generic [ref=e2847]:
+          - tablist [ref=e2849]:
+            - tab "Icons" [selected] [ref=e2850] [cursor=pointer]
+            - tab "Illustrations" [ref=e2851] [cursor=pointer]
+            - tab "3D Icons" [ref=e2852] [cursor=pointer]
+            - tab "Lottie Animations" [ref=e2853] [cursor=pointer]
+            - tab "AI Images" [ref=e2854] [cursor=pointer]
+          - tabpanel "Icons" [ref=e2856]:
+            - generic [ref=e2858]:
+              - link "Verified Badge Emoji Icons" [ref=e2860] [cursor=pointer]:
+                - /url: /icons/verified-badge-emoji
+              - link "Instagram Icons" [ref=e2862] [cursor=pointer]:
+                - /url: /icons/instagram
+              - link "Iconfinder Icons" [ref=e2864] [cursor=pointer]:
+                - /url: /icons/iconfinder
+              - link "Business Icons" [ref=e2866] [cursor=pointer]:
+                - /url: /icons/business
+              - link "Arrow Icons" [ref=e2868] [cursor=pointer]:
+                - /url: /icons/arrow
+              - link "Monthly Icons" [ref=e2870] [cursor=pointer]:
+                - /url: /icons/monthly
+              - link "Verified Facebook Icons" [ref=e2872] [cursor=pointer]:
+                - /url: /icons/verified-facebook
+              - link "Svg Icons" [ref=e2874] [cursor=pointer]:
+                - /url: /icons/svg
+              - link "User Interface Icons" [ref=e2876] [cursor=pointer]:
+                - /url: /icons/user-interface
+              - link "Facebook Icons" [ref=e2878] [cursor=pointer]:
+                - /url: /icons/facebook
+              - link "Whistle Icons" [ref=e2880] [cursor=pointer]:
+                - /url: /icons/whistle
+              - link "Folder Icons" [ref=e2882] [cursor=pointer]:
+                - /url: /icons/folder
+              - link "Whatsapp Icons" [ref=e2884] [cursor=pointer]:
+                - /url: /icons/whatsapp
+              - link "Home Icons" [ref=e2886] [cursor=pointer]:
+                - /url: /icons/home
+              - link "Google Icons" [ref=e2888] [cursor=pointer]:
+                - /url: /icons/google
+              - link "Youtube Icons" [ref=e2890] [cursor=pointer]:
+                - /url: /icons/youtube
+              - link "Phone Icons" [ref=e2892] [cursor=pointer]:
+                - /url: /icons/phone
+              - link "Web Icons" [ref=e2894] [cursor=pointer]:
+                - /url: /icons/web
+              - link "Chart Icons" [ref=e2896] [cursor=pointer]:
+                - /url: /icons/chart
+              - link "Mercedes Logo Icons" [ref=e2898] [cursor=pointer]:
+                - /url: /icons/mercedes-logo
+              - link "Ai Icons" [ref=e2900] [cursor=pointer]:
+                - /url: /icons/ai
+              - link "Location Icons" [ref=e2902] [cursor=pointer]:
+                - /url: /icons/location
+              - link "Internet Icons" [ref=e2904] [cursor=pointer]:
+                - /url: /icons/internet
+              - link "Notion Icons" [ref=e2906] [cursor=pointer]:
+                - /url: /icons/notion
+              - link "Safety Icons" [ref=e2908] [cursor=pointer]:
+                - /url: /icons/safety
+              - link "Connection Icons" [ref=e2910] [cursor=pointer]:
+                - /url: /icons/connection
+              - link "Stop Icons" [ref=e2912] [cursor=pointer]:
+                - /url: /icons/stop
+              - link "Manager Icons" [ref=e2914] [cursor=pointer]:
+                - /url: /icons/manager
+              - link "Timer Icons" [ref=e2916] [cursor=pointer]:
+                - /url: /icons/timer
+              - link "Apple Icons" [ref=e2918] [cursor=pointer]:
+                - /url: /icons/apple
+              - link "Check Icons" [ref=e2920] [cursor=pointer]:
+                - /url: /icons/check
+              - link "Search Icons" [ref=e2922] [cursor=pointer]:
+                - /url: /icons/search
+              - link "Star Icons" [ref=e2924] [cursor=pointer]:
+                - /url: /icons/star
+              - link "Verified Icons" [ref=e2926] [cursor=pointer]:
+                - /url: /icons/verified
+              - link "Planted Icons" [ref=e2928] [cursor=pointer]:
+                - /url: /icons/planted
+              - link "Calendar Icons" [ref=e2930] [cursor=pointer]:
+                - /url: /icons/calendar
+              - link "Hitler Icons" [ref=e2932] [cursor=pointer]:
+                - /url: /icons/hitler
+              - link "User Icons" [ref=e2934] [cursor=pointer]:
+                - /url: /icons/user
+              - link "Email Icons" [ref=e2936] [cursor=pointer]:
+                - /url: /icons/email
+              - link "Finance Icons" [ref=e2938] [cursor=pointer]:
+                - /url: /icons/finance
+              - link "Money Icons" [ref=e2940] [cursor=pointer]:
+                - /url: /icons/money
+              - link "Car Icons" [ref=e2942] [cursor=pointer]:
+                - /url: /icons/car
+              - link "Heart Icons" [ref=e2944] [cursor=pointer]:
+                - /url: /icons/heart
+              - link "Avatar Icons" [ref=e2946] [cursor=pointer]:
+                - /url: /icons/avatar
+              - link "Linkedin Icons" [ref=e2948] [cursor=pointer]:
+                - /url: /icons/linkedin
+              - link "Social Media Icons" [ref=e2950] [cursor=pointer]:
+                - /url: /icons/social-media
+              - link "Tick Icons" [ref=e2952] [cursor=pointer]:
+                - /url: /icons/tick
+              - link "People Icons" [ref=e2954] [cursor=pointer]:
+                - /url: /icons/people
+              - link "Tiktok Icons" [ref=e2956] [cursor=pointer]:
+                - /url: /icons/tiktok
+              - link "Profile Icons" [ref=e2958] [cursor=pointer]:
+                - /url: /icons/profile
+              - link "Telegram Icons" [ref=e2960] [cursor=pointer]:
+                - /url: /icons/telegram
+              - link "Call Icons" [ref=e2962] [cursor=pointer]:
+                - /url: /icons/call
+              - link "Download Icons" [ref=e2964] [cursor=pointer]:
+                - /url: /icons/download
+              - link "Website Icons" [ref=e2966] [cursor=pointer]:
+                - /url: /icons/website
+              - link "Clock Icons" [ref=e2968] [cursor=pointer]:
+                - /url: /icons/clock
+              - link "Document Icons" [ref=e2970] [cursor=pointer]:
+                - /url: /icons/document
+              - link "Menu Icons" [ref=e2972] [cursor=pointer]:
+                - /url: /icons/menu
+              - link "Minecraft Icons" [ref=e2974] [cursor=pointer]:
+                - /url: /icons/minecraft
+              - link "Book Icons" [ref=e2976] [cursor=pointer]:
+                - /url: /icons/book
+              - link "View More" [ref=e2978] [cursor=pointer]:
+                - /url: /top-icons
+    - contentinfo [ref=e2980]:
+      - generic [ref=e2981]:
+        - generic [ref=e2982]:
+          - generic [ref=e2983]:
+            - img "IconScout Logo" [ref=e2984]
+            - generic [ref=e2985]: Design Resource Marketplace
+          - generic [ref=e2986]:
+            - emphasis [ref=e2987]: 14,066,493
+            - text: graphic resources & counting
+        - separator [ref=e2988]
+        - generic [ref=e2989]:
+          - generic [ref=e2990]:
+            - heading "IconScout" [level=5] [ref=e2991]
+            - list [ref=e2992]:
+              - listitem [ref=e2993]:
+                - link "Blog" [ref=e2994] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=e2995]:
+                - link "About" [ref=e2996] [cursor=pointer]:
+                  - /url: https://lottiefiles.com/team?utm_source=iconscout&utm_medium=footer
+              - listitem [ref=e2997]:
+                - link "Features" [ref=e2998] [cursor=pointer]:
+                  - /url: /access
+              - listitem [ref=e2999]:
+                - link "Sell on IconScout" [ref=e3000] [cursor=pointer]:
+                  - /url: /become-contributor
+              - listitem [ref=e3001]:
+                - link "We’re hiring" [ref=e3002] [cursor=pointer]:
+                  - /url: https://lottiefiles.com/careers?utm_source=iconscout&utm_medium=footer
+          - generic [ref=e3003]:
+            - heading "Design Assets" [level=5] [ref=e3004]
+            - list [ref=e3005]:
+              - listitem [ref=e3006]:
+                - link "3D Icons" [ref=e3007] [cursor=pointer]:
+                  - /url: /3d-icons
+              - listitem [ref=e3008]:
+                - link "Lottie Animations" [ref=e3009] [cursor=pointer]:
+                  - /url: /lottie-animations
+              - listitem [ref=e3010]:
+                - link "Vector Illustrations" [ref=e3011] [cursor=pointer]:
+                  - /url: /illustrations
+              - listitem [ref=e3012]:
+                - link "AI Images" [ref=e3013] [cursor=pointer]:
+                  - /url: /ai-images
+              - listitem [ref=e3014]:
+                - link "Illustration Kits" [ref=e3015] [cursor=pointer]:
+                  - /url: /illustration-kit
+              - listitem [ref=e3016]:
+                - link "Icons" [ref=e3017] [cursor=pointer]:
+                  - /url: /icons
+              - listitem [ref=e3018]:
+                - link "Unicons - Icon Fonts" [ref=e3019] [cursor=pointer]:
+                  - /url: /unicons
+              - listitem [ref=e3020]:
+                - link "Free Design Templates" [ref=e3021] [cursor=pointer]:
+                  - /url: /free-templates
+          - generic [ref=e3022]:
+            - heading "Tools" [level=5] [ref=e3023]
+            - list [ref=e3024]:
+              - listitem [ref=e3025]:
+                - link "Illustration Kit Editor" [ref=e3026] [cursor=pointer]:
+                  - /url: /illustration-kit
+              - listitem [ref=e3027]:
+                - link "glTF 3D Editor" [ref=e3028] [cursor=pointer]:
+                  - /url: /gltf-3d-editor
+              - listitem [ref=e3029]:
+                - link "SVG Editor" [ref=e3030] [cursor=pointer]:
+                  - /url: /svg-editor
+              - listitem [ref=e3031]:
+                - link "Lottie Editor" [ref=e3032] [cursor=pointer]:
+                  - /url: https://lottiefiles.com/editor
+              - listitem [ref=e3033]:
+                - link "SVG to PNG" [ref=e3034] [cursor=pointer]:
+                  - /url: /converter/svg-to-png
+              - listitem [ref=e3035]:
+                - link "AI Reimagine" [ref=e3036] [cursor=pointer]:
+                  - /url: /ai-suite/reimagine
+              - listitem [ref=e3037]:
+                - link "IconScout API" [ref=e3038] [cursor=pointer]:
+                  - /url: /api
+              - listitem [ref=e3039]:
+                - link "Lottie Preview" [ref=e3040] [cursor=pointer]:
+                  - /url: /tools/lottie-preview
+              - listitem [ref=e3041]:
+                - link "Color Palette Generator" [ref=e3042] [cursor=pointer]:
+                  - /url: /tools/color-palette-generator
+          - generic [ref=e3043]:
+            - heading "Plugins" [level=5] [ref=e3044]
+            - list [ref=e3045]:
+              - listitem [ref=e3046]:
+                - link "Figma" [ref=e3047] [cursor=pointer]:
+                  - /url: /plugins/for-figma
+              - listitem [ref=e3048]:
+                - link "Canva" [ref=e3049] [cursor=pointer]:
+                  - /url: /plugins/iconscout-for-canva
+              - listitem [ref=e3050]:
+                - link "PowerPoint" [ref=e3051] [cursor=pointer]:
+                  - /url: /plugins/for-powerpoint
+              - listitem [ref=e3052]:
+                - link "Google Slides" [ref=e3053] [cursor=pointer]:
+                  - /url: /plugins/for-google-slides
+              - listitem [ref=e3054]:
+                - link "Unicons for Figma" [ref=e3055] [cursor=pointer]:
+                  - /url: https://www.figma.com/community/plugin/1334018023334266887
+              - listitem [ref=e3056]:
+                - link "Adobe XD" [ref=e3057] [cursor=pointer]:
+                  - /url: /plugins/for-adobe-xd
+        - generic [ref=e3058]:
+          - generic [ref=e3059]:
+            - heading "Get IconScout for desktop" [level=5] [ref=e3060]
+            - list [ref=e3061]:
+              - listitem [ref=e3062]:
+                - link [ref=e3063] [cursor=pointer]:
+                  - /url: /desktop-app/for-mac
+                  - img [ref=e3064]
+              - listitem [ref=e3066]:
+                - link [ref=e3067] [cursor=pointer]:
+                  - /url: /desktop-app/for-windows
+                  - img [ref=e3068]
+          - generic [ref=e3070]:
+            - heading "Design Resources" [level=5] [ref=e3071]
+            - list [ref=e3072]:
+              - listitem [ref=e3073]:
+                - link "Free 3D Icons" [ref=e3074] [cursor=pointer]:
+                  - /url: /free-3d-icons
+              - listitem [ref=e3075]:
+                - link "Free Lottie Animations" [ref=e3076] [cursor=pointer]:
+                  - /url: /free-lottie-animations
+              - listitem [ref=e3077]:
+                - link "Free Illustrations" [ref=e3078] [cursor=pointer]:
+                  - /url: /free-illustrations
+              - listitem [ref=e3079]:
+                - link "Free Icons" [ref=e3080] [cursor=pointer]:
+                  - /url: /free-icons
+              - listitem [ref=e3081]:
+                - link "Freebies" [ref=e3082] [cursor=pointer]:
+                  - /url: /freebies
+              - listitem [ref=e3083]:
+                - link "Calendar of Festivities" [ref=e3084] [cursor=pointer]:
+                  - /url: /holidays-festivals-celebrations-design-assets
+              - listitem [ref=e3085]:
+                - link "Trending Keywords" [ref=e3086] [cursor=pointer]:
+                  - /url: /keywords
+              - listitem [ref=e3087]:
+                - link "Curated Collections" [ref=e3088] [cursor=pointer]:
+                  - /url: /collections
+          - generic [ref=e3089]:
+            - heading "Legal" [level=5] [ref=e3090]
+            - list [ref=e3091]:
+              - listitem [ref=e3092]:
+                - link "Terms of use" [ref=e3093] [cursor=pointer]:
+                  - /url: /legal/terms-of-use
+              - listitem [ref=e3094]:
+                - link "Privacy policy" [ref=e3095] [cursor=pointer]:
+                  - /url: /legal/privacy-policy
+              - listitem [ref=e3096]:
+                - link "License agreeement" [ref=e3097] [cursor=pointer]:
+                  - /url: /licenses
+              - listitem [ref=e3098]:
+                - link "Contributor terms" [ref=e3099] [cursor=pointer]:
+                  - /url: /legal/contributor-terms
+              - listitem [ref=e3100]:
+                - link "Join discord community" [ref=e3101] [cursor=pointer]:
+                  - /url: https://discord.gg/RfXAwxXXU9
+          - generic [ref=e3102]:
+            - heading "Support" [level=5] [ref=e3103]
+            - list [ref=e3104]:
+              - listitem [ref=e3105]:
+                - link "Support center" [ref=e3106] [cursor=pointer]:
+                  - /url: https://help.iconscout.com/hc/en-gb
+              - listitem [ref=e3107]:
+                - link "FAQ" [ref=e3108] [cursor=pointer]:
+                  - /url: https://help.iconscout.com/hc/en-gb/categories/6888506744857-Design-Asset-FAQs
+              - listitem [ref=e3109]:
+                - link "Contact us" [ref=e3110] [cursor=pointer]:
+                  - /url: mailto:support@iconscout.com
+        - separator [ref=e3111]
+        - generic [ref=e3112]:
+          - list [ref=e3113]:
+            - listitem [ref=e3114]:
+              - link [ref=e3115] [cursor=pointer]:
+                - /url: https://www.facebook.com/iconscout
+                - img [ref=e3116]
+            - listitem [ref=e3118]:
+              - link [ref=e3119] [cursor=pointer]:
+                - /url: https://www.instagram.com/iconscout
+                - img [ref=e3120]
+            - listitem [ref=e3122]:
+              - link [ref=e3123] [cursor=pointer]:
+                - /url: https://twitter.com/iconscout
+                - img [ref=e3124]
+            - listitem [ref=e3126]:
+              - link [ref=e3127] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/iconscout
+                - img [ref=e3128]
+            - listitem [ref=e3130]:
+              - link [ref=e3131] [cursor=pointer]:
+                - /url: https://dribbble.com/iconscout
+                - img [ref=e3132]
+          - 'button "Selected Language: English" [ref=e3136] [cursor=pointer]':
+            - generic [ref=e3137]: "Selected Language: English"
+            - generic [ref=e3138]:
+              - img [ref=e3139]
+              - paragraph [ref=e3141]: en
+              - img [ref=e3142]
+      - generic [ref=e3149]:
+        - img [ref=e3150]
+        - generic [ref=e3152]: Secure Payment
+        - img "Stripe" [ref=e3153]
+  - button "Help & resources" [ref=e3156] [cursor=pointer]:
+    - generic [ref=e3157]:
+      - img [ref=e3158]
+      - text: Help & resources

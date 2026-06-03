@@ -22,16 +22,25 @@ const MODULOS_AVANZADOS = [
     title: "Calificación de Gráficas - Análisis de Datos",
     desc: "Interpretación numérica y visual de trazados poligráficos. Análisis estadístico de componentes fisiológicos y criterios de evaluación objetiva para decisiones periciales.",
     image: "/servicios/6.webp",
+    href: "/calificacion-graficas-analisis-datos",
   },
   {
     title: "Sistema de Calificación ESS-M",
     desc: "Formación especializada en el sistema empírico de puntuación ESS-M para lograr una calificación consistente, reproducible y científicamente validada.",
     image: "/servicios/3.webp",
+    href: "/sistema-calificacion-ess-m",
   },
   {
     title: "Control de Calidad en Poligrafía",
     desc: "Protocolos de auditoría, revisión por pares y mejora continua en la práctica poligráfica profesional. Garantía de rigor técnico y cumplimiento normativo.",
     image: "/servicios/8.webp",
+    href: "/control-de-calidad-en-poligrafia",
+  },
+  {
+    title: "Formaciones Complementarias",
+    desc: "Especialización en competencias transversales: técnicas de entrevista, psicología del comportamiento, ética profesional, comunicación de resultados y aspectos legales en poligrafía.",
+    image: "/servicios/2.webp",
+    href: "/formaciones-complementarias",
   },
 ];
 

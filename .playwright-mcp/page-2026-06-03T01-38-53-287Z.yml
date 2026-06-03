@@ -1,0 +1,559 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e5]:
+        - link "Flaticon logo" [ref=e6] [cursor=pointer]:
+          - /url: https://www.flaticon.com/
+          - img "Flaticon logo" [ref=e7]
+        - navigation [ref=e8]:
+          - generic [ref=e10] [cursor=pointer]: 
+          - text:   
+        - generic [ref=e12]:
+          - button "" [ref=e14] [cursor=pointer]:
+            - generic [ref=e15]: 
+          - list [ref=e16]:
+            - listitem [ref=e17]:
+              - generic [ref=e18]: Notifications
+              - generic [ref=e19] [cursor=pointer]: 
+            - listitem [ref=e20]:
+              - generic [ref=e22]: 
+              - paragraph [ref=e23]: No notifications to show yet
+              - paragraph [ref=e24]: You’ll see useful information here soon. Stay tuned!
+          - link "" [ref=e26] [cursor=pointer]:
+            - /url: https://id.magnific.com/v2/log-in?client_id=flaticon&lang=en
+            - generic [ref=e27]: 
+      - generic [ref=e30]:
+        - generic [ref=e33] [cursor=pointer]: 
+        - generic [ref=e37]:
+          - button "Icons " [ref=e40] [cursor=pointer]:
+            - text: 
+            - generic [ref=e41]: Icons
+            - generic [ref=e42]: 
+          - searchbox "Search for icons" [ref=e44]: lie detector
+          - button "" [ref=e45] [cursor=pointer]:
+            - generic [ref=e46]: 
+          - button "" [ref=e47] [cursor=pointer]:
+            - generic [ref=e48]: 
+        - button " 0" [ref=e49] [cursor=pointer]:
+          - generic [ref=e50]: 
+          - generic [ref=e51]: "0"
+    - complementary [ref=e52]:
+      - text:                
+      - generic [ref=e53]:
+        - button "" [ref=e54] [cursor=pointer]:
+          - generic [ref=e55]: 
+        - text: Collections
+        - generic [ref=e56]: "1"
+        - button "" [ref=e58] [cursor=pointer]:
+          - generic [ref=e59]: 
+        - generic: 
+        - button "" [disabled] [ref=e61]:
+          - generic [ref=e62]: 
+        - button "" [disabled] [ref=e64]:
+          - generic [ref=e65]: 
+      - generic [ref=e67]:
+        - generic [ref=e68] [cursor=pointer]:
+          - generic "My icons collection" [ref=e69]
+          - generic [ref=e70]: "0"
+          - generic [ref=e73]:
+            - button "" [ref=e74]:
+              - generic [ref=e75]: 
+            - text:       
+          - generic [ref=e76]:
+            - textbox [ref=e77]: My icons collection
+            - button "" [ref=e78]
+        - text:    
+        - generic [ref=e79]:
+          - generic [ref=e80]:
+            - text: Edit mode
+            - button " Back" [ref=e81] [cursor=pointer]:
+              - generic [ref=e82]: 
+              - text: Back
+          - generic [ref=e83]:
+            - generic [ref=e84]: Sort mode (Drag&Drop)
+            - button " Back" [ref=e85] [cursor=pointer]:
+              - generic [ref=e86]: 
+              - text: Back
+          - text:       
+          - generic [ref=e89]:
+            - img [ref=e90]
+            - paragraph [ref=e91]: Create custom collections
+            - paragraph [ref=e92]: Do you want to make a personalized icon pack?
+            - paragraph [ref=e93]:
+              - text: Just add the icons you want to the collection and download them in the format you need.
+              - link "More info" [ref=e94] [cursor=pointer]:
+                - /url: https://www.flaticon.com/collections
+            - link "Register for free" [ref=e95] [cursor=pointer]:
+              - /url: https://id.magnific.com/v2/sign-up?client_id=flaticon&lang=en
+            - paragraph [ref=e96]:
+              - generic [ref=e97]: 
+              - text: Create up to 3 collections
+            - paragraph [ref=e98]:
+              - generic [ref=e99]: 
+              - text: Add 256 icons per collection
+            - paragraph [ref=e100]:
+              - generic [ref=e101]: 
+              - text: Save and customize your icons
+          - text:          
+    - text:  
+    - generic:     
+    - text:                           
+    - generic [ref=e103]:
+      - complementary:
+        - generic:
+          - generic:
+            - generic:
+              - img
+              - paragraph [ref=e105] [cursor=pointer]: Filters
+              - generic [ref=e106] [cursor=pointer]: 
+            - generic [ref=e107]:
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                    - paragraph [ref=e109]: Colors
+                  - generic:
+                    - generic:
+                      - generic [ref=e111] [cursor=pointer]:
+                        - img "black" [ref=e112]
+                        - text: Black
+                      - generic [ref=e114] [cursor=pointer]:
+                        - img "Colors" [ref=e115]
+                        - text: Colors
+                      - generic [ref=e117] [cursor=pointer]:
+                        - img "gradient" [ref=e118]
+                        - text: Gradient
+                - generic:
+                  - generic:
+                    - img
+                    - paragraph [ref=e121]: Shape
+                  - generic:
+                    - generic:
+                      - generic [ref=e123] [cursor=pointer]:
+                        - img "outline" [ref=e124]
+                        - text: Outline
+                      - generic [ref=e126] [cursor=pointer]:
+                        - img "fill" [ref=e127]
+                        - text: Fill
+                      - generic [ref=e129] [cursor=pointer]:
+                        - img "lineal-color" [ref=e130]
+                        - text: Lineal Color
+                      - generic [ref=e132] [cursor=pointer]:
+                        - img "all_colors" [ref=e133]
+                        - text: Hand Drawn
+                - generic:
+                  - generic:
+                    - img
+                    - paragraph [ref=e135]: Sort by
+                  - generic:
+                    - generic:
+                      - generic [ref=e137] [cursor=pointer]: Recent
+                      - generic [ref=e139] [cursor=pointer]: Trending
+                - generic:
+                  - generic:
+                    - generic:
+                      - img
+                      - paragraph [ref=e146]: Editable strokes
+                      - generic [ref=e147]: New
+                      - generic [ref=e149] [cursor=pointer]: 
+                    - generic [ref=e150]: Non-expanded SVG files.
+                - generic:
+                  - generic:
+                    - generic:
+                      - img
+                      - paragraph [ref=e156]: Merchandising license
+                      - generic [ref=e158] [cursor=pointer]: 
+                    - generic [ref=e159]: Icons licensed for merchandise.
+        - text: 
+      - generic [ref=e163]:
+        - text: 
+        - generic [ref=e164]:
+          - generic [ref=e165]:
+            - heading "Sorry we couldn't find any matches for lie detector icons" [level=3] [ref=e166]
+            - paragraph [ref=e167]:
+              - text: Try searching for another term or go back to the
+              - link "home" [ref=e168] [cursor=pointer]:
+                - /url: https://www.flaticon.com
+          - generic [ref=e169]:
+            - heading "You can try one of these tags" [level=6] [ref=e170]
+            - generic [ref=e171]:
+              - link "Electronics Electronics" [ref=e173] [cursor=pointer]:
+                - /url: https://www.flaticon.com/free-icons/electronics
+                - img "Electronics" [ref=e174]
+                - paragraph [ref=e175]: Electronics
+              - link "Food and restaurant Food and restaurant" [ref=e177] [cursor=pointer]:
+                - /url: https://www.flaticon.com/free-icons/food-and-restaurant
+                - img "Food and restaurant" [ref=e178]
+                - paragraph [ref=e179]: Food and restaurant
+              - link "Business and finance Business and finance" [ref=e181] [cursor=pointer]:
+                - /url: https://www.flaticon.com/free-icons/business-and-finance
+                - img "Business and finance" [ref=e182]
+                - paragraph [ref=e183]: Business and finance
+              - link "Ui Ui" [ref=e185] [cursor=pointer]:
+                - /url: https://www.flaticon.com/free-icons/ui
+                - img "Ui" [ref=e186]
+                - paragraph [ref=e187]: Ui
+              - link "Communications Communications" [ref=e189] [cursor=pointer]:
+                - /url: https://www.flaticon.com/free-icons/communications
+                - img "Communications" [ref=e190]
+                - paragraph [ref=e191]: Communications
+              - link "Education Education" [ref=e193] [cursor=pointer]:
+                - /url: https://www.flaticon.com/free-icons/education
+                - img "Education" [ref=e194]
+                - paragraph [ref=e195]: Education
+            - generic [ref=e196]:
+              - heading "Main Searches" [level=6] [ref=e197]
+              - list [ref=e198]:
+                - listitem [ref=e199]:
+                  - link "Animals" [ref=e200] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/animals
+                - listitem [ref=e201]:
+                  - link "Architecture and city" [ref=e202] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/architecture-and-city
+                - listitem [ref=e203]:
+                  - link "Arrows" [ref=e204] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/arrows
+                - listitem [ref=e205]:
+                  - link "Art and design" [ref=e206] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/art-and-design
+                - listitem [ref=e207]:
+                  - link "Beauty" [ref=e208] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/beauty
+                - listitem [ref=e209]:
+                  - link "Birthday and party" [ref=e210] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/birthday-and-party
+                - listitem [ref=e211]:
+                  - link "Brands and logotypes" [ref=e212] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/brands-and-logotypes
+                - listitem [ref=e213]:
+                  - link "Buildings" [ref=e214] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/buildings
+                - listitem [ref=e215]:
+                  - link "Business and finance" [ref=e216] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/business-and-finance
+                - listitem [ref=e217]:
+                  - link "Christmas" [ref=e218] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/christmas
+                - listitem [ref=e219]:
+                  - link "Commerce and shopping" [ref=e220] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/commerce-and-shopping
+                - listitem [ref=e221]:
+                  - link "Communications" [ref=e222] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/communications
+                - listitem [ref=e223]:
+                  - link "Computer" [ref=e224] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/computer
+                - listitem [ref=e225]:
+                  - link "Construction and tools" [ref=e226] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/construction-and-tools
+                - listitem [ref=e227]:
+                  - link "Cultures" [ref=e228] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/cultures
+                - listitem [ref=e229]:
+                  - link "Easter" [ref=e230] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/easter
+                - listitem [ref=e231]:
+                  - link "Ecology and environment" [ref=e232] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/ecology-and-environment
+                - listitem [ref=e233]:
+                  - link "Edit tools" [ref=e234] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/edit-tools
+                - listitem [ref=e235]:
+                  - link "Education" [ref=e236] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/education
+                - listitem [ref=e237]:
+                  - link "Electronics" [ref=e238] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/electronics
+                - listitem [ref=e239]:
+                  - link "Entertainment" [ref=e240] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/entertainment
+                - listitem [ref=e241]:
+                  - link "Farming and gardening" [ref=e242] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/farming-and-gardening
+                - listitem [ref=e243]:
+                  - link "Fashion" [ref=e244] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/fashion
+                - listitem [ref=e245]:
+                  - link "Files and folders" [ref=e246] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/files-and-folders
+                - listitem [ref=e247]:
+                  - link "Flags" [ref=e248] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/flags
+                - listitem [ref=e249]:
+                  - link "Food and restaurant" [ref=e250] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/food-and-restaurant
+                - listitem [ref=e251]:
+                  - link "Furniture and household" [ref=e252] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/furniture-and-household
+                - listitem [ref=e253]:
+                  - link "Gaming" [ref=e254] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/gaming
+                - listitem [ref=e255]:
+                  - link "Halloween" [ref=e256] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/halloween
+                - listitem [ref=e257]:
+                  - link "Hands and gestures" [ref=e258] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/hands-and-gestures
+                - listitem [ref=e259]:
+                  - link "Healthcare and medical" [ref=e260] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/healthcare-and-medical
+                - listitem [ref=e261]:
+                  - link "Hobbies and free time" [ref=e262] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/hobbies-and-free-time
+                - listitem [ref=e263]:
+                  - link "Holidays" [ref=e264] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/holidays
+                - listitem [ref=e265]:
+                  - link "Industry" [ref=e266] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/industry
+                - listitem [ref=e267]:
+                  - link "Kid and baby" [ref=e268] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/kid-and-baby
+                - listitem [ref=e269]:
+                  - link "Love and romance" [ref=e270] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/love-and-romance
+                - listitem [ref=e271]:
+                  - link "Maps and location" [ref=e272] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/maps-and-location
+                - listitem [ref=e273]:
+                  - link "Marketing" [ref=e274] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/marketing
+                - listitem [ref=e275]:
+                  - link "Miscellaneous" [ref=e276] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/miscellaneous
+                - listitem [ref=e277]:
+                  - link "Music and multimedia" [ref=e278] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/music-and-multimedia
+                - listitem [ref=e279]:
+                  - link "Nature" [ref=e280] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/nature
+                - listitem [ref=e281]:
+                  - link "Networking" [ref=e282] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/networking
+                - listitem [ref=e283]:
+                  - link "People" [ref=e284] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/people
+                - listitem [ref=e285]:
+                  - link "Professions and jobs" [ref=e286] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/professions-and-jobs
+                - listitem [ref=e287]:
+                  - link "Real estate" [ref=e288] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/real-estate
+                - listitem [ref=e289]:
+                  - link "Security" [ref=e290] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/security
+                - listitem [ref=e291]:
+                  - link "Seo and web" [ref=e292] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/seo-and-web
+                - listitem [ref=e293]:
+                  - link "Shapes and symbols" [ref=e294] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/shapes-and-symbols
+                - listitem [ref=e295]:
+                  - link "Shipping and delivery" [ref=e296] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/shipping-and-delivery
+                - listitem [ref=e297]:
+                  - link "Signaling" [ref=e298] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/signaling
+                - listitem [ref=e299]:
+                  - link "Smileys" [ref=e300] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/smileys
+                - listitem [ref=e301]:
+                  - link "Social media" [ref=e302] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/social-media
+                - listitem [ref=e303]:
+                  - link "Sports and competition" [ref=e304] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/sports-and-competition
+                - listitem [ref=e305]:
+                  - link "Time and date" [ref=e306] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/time-and-date
+                - listitem [ref=e307]:
+                  - link "Transportation" [ref=e308] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/transportation
+                - listitem [ref=e309]:
+                  - link "Travel" [ref=e310] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/travel
+                - listitem [ref=e311]:
+                  - link "Ui" [ref=e312] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/ui
+                - listitem [ref=e313]:
+                  - link "User" [ref=e314] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/user
+                - listitem [ref=e315]:
+                  - link "Valentines day" [ref=e316] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/valentines-day
+                - listitem [ref=e317]:
+                  - link "Weather" [ref=e318] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/weather
+                - listitem [ref=e319]:
+                  - link "Wellness" [ref=e320] [cursor=pointer]:
+                    - /url: https://www.flaticon.com/free-icons/wellness
+    - generic [ref=e321]:
+      - generic [ref=e322]:
+        - generic [ref=e323]:
+          - link "Flaticon logo" [ref=e324] [cursor=pointer]:
+            - /url: https://www.flaticon.com
+            - img "Flaticon logo" [ref=e325]
+          - generic [ref=e327]:
+            - link "Contributor access" [ref=e328] [cursor=pointer]:
+              - /url: https://contributor.flaticon.com/?utm_source=home_en&utm_medium=home_en_footer&utm_campaign=earn_money_en2
+            - link "Go Premium" [ref=e329] [cursor=pointer]:
+              - /url: https://www.flaticon.com/pricing
+        - generic [ref=e330]:
+          - generic [ref=e331]:
+            - paragraph [ref=e332]:
+              - generic [ref=e333]: Content 
+            - list [ref=e334]:
+              - listitem [ref=e335]:
+                - link "Authors" [ref=e336] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/authors
+              - listitem [ref=e337]:
+                - link "Icons" [ref=e338] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/most-downloaded
+              - listitem [ref=e339]:
+                - link "Stickers" [ref=e340] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/stickers-most-downloaded
+              - listitem [ref=e341]:
+                - link "Interface icons" [ref=e342] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/icon-fonts-most-downloaded
+              - listitem [ref=e343]:
+                - link "Animated icons" [ref=e344] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/animated-icons-most-downloaded
+              - listitem [ref=e345]:
+                - link "Icon tags" [ref=e346] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/tags
+              - listitem [ref=e347]:
+                - link "Stickers tags" [ref=e348] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/tags/stickers
+          - generic [ref=e349]:
+            - paragraph [ref=e350]:
+              - generic [ref=e351]: Tools 
+            - list [ref=e352]:
+              - listitem [ref=e353]:
+                - link "API" [ref=e354] [cursor=pointer]:
+                  - /url: https://www.magnific.com/api
+              - listitem [ref=e355]:
+                - link "Google Workspace" [ref=e356] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/for-google
+          - generic [ref=e357]:
+            - paragraph [ref=e358]:
+              - generic [ref=e359]: Help 
+            - list [ref=e360]:
+              - listitem [ref=e361]:
+                - link "Support" [ref=e362] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/profile/support
+              - listitem [ref=e363]:
+                - link "FAQs" [ref=e364] [cursor=pointer]:
+                  - /url: https://support.flaticon.com/s/?language=en_US
+              - listitem [ref=e365]:
+                - link "Icon styles" [ref=e366] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/styles
+              - listitem [ref=e367]:
+                - link "Icons editor" [ref=e368] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/icons-editor
+              - listitem [ref=e369]:
+                - link "Flaticon Collections" [ref=e370] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/collections
+              - listitem [ref=e371]:
+                - link "Follow" [ref=e372] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/follow
+              - listitem [ref=e373]:
+                - link "Merchandising License" [ref=e374] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/merchandising-license
+          - generic [ref=e375]:
+            - paragraph [ref=e376]:
+              - generic [ref=e377]: Company 
+            - list [ref=e378]:
+              - listitem [ref=e379]:
+                - link "About" [ref=e380] [cursor=pointer]:
+                  - /url: https://www.magnific.com/company/about-us
+              - listitem [ref=e381]:
+                - link "Contact us" [ref=e382] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/profile/support
+              - listitem [ref=e383]:
+                - link "Our license" [ref=e384] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/legal
+              - listitem [ref=e385]:
+                - link "Blog" [ref=e386] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/blog/
+              - listitem [ref=e387]:
+                - link "Plans and Pricing" [ref=e388] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/pricing
+              - listitem [ref=e389]:
+                - link "What’s new" [ref=e390] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/whats-new
+          - generic [ref=e391]:
+            - paragraph [ref=e392]:
+              - generic [ref=e393]: Social media
+            - list [ref=e394]:
+              - listitem [ref=e395]:
+                - link "" [ref=e396] [cursor=pointer]:
+                  - /url: https://www.facebook.com/flaticon
+              - listitem [ref=e397]:
+                - link "twitter logo" [ref=e398] [cursor=pointer]:
+                  - /url: https://twitter.com/flaticon
+                  - img "twitter logo" [ref=e399]
+              - listitem [ref=e400]:
+                - link "" [ref=e401] [cursor=pointer]:
+                  - /url: https://www.pinterest.com/flaticon
+              - listitem [ref=e402]:
+                - link "" [ref=e403] [cursor=pointer]:
+                  - /url: https://www.instagram.com/flaticon/?hl=en
+              - listitem [ref=e404]:
+                - link "" [ref=e405] [cursor=pointer]:
+                  - /url: https://www.youtube.com/channel/UC9wPXN2TIWoUamqONb7v8Pw
+            - generic [ref=e406]:
+              - paragraph [ref=e407]: Get exclusive resources straight to your inbox
+              - link "Sign up" [ref=e408] [cursor=pointer]:
+                - /url: https://id.magnific.com/v2/sign-up?client_id=flaticon&lang=en
+        - list [ref=e409]:
+          - listitem [ref=e410]:
+            - link "Terms & conditions" [ref=e411] [cursor=pointer]:
+              - /url: https://www.flaticon.com/legal
+          - listitem [ref=e412]:
+            - link "Privacy policy" [ref=e413] [cursor=pointer]:
+              - /url: https://www.magnific.com/legal/privacy
+          - listitem [ref=e414]:
+            - link "Cookies policy" [ref=e415] [cursor=pointer]:
+              - /url: https://www.flaticon.com/legal/cookies
+          - listitem [ref=e416]:
+            - link "Copyrights Notification" [ref=e417] [cursor=pointer]:
+              - /url: https://www.magnific.com/legal/copyright
+          - listitem [ref=e418]:
+            - button "Configuración de cookies" [ref=e419] [cursor=pointer]
+        - generic [ref=e421]:
+          - paragraph [ref=e424]: Copyright © 2010-2026 Freepik Company S.L.U. All rights reserved.
+          - button "English " [ref=e428] [cursor=pointer]:
+            - generic [ref=e429]: English
+            - generic [ref=e430]: 
+      - generic [ref=e432]:
+        - text: Freepik company projects
+        - list [ref=e433]:
+          - listitem [ref=e434]:
+            - link "Magnific" [ref=e435] [cursor=pointer]:
+              - /url: https://www.magnific.com
+          - listitem [ref=e436]:
+            - link "Flaticon" [ref=e437] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e438]:
+            - link "Slidesgo" [ref=e439] [cursor=pointer]:
+              - /url: https://slidesgo.com
+  - text: ×  
+  - generic [ref=e440]:
+    - generic [ref=e443] [cursor=pointer]: 
+    - generic [ref=e444]:
+      - paragraph [ref=e445]: How likely are you to recommend Flaticon to a friend?
+      - generic [ref=e446]:
+        - generic [ref=e447] [cursor=pointer]: "0"
+        - generic [ref=e448] [cursor=pointer]: "1"
+        - generic [ref=e449] [cursor=pointer]: "2"
+        - generic [ref=e450] [cursor=pointer]: "3"
+        - generic [ref=e451] [cursor=pointer]: "4"
+        - generic [ref=e452] [cursor=pointer]: "5"
+        - generic [ref=e453] [cursor=pointer]: "6"
+        - generic [ref=e454] [cursor=pointer]: "7"
+        - generic [ref=e455] [cursor=pointer]: "8"
+        - generic [ref=e456] [cursor=pointer]: "9"
+        - generic [ref=e457] [cursor=pointer]: "10"
+      - generic [ref=e458]:
+        - generic [ref=e459]: Not likely
+        - generic [ref=e460]: Very likely

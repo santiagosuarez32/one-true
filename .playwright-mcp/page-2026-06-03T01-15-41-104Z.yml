@@ -1,0 +1,32 @@
+- generic [ref=e5]:
+  - link "Iconscout home" [ref=e7] [cursor=pointer]:
+    - /url: /
+    - img "Iconscout home" [ref=e8]
+  - main [ref=e10]:
+    - generic [ref=e14]:
+      - heading "Log In" [level=4] [ref=e15]
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - button "Continue with Google" [ref=e18] [cursor=pointer]:
+            - img [ref=e19]
+            - text: Continue with Google
+          - button "Continue with Facebook" [ref=e20] [cursor=pointer]:
+            - img [ref=e21]
+            - text: Continue with Facebook
+        - generic [ref=e23]:
+          - separator [ref=e25]
+          - generic [ref=e26]: or
+          - separator [ref=e28]
+        - generic [ref=e30]:
+          - group [ref=e31]:
+            - textbox "Email Address" [ref=e34]
+          - group [ref=e35]:
+            - textbox "Password" [ref=e38]
+          - button "Log in" [ref=e39] [cursor=pointer]
+        - link "Forgot Password?" [ref=e41] [cursor=pointer]:
+          - /url: /auth/forgot-password
+      - generic [ref=e42]:
+        - text: Don't have an account?
+        - link "Signup Now" [ref=e43] [cursor=pointer]:
+          - /url: /auth/signup
+        - text: .

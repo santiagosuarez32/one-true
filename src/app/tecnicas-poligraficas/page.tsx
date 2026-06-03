@@ -50,6 +50,44 @@ const focusAreas = [
   },
 ];
 
+const advancedTechniques = [
+  {
+    title: "ZCT Federal",
+    items: ["Protocolo estándar federal para evaluaciones de control de información."],
+    icon: "/icons/Browser-Page-Account--Streamline-Ultimate.png",
+  },
+  {
+    title: "Bi-Zona (Fase Usted)",
+    items: ["Técnica de dos zonas de respuesta adaptada a contextos específicos."],
+    icon: "/icons/Browser-Hand--Streamline-Ultimate.png",
+  },
+  {
+    title: "UTAH 3R",
+    items: ["Protocolo UTAH 3R para evaluaciones de responsabilidad relativa."],
+    icon: "/icons/Touchpad-Finger--Streamline-Ultimate.png",
+  },
+  {
+    title: "UTAH 4R",
+    items: ["Protocolo UTAH 4R para evaluaciones cuadrantes de responsabilidad."],
+    icon: "/icons/Password-Desktop--Streamline-Ultimate.png",
+  },
+  {
+    title: "AFMGQT V1 y V2",
+    items: ["Versiones 1 y 2 del cuestionario de respuesta forzada para diagnósticos y evaluaciones exploratorias."],
+    icon: "/icons/Task-Checklist--Streamline-Ultimate.png",
+  },
+  {
+    title: "DLST",
+    items: ["Prueba estándar de discriminación de mentiras para evaluaciones de veracidad."],
+    icon: "/icons/Monitor-Find--Streamline-Ultimate.png",
+  },
+  {
+    title: "CIT (Concealed Information Test)",
+    items: ["Protocolo estándar internacional para la detección de información oculta."],
+    icon: "/icons/Touch-Id-Desktop--Streamline-Ultimate.png",
+  },
+];
+
 
 
 export default function TecnicasPoligraficasPage() {
@@ -145,6 +183,7 @@ export default function TecnicasPoligraficasPage() {
         </div>
       </section>
 
+
       <section className="bg-white py-20">
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16">
           <div className="flex flex-col gap-16">
@@ -182,38 +221,36 @@ export default function TecnicasPoligraficasPage() {
                   className="text-[#525252] text-[15px] leading-[26px] font-light"
                   style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                 >
-                  Profundice en los protocolos comparativos, de conocimiento y de screening bajo estándares APA.
+                  Obtenga una guía paso a paso sobre los criterios de administración, evaluación y diagnóstico las técnicas poligráficas validadas en el metaanálisis APA 2011:
                 </p>
               </div>
             </div>
 
-            <div className="flex flex-col gap-8">
-              {focusAreas.map((area) => (
-                <div key={area.title} className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12 bg-white p-8 lg:p-10 rounded-2xl border border-neutral-100 shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_15px_35px_rgba(112,15,163,0.04)] transition-all duration-300">
-                  <div className="shrink-0 w-[70px]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="#700FA3" viewBox={area.iconViewBox}>
-                      {area.iconPaths.map((path) => (
-                        <path key={path} d={path} />
-                      ))}
-                    </svg>
-                  </div>
-                  <div className="flex-1">
-                    <h3
-                      className="text-lg md:text-xl font-bold text-[#48255A] mb-4"
-                      style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}
-                    >
-                      {area.title}
-                    </h3>
-                    <div className="flex flex-col gap-3">
-                      {area.items.map((item) => (
-                        <p key={item} className="text-sm text-[#525252] leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                          <strong className="font-semibold text-[#48255A]">{item}</strong>
-                        </p>
-                      ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {advancedTechniques.map((technique) => {
+                return (
+                  <div key={technique.title} className="flex flex-col items-start gap-4 bg-white p-5 rounded border border-neutral-100 shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_15px_35px_rgba(112,15,163,0.04)] transition-all duration-300 h-full">
+                    <div className="shrink-0">
+                      <img src={technique.icon} alt={technique.title} width={50} height={50} className="w-[50px] h-[50px] object-contain" />
+                    </div>
+                    <div className="flex-1 w-full">
+                      <h3
+                        className="text-lg md:text-xl font-bold text-[#48255A] mb-4"
+                        style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}
+                      >
+                        {technique.title}
+                      </h3>
+                      <div className="flex flex-col gap-3">
+                        {technique.items.map((item) => (
+                          <p key={item} className="text-sm text-[#525252] leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                            <strong className="font-semibold text-[#48255A]">{item}</strong>
+                          </p>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
@@ -255,21 +292,20 @@ export default function TecnicasPoligraficasPage() {
               <tbody className="divide-y divide-[#700FA3]/20">
                 <tr className="bg-white">
                   <td className="py-5 px-6 font-semibold text-[#48255A] align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Modalidad</td>
-                  <td className="py-5 px-6 text-[#525252] font-light border-l border-[#700FA3]/20" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Presencial o en línea.</td>
+                  <td className="py-5 px-6 text-[#525252] font-light border-l border-[#700FA3]/20" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Presencial o en línea</td>
                 </tr>
                 <tr className="bg-[#700FA3]/5">
-                  <td className="py-5 px-6 font-semibold text-[#48255A] align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>¿Qué incluye este curso?</td>
+                  <td className="py-5 px-6 font-semibold text-[#48255A] align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>¿Qué incluye este curso avanzado?</td>
                   <td className="py-5 px-6 text-[#525252] font-light border-l border-[#700FA3]/20" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                    <p className="mb-3 text-sm leading-relaxed">Diseñado para que domines la técnica desde el primer día:</p>
                     <ul className="list-disc pl-5 flex flex-col gap-2">
-                      <li>15 horas de duración</li>
-                      <li>32 lecciones</li>
-                      <li>Plantillas de trabajo descargables.</li>
-                      <li>+75 Diapositivas descargables.</li>
-                      <li>Preguntas en Quizzes.</li>
-                      <li>Acceso por 3 meses (pregrabado).</li>
-                      <li>30 días de garantía.</li>
-                      <li>Acceso a la comunidad ONE TRUE.</li>
-                      <li>Diploma de finalización.</li>
+                      <li>20 horas de formación especializada.</li>
+                      <li>+40 lecciones de alto contenido técnico.</li>
+                      <li>Plantillas de calificación y protocolos descargables.</li>
+                      <li>Evaluaciones modulares (Quizzes) para medir tu progreso.</li>
+                      <li>30 días de garantía de satisfacción.</li>
+                      <li>Acceso a la comunidad privada ONE TRUE.</li>
+                      <li>Diploma de finalización que avala tu actualización.</li>
                     </ul>
                   </td>
                 </tr>

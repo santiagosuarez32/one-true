@@ -1,0 +1,326 @@
+- generic [active] [ref=e1]:
+  - dialog "Gestionar consentimiento" [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: Gestionar consentimiento
+      - button "Cerrar ventana" [ref=e5] [cursor=pointer]:
+        - img [ref=e6]: times
+    - generic [ref=e9]: Para ofrecer las mejores experiencias, utilizamos tecnologías como las cookies para almacenar y/o acceder a la información del dispositivo. El consentimiento de estas tecnologías nos permitirá procesar datos como el comportamiento de navegación o las identificaciones únicas en este sitio. No consentir o retirar el consentimiento, puede afectar negativamente a ciertas características y funciones.
+    - button "Aceptar" [ref=e11] [cursor=pointer]
+    - list [ref=e13]:
+      - listitem [ref=e14]:
+        - link "Política de cookies" [ref=e15] [cursor=pointer]:
+          - /url: https://globalwork.co/politica-de-cookies-2/
+      - listitem [ref=e16]:
+        - link "Declaración de privacidad" [ref=e17] [cursor=pointer]:
+          - /url: https://d25ltszcjeom5i.cloudfront.net/11741/yfdcgyfqcd/GW-politica_de_privacidad_y_uso_de_la_informacion.pdf
+      - listitem [ref=e18]:
+        - link "Impressum" [ref=e19] [cursor=pointer]:
+          - /url: https://d25ltszcjeom5i.cloudfront.net/11741/yfdcgyfqcd/GW-politica_de_privacidad_y_uso_de_la_informacion.pdf
+  - iframe [ref=e20]:
+    - img [ref=f50e3] [cursor=pointer]
+  - generic [ref=e23]:
+    - button "Alternar menú" [ref=e32] [cursor=pointer]:
+      - img [ref=e33]
+    - link "Solicitar demo" [ref=e40] [cursor=pointer]:
+      - /url: "#demo-home"
+      - generic [ref=e42]: Solicitar demo
+  - generic [ref=e43]:
+    - generic [ref=e48]:
+      - heading "Construimos vínculos confiables entre las empresas y sus candidatos" [level=1] [ref=e51]
+      - heading "Estudios de seguridad, visitas domiciliarias y verificación de antecedentes en tiempo récord en Latinoamérica." [level=2] [ref=e58]
+      - generic [ref=e64]:
+        - link "Solicitar demostración" [ref=e70] [cursor=pointer]:
+          - /url: "#solicitar-demo"
+          - generic [ref=e72]: Solicitar demostración
+        - paragraph [ref=e77]:
+          - link "Leer más acerca de nosotros" [ref=e78] [cursor=pointer]:
+            - /url: "#nosotros"
+    - generic [ref=e96]:
+      - paragraph [ref=e109]: Algunos de nuestros clientes
+      - heading "Grandes equipos de gestión del talento humano confían en nosotros" [level=2] [ref=e116]
+      - generic [ref=e126]:
+        - img "Logo Banco de Occidente - Globalwork" [ref=e133]
+        - img "Little_Caesars_Pizza_2017" [ref=e142]
+      - generic [ref=e150]:
+        - img "Group 326" [ref=e157]
+        - img "logo_pragma_mails" [ref=e162]
+        - img "Group 328" [ref=e167]
+    - link "Solicitar demostración" [ref=e177] [cursor=pointer]:
+      - /url: "#solicitar-demo"
+      - generic [ref=e179]: Solicitar demostración
+    - generic [ref=e181]:
+      - generic [ref=e183]:
+        - paragraph [ref=e196]: Conoce nuestros servicios
+        - heading "Soluciones desarrolladas para optimizar tus procesos de selección" [level=2] [ref=e199]
+        - generic [ref=e205]: Un equipo de tecnología y cientos de profesionales en Latinoamérica trabajan para proporcionarte información confiable.
+        - generic [ref=e211]:
+          - generic [ref=e217]:
+            - generic [ref=e219]: "0"
+            - generic [ref=e220]: "%"
+          - paragraph [ref=e225]: Optimización en procesos de nuestros clientes
+        - generic [ref=e231]:
+          - generic [ref=e237]:
+            - generic [ref=e239]: "0"
+            - generic [ref=e240]: H
+          - paragraph [ref=e245]: Resultados en tiempo récord
+      - generic [ref=e247]:
+        - generic [ref=e255]:
+          - heading "Visitas Domiciliarias" [level=3] [ref=e258]
+          - generic [ref=e264]: Interactuamos con los aspirantes y su grupo familiar para conocer sus fortalezas y el potencial que podrán desarrollar en la organización.
+          - link "Conoce más" [ref=e272] [cursor=pointer]:
+            - /url: /visitas-domiciliarias
+            - generic [ref=e274]: Conoce más
+        - generic [ref=e286]:
+          - heading "Estudios de Seguridad" [level=3] [ref=e289]
+          - generic [ref=e295]: Revisamos anotaciones judiciales, referencias personales, laborales e información académica para generar un vínculo confiable.
+          - link "Conoce más" [ref=e303] [cursor=pointer]:
+            - /url: /estudios-seguridad
+            - generic [ref=e305]: Conoce más
+        - generic [ref=e317]:
+          - heading "Verificación de Antecedentes" [level=3] [ref=e320]
+          - generic [ref=e326]: Verificamos la validez de los datos a partir de registros oficiales y certificados para que tomes decisiones acertadas.
+          - link "Conoce más" [ref=e334] [cursor=pointer]:
+            - /url: /verificacion-antecedentes
+            - generic [ref=e336]: Conoce más
+    - generic [ref=e346]:
+      - generic [ref=e348]:
+        - generic [ref=e356]:
+          - heading "Soporte Emocional Empresarial" [level=3] [ref=e359]
+          - generic [ref=e365]: Una línea de atención psicológica en la que nuestros profesionales brindan soporte emocional a tus colaboradores.
+          - link "Conoce más" [ref=e373] [cursor=pointer]:
+            - /url: /soporte-emocional-empresarial/
+            - generic [ref=e375]: Conoce más
+        - generic [ref=e387]:
+          - heading "Visitas Domiciliarias Virtuales para el Teletrabajo" [level=3] [ref=e390]
+          - paragraph [ref=e397]: Verificamos que tus empleados remotos cuenten con las condiciones para realizar un trabajo seguro y productivo.
+          - link "Conoce más" [ref=e405] [cursor=pointer]:
+            - /url: https://globalwork.co/visitas-domiciliarias-teletrabajo/
+            - generic [ref=e407]: Conoce más
+      - generic [ref=e409]:
+        - paragraph [ref=e422]: Conoce nuestros servicios
+        - heading "Servicios de Bienestar Laboral" [level=2] [ref=e425]
+    - generic [ref=e429]:
+      - paragraph [ref=e442]: Acerca de nosotros
+      - heading "Inteligencia para la selección del mejor talento humano" [level=2] [ref=e445]
+      - generic [ref=e451]:
+        - paragraph [ref=e452]: En Globalwork nos alineamos con las áreas de gestión humana de las compañías latinoamericanas para optimizar sus procesos de contratación y generar vínculos confiables con su talento humano.
+        - paragraph [ref=e453]: Con nuestra tecnología tendrás todos tus procesos de verificación de información seguros en la nube, para que los revises en cualquier momento.
+      - link "Solicitar demostración" [ref=e461] [cursor=pointer]:
+        - /url: "#solicitar-demo"
+        - generic [ref=e463]: Solicitar demostración
+    - generic [ref=e483]:
+      - paragraph [ref=e496]: Nuestras herramientas
+      - heading "Soluciones inteligentes, resultados confiables y en tiempo real" [level=2] [ref=e499]
+      - generic [ref=e505]: Contamos con una plataforma amigable que te proporciona información precisa sobre todos los candidatos de tu proceso de selección.
+      - generic [ref=e517]:
+        - heading "Toda la información disponible en nuestra plataforma" [level=3] [ref=e520]
+        - generic [ref=e526]: Un espacio fácil de usar para que conozcas exactamente el desarrollo de las verificaciones.
+    - generic [ref=e546]:
+      - paragraph [ref=e559]: Nuestros resultados
+      - link "Solicitar demostración" [ref=e573] [cursor=pointer]:
+        - /url: "#solicitar-demo"
+        - generic [ref=e575]: Solicitar demostración
+    - generic [ref=e591]:
+      - paragraph [ref=e604]: Casos de éxito
+      - iframe [ref=e622]:
+        - generic [active] [ref=f53e1]:
+          - generic "Reproductor de video de YouTube" [ref=f53e3]
+          - generic [ref=f53e5]:
+            - generic:
+              - generic:
+                - button "Reproducir video" [ref=f53e10] [cursor=pointer]
+                - button "Ocultar controles del reproductor" [ref=f53e12] [cursor=pointer]
+                - generic [ref=f53e14]:
+                  - generic [ref=f53e19]:
+                    - generic [ref=f53e20]:
+                      - link "\"Globalwork es un gran aliado para nuestro proceso de selección\" - ARUS" [ref=f53e21] [cursor=pointer]:
+                        - /url: https://www.youtube.com/watch?v=KIchlMszUiE
+                      - link "Globalwork Col" [ref=f53e22] [cursor=pointer]:
+                        - /url: /channel/UC_yBhSYdcj3khN22IuVdmsw
+                        - generic [ref=f53e23]: Globalwork Col
+                    - generic [ref=f53e24]:
+                      - button [ref=f53e25] [cursor=pointer]
+                      - generic [ref=f53e26]:
+                        - generic [ref=f53e27]:
+                          - generic: Globalwork Col
+                          - generic: 2.36 K suscriptores
+                        - generic [ref=f53e35]:
+                          - generic [ref=f53e36]:
+                            - generic:
+                              - generic:
+                                - img
+                            - button "Suscribirse" [ref=f53e39] [cursor=pointer]:
+                              - generic [ref=f53e40]: Suscribirse
+                          - generic:
+                            - generic:
+                              - img
+                  - generic [ref=f53e44]:
+                    - generic [ref=f53e45]:
+                      - button "Compartir" [ref=f53e47] [cursor=pointer]:
+                        - generic [ref=f53e51]:
+                          - img
+                      - button "Ver más tarde" [ref=f53e56] [cursor=pointer]:
+                        - generic [ref=f53e60]:
+                          - img
+                    - link "Mirar en YouTube" [ref=f53e67] [cursor=pointer]:
+                      - /url: https://www.youtube.com/watch?v=KIchlMszUiE
+                      - generic [ref=f53e70]:
+                        - text: Mirar en
+                        - img [ref=f53e72]:
+                          - generic [ref=f53e74]:
+                            - img
+    - generic [ref=e640]:
+      - paragraph [ref=e653]: Blog
+      - link "Conoce más" [ref=e661] [cursor=pointer]:
+        - /url: /blog
+        - generic [ref=e663]: Conoce más
+    - generic [ref=e673]:
+      - paragraph [ref=e688]: Solicita tu demostración
+      - generic [ref=e710]:
+        - iframe [ref=e715]:
+          - generic [ref=f51e10]:
+            - generic [ref=f51e12]:
+              - textbox "Nombres*" [ref=f51e16]
+              - textbox "Apellidos*" [ref=f51e20]
+            - generic [ref=f51e22]:
+              - textbox "Empresa*" [ref=f51e26]
+              - combobox [ref=f51e30] [cursor=pointer]:
+                - option "Tamaño de empresa*" [selected]
+                - option "-----"
+                - option "1 - 10"
+                - option "11 - 50"
+                - option "51 - 200"
+                - option "201 - 800"
+                - option "801 - 2000"
+                - option "2001 - 3600"
+                - option "3601 - 5000"
+                - option "5001 - 10000"
+                - option "+ 10000"
+            - generic [ref=f51e35]:
+              - generic [ref=f51e36]: 
+              - textbox "Email empresarial*" [ref=f51e37]
+            - generic [ref=f51e43]:
+              - generic [ref=f51e44]: 
+              - generic [ref=f51e45]:
+                - 'combobox "Argentina: +54" [ref=f51e47]'
+                - textbox "011 15-2345-6789" [ref=f51e50]
+            - combobox [ref=f51e56] [cursor=pointer]:
+              - option "Servicios de tu interés*" [selected]
+              - option "-----"
+              - option "Estudios de seguridad"
+              - option "Visita domiciliaria de contratación"
+              - option "Visita domiciliaria de teletrabajo"
+              - option "Verificación de antecedentes"
+              - option "Verificación de referencias laborales"
+              - option "Visitas domiciliarias OEA"
+              - option "Poligrafía"
+              - option "Soporte emocional empresarial"
+            - heading "*Al enviar este formulario, acepto que mis datos personales sean tratados de acuerdo con la Política de tratamiento de datos personales y los términos establecidos en ella." [level=4] [ref=f51e61]:
+              - generic [ref=f51e64]:
+                - text: "*Al enviar este formulario, acepto que mis datos personales sean tratados de acuerdo con la"
+                - link "Política de tratamiento de datos personales" [ref=f51e65] [cursor=pointer]:
+                  - /url: https://globalwork.co/politica-tratamiento-datos-personales/
+                - text: y los términos establecidos en ella.
+            - generic [ref=f51e71] [cursor=pointer]:
+              - checkbox "Aceptar" [ref=f51e72]
+              - text: Aceptar
+            - button "Solicitar demostración" [ref=f51e79] [cursor=pointer]:
+              - generic [ref=f51e80]:
+                - generic:
+                  - strong: Solicitar demostración
+        - heading "O escríbenos" [level=2] [ref=e718]
+        - link "+57 321 490 12 84" [ref=e722] [cursor=pointer]:
+          - /url: https://api.whatsapp.com/send?phone=%20573214901284&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20Globalwork&utm_source=webpage&utm_medium=whatsappbutton&utm_campaign=antecedentes
+          - generic [ref=e723]:
+            - img [ref=e725]
+            - generic [ref=e727]: +57 321 490 12 84
+  - generic [ref=e732]:
+    - generic [ref=e734]:
+      - generic [ref=e736]:
+        - paragraph [ref=e745]: Construimos vínculos confiables entre empresas y candidatos
+        - paragraph [ref=e752]: Síguenos
+        - list [ref=e755]:
+          - listitem [ref=e756]:
+            - link "Linkedin" [ref=e757] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/18652683/
+              - generic [ref=e758]: Linkedin
+              - img [ref=e759]
+          - listitem [ref=e761]:
+            - link "Facebook-f" [ref=e762] [cursor=pointer]:
+              - /url: https://www.facebook.com/globalworkcol/%20
+              - generic [ref=e763]: Facebook-f
+              - img [ref=e764]
+          - listitem [ref=e766]:
+            - link "Twitter" [ref=e767] [cursor=pointer]:
+              - /url: https://twitter.com/GlobalworkCol
+              - generic [ref=e768]: Twitter
+              - img [ref=e769]
+          - listitem [ref=e771]:
+            - link "Instagram" [ref=e772] [cursor=pointer]:
+              - /url: https://www.instagram.com/globalworkcol/%20
+              - generic [ref=e773]: Instagram
+              - img [ref=e774]
+          - listitem [ref=e776]:
+            - link "Youtube" [ref=e777] [cursor=pointer]:
+              - /url: https://www.youtube.com/channel/UC_yBhSYdcj3khN22IuVdmsw
+              - generic [ref=e778]: Youtube
+              - img [ref=e779]
+          - listitem [ref=e781]:
+            - link "Whatsapp" [ref=e782] [cursor=pointer]:
+              - /url: https://wa.me/573217820416
+              - generic [ref=e783]: Whatsapp
+              - img [ref=e784]
+      - generic [ref=e787]:
+        - paragraph [ref=e790]: Nuestras Soluciones
+        - list [ref=e797]:
+          - listitem [ref=e798]:
+            - link "Visitas Domiciliarias" [ref=e799] [cursor=pointer]:
+              - /url: /visitas-domiciliarias/
+              - img [ref=e801]
+              - generic [ref=e803]: Visitas Domiciliarias
+          - listitem [ref=e804]:
+            - link "Estudios de Seguridad" [ref=e805] [cursor=pointer]:
+              - /url: /estudios-seguridad/
+              - img [ref=e807]
+              - generic [ref=e809]: Estudios de Seguridad
+          - listitem [ref=e810]:
+            - link "Verificación de Antecedentes" [ref=e811] [cursor=pointer]:
+              - /url: /verificacion-antecedentes/
+              - img [ref=e813]
+              - generic [ref=e815]: Verificación de Antecedentes
+          - listitem [ref=e816]:
+            - link "Soporte Emocional Empresarial" [ref=e817] [cursor=pointer]:
+              - /url: /contigohoy/
+              - img [ref=e819]
+              - generic [ref=e821]: Soporte Emocional Empresarial
+      - generic [ref=e823]:
+        - paragraph [ref=e826]: Sobre Nosotros
+        - list [ref=e833]:
+          - listitem [ref=e834]:
+            - link "Trabaja con Nosotros" [ref=e835] [cursor=pointer]:
+              - /url: /trabaja-con-nosotros
+              - img [ref=e837]
+              - generic [ref=e839]: Trabaja con Nosotros
+          - listitem [ref=e840]:
+            - link "Quienes Somos" [ref=e841] [cursor=pointer]:
+              - /url: /#nosotros
+              - img [ref=e843]
+              - generic [ref=e845]: Quienes Somos
+          - listitem [ref=e846]:
+            - link "Blog" [ref=e847] [cursor=pointer]:
+              - /url: /blog
+              - img [ref=e849]
+              - generic [ref=e851]: Blog
+          - listitem [ref=e852]:
+            - link "Eventos" [ref=e853] [cursor=pointer]:
+              - /url: /category/eventos-y-medios/
+              - img [ref=e855]
+              - generic [ref=e857]: Eventos
+    - generic [ref=e859]:
+      - list [ref=e864]:
+        - listitem [ref=e865]:
+          - link "Política de tratamiento de datos personales" [ref=e866] [cursor=pointer]:
+            - /url: https://app.clientify.com/resources/files/download-url/1442905/
+            - generic [ref=e867]: Política de tratamiento de datos personales
+      - paragraph [ref=e872]: Copyright © 2020 Globalwork | All Rights Reserved
+  - generic [ref=e873]: tablet

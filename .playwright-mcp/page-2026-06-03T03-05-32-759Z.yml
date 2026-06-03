@@ -1,0 +1,256 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - img "One True Ecuador Logo" [ref=e6]
+        - generic [ref=e7]:
+          - button "Cotizar gratis servicio de poligrafía y seguridad" [ref=e8]: Cotiza gratis
+          - button "Toggle Menu" [ref=e9]:
+            - img [ref=e10]
+      - generic [ref=e12]:
+        - generic [ref=e13]:
+          - img "One True Ecuador Logo" [ref=e14]
+          - button "Cerrar menú de navegación" [ref=e15]:
+            - img [ref=e16]
+        - navigation [ref=e18]:
+          - link "Inicio" [ref=e19] [cursor=pointer]:
+            - /url: /
+          - link "Pruebas Poligráficas" [ref=e20] [cursor=pointer]:
+            - /url: /pruebas-poligraficas
+          - link "Vetting" [ref=e21] [cursor=pointer]:
+            - /url: /vetting
+          - link "Confiabilidad 360°" [ref=e22] [cursor=pointer]:
+            - /url: /estudio-de-confiabilidad-360
+          - link "Visitas Domiciliarias" [ref=e23] [cursor=pointer]:
+            - /url: /visitas-domiciliarias
+          - link "Pruebas Toxicológicas" [ref=e24] [cursor=pointer]:
+            - /url: /pruebas-toxicologicas
+          - link "Evaluaciones Psicométricas" [ref=e25] [cursor=pointer]:
+            - /url: /evaluaciones-psicometricas
+          - link "Prueba de Honestidad, Ética y Valores" [ref=e26] [cursor=pointer]:
+            - /url: /prueba-de-honestidad-etica-y-valores
+          - link "Comunidad" [ref=e27] [cursor=pointer]:
+            - /url: /#podcast
+          - link "Blog" [ref=e28] [cursor=pointer]:
+            - /url: /#recursos
+        - button "Cotizar gratis servicio de poligrafía y seguridad" [ref=e30]: Cotiza gratis
+    - generic [ref=e31]:
+      - img "One True Vetting y Verificación de Antecedentes"
+      - generic [ref=e33]:
+        - generic [ref=e36]: Transformamos la incertidumbre en decisiones seguras.
+        - heading "Verificación Integral de Candidatos" [level=1] [ref=e37]:
+          - text: Verificación Integral de
+          - strong [ref=e38]: Candidatos
+        - paragraph [ref=e39]: No se conforme con la buena impresión de una entrevista. Validamos la integridad de su futuro talento humano con un análisis profundo de antecedentes and riesgos.
+        - link "Cotizar mi evaluación ahora" [ref=e41] [cursor=pointer]:
+          - /url: "#contacto"
+    - generic [ref=e43]:
+      - generic [ref=e44]:
+        - generic [ref=e47]: Sobre el Servicio
+        - heading "¿Qué analizamos?" [level=2] [ref=e48]
+        - paragraph [ref=e49]:
+          - text: Cruzamos información en tiempo real en
+          - strong [ref=e50]: +190 bases de datos
+          - text: "para detectar alertas legales, financieras o de reputación:"
+      - generic [ref=e51]:
+        - generic [ref=e52]:
+          - heading "Historial Legal" [level=3] [ref=e54]
+          - paragraph [ref=e55]: Función Judicial, Policía Nacional y SUPA.
+        - generic [ref=e56]:
+          - heading "Perfil Ciudadano" [level=3] [ref=e58]
+          - paragraph [ref=e59]: Registro Civil y Agencia Nacional de Tránsito.
+        - generic [ref=e60]:
+          - heading "Seguridad Global" [level=3] [ref=e62]
+          - paragraph [ref=e63]: Listas de control internacional (OFAC, Interpol y Europol).
+    - generic [ref=e66]:
+      - generic [ref=e68]:
+        - img "Profesional verificando antecedentes" [ref=e70]
+        - img "Rastreo en bases de datos" [ref=e72]
+      - generic [ref=e74]:
+        - generic [ref=e77]: Beneficios
+        - heading "El Valor para su Empresa" [level=2] [ref=e78]
+        - list [ref=e79]:
+          - listitem [ref=e80]:
+            - img [ref=e82]
+            - generic [ref=e84]:
+              - strong [ref=e85]: "Reducción de Riesgos:"
+              - text: Evite infiltraciones, fraudes o personal no apto.
+          - listitem [ref=e86]:
+            - img [ref=e88]
+            - generic [ref=e90]:
+              - strong [ref=e91]: "Reportes Ágiles:"
+              - text: Resultados técnicos, claros y listos para la toma de decisiones.
+          - listitem [ref=e92]:
+            - img [ref=e94]
+            - generic [ref=e96]:
+              - strong [ref=e97]: "Cumplimiento:"
+              - text: Estándares de Compliance para su departamento de RR.HH.
+        - link "Cotizar mi servicio de Vetting" [ref=e98] [cursor=pointer]:
+          - /url: "#contacto"
+    - generic [ref=e101]:
+      - generic [ref=e102]:
+        - generic [ref=e103]:
+          - img "One True Logo"
+        - heading "Contactos" [level=2] [ref=e104]
+        - generic [ref=e105]:
+          - generic [ref=e106]:
+            - img [ref=e107]
+            - generic [ref=e109]:
+              - heading "Teléfono" [level=3] [ref=e110]
+              - link "098 129 6179" [ref=e111] [cursor=pointer]:
+                - /url: tel:0981296179
+          - generic [ref=e112]:
+            - img [ref=e113]
+            - generic [ref=e115]:
+              - heading "Agencia Quito" [level=3] [ref=e116]
+              - paragraph [ref=e117]: "Av. Pérez Guerreo OE3-124 y San Gregorio, Instituto de Diagnóstico Médico, tercer piso, oficina #303, Quito-Ecuador."
+          - generic [ref=e118]:
+            - img [ref=e119]
+            - generic [ref=e122]:
+              - heading "Agencia Guayaquil" [level=3] [ref=e123]
+              - paragraph [ref=e124]: Solar 26, Mz. 1022, Las Orquídeas, entre lavandería Perfect Wash y Dash Óptica.
+          - generic [ref=e125]:
+            - img [ref=e126]
+            - generic [ref=e128]:
+              - heading "Correo" [level=3] [ref=e129]
+              - link "info@somosonetrue.com" [ref=e130] [cursor=pointer]:
+                - /url: mailto:info@somosonetrue.com
+        - generic [ref=e131]:
+          - heading "Síguenos:" [level=3] [ref=e132]
+          - generic [ref=e133]:
+            - link "Síguenos en Facebook" [ref=e134] [cursor=pointer]:
+              - /url: https://www.facebook.com/somosonetrue
+              - img [ref=e135]
+            - link "Síguenos en Instagram" [ref=e137] [cursor=pointer]:
+              - /url: https://www.instagram.com/somosonetrue
+              - img [ref=e138]
+            - link "Síguenos en LinkedIn" [ref=e140] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/somosonetrue
+              - img [ref=e141]
+      - generic [ref=e146]:
+        - generic [ref=e147]:
+          - generic [ref=e148]:
+            - generic [ref=e149]: Nombre *
+            - textbox "Tu nombre" [ref=e150]
+          - generic [ref=e151]:
+            - generic [ref=e152]: Apellido *
+            - textbox "Tu apellido" [ref=e153]
+        - generic [ref=e154]:
+          - generic [ref=e155]: Correo electrónico *
+          - generic [ref=e156]:
+            - textbox "correo@empresa.com" [ref=e157]
+            - generic:
+              - img
+        - generic [ref=e158]:
+          - generic [ref=e159]: Número de teléfono *
+          - generic [ref=e160]:
+            - generic [ref=e161]:
+              - img "ec" [ref=e162]
+              - combobox [ref=e163] [cursor=pointer]:
+                - option "+593" [selected]
+                - option "+57"
+                - option "+51"
+                - option "+56"
+                - option "+54"
+                - option "+52"
+                - option "+34"
+                - option "+1"
+            - textbox "098 129 6179" [ref=e164]
+            - generic:
+              - img
+        - generic [ref=e165]:
+          - generic [ref=e166]: Ciudad *
+          - textbox "Tu ciudad" [ref=e167]
+        - generic [ref=e168]:
+          - generic [ref=e169]: Mensaje *
+          - textbox "Escribe tu mensaje aquí..." [ref=e170]
+        - generic [ref=e171]:
+          - paragraph [ref=e172]:
+            - text: Al enviar este formulario, acepto que mis datos personales sean tratados de acuerdo con la
+            - link "Política de tratamiento de datos personales" [ref=e173] [cursor=pointer]:
+              - /url: "#"
+            - text: y los
+            - link "términos establecidos en ella" [ref=e174] [cursor=pointer]:
+              - /url: "#"
+            - text: .
+          - generic [ref=e175]:
+            - checkbox "Aceptar" [ref=e176] [cursor=pointer]
+            - generic [ref=e177] [cursor=pointer]: Aceptar
+        - button "Cotizar ahora" [ref=e178]
+        - generic [ref=e179]:
+          - generic [ref=e180]: O escríbenos
+          - link "+593 98 129 6179" [ref=e182] [cursor=pointer]:
+            - /url: https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True
+            - generic [ref=e183]:
+              - img [ref=e185]
+              - generic [ref=e187]: +593 98 129 6179
+    - generic [ref=e189]:
+      - generic [ref=e190]:
+        - generic [ref=e191]:
+          - img "One True Logo" [ref=e193]
+          - paragraph [ref=e194]: Construimos vínculos confiables entre empresas y candidatos
+          - generic [ref=e195]:
+            - generic [ref=e196]: Síguenos
+            - generic [ref=e197]:
+              - link "Síguenos en LinkedIn" [ref=e198] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/somosonetrue
+                - img [ref=e199]
+              - link "Síguenos en Facebook" [ref=e201] [cursor=pointer]:
+                - /url: https://www.facebook.com/somosonetrue
+                - img [ref=e202]
+              - link "Síguenos en Twitter/X" [ref=e204] [cursor=pointer]:
+                - /url: https://x.com/somosonetrue
+                - img [ref=e205]
+              - link "Síguenos en Instagram" [ref=e207] [cursor=pointer]:
+                - /url: https://www.instagram.com/somosonetrue
+                - img [ref=e208]
+              - link "Síguenos en YouTube" [ref=e210] [cursor=pointer]:
+                - /url: https://www.youtube.com/@somosonetrue
+                - img [ref=e211]
+              - link "Contáctanos por WhatsApp" [ref=e213] [cursor=pointer]:
+                - /url: https://api.whatsapp.com/send?phone=593981296179
+                - img [ref=e214]
+        - generic [ref=e216]:
+          - heading "Navegación" [level=4] [ref=e217]
+          - list [ref=e218]:
+            - listitem [ref=e219]:
+              - link "Inicio" [ref=e220] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e221]:
+              - link "Servicios" [ref=e222] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e223]:
+              - link "Sobre Nosotros" [ref=e224] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e225]:
+              - link "Academia" [ref=e226] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e227]:
+          - heading "Contacto" [level=4] [ref=e228]
+          - generic [ref=e229]:
+            - list [ref=e231]:
+              - listitem [ref=e232]:
+                - img [ref=e233]
+                - link "info@somosonetrue.com" [ref=e236] [cursor=pointer]:
+                  - /url: mailto:info@somosonetrue.com
+              - listitem [ref=e237]:
+                - img [ref=e238]
+                - link "098 129 6179" [ref=e240] [cursor=pointer]:
+                  - /url: tel:0981296179
+            - list [ref=e242]:
+              - listitem [ref=e243]:
+                - img [ref=e244]
+                - generic [ref=e247]:
+                  - strong [ref=e248]: Agencia Quito
+                  - text: "Av. Pérez Guerreo OE3-124 y San Gregorio, Instituto de Diagnóstico Médico, tercer piso, oficina #303, Quito-Ecuador."
+              - listitem [ref=e249]:
+                - img [ref=e250]
+                - generic [ref=e253]:
+                  - strong [ref=e254]: Agencia Guayaquil
+                  - text: Solar 26, Mz. 1022, Las Orquídeas, entre lavandería Perfect Wash y Dash Óptica.
+      - generic [ref=e255]:
+        - paragraph [ref=e256]: © Copyright One True 2026
+        - link "Política de Privacidad y Cookies" [ref=e258] [cursor=pointer]:
+          - /url: "#"
+  - button "Open Next.js Dev Tools" [ref=e264] [cursor=pointer]:
+    - img [ref=e265]

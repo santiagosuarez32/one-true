@@ -1,0 +1,1001 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e5]:
+        - link "Flaticon logo" [ref=e6] [cursor=pointer]:
+          - /url: https://www.flaticon.com/
+          - img "Flaticon logo" [ref=e7]
+        - navigation [ref=e8]:
+          - generic [ref=e10] [cursor=pointer]: 
+          - text:   
+        - generic [ref=e12]:
+          - button "" [ref=e14] [cursor=pointer]:
+            - generic [ref=e15]: 
+          - list [ref=e16]:
+            - listitem [ref=e17]:
+              - generic [ref=e18]: Notifications
+              - generic [ref=e19] [cursor=pointer]: 
+            - listitem [ref=e20]:
+              - generic [ref=e22]: 
+              - paragraph [ref=e23]: No notifications to show yet
+              - paragraph [ref=e24]: You’ll see useful information here soon. Stay tuned!
+          - link "" [ref=e26] [cursor=pointer]:
+            - /url: https://id.magnific.com/v2/log-in?client_id=flaticon&lang=en
+            - generic [ref=e27]: 
+      - generic [ref=e30]:
+        - generic [ref=e33] [cursor=pointer]: 
+        - generic [ref=e37]:
+          - button "Icons " [ref=e40] [cursor=pointer]:
+            - text: 
+            - generic [ref=e41]: Icons
+            - generic [ref=e42]: 
+          - searchbox "Search for icons" [active] [ref=e44]: verification
+          - button "" [ref=e45] [cursor=pointer]:
+            - generic [ref=e46]: 
+          - button "" [ref=e47] [cursor=pointer]:
+            - generic [ref=e48]: 
+        - button " 0" [ref=e49] [cursor=pointer]:
+          - generic [ref=e50]: 
+          - generic [ref=e51]: "0"
+    - complementary [ref=e52]:
+      - text:                
+      - generic [ref=e53]:
+        - button "" [ref=e54] [cursor=pointer]:
+          - generic [ref=e55]: 
+        - text: Collections
+        - generic [ref=e56]: "1"
+        - button "" [ref=e58] [cursor=pointer]:
+          - generic [ref=e59]: 
+        - generic: 
+        - button "" [disabled] [ref=e61]:
+          - generic [ref=e62]: 
+        - button "" [disabled] [ref=e64]:
+          - generic [ref=e65]: 
+      - generic [ref=e67]:
+        - generic [ref=e68] [cursor=pointer]:
+          - generic "My icons collection" [ref=e69]
+          - generic [ref=e70]: "0"
+          - generic [ref=e73]:
+            - button "" [ref=e74]:
+              - generic [ref=e75]: 
+            - text:       
+          - text: 
+        - text:    
+        - generic [ref=e76]:
+          - generic [ref=e77]:
+            - text: Edit mode
+            - button " Back" [ref=e78] [cursor=pointer]:
+              - generic [ref=e79]: 
+              - text: Back
+          - generic [ref=e80]:
+            - generic [ref=e81]: Sort mode (Drag&Drop)
+            - button " Back" [ref=e82] [cursor=pointer]:
+              - generic [ref=e83]: 
+              - text: Back
+          - text:       
+          - generic [ref=e86]:
+            - img [ref=e87]
+            - paragraph [ref=e88]: Create custom collections
+            - paragraph [ref=e89]: Do you want to make a personalized icon pack?
+            - paragraph [ref=e90]:
+              - text: Just add the icons you want to the collection and download them in the format you need.
+              - link "More info" [ref=e91] [cursor=pointer]:
+                - /url: https://www.flaticon.com/collections
+            - link "Register for free" [ref=e92] [cursor=pointer]:
+              - /url: https://id.magnific.com/v2/sign-up?client_id=flaticon&lang=en
+            - paragraph [ref=e93]:
+              - generic [ref=e94]: 
+              - text: Create up to 3 collections
+            - paragraph [ref=e95]:
+              - generic [ref=e96]: 
+              - text: Add 256 icons per collection
+            - paragraph [ref=e97]:
+              - generic [ref=e98]: 
+              - text: Save and customize your icons
+          - text:          
+    - text:  
+    - generic:     
+    - text:                           
+    - generic [ref=e100]:
+      - complementary:
+        - generic:
+          - generic:
+            - generic:
+              - img
+              - paragraph [ref=e102] [cursor=pointer]: Filters
+              - generic [ref=e103] [cursor=pointer]: 
+            - generic [ref=e104]:
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                    - paragraph [ref=e106]: Colors
+                  - generic:
+                    - generic:
+                      - generic [ref=e108] [cursor=pointer]:
+                        - img "black" [ref=e109]
+                        - text: Black
+                      - generic [ref=e111] [cursor=pointer]:
+                        - img "Colors" [ref=e112]
+                        - text: Colors
+                      - generic [ref=e114] [cursor=pointer]:
+                        - img "gradient" [ref=e115]
+                        - text: Gradient
+                - generic:
+                  - generic:
+                    - img
+                    - paragraph [ref=e118]: Shape
+                  - generic:
+                    - generic:
+                      - generic [ref=e120] [cursor=pointer]:
+                        - img "outline" [ref=e121]
+                        - text: Outline
+                      - generic [ref=e123] [cursor=pointer]:
+                        - img "fill" [ref=e124]
+                        - text: Fill
+                      - generic [ref=e126] [cursor=pointer]:
+                        - img "lineal-color" [ref=e127]
+                        - text: Lineal Color
+                      - generic [ref=e129] [cursor=pointer]:
+                        - img "all_colors" [ref=e130]
+                        - text: Hand Drawn
+                - generic:
+                  - generic:
+                    - img
+                    - paragraph [ref=e132]: Sort by
+                  - generic:
+                    - generic:
+                      - generic [ref=e134] [cursor=pointer]: Recent
+                      - generic [ref=e136] [cursor=pointer]: Trending
+                - generic:
+                  - generic:
+                    - generic:
+                      - img
+                      - paragraph [ref=e143]: Editable strokes
+                      - generic [ref=e144]: New
+                      - generic [ref=e146] [cursor=pointer]: 
+                    - generic [ref=e147]: Non-expanded SVG files.
+                - generic:
+                  - generic:
+                    - generic:
+                      - img
+                      - paragraph [ref=e153]: Merchandising license
+                      - generic [ref=e155] [cursor=pointer]: 
+                    - generic [ref=e156]: Icons licensed for merchandise.
+        - text: 
+      - generic [ref=e159]:
+        - generic [ref=e161]:
+          - link "Icons" [ref=e162] [cursor=pointer]:
+            - /url: https://www.flaticon.com/search?word=verification
+          - link "Stickers" [ref=e163] [cursor=pointer]:
+            - /url: https://www.flaticon.com/search?word=verification&type=sticker
+          - link "Animated icons" [ref=e164] [cursor=pointer]:
+            - /url: https://www.flaticon.com/search?word=verification&type=animated-icon
+          - link "Interface icons" [ref=e165] [cursor=pointer]:
+            - /url: https://www.flaticon.com/search?word=verification&type=uicon
+          - generic [ref=e166]:
+            - generic [ref=e167]: "Group by:"
+            - generic [ref=e170]:
+              - button " All icons " [ref=e171] [cursor=pointer]:
+                - generic [ref=e172]:
+                  - generic [ref=e173]: 
+                  - text: All icons
+                - generic [ref=e174]: 
+              - text:   
+        - generic [ref=e177]:
+          - generic [ref=e179]:
+            - paragraph [ref=e180]: 20,636
+            - heading "Verification Icons" [level=1] [ref=e181]
+          - list [ref=e182]:
+            - listitem
+        - generic [ref=e183]:
+          - list [ref=e184]:
+            - listitem [ref=e185]:
+              - generic [ref=e186]:
+                - link "Search" [ref=e187] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/search_3281188
+                  - img "Search" [ref=e188]
+                - text:      
+            - listitem [ref=e189]:
+              - generic [ref=e190]:
+                - link "Verify" [ref=e191] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verify_12559876
+                  - img "Verify" [ref=e192]
+                - text:      
+            - listitem [ref=e193]:
+              - generic [ref=e194]:
+                - link "True" [ref=e195] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/true_6974507
+                  - img "True" [ref=e196]
+                - text:      
+            - listitem [ref=e197]:
+              - generic [ref=e198]:
+                - link "Verified" [ref=e199] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verified_2438078
+                  - img "Verified" [ref=e200]
+                - text:      
+            - listitem [ref=e201]:
+              - generic [ref=e202]:
+                - link "Badge" [ref=e203] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/badge_7525697
+                  - img "Badge" [ref=e204]
+                - text:      
+            - listitem [ref=e205]:
+              - generic [ref=e206]:
+                - link "Secure" [ref=e207] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/secure_8539486
+                  - img "Secure" [ref=e208]
+                - text:      
+            - listitem [ref=e209]:
+              - generic [ref=e210]:
+                - link "Search" [ref=e211] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/search_3281329
+                  - img "Search" [ref=e212]
+                - text:      
+            - listitem [ref=e213]:
+              - generic [ref=e214]:
+                - link "Admin panel" [ref=e215] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/admin-panel_11830726
+                  - img "Admin panel" [ref=e216]
+                - text:      
+            - listitem [ref=e217]:
+              - generic [ref=e218]:
+                - link "Verification" [ref=e219] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verification_12882480
+                  - img "Verification" [ref=e220]
+                - text:      
+            - listitem [ref=e221]:
+              - generic [ref=e222]:
+                - link "ID" [ref=e223] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/id_837783
+                  - img "ID" [ref=e224]
+                - text:      
+            - listitem [ref=e225]:
+              - generic [ref=e226]:
+                - link "ID" [ref=e227] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/id_837834
+                  - img "ID" [ref=e228]
+                - text:      
+            - listitem [ref=e229]:
+              - generic [ref=e230]:
+                - link "Checklist" [ref=e231] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/checklist_9303582
+                  - img "Checklist" [ref=e232]
+                - text:      
+            - listitem [ref=e233]
+            - listitem [ref=e235]:
+              - generic [ref=e236]:
+                - link "Correct" [ref=e237] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/correct_1242404
+                  - img "Correct" [ref=e238]
+                - text:      
+            - listitem [ref=e239]:
+              - generic [ref=e240]:
+                - link "Verified user" [ref=e241] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verified-user_11831511
+                  - img "Verified user" [ref=e242]
+                - text:      
+            - listitem [ref=e243]:
+              - generic [ref=e244]:
+                - link "Immigration" [ref=e245] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/immigration_3125856
+                  - img "Immigration" [ref=e246]
+                - text:      
+            - listitem [ref=e247]:
+              - generic [ref=e248]:
+                - link "Verified" [ref=e249] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verified_7595571
+                  - img "Verified" [ref=e250]
+                - text:      
+            - listitem [ref=e251]:
+              - generic [ref=e252]:
+                - link "ID" [ref=e253] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/id_837732
+                  - img "ID" [ref=e254]
+                - text:      
+            - listitem [ref=e255]:
+              - generic [ref=e256]:
+                - link "Verify" [ref=e257] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verify_6830544
+                  - img "Verify" [ref=e258]
+                - text:      
+            - listitem [ref=e259]:
+              - generic [ref=e260]:
+                - link "Identity verification" [ref=e261] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/identity-verification_11682613
+                  - img "Identity verification" [ref=e262]
+                - text:      
+            - listitem [ref=e263]:
+              - generic [ref=e264]:
+                - link "Document" [ref=e265] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/document_4248625
+                  - img "Document" [ref=e266]
+                - text:      
+            - listitem [ref=e267]:
+              - generic [ref=e268]:
+                - link "Verification" [ref=e269] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verification_5106388
+                  - img "Verification" [ref=e270]
+                - text:      
+            - listitem [ref=e271]:
+              - generic [ref=e272]:
+                - link "Verification" [ref=e273] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verification_7339329
+                  - img "Verification" [ref=e274]
+                - text:      
+            - listitem [ref=e275]:
+              - generic [ref=e276]:
+                - link "Check" [ref=e277] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/check_5610944
+                  - img "Check" [ref=e278]
+                - text:      
+            - listitem [ref=e279]:
+              - generic [ref=e280]:
+                - link "Verify" [ref=e281] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verify_18358837
+                  - img "Verify" [ref=e282]
+                - text:      
+            - listitem [ref=e283]:
+              - generic [ref=e284]:
+                - link "Compliant" [ref=e285] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/compliant_17321057
+                  - img "Compliant" [ref=e286]
+                - text:      
+            - listitem [ref=e287]:
+              - generic [ref=e288]:
+                - link "Quality control" [ref=e289] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/quality-control_7626127
+                  - img "Quality control" [ref=e290]
+                - text:      
+            - listitem [ref=e291]:
+              - generic [ref=e292]:
+                - link "Verification" [ref=e293] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verification_9948779
+                  - img "Verification" [ref=e294]
+                - text:      
+            - listitem [ref=e295]:
+              - generic [ref=e296]:
+                - link "Verified" [ref=e297] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verified_17002169
+                  - img "Verified" [ref=e298]
+                - text:      
+            - listitem [ref=e299]:
+              - generic [ref=e300]:
+                - link "Shield" [ref=e301] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/shield_18315226
+                  - img "Shield" [ref=e302]
+                - text:      
+            - listitem [ref=e303]:
+              - generic [ref=e304]:
+                - link "Logistics management" [ref=e305] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/logistics-management_16132975
+                  - img "Logistics management" [ref=e306]
+                - text:      
+            - listitem [ref=e307]:
+              - generic [ref=e308]:
+                - link "Shield" [ref=e309] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/shield_17360752
+                  - img "Shield" [ref=e310]
+                - text:      
+            - listitem [ref=e311]:
+              - generic [ref=e312]:
+                - link "Order tracking" [ref=e313] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/order-tracking_10747701
+                  - img "Order tracking" [ref=e314]
+                - text:      
+            - listitem [ref=e315]:
+              - generic [ref=e316]:
+                - link "Check" [ref=e317] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/check_1828640
+                  - img "Check" [ref=e318]
+                - text:      
+            - listitem [ref=e319]:
+              - generic [ref=e320]:
+                - link "Auditing" [ref=e321] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/auditing_13080120
+                  - img "Auditing" [ref=e322]
+                - text:      
+            - listitem [ref=e323]:
+              - generic [ref=e324]:
+                - link "Verified" [ref=e325] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verified_6785425
+                  - img "Verified" [ref=e326]
+                - text:      
+            - listitem [ref=e327]:
+              - generic [ref=e328]:
+                - link "Verification" [ref=e329] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verification_7339314
+                  - img "Verification" [ref=e330]
+                - text:      
+            - listitem [ref=e331]
+            - listitem [ref=e333]:
+              - generic [ref=e334]:
+                - link "Check mark" [ref=e335] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/check-mark_1442912
+                  - img "Check mark" [ref=e336]
+                - text:      
+            - listitem [ref=e337]:
+              - generic [ref=e338]:
+                - link "Verification" [ref=e339] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verification_7398228
+                  - img "Verification" [ref=e340]
+                - text:      
+            - listitem [ref=e341]:
+              - generic [ref=e342]:
+                - link "Verify" [ref=e343] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verify_9775831
+                  - img "Verify" [ref=e344]
+                - text:      
+            - listitem [ref=e345]:
+              - generic [ref=e346]:
+                - link "Shield" [ref=e347] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/shield_15356317
+                  - img "Shield" [ref=e348]
+                - text:      
+            - listitem [ref=e349]:
+              - generic [ref=e350]:
+                - link "Verification" [ref=e351] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verification_4044097
+                  - img "Verification" [ref=e352]
+                - text:      
+            - listitem [ref=e353]:
+              - generic [ref=e354]:
+                - link "Security" [ref=e355] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/security_8371408
+                  - img "Security" [ref=e356]
+                - text:      
+            - listitem [ref=e357]:
+              - generic [ref=e358]:
+                - link "Authorization" [ref=e359] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/authorization_18700052
+                  - img "Authorization" [ref=e360]
+                - text:      
+            - listitem [ref=e361]:
+              - generic [ref=e362]:
+                - link "Auditing" [ref=e363] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/auditing_13080100
+                  - img "Auditing" [ref=e364]
+                - text:      
+            - listitem [ref=e365]:
+              - generic [ref=e366]:
+                - link "Shield" [ref=e367] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/shield_18586166
+                  - img "Shield" [ref=e368]
+                - text:      
+            - listitem [ref=e369]:
+              - generic [ref=e370]:
+                - link "Check" [ref=e371] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/check_3472620
+                  - img "Check" [ref=e372]
+                - text:      
+            - listitem [ref=e373]:
+              - generic [ref=e374]:
+                - link "Immigration" [ref=e375] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/immigration_3125913
+                  - img "Immigration" [ref=e376]
+                - text:      
+            - listitem [ref=e377]:
+              - generic [ref=e378]:
+                - link "shield" [ref=e379] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/shield_10256380
+                  - img "shield" [ref=e380]
+                - text:      
+            - listitem [ref=e381]:
+              - generic [ref=e382]:
+                - link "Verification" [ref=e383] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verification_2974293
+                  - img "Verification" [ref=e384]
+                - text:      
+            - listitem [ref=e385]:
+              - generic [ref=e386]:
+                - link "Security" [ref=e387] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/security_9715635
+                  - img "Security" [ref=e388]
+                - text:      
+            - listitem [ref=e389]:
+              - generic [ref=e390]:
+                - link "User verification" [ref=e391] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/user-verification_17436306
+                  - img "User verification" [ref=e392]
+                - text:      
+            - listitem [ref=e393]:
+              - generic [ref=e394]:
+                - link "Verification" [ref=e395] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verification_15762015
+                  - img "Verification" [ref=e396]
+                - text:      
+            - listitem [ref=e397]:
+              - generic [ref=e398]:
+                - link "Verification" [ref=e399] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verification_3556787
+                  - img "Verification" [ref=e400]
+                - text:      
+            - listitem [ref=e401]:
+              - generic [ref=e402]:
+                - link "Shield" [ref=e403] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/shield_17663301
+                  - img "Shield" [ref=e404]
+                - text:      
+            - listitem [ref=e405]:
+              - generic [ref=e406]:
+                - link "Search" [ref=e407] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/search_3281312
+                  - img "Search" [ref=e408]
+                - text:      
+            - listitem [ref=e409]:
+              - generic [ref=e410]:
+                - link "shield" [ref=e411] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/shield_8578135
+                  - img "shield" [ref=e412]
+                - text:      
+            - listitem [ref=e413]:
+              - generic [ref=e414]:
+                - link "Check" [ref=e415] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/check_1828739
+                  - img "Check" [ref=e416]
+                - text:      
+            - listitem [ref=e417]:
+              - generic [ref=e418]:
+                - link "Verified" [ref=e419] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verified_6619138
+                  - img "Verified" [ref=e420]
+                - text:      
+            - listitem [ref=e421]:
+              - generic [ref=e422]:
+                - link "Verification" [ref=e423] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verification_9948750
+                  - img "Verification" [ref=e424]
+                - text:      
+            - listitem [ref=e425]:
+              - generic [ref=e426]:
+                - link "Mobile banking" [ref=e427] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/mobile-banking_15259049
+                  - img "Mobile banking" [ref=e428]
+                - text:      
+            - listitem [ref=e429]:
+              - generic [ref=e430]:
+                - link "User verification" [ref=e431] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/user-verification_17436403
+                  - img "User verification" [ref=e432]
+                - text:      
+            - listitem [ref=e433]:
+              - generic [ref=e434]:
+                - link "Compliant" [ref=e435] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/compliant_4993915
+                  - img "Compliant" [ref=e436]
+                - text:      
+            - listitem [ref=e437]:
+              - generic [ref=e438]:
+                - link "Check" [ref=e439] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/check_18921878
+                  - img "Check" [ref=e440]
+                - text:      
+            - listitem [ref=e441]:
+              - generic [ref=e442]:
+                - link "Account security" [ref=e443] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/account-security_16355267
+                  - img "Account security" [ref=e444]
+                - text:      
+            - listitem [ref=e445]:
+              - generic [ref=e446]:
+                - link "Verification" [ref=e447] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verification_8083808
+                  - img "Verification" [ref=e448]
+                - text:      
+            - listitem [ref=e449]:
+              - generic [ref=e450]:
+                - link "Compliant" [ref=e451] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/compliant_4813628
+                  - img "Compliant" [ref=e452]
+                - text:      
+            - listitem [ref=e453]:
+              - generic [ref=e454]:
+                - link "Pin" [ref=e455] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/pin_9042592
+                  - img "Pin" [ref=e456]
+                - text:      
+            - listitem [ref=e457]:
+              - generic [ref=e458]:
+                - link "Verification" [ref=e459] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verification_16648623
+                  - img "Verification" [ref=e460]
+                - text:      
+            - listitem [ref=e461]:
+              - generic [ref=e462]:
+                - link "Verification" [ref=e463] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verification_7339201
+                  - img "Verification" [ref=e464]
+                - text:      
+            - listitem [ref=e465]:
+              - generic [ref=e466]:
+                - link "User verification interface symbol" [ref=e467] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/user-verification-interface-symbol_46643
+                  - img "User verification interface symbol" [ref=e468]
+                - text:      
+            - listitem [ref=e469]:
+              - generic [ref=e470]:
+                - link "Check" [ref=e471] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/check_3472625
+                  - img "Check" [ref=e472]
+                - text:      
+            - listitem [ref=e473]:
+              - generic [ref=e474]:
+                - link "Correct" [ref=e475] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/correct_7812636
+                  - img "Correct" [ref=e476]
+                - text:      
+            - listitem [ref=e477]:
+              - generic [ref=e478]:
+                - link "Verification" [ref=e479] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verification_6530765
+                  - img "Verification" [ref=e480]
+                - text:      
+            - listitem [ref=e481]:
+              - generic [ref=e482]:
+                - link "Protection" [ref=e483] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/protection_8807925
+                  - img "Protection" [ref=e484]
+                - text:      
+            - listitem [ref=e485]:
+              - generic [ref=e486]:
+                - link "Verification" [ref=e487] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verification_5106389
+                  - img "Verification" [ref=e488]
+                - text:      
+            - listitem [ref=e489]:
+              - generic [ref=e490]:
+                - link "Security" [ref=e491] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/security_12289945
+                  - img "Security" [ref=e492]
+                - text:      
+            - listitem [ref=e493]:
+              - generic [ref=e494]:
+                - link "Audit" [ref=e495] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/audit_18250472
+                  - img "Audit" [ref=e496]
+                - text:      
+            - listitem [ref=e497]:
+              - generic [ref=e498]:
+                - link "Shield" [ref=e499] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/shield_18586074
+                  - img "Shield" [ref=e500]
+                - text:      
+            - listitem [ref=e501]:
+              - generic [ref=e502]:
+                - link "Verification" [ref=e503] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verification_8165803
+                  - img "Verification" [ref=e504]
+                - text:      
+            - listitem [ref=e505]:
+              - generic [ref=e506]:
+                - link "Security" [ref=e507] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/security_10325755
+                  - img "Security" [ref=e508]
+                - text:      
+            - listitem [ref=e509]:
+              - generic [ref=e510]:
+                - link "Data audit" [ref=e511] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/data-audit_14247736
+                  - img "Data audit" [ref=e512]
+                - text:      
+            - listitem [ref=e513]:
+              - generic [ref=e514]:
+                - link "Logistics management" [ref=e515] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/logistics-management_16134569
+                  - img "Logistics management" [ref=e516]
+                - text:      
+            - listitem [ref=e517]:
+              - generic [ref=e518]:
+                - link "Login" [ref=e519] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/login_8385918
+                  - img "Login" [ref=e520]
+                - text:      
+            - listitem [ref=e521]:
+              - generic [ref=e522]:
+                - link "Checkmark" [ref=e523] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/checkmark_1828652
+                  - img "Checkmark" [ref=e524]
+                - text:      
+            - listitem [ref=e525]:
+              - generic [ref=e526]:
+                - link "Shield" [ref=e527] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/shield_6880713
+                  - img "Shield" [ref=e528]
+                - text:      
+            - listitem [ref=e529]:
+              - generic [ref=e530]:
+                - link "Support" [ref=e531] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/support_16136242
+                  - img "Support" [ref=e532]
+                - text:      
+            - listitem [ref=e533]:
+              - generic [ref=e534]:
+                - link "Tick mark" [ref=e535] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/tick-mark_2143150
+                  - img "Tick mark" [ref=e536]
+                - text:      
+            - listitem [ref=e537]:
+              - generic [ref=e538]:
+                - link "Verification" [ref=e539] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/verification_12440591
+                  - img "Verification" [ref=e540]
+                - text:      
+            - listitem [ref=e541]:
+              - generic [ref=e542]:
+                - link "Check" [ref=e543] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/check_18603670
+                  - img "Check" [ref=e544]
+                - text:      
+            - listitem [ref=e545]:
+              - generic [ref=e546]:
+                - link "Identity" [ref=e547] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/identity_17364665
+                  - img "Identity" [ref=e548]
+                - text:      
+            - listitem [ref=e549]:
+              - generic [ref=e550]:
+                - link "Identity verification" [ref=e551] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/identity-verification_11682551
+                  - img "Identity verification" [ref=e552]
+                - text:      
+            - listitem [ref=e553]:
+              - generic [ref=e554]:
+                - link "Identity card" [ref=e555] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/identity-card_11334285
+                  - img "Identity card" [ref=e556]
+                - text:      
+            - listitem [ref=e557]:
+              - generic [ref=e558]:
+                - link "Shield" [ref=e559] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/shield_6054172
+                  - img "Shield" [ref=e560]
+                - text:      
+            - listitem [ref=e561]:
+              - generic [ref=e562]:
+                - link "User" [ref=e563] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/user_5785584
+                  - img "User" [ref=e564]
+                - text:      
+            - listitem [ref=e565]:
+              - generic [ref=e566]:
+                - link "Shield" [ref=e567] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/shield_16116810
+                  - img "Shield" [ref=e568]
+                - text:      
+            - listitem [ref=e569]:
+              - generic [ref=e570]:
+                - link "Identity" [ref=e571] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/free-icon/identity_17363332
+                  - img "Identity" [ref=e572]
+                - text:      
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+            - listitem
+          - text: 
+          - generic [ref=e573]:
+            - paragraph [ref=e574]: Related tags
+            - generic [ref=e575]:
+              - link "check" [ref=e576] [cursor=pointer]:
+                - /url: https://www.flaticon.com/free-icons/check
+              - link "verify" [ref=e577] [cursor=pointer]:
+                - /url: https://www.flaticon.com/free-icons/verify
+              - link "validation" [ref=e578] [cursor=pointer]:
+                - /url: https://www.flaticon.com/free-icons/validation
+              - link "approval" [ref=e579] [cursor=pointer]:
+                - /url: https://www.flaticon.com/free-icons/approval
+              - link "arrow" [ref=e580] [cursor=pointer]:
+                - /url: https://www.flaticon.com/free-icons/arrow
+          - generic [ref=e581]:
+            - generic [ref=e582]:
+              - generic: 
+            - generic [ref=e585]:
+              - text: 
+              - link "Next page " [ref=e586] [cursor=pointer]:
+                - /url: https://www.flaticon.com/search/2?word=verification&type=standard
+                - generic [ref=e587]:
+                  - text: Next
+                  - strong [ref=e588]: page
+                - generic [ref=e589]: 
+            - generic [ref=e593]:
+              - textbox [ref=e594]: "1"
+              - text: of
+              - generic [ref=e595]: "215"
+              - generic [ref=e596]:
+                - link "":
+                  - /url: https://www.flaticon.com/search?word=verification&type=standard
+                  - generic: 
+                - link "" [ref=e597] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/search/2?word=verification&type=standard
+                  - generic [ref=e598]: 
+    - generic [ref=e599]:
+      - generic [ref=e600]:
+        - generic [ref=e601]:
+          - link "Flaticon logo" [ref=e602] [cursor=pointer]:
+            - /url: https://www.flaticon.com
+            - img "Flaticon logo" [ref=e603]
+          - generic [ref=e605]:
+            - link "Contributor access" [ref=e606] [cursor=pointer]:
+              - /url: https://contributor.flaticon.com/?utm_source=home_en&utm_medium=home_en_footer&utm_campaign=earn_money_en2
+            - link "Go Premium" [ref=e607] [cursor=pointer]:
+              - /url: https://www.flaticon.com/pricing
+        - generic [ref=e608]:
+          - generic [ref=e609]:
+            - paragraph [ref=e610]:
+              - generic [ref=e611]: Content 
+            - list [ref=e612]:
+              - listitem [ref=e613]:
+                - link "Authors" [ref=e614] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/authors
+              - listitem [ref=e615]:
+                - link "Icons" [ref=e616] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/most-downloaded
+              - listitem [ref=e617]:
+                - link "Stickers" [ref=e618] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/stickers-most-downloaded
+              - listitem [ref=e619]:
+                - link "Interface icons" [ref=e620] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/icon-fonts-most-downloaded
+              - listitem [ref=e621]:
+                - link "Animated icons" [ref=e622] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/animated-icons-most-downloaded
+              - listitem [ref=e623]:
+                - link "Icon tags" [ref=e624] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/tags
+              - listitem [ref=e625]:
+                - link "Stickers tags" [ref=e626] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/tags/stickers
+          - generic [ref=e627]:
+            - paragraph [ref=e628]:
+              - generic [ref=e629]: Tools 
+            - list [ref=e630]:
+              - listitem [ref=e631]:
+                - link "API" [ref=e632] [cursor=pointer]:
+                  - /url: https://www.magnific.com/api
+              - listitem [ref=e633]:
+                - link "Google Workspace" [ref=e634] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/for-google
+          - generic [ref=e635]:
+            - paragraph [ref=e636]:
+              - generic [ref=e637]: Help 
+            - list [ref=e638]:
+              - listitem [ref=e639]:
+                - link "Support" [ref=e640] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/profile/support
+              - listitem [ref=e641]:
+                - link "FAQs" [ref=e642] [cursor=pointer]:
+                  - /url: https://support.flaticon.com/s/?language=en_US
+              - listitem [ref=e643]:
+                - link "Icon styles" [ref=e644] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/styles
+              - listitem [ref=e645]:
+                - link "Icons editor" [ref=e646] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/icons-editor
+              - listitem [ref=e647]:
+                - link "Flaticon Collections" [ref=e648] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/collections
+              - listitem [ref=e649]:
+                - link "Follow" [ref=e650] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/follow
+              - listitem [ref=e651]:
+                - link "Merchandising License" [ref=e652] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/merchandising-license
+          - generic [ref=e653]:
+            - paragraph [ref=e654]:
+              - generic [ref=e655]: Company 
+            - list [ref=e656]:
+              - listitem [ref=e657]:
+                - link "About" [ref=e658] [cursor=pointer]:
+                  - /url: https://www.magnific.com/company/about-us
+              - listitem [ref=e659]:
+                - link "Contact us" [ref=e660] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/profile/support
+              - listitem [ref=e661]:
+                - link "Our license" [ref=e662] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/legal
+              - listitem [ref=e663]:
+                - link "Blog" [ref=e664] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/blog/
+              - listitem [ref=e665]:
+                - link "Plans and Pricing" [ref=e666] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/pricing
+              - listitem [ref=e667]:
+                - link "What’s new" [ref=e668] [cursor=pointer]:
+                  - /url: https://www.flaticon.com/whats-new
+          - generic [ref=e669]:
+            - paragraph [ref=e670]:
+              - generic [ref=e671]: Social media
+            - list [ref=e672]:
+              - listitem [ref=e673]:
+                - link "" [ref=e674] [cursor=pointer]:
+                  - /url: https://www.facebook.com/flaticon
+              - listitem [ref=e675]:
+                - link "twitter logo" [ref=e676] [cursor=pointer]:
+                  - /url: https://twitter.com/flaticon
+                  - img "twitter logo" [ref=e677]
+              - listitem [ref=e678]:
+                - link "" [ref=e679] [cursor=pointer]:
+                  - /url: https://www.pinterest.com/flaticon
+              - listitem [ref=e680]:
+                - link "" [ref=e681] [cursor=pointer]:
+                  - /url: https://www.instagram.com/flaticon/?hl=en
+              - listitem [ref=e682]:
+                - link "" [ref=e683] [cursor=pointer]:
+                  - /url: https://www.youtube.com/channel/UC9wPXN2TIWoUamqONb7v8Pw
+            - generic [ref=e684]:
+              - paragraph [ref=e685]: Get exclusive resources straight to your inbox
+              - link "Sign up" [ref=e686] [cursor=pointer]:
+                - /url: https://id.magnific.com/v2/sign-up?client_id=flaticon&lang=en
+        - list [ref=e687]:
+          - listitem [ref=e688]:
+            - link "Terms & conditions" [ref=e689] [cursor=pointer]:
+              - /url: https://www.flaticon.com/legal
+          - listitem [ref=e690]:
+            - link "Privacy policy" [ref=e691] [cursor=pointer]:
+              - /url: https://www.magnific.com/legal/privacy
+          - listitem [ref=e692]:
+            - link "Cookies policy" [ref=e693] [cursor=pointer]:
+              - /url: https://www.flaticon.com/legal/cookies
+          - listitem [ref=e694]:
+            - link "Copyrights Notification" [ref=e695] [cursor=pointer]:
+              - /url: https://www.magnific.com/legal/copyright
+          - listitem [ref=e696]:
+            - button "Configuración de cookies" [ref=e697] [cursor=pointer]
+        - generic [ref=e699]:
+          - paragraph [ref=e702]: Copyright © 2010-2026 Freepik Company S.L.U. All rights reserved.
+          - button "English " [ref=e706] [cursor=pointer]:
+            - generic [ref=e707]: English
+            - generic [ref=e708]: 
+      - generic [ref=e710]:
+        - text: Freepik company projects
+        - list [ref=e711]:
+          - listitem [ref=e712]:
+            - link "Magnific" [ref=e713] [cursor=pointer]:
+              - /url: https://www.magnific.com
+          - listitem [ref=e714]:
+            - link "Flaticon" [ref=e715] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e716]:
+            - link "Slidesgo" [ref=e717] [cursor=pointer]:
+              - /url: https://slidesgo.com
+  - text: ×  
+  - generic [ref=e718]:
+    - generic [ref=e721] [cursor=pointer]: 
+    - generic [ref=e722]:
+      - paragraph [ref=e723]: How likely are you to recommend Flaticon to a friend?
+      - generic [ref=e724]:
+        - generic [ref=e725] [cursor=pointer]: "0"
+        - generic [ref=e726] [cursor=pointer]: "1"
+        - generic [ref=e727] [cursor=pointer]: "2"
+        - generic [ref=e728] [cursor=pointer]: "3"
+        - generic [ref=e729] [cursor=pointer]: "4"
+        - generic [ref=e730] [cursor=pointer]: "5"
+        - generic [ref=e731] [cursor=pointer]: "6"
+        - generic [ref=e732] [cursor=pointer]: "7"
+        - generic [ref=e733] [cursor=pointer]: "8"
+        - generic [ref=e734] [cursor=pointer]: "9"
+        - generic [ref=e735] [cursor=pointer]: "10"
+      - generic [ref=e736]:
+        - generic [ref=e737]: Not likely
+        - generic [ref=e738]: Very likely
