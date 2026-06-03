@@ -216,13 +216,13 @@ export default function PodcastPage() {
       {/* Hero Section */}
       <section
         className="relative min-h-screen flex items-center overflow-hidden"
-        style={{ backgroundImage: "url('/blog/podcast-hero.png')", backgroundSize: "cover", backgroundPosition: "center" }}
+        style={{ backgroundImage: "url('/podcast-fondo.png')", backgroundSize: "cover", backgroundPosition: "center" }}
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
 
         <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-8 md:px-12 py-20" ref={heroRef}>
-          <div className="max-w-2xl bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+          <div className="max-w-2xl">
             {/* Left content */}
             <div className="flex flex-col justify-between h-full">
               {/* Logo at top */}
@@ -239,14 +239,14 @@ export default function PodcastPage() {
                 {/* Description */}
                 <p
                   className="text-base md:text-lg leading-relaxed mb-6"
-                  style={{ fontFamily: "var(--font-montserrat), sans-serif", color: "#FFFFFF", fontWeight: "700" }}
+                  style={{ fontFamily: "var(--font-montserrat), sans-serif", color: "#FFC107", fontWeight: "700" }}
                 >
                   Este podcast auspiciado por ONE TRUE y creado por nuestro gerente general David Coli, tiene la intención de pensar, aprender juntos, resolver dudas y tener nuevas respuestas ante el maravilloso mundo de la detección de mentiras.
                 </p>
 
                 <p
                   className="text-base md:text-lg leading-relaxed mb-8"
-                  style={{ fontFamily: "var(--font-montserrat), sans-serif", color: "#FFFFFF", fontWeight: "700" }}
+                  style={{ fontFamily: "var(--font-montserrat), sans-serif", color: "#FFC107", fontWeight: "700" }}
                 >
                   Disfruta todos los episodios y descubre el maravilloso mundo de la evaluación forense de la credibilidad y la detección de mentiras. Escucha todos los capítulos de la primera temporada en Spotify.
                 </p>
