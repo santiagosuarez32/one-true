@@ -225,6 +225,15 @@ export default function PodcastPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             {/* Left content */}
             <div className="flex flex-col justify-center">
+              {/* Logo */}
+              <div className="mb-8">
+                <img
+                  src="/logo-podcast.png"
+                  alt="DETECTAR Podcast Logo"
+                  className="h-20 md:h-24 w-auto object-contain mb-6"
+                />
+              </div>
+
               {/* Title with styled boxes */}
               <div className="mb-8 flex flex-col gap-3">
                 <div className="flex items-center gap-2 flex-wrap">
