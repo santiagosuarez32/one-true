@@ -224,29 +224,9 @@ export default function PodcastPage() {
         <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-8 md:px-12 py-20" ref={heroRef}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             {/* Left content */}
-            <div className="flex flex-col justify-end h-full">
-              {/* Presenter */}
-              <p className="text-white text-xl md:text-2xl font-bold mb-8" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                con <span className="text-[#FFC107]">DAVID COLI</span>
-              </p>
-
-              {/* Description */}
-              <p
-                className="text-base md:text-lg leading-relaxed mb-6"
-                style={{ fontFamily: "var(--font-montserrat), sans-serif", color: "#FFFFFF", fontWeight: "700" }}
-              >
-                Este podcast auspiciado por ONE TRUE y creado por nuestro gerente general David Coli, tiene la intención de pensar, aprender juntos, resolver dudas y tener nuevas respuestas ante el maravilloso mundo de la detección de mentiras.
-              </p>
-
-              <p
-                className="text-base md:text-lg leading-relaxed mb-8"
-                style={{ fontFamily: "var(--font-montserrat), sans-serif", color: "#FFFFFF", fontWeight: "700" }}
-              >
-                Disfruta todos los episodios y descubre el maravilloso mundo de la evaluación forense de la credibilidad y la detección de mentiras. Escucha todos los capítulos de la primera temporada en Spotify.
-              </p>
-
-              {/* Logo */}
-              <div className="mb-8">
+            <div className="flex flex-col justify-between h-full">
+              {/* Logo at top */}
+              <div>
                 <img
                   src="/logo-podcast.png"
                   alt="DETECTAR Podcast Logo"
@@ -254,14 +234,37 @@ export default function PodcastPage() {
                 />
               </div>
 
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 items-start">
-                <a href="#" className="px-8 py-3 bg-[#FFC107] text-[#411A56] font-bold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                  Ir a YouTube
-                </a>
-                <a href="#" className="px-8 py-3 bg-[#A855F7] text-white font-bold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                  Ir a Spotify
-                </a>
+              {/* Content at bottom */}
+              <div>
+                {/* Presenter */}
+                <p className="text-white text-xl md:text-2xl font-bold mb-8" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                  con <span className="text-[#FFC107]">DAVID COLI</span>
+                </p>
+
+                {/* Description */}
+                <p
+                  className="text-base md:text-lg leading-relaxed mb-6"
+                  style={{ fontFamily: "var(--font-montserrat), sans-serif", color: "#FFFFFF", fontWeight: "700" }}
+                >
+                  Este podcast auspiciado por ONE TRUE y creado por nuestro gerente general David Coli, tiene la intención de pensar, aprender juntos, resolver dudas y tener nuevas respuestas ante el maravilloso mundo de la detección de mentiras.
+                </p>
+
+                <p
+                  className="text-base md:text-lg leading-relaxed mb-8"
+                  style={{ fontFamily: "var(--font-montserrat), sans-serif", color: "#FFFFFF", fontWeight: "700" }}
+                >
+                  Disfruta todos los episodios y descubre el maravilloso mundo de la evaluación forense de la credibilidad y la detección de mentiras. Escucha todos los capítulos de la primera temporada en Spotify.
+                </p>
+
+                {/* CTA Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4 items-start">
+                  <a href="#" className="px-8 py-3 bg-[#FFC107] text-[#411A56] font-bold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                    Ir a YouTube
+                  </a>
+                  <a href="#" className="px-8 py-3 bg-[#A855F7] text-white font-bold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                    Ir a Spotify
+                  </a>
+                </div>
               </div>
             </div>
 
