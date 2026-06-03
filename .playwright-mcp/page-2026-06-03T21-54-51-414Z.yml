@@ -1,0 +1,181 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - img "One True Ecuador Logo" [ref=e6]
+        - generic [ref=e7]:
+          - button "Cotizar gratis servicio de poligrafía y seguridad" [ref=e8]: Cotiza gratis
+          - button "Toggle Menu" [ref=e9]:
+            - img [ref=e10]
+      - generic [ref=e12]:
+        - generic [ref=e13]:
+          - img "One True Ecuador Logo" [ref=e14]
+          - button "Cerrar menú de navegación" [ref=e15]:
+            - img [ref=e16]
+        - navigation [ref=e18]:
+          - link "Inicio" [ref=e19] [cursor=pointer]:
+            - /url: /
+          - link "Pruebas Poligráficas" [ref=e20] [cursor=pointer]:
+            - /url: /pruebas-poligraficas
+          - link "Vetting" [ref=e21] [cursor=pointer]:
+            - /url: /vetting
+          - link "Confiabilidad 360°" [ref=e22] [cursor=pointer]:
+            - /url: /estudio-de-confiabilidad-360
+          - link "Visitas Domiciliarias" [ref=e23] [cursor=pointer]:
+            - /url: /visitas-domiciliarias
+          - link "Pruebas Toxicológicas" [ref=e24] [cursor=pointer]:
+            - /url: /pruebas-toxicologicas
+          - link "Evaluaciones Psicométricas" [ref=e25] [cursor=pointer]:
+            - /url: /evaluaciones-psicometricas
+          - link "Prueba de Honestidad, Ética y Valores" [ref=e26] [cursor=pointer]:
+            - /url: /prueba-de-honestidad-etica-y-valores
+          - link "Comunidad" [ref=e27] [cursor=pointer]:
+            - /url: /comunidad
+          - link "Blog" [ref=e28] [cursor=pointer]:
+            - /url: /#recursos
+        - button "Cotizar gratis servicio de poligrafía y seguridad" [ref=e30]: Cotiza gratis
+    - article [ref=e31]:
+      - generic [ref=e32]:
+        - generic [ref=e35]: Blog
+        - 'heading "Garantiza la Verdad: 10 Requisitos Clave para una Prueba de Polígrafo Confiable y Exitosa." [level=1] [ref=e36]'
+        - generic [ref=e37]:
+          - generic [ref=e38]: Publicado el 25 de Noviembre, 2024
+          - generic [ref=e39]: •
+          - generic [ref=e40]: 7 min de lectura
+      - 'img "Garantiza la Verdad: 10 Requisitos Clave para una Prueba de Polígrafo Confiable y Exitosa" [ref=e42]'
+      - generic [ref=e44]:
+        - heading "Introducción" [level=2] [ref=e45]
+        - paragraph [ref=e46]: Has tomado una decisión importante para tu empresa o proceso personal al optar por una prueba de polígrafo. Sin embargo, es crucial entender que la confiabilidad de los resultados no depende únicamente de la tecnología avanzada que utilizamos en OneTrue, sino también de las condiciones en las que se realiza la evaluación.
+        - paragraph [ref=e47]: Tanto si eres el contratante del servicio como si eres la persona que se someterá a la prueba, tu colaboración es fundamental. Un estado físico o mental inadecuado puede interferir con los registros fisiológicos de la prueba de polígrafo, afectando la precisión del análisis.
+        - paragraph [ref=e48]: Por eso, hemos creado esta guía con 10 recomendaciones esenciales. Seguir estos pasos no es solo un trámite, es la garantía de que obtendremos un resultado objetivo, científico y 100% útil para ti.
+        - heading "Los 10 Pasos para un Resultado Exitoso" [level=2] [ref=e49]
+        - paragraph [ref=e50]: "Aquí te detallamos lo que debes hacer (y lo que debes evitar) antes de tu cita:"
+        - heading "1. El Descanso es Prioritario" [level=3] [ref=e51]:
+          - img [ref=e52]
+          - text: 1. El Descanso es Prioritario
+        - paragraph [ref=e54]: El cansancio extremo afecta tu concentración y las reacciones de tu cuerpo. Es fundamental que hayas dormido al menos 6 horas la noche anterior. Venir bien descansado asegura que tus respuestas fisiológicas sean claras y analizables por el polígrafo.
+        - heading "2. No Vengas en Ayunas" [level=3] [ref=e55]:
+          - img [ref=e56]
+          - text: 2. No Vengas en Ayunas
+        - paragraph [ref=e58]: Contrario a otros exámenes médicos, para la prueba de polígrafo necesitamos que tu cuerpo esté funcionando con normalidad. Por favor, come con normalidad (desayuno o almuerzo ligero) antes de acudir. El hambre genera malestar que puede interferir con el procedimiento.
+        - heading "3. Mantén tu Medicación" [level=3] [ref=e59]:
+          - img [ref=e60]
+          - text: 3. Mantén tu Medicación
+        - paragraph [ref=e62]: Si tomas medicamentos recetados para controlar condiciones como la presión arterial, diabetes u otras, NO SUSPENDAS TU TRATAMIENTO. Tomar tu medicina habitual es vital para que tus signos vitales estén estables y reflejen tu estado natural.
+        - heading "4. Cero Sustancias Psicoactivas y Alcohol" [level=3] [ref=e63]:
+          - img [ref=e64]
+          - text: 4. Cero Sustancias Psicoactivas y Alcohol
+        - paragraph [ref=e66]: Esta es una regla de oro. Está estrictamente prohibido el consumo de licor o cualquier sustancia psicoactiva (drogas ilegales) en las 24 horas previas a la examinación. Estas sustancias alteran directamente el sistema nervioso central, haciendo imposible una lectura válida del detector de mentiras.
+        - heading "5. Infórmanos sobre tu Salud" [level=3] [ref=e67]:
+          - img [ref=e68]
+          - text: 5. Infórmanos sobre tu Salud
+        - paragraph [ref=e70]: La transparencia es clave. Si tienes gripe y tos fuerte, o tienes algún dolor importante que sea comprobable o presentas algún síntoma inusual el día de la prueba, es importante reportarlo antes de comenzar. Esto le permite al poligrafista profesional tomar las medidas necesarias o evaluar si es viable proceder.
+        - heading "6. Puntualidad y Tiempo" [level=3] [ref=e71]:
+          - img [ref=e72]
+          - text: 6. Puntualidad y Tiempo
+        - paragraph [ref=e74]: El proceso no se puede apresurar. Planifica tu agenda para disponer de aproximadamente 90 a 120 minutos. Además, te pedimos llegar 20 minutos antes de la hora agendada para completar cualquier trámite inicial con calma y sin prisas que generen estrés innecesario.
+        - heading "7. Documentación Obligatoria" [level=3] [ref=e75]:
+          - img [ref=e76]
+          - text: 7. Documentación Obligatoria
+        - paragraph [ref=e78]: Para garantizar la legalidad y formalidad del proceso, es indispensable que traigas tu Cédula de Identidad original y vigente. Sin este documento, no podremos iniciar la evaluación.
+        - heading "8. Comodidad ante Todo" [level=3] [ref=e79]:
+          - img [ref=e80]
+          - text: 8. Comodidad ante Todo
+        - paragraph [ref=e82]: La prueba implica estar sentado y conectado a sensores durante un tiempo. Te recomendamos usar ropa cómoda y holgada. Evita prendas demasiado ajustadas, mangas muy largas o exceso de accesorios que puedan incomodarte o interferir con la colocación de los componentes del polígrafo.
+        - heading "9. Privacidad y Confidencialidad" [level=3] [ref=e83]:
+          - img [ref=e84]
+          - text: 9. Privacidad y Confidencialidad
+        - paragraph [ref=e86]: El entorno de la prueba debe ser completamente neutral y libre de distracciones. Por favor, acude solo/a a tu cita. No se permite la presencia de niños, familiares o acompañantes dentro de la sala de evaluación para garantizar la integridad y confidencialidad del proceso.
+        - heading "10. Actitud de Cooperación" [level=3] [ref=e87]:
+          - img [ref=e88]
+          - text: 10. Actitud de Cooperación
+        - paragraph [ref=e90]: Finalmente, el requisito más importante es tu voluntad. El procedimiento es voluntario. Venir con una actitud cooperativa y la intención de aclarar la verdad facilita enormemente el trabajo del examinador y contribuye a un resultado exitoso y transparente.
+        - heading "Conclusión" [level=2] [ref=e91]
+        - paragraph [ref=e92]: En OneTrue, nos comprometemos a brindarte el servicio de poligrafía más profesional y preciso de Ecuador. Al cumplir con estos sencillos pero vitales requisitos, nos ayudas a cumplir esa promesa.
+        - paragraph [ref=e93]: Si tienes alguna duda adicional sobre estas recomendaciones antes de tu cita, no dudes en contactar a nuestro equipo. Estamos aquí para guiarte en cada paso del camino hacia la verdad.
+      - generic [ref=e94]:
+        - heading "¿Listo para una Evaluación de Calidad?" [level=3] [ref=e95]
+        - paragraph [ref=e96]: Contáctanos y conoce cómo nuestro proceso de poligrafía cumple con los más altos estándares internacionales.
+        - link "Cotizar Evaluación" [ref=e97] [cursor=pointer]:
+          - /url: /
+      - generic [ref=e98]:
+        - heading "Artículos Relacionados" [level=3] [ref=e99]
+        - generic [ref=e100]:
+          - link "¿Verdad o Mentira? ¿Verdad o Mentira? Todo lo que debes saber antes de contratar una prueba de Polígrafo" [ref=e101] [cursor=pointer]:
+            - /url: /blog/verdad-o-mentira
+            - img "¿Verdad o Mentira?" [ref=e103]
+            - heading "¿Verdad o Mentira? Todo lo que debes saber antes de contratar una prueba de Polígrafo" [level=4] [ref=e104]
+          - link "¿Preempleo, Rutina o Investigación? ¿Preempleo, Rutina o Investigación? Descubre qué prueba de polígrafo necesitas" [ref=e105] [cursor=pointer]:
+            - /url: /blog/preempleo-rutina-investigacion
+            - img "¿Preempleo, Rutina o Investigación?" [ref=e107]
+            - heading "¿Preempleo, Rutina o Investigación? Descubre qué prueba de polígrafo necesitas" [level=4] [ref=e108]
+    - generic [ref=e110]:
+      - generic [ref=e111]:
+        - generic [ref=e112]:
+          - img "One True Logo" [ref=e114]
+          - paragraph [ref=e115]: Construimos vínculos confiables entre empresas y candidatos
+          - generic [ref=e116]:
+            - generic [ref=e117]: Síguenos
+            - generic [ref=e118]:
+              - link "Síguenos en LinkedIn" [ref=e119] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/somosonetrue
+                - img [ref=e120]
+              - link "Síguenos en Facebook" [ref=e122] [cursor=pointer]:
+                - /url: https://www.facebook.com/somosonetrue
+                - img [ref=e123]
+              - link "Síguenos en Twitter/X" [ref=e125] [cursor=pointer]:
+                - /url: https://x.com/somosonetrue
+                - img [ref=e126]
+              - link "Síguenos en Instagram" [ref=e128] [cursor=pointer]:
+                - /url: https://www.instagram.com/somosonetrue
+                - img [ref=e129]
+              - link "Síguenos en YouTube" [ref=e131] [cursor=pointer]:
+                - /url: https://www.youtube.com/@somosonetrue
+                - img [ref=e132]
+              - link "Contáctanos por WhatsApp" [ref=e134] [cursor=pointer]:
+                - /url: https://api.whatsapp.com/send?phone=593981296179
+                - img [ref=e135]
+        - generic [ref=e137]:
+          - heading "Navegación" [level=4] [ref=e138]
+          - list [ref=e139]:
+            - listitem [ref=e140]:
+              - link "Inicio" [ref=e141] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e142]:
+              - link "Servicios" [ref=e143] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e144]:
+              - link "Sobre Nosotros" [ref=e145] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e146]:
+              - link "Academia" [ref=e147] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e148]:
+          - heading "Contacto" [level=4] [ref=e149]
+          - generic [ref=e150]:
+            - list [ref=e152]:
+              - listitem [ref=e153]:
+                - img [ref=e154]
+                - link "info@somosonetrue.com" [ref=e157] [cursor=pointer]:
+                  - /url: mailto:info@somosonetrue.com
+              - listitem [ref=e158]:
+                - img [ref=e159]
+                - link "098 129 6179" [ref=e161] [cursor=pointer]:
+                  - /url: tel:0981296179
+            - list [ref=e163]:
+              - listitem [ref=e164]:
+                - img [ref=e165]
+                - generic [ref=e168]:
+                  - strong [ref=e169]: Agencia Quito
+                  - text: "Av. Pérez Guerreo OE3-124 y San Gregorio, Instituto de Diagnóstico Médico, tercer piso, oficina #303, Quito-Ecuador."
+              - listitem [ref=e170]:
+                - img [ref=e171]
+                - generic [ref=e174]:
+                  - strong [ref=e175]: Agencia Guayaquil
+                  - text: Solar 26, Mz. 1022, Las Orquídeas, entre lavandería Perfect Wash y Dash Óptica.
+      - generic [ref=e176]:
+        - paragraph [ref=e177]: © Copyright One True 2026
+        - link "Política de Privacidad y Cookies" [ref=e179] [cursor=pointer]:
+          - /url: "#"
+  - button "Open Next.js Dev Tools" [ref=e185] [cursor=pointer]:
+    - img [ref=e186]

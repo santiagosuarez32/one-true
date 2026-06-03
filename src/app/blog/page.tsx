@@ -114,7 +114,7 @@ export default function BlogPage() {
     {
       title: "Garantiza la Verdad: 10 Requisitos Clave para una Prueba de Polígrafo Confiable y Exitosa.",
       image: "/blog/3.webp",
-      link: "#"
+      link: "/blog/garantiza-la-verdad"
     },
   ];
 
