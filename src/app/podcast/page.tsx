@@ -225,15 +225,15 @@ export default function PodcastPage() {
           <div className="max-w-3xl w-full text-center">
             {/* Description */}
             <p
-              className="text-lg md:text-xl leading-relaxed mb-6 font-bold"
-              style={{ fontFamily: "var(--font-montserrat), sans-serif", color: "#FFFFFF" }}
+              className="text-lg md:text-xl leading-relaxed mb-6"
+              style={{ fontFamily: "var(--font-montserrat), sans-serif", color: "#FFFFFF", fontWeight: "900" }}
             >
               Este podcast auspiciado por ONE TRUE y creado por nuestro gerente general David Coli, tiene la intención de pensar, aprender juntos, resolver dudas y tener nuevas respuestas ante el maravilloso mundo de la detección de mentiras.
             </p>
 
             <p
-              className="text-lg md:text-xl leading-relaxed mb-12 font-bold"
-              style={{ fontFamily: "var(--font-montserrat), sans-serif", color: "#FFFFFF" }}
+              className="text-lg md:text-xl leading-relaxed mb-12"
+              style={{ fontFamily: "var(--font-montserrat), sans-serif", color: "#FFFFFF", fontWeight: "900" }}
             >
               Disfruta todos los episodios y descubre el maravilloso mundo de la evaluación forense de la credibilidad y la detección de mentiras. Escucha todos los capítulos de la primera temporada en Spotify.
             </p>
