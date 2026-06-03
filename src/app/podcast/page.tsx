@@ -222,7 +222,7 @@ export default function PodcastPage() {
         <div className="absolute inset-0 bg-black/50"></div>
 
         <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-8 md:px-12 py-20" ref={heroRef}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="max-w-2xl">
             {/* Left content */}
             <div className="flex flex-col justify-between h-full">
               {/* Logo at top */}
@@ -263,16 +263,6 @@ export default function PodcastPage() {
               </div>
             </div>
 
-            {/* Right side - Image */}
-            <div className="hidden md:flex items-center justify-center">
-              <div className="relative w-full max-w-sm aspect-square rounded-2xl overflow-hidden">
-                <img
-                  src="/blog/podcast-hero.png"
-                  alt="David Coli - Podcast DETECTAR"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
           </div>
         </div>
       </section>
