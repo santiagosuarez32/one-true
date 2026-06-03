@@ -226,34 +226,12 @@ export default function PodcastPage() {
             {/* Left content */}
             <div className="flex flex-col justify-center">
               {/* Logo */}
-              <div className="mb-8">
+              <div className="mb-12">
                 <img
                   src="/logo-podcast.png"
                   alt="DETECTAR Podcast Logo"
-                  className="h-20 md:h-24 w-auto object-contain mb-6"
+                  className="h-32 md:h-40 w-auto object-contain"
                 />
-              </div>
-
-              {/* Title with styled boxes */}
-              <div className="mb-8 flex flex-col gap-3">
-                <div className="flex items-center gap-2 flex-wrap">
-                  <div className="bg-[#700FA3] text-white px-4 py-2 rounded-full text-2xl md:text-3xl font-black" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                    ¿Cómo
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 flex-wrap">
-                  <div className="bg-[#FFC107] text-[#411A56] px-6 py-3 rounded-full text-4xl md:text-5xl font-black" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                    FUNCIONA
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 flex-wrap">
-                  <div className="bg-cyan-400 text-white px-4 py-2 rounded-full text-2xl md:text-3xl font-black" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                    tu
-                  </div>
-                  <div className="bg-[#A855F7] text-white px-6 py-3 rounded-full text-4xl md:text-5xl font-black" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                    NEGOCIO?
-                  </div>
-                </div>
               </div>
 
               {/* Presenter */}
