@@ -216,7 +216,7 @@ export default function PodcastPage() {
       {/* Hero Section */}
       <section
         className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#700FA3] bg-cover bg-center"
-        style={{ backgroundImage: "url('/blog/PODCAST.webp')" }}
+        style={{ backgroundImage: "url('/blog/podcast-hero.png')" }}
       >
         {/* Background overlay */}
         <div className="absolute inset-0 bg-[#700FA3]/70"></div>
