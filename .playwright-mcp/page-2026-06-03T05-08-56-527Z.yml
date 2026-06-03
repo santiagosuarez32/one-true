@@ -1,0 +1,148 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - img "One True Ecuador Logo" [ref=e6]
+        - generic [ref=e7]:
+          - button "Cotizar gratis servicio de poligrafía y seguridad" [ref=e8]: Cotiza gratis
+          - button "Toggle Menu" [ref=e9]:
+            - img [ref=e10]
+      - generic [ref=e12]:
+        - generic [ref=e13]:
+          - img "One True Ecuador Logo" [ref=e14]
+          - button "Cerrar menú de navegación" [ref=e15]:
+            - img [ref=e16]
+        - navigation [ref=e18]:
+          - link "Inicio" [ref=e19] [cursor=pointer]:
+            - /url: /
+          - link "Pruebas Poligráficas" [ref=e20] [cursor=pointer]:
+            - /url: /pruebas-poligraficas
+          - link "Vetting" [ref=e21] [cursor=pointer]:
+            - /url: /vetting
+          - link "Confiabilidad 360°" [ref=e22] [cursor=pointer]:
+            - /url: /estudio-de-confiabilidad-360
+          - link "Visitas Domiciliarias" [ref=e23] [cursor=pointer]:
+            - /url: /visitas-domiciliarias
+          - link "Pruebas Toxicológicas" [ref=e24] [cursor=pointer]:
+            - /url: /pruebas-toxicologicas
+          - link "Evaluaciones Psicométricas" [ref=e25] [cursor=pointer]:
+            - /url: /evaluaciones-psicometricas
+          - link "Prueba de Honestidad, Ética y Valores" [ref=e26] [cursor=pointer]:
+            - /url: /prueba-de-honestidad-etica-y-valores
+          - link "Comunidad" [ref=e27] [cursor=pointer]:
+            - /url: /comunidad
+          - link "Blog" [ref=e28] [cursor=pointer]:
+            - /url: /#recursos
+        - button "Cotizar gratis servicio de poligrafía y seguridad" [ref=e30]: Cotiza gratis
+    - generic [ref=e31]:
+      - img "Comunidad One True"
+      - generic [ref=e33]:
+        - generic [ref=e36]: Conecta con profesionales de tu área
+        - heading "Únete a la Comunidad One True" [level=1] [ref=e37]
+        - paragraph [ref=e38]: ONE TRUE es más que una comunidad, es el punto de encuentro de los profesionales que buscan dominar la ciencia de la Evaluación Forense de la Credibilidad y la Poligrafía.
+        - generic [ref=e39]:
+          - heading "Aquí accedes a lo que pocos tienen:" [level=2] [ref=e40]
+          - list [ref=e41]:
+            - listitem [ref=e42]:
+              - generic [ref=e43]: •
+              - generic [ref=e44]: Una biblioteca exclusiva en Psicofisiología Forense-Poligrafía
+            - listitem [ref=e45]:
+              - generic [ref=e46]: •
+              - generic [ref=e47]: Documentos académicos en Evaluación Forense de la Credibilidad
+            - listitem [ref=e48]:
+              - generic [ref=e49]: •
+              - generic [ref=e50]: Formación continua con sesiones mensuales con expertos
+            - listitem [ref=e51]:
+              - generic [ref=e52]: •
+              - generic [ref=e53]: Hora del café online con miembros de la comunidad
+            - listitem [ref=e54]:
+              - generic [ref=e55]: •
+              - generic [ref=e56]: Asesoría personalizada para resolver casos reales
+            - listitem [ref=e57]:
+              - generic [ref=e58]: •
+              - generic [ref=e59]: Red internacional de contactos que comparten conocimiento y experiencias auténticas
+            - listitem [ref=e60]:
+              - generic [ref=e61]: •
+              - generic [ref=e62]: Cursos en video que te permiten aprender a tu ritmo
+            - listitem [ref=e63]:
+              - generic [ref=e64]: •
+              - generic [ref=e65]: Descuentos especiales en el congreso anual de la comunidad ONE TRUE
+        - generic [ref=e66]:
+          - paragraph [ref=e67]: Si eres Evaluador Forense de la Credibilidad, Psicólogo Forense, Poligrafista, este es tu espacio para crecer, actualizarte y pertenecer a la élite que impulsa la credibilidad científica en el mundo.
+          - paragraph [ref=e68]: Únete y sé parte de una comunidad que no solo enseña… redefine la forma en que entendemos la verdad.
+          - paragraph [ref=e69]: "Somos ONE TRUE: donde la ciencia y la autenticidad se encuentran."
+        - link "Únete Ahora a la Comunidad ONE TRUE" [ref=e71] [cursor=pointer]:
+          - /url: https://www.skool.com/somos-one-true-4687/about
+        - generic [ref=e72]:
+          - generic [ref=e73]: ❤️
+          - generic [ref=e74]: Hecho con amor por todos los Globalworkers
+    - generic [ref=e76]:
+      - generic [ref=e77]:
+        - generic [ref=e78]:
+          - img "One True Logo" [ref=e80]
+          - paragraph [ref=e81]: Construimos vínculos confiables entre empresas y candidatos
+          - generic [ref=e82]:
+            - generic [ref=e83]: Síguenos
+            - generic [ref=e84]:
+              - link "Síguenos en LinkedIn" [ref=e85] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/somosonetrue
+                - img [ref=e86]
+              - link "Síguenos en Facebook" [ref=e88] [cursor=pointer]:
+                - /url: https://www.facebook.com/somosonetrue
+                - img [ref=e89]
+              - link "Síguenos en Twitter/X" [ref=e91] [cursor=pointer]:
+                - /url: https://x.com/somosonetrue
+                - img [ref=e92]
+              - link "Síguenos en Instagram" [ref=e94] [cursor=pointer]:
+                - /url: https://www.instagram.com/somosonetrue
+                - img [ref=e95]
+              - link "Síguenos en YouTube" [ref=e97] [cursor=pointer]:
+                - /url: https://www.youtube.com/@somosonetrue
+                - img [ref=e98]
+              - link "Contáctanos por WhatsApp" [ref=e100] [cursor=pointer]:
+                - /url: https://api.whatsapp.com/send?phone=593981296179
+                - img [ref=e101]
+        - generic [ref=e103]:
+          - heading "Navegación" [level=4] [ref=e104]
+          - list [ref=e105]:
+            - listitem [ref=e106]:
+              - link "Inicio" [ref=e107] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e108]:
+              - link "Servicios" [ref=e109] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e110]:
+              - link "Sobre Nosotros" [ref=e111] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e112]:
+              - link "Academia" [ref=e113] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e114]:
+          - heading "Contacto" [level=4] [ref=e115]
+          - generic [ref=e116]:
+            - list [ref=e118]:
+              - listitem [ref=e119]:
+                - img [ref=e120]
+                - link "info@somosonetrue.com" [ref=e123] [cursor=pointer]:
+                  - /url: mailto:info@somosonetrue.com
+              - listitem [ref=e124]:
+                - img [ref=e125]
+                - link "098 129 6179" [ref=e127] [cursor=pointer]:
+                  - /url: tel:0981296179
+            - list [ref=e129]:
+              - listitem [ref=e130]:
+                - img [ref=e131]
+                - generic [ref=e134]:
+                  - strong [ref=e135]: Agencia Quito
+                  - text: "Av. Pérez Guerreo OE3-124 y San Gregorio, Instituto de Diagnóstico Médico, tercer piso, oficina #303, Quito-Ecuador."
+              - listitem [ref=e136]:
+                - img [ref=e137]
+                - generic [ref=e140]:
+                  - strong [ref=e141]: Agencia Guayaquil
+                  - text: Solar 26, Mz. 1022, Las Orquídeas, entre lavandería Perfect Wash y Dash Óptica.
+      - generic [ref=e142]:
+        - paragraph [ref=e143]: © Copyright One True 2026
+        - link "Política de Privacidad y Cookies" [ref=e145] [cursor=pointer]:
+          - /url: "#"
+  - button "Open Next.js Dev Tools" [ref=e151] [cursor=pointer]:
+    - img [ref=e152]

@@ -31,6 +31,24 @@ const focusAreas = [
 
 const advancedTechniques = [];
 
+const cursosOnline = [
+  {
+    title: "Evaluación Forense de la Credibilidad",
+    desc: "Análisis científico del testimonio y detección de indicadores de engaño mediante protocolos estandarizados.",
+    image: "/formaciones/credibilidad.png",
+  },
+  {
+    title: "Elicitación conversacional",
+    desc: "Es una técnica estratégica de obtención de información que utiliza conversaciones aparentemente naturales para recopilar datos sin levantar sospechas ni activar mecanismos defensivos.",
+    image: "/formaciones/elicitacion.png",
+  },
+  {
+    title: "Modelos de Entrevista Investigativa",
+    desc: "Formación en técnicas de obtención de información de alta calidad, basadas en principios de respeto y efectividad forense.",
+    image: "/formaciones/entrevista.png",
+  },
+];
+
 export default function FormacionesComplementariasPage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [country, setCountry] = useState("ec");
@@ -84,7 +102,7 @@ export default function FormacionesComplementariasPage() {
                 textShadow: "0 2px 4px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.18)",
               }}
             >
-              Programas de Especialización en <strong style={{ fontWeight: "800" }}>evaluación forense de la credibilidad y protocolos de entrevistas basadas en ciencia.</strong>
+              Programas de Especialización en evaluación forense de la credibilidad y protocolos de entrevistas basadas en ciencia.
             </h1>
 
             <p
@@ -127,118 +145,86 @@ export default function FormacionesComplementariasPage() {
 
       <section className="bg-white py-20">
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16">
-          <div className="flex flex-col gap-16">
-            <div className="flex flex-col gap-12 items-start">
-              <div className="w-full max-w-4xl flex flex-col text-left">
-                <div className="flex items-center gap-3 mb-5">
-                  <div className="w-12 h-[2px] bg-[#700FA3]" />
-                  <span
-                    style={{
-                      letterSpacing: "1px",
-                      fontSize: "14px",
-                      color: "#700FA3",
-                      fontWeight: "600",
-                      fontFamily: "var(--font-montserrat), sans-serif",
-                    }}
-                  >
-                    Ejes Temáticos
-                  </span>
-                </div>
-
-                <h2
-                  className="mb-6"
-                  style={{
-                    fontFamily: "var(--font-montserrat), sans-serif",
-                    fontSize: "38px",
-                    fontWeight: "700",
-                    lineHeight: "1.2",
-                    color: "#48255A",
-                  }}
-                >
-                  Áreas de Especialización:
-                </h2>
-
-                <p
-                  className="text-[#525252] text-[15px] leading-[26px] font-light mb-6"
-                  style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                >
-                  Explore módulos diseñados para ampliar su perfil profesional:
-                </p>
-
-                <div className="mb-8">
-                  <ul className="flex flex-col gap-2 list-disc pl-5">
-                    <li className="text-[#525252] text-sm font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}><strong>Técnicas Avanzadas de Entrevista y Rapport:</strong> Estrategias para establecer confianza y extraer información de manera ética.</li>
-                    <li className="text-[#525252] text-sm font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}><strong>Psicología del Comportamiento en Evaluación:</strong> Comprensión de respuestas fisiológicas y psicológicas bajo estrés.</li>
-                    <li className="text-[#525252] text-sm font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}><strong>Ética Profesional y Confidencialidad:</strong> Marcos regulatorios y mejores prácticas en manejo de información sensible.</li>
-                    <li className="text-[#525252] text-sm font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}><strong>Comunicación Efectiva de Resultados:</strong> Cómo presentar hallazgos a abogados, empresas y stakeholders.</li>
-                    <li className="text-[#525252] text-sm font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}><strong>Manejo de Situaciones Conflictivas:</strong> Protocolos para evaluados resistentes o en crisis emocional.</li>
-                    <li className="text-[#525252] text-sm font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}><strong>Normativas Legales y Admisibilidad:</strong> Estándares legales en diferentes jurisdicciones y contextos.</li>
-                    <li className="text-[#525252] text-sm font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}><strong>Redacción de Reportes Profesionales:</strong> Creación de documentos impactantes y defensibles legalmente.</li>
-                    <li className="text-[#525252] text-sm font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}><strong>Actualización Tecnológica:</strong> Nuevos equipos y software en poligrafía moderna.</li>
-                    <li className="text-[#525252] text-sm font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}><strong>Casos Prácticos y Dilemas Éticos:</strong> Análisis de escenarios reales y toma de decisiones profesionales.</li>
-                    <li className="text-[#525252] text-sm font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}><strong>Especialización en Perfiles:</strong> Evaluaciones de menores, detenidos, y contextos especiales.</li>
-                    <li className="text-[#525252] text-sm font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}><strong>Desarrollo Profesional Continuo:</strong> Networking con expertos y actualizaciones permanentes.</li>
-                  </ul>
-                </div>
-
-                <p
-                  className="text-[#525252] text-[15px] leading-[26px] font-light"
-                  style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                >
-                  Cada módulo está diseñado para fortalecer su desempeño y posicionarle como un profesional de élite en poligrafía forense.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Características Generales Section */}
-      <section className="bg-white py-16 md:py-24">
-        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1000px] mx-auto px-8 md:px-12 lg:px-16">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-[2px] bg-[#700FA3]" />
-            <span
+          <div className="mb-16 text-center">
+            <h2
+              className="text-3xl md:text-4xl font-semibold mb-4"
               style={{
-                letterSpacing: "1px",
-                fontSize: "14px",
-                color: "#700FA3",
-                fontWeight: "600",
                 fontFamily: "var(--font-montserrat), sans-serif",
+                color: "#48255A",
               }}
             >
-              Ficha Técnica
-            </span>
+              Áreas de Especialización
+            </h2>
+            <p
+              className="text-lg"
+              style={{
+                fontFamily: "var(--font-montserrat), sans-serif",
+                color: "#525252",
+                textAlign: "center",
+                margin: "0 auto",
+              }}
+            >
+              Desarrolle competencias críticas con metodologías validadas internacionalmente:
+            </p>
           </div>
 
-          <h2
-            className="text-3xl md:text-4xl font-bold text-[#48255A] mb-12"
-            style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.2" }}
-          >
-            Detalles del Programa
-          </h2>
-
-          <div className="overflow-hidden rounded border border-[#700FA3]/20 shadow-[0_8px_30px_rgba(0,0,0,0.04)] bg-white">
-            <div className="p-6 md:p-8">
-              <h3 className="text-2xl font-bold text-[#48255A] mb-6" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Características del Programa:</h3>
-
-              <div className="flex flex-col gap-6">
-                <div className="border-b border-[#700FA3]/20 pb-4">
-                  <p className="text-sm font-semibold text-[#700FA3] uppercase tracking-wide mb-2" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Modalidad</p>
-                  <p className="text-[#525252] font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Presencial y en línea (módulos seleccionables)</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cursosOnline.map((curso, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className="relative h-48 overflow-hidden bg-gray-200">
+                  <img
+                    src={curso.image}
+                    alt={curso.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
-                <div className="border-b border-[#700FA3]/20 pb-4">
-                  <p className="text-sm font-semibold text-[#700FA3] uppercase tracking-wide mb-2" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Duración</p>
-                  <p className="text-[#525252] font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Módulos de 8 a 16 horas según especialidad</p>
-                </div>
+                <div className="p-6">
+                  <h3
+                    className="text-lg font-semibold mb-3"
+                    style={{
+                      fontFamily: "var(--font-montserrat), sans-serif",
+                      color: "#525252",
+                    }}
+                  >
+                    {curso.title}
+                  </h3>
 
-                <div>
-                  <p className="text-sm font-semibold text-[#700FA3] uppercase tracking-wide mb-2" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Certificación</p>
-                  <p className="text-[#525252] font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Certificado de Especialización en el módulo completado, otorgado por One True Polygraph Training Academy.</p>
+                  <p
+                    className="text-sm mb-6"
+                    style={{
+                      fontFamily: "var(--font-montserrat), sans-serif",
+                      color: "#525252",
+                      lineHeight: "1.6",
+                    }}
+                  >
+                    {curso.desc}
+                  </p>
+
+                  <button
+                    style={{
+                      backgroundColor: "#00D4D4",
+                      color: "#FFFFFF",
+                      fontFamily: "var(--font-montserrat), sans-serif",
+                      fontWeight: "600",
+                      padding: "10px 24px",
+                      borderRadius: "20px",
+                      border: "none",
+                      cursor: "pointer",
+                      fontSize: "14px",
+                      transition: "opacity 0.3s ease",
+                    }}
+                    onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.8")}
+                    onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
+                  >
+                    Ver Cursos
+                  </button>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -261,14 +247,6 @@ export default function FormacionesComplementariasPage() {
                 />
               </div>
 
-              <div className="absolute -bottom-12 -right-12 w-2/3 rounded-3xl overflow-hidden shadow-xl z-20 border-4 border-white hidden md:block">
-                <img
-                  src="/capacitacion.png"
-                  alt="Capacitación Especializada"
-                  loading="lazy"
-                  className="w-full h-auto object-cover aspect-square"
-                />
-              </div>
 
               <div className="absolute -top-8 -left-8 w-24 h-24 z-0 opacity-20"
                 style={{
@@ -305,32 +283,66 @@ export default function FormacionesComplementariasPage() {
                 fontFamily: "var(--font-montserrat), sans-serif",
               }}
             >
-              ¿Qué obtendrá al finalizar?
+              ¿Por qué elegir nuestra formación?
             </h2>
 
-            <p
-              className="text-base text-[#525252] font-light leading-relaxed mb-6"
-              style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-            >
-              Al completar satisfactoriamente el módulo, recibirá la <strong className="font-bold text-[#48255A]">certificación oficial de Especialización en Formaciones Complementarias</strong>, otorgada por <strong className="font-bold text-[#48255A]">One True Polygraph Training Academy</strong>, reconocida internacionalmente.
-            </p>
+            <ul className="flex flex-col gap-3 w-full mb-6">
+              {[
+                { title: "Herramientas de Alto Impacto", text: "Metodologías aplicables de inmediato en investigaciones reales y procesos de selección." },
+                { title: "Enfoque Científico", text: "Basamos nuestra enseñanza en estudios de psicología forense y psicofisiología actuales." },
+                { title: "Docencia Experta", text: "Dirigido por especialistas activos en el campo de la poligrafía y la criminología." }
+              ].map((item, idx) => (
+                <li key={idx} className="flex items-start gap-3 py-1">
+                  <div className="w-6 h-6 rounded flex items-center justify-center bg-[#700FA3] text-white shrink-0 mt-0.5 shadow-md">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span
+                    className="text-base text-[#525252] font-medium leading-relaxed"
+                    style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                  >
+                    <strong className="font-bold text-[#48255A]">{item.title}: </strong>
+                    {item.text}
+                  </span>
+                </li>
+              ))}
+            </ul>
 
-            <a
-              href="#contacto"
-              className="px-8 py-3 rounded transition-all hover:brightness-110 shadow-lg inline-block text-center cursor-pointer"
-              style={{
-                fontFamily: "var(--font-montserrat), sans-serif",
-                lineHeight: "1",
-                fontSize: "14px",
-                fontWeight: "600",
-                color: "#5F0091",
-                backgroundColor: "#FFC107",
-                textDecoration: "none",
-                border: "none"
-              }}
-            >
-              <span>Solicitar información del programa</span>
-            </a>
+            <div className="flex gap-4">
+              <a
+                href="#contacto"
+                className="px-8 py-3 rounded transition-all hover:brightness-110 shadow-lg inline-block text-center cursor-pointer"
+                style={{
+                  fontFamily: "var(--font-montserrat), sans-serif",
+                  lineHeight: "1",
+                  fontSize: "14px",
+                  fontWeight: "600",
+                  color: "#5F0091",
+                  backgroundColor: "#FFC107",
+                  textDecoration: "none",
+                  border: "none"
+                }}
+              >
+                <span>Ver Catálogo de Cursos</span>
+              </a>
+              <a
+                href="#contacto"
+                className="px-8 py-3 rounded transition-all hover:brightness-110 shadow-lg inline-block text-center cursor-pointer"
+                style={{
+                  fontFamily: "var(--font-montserrat), sans-serif",
+                  lineHeight: "1",
+                  fontSize: "14px",
+                  fontWeight: "600",
+                  color: "#FFFFFF !important",
+                  backgroundColor: "#700FA3",
+                  textDecoration: "none",
+                  border: "none"
+                }}
+              >
+                <span style={{ color: "#FFFFFF" }}>Solicitar Capacitación</span>
+              </a>
+            </div>
 
           </div>
         </div>

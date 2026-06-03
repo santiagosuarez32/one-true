@@ -1,0 +1,257 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - img "One True Ecuador Logo" [ref=e6]
+        - generic [ref=e7]:
+          - button "Cotizar gratis servicio de poligrafía y seguridad" [ref=e8]: Cotiza gratis
+          - button "Toggle Menu" [ref=e9]:
+            - img [ref=e10]
+      - generic [ref=e12]:
+        - generic [ref=e13]:
+          - img "One True Ecuador Logo" [ref=e14]
+          - button "Cerrar menú de navegación" [ref=e15]:
+            - img [ref=e16]
+        - navigation [ref=e18]:
+          - link "Inicio" [ref=e19] [cursor=pointer]:
+            - /url: /
+          - link "Pruebas Poligráficas" [ref=e20] [cursor=pointer]:
+            - /url: /pruebas-poligraficas
+          - link "Vetting" [ref=e21] [cursor=pointer]:
+            - /url: /vetting
+          - link "Confiabilidad 360°" [ref=e22] [cursor=pointer]:
+            - /url: /estudio-de-confiabilidad-360
+          - link "Visitas Domiciliarias" [ref=e23] [cursor=pointer]:
+            - /url: /visitas-domiciliarias
+          - link "Pruebas Toxicológicas" [ref=e24] [cursor=pointer]:
+            - /url: /pruebas-toxicologicas
+          - link "Evaluaciones Psicométricas" [ref=e25] [cursor=pointer]:
+            - /url: /evaluaciones-psicometricas
+          - link "Prueba de Honestidad, Ética y Valores" [ref=e26] [cursor=pointer]:
+            - /url: /prueba-de-honestidad-etica-y-valores
+          - link "Comunidad" [ref=e27] [cursor=pointer]:
+            - /url: /#podcast
+          - link "Blog" [ref=e28] [cursor=pointer]:
+            - /url: /#recursos
+        - button "Cotizar gratis servicio de poligrafía y seguridad" [ref=e30]: Cotiza gratis
+    - generic [ref=e31]:
+      - img "Formaciones Complementarias - One True Academia"
+      - generic [ref=e33]:
+        - generic [ref=e36]: Domine las técnicas de entrevista y evaluación forense de credibilidad más avanzadas del mundo.
+        - heading "Programas de Especialización en evaluación forense de la credibilidad y protocolos de entrevistas basadas en ciencia." [level=1] [ref=e37]
+        - paragraph [ref=e38]: En el ámbito forense y gestión y administración de riesgos corporativos, la actualización constante es la única garantía de precisión. Nuestros programas están diseñados para profesionales que buscan dominar modelos científicos de entrevista e identificación de riesgos, elevando el estándar de sus investigaciones.
+        - link "Solicitar información del programa" [ref=e40] [cursor=pointer]:
+          - /url: "#contacto"
+    - generic [ref=e42]:
+      - generic [ref=e43]:
+        - heading "Áreas de Especialización" [level=2] [ref=e44]
+        - paragraph [ref=e45]: "Desarrolle competencias críticas con metodologías validadas internacionalmente:"
+      - generic [ref=e46]:
+        - generic [ref=e47]:
+          - img "Evaluación Forense de la Credibilidad" [ref=e49]
+          - generic [ref=e50]:
+            - heading "Evaluación Forense de la Credibilidad" [level=3] [ref=e51]
+            - paragraph [ref=e52]: Análisis científico del testimonio y detección de indicadores de engaño mediante protocolos estandarizados.
+            - button "Ver Cursos" [ref=e53] [cursor=pointer]
+        - generic [ref=e54]:
+          - img "Elicitación conversacional" [ref=e56]
+          - generic [ref=e57]:
+            - heading "Elicitación conversacional" [level=3] [ref=e58]
+            - paragraph [ref=e59]: Es una técnica estratégica de obtención de información que utiliza conversaciones aparentemente naturales para recopilar datos sin levantar sospechas ni activar mecanismos defensivos.
+            - button "Ver Cursos" [ref=e60] [cursor=pointer]
+        - generic [ref=e61]:
+          - img "Modelos de Entrevista Investigativa" [ref=e63]
+          - generic [ref=e64]:
+            - heading "Modelos de Entrevista Investigativa" [level=3] [ref=e65]
+            - paragraph [ref=e66]: Formación en técnicas de obtención de información de alta calidad, basadas en principios de respeto y efectividad forense.
+            - button "Ver Cursos" [ref=e67] [cursor=pointer]
+    - generic [ref=e70]:
+      - img "Formaciones Complementarias" [ref=e74]
+      - generic [ref=e76]:
+        - generic [ref=e79]: Beneficios
+        - heading "¿Por qué elegir nuestra formación?" [level=2] [ref=e80]
+        - list [ref=e81]:
+          - listitem [ref=e82]:
+            - img [ref=e84]
+            - generic [ref=e86]:
+              - strong [ref=e87]: "Herramientas de Alto Impacto:"
+              - text: Metodologías aplicables de inmediato en investigaciones reales y procesos de selección.
+          - listitem [ref=e88]:
+            - img [ref=e90]
+            - generic [ref=e92]:
+              - strong [ref=e93]: "Enfoque Científico:"
+              - text: Basamos nuestra enseñanza en estudios de psicología forense y psicofisiología actuales.
+          - listitem [ref=e94]:
+            - img [ref=e96]
+            - generic [ref=e98]:
+              - strong [ref=e99]: "Docencia Experta:"
+              - text: Dirigido por especialistas activos en el campo de la poligrafía y la criminología.
+        - link "Solicitar información del programa" [ref=e100] [cursor=pointer]:
+          - /url: "#contacto"
+    - generic [ref=e103]:
+      - generic [ref=e104]:
+        - generic [ref=e105]:
+          - img "One True Logo"
+        - heading "Contactos" [level=2] [ref=e106]
+        - generic [ref=e107]:
+          - generic [ref=e108]:
+            - img [ref=e109]
+            - generic [ref=e111]:
+              - heading "Teléfono" [level=3] [ref=e112]
+              - link "098 129 6179" [ref=e113] [cursor=pointer]:
+                - /url: tel:0981296179
+          - generic [ref=e114]:
+            - img [ref=e115]
+            - generic [ref=e117]:
+              - heading "Agencia Quito" [level=3] [ref=e118]
+              - paragraph [ref=e119]: "Av. Pérez Guerreo OE3-124 y San Gregorio, Instituto de Diagnóstico Médico, tercer piso, oficina #303, Quito-Ecuador."
+          - generic [ref=e120]:
+            - img [ref=e121]
+            - generic [ref=e124]:
+              - heading "Agencia Guayaquil" [level=3] [ref=e125]
+              - paragraph [ref=e126]: Solar 26, Mz. 1022, Las Orquídeas, entre lavandería Perfect Wash y Dash Óptica.
+          - generic [ref=e127]:
+            - img [ref=e128]
+            - generic [ref=e130]:
+              - heading "Correo" [level=3] [ref=e131]
+              - link "info@somosonetrue.com" [ref=e132] [cursor=pointer]:
+                - /url: mailto:info@somosonetrue.com
+        - generic [ref=e133]:
+          - heading "Síguenos:" [level=3] [ref=e134]
+          - generic [ref=e135]:
+            - link "Síguenos en Facebook" [ref=e136] [cursor=pointer]:
+              - /url: https://www.facebook.com/somosonetrue
+              - img [ref=e137]
+            - link "Síguenos en Instagram" [ref=e139] [cursor=pointer]:
+              - /url: https://www.instagram.com/somosonetrue
+              - img [ref=e140]
+            - link "Síguenos en LinkedIn" [ref=e142] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/somosonetrue
+              - img [ref=e143]
+      - generic [ref=e148]:
+        - generic [ref=e149]:
+          - generic [ref=e150]:
+            - generic [ref=e151]: Nombre *
+            - textbox "Tu nombre" [ref=e152]
+          - generic [ref=e153]:
+            - generic [ref=e154]: Apellido *
+            - textbox "Tu apellido" [ref=e155]
+        - generic [ref=e156]:
+          - generic [ref=e157]: Correo electrónico *
+          - generic [ref=e158]:
+            - textbox "correo@empresa.com" [ref=e159]
+            - generic:
+              - img
+        - generic [ref=e160]:
+          - generic [ref=e161]: Número de teléfono *
+          - generic [ref=e162]:
+            - generic [ref=e163]:
+              - img "ec" [ref=e164]
+              - combobox [ref=e165] [cursor=pointer]:
+                - option "+593" [selected]
+                - option "+57"
+                - option "+51"
+                - option "+56"
+                - option "+54"
+                - option "+52"
+                - option "+34"
+                - option "+1"
+            - textbox "098 129 6179" [ref=e166]
+            - generic:
+              - img
+        - generic [ref=e167]:
+          - generic [ref=e168]: Ciudad *
+          - textbox "Tu ciudad" [ref=e169]
+        - generic [ref=e170]:
+          - generic [ref=e171]: Mensaje *
+          - textbox "Escribe tu mensaje aquí..." [ref=e172]
+        - generic [ref=e173]:
+          - paragraph [ref=e174]:
+            - text: Al enviar este formulario, acepto que mis datos personales sean tratados de acuerdo con la
+            - link "Política de tratamiento de datos personales" [ref=e175] [cursor=pointer]:
+              - /url: "#"
+            - text: y los
+            - link "términos establecidos en ella" [ref=e176] [cursor=pointer]:
+              - /url: "#"
+            - text: .
+          - generic [ref=e177]:
+            - checkbox "Aceptar" [ref=e178] [cursor=pointer]
+            - generic [ref=e179] [cursor=pointer]: Aceptar
+        - button "Cotizar ahora" [ref=e180]
+        - generic [ref=e181]:
+          - generic [ref=e182]: O escríbenos
+          - link "+593 98 129 6179" [ref=e184] [cursor=pointer]:
+            - /url: https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True
+            - generic [ref=e185]:
+              - img [ref=e187]
+              - generic [ref=e189]: +593 98 129 6179
+    - generic [ref=e191]:
+      - generic [ref=e192]:
+        - generic [ref=e193]:
+          - img "One True Logo" [ref=e195]
+          - paragraph [ref=e196]: Construimos vínculos confiables entre empresas y candidatos
+          - generic [ref=e197]:
+            - generic [ref=e198]: Síguenos
+            - generic [ref=e199]:
+              - link "Síguenos en LinkedIn" [ref=e200] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/somosonetrue
+                - img [ref=e201]
+              - link "Síguenos en Facebook" [ref=e203] [cursor=pointer]:
+                - /url: https://www.facebook.com/somosonetrue
+                - img [ref=e204]
+              - link "Síguenos en Twitter/X" [ref=e206] [cursor=pointer]:
+                - /url: https://x.com/somosonetrue
+                - img [ref=e207]
+              - link "Síguenos en Instagram" [ref=e209] [cursor=pointer]:
+                - /url: https://www.instagram.com/somosonetrue
+                - img [ref=e210]
+              - link "Síguenos en YouTube" [ref=e212] [cursor=pointer]:
+                - /url: https://www.youtube.com/@somosonetrue
+                - img [ref=e213]
+              - link "Contáctanos por WhatsApp" [ref=e215] [cursor=pointer]:
+                - /url: https://api.whatsapp.com/send?phone=593981296179
+                - img [ref=e216]
+        - generic [ref=e218]:
+          - heading "Navegación" [level=4] [ref=e219]
+          - list [ref=e220]:
+            - listitem [ref=e221]:
+              - link "Inicio" [ref=e222] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e223]:
+              - link "Servicios" [ref=e224] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e225]:
+              - link "Sobre Nosotros" [ref=e226] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e227]:
+              - link "Academia" [ref=e228] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e229]:
+          - heading "Contacto" [level=4] [ref=e230]
+          - generic [ref=e231]:
+            - list [ref=e233]:
+              - listitem [ref=e234]:
+                - img [ref=e235]
+                - link "info@somosonetrue.com" [ref=e238] [cursor=pointer]:
+                  - /url: mailto:info@somosonetrue.com
+              - listitem [ref=e239]:
+                - img [ref=e240]
+                - link "098 129 6179" [ref=e242] [cursor=pointer]:
+                  - /url: tel:0981296179
+            - list [ref=e244]:
+              - listitem [ref=e245]:
+                - img [ref=e246]
+                - generic [ref=e249]:
+                  - strong [ref=e250]: Agencia Quito
+                  - text: "Av. Pérez Guerreo OE3-124 y San Gregorio, Instituto de Diagnóstico Médico, tercer piso, oficina #303, Quito-Ecuador."
+              - listitem [ref=e251]:
+                - img [ref=e252]
+                - generic [ref=e255]:
+                  - strong [ref=e256]: Agencia Guayaquil
+                  - text: Solar 26, Mz. 1022, Las Orquídeas, entre lavandería Perfect Wash y Dash Óptica.
+      - generic [ref=e257]:
+        - paragraph [ref=e258]: © Copyright One True 2026
+        - link "Política de Privacidad y Cookies" [ref=e260] [cursor=pointer]:
+          - /url: "#"
+  - button "Open Next.js Dev Tools" [ref=e266] [cursor=pointer]:
+    - img [ref=e267]

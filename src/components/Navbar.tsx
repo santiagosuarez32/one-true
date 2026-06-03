@@ -182,7 +182,7 @@ export default function Navbar() {
             </div>
 
             {/* Comunidad */}
-            <a href="/#podcast" style={navLinkStyle} className="hover:!text-[#FFC107] transition-colors duration-300 lg:!text-[13px] xl:!text-[15px] 2xl:!text-[16px] lg:!px-1.5 xl:!px-3 2xl:!px-3.5">
+            <a href="/comunidad" style={navLinkStyle} className="hover:!text-[#FFC107] transition-colors duration-300 lg:!text-[13px] xl:!text-[15px] 2xl:!text-[16px] lg:!px-1.5 xl:!px-3 2xl:!px-3.5">
               Comunidad
             </a>
 
@@ -322,7 +322,7 @@ export default function Navbar() {
           </a>
 
           {/* Comunidad */}
-          <a href="/#podcast" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+          <a href="/comunidad" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
             Comunidad
           </a>
 

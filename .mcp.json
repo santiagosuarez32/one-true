@@ -3,6 +3,12 @@
     "playwright": {
       "command": "cmd",
       "args": ["/c", "npx", "-y", "@playwright/mcp@latest"]
+    },
+    "stitch": {
+      "command": "npx",
+      "args": ["-y", "@getbridge/mcp-stitch"],
+      "env": {
+      }
     }
   }
 }
