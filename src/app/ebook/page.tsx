@@ -56,7 +56,7 @@ export default function EbookPage() {
       <Navbar />
 
       {/* Ebook Content Section */}
-      <section id="download" className="bg-[#700FA3] py-16 md:py-24 relative overflow-hidden scroll-mt-20">
+      <section id="download" className="bg-[#700FA3] pt-32 pb-16 md:py-24 relative overflow-hidden scroll-mt-20">
         {/* Decorative background blobs matching the screenshot vibe but with brand colors */}
         <div className="absolute top-0 left-0 w-64 h-64 bg-[#700FA3] opacity-5 rounded-full blur-[80px] -translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#FFC107] opacity-5 rounded-full blur-[100px] translate-x-1/3 translate-y-1/3" />

@@ -11,7 +11,7 @@ export default function CommunityPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#700FA3]">
+      <section className="relative min-h-screen flex items-start md:items-center justify-center overflow-hidden bg-[#700FA3] pt-32 pb-16 md:pt-0 md:pb-0">
         <div
           className="absolute inset-0 z-0 pointer-events-none"
           style={{
@@ -47,7 +47,7 @@ export default function CommunityPage() {
 
             {/* Main Title */}
             <h1
-              className="text-3xl sm:text-6xl lg:text-7xl font-bold mb-2"
+              className="max-md:text-3xl! sm:text-6xl lg:text-7xl font-bold mb-2"
               style={{
                 fontFamily: "var(--font-montserrat), sans-serif",
                 lineHeight: "1.1",

@@ -1,0 +1,334 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - link "Ir a la página de inicio de One True" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - img "One True Ecuador Logo" [ref=e7]
+        - button "Abrir menú" [ref=e9]
+      - generic [ref=e14]:
+        - link "Ir a la página de inicio de One True" [ref=e16] [cursor=pointer]:
+          - /url: /
+          - img "One True Ecuador Logo" [ref=e17]
+        - navigation [ref=e18]:
+          - link "Inicio" [ref=e19] [cursor=pointer]:
+            - /url: /
+          - link "Pruebas Poligráficas" [ref=e20] [cursor=pointer]:
+            - /url: /pruebas-poligraficas
+          - generic [ref=e21]:
+            - button "Evaluaciones" [ref=e22]:
+              - text: Evaluaciones
+              - img [ref=e23]
+            - generic [ref=e25]:
+              - link "Vetting" [ref=e26] [cursor=pointer]:
+                - /url: /vetting
+              - link "Estudio de Confiabilidad 360º" [ref=e27] [cursor=pointer]:
+                - /url: /estudio-de-confiabilidad-360
+              - link "Visitas Domiciliarias" [ref=e28] [cursor=pointer]:
+                - /url: /visitas-domiciliarias
+              - link "Pruebas Toxicológicas" [ref=e29] [cursor=pointer]:
+                - /url: /pruebas-toxicologicas
+              - link "Evaluaciones Psicométricas" [ref=e30] [cursor=pointer]:
+                - /url: /evaluaciones-psicometricas
+              - link "Prueba de honestidad ética y valores" [ref=e31] [cursor=pointer]:
+                - /url: /prueba-de-honestidad-etica-y-valores
+          - generic [ref=e32]:
+            - button "Academia" [ref=e33]:
+              - text: Academia
+              - img [ref=e34]
+            - generic [ref=e36]:
+              - link "Curso Básico en Poligrafía 400 H" [ref=e37] [cursor=pointer]:
+                - /url: /curso-basico-en-poligrafia
+              - link "Cursos Avanzados en Poligrafía" [ref=e38] [cursor=pointer]:
+                - /url: /cursos-avanzados-en-poligrafia
+              - link "Formaciones Complementarias" [ref=e39] [cursor=pointer]:
+                - /url: /formaciones-complementarias
+              - link "Calendario Académico" [ref=e40] [cursor=pointer]:
+                - /url: /#service-7
+          - link "Comunidad" [ref=e41] [cursor=pointer]:
+            - /url: /comunidad
+          - generic [ref=e42]:
+            - button "Aprende gratis" [ref=e43]:
+              - text: Aprende gratis
+              - img [ref=e44]
+            - generic [ref=e46]:
+              - link "Blog" [ref=e47] [cursor=pointer]:
+                - /url: /blog
+              - link "Podcast" [ref=e48] [cursor=pointer]:
+                - /url: /podcast
+              - link "Ebook" [ref=e49] [cursor=pointer]:
+                - /url: /ebook
+        - link "Cotizar gratis servicio de poligrafía y seguridad" [ref=e51] [cursor=pointer]:
+          - /url: /cotiza
+          - text: Cotiza gratis
+    - generic [ref=e52]:
+      - img "Calificación de Gráficas - One True Academia"
+      - generic [ref=e54]:
+        - navigation "Ruta de navegación" [ref=e55]:
+          - list [ref=e56]:
+            - listitem [ref=e57]:
+              - link "Inicio" [ref=e58] [cursor=pointer]:
+                - /url: /
+              - generic [ref=e59]: ›
+            - listitem [ref=e60]:
+              - link "Academia" [ref=e61] [cursor=pointer]:
+                - /url: /#service-7
+              - generic [ref=e62]: ›
+            - listitem [ref=e63]:
+              - link "Cursos Avanzados" [ref=e64] [cursor=pointer]:
+                - /url: /cursos-avanzados-en-poligrafia
+              - generic [ref=e65]: ›
+            - listitem [ref=e66]:
+              - generic [ref=e67]: Calificación de Gráficas y Análisis de Datos
+        - generic [ref=e70]: Transforme trazados fisiológicos en decisiones técnicas basadas en evidencia.
+        - 'heading "Curso Avanzado: Calificación de Gráficas y Análisis de Datos" [level=1] [ref=e71]':
+          - text: "Curso Avanzado:"
+          - strong [ref=e72]: Calificación de Gráficas y Análisis de Datos
+        - paragraph [ref=e73]: La validez de una examinación poligráfica no reside solo en la ejecución, sino en la precisión del análisis. Este curso especializado le proporcionará el marco metodológico necesario para realizar una calificación objetiva, reduciendo el margen de error y eliminando la subjetividad en la interpretación de los datos.
+        - link "Solicitar información del módulo" [ref=e75] [cursor=pointer]:
+          - /url: "#contacto"
+    - generic [ref=e78]:
+      - generic [ref=e80]:
+        - generic [ref=e83]: Conoce nuestra metodología
+        - heading "Marco metodológico para análisis objetivos" [level=2] [ref=e84]
+        - paragraph [ref=e85]: La calificación de gráficas poligráficas se estructura en tres ejes metodológicos que garantizan precisión y objetividad en cada evaluación, eliminando la subjetividad del análisis.
+      - generic [ref=e88]:
+        - heading "Ejes Temáticos" [level=3] [ref=e89]
+        - generic [ref=e90]:
+          - paragraph [ref=e92]:
+            - strong [ref=e93]: "Un recorrido profundo por el proceso de análisis de datos poligráficos:"
+          - generic [ref=e95]:
+            - generic [ref=e96]: •
+            - paragraph [ref=e97]:
+              - strong [ref=e98]: Latencia Inferior.
+          - generic [ref=e100]:
+            - generic [ref=e101]: •
+            - paragraph [ref=e102]:
+              - strong [ref=e103]: Latencia superior.
+          - generic [ref=e105]:
+            - generic [ref=e106]: •
+            - paragraph [ref=e107]:
+              - strong [ref=e108]: Ventana de inicio de respuesta fija.
+          - generic [ref=e110]:
+            - generic [ref=e111]: •
+            - paragraph [ref=e112]:
+              - strong [ref=e113]: Ventana de inicio de respuesta permisiva.
+          - generic [ref=e115]:
+            - generic [ref=e116]: •
+            - paragraph [ref=e117]:
+              - strong [ref=e118]: Ventana de Evaluación Fija.
+          - generic [ref=e120]:
+            - generic [ref=e121]: •
+            - paragraph [ref=e122]:
+              - strong [ref=e123]: Ventana de Evaluación permisiva.
+          - generic [ref=e125]:
+            - generic [ref=e126]: •
+            - paragraph [ref=e127]:
+              - strong [ref=e128]: Reacciones simples en EDA y Cardio.
+          - generic [ref=e130]:
+            - generic [ref=e131]: •
+            - paragraph [ref=e132]:
+              - strong [ref=e133]: Reacciones Complejas en EDA y Cardio.
+          - generic [ref=e135]:
+            - generic [ref=e136]: •
+            - paragraph [ref=e137]:
+              - strong [ref=e138]: Plano cartesiano y el análisis de datos.
+          - generic [ref=e140]:
+            - generic [ref=e141]: •
+            - paragraph [ref=e142]:
+              - strong [ref=e143]: Variables extrañas y su impacto en el análisis de los datos.
+          - generic [ref=e145]:
+            - generic [ref=e146]: •
+            - paragraph [ref=e147]:
+              - strong [ref=e148]: Criterios de tolerancia para la extracción de características.
+          - generic [ref=e150]:
+            - generic [ref=e151]: •
+            - paragraph [ref=e152]:
+              - strong [ref=e153]: Eventos de artefactos y su impacto en el análisis de datos.
+    - generic [ref=e155]:
+      - generic [ref=e158]: Ficha Técnica
+      - heading "Características Generales del Curso" [level=2] [ref=e159]
+      - table [ref=e161]:
+        - rowgroup [ref=e162]:
+          - row "Característica Especificación Técnica" [ref=e163]:
+            - columnheader "Característica" [ref=e164]
+            - columnheader "Especificación Técnica" [ref=e165]
+        - rowgroup [ref=e166]:
+          - row "Modalidad Presencial o en línea" [ref=e167]:
+            - cell "Modalidad" [ref=e168]
+            - cell "Presencial o en línea" [ref=e169]
+          - 'row "¿Qué incluye este curso? Herramientas prácticas para una calificación de élite: 15 horas de entrenamiento intensivo. 30 lecciones especializadas en análisis cuantitativo. Ejercicios prácticos con gráficas reales para calibrar tu criterio. Guías y tablas de puntuación descargables. 30 días de garantía de satisfacción. Acceso a la comunidad ONE TRUE para resolución de dudas complejas. Diploma de finalización que certifica tu competencia en análisis de datos." [ref=e170]':
+            - cell "¿Qué incluye este curso?" [ref=e171]
+            - 'cell "Herramientas prácticas para una calificación de élite: 15 horas de entrenamiento intensivo. 30 lecciones especializadas en análisis cuantitativo. Ejercicios prácticos con gráficas reales para calibrar tu criterio. Guías y tablas de puntuación descargables. 30 días de garantía de satisfacción. Acceso a la comunidad ONE TRUE para resolución de dudas complejas. Diploma de finalización que certifica tu competencia en análisis de datos." [ref=e172]':
+              - paragraph [ref=e173]: "Herramientas prácticas para una calificación de élite:"
+              - list [ref=e174]:
+                - listitem [ref=e175]: 15 horas de entrenamiento intensivo.
+                - listitem [ref=e176]: 30 lecciones especializadas en análisis cuantitativo.
+                - listitem [ref=e177]: Ejercicios prácticos con gráficas reales para calibrar tu criterio.
+                - listitem [ref=e178]: Guías y tablas de puntuación descargables.
+                - listitem [ref=e179]: 30 días de garantía de satisfacción.
+                - listitem [ref=e180]: Acceso a la comunidad ONE TRUE para resolución de dudas complejas.
+                - listitem [ref=e181]: Diploma de finalización que certifica tu competencia en análisis de datos.
+    - generic [ref=e184]:
+      - generic [ref=e185]:
+        - img "One True Logo" [ref=e187]
+        - heading "Contactos" [level=2] [ref=e188]
+        - generic [ref=e189]:
+          - generic [ref=e190]:
+            - img [ref=e191]
+            - generic [ref=e193]:
+              - heading "Teléfono" [level=3] [ref=e194]
+              - link "098 129 6179" [ref=e195] [cursor=pointer]:
+                - /url: tel:0981296179
+          - generic [ref=e196]:
+            - img [ref=e197]
+            - generic [ref=e199]:
+              - heading "Agencia Quito" [level=3] [ref=e200]
+              - paragraph [ref=e201]: "Av. Pérez Guerreo OE3-124 y San Gregorio, Instituto de Diagnóstico Médico, tercer piso, oficina #303, Quito-Ecuador."
+          - generic [ref=e202]:
+            - img [ref=e203]
+            - generic [ref=e206]:
+              - heading "Agencia Guayaquil" [level=3] [ref=e207]
+              - paragraph [ref=e208]: Solar 26, Mz. 1022, Las Orquídeas, entre lavandería Perfect Wash y Dash Óptica.
+          - generic [ref=e209]:
+            - img [ref=e210]
+            - generic [ref=e212]:
+              - heading "Correo" [level=3] [ref=e213]
+              - link "info@somosonetrue.com" [ref=e214] [cursor=pointer]:
+                - /url: mailto:info@somosonetrue.com
+        - generic [ref=e215]:
+          - heading "Síguenos:" [level=3] [ref=e216]
+          - generic [ref=e217]:
+            - link "Síguenos en Facebook" [ref=e218] [cursor=pointer]:
+              - /url: https://www.facebook.com/somosonetrue
+              - img [ref=e219]
+            - link "Síguenos en Instagram" [ref=e221] [cursor=pointer]:
+              - /url: https://www.instagram.com/somosonetrue
+              - img [ref=e222]
+            - link "Síguenos en LinkedIn" [ref=e224] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/somosonetrue
+              - img [ref=e225]
+      - generic [ref=e230]:
+        - generic [ref=e231]:
+          - generic [ref=e232]:
+            - generic [ref=e233]: Nombre *
+            - textbox "Tu nombre" [ref=e234]
+          - generic [ref=e235]:
+            - generic [ref=e236]: Apellido *
+            - textbox "Tu apellido" [ref=e237]
+        - generic [ref=e238]:
+          - generic [ref=e239]: Correo electrónico *
+          - generic [ref=e240]:
+            - textbox "correo@empresa.com" [ref=e241]
+            - generic:
+              - img
+        - generic [ref=e242]:
+          - generic [ref=e243]: Número de teléfono *
+          - generic [ref=e244]:
+            - generic [ref=e245]:
+              - img "ec" [ref=e246]
+              - combobox [ref=e247] [cursor=pointer]:
+                - option "+593" [selected]
+                - option "+57"
+                - option "+51"
+                - option "+56"
+                - option "+54"
+                - option "+52"
+                - option "+34"
+                - option "+1"
+            - textbox "098 129 6179" [ref=e248]
+            - generic:
+              - img
+        - generic [ref=e249]:
+          - generic [ref=e250]: Ciudad *
+          - textbox "Tu ciudad" [ref=e251]
+        - generic [ref=e252]:
+          - generic [ref=e253]: Mensaje *
+          - textbox "Escribe tu mensaje aquí..." [ref=e254]
+        - generic [ref=e255]:
+          - paragraph [ref=e256]:
+            - text: Al enviar este formulario, acepto que mis datos personales sean tratados de acuerdo con la
+            - link "Política de tratamiento de datos personales" [ref=e257] [cursor=pointer]:
+              - /url: "#"
+            - text: y los
+            - link "términos establecidos en ella" [ref=e258] [cursor=pointer]:
+              - /url: "#"
+            - text: .
+          - generic [ref=e259]:
+            - checkbox "Aceptar" [ref=e260] [cursor=pointer]
+            - generic [ref=e261] [cursor=pointer]: Aceptar
+        - button "Cotizar ahora" [ref=e262]
+        - generic [ref=e263]:
+          - generic [ref=e264]: O escríbenos
+          - link "+593 98 129 6179" [ref=e266] [cursor=pointer]:
+            - /url: https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True
+            - generic [ref=e267]:
+              - img [ref=e269]
+              - generic [ref=e271]: +593 98 129 6179
+    - generic [ref=e273]:
+      - generic [ref=e274]:
+        - generic [ref=e275]:
+          - img "One True Logo" [ref=e277]
+          - paragraph [ref=e278]: Construimos vínculos confiables entre empresas y candidatos
+          - generic [ref=e279]:
+            - generic [ref=e280]: Síguenos
+            - generic [ref=e281]:
+              - link "Síguenos en LinkedIn" [ref=e282] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/david-coli-fiallo-75679a198?utm_source=share_via&utm_content=profile&utm_medium=member_android
+                - img [ref=e283]
+              - link "Síguenos en Facebook" [ref=e285] [cursor=pointer]:
+                - /url: https://www.facebook.com/share/1F8T24NNKE/
+                - img [ref=e286]
+              - link "Síguenos en Instagram" [ref=e288] [cursor=pointer]:
+                - /url: https://www.instagram.com/somosonetrue?igsh=bXNmOWYwaWpsdDVh
+                - img [ref=e289]
+              - link "Síguenos en YouTube" [ref=e291] [cursor=pointer]:
+                - /url: https://youtube.com/@somosonetrue?si=8OI3ZQ0A-4OzF_H0
+                - img [ref=e292]
+        - generic [ref=e294]:
+          - heading "Soluciones" [level=4] [ref=e295]
+          - list [ref=e296]:
+            - listitem [ref=e297]:
+              - link "Vetting" [ref=e298] [cursor=pointer]:
+                - /url: /vetting
+            - listitem [ref=e299]:
+              - link "Estudio de Confiabilidad 360°" [ref=e300] [cursor=pointer]:
+                - /url: /estudio-de-confiabilidad-360
+            - listitem [ref=e301]:
+              - link "Visitas Domiciliarias" [ref=e302] [cursor=pointer]:
+                - /url: /visitas-domiciliarias
+            - listitem [ref=e303]:
+              - link "Pruebas Toxicológicas" [ref=e304] [cursor=pointer]:
+                - /url: /pruebas-toxicologicas
+            - listitem [ref=e305]:
+              - link "Evaluaciones Psicométricas" [ref=e306] [cursor=pointer]:
+                - /url: /evaluaciones-psicometricas
+        - generic [ref=e307]:
+          - heading "Contacto" [level=4] [ref=e308]
+          - generic [ref=e309]:
+            - list [ref=e311]:
+              - listitem [ref=e312]:
+                - img [ref=e313]
+                - link "info@somosonetrue.com" [ref=e316] [cursor=pointer]:
+                  - /url: mailto:info@somosonetrue.com
+              - listitem [ref=e317]:
+                - img [ref=e318]
+                - link "098 129 6179" [ref=e320] [cursor=pointer]:
+                  - /url: tel:0981296179
+            - list [ref=e322]:
+              - listitem [ref=e323]:
+                - img [ref=e324]
+                - generic [ref=e327]:
+                  - strong [ref=e328]: Agencia Quito
+                  - text: "Av. Pérez Guerreo OE3-124 y San Gregorio, Instituto de Diagnóstico Médico, tercer piso, oficina #303, Quito-Ecuador."
+              - listitem [ref=e329]:
+                - img [ref=e330]
+                - generic [ref=e333]:
+                  - strong [ref=e334]: Agencia Guayaquil
+                  - text: Urdenor 2, Manzana 219, Solar 9
+      - generic [ref=e335]:
+        - paragraph [ref=e336]: © Copyright One True 2026
+        - link "Política de Privacidad y Cookies" [ref=e338] [cursor=pointer]:
+          - /url: "#"
+  - button "Open Next.js Dev Tools" [ref=e344] [cursor=pointer]:
+    - img [ref=e345]

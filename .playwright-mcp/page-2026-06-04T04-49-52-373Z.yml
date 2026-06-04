@@ -1,0 +1,187 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e4]:
+      - link "Ir a la página de inicio de One True" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "One True Ecuador Logo" [ref=e7]
+      - navigation [ref=e9]:
+        - link "Inicio" [ref=e10] [cursor=pointer]:
+          - /url: /
+        - link "Pruebas Poligráficas" [ref=e11] [cursor=pointer]:
+          - /url: /pruebas-poligraficas
+        - generic [ref=e12]:
+          - link "Evaluaciones" [ref=e13] [cursor=pointer]:
+            - /url: /#services
+            - text: Evaluaciones
+            - img [ref=e14]
+          - generic:
+            - generic:
+              - link "Vetting":
+                - /url: /vetting
+              - link "Estudio de Confiabilidad 360º":
+                - /url: /estudio-de-confiabilidad-360
+              - link "Visitas Domiciliarias":
+                - /url: /visitas-domiciliarias
+              - link "Pruebas Toxicológicas":
+                - /url: /pruebas-toxicologicas
+              - link "Evaluaciones Psicométricas":
+                - /url: /evaluaciones-psicometricas
+              - link "Prueba de honestidad ética y valores":
+                - /url: /prueba-de-honestidad-etica-y-valores
+        - generic [ref=e16]:
+          - link "Academia" [ref=e17] [cursor=pointer]:
+            - /url: /#service-7
+            - text: Academia
+            - img [ref=e18]
+          - generic:
+            - generic:
+              - link "Curso Básico en Poligrafía 400 H":
+                - /url: /curso-basico-en-poligrafia
+              - link "Cursos Avanzados en Poligrafía":
+                - /url: /cursos-avanzados-en-poligrafia
+              - link "Formaciones Complementarias":
+                - /url: /formaciones-complementarias
+              - link "Calendario Académico":
+                - /url: /#service-7
+        - link "Comunidad" [ref=e20] [cursor=pointer]:
+          - /url: /comunidad
+        - generic [ref=e21]:
+          - link "Aprende gratis" [ref=e22] [cursor=pointer]:
+            - /url: /#recursos
+            - text: Aprende gratis
+            - img [ref=e23]
+          - generic:
+            - generic:
+              - link "Blog":
+                - /url: /blog
+              - link "Podcast":
+                - /url: /podcast
+              - link "Ebook":
+                - /url: /ebook
+      - link "Cotiza gratis" [ref=e26] [cursor=pointer]:
+        - /url: /cotiza
+    - img "¿Verdad o Mentira? Todo lo que debes saber antes de contratar una prueba de Polígrafo" [ref=e28]
+    - article [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e34]: Blog
+        - heading "¿Verdad o Mentira? Todo lo que debes saber antes de contratar una prueba de Polígrafo." [level=1] [ref=e35]
+        - generic [ref=e36]:
+          - generic [ref=e37]: Publicado el 15 de Noviembre, 2024
+          - generic [ref=e38]: •
+          - generic [ref=e39]: 5 min de lectura
+      - generic [ref=e40]:
+        - heading "Introducción" [level=2] [ref=e41]
+        - paragraph [ref=e42]: "Tomar la decisión de evaluar la confianza de tu personal o investigar un incidente delicado (como un robo o fraude interno) no es fácil. Seguramente has escuchado hablar del polígrafo o detector de mentiras, pero es normal que surjan dudas: ¿Realmente funciona? ¿Es legal? ¿Qué tan complicado es?"
+        - paragraph [ref=e43]: En mi experiencia ayudando a empresas a seleccionar candidatos confiables, he notado que la falta de información clara es el principal obstáculo. Por eso, he recopilado las preguntas más habituales que recibo sobre la poligrafía y las he respondido de forma sencilla. El objetivo es que tengas toda la información sobre la mesa para tomar una decisión objetiva y segura para tu empresa.
+        - paragraph [ref=e44]: Las pruebas de polígrafo son una herramienta forense ampliamente utilizada en procesos de selección, investigaciones internas y evaluaciones de confiabilidad. Sin embargo, existen muchos mitos y malinterpretaciones sobre cómo funcionan y qué tan precisas son. En este artículo, te ayudaremos a separar la verdad de la ficción.
+        - heading "Lo que necesitas saber sobre las pruebas de polígrafo (Preguntas Frecuentes)" [level=2] [ref=e45]
+        - heading "1. ¿Qué tan confiable es realmente el polígrafo o también llamado \"detector de mentiras\"?" [level=3] [ref=e46]
+        - paragraph [ref=e47]: Esta es la duda número uno. A diferencia de lo que se ve en las películas, el polígrafo es un instrumento científico, no mágico. Estudios internacionales han demostrado que, cuando la prueba es realizada por un profesional certificado, la precisión de los resultados supera el 90%. Actualmente, es la tecnología más precisa para evaluar la credibilidad de una persona, superando a otras herramientas de evaluación de credibilidad.
+        - heading "2. ¿Cómo funciona una prueba de polígrafo? ¿Es solo conectar cables?" [level=3] [ref=e48]
+        - paragraph [ref=e49]: "No, es un proceso mucho más completo y humano. Una prueba de Polígrafo profesional consta de tres etapas claras:"
+        - list [ref=e50]:
+          - listitem [ref=e51]:
+            - strong [ref=e52]: "La entrevista previa (Pre-test):"
+            - text: Conversamos con la persona para entender su contexto y explicarle el procedimiento.
+          - listitem [ref=e53]:
+            - strong [ref=e54]: "La fase de prueba (In-test):"
+            - text: Aquí es donde se usa el polígrafo para registrar las reacciones psicofisiológicas del cuerpo mientras se hacen las preguntas.
+          - listitem [ref=e55]:
+            - strong [ref=e56]: "El análisis:"
+            - text: Interpretamos esos datos para entregarte un resultado objetivo.
+        - heading "3. ¿Cuánto tiempo tarda todo el proceso?" [level=3] [ref=e57]
+        - paragraph [ref=e58]: Para garantizar un resultado de calidad, no podemos apresurarnos. Una prueba de polígrafo bien hecha dura normalmente entre 90 y 120 minutos según estándares internacionales. Este tiempo es necesario para que la persona evaluada esté tranquila y el procedimiento se haga correctamente.
+        - heading "4. ¿Qué se necesita para hacerle la prueba a un empleado o candidato?" [level=3] [ref=e59]
+        - paragraph [ref=e60]: El requisito más importante es el consentimiento. La poligrafía es un proceso voluntario; la persona debe firmar una autorización escrita aceptando someterse a la evaluación. No se puede obligar a nadie, ya que la cooperación es clave para el éxito de la prueba, nosotros nos encargamos de todo.
+        - heading "5. ¿Puedo hacer todas las preguntas que quiera?" [level=3] [ref=e61]
+        - paragraph [ref=e62]: Muchas veces los clientes quieren aprovechar para preguntar de todo, pero para que la prueba de polígrafo sea efectiva, debemos enfocarnos. Aunque en la entrevista previa se tocan muchos temas, durante la prueba instrumental (con el equipo conectado) nos centramos generalmente en 3 o 4 preguntas clave relacionadas directamente con el objetivo (ej. "¿Robaste el dinero de la caja?", "¿Has cometido fraude en tu empleo anterior?"). Esto garantiza mayor precisión.
+        - heading "6. ¿Tengo que llevar a mi personal a sus oficinas o pueden venir a mi empresa?" [level=3] [ref=e63]
+        - paragraph [ref=e64]: Sabemos que la logística a veces es complicada. Por eso, las pruebas de polígrafo pueden realizarse en tus instalaciones si así lo prefieres. Solo necesitamos un espacio privado, libre de distracciones, con un escritorio y dos sillas. Nosotros nos encargamos del resto.
+        - heading "7. ¿Cuánto tardan en entregarme los resultados?" [level=3] [ref=e65]
+        - paragraph [ref=e66]: Entendemos que en situaciones de robos o contratación, el tiempo es dinero. Por lo general, entregamos los resultados en tan solo 4 horas después de haber concluido las pruebas y los informes técnicos en 24 horas.
+        - 'heading "Conclusión: La tranquilidad de decidir con la verdad" [level=2] [ref=e67]'
+        - paragraph [ref=e68]: Contratar un servicio de poligrafía no se trata solo de "atrapar a alguien", sino de crear un ambiente de trabajo seguro y honesto. Ya sea que necesites filtrar a un nuevo candidato o resolver un incidente interno, ahora sabes cómo funciona esta herramienta.
+        - paragraph [ref=e69]: Si tienes más dudas o necesitas asesoría sobre qué tipo de prueba es la ideal para tu caso, no dudes en contactarnos. Estamos aquí para ayudarte a descubrir la verdad.
+      - generic [ref=e70]:
+        - heading "¿Necesitas una Prueba de Polígrafo?" [level=3] [ref=e71]
+        - paragraph [ref=e72]: Contáctanos para conocer nuestros servicios y obtener más información sobre cómo podemos ayudarte.
+        - link "Cotizar Evaluación" [ref=e73] [cursor=pointer]:
+          - /url: /cotiza
+      - generic [ref=e74]:
+        - heading "Artículos Relacionados" [level=3] [ref=e75]
+        - generic [ref=e76]:
+          - link "¿Preempleo, Rutina o Investigación? ¿Preempleo, Rutina o Investigación? Descubre qué prueba de polígrafo necesitas" [ref=e77] [cursor=pointer]:
+            - /url: /blog/preempleo-rutina-investigacion
+            - img "¿Preempleo, Rutina o Investigación?" [ref=e79]
+            - heading "¿Preempleo, Rutina o Investigación? Descubre qué prueba de polígrafo necesitas" [level=4] [ref=e80]
+          - 'link "Garantiza la Verdad Garantiza la Verdad: 10 Requisitos Clave para una Prueba de Polígrafo Confiable" [ref=e81] [cursor=pointer]':
+            - /url: /blog/garantiza-la-verdad
+            - img "Garantiza la Verdad" [ref=e83]
+            - 'heading "Garantiza la Verdad: 10 Requisitos Clave para una Prueba de Polígrafo Confiable" [level=4] [ref=e84]'
+    - generic [ref=e86]:
+      - generic [ref=e87]:
+        - generic [ref=e88]:
+          - img "One True Logo" [ref=e90]
+          - paragraph [ref=e91]: Construimos vínculos confiables entre empresas y candidatos
+          - generic [ref=e92]:
+            - generic [ref=e93]: Síguenos
+            - generic [ref=e94]:
+              - link "Síguenos en LinkedIn" [ref=e95] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/david-coli-fiallo-75679a198?utm_source=share_via&utm_content=profile&utm_medium=member_android
+                - img [ref=e96]
+              - link "Síguenos en Facebook" [ref=e98] [cursor=pointer]:
+                - /url: https://www.facebook.com/share/1F8T24NNKE/
+                - img [ref=e99]
+              - link "Síguenos en Instagram" [ref=e101] [cursor=pointer]:
+                - /url: https://www.instagram.com/somosonetrue?igsh=bXNmOWYwaWpsdDVh
+                - img [ref=e102]
+              - link "Síguenos en YouTube" [ref=e104] [cursor=pointer]:
+                - /url: https://youtube.com/@somosonetrue?si=8OI3ZQ0A-4OzF_H0
+                - img [ref=e105]
+        - generic [ref=e107]:
+          - heading "Soluciones" [level=4] [ref=e108]
+          - list [ref=e109]:
+            - listitem [ref=e110]:
+              - link "Vetting" [ref=e111] [cursor=pointer]:
+                - /url: /vetting
+            - listitem [ref=e112]:
+              - link "Estudio de Confiabilidad 360°" [ref=e113] [cursor=pointer]:
+                - /url: /estudio-de-confiabilidad-360
+            - listitem [ref=e114]:
+              - link "Visitas Domiciliarias" [ref=e115] [cursor=pointer]:
+                - /url: /visitas-domiciliarias
+            - listitem [ref=e116]:
+              - link "Pruebas Toxicológicas" [ref=e117] [cursor=pointer]:
+                - /url: /pruebas-toxicologicas
+            - listitem [ref=e118]:
+              - link "Evaluaciones Psicométricas" [ref=e119] [cursor=pointer]:
+                - /url: /evaluaciones-psicometricas
+        - generic [ref=e120]:
+          - heading "Contacto" [level=4] [ref=e121]
+          - generic [ref=e122]:
+            - list [ref=e124]:
+              - listitem [ref=e125]:
+                - img [ref=e126]
+                - link "info@somosonetrue.com" [ref=e129] [cursor=pointer]:
+                  - /url: mailto:info@somosonetrue.com
+              - listitem [ref=e130]:
+                - img [ref=e131]
+                - link "098 129 6179" [ref=e133] [cursor=pointer]:
+                  - /url: tel:0981296179
+            - list [ref=e135]:
+              - listitem [ref=e136]:
+                - img [ref=e137]
+                - generic [ref=e140]:
+                  - strong [ref=e141]: Agencia Quito
+                  - text: "Av. Pérez Guerreo OE3-124 y San Gregorio, Instituto de Diagnóstico Médico, tercer piso, oficina #303, Quito-Ecuador."
+              - listitem [ref=e142]:
+                - img [ref=e143]
+                - generic [ref=e146]:
+                  - strong [ref=e147]: Agencia Guayaquil
+                  - text: Urdenor 2, Manzana 219, Solar 9
+      - generic [ref=e148]:
+        - paragraph [ref=e149]: © Copyright One True 2026
+        - link "Política de Privacidad y Cookies" [ref=e151] [cursor=pointer]:
+          - /url: "#"
+  - button "Open Next.js Dev Tools" [ref=e157] [cursor=pointer]:
+    - img [ref=e158]

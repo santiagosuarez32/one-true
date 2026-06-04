@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 export default function PruebaDeHonestidadEticaYValoresPage() {
@@ -36,6 +37,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
           <div className="max-w-5xl text-left">
             
             {/* Tag Prefix */}
+            <Breadcrumbs />
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-[3px] bg-[#FFC107]" />
               <span
@@ -109,7 +111,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
 
       {/* Sobre el Servicio Section */}
       <section className="bg-white py-20">
-        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16">
+        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
           <div className="flex flex-col gap-16">
             
             {/* ENCABEZADO — Título */}
@@ -263,7 +265,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
 
       {/* Características Generales Section */}
       <section className="bg-white py-16 md:py-24">
-        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1000px] mx-auto px-8 md:px-12 lg:px-16">
+        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1000px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-12 h-[2px] bg-[#700FA3]" />
             <span
@@ -287,29 +289,29 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
           </h2>
 
           <div className="overflow-hidden rounded border border-[#700FA3]/20 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
-            <table className="w-full text-left border-collapse bg-white">
+            <table className="w-full table-fixed text-left border-collapse bg-white">
               <thead>
                 <tr className="bg-[#700FA3] border-b-2 border-[#FFC107]">
-                  <th className="py-5 px-6 font-bold text-white text-lg w-1/3" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Característica</th>
-                  <th className="py-5 px-6 font-bold text-white text-lg w-2/3 border-l border-[#700FA3]/30" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Especificación Técnica</th>
+                  <th className="py-4 px-3 sm:py-5 sm:px-6 font-bold text-white text-sm sm:text-lg w-1/3 break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Característica</th>
+                  <th className="py-4 px-3 sm:py-5 sm:px-6 font-bold text-white text-sm sm:text-lg w-2/3 border-l border-[#700FA3]/30 break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Especificación Técnica</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#700FA3]/20">
                 <tr className="bg-white">
-                  <td className="py-5 px-6 font-semibold text-[#48255A]" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Volumen de Evaluación</td>
-                  <td className="py-5 px-6 text-[#525252] font-light border-l border-[#700FA3]/20" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>90 reactivos dinámicos y validados psicométricamente.</td>
+                  <td className="py-4 px-3 sm:py-5 sm:px-6 font-semibold text-[#48255A] text-sm sm:text-base break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Volumen de Evaluación</td>
+                  <td className="py-4 px-3 sm:py-5 sm:px-6 text-[#525252] font-light border-l border-[#700FA3]/20 text-sm sm:text-base break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>90 reactivos dinámicos y validados psicométricamente.</td>
                 </tr>
                 <tr className="bg-[#700FA3]/5">
-                  <td className="py-5 px-6 font-semibold text-[#48255A]" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Modalidad de Aplicación</td>
-                  <td className="py-5 px-6 text-[#525252] font-light border-l border-[#700FA3]/20" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Formato flexible: 100% online.</td>
+                  <td className="py-4 px-3 sm:py-5 sm:px-6 font-semibold text-[#48255A] text-sm sm:text-base break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Modalidad de Aplicación</td>
+                  <td className="py-4 px-3 sm:py-5 sm:px-6 text-[#525252] font-light border-l border-[#700FA3]/20 text-sm sm:text-base break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Formato flexible: 100% online.</td>
                 </tr>
                 <tr className="bg-white">
-                  <td className="py-5 px-6 font-semibold text-[#48255A]" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Entrega de Resultados</td>
-                  <td className="py-5 px-6 text-[#525252] font-light border-l border-[#700FA3]/20" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Reportes analíticos disponibles de forma inmediata tras finalizar la prueba.</td>
+                  <td className="py-4 px-3 sm:py-5 sm:px-6 font-semibold text-[#48255A] text-sm sm:text-base break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Entrega de Resultados</td>
+                  <td className="py-4 px-3 sm:py-5 sm:px-6 text-[#525252] font-light border-l border-[#700FA3]/20 text-sm sm:text-base break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Reportes analíticos disponibles de forma inmediata tras finalizar la prueba.</td>
                 </tr>
                 <tr className="bg-[#700FA3]/5">
-                  <td className="py-5 px-6 font-semibold text-[#48255A]" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Metodología</td>
-                  <td className="py-5 px-6 text-[#525252] font-light border-l border-[#700FA3]/20" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Indicador referencial de alta precisión para complementar filtros de seguridad y selección.</td>
+                  <td className="py-4 px-3 sm:py-5 sm:px-6 font-semibold text-[#48255A] text-sm sm:text-base break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Metodología</td>
+                  <td className="py-4 px-3 sm:py-5 sm:px-6 text-[#525252] font-light border-l border-[#700FA3]/20 text-sm sm:text-base break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Indicador referencial de alta precisión para complementar filtros de seguridad y selección.</td>
                 </tr>
               </tbody>
             </table>
@@ -319,7 +321,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
 
       {/* ¿Cuándo implementar esta evaluación? Section */}
       <section className="bg-white py-16 md:py-24">
-        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16">
+        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
           <div className="flex items-center gap-3 mb-6 justify-center">
             <div className="w-12 h-[2px] bg-[#700FA3]" />
             <span

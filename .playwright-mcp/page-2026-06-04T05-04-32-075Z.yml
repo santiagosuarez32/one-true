@@ -1,0 +1,309 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e4]:
+      - link "Ir a la página de inicio de One True" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "One True Ecuador Logo" [ref=e7]
+      - navigation [ref=e9]:
+        - link "Inicio" [ref=e10] [cursor=pointer]:
+          - /url: /
+        - link "Pruebas Poligráficas" [ref=e11] [cursor=pointer]:
+          - /url: /pruebas-poligraficas
+        - generic [ref=e12]:
+          - link "Evaluaciones" [ref=e13] [cursor=pointer]:
+            - /url: /#services
+            - text: Evaluaciones
+            - img [ref=e14]
+          - generic:
+            - generic:
+              - link "Vetting":
+                - /url: /vetting
+              - link "Estudio de Confiabilidad 360º":
+                - /url: /estudio-de-confiabilidad-360
+              - link "Visitas Domiciliarias":
+                - /url: /visitas-domiciliarias
+              - link "Pruebas Toxicológicas":
+                - /url: /pruebas-toxicologicas
+              - link "Evaluaciones Psicométricas":
+                - /url: /evaluaciones-psicometricas
+              - link "Prueba de honestidad ética y valores":
+                - /url: /prueba-de-honestidad-etica-y-valores
+        - generic [ref=e16]:
+          - link "Academia" [ref=e17] [cursor=pointer]:
+            - /url: /#service-7
+            - text: Academia
+            - img [ref=e18]
+          - generic:
+            - generic:
+              - link "Curso Básico en Poligrafía 400 H":
+                - /url: /curso-basico-en-poligrafia
+              - link "Cursos Avanzados en Poligrafía":
+                - /url: /cursos-avanzados-en-poligrafia
+              - link "Formaciones Complementarias":
+                - /url: /formaciones-complementarias
+              - link "Calendario Académico":
+                - /url: /#service-7
+        - link "Comunidad" [ref=e20] [cursor=pointer]:
+          - /url: /comunidad
+        - generic [ref=e21]:
+          - link "Aprende gratis" [ref=e22] [cursor=pointer]:
+            - /url: /#recursos
+            - text: Aprende gratis
+            - img [ref=e23]
+          - generic:
+            - generic:
+              - link "Blog":
+                - /url: /blog
+              - link "Podcast":
+                - /url: /podcast
+              - link "Ebook":
+                - /url: /ebook
+      - link "Cotiza gratis" [ref=e26] [cursor=pointer]:
+        - /url: /cotiza
+    - generic [ref=e27]:
+      - img "Cursos Avanzados en Poligrafía - One True Academia"
+      - generic [ref=e29]:
+        - navigation "Ruta de navegación" [ref=e30]:
+          - list [ref=e31]:
+            - listitem [ref=e32]:
+              - link "Inicio" [ref=e33] [cursor=pointer]:
+                - /url: /
+              - generic [ref=e34]: ›
+            - listitem [ref=e35]:
+              - link "Academia" [ref=e36] [cursor=pointer]:
+                - /url: /#service-7
+              - generic [ref=e37]: ›
+            - listitem [ref=e38]:
+              - generic [ref=e39]: Cursos Avanzados en Poligrafía
+        - generic [ref=e42]: Especialización para poligrafistas certificados.
+        - heading "Cursos Avanzados en Poligrafía" [level=1] [ref=e43]:
+          - text: Cursos Avanzados en
+          - strong [ref=e44]: Poligrafía
+        - paragraph [ref=e45]:
+          - text: Profundice sus competencias técnicas con módulos especializados diseñados para elevar su desempeño pericial. Ideal para profesionales que buscan actualización continua bajo los estándares de la
+          - strong [ref=e46]: APA
+          - text: .
+        - generic [ref=e47]:
+          - link "Ver módulos disponibles" [ref=e48] [cursor=pointer]:
+            - /url: "#modulos"
+          - link "Solicitar información" [ref=e49] [cursor=pointer]:
+            - /url: "#contacto"
+    - generic [ref=e51]:
+      - generic [ref=e52]:
+        - generic [ref=e55]: Programa Avanzado
+        - heading "Módulos de Especialización" [level=2] [ref=e56]
+        - paragraph [ref=e57]: Seleccione el área en la que desea profundizar. Cada módulo combina teoría actualizada con práctica supervisada.
+      - generic [ref=e58]:
+        - article [ref=e59]:
+          - img "Entrevista Pretest" [ref=e62]
+          - generic [ref=e64]:
+            - generic [ref=e67]: Especialización avanzada
+            - heading "Entrevista Pretest" [level=3] [ref=e68]
+            - paragraph [ref=e69]: Estructuración y conducción de la entrevista previa al examen. Técnicas de rapport, formulación de preguntas relevantes y detección de conductas evasivas o inconsistentes.
+            - link "Consultar este módulo" [ref=e70] [cursor=pointer]:
+              - /url: /entrevista-pretest
+              - text: Consultar este módulo
+              - img [ref=e71]
+        - article [ref=e73]:
+          - img "Técnicas Poligráficas" [ref=e76]
+          - generic [ref=e78]:
+            - generic [ref=e81]: Especialización avanzada
+            - heading "Técnicas Poligráficas" [level=3] [ref=e82]
+            - paragraph [ref=e83]: Dominio de protocolos comparativos, de conocimiento y de screening bajo estándares APA. Aplicación de técnicas especializadas en distintos contextos periciales y operativos.
+            - link "Consultar este módulo" [ref=e84] [cursor=pointer]:
+              - /url: /tecnicas-poligraficas
+              - text: Consultar este módulo
+              - img [ref=e85]
+        - article [ref=e87]:
+          - img "Calificación de Gráficas - Análisis de Datos" [ref=e90]
+          - generic [ref=e92]:
+            - generic [ref=e95]: Especialización avanzada
+            - heading "Calificación de Gráficas - Análisis de Datos" [level=3] [ref=e96]
+            - paragraph [ref=e97]: Interpretación numérica y visual de trazados poligráficos. Análisis estadístico de componentes fisiológicos y criterios de evaluación objetiva para decisiones periciales.
+            - link "Consultar este módulo" [ref=e98] [cursor=pointer]:
+              - /url: /calificacion-graficas-analisis-datos
+              - text: Consultar este módulo
+              - img [ref=e99]
+        - article [ref=e101]:
+          - img "Sistema de Calificación ESS-M" [ref=e104]
+          - generic [ref=e106]:
+            - generic [ref=e109]: Especialización avanzada
+            - heading "Sistema de Calificación ESS-M" [level=3] [ref=e110]
+            - paragraph [ref=e111]: Formación especializada en el sistema empírico de puntuación ESS-M para lograr una calificación consistente, reproducible y científicamente validada.
+            - link "Consultar este módulo" [ref=e112] [cursor=pointer]:
+              - /url: /sistema-calificacion-ess-m
+              - text: Consultar este módulo
+              - img [ref=e113]
+        - article [ref=e115]:
+          - img "Control de Calidad en Poligrafía" [ref=e118]
+          - generic [ref=e120]:
+            - generic [ref=e123]: Especialización avanzada
+            - heading "Control de Calidad en Poligrafía" [level=3] [ref=e124]
+            - paragraph [ref=e125]: Protocolos de auditoría, revisión por pares y mejora continua en la práctica poligráfica profesional. Garantía de rigor técnico y cumplimiento normativo.
+            - link "Consultar este módulo" [ref=e126] [cursor=pointer]:
+              - /url: /control-de-calidad-en-poligrafia
+              - text: Consultar este módulo
+              - img [ref=e127]
+    - generic [ref=e131]:
+      - generic [ref=e132]:
+        - img "One True Logo" [ref=e134]
+        - heading "Contactos" [level=2] [ref=e135]
+        - generic [ref=e136]:
+          - generic [ref=e137]:
+            - img [ref=e138]
+            - generic [ref=e140]:
+              - heading "Teléfono" [level=3] [ref=e141]
+              - link "098 129 6179" [ref=e142] [cursor=pointer]:
+                - /url: tel:0981296179
+          - generic [ref=e143]:
+            - img [ref=e144]
+            - generic [ref=e146]:
+              - heading "Agencia Quito" [level=3] [ref=e147]
+              - paragraph [ref=e148]: "Av. Pérez Guerrero OE3-124 y San Gregorio, Instituto de Diagnóstico Médico, tercer piso, oficina #303, Quito-Ecuador."
+          - generic [ref=e149]:
+            - img [ref=e150]
+            - generic [ref=e153]:
+              - heading "Agencia Guayaquil" [level=3] [ref=e154]
+              - paragraph [ref=e155]: Solar 26, Mz. 1022, Las Orquídeas, entre lavandería Perfect Wash y Dash Óptica.
+          - generic [ref=e156]:
+            - img [ref=e157]
+            - generic [ref=e159]:
+              - heading "Correo" [level=3] [ref=e160]
+              - link "info@somosonetrue.com" [ref=e161] [cursor=pointer]:
+                - /url: mailto:info@somosonetrue.com
+        - generic [ref=e162]:
+          - heading "Síguenos:" [level=3] [ref=e163]
+          - generic [ref=e164]:
+            - link "Síguenos en Facebook" [ref=e165] [cursor=pointer]:
+              - /url: https://www.facebook.com/somosonetrue
+              - img [ref=e166]
+            - link "Síguenos en Instagram" [ref=e168] [cursor=pointer]:
+              - /url: https://www.instagram.com/somosonetrue
+              - img [ref=e169]
+            - link "Síguenos en LinkedIn" [ref=e171] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/somosonetrue
+              - img [ref=e172]
+      - generic [ref=e176]:
+        - generic [ref=e177]:
+          - generic [ref=e178]:
+            - generic [ref=e179]: Nombre *
+            - textbox "Tu nombre" [ref=e180]
+          - generic [ref=e181]:
+            - generic [ref=e182]: Apellido *
+            - textbox "Tu apellido" [ref=e183]
+        - generic [ref=e184]:
+          - generic [ref=e185]: Correo electrónico *
+          - generic [ref=e186]:
+            - textbox "correo@empresa.com" [ref=e187]
+            - generic:
+              - img
+        - generic [ref=e188]:
+          - generic [ref=e189]: Número de teléfono *
+          - generic [ref=e190]:
+            - generic [ref=e191]:
+              - img "ec" [ref=e192]
+              - combobox [ref=e193] [cursor=pointer]:
+                - option "+593" [selected]
+                - option "+57"
+                - option "+51"
+                - option "+56"
+                - option "+54"
+                - option "+52"
+                - option "+34"
+                - option "+1"
+            - textbox "098 129 6179" [ref=e194]
+            - generic:
+              - img
+        - generic [ref=e195]:
+          - generic [ref=e196]: Ciudad *
+          - textbox "Tu ciudad" [ref=e197]
+        - generic [ref=e198]:
+          - generic [ref=e199]: Mensaje *
+          - textbox "Indícanos qué módulo avanzado te interesa..." [ref=e200]
+        - generic [ref=e201]:
+          - paragraph [ref=e202]:
+            - text: Al enviar este formulario, acepto que mis datos personales sean tratados de acuerdo con la
+            - link "Política de tratamiento de datos personales" [ref=e203] [cursor=pointer]:
+              - /url: "#"
+            - text: y los
+            - link "términos establecidos en ella" [ref=e204] [cursor=pointer]:
+              - /url: "#"
+            - text: .
+          - generic [ref=e205]:
+            - checkbox "Aceptar" [ref=e206] [cursor=pointer]
+            - generic [ref=e207] [cursor=pointer]: Aceptar
+        - button "Cotizar ahora" [ref=e208]
+        - generic [ref=e209]:
+          - generic [ref=e210]: O escríbenos
+          - link "+593 98 129 6179" [ref=e212] [cursor=pointer]:
+            - /url: https://api.whatsapp.com/send?phone=593981296179&text=Hola!%20Deseo%20conocer%20mas%20informacion%20sobre%20los%20Cursos%20Avanzados%20en%20Poligrafia.
+            - generic [ref=e213]:
+              - img [ref=e215]
+              - generic [ref=e217]: +593 98 129 6179
+    - generic [ref=e219]:
+      - generic [ref=e220]:
+        - generic [ref=e221]:
+          - img "One True Logo" [ref=e223]
+          - paragraph [ref=e224]: Construimos vínculos confiables entre empresas y candidatos
+          - generic [ref=e225]:
+            - generic [ref=e226]: Síguenos
+            - generic [ref=e227]:
+              - link "Síguenos en LinkedIn" [ref=e228] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/david-coli-fiallo-75679a198?utm_source=share_via&utm_content=profile&utm_medium=member_android
+                - img [ref=e229]
+              - link "Síguenos en Facebook" [ref=e231] [cursor=pointer]:
+                - /url: https://www.facebook.com/share/1F8T24NNKE/
+                - img [ref=e232]
+              - link "Síguenos en Instagram" [ref=e234] [cursor=pointer]:
+                - /url: https://www.instagram.com/somosonetrue?igsh=bXNmOWYwaWpsdDVh
+                - img [ref=e235]
+              - link "Síguenos en YouTube" [ref=e237] [cursor=pointer]:
+                - /url: https://youtube.com/@somosonetrue?si=8OI3ZQ0A-4OzF_H0
+                - img [ref=e238]
+        - generic [ref=e240]:
+          - heading "Soluciones" [level=4] [ref=e241]
+          - list [ref=e242]:
+            - listitem [ref=e243]:
+              - link "Vetting" [ref=e244] [cursor=pointer]:
+                - /url: /vetting
+            - listitem [ref=e245]:
+              - link "Estudio de Confiabilidad 360°" [ref=e246] [cursor=pointer]:
+                - /url: /estudio-de-confiabilidad-360
+            - listitem [ref=e247]:
+              - link "Visitas Domiciliarias" [ref=e248] [cursor=pointer]:
+                - /url: /visitas-domiciliarias
+            - listitem [ref=e249]:
+              - link "Pruebas Toxicológicas" [ref=e250] [cursor=pointer]:
+                - /url: /pruebas-toxicologicas
+            - listitem [ref=e251]:
+              - link "Evaluaciones Psicométricas" [ref=e252] [cursor=pointer]:
+                - /url: /evaluaciones-psicometricas
+        - generic [ref=e253]:
+          - heading "Contacto" [level=4] [ref=e254]
+          - generic [ref=e255]:
+            - list [ref=e257]:
+              - listitem [ref=e258]:
+                - img [ref=e259]
+                - link "info@somosonetrue.com" [ref=e262] [cursor=pointer]:
+                  - /url: mailto:info@somosonetrue.com
+              - listitem [ref=e263]:
+                - img [ref=e264]
+                - link "098 129 6179" [ref=e266] [cursor=pointer]:
+                  - /url: tel:0981296179
+            - list [ref=e268]:
+              - listitem [ref=e269]:
+                - img [ref=e270]
+                - generic [ref=e273]:
+                  - strong [ref=e274]: Agencia Quito
+                  - text: "Av. Pérez Guerreo OE3-124 y San Gregorio, Instituto de Diagnóstico Médico, tercer piso, oficina #303, Quito-Ecuador."
+              - listitem [ref=e275]:
+                - img [ref=e276]
+                - generic [ref=e279]:
+                  - strong [ref=e280]: Agencia Guayaquil
+                  - text: Urdenor 2, Manzana 219, Solar 9
+      - generic [ref=e281]:
+        - paragraph [ref=e282]: © Copyright One True 2026
+        - link "Política de Privacidad y Cookies" [ref=e284] [cursor=pointer]:
+          - /url: "#"
+  - button "Open Next.js Dev Tools" [ref=e290] [cursor=pointer]:
+    - img [ref=e291]

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const MODULOS_AVANZADOS = [
@@ -65,6 +66,7 @@ export default function CursosAvanzadosPoligrafiaPage() {
 
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 z-10 flex justify-start items-center">
           <div className="max-w-3xl text-left">
+            <Breadcrumbs />
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-[3px] bg-[#FFC107]" />
               <span

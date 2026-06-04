@@ -1,0 +1,144 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - link "Ir a la página de inicio de One True" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - img "One True Ecuador Logo" [ref=e7]
+        - button "Abrir menú" [ref=e9]
+      - generic [ref=e14]:
+        - link "Ir a la página de inicio de One True" [ref=e16] [cursor=pointer]:
+          - /url: /
+          - img "One True Ecuador Logo" [ref=e17]
+        - navigation [ref=e18]:
+          - link "Inicio" [ref=e19] [cursor=pointer]:
+            - /url: /
+          - link "Pruebas Poligráficas" [ref=e20] [cursor=pointer]:
+            - /url: /pruebas-poligraficas
+          - generic [ref=e21]:
+            - button "Evaluaciones" [ref=e22]:
+              - text: Evaluaciones
+              - img [ref=e23]
+            - generic [ref=e25]:
+              - link "Vetting" [ref=e26] [cursor=pointer]:
+                - /url: /vetting
+              - link "Estudio de Confiabilidad 360º" [ref=e27] [cursor=pointer]:
+                - /url: /estudio-de-confiabilidad-360
+              - link "Visitas Domiciliarias" [ref=e28] [cursor=pointer]:
+                - /url: /visitas-domiciliarias
+              - link "Pruebas Toxicológicas" [ref=e29] [cursor=pointer]:
+                - /url: /pruebas-toxicologicas
+              - link "Evaluaciones Psicométricas" [ref=e30] [cursor=pointer]:
+                - /url: /evaluaciones-psicometricas
+              - link "Prueba de honestidad ética y valores" [ref=e31] [cursor=pointer]:
+                - /url: /prueba-de-honestidad-etica-y-valores
+          - generic [ref=e32]:
+            - button "Academia" [ref=e33]:
+              - text: Academia
+              - img [ref=e34]
+            - generic [ref=e36]:
+              - link "Curso Básico en Poligrafía 400 H" [ref=e37] [cursor=pointer]:
+                - /url: /curso-basico-en-poligrafia
+              - link "Cursos Avanzados en Poligrafía" [ref=e38] [cursor=pointer]:
+                - /url: /cursos-avanzados-en-poligrafia
+              - link "Formaciones Complementarias" [ref=e39] [cursor=pointer]:
+                - /url: /formaciones-complementarias
+              - link "Calendario Académico" [ref=e40] [cursor=pointer]:
+                - /url: /#service-7
+          - link "Comunidad" [ref=e41] [cursor=pointer]:
+            - /url: /comunidad
+          - generic [ref=e42]:
+            - button "Aprende gratis" [ref=e43]:
+              - text: Aprende gratis
+              - img [ref=e44]
+            - generic [ref=e46]:
+              - link "Blog" [ref=e47] [cursor=pointer]:
+                - /url: /blog
+              - link "Podcast" [ref=e48] [cursor=pointer]:
+                - /url: /podcast
+              - link "Ebook" [ref=e49] [cursor=pointer]:
+                - /url: /ebook
+        - link "Cotizar gratis servicio de poligrafía y seguridad" [ref=e51] [cursor=pointer]:
+          - /url: /cotiza
+          - text: Cotiza gratis
+    - generic [ref=e55]:
+      - generic [ref=e56]:
+        - generic [ref=e59]: Ebook gratuito
+        - heading "Guía práctica para saber si estoy contratando un servicio de poligrafía confiable." [level=2] [ref=e60]
+        - paragraph [ref=e61]: Descarga nuestro Ebook gratuito con la entrega del mes. Nuestro equipo trabaja constantemente para seguir trayendo nuevos ebooks gratuitos una vez al mes.
+      - generic [ref=e63]:
+        - 'img "Portada del Ebook One True: Guía práctica para contratar un servicio de poligrafía confiable en Ecuador" [ref=e66]'
+        - generic [ref=e67]:
+          - textbox "Correo" [ref=e68]
+          - textbox "WhatsApp" [ref=e69]
+          - textbox "¿Qué puesto tienes en tu empresa?" [ref=e70]
+          - textbox "¿A qué se dedica tu empresa?" [ref=e71]
+          - textbox "¿Cuántas personas trabajan en tu empresa?" [ref=e72]
+          - button "Descargar u obtener Ebook gratuito de Poligrafía" [ref=e73]: Obtener Ebook Gratis
+    - generic [ref=e75]:
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - img "One True Logo" [ref=e79]
+          - paragraph [ref=e80]: Construimos vínculos confiables entre empresas y candidatos
+          - generic [ref=e81]:
+            - generic [ref=e82]: Síguenos
+            - generic [ref=e83]:
+              - link "Síguenos en LinkedIn" [ref=e84] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/david-coli-fiallo-75679a198?utm_source=share_via&utm_content=profile&utm_medium=member_android
+                - img [ref=e85]
+              - link "Síguenos en Facebook" [ref=e87] [cursor=pointer]:
+                - /url: https://www.facebook.com/share/1F8T24NNKE/
+                - img [ref=e88]
+              - link "Síguenos en Instagram" [ref=e90] [cursor=pointer]:
+                - /url: https://www.instagram.com/somosonetrue?igsh=bXNmOWYwaWpsdDVh
+                - img [ref=e91]
+              - link "Síguenos en YouTube" [ref=e93] [cursor=pointer]:
+                - /url: https://youtube.com/@somosonetrue?si=8OI3ZQ0A-4OzF_H0
+                - img [ref=e94]
+        - generic [ref=e96]:
+          - heading "Soluciones" [level=4] [ref=e97]
+          - list [ref=e98]:
+            - listitem [ref=e99]:
+              - link "Vetting" [ref=e100] [cursor=pointer]:
+                - /url: /vetting
+            - listitem [ref=e101]:
+              - link "Estudio de Confiabilidad 360°" [ref=e102] [cursor=pointer]:
+                - /url: /estudio-de-confiabilidad-360
+            - listitem [ref=e103]:
+              - link "Visitas Domiciliarias" [ref=e104] [cursor=pointer]:
+                - /url: /visitas-domiciliarias
+            - listitem [ref=e105]:
+              - link "Pruebas Toxicológicas" [ref=e106] [cursor=pointer]:
+                - /url: /pruebas-toxicologicas
+            - listitem [ref=e107]:
+              - link "Evaluaciones Psicométricas" [ref=e108] [cursor=pointer]:
+                - /url: /evaluaciones-psicometricas
+        - generic [ref=e109]:
+          - heading "Contacto" [level=4] [ref=e110]
+          - generic [ref=e111]:
+            - list [ref=e113]:
+              - listitem [ref=e114]:
+                - img [ref=e115]
+                - link "info@somosonetrue.com" [ref=e118] [cursor=pointer]:
+                  - /url: mailto:info@somosonetrue.com
+              - listitem [ref=e119]:
+                - img [ref=e120]
+                - link "098 129 6179" [ref=e122] [cursor=pointer]:
+                  - /url: tel:0981296179
+            - list [ref=e124]:
+              - listitem [ref=e125]:
+                - img [ref=e126]
+                - generic [ref=e129]:
+                  - strong [ref=e130]: Agencia Quito
+                  - text: "Av. Pérez Guerreo OE3-124 y San Gregorio, Instituto de Diagnóstico Médico, tercer piso, oficina #303, Quito-Ecuador."
+              - listitem [ref=e131]:
+                - img [ref=e132]
+                - generic [ref=e135]:
+                  - strong [ref=e136]: Agencia Guayaquil
+                  - text: Urdenor 2, Manzana 219, Solar 9
+      - generic [ref=e137]:
+        - paragraph [ref=e138]: © Copyright One True 2026
+        - link "Política de Privacidad y Cookies" [ref=e140] [cursor=pointer]:
+          - /url: "#"
+  - button "Open Next.js Dev Tools" [ref=e146] [cursor=pointer]:
+    - img [ref=e147]

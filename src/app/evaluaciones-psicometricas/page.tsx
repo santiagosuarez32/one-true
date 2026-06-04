@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 export default function EvaluacionesPsicometricasPage() {
@@ -38,6 +39,7 @@ export default function EvaluacionesPsicometricasPage() {
           <div className="max-w-3xl text-left">
             
             {/* Tag Prefix */}
+            <Breadcrumbs />
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-[3px] bg-[#FFC107]" />
               <span

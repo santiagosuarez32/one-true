@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const focusAreas = [
@@ -78,6 +79,7 @@ export default function EntrevistaPretestPage() {
 
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 z-10 flex justify-start items-center">
           <div className="max-w-5xl text-left">
+            <Breadcrumbs />
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-[3px] bg-[#FFC107]" />
               <span
@@ -149,7 +151,7 @@ export default function EntrevistaPretestPage() {
       </section>
 
       <section className="bg-white py-20">
-        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16">
+        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
           <div className="flex flex-col gap-16">
             <div className="flex flex-col gap-12 items-start">
               <div className="w-full max-w-4xl flex flex-col text-left">
@@ -224,7 +226,7 @@ export default function EntrevistaPretestPage() {
 
       {/* Características Generales Section */}
       <section className="bg-white py-16 md:py-24">
-        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1000px] mx-auto px-8 md:px-12 lg:px-16">
+        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1000px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-12 h-[2px] bg-[#700FA3]" />
             <span
@@ -248,21 +250,21 @@ export default function EntrevistaPretestPage() {
           </h2>
 
           <div className="overflow-hidden rounded border border-[#700FA3]/20 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
-            <table className="w-full text-left border-collapse bg-white">
+            <table className="w-full table-fixed text-left border-collapse bg-white">
               <thead>
                 <tr className="bg-[#700FA3] border-b-2 border-[#FFC107]">
-                  <th className="py-5 px-6 font-bold text-white text-lg w-1/3" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Característica</th>
-                  <th className="py-5 px-6 font-bold text-white text-lg w-2/3 border-l border-[#700FA3]/30" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Especificación Técnica</th>
+                  <th className="py-4 px-3 sm:py-5 sm:px-6 font-bold text-white text-sm sm:text-lg w-1/3 break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Característica</th>
+                  <th className="py-4 px-3 sm:py-5 sm:px-6 font-bold text-white text-sm sm:text-lg w-2/3 border-l border-[#700FA3]/30 break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Especificación Técnica</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#700FA3]/20">
                 <tr className="bg-white">
-                  <td className="py-5 px-6 font-semibold text-[#48255A] align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Modalidad</td>
-                  <td className="py-5 px-6 text-[#525252] font-light border-l border-[#700FA3]/20" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Presencial o en línea.</td>
+                  <td className="py-4 px-3 sm:py-5 sm:px-6 font-semibold text-[#48255A] text-sm sm:text-base break-words align-top align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Modalidad</td>
+                  <td className="py-4 px-3 sm:py-5 sm:px-6 text-[#525252] font-light border-l border-[#700FA3]/20 text-sm sm:text-base break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Presencial o en línea.</td>
                 </tr>
                 <tr className="bg-[#700FA3]/5">
-                  <td className="py-5 px-6 font-semibold text-[#48255A] align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>¿Qué incluye este curso?</td>
-                  <td className="py-5 px-6 text-[#525252] font-light border-l border-[#700FA3]/20" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                  <td className="py-4 px-3 sm:py-5 sm:px-6 font-semibold text-[#48255A] text-sm sm:text-base break-words align-top align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>¿Qué incluye este curso?</td>
+                  <td className="py-4 px-3 sm:py-5 sm:px-6 text-[#525252] font-light border-l border-[#700FA3]/20 text-sm sm:text-base break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                     <ul className="list-disc pl-5 flex flex-col gap-2">
                       <li>15 horas de duración</li>
                       <li>32 lecciones</li>

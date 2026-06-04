@@ -41,7 +41,7 @@ export default function BlogArticlePage() {
           </div>
 
           <h1
-            className="text-3xl md:text-5xl font-bold mb-6"
+            className="max-md:text-2xl! md:text-5xl font-bold mb-6"
             style={{
               color: "#48255A",
               fontFamily: "var(--font-montserrat), sans-serif",
