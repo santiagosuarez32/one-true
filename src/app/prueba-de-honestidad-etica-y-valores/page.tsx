@@ -164,9 +164,9 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h3 
-                    className="text-lg md:text-xl font-bold text-[#48255A] mb-4"
-                    style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}
+                  <h3
+                    className="text-lg md:text-xl font-bold text-[#48255A]"
+                    style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3", marginBottom: "14px" }}
                   >
                     Factores de Integridad y Ética Laboral
                   </h3>
@@ -199,9 +199,9 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h3 
-                    className="text-lg md:text-xl font-bold text-[#48255A] mb-4"
-                    style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}
+                  <h3
+                    className="text-lg md:text-xl font-bold text-[#48255A]"
+                    style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3", marginBottom: "14px" }}
                   >
                     Identificación de Comportamientos Riesgosos
                   </h3>
@@ -230,9 +230,9 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h3 
-                    className="text-lg md:text-xl font-bold text-[#48255A] mb-4"
-                    style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}
+                  <h3
+                    className="text-lg md:text-xl font-bold text-[#48255A]"
+                    style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3", marginBottom: "14px" }}
                   >
                     Alineación y Cultura Organizacional
                   </h3>
@@ -346,7 +346,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
             {/* Card 1 */}
             <div className="flex flex-col bg-white border border-neutral-200/80 rounded-xl p-8 shadow-sm hover:shadow-md hover:border-[#FFC107]/50 transition-all duration-300 relative pl-6">
               <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#FFC107] rounded-l-xl" />
-              <h3 className="text-lg md:text-xl font-bold mb-4 text-[#48255A]" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
+              <h3 className="text-lg md:text-xl font-bold text-[#48255A]" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3", marginBottom: "14px" }}>
                 Procesos de Selección (Pre-empleo)
               </h3>
               <p className="text-[#525252] text-sm leading-relaxed font-light flex-1" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
@@ -357,7 +357,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
             {/* Card 2 */}
             <div className="flex flex-col bg-white border border-neutral-200/80 rounded-xl p-8 shadow-sm hover:shadow-md hover:border-[#FFC107]/50 transition-all duration-300 relative pl-6">
               <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#FFC107] rounded-l-xl" />
-              <h3 className="text-lg md:text-xl font-bold mb-4 text-[#48255A]" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
+              <h3 className="text-lg md:text-xl font-bold text-[#48255A]" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3", marginBottom: "14px" }}>
                 Evaluaciones de Permanencia (Periódicas)
               </h3>
               <p className="text-[#525252] text-sm leading-relaxed font-light flex-1" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
@@ -368,7 +368,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
             {/* Card 3 */}
             <div className="flex flex-col bg-white border border-neutral-200/80 rounded-xl p-8 shadow-sm hover:shadow-md hover:border-[#FFC107]/50 transition-all duration-300 relative pl-6">
               <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#FFC107] rounded-l-xl" />
-              <h3 className="text-lg md:text-xl font-bold mb-4 text-[#48255A]" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
+              <h3 className="text-lg md:text-xl font-bold text-[#48255A]" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3", marginBottom: "14px" }}>
                 Promociones y Transferencias
               </h3>
               <p className="text-[#525252] text-sm leading-relaxed font-light flex-1" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>

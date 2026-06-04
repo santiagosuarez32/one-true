@@ -50,7 +50,7 @@ export default function Services() {
       href: "/pruebas-poligraficas"
     },
     {
-      title: "Vetting (Verificación de Antecedentes)",
+      title: "Vetting",
       desc: "Proteja la integridad de su empresa desde el primer día. Filtramos riesgos mediante el rastreo exhaustivo en más de 190 bases de datos nacionales e internacionales (Interpol/OFAC) para garantizar contrataciones 100% seguras.",
       image: "/servicios/2.webp",
       cta: "Ver detalles del servicio",

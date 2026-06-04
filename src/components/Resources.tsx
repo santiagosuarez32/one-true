@@ -124,6 +124,29 @@ export default function Resources() {
         }
       `}} />
       <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
+
+        {/* Header Section */}
+        <div className="flex flex-col items-center text-center mb-16">
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#48255A] mb-6"
+            style={{
+              fontFamily: "var(--font-montserrat), sans-serif",
+            }}
+          >
+            Aprende con nuestros recursos gratuitos
+          </h2>
+
+          <p
+            className="text-base sm:text-lg md:text-lg leading-relaxed max-w-4xl text-[#525252]"
+            style={{
+              fontFamily: "var(--font-montserrat), sans-serif",
+              fontWeight: "500",
+            }}
+          >
+            Eleva la seguridad de tu organización y optimiza decisiones críticas con nuestras soluciones en evaluación de confianza, credibilidad y formación avanzada. Explora nuestro blog, podcast y ebooks exclusivos para adquirir el conocimiento estratégico que necesitas para mitigar riesgos, asegurar el crecimiento de tu negocio, aprender de poligrafía y evaluación de la credibilidad desde un enfoque más accesible y dinámico.
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
           
           {/* First Grid Item: Text & CTA */}
@@ -154,16 +177,17 @@ export default function Resources() {
                 fontFamily: "var(--font-montserrat), sans-serif",
               }}
             >
-              Recursos de Valor y Blog
+              Artículos más recientes
             </h2>
             
-            <button
-              aria-label="Conocer más recursos y artículos del blog de One True"
-              className="px-6 py-3 bg-[#FFC107] text-[#411A56] font-bold rounded transition-colors duration-300 text-sm hover:bg-[#700FA3] hover:text-[#FFC107] mt-8"
+            <a
+              href="/blog"
+              aria-label="Chequea nuestro blog de One True"
+              className="inline-block px-6 py-3 bg-[#FFC107] text-[#411A56] font-bold rounded transition-colors duration-300 text-sm hover:bg-[#700FA3] hover:text-[#FFC107] mt-8"
               style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
             >
-              Conoce más
-            </button>
+              Chequea nuestro blog
+            </a>
           </div>
 
           {/* Remaining 3 Grid Items: Blog Cards */}

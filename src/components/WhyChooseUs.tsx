@@ -162,12 +162,12 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Centered Primary CTA Button */}
-        <button 
-          aria-label="Solicitar demostración gratuita de los servicios de One True"
-          className="px-8 py-3.5 bg-[#FFC107] text-[#411A56] font-bold rounded shadow-[0_4px_25px_rgba(255,193,7,0.15)] hover:bg-[#FFD54F] hover:scale-105 active:scale-95 transition-all duration-300 text-sm md:text-base tracking-wide" 
+        <button
+          aria-label="Contactar a un experto ahora"
+          className="px-8 py-3.5 bg-[#FFC107] text-[#411A56] font-bold rounded shadow-[0_4px_25px_rgba(255,193,7,0.15)] hover:bg-[#FFD54F] hover:scale-105 active:scale-95 transition-all duration-300 text-sm md:text-base tracking-wide"
           style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
         >
-          Solicitar demostración
+          Contactar a un experto ahora
         </button>
 
       </div>

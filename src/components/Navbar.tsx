@@ -8,8 +8,13 @@ export default function Navbar() {
   const [isAcademiaOpen, setIsAcademiaOpen] = useState(false);
   const [isAprendeOpen, setIsAprendeOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isBlogPage, setIsBlogPage] = useState(false);
 
   useEffect(() => {
+    // Check if current path is a blog page
+    const isBlog = typeof window !== 'undefined' && window.location.pathname.includes('/blog/');
+    setIsBlogPage(isBlog);
+
     const handleScroll = () => {
       if (window.scrollY > 40) {
         setIsScrolled(true);
@@ -70,7 +75,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 px-4 sm:px-6 md:px-8 transition-all duration-500 ${isScrolled
+      className={`fixed top-0 left-0 w-full z-50 px-4 sm:px-6 md:px-8 transition-all duration-500 ${(isScrolled || isBlogPage)
           ? "py-3 bg-[#700FA3] shadow-2xl border-[#9b51e0]/20"
           : "py-6 bg-transparent"
         }`}

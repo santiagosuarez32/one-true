@@ -367,15 +367,15 @@ export default function VettingPage() {
                 <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#FFC107] rounded-l-xl" />
                 
                 {/* Card Title */}
-                <h3 
-                  className="text-lg font-bold mb-3 text-[#48255A]"
-                  style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}
+                <h3
+                  className="text-lg font-bold text-[#48255A]"
+                  style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3", marginBottom: "14px" }}
                 >
                   {item.title}
                 </h3>
-                
+
                 {/* Description Text */}
-                <p 
+                <p
                   className="text-[#525252] text-sm leading-relaxed font-light flex-1"
                   style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                 >

@@ -68,7 +68,7 @@ export default function Clients() {
             width: "100%",
           }}
         >
-          Empresas que redujeron sus riesgo con nuestros servicios
+          Empresas que redujeron sus riesgo con nuestras soluciones
         </h2>
 
         {/* Inline CSS styles for the high-performance marquee */}

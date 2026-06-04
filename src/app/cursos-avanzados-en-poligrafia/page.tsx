@@ -9,38 +9,32 @@ const MODULOS_AVANZADOS = [
   {
     title: "Entrevista Pretest",
     desc: "Estructuración y conducción de la entrevista previa al examen. Técnicas de rapport, formulación de preguntas relevantes y detección de conductas evasivas o inconsistentes.",
-    image: "/pruebas-poligrafo/primer.webp",
+    image: "/cursos-avanzados/entrevista-pretest.png",
     href: "/entrevista-pretest",
   },
   {
     title: "Técnicas Poligráficas",
     desc: "Dominio de protocolos comparativos, de conocimiento y de screening bajo estándares APA. Aplicación de técnicas especializadas en distintos contextos periciales y operativos.",
-    image: "/servicios/1.webp",
+    image: "/cursos-avanzados/tecnicas-poligraficas.png",
     href: "/tecnicas-poligraficas",
   },
   {
     title: "Calificación de Gráficas - Análisis de Datos",
     desc: "Interpretación numérica y visual de trazados poligráficos. Análisis estadístico de componentes fisiológicos y criterios de evaluación objetiva para decisiones periciales.",
-    image: "/servicios/6.webp",
+    image: "/cursos-avanzados/calificacion-de-graficas.png",
     href: "/calificacion-graficas-analisis-datos",
   },
   {
     title: "Sistema de Calificación ESS-M",
     desc: "Formación especializada en el sistema empírico de puntuación ESS-M para lograr una calificación consistente, reproducible y científicamente validada.",
-    image: "/servicios/3.webp",
+    image: "/cursos-avanzados/ess-m.png",
     href: "/sistema-calificacion-ess-m",
   },
   {
     title: "Control de Calidad en Poligrafía",
     desc: "Protocolos de auditoría, revisión por pares y mejora continua en la práctica poligráfica profesional. Garantía de rigor técnico y cumplimiento normativo.",
-    image: "/servicios/8.webp",
+    image: "/cursos-avanzados/control-de-calidad-poligrafia.png",
     href: "/control-de-calidad-en-poligrafia",
-  },
-  {
-    title: "Formaciones Complementarias",
-    desc: "Especialización en competencias transversales: técnicas de entrevista, psicología del comportamiento, ética profesional, comunicación de resultados y aspectos legales en poligrafía.",
-    image: "/servicios/2.webp",
-    href: "/formaciones-complementarias",
   },
 ];
 

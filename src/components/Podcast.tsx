@@ -37,7 +37,7 @@ export default function Podcast() {
         {/* Left: Podcast Image (Static) */}
         <div ref={cardRef} className="w-full md:w-1/2 relative flex justify-center">
           <div className="absolute inset-0 bg-[#700FA3] blur-[100px] opacity-20 rounded-full"></div>
-          <div className="relative w-full max-w-[500px] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-neutral-200/50">
+          <div className="relative w-full max-w-[500px] aspect-[4/3] rounded-[20px] overflow-hidden shadow-2xl border-2 border-[#FFC107]">
             <img
               src="/blog/PODCAST.webp"
               alt="Podcast One True: Beneficio de un estudio de confiabilidad en Ecuador"
@@ -86,17 +86,14 @@ export default function Podcast() {
             Descubre en este episodio cómo un estudio de confiabilidad puede proteger tu empresa, reducir riesgos y asegurar que estás tomando las mejores decisiones en la gestión de tu talento humano.
           </p>
           
-          <button
-            aria-label="Escuchar el episodio del podcast ahora sobre detección de mentiras y poligrafía"
-            className="px-8 py-4 bg-[#FFC107] text-[#411A56] font-bold rounded flex items-center gap-3 transition-all duration-300 hover:bg-[#700FA3] hover:text-[#FFC107] shadow-[0_4px_20px_rgba(255,193,7,0.2)] hover:shadow-[0_4px_25px_rgba(112,15,163,0.3)] hover:-translate-y-1"
+          <a
+            href="/podcast"
+            aria-label="Ver más sobre el podcast de detección de mentiras y poligrafía"
+            className="px-8 py-4 bg-[#FFC107] text-[#411A56] font-bold rounded inline-block"
             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
           >
-            Escuchar ahora
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-               <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-               <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-            </svg>
-          </button>
+            Ver más
+          </a>
         </div>
 
       </div>

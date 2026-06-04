@@ -262,9 +262,9 @@ export default function CursoBasicoPoligrafiaPage() {
                 icon: <Certificate size={72} weight="thin" color="#700FA3" className="shrink-0" />
               }
             ].map((item, idx) => (
-              <div 
-                key={idx} 
-                className="flex flex-col bg-[#FFC107] rounded-3xl p-6 shadow-sm relative text-left"
+              <div
+                key={idx}
+                className="flex flex-col bg-white rounded-3xl p-6 shadow-sm relative text-left border border-neutral-200/80"
               >
                 {/* Icon Container with elegant soft glow background */}
                 <div className="flex justify-start mb-6 h-[76px] items-center text-[#700FA3] relative">
@@ -283,8 +283,8 @@ export default function CursoBasicoPoligrafiaPage() {
                 </h3>
                 
                 {/* Description Text */}
-                <p 
-                  className="text-[#411A56] text-sm leading-relaxed font-medium flex-1"
+                <p
+                  className="text-[#525252] text-sm leading-relaxed font-light flex-1"
                   style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                 >
                   {item.text}

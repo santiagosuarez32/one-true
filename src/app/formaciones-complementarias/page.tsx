@@ -67,10 +67,10 @@ export default function FormacionesComplementariasPage() {
         />
 
         <img
-          src="/servicios/1.webp"
+          src="/formaciones-complementarias.png"
           alt="Formaciones Complementarias - One True Academia"
           fetchPriority="high"
-          className="absolute inset-0 w-full h-full object-cover object-right-top z-0 opacity-40 mix-blend-overlay pointer-events-none"
+          className="absolute inset-0 w-full h-full object-cover object-right-center z-0 opacity-40 mix-blend-overlay pointer-events-none"
         />
 
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 z-10 flex justify-start items-center">
@@ -146,6 +146,20 @@ export default function FormacionesComplementariasPage() {
       <section className="bg-white py-20">
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16">
           <div className="mb-16 text-center">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <div className="w-10 h-[3px] bg-[#700FA3]" />
+              <span
+                style={{
+                  letterSpacing: "0.5px",
+                  fontSize: "16px",
+                  color: "#700FA3",
+                  fontWeight: "600",
+                  fontFamily: "var(--font-montserrat), sans-serif",
+                }}
+              >
+                Cursos Online
+              </span>
+            </div>
             <h2
               className="text-3xl md:text-4xl font-semibold mb-4"
               style={{
@@ -178,7 +192,7 @@ export default function FormacionesComplementariasPage() {
                   <img
                     src={curso.image}
                     alt={curso.title}
-                    className="w-full h-full object-cover"
+                    className={`w-full h-full object-cover ${index === 1 ? 'object-top' : ''}`}
                   />
                 </div>
 

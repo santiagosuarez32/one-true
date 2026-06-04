@@ -177,7 +177,7 @@ export default function Hero() {
 
               {/* Slide CTA Buttons */}
               <div className="flex flex-wrap items-center gap-6">
-                <button 
+                <button
                   aria-label={slide.cta}
                   className="px-8 py-3 rounded transition-all hover:brightness-110 shadow-lg"
                   style={{
@@ -192,34 +192,13 @@ export default function Hero() {
                     color: "#5F0091",
                     backgroundColor: "#FFC107",
                     display: "inline-block",
-                    textDecoration: "inherit",
+                    textDecoration: "none",
                     border: "none",
                     cursor: "pointer",
                   }}
                 >
                   <span className="elementor-button-text">{slide.cta}</span>
                 </button>
-                <a 
-                  href="#nosotros" 
-                  aria-label="Leer más acerca de nosotros"
-                  className="hover:underline transition-all"
-                  style={{
-                    WebkitTextSizeAdjust: "100%",
-                    WebkitTapHighlightColor: "transparent",
-                    fontFamily: "var(--font-montserrat), sans-serif",
-                    textAlign: "start",
-                    fontWeight: "600",
-                    backgroundColor: "transparent",
-                    outline: "none",
-                    boxShadow: "none",
-                    textDecoration: "none",
-                    fontSize: "inherit",
-                    lineHeight: "inherit",
-                    color: "#FFFFFF",
-                  }}
-                >
-                  Leer más acerca de nosotros
-                </a>
               </div>
             </div>
           ))}

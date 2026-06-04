@@ -21,21 +21,21 @@ interface PodcastEpisode {
 const PodcastCard = ({ episode, className = "", cardRef }: { episode: PodcastEpisode; className?: string; cardRef?: (el: HTMLDivElement | null) => void }) => (
   <div
     ref={cardRef}
-    className={`podcast-card flex flex-col bg-white border border-neutral-100 rounded-2xl overflow-hidden shadow-[0_4px_25px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 group cursor-pointer ${className}`}
+    className={`podcast-card flex flex-col bg-white border border-neutral-100 rounded overflow-hidden shadow-[0_4px_25px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1 group cursor-pointer ${className}`}
   >
     {/* Image Container */}
     <div className="relative overflow-hidden bg-neutral-100 w-full aspect-video">
       <img
-        src={episode.image}
+        src="/podcast-fondo.png"
         alt={episode.title}
-        className="w-full h-full object-cover absolute inset-0 transition-transform duration-700 group-hover:scale-105"
+        className="w-full h-full object-cover absolute inset-0"
       />
       <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300"></div>
 
       {/* Play Button */}
-      <div className="absolute inset-0 flex items-center justify-center">
+      <a href="https://open.spotify.com/show/0IFnAb2T0WTWKCHEDceAIa?si=RPGdRbVvTn-CzMywI4qSpA" target="_blank" rel="noopener noreferrer" className="absolute inset-0 flex items-center justify-center">
         <button
-          className="w-16 h-16 bg-[#FFC107] rounded-full flex items-center justify-center text-black transition-transform duration-300 group-hover:scale-110 group-hover:shadow-2xl"
+          className="w-16 h-16 bg-[#1E88E5] rounded-full flex items-center justify-center text-white transition-transform duration-300 group-hover:scale-110 group-hover:shadow-2xl shadow-lg"
           aria-label="Reproducir episodio"
         >
           <svg
@@ -43,60 +43,25 @@ const PodcastCard = ({ episode, className = "", cardRef }: { episode: PodcastEpi
             height="24"
             viewBox="0 0 24 24"
             fill="currentColor"
-            className="ml-1"
+            className="-ml-0.5"
           >
             <path d="M8 5v14l11-7z" />
           </svg>
         </button>
-      </div>
+      </a>
 
-      {/* Topic Badge */}
-      <div className="absolute top-4 left-4 bg-[#700FA3] text-white text-[10px] font-bold tracking-wider px-3 py-1 rounded-full uppercase z-10">
-        {episode.topic}
-      </div>
-
-      {/* Duration Badge */}
-      <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1 rounded-full z-10">
-        {episode.duration}
-      </div>
     </div>
 
     {/* Content */}
     <div className="px-6 py-6 flex flex-col flex-1 justify-between gap-4">
-      <div>
-        <p className="text-xs text-gray-400 mb-2" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-          {episode.date}
-        </p>
-        <h3
-          className="text-lg font-bold text-[#48255A] group-hover:text-[#700FA3] transition-colors duration-300 leading-[1.4] mb-3"
-          style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-        >
-          {episode.title}
-        </h3>
-        <p className="text-sm text-[#525252] leading-relaxed" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-          {episode.description}
-        </p>
-      </div>
-
-      <button
-        className="podcast-cta-btn px-4 py-2 bg-[#FFC107] text-[#411A56] font-bold rounded transition-all duration-300 text-xs whitespace-nowrap w-auto self-start flex items-center justify-center gap-2 hover:shadow-lg hover:scale-105"
+      <h3
+        className="text-lg font-bold text-[#48255A] group-hover:text-[#700FA3] transition-colors duration-300 leading-[1.4]"
         style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
       >
-        Escuchar
-        <svg
-          width="12"
-          height="12"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="3"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <polygon points="5 3 19 12 5 21 5 3"></polygon>
-        </svg>
-      </button>
+        {episode.title}
+      </h3>
     </div>
+
   </div>
 );
 
@@ -253,10 +218,7 @@ export default function PodcastPage() {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 items-start">
-                  <a href="#" className="px-8 py-3 bg-[#FFC107] text-[#411A56] font-bold rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                    Ir a YouTube
-                  </a>
-                  <a href="#" className="px-8 py-3 bg-[#1DB954] text-white font-bold rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                  <a href="https://open.spotify.com/show/0IFnAb2T0WTWKCHEDceAIa?si=RPGdRbVvTn-CzMywI4qSpA" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-[#1DB954] text-white font-bold rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                     Escuchar en Spotify
                   </a>
                 </div>
@@ -267,6 +229,48 @@ export default function PodcastPage() {
         </div>
       </section>
 
+      {/* Episodes Section */}
+      <section className="bg-white py-20">
+        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <div className="w-10 h-[3px] bg-[#FFC107]" />
+              <span
+                style={{
+                  letterSpacing: "0.5px",
+                  fontSize: "16px",
+                  color: "#FFC107",
+                  fontWeight: "600",
+                  fontFamily: "var(--font-montserrat), sans-serif",
+                }}
+              >
+                Podcast
+              </span>
+            </div>
+            <h2
+              className="text-4xl md:text-5xl font-bold mb-4"
+              style={{
+                fontFamily: "var(--font-montserrat), sans-serif",
+                color: "#48255A",
+              }}
+            >
+              ¡Escucha mi podcast y aprende de los mejores!
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {episodes.slice(0, 1).map((episode, idx) => (
+              <PodcastCard
+                key={episode.id}
+                episode={episode}
+                cardRef={(el) => {
+                  if (el) cardsRef.current[idx] = el;
+                }}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
 
       <Footer />
       <FloatingWhatsApp />

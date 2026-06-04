@@ -91,7 +91,7 @@ function AnimatedCounter({ end, suffix = "", duration = 2000, fontSize = "42px" 
 
 const NUESTRAS_SOLUCIONES = [
   {
-    title: "Vetting (Verificación de Antecedentes)",
+    title: "Vetting",
     desc: "Proteja la integridad de su empresa desde el primer día. Filtramos riesgos mediante el rastreo exhaustivo en más de 190 bases de datos nacionales e internacionales (Interpol/OFAC) para garantizar contrataciones 100% seguras.",
     image: "/servicios/2.webp",
     cta: "Ver detalles del servicio"
@@ -399,7 +399,7 @@ export default function PruebasPoligraficasPage() {
               },
               {
                 title: "Polígrafo Pre-empleo",
-                text: "Identificamos riesgos críticos como vínculos ilícitos, consumo de sustancias, omisión de antecedentes, entre otras conductas contraproducentes. Asegure la honestidad de su talento desde el primer día."
+                text: "La seguridad empresarial se planifica. Nuestro modelo predictivo identifica conductas contraproducentes y vulnerabilidades en los candidatos antes de su contratación, permitiéndole mitigar pérdidas financieras y reputacionales al invertir en personal confiable."
               },
               {
                 title: "Polígrafo de Rutina",
@@ -414,15 +414,15 @@ export default function PruebasPoligraficasPage() {
                 <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#FFC107] rounded-l-xl" />
                 
                 {/* Card Title */}
-                <h3 
-                  className="text-lg font-bold mb-3 text-[#48255A]"
-                  style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}
+                <h3
+                  className="text-lg font-bold text-[#48255A]"
+                  style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3", marginBottom: "14px" }}
                 >
                   {item.title}
                 </h3>
-                
+
                 {/* Description Text */}
-                <p 
+                <p
                   className="text-[#525252] text-sm leading-relaxed font-light flex-1"
                   style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                 >
@@ -649,52 +649,6 @@ export default function PruebasPoligraficasPage() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Sobre Nosotros - Video Section */}
-      <section className="bg-white py-24 relative">
-        <div className="w-full max-w-4xl mx-auto px-8 flex flex-col items-center">
-          
-          {/* Centered Small Header */}
-          <div className="flex flex-col items-center text-center mb-10">
-            <h2
-              style={{
-                fontSize: "32px",
-                fontWeight: "bold",
-                color: "#48255A",
-                fontFamily: "var(--font-montserrat), sans-serif",
-              }}
-            >
-              Sobre Nosotros
-            </h2>
-          </div>
-
-          {/* Custom Video Player */}
-          <div className="relative w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center group cursor-pointer" onClick={toggleVideo}>
-            <video 
-              ref={videoRef}
-              src="/video/video.mp4" 
-              className="w-full h-full object-cover"
-              playsInline
-              onEnded={() => setIsVideoPlaying(false)}
-            />
-            
-            {/* Custom Vimeo-style Transparent Play/Pause Button */}
-            <div 
-              className={`absolute flex items-center justify-center w-16 h-12 bg-black/60 backdrop-blur-sm rounded-lg transition-all duration-300 ${isVideoPlaying ? 'opacity-0 group-hover:opacity-100' : 'opacity-100'} hover:bg-[#700FA3] hover:scale-105`}
-            >
-              {!isVideoPlaying ? (
-                <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              ) : (
-                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-                </svg>
-              )}
-            </div>
           </div>
         </div>
       </section>
