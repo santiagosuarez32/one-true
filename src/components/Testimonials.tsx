@@ -8,7 +8,7 @@ export default function Testimonials() {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
-    const googleReviewLink = document.querySelector('.google-review-link');
+    const googleReviewLink = document.querySelector<HTMLElement>('.google-review-link');
     if (googleReviewLink) {
       googleReviewLink.style.color = '#FFFFFF';
     }
