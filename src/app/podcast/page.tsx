@@ -26,7 +26,7 @@ const PodcastCard = ({ episode, className = "", cardRef }: { episode: PodcastEpi
     {/* Image Container */}
     <div className="relative overflow-hidden bg-neutral-100 w-full aspect-video">
       <img
-        src="/podcast-fondo.png"
+        src="/podcast-fondo.webp"
         alt={episode.title}
         className="w-full h-full object-cover absolute inset-0"
       />
@@ -181,7 +181,7 @@ export default function PodcastPage() {
       {/* Hero Section */}
       <section
         className="relative min-h-screen flex items-center overflow-hidden"
-        style={{ backgroundImage: "url('/podcast-fondo.png')", backgroundSize: "cover", backgroundPosition: "center" }}
+        style={{ backgroundImage: "url('/podcast-fondo.webp')", backgroundSize: "cover", backgroundPosition: "center" }}
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
@@ -193,7 +193,7 @@ export default function PodcastPage() {
               {/* Logo at top */}
               <div className="mt-16 flex-grow-0">
                 <img
-                  src="/logo-podcast.png"
+                  src="/logo-podcast.webp"
                   alt="DETECTAR Podcast Logo"
                   className="h-64 md:h-80 w-auto object-contain mb-0"
                 />
@@ -248,7 +248,7 @@ export default function PodcastPage() {
               </span>
             </div>
             <h2
-              className="text-4xl md:text-5xl font-bold mb-4"
+              className="text-3xl md:text-5xl font-bold mb-4"
               style={{
                 fontFamily: "var(--font-montserrat), sans-serif",
                 color: "#48255A",

@@ -81,16 +81,39 @@ export default function Hero() {
       ref={heroRef} 
       className="relative min-h-screen md:h-screen flex items-start md:items-center justify-center overflow-hidden pt-24 sm:pt-28 md:pt-0"
     >
+      {/* Responsive background behaviour: on mobile/tablet the artwork is shown
+          full-bleed (cover, centred) so it never collapses to a tiny strip; on
+          desktop it keeps the original right-aligned "contain" composition. */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        .hero-slide-bg {
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        @media (min-width: 768px) {
+          .hero-slide-bg {
+            background-position: right top;
+            background-size: contain;
+          }
+        }
+        /* On mobile the gradient fades top-to-bottom so the text stays readable */
+        .hero-overlay {
+          background: linear-gradient(to bottom, rgba(112,15,163,0.96) 0%, rgba(112,15,163,0.82) 45%, rgba(112,15,163,0.55) 100%);
+        }
+        @media (min-width: 768px) {
+          .hero-overlay {
+            background: linear-gradient(to right, #700FA3 0%, #700FA3 35%, rgba(112, 15, 163, 0.9) 48%, rgba(112, 15, 163, 0.6) 60%, rgba(112, 15, 163, 0.3) 72%, rgba(112, 15, 163, 0.05) 86%, transparent 100%);
+          }
+        }
+      `}} />
+
       {/* Background Images Cross-fade */}
       {slides.map((slide, idx) => (
         <div
           key={slide.id}
-          className="absolute inset-0 z-0 transition-opacity duration-1000 ease-in-out"
+          className="hero-slide-bg absolute inset-0 z-0 transition-opacity duration-1000 ease-in-out"
           style={{
             backgroundImage: `url('${slide.image}')`,
-            backgroundPosition: "right top",
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
             backgroundColor: "#700FA3",
             filter: slide.filter,
             opacity: activeIndex === idx ? 1 : 0,
@@ -99,12 +122,7 @@ export default function Hero() {
       ))}
 
       {/* Purple Overlay with smooth cubic-bezier easing gradient */}
-      <div 
-        className="absolute inset-0 z-0 pointer-events-none"
-        style={{
-          background: "linear-gradient(to right, #700FA3 0%, #700FA3 35%, rgba(112, 15, 163, 0.9) 48%, rgba(112, 15, 163, 0.6) 60%, rgba(112, 15, 163, 0.3) 72%, rgba(112, 15, 163, 0.05) 86%, transparent 100%)"
-        }}
-      />
+      <div className="hero-overlay absolute inset-0 z-0 pointer-events-none" />
       
       {/* Centered Grid Container matching a wider content boundary */}
       <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] px-4 sm:px-8 md:px-12 lg:px-16 z-10 flex justify-start items-center mt-6 md:mt-16">
@@ -177,7 +195,8 @@ export default function Hero() {
 
               {/* Slide CTA Buttons */}
               <div className="flex flex-wrap items-center gap-6">
-                <button
+                <a
+                  href="/cotiza"
                   aria-label={slide.cta}
                   className="px-8 py-3 rounded transition-all hover:brightness-110 shadow-lg"
                   style={{
@@ -198,7 +217,7 @@ export default function Hero() {
                   }}
                 >
                   <span className="elementor-button-text">{slide.cta}</span>
-                </button>
+                </a>
               </div>
             </div>
           ))}

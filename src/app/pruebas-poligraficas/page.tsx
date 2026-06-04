@@ -155,7 +155,39 @@ export default function PruebasPoligraficasPage() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [country, setCountry] = useState("ec");
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [formData, setFormData] = useState({
+    nombre: "",
+    apellido: "",
+    email: "",
+    telefono: "",
+    ciudad: "",
+    mensaje: "",
+    aceptar: false,
+  });
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  const validateForm = () => {
+    const newErrors: Record<string, string> = {};
+    if (!formData.nombre.trim()) newErrors.nombre = "El nombre es requerido";
+    if (!formData.apellido.trim()) newErrors.apellido = "El apellido es requerido";
+    if (!formData.email.trim()) newErrors.email = "El email es requerido";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email))
+      newErrors.email = "Email inválido";
+    if (!formData.telefono.trim()) newErrors.telefono = "El teléfono es requerido";
+    if (!formData.ciudad.trim()) newErrors.ciudad = "La ciudad es requerida";
+    if (!formData.mensaje.trim()) newErrors.mensaje = "El mensaje es requerido";
+    if (!formData.aceptar) newErrors.aceptar = "Debes aceptar los términos";
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (validateForm()) {
+      setFormSubmitted(true);
+    }
+  };
 
   const toggleVideo = () => {
     if (videoRef.current) {
@@ -358,7 +390,7 @@ export default function PruebasPoligraficasPage() {
 
       {/* Sobre el Servicio Section */}
       <section className="bg-white py-20">
-        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16">
+        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
           
           {/* Centered Small Header */}
           <div className="flex flex-col items-center text-center mb-16">
@@ -440,7 +472,7 @@ export default function PruebasPoligraficasPage() {
         {/* Decorative background elements */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#700FA3]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
         
-        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16 flex flex-col lg:flex-row items-center gap-8 lg:gap-12 relative z-10">
+        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 flex flex-col lg:flex-row items-center gap-8 lg:gap-12 relative z-10">
           
           {/* Left Column: Images / Visuals */}
           <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-start">
@@ -494,7 +526,7 @@ export default function PruebasPoligraficasPage() {
             </div>
             
             <h2
-              className="text-4xl md:text-[42px] mb-6"
+              className="text-2xl sm:text-3xl md:text-[36px] mb-6"
               style={{
                 fontWeight: "bold",
                 lineHeight: "1.2",
@@ -573,7 +605,7 @@ export default function PruebasPoligraficasPage() {
             </div>
             
             <h2 
-              className="text-4xl md:text-[42px]"
+              className="text-2xl sm:text-3xl md:text-[36px]"
               style={{
                 fontWeight: "bold",
                 lineHeight: "1.2",
@@ -640,12 +672,22 @@ export default function PruebasPoligraficasPage() {
                   </p>
                   
                   {/* CTA Button */}
-                  <button
-                    className="px-4 py-2 bg-[#FFC107] text-[#411A56] font-bold rounded transition-colors duration-300 text-xs w-auto self-start mt-auto group-hover:bg-[#700FA3] group-hover:text-white"
-                    style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                  <a
+                    href="#contacto"
+                    className="px-4 py-2 rounded transition-all hover:brightness-110 shadow-lg text-xs w-auto self-start mt-auto inline-block"
+                    style={{
+                      fontFamily: "var(--font-montserrat), sans-serif",
+                      fontWeight: "600",
+                      fill: "#5F0091",
+                      color: "#5F0091",
+                      backgroundColor: "#FFC107",
+                      textDecoration: "none",
+                      border: "none",
+                      cursor: "pointer",
+                    }}
                   >
                     {item.cta}
-                  </button>
+                  </a>
                 </div>
               </div>
             ))}
@@ -684,7 +726,7 @@ export default function PruebasPoligraficasPage() {
               {/* Título adaptado al estilo estándar de la página */}
               <h2
                 style={{
-                  fontSize: "32px",
+                  fontSize: "clamp(24px, 5vw, 36px)",
                   fontWeight: "bold",
                   lineHeight: "40px",
                   color: "#ffffff",
@@ -890,33 +932,32 @@ export default function PruebasPoligraficasPage() {
                   /* FORMULARIO ACTIVO */
                   <div>
 
-                    <form 
-                      onSubmit={(e) => {
-                        e.preventDefault();
-                        setFormSubmitted(true);
-                      }}
+                    <form
+                      onSubmit={handleSubmit}
                       className="flex flex-col gap-3"
                     >
                       {/* Fila 1: Nombre y Apellido */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                         <div className="flex flex-col gap-1">
                           <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Nombre *</label>
-                          <input 
-                            type="text" 
-                            placeholder="Tu nombre" 
-                            className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
+                          <input
+                            type="text"
+                            placeholder="Tu nombre"
+                            value={formData.nombre}
+                            onChange={(e) => { setFormData({...formData, nombre: e.target.value}); if(errors.nombre) setErrors({...errors, nombre: ""})}}
+                            className={`px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium ${errors.nombre ? 'focus:ring-red-400 ring-2 ring-red-200' : 'focus:ring-[#700FA3]/20'}`}
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                            required 
                           />
                         </div>
                         <div className="flex flex-col gap-1">
                           <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Apellido *</label>
-                          <input 
-                            type="text" 
-                            placeholder="Tu apellido" 
-                            className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
+                          <input
+                            type="text"
+                            placeholder="Tu apellido"
+                            value={formData.apellido}
+                            onChange={(e) => { setFormData({...formData, apellido: e.target.value}); if(errors.apellido) setErrors({...errors, apellido: ""})}}
+                            className={`px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium ${errors.apellido ? 'focus:ring-red-400 ring-2 ring-red-200' : 'focus:ring-[#700FA3]/20'}`}
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                            required 
                           />
                         </div>
                       </div>
@@ -925,12 +966,13 @@ export default function PruebasPoligraficasPage() {
                       <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Correo electrónico *</label>
                         <div className="relative">
-                          <input 
-                            type="email" 
-                            placeholder="correo@empresa.com" 
-                            className="px-4 py-2.5 pr-10 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
+                          <input
+                            type="email"
+                            placeholder="correo@empresa.com"
+                            value={formData.email}
+                            onChange={(e) => { setFormData({...formData, email: e.target.value}); if(errors.email) setErrors({...errors, email: ""})}}
+                            className={`px-4 py-2.5 pr-10 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium ${errors.email ? 'focus:ring-red-400 ring-2 ring-red-200' : 'focus:ring-[#700FA3]/20'}`}
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                            required 
                           />
                           <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-[#700FA3]">
                             <svg className="w-5 h-5 text-[#700FA3]" viewBox="0 0 20 20" fill="currentColor">
@@ -939,6 +981,7 @@ export default function PruebasPoligraficasPage() {
                             </svg>
                           </div>
                         </div>
+                        {errors.email && <span className="text-xs text-red-500 mt-1">{errors.email}</span>}
                       </div>
 
                       {/* Teléfono con Selector Bandera y Prefijo Real de Países */}
@@ -975,12 +1018,13 @@ export default function PruebasPoligraficasPage() {
                             </select>
                           </div>
                           {/* Input */}
-                          <input 
-                            type="tel" 
-                            placeholder="098 129 6179" 
-                            className="flex-1 px-4 py-2.5 bg-transparent border-none text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-0 text-sm font-medium" 
+                          <input
+                            type="tel"
+                            placeholder="098 129 6179"
+                            value={formData.telefono}
+                            onChange={(e) => { setFormData({...formData, telefono: e.target.value}); if(errors.telefono) setErrors({...errors, telefono: ""})}}
+                            className={`flex-1 px-4 py-2.5 bg-transparent border-none text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-0 text-sm font-medium ${errors.telefono ? 'outline-red-500 outline-1' : ''}`}
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                            required 
                           />
                           <div className="pr-3 text-[#700FA3] pointer-events-none">
                             <svg className="w-5 h-5 text-[#700FA3]" viewBox="0 0 20 20" fill="currentColor">
@@ -993,25 +1037,29 @@ export default function PruebasPoligraficasPage() {
                       {/* Ciudad */}
                       <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Ciudad *</label>
-                        <input 
-                          type="text" 
-                          placeholder="Tu ciudad" 
-                          className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
+                        <input
+                          type="text"
+                          placeholder="Tu ciudad"
+                          value={formData.ciudad}
+                          onChange={(e) => { setFormData({...formData, ciudad: e.target.value}); if(errors.ciudad) setErrors({...errors, ciudad: ""})}}
+                          className={`px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium ${errors.ciudad ? 'focus:ring-red-400 ring-2 ring-red-200' : 'focus:ring-[#700FA3]/20'}`}
                           style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                          required 
                         />
+                        {errors.ciudad && <span className="text-xs text-red-500 mt-1">{errors.ciudad}</span>}
                       </div>
 
                       {/* Mensaje */}
                       <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Mensaje *</label>
-                        <textarea 
-                          placeholder="Escribe tu mensaje aquí..." 
-                          rows={2} 
-                          className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium resize-none" 
+                        <textarea
+                          placeholder="Escribe tu mensaje aquí..."
+                          rows={2}
+                          value={formData.mensaje}
+                          onChange={(e) => { setFormData({...formData, mensaje: e.target.value}); if(errors.mensaje) setErrors({...errors, mensaje: ""})}}
+                          className={`px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium resize-none ${errors.mensaje ? 'focus:ring-red-400 ring-2 ring-red-200' : 'focus:ring-[#700FA3]/20'}`}
                           style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                          required 
                         ></textarea>
+                        {errors.mensaje && <span className="text-xs text-red-500 mt-1">{errors.mensaje}</span>}
                       </div>
 
                       {/* Cláusula de Aceptación */}
@@ -1033,16 +1081,18 @@ export default function PruebasPoligraficasPage() {
                           </a>.
                         </p>
                         <div className="flex items-center gap-3">
-                          <input 
-                            type="checkbox" 
-                            id="aceptar" 
-                            className="w-4 h-4 rounded border-neutral-300 text-[#700FA3] focus:ring-[#700FA3] cursor-pointer" 
-                            required 
+                          <input
+                            type="checkbox"
+                            id="aceptar"
+                            checked={formData.aceptar}
+                            onChange={(e) => { setFormData({...formData, aceptar: e.target.checked}); if(errors.aceptar) setErrors({...errors, aceptar: ""})}}
+                            className={`w-4 h-4 rounded border-neutral-300 text-[#700FA3] focus:ring-[#700FA3] cursor-pointer ${errors.aceptar ? 'ring-2 ring-red-200' : ''}`}
                           />
                           <label htmlFor="aceptar" className="text-xs font-bold text-neutral-700 cursor-pointer select-none" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                             Aceptar
                           </label>
                         </div>
+                        {errors.aceptar && <span className="text-xs text-red-500">{errors.aceptar}</span>}
                       </div>
 
                       {/* Botón de Cotización */}

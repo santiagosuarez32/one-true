@@ -34,9 +34,9 @@ export default function Associations() {
     return () => ctx.revert();
   }, []);
   const staticPhotos = [
-    { src: "/marcas/16.png", alt: "APA Certification Logo" },
-    { src: "/marcas/17.png", alt: "International Association Logo" },
-    { src: "/marcas/18.png", alt: "Security Association Logo" }
+    { src: "/marcas/16.webp", alt: "APA Certification Logo" },
+    { src: "/marcas/17.webp", alt: "International Association Logo" },
+    { src: "/marcas/18.webp", alt: "Security Association Logo" }
   ];
 
   return (

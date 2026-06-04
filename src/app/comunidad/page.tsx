@@ -47,7 +47,7 @@ export default function CommunityPage() {
 
             {/* Main Title */}
             <h1
-              className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-2"
+              className="text-3xl sm:text-6xl lg:text-7xl font-bold mb-2"
               style={{
                 fontFamily: "var(--font-montserrat), sans-serif",
                 lineHeight: "1.1",

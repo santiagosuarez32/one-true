@@ -2,29 +2,118 @@
 
 import React, { useState, useEffect } from "react";
 
+interface MobileAccordionProps {
+  label: string;
+  isOpen: boolean;
+  onToggle: () => void;
+  items: { label: string; href: string }[];
+  onNavigate: () => void;
+}
+
+function MobileAccordion({ label, isOpen, onToggle, items, onNavigate }: MobileAccordionProps) {
+  return (
+    <div className="border-white/5">
+      <button
+        onClick={onToggle}
+        aria-expanded={isOpen}
+        className="flex w-full items-center justify-between rounded-lg px-3 py-3 text-base font-bold text-white! transition-colors hover:bg-white/10 hover:text-[#FFC107]!"
+      >
+        {label}
+        <svg
+          className={`h-4 w-4 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          style={{ strokeWidth: 3 }}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+        </svg>
+      </button>
+      <div
+        className={`grid transition-all duration-300 ease-in-out ${
+          isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+        }`}
+      >
+        <div className="overflow-hidden">
+          <div className="ml-3 flex flex-col gap-0.5 border-l border-white/15 pl-3 py-1">
+            {items.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={onNavigate}
+                className="block rounded-md px-3 py-2.5 text-sm font-semibold text-white/80! transition-colors hover:bg-white/10 hover:text-[#FFC107]!"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isAcademiaOpen, setIsAcademiaOpen] = useState(false);
   const [isAprendeOpen, setIsAprendeOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mobileAccordion, setMobileAccordion] = useState<string | null>(null);
   const [isBlogPage, setIsBlogPage] = useState(false);
 
   useEffect(() => {
-    // Check if current path is a blog page
     const isBlog = typeof window !== 'undefined' && window.location.pathname.includes('/blog/');
     setIsBlogPage(isBlog);
-
-    const handleScroll = () => {
-      if (window.scrollY > 40) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Lock body scroll + flag body while the mobile menu is open
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
+    document.body.classList.toggle("menu-open", isMobileMenuOpen);
+    return () => {
+      document.body.style.overflow = "";
+      document.body.classList.remove("menu-open");
+    };
+  }, [isMobileMenuOpen]);
+
+  const toggleAccordion = (key: string) =>
+    setMobileAccordion((prev) => (prev === key ? null : key));
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+    setMobileAccordion(null);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = document.documentElement.scrollTop || window.scrollY || document.body.scrollTop;
+      setIsScrolled(scrollTop > 40);
+    };
+
+    // Check initial scroll position
+    handleScroll();
+
+    // Check again after a small delay
+    setTimeout(handleScroll, 100);
+
+    // Listen to scroll and lenis-scroll events
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("lenis-scroll", handleScroll, { passive: true });
+
+    // Use a frequent interval as a fallback to catch scroll position changes
+    const intervalId = setInterval(handleScroll, 100);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("lenis-scroll", handleScroll);
+      clearInterval(intervalId);
+    };
+  }, []);
+
+  // Compute if scrolled based on state OR blog page
+  const shouldShowScrolledState = isScrolled || isBlogPage;
 
   const navLinkStyle = {
     WebkitTextSizeAdjust: "100%",
@@ -75,15 +164,26 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 px-4 sm:px-6 md:px-8 transition-all duration-500 ${(isScrolled || isBlogPage)
+      className={`fixed top-0 left-0 w-full z-50 px-4 sm:px-6 md:px-8 transition-all duration-500 ${shouldShowScrolledState
           ? "py-3 bg-[#700FA3] shadow-2xl border-[#9b51e0]/20"
           : "py-6 bg-transparent"
         }`}
     >
+      {/* Hide the floating WhatsApp button while the mobile menu is open so it
+          doesn't overlap the "Cotiza gratis" action at the bottom of the drawer */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        body.menu-open .wa-fab {
+          opacity: 0 !important;
+          pointer-events: none !important;
+          transition: opacity .2s ease;
+        }
+      `}} />
       <div className="w-full max-w-[1600px] mx-auto flex items-center justify-between relative">
         {/* Left Column: Logo */}
-        <div className="w-[140px] sm:w-[180px] lg:w-[220px] flex items-center justify-start shrink-0">
-          <img src="/navbar.webp" alt="One True Ecuador Logo" className="h-10 sm:h-14 md:h-18 w-auto object-contain" />
+        <div className="w-[170px] sm:w-[180px] lg:w-[220px] flex items-center justify-start shrink-0">
+          <a href="/" aria-label="Ir a la página de inicio de One True" className="inline-flex">
+            <img src="/navbar.webp" alt="One True Ecuador Logo" className="h-14 sm:h-14 md:h-18 w-auto object-contain" />
+          </a>
         </div>
 
         {/* Centered Column: Links */}
@@ -238,123 +338,136 @@ export default function Navbar() {
 
         {/* Right Column: Action Button & Hamburger Toggle */}
         <div className="flex items-center gap-4 justify-end shrink-0">
-          <button 
-            aria-label="Cotizar gratis servicio de poligrafía y seguridad"
-            className="hidden md:block px-6 py-2 bg-[#FFC107] text-[#411A56] font-bold rounded hover:bg-[#FFD54F] transition-colors text-sm whitespace-nowrap"
+          <a
+            href="/cotiza"
+            className="hidden lg:block px-8 py-3 rounded transition-all hover:brightness-110 shadow-lg text-sm whitespace-nowrap"
+            style={{
+              fontFamily: "var(--font-montserrat), sans-serif",
+              lineHeight: "1",
+              textAlign: "center",
+              fontWeight: "600",
+              fill: "#5F0091",
+              color: "#5F0091",
+              backgroundColor: "#FFC107",
+              textDecoration: "none",
+              border: "none",
+              cursor: "pointer",
+            }}
           >
             Cotiza gratis
-          </button>
-          
-          {/* Hamburger Menu Toggle (visible only on mobile/tablet) */}
-          <button 
+          </a>
+
+          {/* Hamburger Menu Toggle (visible only on mobile/tablet) - animated morphing icon */}
+          <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden text-white hover:text-[#FFC107] focus:outline-none transition-colors p-1 z-50 relative"
-            aria-label="Toggle Menu"
+            className="lg:hidden relative z-[60] mr-2 sm:mr-4 flex h-11 w-11 items-center justify-start rounded-lg text-white! focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFC107]/70 transition-colors"
+            aria-label={isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
+            aria-expanded={isMobileMenuOpen}
           >
-            {isMobileMenuOpen ? (
-              // Close Icon
-              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" strokeWidth="2.5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              // Hamburger Icon
-              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" strokeWidth="2.5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              </svg>
-            )}
+            <span className="relative block h-5 w-7">
+              <span
+                className={`absolute left-0 block h-[3px] w-7 rounded-full bg-white transition-all duration-300 ease-in-out ${
+                  isMobileMenuOpen ? "top-1/2 -translate-y-1/2 rotate-45" : "top-0"
+                }`}
+              />
+              <span
+                className={`absolute left-0 top-1/2 block h-[3px] w-7 -translate-y-1/2 rounded-full bg-white transition-all duration-200 ease-in-out ${
+                  isMobileMenuOpen ? "scale-x-0 opacity-0" : "scale-x-100 opacity-100"
+                }`}
+              />
+              <span
+                className={`absolute left-0 block h-[3px] w-7 rounded-full bg-white transition-all duration-300 ease-in-out ${
+                  isMobileMenuOpen ? "top-1/2 -translate-y-1/2 -rotate-45" : "bottom-0"
+                }`}
+              />
+            </span>
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu Drawer Overlay */}
-      <div 
-        className={`fixed inset-y-0 right-0 z-40 w-full sm:w-80 bg-[#700FA3] border-l border-[#9b51e0]/20 shadow-2xl p-6 sm:p-8 flex flex-col transition-all duration-300 transform lg:hidden ${
+      {/* Mobile Menu Backdrop */}
+      <div
+        onClick={closeMobileMenu}
+        aria-hidden="true"
+        className={`fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
+          isMobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+      />
+
+      {/* Mobile Menu Drawer */}
+      <div
+        className={`fixed inset-y-0 right-0 z-50 flex w-[88%] max-w-sm flex-col bg-[#5C0B87] shadow-2xl transition-transform duration-300 ease-out lg:hidden ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
+        style={{ background: "linear-gradient(160deg, #5C0B87 0%, #45086a 100%)" }}
       >
-        <div className="flex justify-between items-center mb-8 mt-4">
-          <img src="/navbar.webp" alt="One True Ecuador Logo" className="h-10 w-auto object-contain" />
-          <button 
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="text-white hover:text-[#FFC107] focus:outline-none"
-            aria-label="Cerrar menú de navegación"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" strokeWidth="2.5">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
+        {/* Drawer Header (close is handled by the morphing hamburger which stays on top) */}
+        <div className="flex shrink-0 items-center border-b border-white/10 px-6 py-5">
+          <a href="/" onClick={closeMobileMenu} aria-label="Ir a la página de inicio de One True" className="inline-flex">
+            <img src="/navbar.webp" alt="One True Ecuador Logo" className="h-9 w-auto object-contain" />
+          </a>
         </div>
 
-        <nav className="flex flex-col gap-6 overflow-y-auto pr-2">
-          {/* Inicio */}
-          <a href="/" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+        {/* Scrollable Links */}
+        <nav className="flex-1 overflow-y-auto overscroll-contain px-4 py-4" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+          <a href="/" onClick={closeMobileMenu} className="block rounded-lg px-3 py-3 text-base font-bold text-white! transition-colors hover:bg-white/10 hover:text-[#FFC107]!">
             Inicio
           </a>
-
-          {/* Pruebas Poligráficas */}
-          <a href="/pruebas-poligraficas" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+          <a href="/pruebas-poligraficas" onClick={closeMobileMenu} className="block rounded-lg px-3 py-3 text-base font-bold text-white! transition-colors hover:bg-white/10 hover:text-[#FFC107]!">
             Pruebas Poligráficas
           </a>
 
-          {/* Vetting */}
-          <a href="/vetting" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-            Vetting
-          </a>
+          {/* Evaluaciones accordion */}
+          <MobileAccordion
+            label="Evaluaciones"
+            isOpen={mobileAccordion === "evaluaciones"}
+            onToggle={() => toggleAccordion("evaluaciones")}
+            items={evaluationsList}
+            onNavigate={closeMobileMenu}
+          />
 
-          {/* Confiabilidad 360 */}
-          <a href="/estudio-de-confiabilidad-360" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-            Confiabilidad 360°
-          </a>
+          {/* Academia accordion */}
+          <MobileAccordion
+            label="Academia"
+            isOpen={mobileAccordion === "academia"}
+            onToggle={() => toggleAccordion("academia")}
+            items={academiaList}
+            onNavigate={closeMobileMenu}
+          />
 
-          {/* Visitas Domiciliarias */}
-          <a href="/visitas-domiciliarias" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-            Visitas Domiciliarias
-          </a>
-
-          {/* Pruebas Toxicológicas */}
-          <a href="/pruebas-toxicologicas" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-            Pruebas Toxicológicas
-          </a>
-
-          {/* Evaluaciones Psicométricas */}
-          <a href="/evaluaciones-psicometricas" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-            Evaluaciones Psicométricas
-          </a>
-
-          {/* Prueba de Honestidad, Ética y Valores */}
-          <a href="/prueba-de-honestidad-etica-y-valores" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-            Prueba de Honestidad, Ética y Valores
-          </a>
-
-          {/* Comunidad */}
-          <a href="/comunidad" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+          <a href="/comunidad" onClick={closeMobileMenu} className="block rounded-lg px-3 py-3 text-base font-bold text-white! transition-colors hover:bg-white/10 hover:text-[#FFC107]!">
             Comunidad
           </a>
 
-          {/* Blog */}
-          <a href="/blog" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-            Blog
-          </a>
-
-          {/* Podcast */}
-          <a href="/podcast" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-            Podcast
-          </a>
-
-          {/* Ebook */}
-          <a href="/ebook" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-[#FFC107] transition-colors py-2 border-b border-white/10" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-            Ebook
-          </a>
+          {/* Aprende gratis accordion */}
+          <MobileAccordion
+            label="Aprende gratis"
+            isOpen={mobileAccordion === "aprende"}
+            onToggle={() => toggleAccordion("aprende")}
+            items={aprendeList}
+            onNavigate={closeMobileMenu}
+          />
         </nav>
 
-        {/* Mobile Action Button */}
-        <div className="mt-auto">
-          <button 
+        {/* Sticky Action Button */}
+        <div className="shrink-0 border-t border-white/10 p-5">
+          <a
+            href="/cotiza"
+            onClick={closeMobileMenu}
             aria-label="Cotizar gratis servicio de poligrafía y seguridad"
-            className="w-full py-3 bg-[#FFC107] text-[#411A56] font-bold rounded hover:bg-[#FFD54F] transition-colors text-base shadow-lg"
+            className="block w-full rounded py-3.5 text-base shadow-lg transition-all hover:brightness-110"
+            style={{
+              fontFamily: "var(--font-montserrat), sans-serif",
+              lineHeight: "1",
+              fontWeight: "600",
+              color: "#5F0091",
+              backgroundColor: "#FFC107",
+              textDecoration: "none",
+              textAlign: "center",
+            }}
           >
             Cotiza gratis
-          </button>
+          </a>
         </div>
       </div>
     </header>

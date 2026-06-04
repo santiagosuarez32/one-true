@@ -1,0 +1,281 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e4]:
+      - img "One True Ecuador Logo" [ref=e6]
+      - navigation [ref=e8]:
+        - link "Inicio" [ref=e9] [cursor=pointer]:
+          - /url: /
+        - link "Pruebas Poligráficas" [ref=e10] [cursor=pointer]:
+          - /url: /pruebas-poligraficas
+        - generic [ref=e11]:
+          - link "Evaluaciones" [ref=e12] [cursor=pointer]:
+            - /url: /#services
+            - text: Evaluaciones
+            - img [ref=e13]
+          - generic:
+            - generic:
+              - link "Vetting":
+                - /url: /vetting
+              - link "Estudio de Confiabilidad 360º":
+                - /url: /estudio-de-confiabilidad-360
+              - link "Visitas Domiciliarias":
+                - /url: /visitas-domiciliarias
+              - link "Pruebas Toxicológicas":
+                - /url: /pruebas-toxicologicas
+              - link "Evaluaciones Psicométricas":
+                - /url: /evaluaciones-psicometricas
+              - link "Prueba de honestidad ética y valores":
+                - /url: /prueba-de-honestidad-etica-y-valores
+        - generic [ref=e15]:
+          - link "Academia" [ref=e16] [cursor=pointer]:
+            - /url: /#service-7
+            - text: Academia
+            - img [ref=e17]
+          - generic:
+            - generic:
+              - link "Curso Básico en Poligrafía 400 H":
+                - /url: /curso-basico-en-poligrafia
+              - link "Cursos Avanzados en Poligrafía":
+                - /url: /cursos-avanzados-en-poligrafia
+              - link "Formaciones Complementarias":
+                - /url: /formaciones-complementarias
+              - link "Calendario Académico":
+                - /url: /#service-7
+        - link "Comunidad" [ref=e19] [cursor=pointer]:
+          - /url: /comunidad
+        - generic [ref=e20]:
+          - link "Aprende gratis" [ref=e21] [cursor=pointer]:
+            - /url: /#recursos
+            - text: Aprende gratis
+            - img [ref=e22]
+          - generic:
+            - generic:
+              - link "Blog":
+                - /url: /blog
+              - link "Podcast":
+                - /url: /podcast
+              - link "Ebook":
+                - /url: /ebook
+      - link "Cotiza gratis" [ref=e25] [cursor=pointer]:
+        - /url: /cotiza
+    - generic [ref=e26]:
+      - img "One True Vetting y Verificación de Antecedentes"
+      - generic [ref=e28]:
+        - generic [ref=e31]: Transformamos la incertidumbre en decisiones seguras.
+        - heading "Verificación Integral de Candidatos" [level=1] [ref=e32]:
+          - text: Verificación Integral de
+          - strong [ref=e33]: Candidatos
+        - paragraph [ref=e34]: No se conforme con la buena impresión de una entrevista. Validamos la integridad de su futuro talento humano con un análisis profundo de antecedentes and riesgos.
+        - link "Cotizar mi evaluación ahora" [ref=e36] [cursor=pointer]:
+          - /url: "#contacto"
+    - generic [ref=e38]:
+      - generic [ref=e39]:
+        - generic [ref=e42]: Sobre el Servicio
+        - heading "¿Qué analizamos?" [level=2] [ref=e43]
+        - paragraph [ref=e44]:
+          - text: Cruzamos información en tiempo real en
+          - strong [ref=e45]: +190 bases de datos
+          - text: "para detectar alertas legales, financieras o de reputación:"
+      - generic [ref=e46]:
+        - generic [ref=e47]:
+          - heading "Historial Legal" [level=3] [ref=e49]
+          - paragraph [ref=e50]: Función Judicial, Policía Nacional y SUPA.
+        - generic [ref=e51]:
+          - heading "Perfil Ciudadano" [level=3] [ref=e53]
+          - paragraph [ref=e54]: Registro Civil y Agencia Nacional de Tránsito.
+        - generic [ref=e55]:
+          - heading "Seguridad Global" [level=3] [ref=e57]
+          - paragraph [ref=e58]: Listas de control internacional (OFAC, Interpol y Europol).
+    - generic [ref=e61]:
+      - generic [ref=e63]:
+        - img "Profesional verificando antecedentes" [ref=e65]
+        - img "Rastreo en bases de datos" [ref=e67]
+      - generic [ref=e69]:
+        - generic [ref=e72]: Beneficios
+        - heading "El Valor para su Empresa" [level=2] [ref=e73]
+        - list [ref=e74]:
+          - listitem [ref=e75]:
+            - img [ref=e77]
+            - generic [ref=e79]:
+              - strong [ref=e80]: "Reducción de Riesgos:"
+              - text: Evite infiltraciones, fraudes o personal no apto.
+          - listitem [ref=e81]:
+            - img [ref=e83]
+            - generic [ref=e85]:
+              - strong [ref=e86]: "Reportes Ágiles:"
+              - text: Resultados técnicos, claros y listos para la toma de decisiones.
+          - listitem [ref=e87]:
+            - img [ref=e89]
+            - generic [ref=e91]:
+              - strong [ref=e92]: "Cumplimiento:"
+              - text: Estándares de Compliance para su departamento de RR.HH.
+        - link "Cotizar mi servicio de Vetting" [ref=e93] [cursor=pointer]:
+          - /url: "#contacto"
+    - generic [ref=e96]:
+      - generic [ref=e97]:
+        - img "One True Logo" [ref=e99]
+        - heading "Contactos" [level=2] [ref=e100]
+        - generic [ref=e101]:
+          - generic [ref=e102]:
+            - img [ref=e103]
+            - generic [ref=e105]:
+              - heading "Teléfono" [level=3] [ref=e106]
+              - link "098 129 6179" [ref=e107] [cursor=pointer]:
+                - /url: tel:0981296179
+          - generic [ref=e108]:
+            - img [ref=e109]
+            - generic [ref=e111]:
+              - heading "Agencia Quito" [level=3] [ref=e112]
+              - paragraph [ref=e113]: "Av. Pérez Guerreo OE3-124 y San Gregorio, Instituto de Diagnóstico Médico, tercer piso, oficina #303, Quito-Ecuador."
+          - generic [ref=e114]:
+            - img [ref=e115]
+            - generic [ref=e118]:
+              - heading "Agencia Guayaquil" [level=3] [ref=e119]
+              - paragraph [ref=e120]: Solar 26, Mz. 1022, Las Orquídeas, entre lavandería Perfect Wash y Dash Óptica.
+          - generic [ref=e121]:
+            - img [ref=e122]
+            - generic [ref=e124]:
+              - heading "Correo" [level=3] [ref=e125]
+              - link "info@somosonetrue.com" [ref=e126] [cursor=pointer]:
+                - /url: mailto:info@somosonetrue.com
+        - generic [ref=e127]:
+          - heading "Síguenos:" [level=3] [ref=e128]
+          - generic [ref=e129]:
+            - link "Síguenos en Facebook" [ref=e130] [cursor=pointer]:
+              - /url: https://www.facebook.com/somosonetrue
+              - img [ref=e131]
+            - link "Síguenos en Instagram" [ref=e133] [cursor=pointer]:
+              - /url: https://www.instagram.com/somosonetrue
+              - img [ref=e134]
+            - link "Síguenos en LinkedIn" [ref=e136] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/somosonetrue
+              - img [ref=e137]
+      - generic [ref=e142]:
+        - generic [ref=e143]:
+          - generic [ref=e144]:
+            - generic [ref=e145]: Nombre *
+            - textbox "Tu nombre" [ref=e146]
+          - generic [ref=e147]:
+            - generic [ref=e148]: Apellido *
+            - textbox "Tu apellido" [ref=e149]
+        - generic [ref=e150]:
+          - generic [ref=e151]: Correo electrónico *
+          - generic [ref=e152]:
+            - textbox "correo@empresa.com" [ref=e153]
+            - generic:
+              - img
+        - generic [ref=e154]:
+          - generic [ref=e155]: Número de teléfono *
+          - generic [ref=e156]:
+            - generic [ref=e157]:
+              - img "ec" [ref=e158]
+              - combobox [ref=e159] [cursor=pointer]:
+                - option "+593" [selected]
+                - option "+57"
+                - option "+51"
+                - option "+56"
+                - option "+54"
+                - option "+52"
+                - option "+34"
+                - option "+1"
+            - textbox "098 129 6179" [ref=e160]
+            - generic:
+              - img
+        - generic [ref=e161]:
+          - generic [ref=e162]: Ciudad *
+          - textbox "Tu ciudad" [ref=e163]
+        - generic [ref=e164]:
+          - generic [ref=e165]: Mensaje *
+          - textbox "Escribe tu mensaje aquí..." [ref=e166]
+        - generic [ref=e167]:
+          - paragraph [ref=e168]:
+            - text: Al enviar este formulario, acepto que mis datos personales sean tratados de acuerdo con la
+            - link "Política de tratamiento de datos personales" [ref=e169] [cursor=pointer]:
+              - /url: "#"
+            - text: y los
+            - link "términos establecidos en ella" [ref=e170] [cursor=pointer]:
+              - /url: "#"
+            - text: .
+          - generic [ref=e171]:
+            - checkbox "Aceptar" [ref=e172] [cursor=pointer]
+            - generic [ref=e173] [cursor=pointer]: Aceptar
+        - button "Cotizar ahora" [ref=e174]
+        - generic [ref=e175]:
+          - generic [ref=e176]: O escríbenos
+          - link "+593 98 129 6179" [ref=e178] [cursor=pointer]:
+            - /url: https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True
+            - generic [ref=e179]:
+              - img [ref=e181]
+              - generic [ref=e183]: +593 98 129 6179
+    - generic [ref=e185]:
+      - generic [ref=e186]:
+        - generic [ref=e187]:
+          - img "One True Logo" [ref=e189]
+          - paragraph [ref=e190]: Construimos vínculos confiables entre empresas y candidatos
+          - generic [ref=e191]:
+            - generic [ref=e192]: Síguenos
+            - generic [ref=e193]:
+              - link "Síguenos en LinkedIn" [ref=e194] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/david-coli-fiallo-75679a198?utm_source=share_via&utm_content=profile&utm_medium=member_android
+                - img [ref=e195]
+              - link "Síguenos en Facebook" [ref=e197] [cursor=pointer]:
+                - /url: https://www.facebook.com/share/1F8T24NNKE/
+                - img [ref=e198]
+              - link "Síguenos en Instagram" [ref=e200] [cursor=pointer]:
+                - /url: https://www.instagram.com/somosonetrue?igsh=bXNmOWYwaWpsdDVh
+                - img [ref=e201]
+              - link "Síguenos en YouTube" [ref=e203] [cursor=pointer]:
+                - /url: https://youtube.com/@somosonetrue?si=8OI3ZQ0A-4OzF_H0
+                - img [ref=e204]
+        - generic [ref=e206]:
+          - heading "Soluciones" [level=4] [ref=e207]
+          - list [ref=e208]:
+            - listitem [ref=e209]:
+              - link "Vetting" [ref=e210] [cursor=pointer]:
+                - /url: /vetting
+            - listitem [ref=e211]:
+              - link "Estudio de Confiabilidad 360°" [ref=e212] [cursor=pointer]:
+                - /url: /estudio-de-confiabilidad-360
+            - listitem [ref=e213]:
+              - link "Visitas Domiciliarias" [ref=e214] [cursor=pointer]:
+                - /url: /visitas-domiciliarias
+            - listitem [ref=e215]:
+              - link "Pruebas Toxicológicas" [ref=e216] [cursor=pointer]:
+                - /url: /pruebas-toxicologicas
+            - listitem [ref=e217]:
+              - link "Evaluaciones Psicométricas" [ref=e218] [cursor=pointer]:
+                - /url: /evaluaciones-psicometricas
+        - generic [ref=e219]:
+          - heading "Contacto" [level=4] [ref=e220]
+          - generic [ref=e221]:
+            - list [ref=e223]:
+              - listitem [ref=e224]:
+                - img [ref=e225]
+                - link "info@somosonetrue.com" [ref=e228] [cursor=pointer]:
+                  - /url: mailto:info@somosonetrue.com
+              - listitem [ref=e229]:
+                - img [ref=e230]
+                - link "098 129 6179" [ref=e232] [cursor=pointer]:
+                  - /url: tel:0981296179
+            - list [ref=e234]:
+              - listitem [ref=e235]:
+                - img [ref=e236]
+                - generic [ref=e239]:
+                  - strong [ref=e240]: Agencia Quito
+                  - text: "Av. Pérez Guerreo OE3-124 y San Gregorio, Instituto de Diagnóstico Médico, tercer piso, oficina #303, Quito-Ecuador."
+              - listitem [ref=e241]:
+                - img [ref=e242]
+                - generic [ref=e245]:
+                  - strong [ref=e246]: Agencia Guayaquil
+                  - text: Urdenor 2, Manzana 219, Solar 9
+      - generic [ref=e247]:
+        - paragraph [ref=e248]: © Copyright One True 2026
+        - link "Política de Privacidad y Cookies" [ref=e250] [cursor=pointer]:
+          - /url: "#"
+  - button "Open Next.js Dev Tools" [ref=e256] [cursor=pointer]:
+    - img [ref=e257]
+  - alert [ref=e260]
+  - link "Abrir chat de WhatsApp" [ref=e261] [cursor=pointer]:
+    - /url: https://wa.me/593981296179?text=%C2%A1Hola!%20Vengo%20desde%20la%20web%20y%20quiero%20m%C3%A1s%20info%20%F0%9F%99%8C
+    - img [ref=e262]
+    - generic [ref=e264]: Escribir por WhatsApp

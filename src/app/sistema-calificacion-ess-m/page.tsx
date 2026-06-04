@@ -54,37 +54,37 @@ const advancedTechniques = [
   {
     title: "Fundamentos del Análisis Bayesiano",
     items: ["Introducción a la inferencia estadística y el Teorema de Bayes aplicado a la credibilidad."],
-    icon: "/icons/Browser-Page-Account--Streamline-Ultimate.png",
+    icon: "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
   },
   {
     title: "Extracción de Características",
     items: ["Protocolos para actividad electrodérmica, cardiovascular, respiratoria y vasomotora."],
-    icon: "/icons/Browser-Hand--Streamline-Ultimate.png",
+    icon: "/icons/Browser-Hand--Streamline-Ultimate.webp",
   },
   {
     title: "Transformación Numérica y Reducción de Datos",
     items: ["Uso de puntuaciones de tres posiciones y ponderación del EDA."],
-    icon: "/icons/Touchpad-Finger--Streamline-Ultimate.png",
+    icon: "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
   },
   {
     title: "Funciones de Verosimilitud",
     items: ["Interpretación de distribuciones de referencia para exámenes de asunto único y múltiple."],
-    icon: "/icons/Password-Desktop--Streamline-Ultimate.png",
+    icon: "/icons/Password-Desktop--Streamline-Ultimate.webp",
   },
   {
     title: "Reglas de Decisión Estructuradas",
     items: ["Aplicación técnica de la Regla de Gran Total (GTR), Subtotal (SSR) y de Dos Etapas (TSR)."],
-    icon: "/icons/Task-Checklist--Streamline-Ultimate.png",
+    icon: "/icons/Task-Checklist--Streamline-Ultimate.webp",
   },
   {
     title: "Cálculo de Probabilidades Posteriores",
     items: ["Determinación de intervalos de credibilidad y niveles de significancia (Alfa)."],
-    icon: "/icons/Monitor-Find--Streamline-Ultimate.png",
+    icon: "/icons/Monitor-Find--Streamline-Ultimate.webp",
   },
   {
     title: "Redacción de Informes",
     items: ["Análisis estadístico basado en el modelo Bayesiano."],
-    icon: "/icons/Touch-Id-Desktop--Streamline-Ultimate.png",
+    icon: "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
   },
 ];
 
@@ -205,7 +205,7 @@ export default function SistemaCalificacionESSMPage() {
                   className="mb-6"
                   style={{
                     fontFamily: "var(--font-montserrat), sans-serif",
-                    fontSize: "38px",
+                    fontSize: "clamp(24px, 5vw, 36px)",
                     fontWeight: "700",
                     lineHeight: "1.2",
                     color: "#48255A",
@@ -272,7 +272,7 @@ export default function SistemaCalificacionESSMPage() {
           </div>
 
           <h2
-            className="text-3xl md:text-4xl font-bold text-[#48255A] mb-12"
+            className="text-2xl sm:text-3xl md:text-[36px] font-bold text-[#48255A] mb-12"
             style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.2" }}
           >
             Características Generales del Curso
@@ -339,7 +339,7 @@ export default function SistemaCalificacionESSMPage() {
               {/* Título adaptado al estilo estándar de la página */}
               <h2
                 style={{
-                  fontSize: "32px",
+                  fontSize: "clamp(24px, 5vw, 36px)",
                   fontWeight: "bold",
                   lineHeight: "40px",
                   color: "#ffffff",

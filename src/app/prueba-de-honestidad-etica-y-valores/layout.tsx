@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: "One True Ecuador",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Prueba de Honestidad, Ética y Valores - One True Ecuador",

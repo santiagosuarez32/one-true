@@ -162,13 +162,26 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Centered Primary CTA Button */}
-        <button
+        <a
+          href="/cotiza"
           aria-label="Contactar a un experto ahora"
-          className="px-8 py-3.5 bg-[#FFC107] text-[#411A56] font-bold rounded shadow-[0_4px_25px_rgba(255,193,7,0.15)] hover:bg-[#FFD54F] hover:scale-105 active:scale-95 transition-all duration-300 text-sm md:text-base tracking-wide"
-          style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+          className="px-8 py-3 rounded transition-all hover:brightness-110 shadow-lg text-sm md:text-base inline-block"
+          style={{
+            fontFamily: "var(--font-montserrat), sans-serif",
+            lineHeight: "1",
+            textAlign: "center",
+            fontWeight: "600",
+            fill: "#5F0091",
+            color: "#5F0091",
+            backgroundColor: "#FFC107",
+            display: "inline-block",
+            textDecoration: "none",
+            border: "none",
+            cursor: "pointer",
+          }}
         >
           Contactar a un experto ahora
-        </button>
+        </a>
 
       </div>
     </section>

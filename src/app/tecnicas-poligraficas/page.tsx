@@ -54,37 +54,37 @@ const advancedTechniques = [
   {
     title: "ZCT Federal",
     items: ["Protocolo estándar federal para evaluaciones de control de información."],
-    icon: "/icons/Browser-Page-Account--Streamline-Ultimate.png",
+    icon: "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
   },
   {
     title: "Bi-Zona (Fase Usted)",
     items: ["Técnica de dos zonas de respuesta adaptada a contextos específicos."],
-    icon: "/icons/Browser-Hand--Streamline-Ultimate.png",
+    icon: "/icons/Browser-Hand--Streamline-Ultimate.webp",
   },
   {
     title: "UTAH 3R",
     items: ["Protocolo UTAH 3R para evaluaciones de responsabilidad relativa."],
-    icon: "/icons/Touchpad-Finger--Streamline-Ultimate.png",
+    icon: "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
   },
   {
     title: "UTAH 4R",
     items: ["Protocolo UTAH 4R para evaluaciones cuadrantes de responsabilidad."],
-    icon: "/icons/Password-Desktop--Streamline-Ultimate.png",
+    icon: "/icons/Password-Desktop--Streamline-Ultimate.webp",
   },
   {
     title: "AFMGQT V1 y V2",
     items: ["Versiones 1 y 2 del cuestionario de respuesta forzada para diagnósticos y evaluaciones exploratorias."],
-    icon: "/icons/Task-Checklist--Streamline-Ultimate.png",
+    icon: "/icons/Task-Checklist--Streamline-Ultimate.webp",
   },
   {
     title: "DLST",
     items: ["Prueba estándar de discriminación de mentiras para evaluaciones de veracidad."],
-    icon: "/icons/Monitor-Find--Streamline-Ultimate.png",
+    icon: "/icons/Monitor-Find--Streamline-Ultimate.webp",
   },
   {
     title: "CIT (Concealed Information Test)",
     items: ["Protocolo estándar internacional para la detección de información oculta."],
-    icon: "/icons/Touch-Id-Desktop--Streamline-Ultimate.png",
+    icon: "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
   },
 ];
 
@@ -208,7 +208,7 @@ export default function TecnicasPoligraficasPage() {
                   className="mb-6"
                   style={{
                     fontFamily: "var(--font-montserrat), sans-serif",
-                    fontSize: "38px",
+                    fontSize: "clamp(24px, 5vw, 36px)",
                     fontWeight: "700",
                     lineHeight: "1.2",
                     color: "#48255A",
@@ -275,7 +275,7 @@ export default function TecnicasPoligraficasPage() {
           </div>
 
           <h2
-            className="text-3xl md:text-4xl font-bold text-[#48255A] mb-12"
+            className="text-2xl sm:text-3xl md:text-[36px] font-bold text-[#48255A] mb-12"
             style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.2" }}
           >
             Características Generales del Curso
@@ -341,7 +341,7 @@ export default function TecnicasPoligraficasPage() {
               {/* Título adaptado al estilo estándar de la página */}
               <h2
                 style={{
-                  fontSize: "32px",
+                  fontSize: "clamp(24px, 5vw, 36px)",
                   fontWeight: "bold",
                   lineHeight: "40px",
                   color: "#ffffff",

@@ -400,7 +400,7 @@ export default function Confiabilidad360Page() {
             </div>
             
             <h2
-              className="text-4xl md:text-[42px] mb-6"
+              className="text-2xl sm:text-3xl md:text-[36px] mb-6"
               style={{
                 fontWeight: "bold",
                 lineHeight: "1.2",
@@ -481,7 +481,7 @@ export default function Confiabilidad360Page() {
               {/* Título adaptado al estilo estándar de la página */}
               <h2
                 style={{
-                  fontSize: "32px",
+                  fontSize: "clamp(24px, 5vw, 36px)",
                   fontWeight: "bold",
                   lineHeight: "40px",
                   color: "#ffffff",

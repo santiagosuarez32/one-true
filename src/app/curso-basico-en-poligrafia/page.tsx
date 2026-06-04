@@ -126,7 +126,7 @@ export default function CursoBasicoPoligrafiaPage() {
             
             <h2
               style={{
-                fontSize: "36px",
+                fontSize: "clamp(24px, 5vw, 36px)",
                 fontWeight: "bold",
                 lineHeight: "46px",
                 color: "#48255A",
@@ -226,7 +226,7 @@ export default function CursoBasicoPoligrafiaPage() {
             </div>
             
             <h2
-              className="text-3xl md:text-4xl"
+              className="text-2xl sm:text-3xl md:text-[36px]"
               style={{
                 fontWeight: "bold",
                 lineHeight: "1.2",
@@ -350,7 +350,7 @@ export default function CursoBasicoPoligrafiaPage() {
             </div>
             
             <h2
-              className="text-4xl md:text-[42px] mb-6"
+              className="text-2xl sm:text-3xl md:text-[36px] mb-6"
               style={{
                 fontWeight: "bold",
                 lineHeight: "1.2",
@@ -439,7 +439,7 @@ export default function CursoBasicoPoligrafiaPage() {
 
               <h2
                 style={{
-                  fontSize: "32px",
+                  fontSize: "clamp(24px, 5vw, 36px)",
                   fontWeight: "bold",
                   lineHeight: "40px",
                   color: "#ffffff",

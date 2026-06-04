@@ -303,7 +303,7 @@ export default function VettingPage() {
 
       {/* Sobre el Servicio Section */}
       <section className="bg-white py-20">
-        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16">
+        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
           
           {/* Centered Small Header */}
           <div className="flex flex-col items-center text-center mb-16">
@@ -324,7 +324,7 @@ export default function VettingPage() {
             
             <h2
               style={{
-                fontSize: "36px",
+                fontSize: "clamp(24px, 5vw, 36px)",
                 fontWeight: "bold",
                 lineHeight: "46px",
                 color: "#48255A",
@@ -392,7 +392,7 @@ export default function VettingPage() {
       <section className="bg-white py-12 md:py-16 overflow-hidden relative">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#700FA3]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
         
-        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16 flex flex-col lg:flex-row items-center gap-8 lg:gap-12 relative z-10">
+        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 flex flex-col lg:flex-row items-center gap-8 lg:gap-12 relative z-10">
           
           {/* Left Column: Images */}
           <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-start">
@@ -442,7 +442,7 @@ export default function VettingPage() {
             </div>
             
             <h2
-              className="text-4xl md:text-[42px] mb-6"
+              className="text-2xl sm:text-3xl md:text-[36px] mb-6"
               style={{
                 fontWeight: "bold",
                 lineHeight: "1.2",
@@ -498,8 +498,8 @@ export default function VettingPage() {
       </section>
 
       {/* ── FORMULARIO DE CONTACTO (ESTILO EXACTO GLOBALWORK #NOSOTROS - ADAPTADO A ONE TRUE) ── */}
-      <section 
-        id="contacto" 
+      <section
+        id="contacto"
         className="py-12 md:py-16 relative overflow-hidden"
         style={{
           backgroundImage: "linear-gradient(60deg, #700FA3 50%, #8A15C4 90%)",
@@ -507,8 +507,8 @@ export default function VettingPage() {
         }}
       >
         {/* Background Decorative Blobs */}
-        <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-white/5 blur-[100px] pointer-events-none" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full bg-[#FFC107]/5 blur-[120px] pointer-events-none" />
+        <div className="fixed top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-white/5 blur-[100px] pointer-events-none -z-10" />
+        <div className="fixed bottom-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full bg-[#FFC107]/5 blur-[120px] pointer-events-none -z-10" />
 
         <div className="max-w-6xl lg:max-w-7xl xl:max-w-[1200px] mx-auto px-6 md:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
@@ -523,7 +523,7 @@ export default function VettingPage() {
               {/* Título adaptado al estilo estándar de la página */}
               <h2
                 style={{
-                  fontSize: "32px",
+                  fontSize: "clamp(24px, 5vw, 36px)",
                   fontWeight: "bold",
                   lineHeight: "40px",
                   color: "#ffffff",

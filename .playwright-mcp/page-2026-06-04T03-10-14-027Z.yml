@@ -1,0 +1,459 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e4]:
+      - img "One True Ecuador Logo" [ref=e6]
+      - navigation [ref=e8]:
+        - link "Inicio" [ref=e9] [cursor=pointer]:
+          - /url: /
+        - link "Pruebas Poligráficas" [ref=e10] [cursor=pointer]:
+          - /url: /pruebas-poligraficas
+        - generic [ref=e11]:
+          - link "Evaluaciones" [ref=e12] [cursor=pointer]:
+            - /url: /#services
+            - text: Evaluaciones
+            - img [ref=e13]
+          - generic:
+            - generic:
+              - link "Vetting":
+                - /url: /vetting
+              - link "Estudio de Confiabilidad 360º":
+                - /url: /estudio-de-confiabilidad-360
+              - link "Visitas Domiciliarias":
+                - /url: /visitas-domiciliarias
+              - link "Pruebas Toxicológicas":
+                - /url: /pruebas-toxicologicas
+              - link "Evaluaciones Psicométricas":
+                - /url: /evaluaciones-psicometricas
+              - link "Prueba de honestidad ética y valores":
+                - /url: /prueba-de-honestidad-etica-y-valores
+        - generic [ref=e15]:
+          - link "Academia" [ref=e16] [cursor=pointer]:
+            - /url: /#service-7
+            - text: Academia
+            - img [ref=e17]
+          - generic:
+            - generic:
+              - link "Curso Básico en Poligrafía 400 H":
+                - /url: /curso-basico-en-poligrafia
+              - link "Cursos Avanzados en Poligrafía":
+                - /url: /cursos-avanzados-en-poligrafia
+              - link "Formaciones Complementarias":
+                - /url: /formaciones-complementarias
+              - link "Calendario Académico":
+                - /url: /#service-7
+        - link "Comunidad" [ref=e19] [cursor=pointer]:
+          - /url: /comunidad
+        - generic [ref=e20]:
+          - link "Aprende gratis" [ref=e21] [cursor=pointer]:
+            - /url: /#recursos
+            - text: Aprende gratis
+            - img [ref=e22]
+          - generic:
+            - generic:
+              - link "Blog":
+                - /url: /blog
+              - link "Podcast":
+                - /url: /podcast
+              - link "Ebook":
+                - /url: /ebook
+      - link "Cotiza gratis" [ref=e25] [cursor=pointer]:
+        - /url: /cotiza
+    - generic [ref=e26]:
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - heading "Garantiza la honestidad de tu equipo con pruebas de polígrafo, minimizando los riesgos de fraude internos." [level=1] [ref=e33]:
+            - text: Garantiza la honestidad de tu equipo con
+            - strong [ref=e34]: pruebas de polígrafo
+            - text: ", minimizando los riesgos de fraude internos."
+          - paragraph [ref=e35]: Brindamos certeza total en tus procesos de contratación, investigaciones de incidentes y evaluaciones de rutina con tecnología de última generación.
+          - link "Cotizar mi evaluación ahora" [ref=e37] [cursor=pointer]:
+            - /url: /cotiza
+        - generic:
+          - heading "Te ayudamos a construir equipos confiables y seguros." [level=2]:
+            - text: Te ayudamos a construir
+            - strong: equipos confiables y seguros
+            - text: .
+          - paragraph:
+            - text: Reduce hasta el
+            - strong: 95%
+            - text: "de los riesgos con nuestras metodologías validadas: Estudios de seguridad, Verificaciones de Antecedentes, Verificación laboral, Pruebas toxicológicas, Visitas domiciliarias con nuestro sistema de verificación 360°."
+          - generic:
+            - link "Contactar a un experto ahora":
+              - /url: /cotiza
+        - generic:
+          - heading "Inicia tu carrera como Poligrafista Certificado con aval de la APA." [level=2]:
+            - text: Inicia tu carrera como
+            - strong: Poligrafista Certificado con aval de la APA
+            - text: .
+          - paragraph:
+            - text: Fórmate en
+            - strong: One True Polygraph Training Academy
+            - text: ", la comunidad de expertos más grande de Latinoamérica. Obtén una certificación reconocida globalmente con métodos científicos de última generación."
+          - generic:
+            - link "Certificarme como Experto":
+              - /url: /cotiza
+      - generic [ref=e38]:
+        - button "Ver diapositiva 1" [ref=e39] [cursor=pointer]
+        - button "Ver diapositiva 2" [ref=e42] [cursor=pointer]
+        - button "Ver diapositiva 3" [ref=e44] [cursor=pointer]
+    - generic [ref=e47]:
+      - generic [ref=e50]: Algunos de nuestros clientes
+      - heading "Empresas que redujeron sus riesgo con nuestras soluciones" [level=2] [ref=e51]
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - img "Marca 1" [ref=e55]
+          - img "Marca 2" [ref=e56]
+          - img "Marca 3" [ref=e57]
+          - img "Marca 4" [ref=e58]
+          - img "Marca 5" [ref=e59]
+          - img "Marca 6" [ref=e60]
+          - img "Marca 7" [ref=e61]
+          - img "Marca 8" [ref=e62]
+          - img "Marca 9" [ref=e63]
+          - img "Marca 10" [ref=e64]
+          - img "Marca 11" [ref=e65]
+          - img "Marca 12" [ref=e66]
+          - img "Marca 13" [ref=e67]
+          - img "Marca 14" [ref=e68]
+          - img "Marca 15" [ref=e69]
+        - generic [ref=e70]:
+          - img "Marca 1-duplicate" [ref=e71]
+          - img "Marca 2-duplicate" [ref=e72]
+          - img "Marca 3-duplicate" [ref=e73]
+          - img "Marca 4-duplicate" [ref=e74]
+          - img "Marca 5-duplicate" [ref=e75]
+          - img "Marca 6-duplicate" [ref=e76]
+          - img "Marca 7-duplicate" [ref=e77]
+          - img "Marca 8-duplicate" [ref=e78]
+          - img "Marca 9-duplicate" [ref=e79]
+          - img "Marca 10-duplicate" [ref=e80]
+          - img "Marca 11-duplicate" [ref=e81]
+          - img "Marca 12-duplicate" [ref=e82]
+          - img "Marca 13-duplicate" [ref=e83]
+          - img "Marca 14-duplicate" [ref=e84]
+          - img "Marca 15-duplicate" [ref=e85]
+      - link "Quiero proteger mi empresa" [ref=e87] [cursor=pointer]:
+        - /url: /cotiza
+    - generic [ref=e89]:
+      - generic [ref=e90]:
+        - generic [ref=e93]: Conoce nuestros servicios
+        - heading "Seleccione la solución que mejor se adapte a sus necesidades de seguridad y confianza" [level=2] [ref=e94]
+      - generic [ref=e95]:
+        - generic [ref=e96] [cursor=pointer]:
+          - img "Servicio de Pruebas de Polígrafo Profesionales en Ecuador - One True" [ref=e98]
+          - generic [ref=e99]:
+            - heading "Pruebas de Polígrafo Profesionales" [level=3] [ref=e100]:
+              - link "Pruebas de Polígrafo Profesionales" [ref=e101]:
+                - /url: /pruebas-poligraficas
+            - paragraph [ref=e102]: Certeza técnica con un 95% de exactitud. Revelamos la verdad en procesos críticos de seguridad y confianza.
+            - link "Ver detalles del servicio para Pruebas de Polígrafo Profesionales" [ref=e103]:
+              - /url: /pruebas-poligraficas
+              - text: Ver detalles del servicio
+        - generic [ref=e104] [cursor=pointer]:
+          - img "Servicio de Vetting en Ecuador - One True" [ref=e106]
+          - generic [ref=e107]:
+            - heading "Vetting" [level=3] [ref=e108]:
+              - link "Vetting" [ref=e109]:
+                - /url: /vetting
+            - paragraph [ref=e110]: Proteja la integridad de su empresa desde el primer día. Filtramos riesgos mediante el rastreo exhaustivo en más de 190 bases de datos nacionales e internacionales (Interpol/OFAC) para garantizar contrataciones 100% seguras.
+            - link "Ver detalles del servicio para Vetting" [ref=e111]:
+              - /url: /vetting
+              - text: Ver detalles del servicio
+        - generic [ref=e112] [cursor=pointer]:
+          - img "Servicio de Estudio de Confiabilidad 360° en Ecuador - One True" [ref=e114]
+          - generic [ref=e115]:
+            - heading "Estudio de Confiabilidad 360°" [level=3] [ref=e116]:
+              - link "Estudio de Confiabilidad 360°" [ref=e117]:
+                - /url: /estudio-de-confiabilidad-360
+            - paragraph [ref=e118]: Confirmamos la honestidad y estabilidad de sus candidatos. Validamos trayectorias (laborales y académicas) y realizamos un análisis profundo de salud financiera y endeudamiento en +190 bases de datos para asegurar un equipo confiable y libre de riesgos.
+            - link "Ver detalles del servicio para Estudio de Confiabilidad 360°" [ref=e119]:
+              - /url: /estudio-de-confiabilidad-360
+              - text: Ver detalles del servicio
+        - generic [ref=e120] [cursor=pointer]:
+          - img "Servicio de Visitas Domiciliarias en Ecuador - One True" [ref=e122]
+          - generic [ref=e123]:
+            - heading "Visitas Domiciliarias" [level=3] [ref=e124]:
+              - link "Visitas Domiciliarias" [ref=e125]:
+                - /url: /visitas-domiciliarias
+            - paragraph [ref=e126]: Evaluamos el entorno socioeconómico y familiar de sus candidatos en el terreno. Prevenimos riesgos de vulnerabilidad y confirmamos la coherencia entre el estilo de vida y el perfil declarado para garantizar contrataciones íntegras.
+            - link "Ver detalles del servicio para Visitas Domiciliarias" [ref=e127]:
+              - /url: /visitas-domiciliarias
+              - text: Ver detalles del servicio
+        - generic [ref=e128] [cursor=pointer]:
+          - img "Servicio de Pruebas Toxicológicas en Ecuador - One True" [ref=e130]
+          - generic [ref=e131]:
+            - heading "Pruebas Toxicológicas" [level=3] [ref=e132]:
+              - link "Pruebas Toxicológicas" [ref=e133]:
+                - /url: /pruebas-toxicologicas
+            - paragraph [ref=e134]: Garantice un ambiente laboral seguro y productivo. Detectamos el consumo de sustancias con un 99% de nivel de confianza, asegurando que su equipo humano opere con la sobriedad y responsabilidad que su empresa exige.
+            - link "Ver detalles del servicio para Pruebas Toxicológicas" [ref=e135]:
+              - /url: /pruebas-toxicologicas
+              - text: Ver detalles del servicio
+        - generic [ref=e136] [cursor=pointer]:
+          - img "Servicio de Evaluaciones Psicométricas en Ecuador - One True" [ref=e138]
+          - generic [ref=e139]:
+            - heading "Evaluaciones Psicométricas" [level=3] [ref=e140]:
+              - link "Evaluaciones Psicométricas" [ref=e141]:
+                - /url: /evaluaciones-psicometricas
+            - paragraph [ref=e142]: Análisis profundo de la personalidad, aptitudes, comportamiento ético del personal para asegurar el ajuste al cargo.
+            - link "Ver detalles del servicio para Evaluaciones Psicométricas" [ref=e143]:
+              - /url: /evaluaciones-psicometricas
+              - text: Ver detalles del servicio
+        - generic [ref=e144] [cursor=pointer]:
+          - img "Servicio de Prueba de Honestidad, Ética y Valores en Ecuador - One True" [ref=e146]
+          - generic [ref=e147]:
+            - heading "Prueba de Honestidad, Ética y Valores" [level=3] [ref=e148]:
+              - link "Prueba de Honestidad, Ética y Valores" [ref=e149]:
+                - /url: /prueba-de-honestidad-etica-y-valores
+            - paragraph [ref=e150]: Un entorno empresarial seguro se construye con personas confiables. Nuestra Prueba de Honestidad, Ética y Valores es una herramienta psicométrica avanzada, compuesta por 90 reactivos estratégicos, diseñada para identificar conductas de riesgo y medir la alineación ética de los evaluados de manera ágil y precisa.
+            - link "Ver detalles del servicio para Prueba de Honestidad, Ética y Valores" [ref=e151]:
+              - /url: /prueba-de-honestidad-etica-y-valores
+              - text: Ver detalles del servicio
+        - generic [ref=e152] [cursor=pointer]:
+          - img "Servicio de Formación en Poligrafía Acreditada por APA en Ecuador - One True" [ref=e154]
+          - generic [ref=e155]:
+            - heading "Formación en Poligrafía Acreditada por APA" [level=3] [ref=e156]:
+              - link "Formación en Poligrafía Acreditada por APA" [ref=e157]:
+                - /url: /curso-basico-en-poligrafia
+            - paragraph [ref=e158]: Conviértase en un experto en Poligrafía y evaluador Forense de la Credibilidad. Certifíquese como poligrafista profesional con nuestro programa de 400 horas, diseñado bajo los más altos estándares científicos y avalado internacionalmente por la APA.
+            - link "Ver formación en poligrafía para Formación en Poligrafía Acreditada por APA" [ref=e159]:
+              - /url: /curso-basico-en-poligrafia
+              - text: Ver formación en poligrafía
+    - generic [ref=e161]:
+      - generic [ref=e164]: Nuestros resultados
+      - heading "Información que impacta la contratación de las empresas" [level=2] [ref=e165]
+      - generic [ref=e166]:
+        - generic [ref=e167]:
+          - generic [ref=e168]: 0+
+          - paragraph [ref=e169]: Años de excelencia técnica bajo estándares globales.
+        - generic [ref=e170]:
+          - generic [ref=e171]: 0 +
+          - paragraph [ref=e172]: Evaluaciones ejecutadas con precisión científica.
+        - generic [ref=e173]:
+          - generic [ref=e174]: 0%
+          - paragraph [ref=e175]: "De Exactitud: Certeza técnica en cada informe entregado."
+        - generic [ref=e176]:
+          - generic [ref=e177]: 0H
+          - paragraph [ref=e178]: Garantizamos resultados precisos en 24 horas o menos, eliminando la incertidumbre y agilizando sus procesos.
+      - button "Contactar a un experto ahora" [ref=e179]
+    - generic [ref=e181]:
+      - generic [ref=e184]: Respaldo Institucional Internacional
+      - heading "Somos miembros activos de las organizaciones más prestigiosas de la industria:" [level=2] [ref=e185]
+      - generic [ref=e187]:
+        - img "APA Certification Logo" [ref=e190] [cursor=pointer]
+        - img "International Association Logo" [ref=e193] [cursor=pointer]
+        - img "Security Association Logo" [ref=e196] [cursor=pointer]
+    - generic [ref=e198]:
+      - generic [ref=e199]:
+        - generic [ref=e202]: Testimonios
+        - heading "La confianza de nuestros clientes es nuestro mayor respaldo técnico." [level=2] [ref=e203]
+      - generic [ref=e204]:
+        - generic [ref=e205]:
+          - img [ref=e206]
+          - generic [ref=e208]:
+            - img [ref=e209]
+            - img [ref=e211]
+            - img [ref=e213]
+            - img [ref=e215]
+            - img [ref=e217]
+          - paragraph [ref=e219]: “Excelente servicio y muy profesional, de gran ayuda para tener un mejor conocimiento de los perfiles a contratar.”
+          - generic [ref=e221]:
+            - heading "Carmen Lalaleo" [level=4] [ref=e222]
+            - paragraph [ref=e223]: BFS Ecuador
+        - generic [ref=e224]:
+          - img [ref=e225]
+          - generic [ref=e227]:
+            - img [ref=e228]
+            - img [ref=e230]
+            - img [ref=e232]
+            - img [ref=e234]
+            - img [ref=e236]
+          - paragraph [ref=e238]: “Informes técnicos impecables y me entregaron en el tiempo que me ofrecieron. Tuvimos un incidente crítico, su intervención mediante la prueba de polígrafo de investigación fue determinante para el esclarecimiento de los hechos.”
+          - generic [ref=e240]:
+            - heading "Fausto Luna" [level=4] [ref=e241]
+            - paragraph [ref=e242]: Cliente Corporativo
+        - generic [ref=e243]:
+          - img [ref=e244]
+          - generic [ref=e246]:
+            - img [ref=e247]
+            - img [ref=e249]
+            - img [ref=e251]
+            - img [ref=e253]
+            - img [ref=e255]
+          - paragraph [ref=e257]: “El nivel profesional de One True marca una diferencia clara en el sector de la formación. Gracias a su metodología y actualización técnica, he logrado elevar mi estándar de calidad para realizar un trabajo impecable y de alta precisión.”
+          - generic [ref=e259]:
+            - heading "Ingrid Ponce" [level=4] [ref=e260]
+            - paragraph [ref=e261]: México
+        - generic [ref=e262]:
+          - img [ref=e263]
+          - generic [ref=e265]:
+            - img [ref=e266]
+            - img [ref=e268]
+            - img [ref=e270]
+            - img [ref=e272]
+            - img [ref=e274]
+          - paragraph [ref=e276]: “La actualización en poligrafía con One True ha sido una experiencia enriquecedora que me ha permitido crecer como profesional y mejorar mis habilidades en esta área tan importante, quiero invitar a todos los colegas en poligrafía a unirse a la comunidad de One True y a participar en todas las capacitaciones que ofrecen.”
+          - generic [ref=e278]:
+            - heading "Paola Andrea Alzate Mazo" [level=4] [ref=e279]
+            - paragraph [ref=e280]: Colombia
+        - generic [ref=e281]:
+          - img [ref=e282]
+          - generic [ref=e284]:
+            - img [ref=e285]
+            - img [ref=e287]
+            - img [ref=e289]
+            - img [ref=e291]
+            - img [ref=e293]
+          - paragraph [ref=e295]: “La implementación de pruebas de polígrafo de rutina ha sido clave para reducir la rotación y fortalecer la integridad de nuestro equipo. Hemos consolidado una cultura organizacional sólida, basada en la transparencia y la confianza profesional.”
+          - generic [ref=e297]:
+            - heading "Eduardo Sanchez" [level=4] [ref=e298]
+            - paragraph [ref=e299]: Novexia SAS
+      - link "Mira nuestras reseñas en Google, tenemos una puntuación de 4.9" [ref=e301] [cursor=pointer]:
+        - /url: https://share.google/NBg9N5x27H43Gsyyd
+        - img [ref=e302]
+        - generic [ref=e307]: Mira nuestras reseñas en Google, tenemos una puntuación de 4.9
+        - generic [ref=e308]:
+          - img [ref=e309]
+          - img [ref=e311]
+          - img [ref=e313]
+          - img [ref=e315]
+          - img [ref=e317]
+    - generic [ref=e320]:
+      - generic [ref=e321]:
+        - heading "Aprende con nuestros recursos gratuitos" [level=2] [ref=e322]
+        - paragraph [ref=e323]: Eleva la seguridad de tu organización y optimiza decisiones críticas con nuestras soluciones en evaluación de confianza, credibilidad y formación avanzada. Explora nuestro blog, podcast y ebooks exclusivos para adquirir el conocimiento estratégico que necesitas para mitigar riesgos, asegurar el crecimiento de tu negocio, aprender de poligrafía y evaluación de la credibilidad desde un enfoque más accesible y dinámico.
+      - generic [ref=e324]:
+        - generic [ref=e325]:
+          - generic [ref=e328]: Recursos
+          - heading "Artículos más recientes" [level=2] [ref=e329]
+          - link "Chequea nuestro blog de One True" [ref=e330] [cursor=pointer]:
+            - /url: /blog
+            - text: Chequea nuestro blog
+        - generic [ref=e331] [cursor=pointer]:
+          - generic [ref=e332]:
+            - 'img "Imagen representativa del artículo: ¿Verdad o Mentira? Todo lo que debes saber antes de contratar una prueba de Polígrafo. - One True Ecuador" [ref=e333]'
+            - generic [ref=e334]: Blog
+          - generic [ref=e335]:
+            - heading "¿Verdad o Mentira? Todo lo que debes saber antes de contratar una prueba de Polígrafo." [level=3] [ref=e336]:
+              - link "¿Verdad o Mentira? Todo lo que debes saber antes de contratar una prueba de Polígrafo." [ref=e337]:
+                - /url: "#"
+            - 'link "Leer artículo completo: ¿Verdad o Mentira? Todo lo que debes saber antes de contratar una prueba de Polígrafo." [ref=e338]':
+              - /url: "#"
+              - text: Leer más
+              - img [ref=e339]
+        - generic [ref=e341] [cursor=pointer]:
+          - generic [ref=e342]:
+            - 'img "Imagen representativa del artículo: ¿Preempleo, Rutina o Investigación? Descubre qué prueba de polígrafo necesitas realmente. - One True Ecuador" [ref=e343]'
+            - generic [ref=e344]: Blog
+          - generic [ref=e345]:
+            - heading "¿Preempleo, Rutina o Investigación? Descubre qué prueba de polígrafo necesitas realmente." [level=3] [ref=e346]:
+              - link "¿Preempleo, Rutina o Investigación? Descubre qué prueba de polígrafo necesitas realmente." [ref=e347]:
+                - /url: "#"
+            - 'link "Leer artículo completo: ¿Preempleo, Rutina o Investigación? Descubre qué prueba de polígrafo necesitas realmente." [ref=e348]':
+              - /url: "#"
+              - text: Leer más
+              - img [ref=e349]
+        - generic [ref=e351] [cursor=pointer]:
+          - generic [ref=e352]:
+            - 'img "Imagen representativa del artículo: Garantiza la Verdad: 10 Requisitos Clave para una Prueba de Polígrafo Confiable y Exitosa. - One True Ecuador" [ref=e353]'
+            - generic [ref=e354]: Blog
+          - generic [ref=e355]:
+            - 'heading "Garantiza la Verdad: 10 Requisitos Clave para una Prueba de Polígrafo Confiable y Exitosa." [level=3] [ref=e356]':
+              - 'link "Garantiza la Verdad: 10 Requisitos Clave para una Prueba de Polígrafo Confiable y Exitosa." [ref=e357]':
+                - /url: "#"
+            - 'link "Leer artículo completo: Garantiza la Verdad: 10 Requisitos Clave para una Prueba de Polígrafo Confiable y Exitosa." [ref=e358]':
+              - /url: "#"
+              - text: Leer más
+              - img [ref=e359]
+    - generic [ref=e362]:
+      - generic [ref=e365]:
+        - 'img "Podcast One True: Beneficio de un estudio de confiabilidad en Ecuador" [ref=e366]'
+        - generic [ref=e367]: Podcast
+      - generic [ref=e368]:
+        - generic [ref=e371]: Podcast
+        - heading "Podcast en el que te cuento sobre el maravilloso mundo de la detección de mentiras." [level=2] [ref=e372]
+        - paragraph [ref=e373]: Descubre en este episodio cómo un estudio de confiabilidad puede proteger tu empresa, reducir riesgos y asegurar que estás tomando las mejores decisiones en la gestión de tu talento humano.
+        - link "Ver más sobre el podcast de detección de mentiras y poligrafía" [ref=e374] [cursor=pointer]:
+          - /url: /podcast
+          - text: Ver más
+    - generic [ref=e378]:
+      - generic [ref=e379]:
+        - generic [ref=e382]: Ebook gratuito
+        - heading "Guía práctica para saber si estoy contratando un servicio de poligrafía confiable." [level=2] [ref=e383]
+        - paragraph [ref=e384]: Descarga nuestro Ebook gratuito con la entrega del mes. Nuestro equipo trabaja constantemente para seguir trayendo nuevos ebooks gratuitos una vez al mes.
+      - generic [ref=e386]:
+        - 'img "Portada del Ebook One True: Guía práctica para contratar un servicio de poligrafía confiable en Ecuador" [ref=e389]'
+        - generic [ref=e390]:
+          - textbox "Correo" [ref=e391]
+          - textbox "WhatsApp" [ref=e392]
+          - textbox "¿Qué puesto tienes en tu empresa?" [ref=e393]
+          - textbox "¿A qué se dedica tu empresa?" [ref=e394]
+          - textbox "¿Cuántas personas trabajan en tu empresa?" [ref=e395]
+          - button "Descargar u obtener Ebook gratuito de Poligrafía" [ref=e396]: Obtener Ebook Gratis
+    - generic [ref=e398]:
+      - generic [ref=e399]:
+        - generic [ref=e400]:
+          - img "One True Logo" [ref=e402]
+          - paragraph [ref=e403]: Construimos vínculos confiables entre empresas y candidatos
+          - generic [ref=e404]:
+            - generic [ref=e405]: Síguenos
+            - generic [ref=e406]:
+              - link "Síguenos en LinkedIn" [ref=e407] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/david-coli-fiallo-75679a198?utm_source=share_via&utm_content=profile&utm_medium=member_android
+                - img [ref=e408]
+              - link "Síguenos en Facebook" [ref=e410] [cursor=pointer]:
+                - /url: https://www.facebook.com/share/1F8T24NNKE/
+                - img [ref=e411]
+              - link "Síguenos en Instagram" [ref=e413] [cursor=pointer]:
+                - /url: https://www.instagram.com/somosonetrue?igsh=bXNmOWYwaWpsdDVh
+                - img [ref=e414]
+              - link "Síguenos en YouTube" [ref=e416] [cursor=pointer]:
+                - /url: https://youtube.com/@somosonetrue?si=8OI3ZQ0A-4OzF_H0
+                - img [ref=e417]
+        - generic [ref=e419]:
+          - heading "Soluciones" [level=4] [ref=e420]
+          - list [ref=e421]:
+            - listitem [ref=e422]:
+              - link "Vetting" [ref=e423] [cursor=pointer]:
+                - /url: /vetting
+            - listitem [ref=e424]:
+              - link "Estudio de Confiabilidad 360°" [ref=e425] [cursor=pointer]:
+                - /url: /estudio-de-confiabilidad-360
+            - listitem [ref=e426]:
+              - link "Visitas Domiciliarias" [ref=e427] [cursor=pointer]:
+                - /url: /visitas-domiciliarias
+            - listitem [ref=e428]:
+              - link "Pruebas Toxicológicas" [ref=e429] [cursor=pointer]:
+                - /url: /pruebas-toxicologicas
+            - listitem [ref=e430]:
+              - link "Evaluaciones Psicométricas" [ref=e431] [cursor=pointer]:
+                - /url: /evaluaciones-psicometricas
+        - generic [ref=e432]:
+          - heading "Contacto" [level=4] [ref=e433]
+          - generic [ref=e434]:
+            - list [ref=e436]:
+              - listitem [ref=e437]:
+                - img [ref=e438]
+                - link "info@somosonetrue.com" [ref=e441] [cursor=pointer]:
+                  - /url: mailto:info@somosonetrue.com
+              - listitem [ref=e442]:
+                - img [ref=e443]
+                - link "098 129 6179" [ref=e445] [cursor=pointer]:
+                  - /url: tel:0981296179
+            - list [ref=e447]:
+              - listitem [ref=e448]:
+                - img [ref=e449]
+                - generic [ref=e452]:
+                  - strong [ref=e453]: Agencia Quito
+                  - text: "Av. Pérez Guerreo OE3-124 y San Gregorio, Instituto de Diagnóstico Médico, tercer piso, oficina #303, Quito-Ecuador."
+              - listitem [ref=e454]:
+                - img [ref=e455]
+                - generic [ref=e458]:
+                  - strong [ref=e459]: Agencia Guayaquil
+                  - text: Urdenor 2, Manzana 219, Solar 9
+      - generic [ref=e460]:
+        - paragraph [ref=e461]: © Copyright One True 2026
+        - link "Política de Privacidad y Cookies" [ref=e463] [cursor=pointer]:
+          - /url: "#"
+  - button "Open Next.js Dev Tools" [ref=e469] [cursor=pointer]:
+    - img [ref=e470]

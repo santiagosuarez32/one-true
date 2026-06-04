@@ -34,37 +34,37 @@ const advancedTechniques = [
   {
     title: "Auditoría de Procedimientos",
     items: ["Revisión sistemática del cumplimiento de estándares en cada examinación."],
-    icon: "/icons/Browser-Page-Account--Streamline-Ultimate.png",
+    icon: "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
   },
   {
     title: "Validación de Datos",
     items: ["Verificación de la integridad y consistencia en registros poligráficos."],
-    icon: "/icons/Browser-Hand--Streamline-Ultimate.png",
+    icon: "/icons/Browser-Hand--Streamline-Ultimate.webp",
   },
   {
     title: "Revisión por Pares",
     items: ["Evaluación cruzada de casos entre examinadores certificados."],
-    icon: "/icons/Touchpad-Finger--Streamline-Ultimate.png",
+    icon: "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
   },
   {
     title: "Calibración de Equipos",
     items: ["Mantenimiento preventivo y control de precisión instrumental."],
-    icon: "/icons/Password-Desktop--Streamline-Ultimate.png",
+    icon: "/icons/Password-Desktop--Streamline-Ultimate.webp",
   },
   {
     title: "Análisis de Discrepancias",
     items: ["Investigación de variaciones en resultados e identificación de causas."],
-    icon: "/icons/Task-Checklist--Streamline-Ultimate.png",
+    icon: "/icons/Task-Checklist--Streamline-Ultimate.webp",
   },
   {
     title: "Documentación de Conformidad",
     items: ["Registro exhaustivo de auditorías y mejoras implementadas."],
-    icon: "/icons/Monitor-Find--Streamline-Ultimate.png",
+    icon: "/icons/Monitor-Find--Streamline-Ultimate.webp",
   },
   {
     title: "Mejora Continua",
     items: ["Actualización de protocolos basada en hallazgos de auditoría."],
-    icon: "/icons/Touch-Id-Desktop--Streamline-Ultimate.png",
+    icon: "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
   },
 ];
 
@@ -185,7 +185,7 @@ export default function ControlDeCalidadEnPoligrafiaPage() {
                   className="mb-6"
                   style={{
                     fontFamily: "var(--font-montserrat), sans-serif",
-                    fontSize: "38px",
+                    fontSize: "clamp(24px, 5vw, 36px)",
                     fontWeight: "700",
                     lineHeight: "1.2",
                     color: "#48255A",
@@ -250,7 +250,7 @@ export default function ControlDeCalidadEnPoligrafiaPage() {
           </div>
 
           <h2
-            className="text-3xl md:text-4xl font-bold text-[#48255A] mb-12"
+            className="text-2xl sm:text-3xl md:text-[36px] font-bold text-[#48255A] mb-12"
             style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.2" }}
           >
             Características Generales del Curso
@@ -301,7 +301,7 @@ export default function ControlDeCalidadEnPoligrafiaPage() {
 
               <div className="absolute -bottom-12 -right-12 w-2/3 rounded-3xl overflow-hidden shadow-xl z-20 border-4 border-white hidden md:block">
                 <img
-                  src="/capacitacion.png"
+                  src="/capacitacion.webp"
                   alt="Capacitación en Control de Calidad"
                   loading="lazy"
                   className="w-full h-auto object-cover aspect-square"
@@ -335,7 +335,7 @@ export default function ControlDeCalidadEnPoligrafiaPage() {
             </div>
 
             <h2
-              className="text-4xl md:text-[42px] mb-6"
+              className="text-2xl sm:text-3xl md:text-[36px] mb-6"
               style={{
                 fontWeight: "bold",
                 lineHeight: "1.2",
@@ -400,7 +400,7 @@ export default function ControlDeCalidadEnPoligrafiaPage() {
               {/* Título adaptado al estilo estándar de la página */}
               <h2
                 style={{
-                  fontSize: "32px",
+                  fontSize: "clamp(24px, 5vw, 36px)",
                   fontWeight: "bold",
                   lineHeight: "40px",
                   color: "#ffffff",

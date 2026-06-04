@@ -135,7 +135,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
                   className="mb-6"
                   style={{
                     fontFamily: "var(--font-montserrat), sans-serif",
-                    fontSize: "38px",
+                    fontSize: "clamp(24px, 5vw, 36px)",
                     fontWeight: "700",
                     lineHeight: "1.2",
                     color: "#48255A",
@@ -280,7 +280,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
           </div>
 
           <h2
-            className="text-3xl md:text-4xl font-bold text-[#48255A] mb-12"
+            className="text-2xl sm:text-3xl md:text-[36px] font-bold text-[#48255A] mb-12"
             style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.2" }}
           >
             Características Generales de la Aplicación
@@ -336,7 +336,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
           </div>
 
           <h2
-            className="text-3xl md:text-4xl font-bold text-[#48255A] mb-12 text-center"
+            className="text-2xl sm:text-3xl md:text-[36px] font-bold text-[#48255A] mb-12 text-center"
             style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.2" }}
           >
             ¿Cuándo implementar esta evaluación?
@@ -408,7 +408,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
               {/* Título adaptado al estilo estándar de la página */}
               <h2
                 style={{
-                  fontSize: "32px",
+                  fontSize: "clamp(24px, 5vw, 36px)",
                   fontWeight: "bold",
                   lineHeight: "40px",
                   color: "#ffffff",

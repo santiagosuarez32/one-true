@@ -34,37 +34,37 @@ const advancedTechniques = [
   {
     title: "Análisis de Respiración (RIN/RSC)",
     items: ["Evaluación de patrones respiratorios como indicadores de estrés y respuesta fisiológica."],
-    icon: "/icons/Browser-Page-Account--Streamline-Ultimate.png",
+    icon: "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
   },
   {
     title: "Análisis Cardiovascular (CVT/GSR)",
     items: ["Interpretación de cambios en presión arterial y respuesta galvánica de la piel."],
-    icon: "/icons/Browser-Hand--Streamline-Ultimate.png",
+    icon: "/icons/Browser-Hand--Streamline-Ultimate.webp",
   },
   {
     title: "Zona de Comparación Relativa",
     items: ["Técnica de comparación entre zonas de respuesta para identificar reacciones relevantes."],
-    icon: "/icons/Touchpad-Finger--Streamline-Ultimate.png",
+    icon: "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
   },
   {
     title: "Análisis de Artefactos",
     items: ["Identificación y evaluación de respuestas causadas por movimiento o factores externos."],
-    icon: "/icons/Password-Desktop--Streamline-Ultimate.png",
+    icon: "/icons/Password-Desktop--Streamline-Ultimate.webp",
   },
   {
     title: "Scoring Automatizado",
     items: ["Uso de software especializado para análisis cuantitativo y comparación de datos."],
-    icon: "/icons/Task-Checklist--Streamline-Ultimate.png",
+    icon: "/icons/Task-Checklist--Streamline-Ultimate.webp",
   },
   {
     title: "Interpretación Forense",
     items: ["Estándares de análisis aplicados en contextos legales y periciales."],
-    icon: "/icons/Monitor-Find--Streamline-Ultimate.png",
+    icon: "/icons/Monitor-Find--Streamline-Ultimate.webp",
   },
   {
     title: "Reporte Técnico Profesional",
     items: ["Redacción de conclusiones y dictámenes basados en análisis e interpretación de datos."],
-    icon: "/icons/Touch-Id-Desktop--Streamline-Ultimate.png",
+    icon: "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
   },
 ];
 
@@ -185,7 +185,7 @@ export default function CalificacionGraficasPage() {
                   className="mb-6"
                   style={{
                     fontFamily: "var(--font-montserrat), sans-serif",
-                    fontSize: "38px",
+                    fontSize: "clamp(24px, 5vw, 36px)",
                     fontWeight: "700",
                     lineHeight: "1.2",
                     color: "#48255A",
@@ -275,7 +275,7 @@ export default function CalificacionGraficasPage() {
           </div>
 
           <h2
-            className="text-3xl md:text-4xl font-bold text-[#48255A] mb-12"
+            className="text-2xl sm:text-3xl md:text-[36px] font-bold text-[#48255A] mb-12"
             style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.2" }}
           >
             Características Generales del Curso
@@ -341,7 +341,7 @@ export default function CalificacionGraficasPage() {
               {/* Título adaptado al estilo estándar de la página */}
               <h2
                 style={{
-                  fontSize: "32px",
+                  fontSize: "clamp(24px, 5vw, 36px)",
                   fontWeight: "bold",
                   lineHeight: "40px",
                   color: "#ffffff",

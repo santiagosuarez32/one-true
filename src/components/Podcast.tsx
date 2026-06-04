@@ -89,8 +89,20 @@ export default function Podcast() {
           <a
             href="/podcast"
             aria-label="Ver más sobre el podcast de detección de mentiras y poligrafía"
-            className="px-8 py-4 bg-[#FFC107] text-[#411A56] font-bold rounded inline-block"
-            style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+            className="px-8 py-3 rounded transition-all hover:brightness-110 shadow-lg text-sm md:text-base inline-block"
+            style={{
+              fontFamily: "var(--font-montserrat), sans-serif",
+              lineHeight: "1",
+              textAlign: "center",
+              fontWeight: "600",
+              fill: "#5F0091",
+              color: "#5F0091",
+              backgroundColor: "#FFC107",
+              display: "inline-block",
+              textDecoration: "none",
+              border: "none",
+              cursor: "pointer",
+            }}
           >
             Ver más
           </a>

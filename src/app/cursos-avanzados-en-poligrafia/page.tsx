@@ -9,31 +9,31 @@ const MODULOS_AVANZADOS = [
   {
     title: "Entrevista Pretest",
     desc: "Estructuración y conducción de la entrevista previa al examen. Técnicas de rapport, formulación de preguntas relevantes y detección de conductas evasivas o inconsistentes.",
-    image: "/cursos-avanzados/entrevista-pretest.png",
+    image: "/cursos-avanzados/entrevista-pretest.webp",
     href: "/entrevista-pretest",
   },
   {
     title: "Técnicas Poligráficas",
     desc: "Dominio de protocolos comparativos, de conocimiento y de screening bajo estándares APA. Aplicación de técnicas especializadas en distintos contextos periciales y operativos.",
-    image: "/cursos-avanzados/tecnicas-poligraficas.png",
+    image: "/cursos-avanzados/tecnicas-poligraficas.webp",
     href: "/tecnicas-poligraficas",
   },
   {
     title: "Calificación de Gráficas - Análisis de Datos",
     desc: "Interpretación numérica y visual de trazados poligráficos. Análisis estadístico de componentes fisiológicos y criterios de evaluación objetiva para decisiones periciales.",
-    image: "/cursos-avanzados/calificacion-de-graficas.png",
+    image: "/cursos-avanzados/calificacion-de-graficas.webp",
     href: "/calificacion-graficas-analisis-datos",
   },
   {
     title: "Sistema de Calificación ESS-M",
     desc: "Formación especializada en el sistema empírico de puntuación ESS-M para lograr una calificación consistente, reproducible y científicamente validada.",
-    image: "/cursos-avanzados/ess-m.png",
+    image: "/cursos-avanzados/ess-m.webp",
     href: "/sistema-calificacion-ess-m",
   },
   {
     title: "Control de Calidad en Poligrafía",
     desc: "Protocolos de auditoría, revisión por pares y mejora continua en la práctica poligráfica profesional. Garantía de rigor técnico y cumplimiento normativo.",
-    image: "/cursos-avanzados/control-de-calidad-poligrafia.png",
+    image: "/cursos-avanzados/control-de-calidad-poligrafia.webp",
     href: "/control-de-calidad-en-poligrafia",
   },
 ];
@@ -182,7 +182,7 @@ export default function CursosAvanzadosPoligrafiaPage() {
 
             <h2
               style={{
-                fontSize: "36px",
+                fontSize: "clamp(24px, 5vw, 36px)",
                 fontWeight: "bold",
                 lineHeight: "46px",
                 color: "#48255A",
@@ -290,7 +290,7 @@ export default function CursosAvanzadosPoligrafiaPage() {
 
               <h2
                 style={{
-                  fontSize: "32px",
+                  fontSize: "clamp(24px, 5vw, 36px)",
                   fontWeight: "bold",
                   lineHeight: "40px",
                   color: "#ffffff",

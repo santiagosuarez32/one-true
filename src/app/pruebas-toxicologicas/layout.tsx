@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "One True Ecuador",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Pruebas Toxicológicas - One True Ecuador",

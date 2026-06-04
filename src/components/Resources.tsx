@@ -47,8 +47,17 @@ const BlogCard = ({ article, className = "", isWide = false, cardRef }: { articl
       <a
         href={article.link}
         aria-label={`Leer artículo completo: ${article.title}`}
-        className="blog-cta-btn px-4 py-2 bg-[#FFC107] text-[#411A56] font-bold rounded transition-colors duration-300 text-xs whitespace-nowrap w-auto self-start flex items-center justify-center gap-1"
-        style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+        className="blog-cta-btn px-4 py-2 rounded transition-all hover:brightness-110 shadow-lg text-xs whitespace-nowrap w-auto self-start flex items-center justify-center gap-1"
+        style={{
+          fontFamily: "var(--font-montserrat), sans-serif",
+          fontWeight: "600",
+          fill: "#5F0091",
+          color: "#5F0091",
+          backgroundColor: "#FFC107",
+          textDecoration: "none",
+          border: "none",
+          cursor: "pointer",
+        }}
       >
         Leer más 
         <svg 
@@ -101,17 +110,17 @@ export default function Resources() {
     {
       title: "¿Verdad o Mentira? Todo lo que debes saber antes de contratar una prueba de Polígrafo.",
       image: "/blog/1.webp",
-      link: "#"
+      link: "/blog/verdad-o-mentira"
     },
     {
       title: "¿Preempleo, Rutina o Investigación? Descubre qué prueba de polígrafo necesitas realmente.",
       image: "/blog/2.webp",
-      link: "#"
+      link: "/blog/preempleo-rutina-investigacion"
     },
     {
       title: "Garantiza la Verdad: 10 Requisitos Clave para una Prueba de Polígrafo Confiable y Exitosa.",
       image: "/blog/3.webp",
-      link: "#"
+      link: "/blog/garantiza-la-verdad"
     }
   ];
 
@@ -119,8 +128,7 @@ export default function Resources() {
     <section id="recursos" className="bg-white py-16 md:py-24 scroll-mt-20">
       <style dangerouslySetInnerHTML={{ __html: `
         .blog-card:hover .blog-cta-btn {
-          background-color: #700FA3 !important;
-          color: #FFC107 !important;
+          filter: brightness(1.1);
         }
       `}} />
       <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
@@ -183,8 +191,20 @@ export default function Resources() {
             <a
               href="/blog"
               aria-label="Chequea nuestro blog de One True"
-              className="inline-block px-6 py-3 bg-[#FFC107] text-[#411A56] font-bold rounded transition-colors duration-300 text-sm hover:bg-[#700FA3] hover:text-[#FFC107] mt-8"
-              style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+              className="px-8 py-3 rounded transition-all hover:brightness-110 shadow-lg text-sm inline-block mt-8"
+              style={{
+                fontFamily: "var(--font-montserrat), sans-serif",
+                lineHeight: "1",
+                textAlign: "center",
+                fontWeight: "600",
+                fill: "#5F0091",
+                color: "#5F0091",
+                backgroundColor: "#FFC107",
+                display: "inline-block",
+                textDecoration: "none",
+                border: "none",
+                cursor: "pointer",
+              }}
             >
               Chequea nuestro blog
             </a>

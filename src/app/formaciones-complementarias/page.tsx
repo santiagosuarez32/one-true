@@ -35,17 +35,17 @@ const cursosOnline = [
   {
     title: "Evaluación Forense de la Credibilidad",
     desc: "Análisis científico del testimonio y detección de indicadores de engaño mediante protocolos estandarizados.",
-    image: "/formaciones/credibilidad.png",
+    image: "/formaciones/credibilidad.webp",
   },
   {
     title: "Elicitación conversacional",
     desc: "Es una técnica estratégica de obtención de información que utiliza conversaciones aparentemente naturales para recopilar datos sin levantar sospechas ni activar mecanismos defensivos.",
-    image: "/formaciones/elicitacion.png",
+    image: "/formaciones/elicitacion.webp",
   },
   {
     title: "Modelos de Entrevista Investigativa",
     desc: "Formación en técnicas de obtención de información de alta calidad, basadas en principios de respeto y efectividad forense.",
-    image: "/formaciones/entrevista.png",
+    image: "/formaciones/entrevista.webp",
   },
 ];
 
@@ -67,7 +67,7 @@ export default function FormacionesComplementariasPage() {
         />
 
         <img
-          src="/formaciones-complementarias.png"
+          src="/formaciones-complementarias.webp"
           alt="Formaciones Complementarias - One True Academia"
           fetchPriority="high"
           className="absolute inset-0 w-full h-full object-cover object-right-center z-0 opacity-40 mix-blend-overlay pointer-events-none"
@@ -161,7 +161,7 @@ export default function FormacionesComplementariasPage() {
               </span>
             </div>
             <h2
-              className="text-3xl md:text-4xl font-semibold mb-4"
+              className="text-2xl sm:text-3xl md:text-[36px] font-semibold mb-4"
               style={{
                 fontFamily: "var(--font-montserrat), sans-serif",
                 color: "#48255A",
@@ -289,7 +289,7 @@ export default function FormacionesComplementariasPage() {
             </div>
 
             <h2
-              className="text-4xl md:text-[42px] mb-6"
+              className="text-2xl sm:text-3xl md:text-[36px] mb-6"
               style={{
                 fontWeight: "bold",
                 lineHeight: "1.2",
@@ -388,7 +388,7 @@ export default function FormacionesComplementariasPage() {
               {/* Título adaptado al estilo estándar de la página */}
               <h2
                 style={{
-                  fontSize: "32px",
+                  fontSize: "clamp(24px, 5vw, 36px)",
                   fontWeight: "bold",
                   lineHeight: "40px",
                   color: "#ffffff",

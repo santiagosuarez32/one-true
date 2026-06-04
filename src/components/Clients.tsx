@@ -30,8 +30,8 @@ export default function Clients() {
     });
     return () => ctx.revert();
   }, []);
-  // 15 logos from public/marcas (1.png to 15.png)
-  const logos = Array.from({ length: 15 }, (_, i) => `/marcas/${i + 1}.png`);
+  // 15 logos from public/marcas (1.webp to 15.webp)
+  const logos = Array.from({ length: 15 }, (_, i) => `/marcas/${i + 1}.webp`);
 
   return (
     <section className="bg-white py-16 md:py-24 overflow-hidden">
@@ -91,18 +91,18 @@ export default function Clients() {
         {/* Infinite Loop Marquee Container */}
         <div ref={cardRef} className="relative w-full overflow-hidden py-4 flex">
           {/* Symmetrical visual fade masks at the left/right edges for studio finish */}
-          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+          <div className="absolute inset-y-0 left-0 w-10 sm:w-20 md:w-32 bg-linear-to-r from-white to-transparent z-10 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-10 sm:w-20 md:w-32 bg-linear-to-l from-white to-transparent z-10 pointer-events-none" />
 
           <div className="marquee-track">
             {/* First Set of Logos */}
-            <div className="marquee-content gap-10 pr-10 items-center flex-nowrap">
+            <div className="marquee-content gap-6 sm:gap-10 pr-6 sm:pr-10 items-center flex-nowrap">
               {logos.map((logo, idx) => (
                 <img
                   key={`logo-1-${idx}`}
                   src={logo}
                   alt={`Marca ${idx + 1}`}
-                  className="h-16 sm:h-24 md:h-36 lg:h-44 w-auto object-contain transition-all duration-300 filter grayscale opacity-65 hover:grayscale-0 hover:opacity-100 flex-shrink-0"
+                  className="h-20 sm:h-24 md:h-32 lg:h-40 w-auto object-contain transition-all duration-300 filter grayscale opacity-65 hover:grayscale-0 hover:opacity-100 flex-shrink-0"
                   onError={(e) => {
                     e.currentTarget.style.display = "none";
                   }}
@@ -110,13 +110,13 @@ export default function Clients() {
               ))}
             </div>
             {/* Second Set of Logos (Duplicate to complete infinite scroll seamless seam) */}
-            <div className="marquee-content gap-10 pr-10 items-center flex-nowrap">
+            <div className="marquee-content gap-6 sm:gap-10 pr-6 sm:pr-10 items-center flex-nowrap">
               {logos.map((logo, idx) => (
                 <img
                   key={`logo-2-${idx}`}
                   src={logo}
                   alt={`Marca ${idx + 1}-duplicate`}
-                  className="h-16 sm:h-24 md:h-36 lg:h-44 w-auto object-contain transition-all duration-300 filter grayscale opacity-65 hover:grayscale-0 hover:opacity-100 flex-shrink-0"
+                  className="h-20 sm:h-24 md:h-32 lg:h-40 w-auto object-contain transition-all duration-300 filter grayscale opacity-65 hover:grayscale-0 hover:opacity-100 flex-shrink-0"
                   onError={(e) => {
                     e.currentTarget.style.display = "none";
                   }}
@@ -128,12 +128,25 @@ export default function Clients() {
 
         {/* Centered CTA Button under Marquee */}
         <div className="mt-12 flex justify-center">
-          <button 
-            className="px-8 py-3.5 bg-[#FFC107] text-[#700FA3] font-bold rounded shadow-[0_4px_25px_rgba(255,193,7,0.15)] hover:bg-[#FFD54F] hover:scale-105 active:scale-95 transition-all duration-300 text-sm md:text-base tracking-wide"
-            style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+          <a
+            href="/cotiza"
+            className="px-8 py-3 rounded transition-all hover:brightness-110 shadow-lg text-sm md:text-base inline-block"
+            style={{
+              fontFamily: "var(--font-montserrat), sans-serif",
+              lineHeight: "1",
+              textAlign: "center",
+              fontWeight: "600",
+              fill: "#5F0091",
+              color: "#5F0091",
+              backgroundColor: "#FFC107",
+              display: "inline-block",
+              textDecoration: "none",
+              border: "none",
+              cursor: "pointer",
+            }}
           >
             Quiero proteger mi empresa
-          </button>
+          </a>
         </div>
 
       </div>

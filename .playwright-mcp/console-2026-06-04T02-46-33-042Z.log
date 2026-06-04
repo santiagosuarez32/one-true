@@ -1,0 +1,34 @@
+[     624ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[     736ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[     767ms] [WARNING] %c%s%c [33m[1m⚠[22m[39m metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase background: #e6e6e6;background: light-dark(rgba(0,0,0,0.1), rgba(255,255,255,0.25));color: #000000;color: light-dark(#000000, #ffffff);border-radius: 2px  Server   @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[    1013ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[    1057ms] [LOG] [Fast Refresh] done in 158ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[    8682ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[    8704ms] [LOG] [Fast Refresh] done in 122ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   10823ms] [LOG] Navbar scroll check: {scrollTop: 10, shouldBeScrolled: false} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   10840ms] [LOG] Navbar scroll check: {scrollTop: 27, shouldBeScrolled: false} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   10856ms] [LOG] Navbar scroll check: {scrollTop: 57, shouldBeScrolled: true} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   10873ms] [LOG] Navbar scroll check: {scrollTop: 109, shouldBeScrolled: true} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   10890ms] [LOG] Navbar scroll check: {scrollTop: 199, shouldBeScrolled: true} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   10906ms] [LOG] Navbar scroll check: {scrollTop: 318, shouldBeScrolled: true} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   10923ms] [LOG] Navbar scroll check: {scrollTop: 420, shouldBeScrolled: true} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   10942ms] [LOG] Navbar scroll check: {scrollTop: 496, shouldBeScrolled: true} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   10957ms] [LOG] Navbar scroll check: {scrollTop: 553, shouldBeScrolled: true} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   10962ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   10973ms] [LOG] Navbar scroll check: {scrollTop: 597, shouldBeScrolled: true} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   10989ms] [LOG] Navbar scroll check: {scrollTop: 632, shouldBeScrolled: true} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   11006ms] [LOG] Navbar scroll check: {scrollTop: 662, shouldBeScrolled: true} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   11022ms] [LOG] Navbar scroll check: {scrollTop: 686, shouldBeScrolled: true} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   11041ms] [LOG] Navbar scroll check: {scrollTop: 707, shouldBeScrolled: true} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   11056ms] [LOG] Navbar scroll check: {scrollTop: 724, shouldBeScrolled: true} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   11073ms] [LOG] Navbar scroll check: {scrollTop: 739, shouldBeScrolled: true} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   11090ms] [LOG] Navbar scroll check: {scrollTop: 751, shouldBeScrolled: true} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   11106ms] [LOG] Navbar scroll check: {scrollTop: 762, shouldBeScrolled: true} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   11123ms] [LOG] Navbar scroll check: {scrollTop: 771, shouldBeScrolled: true} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   11140ms] [LOG] Navbar scroll check: {scrollTop: 778, shouldBeScrolled: true} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   11156ms] [LOG] Navbar scroll check: {scrollTop: 784, shouldBeScrolled: true} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   11190ms] [LOG] Navbar scroll check: {scrollTop: 793, shouldBeScrolled: true} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   11221ms] [LOG] [Fast Refresh] done in 369ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   11240ms] [LOG] Navbar scroll check: {scrollTop: 799, shouldBeScrolled: true} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   15972ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   15974ms] [LOG] [Fast Refresh] done in 112ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431

@@ -10,12 +10,12 @@ export default function BlogArticlePage() {
     <main className="min-h-screen bg-white text-[#525252] selection:bg-[#FFC107] selection:text-[#411A56]">
       <Navbar />
 
-      {/* Hero Section with Image */}
-      <section className="relative w-full h-[400px] md:h-[500px] overflow-hidden">
+      {/* Hero Section with Image - Extended */}
+      <section className="relative w-full h-[600px] md:h-[700px] overflow-hidden">
         <img
           src="/blog/3.webp"
           alt="Garantiza la Verdad: 10 Requisitos Clave para una Prueba de Polígrafo Confiable y Exitosa"
-          className="w-full h-full object-cover object-top"
+          className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-black/30"></div>
       </section>
@@ -41,7 +41,7 @@ export default function BlogArticlePage() {
           </div>
 
           <h1
-            className="text-4xl md:text-5xl font-bold mb-6"
+            className="text-3xl md:text-5xl font-bold mb-6"
             style={{
               color: "#48255A",
               fontFamily: "var(--font-montserrat), sans-serif",
@@ -219,9 +219,20 @@ export default function BlogArticlePage() {
             Contáctanos y conoce cómo nuestro proceso de poligrafía cumple con los más altos estándares internacionales.
           </p>
           <a
-            href="/"
-            className="inline-block px-8 py-3 bg-[#FFC107] text-[#411A56] font-bold rounded hover:bg-[#FFD54F] transition-colors"
-            style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+            href="/cotiza"
+            className="inline-block px-8 py-3 rounded transition-all hover:brightness-110 shadow-lg text-sm"
+            style={{
+              fontFamily: "var(--font-montserrat), sans-serif",
+              lineHeight: "1",
+              textAlign: "center",
+              fontWeight: "600",
+              fill: "#5F0091",
+              color: "#5F0091",
+              backgroundColor: "#FFC107",
+              textDecoration: "none",
+              border: "none",
+              cursor: "pointer",
+            }}
           >
             Cotizar Evaluación
           </a>
