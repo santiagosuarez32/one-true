@@ -1,0 +1,329 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - link "Ir a la página de inicio de One True" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - img "One True Ecuador Logo" [ref=e7]
+        - button "Abrir menú" [ref=e9]
+      - generic [ref=e14]:
+        - link "Ir a la página de inicio de One True" [ref=e16] [cursor=pointer]:
+          - /url: /
+          - img "One True Ecuador Logo" [ref=e17]
+        - navigation [ref=e18]:
+          - link "Inicio" [ref=e19] [cursor=pointer]:
+            - /url: /
+          - link "Pruebas Poligráficas" [ref=e20] [cursor=pointer]:
+            - /url: /pruebas-poligraficas
+          - generic [ref=e21]:
+            - button "Evaluaciones" [ref=e22]:
+              - text: Evaluaciones
+              - img [ref=e23]
+            - generic [ref=e25]:
+              - link "Vetting" [ref=e26] [cursor=pointer]:
+                - /url: /vetting
+              - link "Estudio de Confiabilidad 360º" [ref=e27] [cursor=pointer]:
+                - /url: /estudio-de-confiabilidad-360
+              - link "Visitas Domiciliarias" [ref=e28] [cursor=pointer]:
+                - /url: /visitas-domiciliarias
+              - link "Pruebas Toxicológicas" [ref=e29] [cursor=pointer]:
+                - /url: /pruebas-toxicologicas
+              - link "Evaluaciones Psicométricas" [ref=e30] [cursor=pointer]:
+                - /url: /evaluaciones-psicometricas
+              - link "Prueba de honestidad ética y valores" [ref=e31] [cursor=pointer]:
+                - /url: /prueba-de-honestidad-etica-y-valores
+          - generic [ref=e32]:
+            - button "Academia" [ref=e33]:
+              - text: Academia
+              - img [ref=e34]
+            - generic [ref=e36]:
+              - link "Curso Básico en Poligrafía 400 H" [ref=e37] [cursor=pointer]:
+                - /url: /curso-basico-en-poligrafia
+              - link "Cursos Avanzados en Poligrafía" [ref=e38] [cursor=pointer]:
+                - /url: /cursos-avanzados-en-poligrafia
+              - link "Formaciones Complementarias" [ref=e39] [cursor=pointer]:
+                - /url: /formaciones-complementarias
+              - link "Calendario Académico" [ref=e40] [cursor=pointer]:
+                - /url: /#service-7
+          - link "Comunidad" [ref=e41] [cursor=pointer]:
+            - /url: /comunidad
+          - generic [ref=e42]:
+            - button "Aprende gratis" [ref=e43]:
+              - text: Aprende gratis
+              - img [ref=e44]
+            - generic [ref=e46]:
+              - link "Blog" [ref=e47] [cursor=pointer]:
+                - /url: /blog
+              - link "Podcast" [ref=e48] [cursor=pointer]:
+                - /url: /podcast
+              - link "Ebook" [ref=e49] [cursor=pointer]:
+                - /url: /ebook
+        - link "Cotizar gratis servicio de poligrafía y seguridad" [ref=e51] [cursor=pointer]:
+          - /url: /cotiza
+          - text: Cotiza gratis
+    - generic [ref=e52]:
+      - img "Academia de Poligrafía One True"
+      - generic [ref=e54]:
+        - navigation "Ruta de navegación" [ref=e55]:
+          - list [ref=e56]:
+            - listitem [ref=e57]:
+              - link "Inicio" [ref=e58] [cursor=pointer]:
+                - /url: /
+              - generic [ref=e59]: ›
+            - listitem [ref=e60]:
+              - link "Academia" [ref=e61] [cursor=pointer]:
+                - /url: /#service-7
+              - generic [ref=e62]: ›
+            - listitem [ref=e63]:
+              - generic [ref=e64]: Curso Básico en Poligrafía
+        - generic [ref=e67]: Forma parte de la próxima generación de expertos en evaluación de la credibilidad.
+        - heading "Certificación en Poligrafía (400H) Acreditada por la APA." [level=1] [ref=e68]:
+          - text: Certificación en Poligrafía (400H)
+          - text: Acreditada por la
+          - strong [ref=e69]: APA
+          - text: .
+        - paragraph [ref=e70]:
+          - text: Inicie su carrera en una de las disciplinas forenses de mayor demanda global. Nuestro programa académico integral le brinda las herramientas teóricas, técnicas y prácticas para desempeñarse como un poligrafista de élite, respaldado por el reconocimiento de la
+          - strong [ref=e71]: American Polygraph Association (APA)
+          - text: .
+        - link "Solicitar Admisión e Información" [ref=e73] [cursor=pointer]:
+          - /url: "#contacto"
+    - generic [ref=e75]:
+      - generic [ref=e76]:
+        - generic [ref=e79]: Beneficios Académicos
+        - heading "¿Qué obtendrá en esta formación?" [level=2] [ref=e80]
+        - paragraph [ref=e81]: "Un entrenamiento riguroso diseñado para alcanzar la excelencia profesional:"
+      - generic [ref=e82]:
+        - generic [ref=e83]:
+          - img [ref=e87]
+          - heading "Certificación Internacional APA" [level=3] [ref=e89]
+          - paragraph [ref=e90]: Rompe las fronteras profesionales. Obtén el único aval que te faculta global y técnicamente para ejercer la poligrafía a nivel mundial. No es un diploma local, es tu pasaporte a la élite forense internacional.
+        - generic [ref=e91]:
+          - img [ref=e95]
+          - heading "Ciencia Antifraude Infalible" [level=3] [ref=e97]
+          - paragraph [ref=e98]: "Domina el ecosistema científico de la verdad: desde carga cognitiva hasta patrones psicofisiológicos avanzados. Aprende a blindar tus evaluaciones contra cualquier contramedida o técnica de manipulación con precisión matemática."
+        - generic [ref=e99]:
+          - img [ref=e103]
+          - heading "Práctica Forense de Alto Rendimiento" [level=3] [ref=e105]
+          - paragraph [ref=e106]: Desarrollarás habilidades críticas operando instrumentación digital avanzada y resolviendo casos reales de alta complejidad. Un entorno diseñado para transferir la teoría a la práctica pericial, garantizando tu destreza técnica bajo la mentoría directa de instructores Senior.
+        - generic [ref=e107]:
+          - img [ref=e111]
+          - heading "Autoridad y Liderazgo Pericial" [level=3] [ref=e113]
+          - paragraph [ref=e114]: Deja de competir por precio. Esta formación te otorga el estatus y la competencia técnica para liderar la toma de decisiones críticas y cotizar tus servicios en los niveles más altos del sector corporativo, multinacional y gubernamental.
+    - generic [ref=e116]:
+      - generic [ref=e117]:
+        - generic [ref=e120]: Detalles de Admisión
+        - 'heading "El Ecosistema del Éxito: Tu Pasaporte a la Élite Forense" [level=2] [ref=e121]'
+      - generic [ref=e122]:
+        - generic [ref=e123]:
+          - img [ref=e126]
+          - heading "Kit y Software Forense Incluido" [level=3] [ref=e128]
+          - paragraph [ref=e129]: "Todo lo que necesitas para ejercer con éxito. Olvídate de costos ocultos: desde el primer día accedes a las licencias de software especializado, manuales de vanguardia y guías periciales avaladas que exigen los estándares de la industria."
+        - generic [ref=e130]:
+          - img [ref=e133]
+          - heading "Comunidad y Respaldo Continuo" [level=3] [ref=e135]
+          - paragraph [ref=e136]: Tu formación no termina al graduarte. Te integras a una red viva de soporte técnico y consultoría para resolver tus primeros casos reales. El respaldo experto de tus instructores te acompaña durante toda tu trayectoria
+        - generic [ref=e137]:
+          - img [ref=e140]
+          - heading "Certificación de Éxito Asegurado" [level=3] [ref=e142]
+          - paragraph [ref=e143]: Inversión con cero riesgo. Si cumples con el plan y superas las evaluaciones, garantizamos tu incorporación técnica definitiva y la preparación total exigida para postular como miembro activo a las asociaciones globales más influyentes.
+        - generic [ref=e144]:
+          - img [ref=e147]
+          - heading "Acceso y Filtro de Admisión" [level=3] [ref=e149]
+          - paragraph [ref=e150]: No es para todos. Mantenemos el estándar de la comunidad mediante un riguroso proceso de selección de perfiles honorables. Si eres admitido, te aseguras de conectar y hacer networking con la verdadera élite profesional del sector.
+    - generic [ref=e153]:
+      - generic [ref=e155]:
+        - img "Estudiante de poligrafía en formación técnica" [ref=e157]
+        - img "Práctica pericial con polígrafo" [ref=e159]
+      - generic [ref=e161]:
+        - generic [ref=e164]: Ventajas Exclusivas
+        - heading "Ventajas de formarse con nosotros" [level=2] [ref=e165]
+        - list [ref=e166]:
+          - listitem [ref=e167]:
+            - img [ref=e169]
+            - generic [ref=e171]:
+              - strong [ref=e172]: "Experiencia Docente:"
+              - text: Aprenda de instructores activos con amplia trayectoria en el ámbito forense y de seguridad.
+          - listitem [ref=e173]:
+            - img [ref=e175]
+            - generic [ref=e177]:
+              - strong [ref=e178]: "Networking de Élite:"
+              - text: Forme parte de una comunidad profesional de poligrafistas en toda la región.
+          - listitem [ref=e179]:
+            - img [ref=e181]
+            - generic [ref=e183]:
+              - strong [ref=e184]: "Carrera de Futuro:"
+              - text: Acceda a oportunidades laborales en agencias gubernamentales, inteligencia y seguridad corporativa privada.
+        - link "Solicitar Admisión e Información" [ref=e185] [cursor=pointer]:
+          - /url: "#contacto"
+    - generic [ref=e188]:
+      - generic [ref=e189]:
+        - generic [ref=e190]:
+          - img "One True Logo"
+        - heading "Contactos" [level=2] [ref=e191]
+        - generic [ref=e192]:
+          - generic [ref=e193]:
+            - img [ref=e194]
+            - generic [ref=e196]:
+              - heading "Teléfono" [level=3] [ref=e197]
+              - link "+593 099 371 2790" [ref=e198] [cursor=pointer]:
+                - /url: tel:593099371290
+          - generic [ref=e199]:
+            - img [ref=e200]
+            - generic [ref=e202]:
+              - heading "Agencia Quito" [level=3] [ref=e203]
+              - paragraph [ref=e204]: "Av. Pérez Guerreo OE3-124 y San Gregorio, Instituto de Diagnóstico Médico, tercer piso, oficina #303, Quito-Ecuador."
+          - generic [ref=e205]:
+            - img [ref=e206]
+            - generic [ref=e209]:
+              - heading "Agencia Guayaquil" [level=3] [ref=e210]
+              - paragraph [ref=e211]: Urdenor 2, Manzana 219, Solar 9
+          - generic [ref=e212]:
+            - img [ref=e213]
+            - generic [ref=e215]:
+              - heading "Correo" [level=3] [ref=e216]
+              - link "info@somosonetrue.com" [ref=e217] [cursor=pointer]:
+                - /url: mailto:info@somosonetrue.com
+        - generic [ref=e218]:
+          - heading "Síguenos:" [level=3] [ref=e219]
+          - generic [ref=e220]:
+            - link "Síguenos en Facebook" [ref=e221] [cursor=pointer]:
+              - /url: https://www.facebook.com/share/1F8T24NNKE/
+              - img [ref=e222]
+            - link "Síguenos en Instagram" [ref=e224] [cursor=pointer]:
+              - /url: https://www.instagram.com/somosonetrue?igsh=bXNmOWYwaWpsdDVh
+              - img [ref=e225]
+            - link "Síguenos en LinkedIn" [ref=e227] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/david-coli-fiallo-75679a198?utm_source=share_via&utm_content=profile&utm_medium=member_android
+              - img [ref=e228]
+      - generic [ref=e233]:
+        - generic [ref=e234]:
+          - generic [ref=e235]:
+            - generic [ref=e236]: Nombre *
+            - textbox "Tu nombre" [ref=e237]
+          - generic [ref=e238]:
+            - generic [ref=e239]: Apellido *
+            - textbox "Tu apellido" [ref=e240]
+        - generic [ref=e241]:
+          - generic [ref=e242]: Correo electrónico *
+          - generic [ref=e243]:
+            - textbox "correo@empresa.com" [ref=e244]
+            - generic:
+              - img
+        - generic [ref=e245]:
+          - generic [ref=e246]: Número de teléfono *
+          - generic [ref=e247]:
+            - generic [ref=e248]:
+              - img "ec" [ref=e249]
+              - combobox [ref=e250] [cursor=pointer]:
+                - option "+593" [selected]
+                - option "+57"
+                - option "+51"
+                - option "+56"
+                - option "+54"
+                - option "+52"
+                - option "+34"
+                - option "+1"
+            - textbox "+593 099 371 2790" [ref=e251]
+            - generic:
+              - img
+        - generic [ref=e252]:
+          - generic [ref=e253]: Ciudad *
+          - textbox "Tu ciudad" [ref=e254]
+        - generic [ref=e255]:
+          - generic [ref=e256]: Mensaje *
+          - textbox "Escribe tu mensaje aquí..." [ref=e257]
+        - generic [ref=e258]:
+          - paragraph [ref=e259]:
+            - text: Al enviar este formulario, acepto que mis datos personales sean tratados de acuerdo con la
+            - link "Política de tratamiento de datos personales" [ref=e260] [cursor=pointer]:
+              - /url: "#"
+            - text: y los
+            - link "términos establecidos en ella" [ref=e261] [cursor=pointer]:
+              - /url: "#"
+            - text: .
+          - generic [ref=e262]:
+            - checkbox "Aceptar" [ref=e263] [cursor=pointer]
+            - generic [ref=e264] [cursor=pointer]: Aceptar
+        - button "Cotizar ahora" [ref=e265]
+        - generic [ref=e266]:
+          - generic [ref=e267]: O escríbenos
+          - link "+593 099 371 2790" [ref=e269] [cursor=pointer]:
+            - /url: https://api.whatsapp.com/send?phone=593099371290&text=Hola!%20Deseo%20conocer%20mas%20informacion%20sobre%20el%20Curso%20Basico%20de%20Poligrafia%20400H.
+            - generic [ref=e270]:
+              - img [ref=e272]
+              - generic [ref=e274]: +593 099 371 2790
+    - generic [ref=e276]:
+      - generic [ref=e277]:
+        - generic [ref=e278]:
+          - img "One True Logo" [ref=e280]
+          - paragraph [ref=e281]: Construimos vínculos confiables entre empresas y candidatos
+          - generic [ref=e282]:
+            - generic [ref=e283]: Síguenos
+            - generic [ref=e284]:
+              - link "Síguenos en LinkedIn" [ref=e285] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/david-coli-fiallo-75679a198?utm_source=share_via&utm_content=profile&utm_medium=member_android
+                - img [ref=e286]
+              - link "Síguenos en Facebook" [ref=e288] [cursor=pointer]:
+                - /url: https://www.facebook.com/share/1F8T24NNKE/
+                - img [ref=e289]
+              - link "Síguenos en Instagram" [ref=e291] [cursor=pointer]:
+                - /url: https://www.instagram.com/somosonetrue?igsh=bXNmOWYwaWpsdDVh
+                - img [ref=e292]
+              - link "Síguenos en YouTube" [ref=e294] [cursor=pointer]:
+                - /url: https://youtube.com/@somosonetrue?si=8OI3ZQ0A-4OzF_H0
+                - img [ref=e295]
+        - generic [ref=e297]:
+          - heading "Soluciones" [level=4] [ref=e298]
+          - list [ref=e299]:
+            - listitem [ref=e300]:
+              - link "Pruebas de Polígrafo" [ref=e301] [cursor=pointer]:
+                - /url: /pruebas-poligraficas
+            - listitem [ref=e302]:
+              - link "Vetting" [ref=e303] [cursor=pointer]:
+                - /url: /vetting
+            - listitem [ref=e304]:
+              - link "Estudio de Confiabilidad 360°" [ref=e305] [cursor=pointer]:
+                - /url: /estudio-de-confiabilidad-360
+            - listitem [ref=e306]:
+              - link "Visitas Domiciliarias" [ref=e307] [cursor=pointer]:
+                - /url: /visitas-domiciliarias
+            - listitem [ref=e308]:
+              - link "Pruebas Toxicológicas" [ref=e309] [cursor=pointer]:
+                - /url: /pruebas-toxicologicas
+            - listitem [ref=e310]:
+              - link "Evaluaciones Psicométricas" [ref=e311] [cursor=pointer]:
+                - /url: /evaluaciones-psicometricas
+            - listitem [ref=e312]:
+              - link "Prueba de Honestidad, Ética y Valores" [ref=e313] [cursor=pointer]:
+                - /url: /prueba-de-honestidad-etica-y-valores
+        - generic [ref=e314]:
+          - heading "Contacto" [level=4] [ref=e315]
+          - list [ref=e316]:
+            - listitem [ref=e317]:
+              - img [ref=e318]
+              - link "info@somosonetrue.com" [ref=e321] [cursor=pointer]:
+                - /url: mailto:info@somosonetrue.com
+            - listitem [ref=e322]:
+              - img [ref=e323]
+              - link "098 129 6179" [ref=e325] [cursor=pointer]:
+                - /url: tel:0981296179
+        - generic [ref=e326]:
+          - heading "Localizaciones" [level=4] [ref=e327]
+          - list [ref=e328]:
+            - listitem [ref=e329]:
+              - img [ref=e330]
+              - generic [ref=e333]:
+                - strong [ref=e334]: Agencia Quito
+                - text: "Av. Pérez Guerreo OE3-124 y San Gregorio, Instituto de Diagnóstico Médico, tercer piso, oficina #303, Quito-Ecuador."
+            - listitem [ref=e335]:
+              - img [ref=e336]
+              - generic [ref=e339]:
+                - strong [ref=e340]: Agencia Guayaquil
+                - text: Urdenor 2, Manzana 219, Solar 9
+      - generic [ref=e341]:
+        - paragraph [ref=e342]: © Copyright One True 2026
+        - link "Política de Privacidad y Cookies" [ref=e344] [cursor=pointer]:
+          - /url: "#"
+  - button "Open Next.js Dev Tools" [ref=e350] [cursor=pointer]:
+    - img [ref=e351]

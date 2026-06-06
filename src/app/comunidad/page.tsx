@@ -127,16 +127,6 @@ export default function CommunityPage() {
 
             {/* Footer Text */}
             <div className="flex items-center gap-2 mt-12">
-              <div className="text-3xl">❤️</div>
-              <span
-                style={{
-                  color: "#FFFFFF",
-                  fontFamily: "var(--font-montserrat), sans-serif",
-                  fontSize: "16px",
-                }}
-              >
-                Hecho con amor por todos los Globalworkers
-              </span>
             </div>
           </div>
 
@@ -153,48 +143,40 @@ export default function CommunityPage() {
                 Aquí accedes a lo que pocos tienen:
               </h2>
 
-              <ul
-                className="space-y-2 text-xs"
-                style={{
-                  fontFamily: "var(--font-montserrat), sans-serif",
-                  listStyleType: "none",
-                  padding: 0,
-                  lineHeight: "1.4",
-                }}
-              >
-                <li className="flex items-start gap-2">
-                  <span style={{ color: "#FFC107", fontSize: "16px", fontWeight: "bold", flexShrink: 0 }}>•</span>
-                  <span style={{ color: "#FFFFFF", fontWeight: "500" }}>Una biblioteca exclusiva en Psicofisiología Forense-Poligrafía</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span style={{ color: "#FFC107", fontSize: "16px", fontWeight: "bold", flexShrink: 0 }}>•</span>
-                  <span style={{ color: "#FFFFFF", fontWeight: "500" }}>Documentos académicos en Evaluación Forense de la Credibilidad</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span style={{ color: "#FFC107", fontSize: "16px", fontWeight: "bold", flexShrink: 0 }}>•</span>
-                  <span style={{ color: "#FFFFFF", fontWeight: "500" }}>Formación continua con sesiones mensuales con expertos</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span style={{ color: "#FFC107", fontSize: "16px", fontWeight: "bold", flexShrink: 0 }}>•</span>
-                  <span style={{ color: "#FFFFFF", fontWeight: "500" }}>Hora del café online con miembros de la comunidad</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span style={{ color: "#FFC107", fontSize: "16px", fontWeight: "bold", flexShrink: 0 }}>•</span>
-                  <span style={{ color: "#FFFFFF", fontWeight: "500" }}>Asesoría personalizada para resolver casos reales</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span style={{ color: "#FFC107", fontSize: "16px", fontWeight: "bold", flexShrink: 0 }}>•</span>
-                  <span style={{ color: "#FFFFFF", fontWeight: "500" }}>Red internacional de contactos que comparten conocimiento y experiencias auténticas</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span style={{ color: "#FFC107", fontSize: "16px", fontWeight: "bold", flexShrink: 0 }}>•</span>
-                  <span style={{ color: "#FFFFFF", fontWeight: "500" }}>Cursos en video que te permiten aprender a tu ritmo</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span style={{ color: "#FFC107", fontSize: "16px", fontWeight: "bold", flexShrink: 0 }}>•</span>
-                  <span style={{ color: "#FFFFFF", fontWeight: "500" }}>Descuentos especiales en el congreso anual de la comunidad ONE TRUE</span>
-                </li>
-              </ul>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="bg-white/15 rounded-lg p-3 text-center">
+                  <div style={{ color: "#FFC107", fontSize: "20px", marginBottom: "6px" }}>📚</div>
+                  <p style={{ color: "#FFFFFF", fontWeight: "500", fontSize: "11px", fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>Una biblioteca exclusiva en Psicofisiología Forense</p>
+                </div>
+                <div className="bg-white/15 rounded-lg p-3 text-center">
+                  <div style={{ color: "#FFC107", fontSize: "20px", marginBottom: "6px" }}>📖</div>
+                  <p style={{ color: "#FFFFFF", fontWeight: "500", fontSize: "11px", fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>Documentos académicos en Evaluación Forense</p>
+                </div>
+                <div className="bg-white/15 rounded-lg p-3 text-center">
+                  <div style={{ color: "#FFC107", fontSize: "20px", marginBottom: "6px" }}>👨‍🏫</div>
+                  <p style={{ color: "#FFFFFF", fontWeight: "500", fontSize: "11px", fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>Formación continua con sesiones mensuales</p>
+                </div>
+                <div className="bg-white/15 rounded-lg p-3 text-center">
+                  <div style={{ color: "#FFC107", fontSize: "20px", marginBottom: "6px" }}>☕</div>
+                  <p style={{ color: "#FFFFFF", fontWeight: "500", fontSize: "11px", fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>Hora del café online con miembros</p>
+                </div>
+                <div className="bg-white/15 rounded-lg p-3 text-center">
+                  <div style={{ color: "#FFC107", fontSize: "20px", marginBottom: "6px" }}>💼</div>
+                  <p style={{ color: "#FFFFFF", fontWeight: "500", fontSize: "11px", fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>Asesoría personalizada para casos reales</p>
+                </div>
+                <div className="bg-white/15 rounded-lg p-3 text-center">
+                  <div style={{ color: "#FFC107", fontSize: "20px", marginBottom: "6px" }}>🌐</div>
+                  <p style={{ color: "#FFFFFF", fontWeight: "500", fontSize: "11px", fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>Red internacional de contactos</p>
+                </div>
+                <div className="bg-white/15 rounded-lg p-3 text-center">
+                  <div style={{ color: "#FFC107", fontSize: "20px", marginBottom: "6px" }}>🎥</div>
+                  <p style={{ color: "#FFFFFF", fontWeight: "500", fontSize: "11px", fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>Cursos en video a tu ritmo</p>
+                </div>
+                <div className="bg-white/15 rounded-lg p-3 text-center">
+                  <div style={{ color: "#FFC107", fontSize: "20px", marginBottom: "6px" }}>🎉</div>
+                  <p style={{ color: "#FFFFFF", fontWeight: "500", fontSize: "11px", fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>Descuentos en congreso anual ONE TRUE</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

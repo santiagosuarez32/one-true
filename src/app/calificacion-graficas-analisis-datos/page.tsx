@@ -447,7 +447,7 @@ export default function CalificacionGraficasPage() {
                         lineHeight: "1.4"
                       }}
                     >
-                      Solar 26, Mz. 1022, Las Orquídeas, entre lavandería Perfect Wash y Dash Óptica.
+                      Urdenor 2, Manzana 219, Solar 9
                     </p>
                   </div>
                 </div>

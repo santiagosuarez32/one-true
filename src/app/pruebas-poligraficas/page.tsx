@@ -425,7 +425,7 @@ export default function PruebasPoligraficasPage() {
           </div>
 
           {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="flex flex-wrap justify-center gap-6 max-w-[1100px] mx-auto">
             {[
               {
                 title: "Polígrafo Específico",
@@ -437,12 +437,12 @@ export default function PruebasPoligraficasPage() {
               },
               {
                 title: "Polígrafo de Rutina",
-                text: "Monitoreo preventivo para personal que labora en la empresa. Fortalece la lealtad y disuade conductas irregulares internas."
+                text: "Monitoreo preventivo para personal que labora en la empresa. Fortalece la lealtad y disuade conductas irregulares internas. Mejores sus procesos de ascenso y promoción con filtros de confianza."
               }
             ].map((item, idx) => (
-              <div 
-                key={idx} 
-                className="flex flex-col bg-white border border-neutral-200/80 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-neutral-300 transition-all duration-300 relative pl-4"
+              <div
+                key={idx}
+                className="flex flex-col bg-white border border-neutral-200/80 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-neutral-300 transition-all duration-300 relative pl-4 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.3333%-16px)]"
               >
                 {/* Elegant left gold accent bar */}
                 <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#FFC107] rounded-l-xl" />
@@ -469,7 +469,7 @@ export default function PruebasPoligraficasPage() {
         </div>
       </section>
 
-      {/* ¿Por qué contratarnos? Section - Based on Globalwork Beneficios style */}
+      {/* ¿Por qué contratarnos? Section */}
       <section className="bg-white py-12 md:py-16 overflow-hidden relative">
         {/* Decorative background elements */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#700FA3]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
@@ -832,7 +832,7 @@ export default function PruebasPoligraficasPage() {
                         lineHeight: "1.4"
                       }}
                     >
-                      Solar 26, Mz. 1022, Las Orquídeas, entre lavandería Perfect Wash y Dash Óptica.
+                      Urdenor 2, Manzana 219, Solar 9
                     </p>
                   </div>
                 </div>

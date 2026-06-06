@@ -555,7 +555,7 @@ export default function VisitasDomiciliariasPage() {
                         lineHeight: "1.4"
                       }}
                     >
-                      Solar 26, Mz. 1022, Las Orquídeas, entre lavandería Perfect Wash y Dash Óptica.
+                      Urdenor 2, Manzana 219, Solar 9
                     </p>
                   </div>
                 </div>
@@ -609,7 +609,7 @@ export default function VisitasDomiciliariasPage() {
                 <div className="flex items-center gap-3">
                   {/* Facebook */}
                   <a 
-                    href="https://www.facebook.com/somosonetrue" 
+                    href="https://www.facebook.com/share/1F8T24NNKE/" 
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Síguenos en Facebook"
@@ -621,7 +621,7 @@ export default function VisitasDomiciliariasPage() {
                   </a>
                   {/* Instagram */}
                   <a 
-                    href="https://www.instagram.com/somosonetrue" 
+                    href="https://www.instagram.com/somosonetrue?igsh=bXNmOWYwaWpsdDVh" 
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Síguenos en Instagram"
@@ -633,7 +633,7 @@ export default function VisitasDomiciliariasPage() {
                   </a>
                   {/* LinkedIn */}
                   <a 
-                    href="https://www.linkedin.com/company/somosonetrue" 
+                    href="https://www.linkedin.com/in/david-coli-fiallo-75679a198?utm_source=share_via&utm_content=profile&utm_medium=member_android" 
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Síguenos en LinkedIn"

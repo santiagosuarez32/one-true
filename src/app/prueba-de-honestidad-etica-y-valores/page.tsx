@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import { FaLinkedin, FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
 export default function PruebaDeHonestidadEticaYValoresPage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -75,9 +76,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
                 color: "#FFFFFF"
               }}
             >
-              Un entorno empresarial seguro se construye con personas confiables. Nuestra Prueba de Honestidad, Ética y Valores es una herramienta psicométrica avanzada, compuesta por 90 reactivos estratégicos, diseñada para identificar conductas de riesgo y medir la alineación ética de los evaluados de manera ágil y precisa.
-              <br /><br />
-              Esta evaluación no pretende emitir juicios absolutos, sino proporcionar un indicador científico y objetivo que sirve como un pilar de referencia clave. Al integrarla con tus procesos actuales como entrevistas especializadas y verificación de antecedentes, optimizas la toma de decisiones críticas en el capital humano.
+              La Prueba de Honestidad, Ética y Valores es una evaluación psicométrica de 90 reactivos que mide de forma objetiva la alineación ética y detecta conductas de riesgo. Funciona como un indicador de referencia clave que, junto con entrevistas y antecedentes, optimiza la selección de capital humano.
             </p>
 
             {/* Hero CTA Button */}
@@ -288,33 +287,50 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
             Características Generales de la Aplicación
           </h2>
 
-          <div className="overflow-hidden rounded border border-[#700FA3]/20 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
-            <table className="w-full table-fixed text-left border-collapse bg-white">
-              <thead>
-                <tr className="bg-[#700FA3] border-b-2 border-[#FFC107]">
-                  <th className="py-4 px-3 sm:py-5 sm:px-6 font-bold text-white text-sm sm:text-lg w-1/3 break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Característica</th>
-                  <th className="py-4 px-3 sm:py-5 sm:px-6 font-bold text-white text-sm sm:text-lg w-2/3 border-l border-[#700FA3]/30 break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Especificación Técnica</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-[#700FA3]/20">
-                <tr className="bg-white">
-                  <td className="py-4 px-3 sm:py-5 sm:px-6 font-semibold text-[#48255A] text-sm sm:text-base break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Volumen de Evaluación</td>
-                  <td className="py-4 px-3 sm:py-5 sm:px-6 text-[#525252] font-light border-l border-[#700FA3]/20 text-sm sm:text-base break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>90 reactivos dinámicos y validados psicométricamente.</td>
-                </tr>
-                <tr className="bg-[#700FA3]/5">
-                  <td className="py-4 px-3 sm:py-5 sm:px-6 font-semibold text-[#48255A] text-sm sm:text-base break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Modalidad de Aplicación</td>
-                  <td className="py-4 px-3 sm:py-5 sm:px-6 text-[#525252] font-light border-l border-[#700FA3]/20 text-sm sm:text-base break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Formato flexible: 100% online.</td>
-                </tr>
-                <tr className="bg-white">
-                  <td className="py-4 px-3 sm:py-5 sm:px-6 font-semibold text-[#48255A] text-sm sm:text-base break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Entrega de Resultados</td>
-                  <td className="py-4 px-3 sm:py-5 sm:px-6 text-[#525252] font-light border-l border-[#700FA3]/20 text-sm sm:text-base break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Reportes analíticos disponibles de forma inmediata tras finalizar la prueba.</td>
-                </tr>
-                <tr className="bg-[#700FA3]/5">
-                  <td className="py-4 px-3 sm:py-5 sm:px-6 font-semibold text-[#48255A] text-sm sm:text-base break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Metodología</td>
-                  <td className="py-4 px-3 sm:py-5 sm:px-6 text-[#525252] font-light border-l border-[#700FA3]/20 text-sm sm:text-base break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Indicador referencial de alta precisión para complementar filtros de seguridad y selección.</td>
-                </tr>
-              </tbody>
-            </table>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Card 1 */}
+            <div className="flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="text-4xl mb-3">📊</div>
+              <h3 className="text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
+                Volumen de Evaluación
+              </h3>
+              <p className="text-[#525252] text-sm leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                90 reactivos dinámicos y validados psicométricamente.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="text-4xl mb-3">💻</div>
+              <h3 className="text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
+                Modalidad de Aplicación
+              </h3>
+              <p className="text-[#525252] text-sm leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                Formato flexible: 100% online.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="text-4xl mb-3">📄</div>
+              <h3 className="text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
+                Entrega de Resultados
+              </h3>
+              <p className="text-[#525252] text-sm leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                Reportes analíticos disponibles de forma inmediata tras finalizar la prueba.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="text-4xl mb-3">🔬</div>
+              <h3 className="text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
+                Metodología
+              </h3>
+              <p className="text-[#525252] text-sm leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                Indicador referencial de alta precisión para complementar filtros de seguridad y selección.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -514,7 +530,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
                         lineHeight: "1.4"
                       }}
                     >
-                      Solar 26, Mz. 1022, Las Orquídeas, entre lavandería Perfect Wash y Dash Óptica.
+                      Urdenor 2, Manzana 219, Solar 9
                     </p>
                   </div>
                 </div>
@@ -568,7 +584,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
                 <div className="flex items-center gap-3">
                   {/* Facebook */}
                   <a 
-                    href="https://www.facebook.com/somosonetrue" 
+                    href="https://www.facebook.com/share/1F8T24NNKE/" 
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Síguenos en Facebook"
@@ -580,7 +596,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
                   </a>
                   {/* Instagram */}
                   <a 
-                    href="https://www.instagram.com/somosonetrue" 
+                    href="https://www.instagram.com/somosonetrue?igsh=bXNmOWYwaWpsdDVh" 
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Síguenos en Instagram"
@@ -592,7 +608,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
                   </a>
                   {/* LinkedIn */}
                   <a 
-                    href="https://www.linkedin.com/company/somosonetrue" 
+                    href="https://www.linkedin.com/in/david-coli-fiallo-75679a198?utm_source=share_via&utm_content=profile&utm_medium=member_android" 
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Síguenos en LinkedIn"

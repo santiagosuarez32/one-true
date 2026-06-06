@@ -1,0 +1,35 @@
+- generic [active] [ref=e1]:
+  - main "Panel de Administración" [ref=e2]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - generic [ref=e8]: OT
+          - generic [ref=e9]:
+            - paragraph [ref=e10]: One True Ecuador
+            - paragraph [ref=e11]: Acceso interno
+        - link "Ir al sitio" [ref=e12] [cursor=pointer]:
+          - /url: /
+      - generic [ref=e13]:
+        - heading "Iniciar sesión" [level=2] [ref=e14]
+        - paragraph [ref=e15]: Solo personal autorizado.
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - generic [ref=e18]: Email
+          - generic [ref=e19]:
+            - generic:
+              - img
+            - textbox "Email" [ref=e20]:
+              - /placeholder: tu@email.com
+        - generic [ref=e21]:
+          - generic [ref=e22]: Contraseña
+          - generic [ref=e23]:
+            - generic:
+              - img
+            - textbox "Contraseña Mostrar contraseña" [ref=e24]:
+              - /placeholder: ••••••••
+            - button "Mostrar contraseña" [ref=e25]:
+              - img [ref=e26]
+        - button "Entrar al panel" [ref=e29]
+        - paragraph [ref=e30]: ¿Olvidaste tu contraseña? Pedí el reseteo al administrador.
+  - button "Open Next.js Dev Tools" [ref=e36] [cursor=pointer]:
+    - img [ref=e37]

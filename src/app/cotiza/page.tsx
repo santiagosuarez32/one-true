@@ -246,7 +246,9 @@ export default function CotizaPage() {
                       <option value="toxicologicas">Pruebas Toxicológicas</option>
                       <option value="psicometricas">Evaluaciones Psicométricas</option>
                       <option value="honestidad">Prueba de Honestidad, Ética y Valores</option>
-                      <option value="otro">Otro</option>
+                      <option value="curso-basico">Curso Básico en Poligrafía 400 H</option>
+                      <option value="cursos-avanzados">Cursos Avanzados de Poligrafía</option>
+                      <option value="formaciones">Formaciones Complementarias</option>
                     </select>
                     {errors.servicio && <span className="text-xs text-red-500 mt-1">{errors.servicio}</span>}
                   </div>

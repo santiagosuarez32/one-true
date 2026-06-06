@@ -7,13 +7,13 @@ import { FaLinkedin, FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="bg-white pt-16 pb-8 text-[#525252] w-full border-t border-neutral-200">
-      <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
+      <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-4 md:px-6 lg:px-8">
         
         {/* Top Section */}
         <div className="flex flex-col md:flex-row justify-between items-start gap-8 lg:gap-12 mb-16">
           
           {/* Column 1: Logo, Short Description and Socials */}
-          <div className="w-full md:w-[38%] flex flex-col items-start text-left">
+          <div className="w-full md:w-[28%] flex flex-col items-start text-left">
             {/* Logo */}
             <div className="flex items-center mb-6">
               <img src="/footer.webp" alt="One True Logo" className="h-24 md:h-32 w-auto object-contain" />
@@ -50,17 +50,19 @@ export default function Footer() {
           </div>
 
           {/* Column 2: Services */}
-          <div className="w-full md:w-[25%] flex flex-col items-start text-left">
+          <div className="w-full md:w-[32%] flex flex-col items-start text-left">
             <h4 className="text-lg font-bold mb-6 text-[#48255A]" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
               Soluciones
             </h4>
             <ul className="flex flex-col gap-3">
               {[
+                { label: 'Pruebas de Polígrafo', href: '/pruebas-poligraficas' },
                 { label: 'Vetting', href: '/vetting' },
                 { label: 'Estudio de Confiabilidad 360°', href: '/estudio-de-confiabilidad-360' },
                 { label: 'Visitas Domiciliarias', href: '/visitas-domiciliarias' },
                 { label: 'Pruebas Toxicológicas', href: '/pruebas-toxicologicas' },
-                { label: 'Evaluaciones Psicométricas', href: '/evaluaciones-psicometricas' }
+                { label: 'Evaluaciones Psicométricas', href: '/evaluaciones-psicometricas' },
+                { label: 'Prueba de Honestidad, Ética y Valores', href: '/prueba-de-honestidad-etica-y-valores' }
               ].map((item) => (
                 <li key={item.label}>
                   <Link
@@ -76,45 +78,43 @@ export default function Footer() {
           </div>
 
           {/* Column 3: Contact */}
-          <div className="w-full md:w-[50%] flex flex-col items-start text-left">
+          <div className="w-full md:w-[20%] flex flex-col items-start text-left">
             <h4 className="text-lg font-bold mb-6 text-[#48255A]" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
               Contacto
             </h4>
-            <div className="flex flex-col sm:flex-row gap-6 md:gap-8 w-full">
-              {/* Left Sub-column: Email, Phone */}
-              <div className="w-full sm:w-auto sm:shrink-0 flex flex-col items-start text-left gap-4">
-                <ul className="flex flex-col gap-4">
-                  <li className="flex items-center gap-3 text-neutral-700 text-sm md:text-base font-semibold">
-                    <svg width="18" height="18" className="text-[#700FA3] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                    <a href="mailto:info@somosonetrue.com" className="text-neutral-700 hover:text-[#700FA3] transition-colors">info@somosonetrue.com</a>
-                  </li>
-                  <li className="flex items-center gap-3 text-neutral-700 text-sm md:text-base font-semibold">
-                    <svg width="18" height="18" className="text-[#700FA3] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                    <a href="tel:0981296179" className="text-neutral-700 hover:text-[#700FA3] transition-colors">098 129 6179</a>
-                  </li>
-                </ul>
-              </div>
+            <ul className="flex flex-col gap-4">
+              <li className="flex items-center gap-3 text-neutral-700 text-sm md:text-base font-semibold">
+                <svg width="18" height="18" className="text-[#700FA3] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <a href="mailto:info@somosonetrue.com" className="text-neutral-700 hover:text-[#700FA3] transition-colors">info@somosonetrue.com</a>
+              </li>
+              <li className="flex items-center gap-3 text-neutral-700 text-sm md:text-base font-semibold">
+                <svg width="18" height="18" className="text-[#700FA3] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <a href="tel:0981296179" className="text-neutral-700 hover:text-[#700FA3] transition-colors">098 129 6179</a>
+              </li>
+            </ul>
+          </div>
 
-              {/* Right Sub-column: Locations */}
-              <div className="w-full sm:flex-1 flex flex-col items-start text-left gap-4">
-                <ul className="flex flex-col gap-4 w-full">
-                  <li className="flex items-start gap-3 text-neutral-700 text-sm md:text-base font-semibold">
-                    <svg width="18" height="18" className="text-[#700FA3] mt-1 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                    <div>
-                      <strong className="font-bold text-[#48255A] text-xs block mb-0.5">Agencia Quito</strong>
-                      <span className="text-xs md:text-sm text-neutral-700">Av. Pérez Guerreo OE3-124 y San Gregorio, Instituto de Diagnóstico Médico, tercer piso, oficina #303, Quito-Ecuador.</span>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-3 text-neutral-700 text-sm md:text-base font-semibold">
-                    <svg width="18" height="18" className="text-[#700FA3] mt-1 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                    <div>
-                      <strong className="font-bold text-[#48255A] text-xs block mb-0.5">Agencia Guayaquil</strong>
-                      <span className="text-xs md:text-sm text-neutral-700">Urdenor 2, Manzana 219, Solar 9</span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          {/* Column 4: Locations */}
+          <div className="w-full md:w-[20%] flex flex-col items-start text-left">
+            <h4 className="text-lg font-bold mb-6 text-[#48255A]" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+              Localizaciones
+            </h4>
+            <ul className="flex flex-col gap-4 w-full">
+              <li className="flex items-start gap-3 text-neutral-700 text-sm md:text-base font-semibold">
+                <svg width="18" height="18" className="text-[#700FA3] mt-1 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <div>
+                  <strong className="font-bold text-[#48255A] text-xs block mb-0.5">Agencia Quito</strong>
+                  <span className="text-xs md:text-sm text-neutral-700">Av. Pérez Guerreo OE3-124 y San Gregorio, Instituto de Diagnóstico Médico, tercer piso, oficina #303, Quito-Ecuador.</span>
+                </div>
+              </li>
+              <li className="flex items-start gap-3 text-neutral-700 text-sm md:text-base font-semibold">
+                <svg width="18" height="18" className="text-[#700FA3] mt-1 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <div>
+                  <strong className="font-bold text-[#48255A] text-xs block mb-0.5">Agencia Guayaquil</strong>
+                  <span className="text-xs md:text-sm text-neutral-700">Urdenor 2, Manzana 219, Solar 9</span>
+                </div>
+              </li>
+            </ul>
           </div>
           
         </div>

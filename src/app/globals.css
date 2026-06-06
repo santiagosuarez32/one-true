@@ -39,6 +39,31 @@ body {
   color: white;
 }
 
+/* Evita que el autofill del browser ponga fondo blanco en los inputs del admin */
+/* Admin: reset del color heredado de p/span/li/a */
+.admin-white p,
+.admin-white span:not(.admin-accent),
+.admin-white li,
+.admin-white a,
+.admin-white label,
+.admin-white strong,
+.admin-white button {
+  color: white !important;
+}
+.admin-white .admin-accent,
+.admin-white h1 .admin-accent,
+.admin-white h2 .admin-accent {
+  color: #FFC107 !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #111111 inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  caret-color: #FFC107;
+}
+
 h1 {
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;

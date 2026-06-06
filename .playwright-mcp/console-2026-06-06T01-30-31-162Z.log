@@ -1,0 +1,1885 @@
+[     142ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[     361ms] [LOG] [Fast Refresh] done in 320ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[     482ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[     530ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[     734ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[     872ms] [LOG] [Fast Refresh] done in 245ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[    2766ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[    2834ms] [LOG] [Fast Refresh] done in 174ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   26681ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   26860ms] [LOG] [Fast Refresh] done in 257ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   26968ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   27112ms] [LOG] [Fast Refresh] done in 246ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   54084ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   54686ms] [LOG] [Fast Refresh] done in 669ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   56842ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   57849ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   57849ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   58032ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   58037ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   58149ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   58154ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   58155ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   58163ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   58164ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   58257ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   58257ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   58368ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   59282ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   59283ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   59290ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   59290ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   59293ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   59294ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   59402ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/admin/login?_rsc=19ykg:0
+[   59406ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   59796ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   59797ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   59799ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   59799ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   59899ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   59944ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   59945ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   60101ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   60326ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   60327ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   60434ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   60492ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   60492ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   60495ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   60496ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   60603ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   60672ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   60672ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   60675ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   60676ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   60680ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   60681ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   60697ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/admin/login?_rsc=19ykg:0
+[   60759ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   60759ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   60796ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   60796ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   60840ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   60840ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   60900ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   60966ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/admin/login:0
+[   61443ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_react-dom_0bruynb._.js:15305
+[   61593ms] Error: ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/app/admin/login/page.tsx:70:40)
+    at Object.getCompilationErrors (file://C:\Users\WinterOS\Desktop\one-true\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:1186:59)
+    at DevBundlerService.getCompilationError (file://C:\Users\WinterOS\Desktop\one-true\node_modules\next\dist\server\lib\dev-bundler-service.js:44:55)
+    at DevServer.getCompilationError (file://C:\Users\WinterOS\Desktop\one-true\node_modules\next\dist\server\dev\next-dev-server.js:719:42)
+    at DevServer.findPageComponents (file://C:\Users\WinterOS\Desktop\one-true\node_modules\next\dist\server\dev\next-dev-server.js:689:43)
+    at async DevServer.renderErrorToResponseImpl (file://C:\Users\WinterOS\Desktop\one-true\node_modules\next\dist\server\base-server.js:1745:26)
+[   61587ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   61595ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   61595ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   61753ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   61754ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   61755ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   61874ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   61874ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   61900ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   62044ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   62044ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   62173ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   62174ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   62262ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   62263ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   62345ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   62345ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   62439ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   62440ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   62505ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   62506ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   62602ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   62602ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   62658ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   63048ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   63049ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   63126ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   63126ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   63248ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   63248ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   63263ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   63360ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   63360ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   63403ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   63444ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   63444ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   63483ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   63484ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   63586ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   63586ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   63587ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   63674ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   63674ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   63756ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   63756ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   63840ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   63841ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   63886ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   63922ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   63923ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   64006ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   64007ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   64036ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   64098ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   64099ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   64189ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   64189ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   64204ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   64228ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expected a semicolon
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   64228ms] [ERROR] ./src/app/admin/login/page.tsx:70:40
+Expression expected
+  68 |     <main
+  69 |       className="relative min-h-screen text-white antialiased"
+> 70 |       style={{ background: PURPLE, text-color: "#fff" }} }}
+     |                                        ^
+  71 |       aria-labelledby="login-title"
+  72 |     >
+  73 |       {/* Fondo decorativo */}
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./src/app/admin/login/page.tsx [Client Component Browser]
+    ./src/app/admin/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/admin/login/page.tsx [Client Component SSR]
+    ./src/app/admin/login/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1945
+[   64336ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   64898ms] [LOG] [Fast Refresh] done in 628ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   65105ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   65340ms] [LOG] [Fast Refresh] done in 345ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_0u_w_5s._.js:1226
+[   66232ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   66371ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   66379ms] [WARNING] %c%s%c [33m[1m⚠[22m[39m metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase background: #e6e6e6;background: light-dark(rgba(0,0,0,0.1), rgba(255,255,255,0.25));color: #000000;color: light-dark(#000000, #ffffff);border-radius: 2px  Server   @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   66583ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   66623ms] [LOG] [Fast Refresh] done in 140ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   73101ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   73798ms] [LOG] [Fast Refresh] done in 783ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   73925ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   74066ms] [WARNING] %c%s%c [33m[1m⚠[22m[39m metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase background: #e6e6e6;background: light-dark(rgba(0,0,0,0.1), rgba(255,255,255,0.25));color: #000000;color: light-dark(#000000, #ffffff);border-radius: 2px  Server   @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   74075ms] [LOG] [Fast Refresh] done in 253ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   79865ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   80231ms] [LOG] [Fast Refresh] done in 439ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   80436ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   80674ms] [LOG] [Fast Refresh] done in 346ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   82632ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   82860ms] [LOG] [Fast Refresh] done in 331ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431

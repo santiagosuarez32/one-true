@@ -1,0 +1,60 @@
+- generic [active] [ref=e1]:
+  - main "Panel de Administración" [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e8]:
+          - link "Volver al sitio" [ref=e9] [cursor=pointer]:
+            - /url: /
+            - img [ref=e10]
+            - text: Volver al sitio
+          - heading "Panel de Administración" [level=1] [ref=e12]:
+            - text: Panel de
+            - text: Administración
+          - paragraph [ref=e14]: Gestioná contenidos, publicaciones y recursos de la plataforma de forma segura.
+        - list [ref=e15]:
+          - listitem [ref=e16]:
+            - img [ref=e17]
+            - generic [ref=e19]: Acceso exclusivo para el equipo autorizado.
+          - listitem [ref=e20]:
+            - img [ref=e21]
+            - generic [ref=e23]: Publicar y ocultar contenido con un click.
+          - listitem [ref=e24]:
+            - img [ref=e25]
+            - generic [ref=e27]: Gestión de cursos, servicios y blog.
+        - generic [ref=e28]:
+          - strong [ref=e29]: "Tip:"
+          - text: Si no recordás tu clave, pedí el restablecimiento al administrador.
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - generic [ref=e32]:
+            - generic [ref=e33]: OT
+            - generic [ref=e34]:
+              - paragraph [ref=e35]: One True Ecuador
+              - paragraph [ref=e36]: Acceso interno
+          - link "Ir al sitio" [ref=e37] [cursor=pointer]:
+            - /url: /
+        - generic [ref=e38]:
+          - heading "Iniciar sesión" [level=2] [ref=e39]
+          - paragraph [ref=e40]: Solo personal autorizado.
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - generic [ref=e43]: Email
+            - generic [ref=e44]:
+              - generic:
+                - img
+              - textbox "Email" [ref=e45]:
+                - /placeholder: tu@email.com
+          - generic [ref=e46]:
+            - generic [ref=e47]: Contraseña
+            - generic [ref=e48]:
+              - generic:
+                - img
+              - textbox "Contraseña Mostrar contraseña" [ref=e49]:
+                - /placeholder: ••••••••
+              - button "Mostrar contraseña" [ref=e50]:
+                - img [ref=e51]
+          - button "Entrar al panel" [ref=e54]
+          - paragraph [ref=e55]: ¿Olvidaste tu contraseña? Pedí el reseteo al administrador.
+  - button "Open Next.js Dev Tools" [ref=e61] [cursor=pointer]:
+    - img [ref=e62]
+  - alert [ref=e65]
