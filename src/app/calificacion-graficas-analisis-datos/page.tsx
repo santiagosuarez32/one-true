@@ -283,36 +283,83 @@ export default function CalificacionGraficasPage() {
             Características Generales del Curso
           </h2>
 
-          <div className="overflow-hidden rounded border border-[#700FA3]/20 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
-            <table className="w-full table-fixed text-left border-collapse bg-white">
-              <thead>
-                <tr className="bg-[#700FA3] border-b-2 border-[#FFC107]">
-                  <th className="py-4 px-3 sm:py-5 sm:px-6 font-bold text-white text-sm sm:text-lg w-1/3 break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Característica</th>
-                  <th className="py-4 px-3 sm:py-5 sm:px-6 font-bold text-white text-sm sm:text-lg w-2/3 border-l border-[#700FA3]/30 break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Especificación Técnica</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-[#700FA3]/20">
-                <tr className="bg-white">
-                  <td className="py-4 px-3 sm:py-5 sm:px-6 font-semibold text-[#48255A] text-sm sm:text-base break-words align-top align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Modalidad</td>
-                  <td className="py-4 px-3 sm:py-5 sm:px-6 text-[#525252] font-light border-l border-[#700FA3]/20 text-sm sm:text-base break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Presencial o en línea</td>
-                </tr>
-                <tr className="bg-[#700FA3]/5">
-                  <td className="py-4 px-3 sm:py-5 sm:px-6 font-semibold text-[#48255A] text-sm sm:text-base break-words align-top align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>¿Qué incluye este curso?</td>
-                  <td className="py-4 px-3 sm:py-5 sm:px-6 text-[#525252] font-light border-l border-[#700FA3]/20 text-sm sm:text-base break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                    <p className="mb-3 text-sm leading-relaxed">Herramientas prácticas para una calificación de élite:</p>
-                    <ul className="list-disc pl-5 flex flex-col gap-2">
-                      <li>15 horas de entrenamiento intensivo.</li>
-                      <li>30 lecciones especializadas en análisis cuantitativo.</li>
-                      <li>Ejercicios prácticos con gráficas reales para calibrar tu criterio.</li>
-                      <li>Guías y tablas de puntuación descargables.</li>
-                      <li>30 días de garantía de satisfacción.</li>
-                      <li>Acceso a la comunidad ONE TRUE para resolución de dudas complejas.</li>
-                      <li>Diploma de finalización que certifica tu competencia en análisis de datos.</li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Card 1 */}
+            <div className="flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="text-4xl mb-3">⏱️</div>
+              <h3 className="text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
+                15 horas intensivas
+              </h3>
+              <p className="text-[#525252] text-sm leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                Entrenamiento especializado en análisis.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="text-4xl mb-3">📚</div>
+              <h3 className="text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
+                30 lecciones
+              </h3>
+              <p className="text-[#525252] text-sm leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                Especializadas en análisis cuantitativo.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="text-4xl mb-3">📊</div>
+              <h3 className="text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
+                Ejercicios prácticos
+              </h3>
+              <p className="text-[#525252] text-sm leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                Gráficas reales para calibrar criterio.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="text-4xl mb-3">📄</div>
+              <h3 className="text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
+                Guías descargables
+              </h3>
+              <p className="text-[#525252] text-sm leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                Tablas de puntuación y herramientas.
+              </p>
+            </div>
+
+            {/* Card 5 */}
+            <div className="flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="text-4xl mb-3">✅</div>
+              <h3 className="text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
+                30 días garantía
+              </h3>
+              <p className="text-[#525252] text-sm leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                Satisfacción garantizada.
+              </p>
+            </div>
+
+            {/* Card 6 */}
+            <div className="flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="text-4xl mb-3">🔐</div>
+              <h3 className="text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
+                Comunidad ONE TRUE
+              </h3>
+              <p className="text-[#525252] text-sm leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                Resolución de dudas complejas.
+              </p>
+            </div>
+
+            {/* Card 7 */}
+            <div className="flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="text-4xl mb-3">🎓</div>
+              <h3 className="text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
+                Diploma oficial
+              </h3>
+              <p className="text-[#525252] text-sm leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                Certifica competencia en análisis.
+              </p>
+            </div>
           </div>
         </div>
       </section>

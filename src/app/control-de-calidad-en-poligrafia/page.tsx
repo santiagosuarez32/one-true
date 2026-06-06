@@ -258,26 +258,38 @@ export default function ControlDeCalidadEnPoligrafiaPage() {
             Características Generales del Curso
           </h2>
 
-          <div className="overflow-hidden rounded border border-[#700FA3]/20 shadow-[0_8px_30px_rgba(0,0,0,0.04)] bg-white">
-            <div className="p-6 md:p-8">
-              <h3 className="text-2xl font-bold text-[#48255A] mb-6" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Detalles de la formación:</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Card 1 */}
+            <div className="flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="text-4xl mb-3">💻</div>
+              <h3 className="text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
+                Modalidad
+              </h3>
+              <p className="text-[#525252] text-sm leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                100% en línea
+              </p>
+            </div>
 
-              <div className="flex flex-col gap-6">
-                <div className="border-b border-[#700FA3]/20 pb-4">
-                  <p className="text-sm font-semibold text-[#700FA3] uppercase tracking-wide mb-2" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Modalidad</p>
-                  <p className="text-[#525252] font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>100% en línea</p>
-                </div>
+            {/* Card 2 */}
+            <div className="flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="text-4xl mb-3">📅</div>
+              <h3 className="text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
+                Fechas
+              </h3>
+              <p className="text-[#525252] text-sm leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                Consulte nuestra próxima convocatoria.
+              </p>
+            </div>
 
-                <div className="border-b border-[#700FA3]/20 pb-4">
-                  <p className="text-sm font-semibold text-[#700FA3] uppercase tracking-wide mb-2" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Fechas</p>
-                  <p className="text-[#525252] font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Consulte nuestra próxima convocatoria.</p>
-                </div>
-
-                <div>
-                  <p className="text-sm font-semibold text-[#700FA3] uppercase tracking-wide mb-2" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Horarios</p>
-                  <p className="text-[#525252] font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Lunes a viernes (19:00 a 22:00) y dos sábados (08:00 a 13:00).</p>
-                </div>
-              </div>
+            {/* Card 3 */}
+            <div className="flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 md:col-span-2">
+              <div className="text-4xl mb-3">⏰</div>
+              <h3 className="text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
+                Horarios
+              </h3>
+              <p className="text-[#525252] text-sm leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                Lunes a viernes (19:00 a 22:00) y dos sábados (08:00 a 13:00).
+              </p>
             </div>
           </div>
         </div>

@@ -11,7 +11,7 @@ const MODULOS_AVANZADOS = [
   {
     title: "Entrevista Pretest",
     desc: "Estructuración y conducción de la entrevista previa al examen. Técnicas de rapport, formulación de preguntas relevantes y detección de conductas evasivas o inconsistentes.",
-    image: "/cursos-avanzados/entrevista-pretest.webp",
+    image: "/cursos-avanzados/pretest.jpg",
     href: "/entrevista-pretest",
   },
   {
@@ -167,7 +167,7 @@ export default function CursosAvanzadosPoligrafiaPage() {
 
       {/* Módulos */}
       <section id="modulos" className="bg-white py-24 scroll-mt-24">
-        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-2 sm:px-2 lg:px-4">
           <div className="flex flex-col items-center text-center mb-16">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-[3px] bg-[#700FA3]" />
@@ -205,63 +205,62 @@ export default function CursosAvanzadosPoligrafiaPage() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-0 gap-y-6 auto-rows-max justify-items-center">
             {MODULOS_AVANZADOS.map((modulo, idx) => {
-              const isReversed = idx % 2 === 1;
-
+              let gridClass = "";
+              if (idx === 3 || idx === 4) {
+                gridClass = "lg:col-span-1";
+              }
               return (
                 <article
                   key={modulo.title}
-                  className={`flex flex-col overflow-hidden rounded border border-neutral-100 bg-white shadow-[0_4px_25px_rgba(0,0,0,0.04)] lg:flex-row ${
-                    isReversed ? "lg:flex-row-reverse" : ""
-                  }`}
+                  className={`flex flex-col rounded-2xl bg-white shadow-[0_8px_30px_rgba(0,0,0,0.1)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] transition-all duration-300 w-full max-w-[380px] ${gridClass}`}
                 >
-                  {/* Imagen */}
-                  <div className="relative w-full lg:w-[42%] shrink-0 overflow-hidden bg-neutral-100">
-                    <div className="relative aspect-[16/10] lg:aspect-auto lg:min-h-[280px] lg:h-full">
-                      <img
-                        src={modulo.image}
-                        alt={modulo.title}
-                        loading="lazy"
-                        className="absolute inset-0 w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#700FA3]/50 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-[#700FA3]/10" />
-                    </div>
+                  {/* Imagen Superior */}
+                  <div className="relative w-full h-52 overflow-hidden bg-gradient-to-br from-[#700FA3] to-[#8A15C4]">
+                    <img
+                      src={modulo.image}
+                      alt={modulo.title}
+                      loading="lazy"
+                      className="absolute inset-0 w-full h-full object-cover opacity-80"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-[#700FA3]/40 via-[#700FA3]/20 to-transparent" />
                   </div>
 
-                  {/* Contenido */}
-                  <div className="flex flex-col justify-center flex-1 p-6 sm:p-8 lg:p-10 text-left">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-8 h-[2px] bg-[#700FA3]" />
+                  {/* Contenido Inferior */}
+                  <div className="flex flex-col p-5 text-left">
+                    {/* Badge */}
+                    <div className="inline-flex items-center gap-2 mb-2 w-fit">
                       <span
-                        className="text-sm font-bold text-[#700FA3]"
+                        className="px-2.5 py-1 rounded-full bg-[#FFC107] text-[#411A56] text-xs font-bold"
                         style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                       >
-                        Especialización avanzada
+                        {modulo.title.split(" ")[0]}
                       </span>
                     </div>
 
-                    <h3
-                      className="text-xl sm:text-2xl font-bold mb-4 text-[#48255A]"
-                      style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}
-                    >
-                      {modulo.title}
-                    </h3>
-
+                    {/* Descripción */}
                     <p
-                      className="text-[#525252] text-sm sm:text-base leading-relaxed font-light mb-6 flex-1"
+                      className="text-[#525252] text-xs leading-snug font-light mb-3 flex-1"
                       style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                     >
                       {modulo.desc}
                     </p>
 
+                    {/* Información */}
+                    <div className="flex items-center gap-2 text-xs text-[#525252] mb-3 border-t border-neutral-200 pt-2">
+                      <span style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: "600" }}>📚</span>
+                      <span style={{ fontFamily: "var(--font-montserrat), sans-serif" }} className="font-light">Curso avanzado</span>
+                    </div>
+
+                    {/* Botón */}
                     <a
                       href={modulo.href ?? "#contacto"}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#FFC107] text-[#411A56] font-bold rounded text-sm self-start hover:bg-[#700FA3] hover:text-[#FFC107] transition-colors duration-300"
-                      style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                      className="inline-flex items-center gap-1 px-3 py-2 bg-[#700FA3] font-bold rounded text-xs self-start hover:brightness-110 transition-all duration-300 w-full justify-center"
+                      style={{ fontFamily: "var(--font-montserrat), sans-serif", color: "#FFD700" }}
                     >
-                      Consultar este módulo
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                      Consultar módulo
+                      <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                       </svg>
                     </a>
