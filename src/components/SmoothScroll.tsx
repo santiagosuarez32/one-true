@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 
 export default function SmoothScroll({
@@ -10,8 +11,22 @@ export default function SmoothScroll({
 }) {
   const lenisRef = useRef<Lenis | null>(null);
   const rafIdRef = useRef<number | null>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
+    // Disable smooth scroll on admin dashboard to prevent conflicts with drawers/modals/forms
+    if (pathname?.startsWith("/admin")) {
+      if (rafIdRef.current) {
+        cancelAnimationFrame(rafIdRef.current);
+        rafIdRef.current = null;
+      }
+      if (lenisRef.current) {
+        lenisRef.current.destroy();
+        lenisRef.current = null;
+      }
+      return;
+    }
+
     if (lenisRef.current) {
       lenisRef.current.destroy();
     }
@@ -35,19 +50,21 @@ export default function SmoothScroll({
     });
 
     // Restore scroll position on page load
-    window.addEventListener("load", () => {
+    const handleLoad = () => {
       if (window.history.state?.scrollY !== undefined) {
         lenis.scrollTo(window.history.state.scrollY, { immediate: true });
       }
-    });
+    };
+    window.addEventListener("load", handleLoad);
 
     // Save scroll position before unloading
-    window.addEventListener("beforeunload", () => {
+    const handleBeforeUnload = () => {
       window.history.replaceState(
         { ...window.history.state, scrollY: window.scrollY },
         ""
       );
-    });
+    };
+    window.addEventListener("beforeunload", handleBeforeUnload);
 
     const raf = (time: number) => {
       lenis.raf(time);
@@ -57,6 +74,8 @@ export default function SmoothScroll({
     rafIdRef.current = requestAnimationFrame(raf);
 
     return () => {
+      window.removeEventListener("load", handleLoad);
+      window.removeEventListener("beforeunload", handleBeforeUnload);
       if (rafIdRef.current) {
         cancelAnimationFrame(rafIdRef.current);
       }
@@ -65,7 +84,7 @@ export default function SmoothScroll({
         lenisRef.current = null;
       }
     };
-  }, []);
+  }, [pathname]);
 
   return <>{children}</>;
 }

@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { Blog } from "@/lib/cms";
 
 interface Article {
   title: string;
@@ -26,7 +27,7 @@ const BlogCard = ({ article, className = "", cardRef }: { article: Article, clas
     {/* Image Container with Label */}
     <div className="relative overflow-hidden bg-neutral-100 w-full aspect-[4/3] rounded-t-2xl">
       <img
-        src={article.image}
+        src={article.image || "/blog/1.webp"}
         alt={`Imagen representativa del artículo: ${article.title} - One True Ecuador`}
         className="w-full h-full object-cover absolute inset-0 transition-transform duration-700 group-hover:scale-105"
       />
@@ -71,53 +72,8 @@ const BlogCard = ({ article, className = "", cardRef }: { article: Article, clas
   </div>
 );
 
-export default function BlogPage() {
+export default function BlogPageClient({ initialBlogs }: { initialBlogs: Blog[] }) {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
-  const [articles, setArticles] = React.useState<Article[]>([]);
-
-  const staticArticles: Article[] = [
-    {
-      title: "¿Verdad o Mentira? Todo lo que debes saber antes de contratar una prueba de Polígrafo.",
-      image: "/blog/1.webp",
-      link: "/blog/verdad-o-mentira"
-    },
-    {
-      title: "¿Preempleo, Rutina o Investigación? Descubre qué prueba de polígrafo necesitas realmente.",
-      image: "/blog/2.webp",
-      link: "/blog/preempleo-rutina-investigacion"
-    },
-    {
-      title: "Garantiza la Verdad: 10 Requisitos Clave para una Prueba de Polígrafo Confiable y Exitosa.",
-      image: "/blog/3.webp",
-      link: "/blog/garantiza-la-verdad"
-    },
-  ];
-
-  useEffect(() => {
-    fetch("/api/cms")
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.blogs && data.blogs.length > 0) {
-          const published = data.blogs
-            .filter((b: any) => b.published)
-            .map((b: any) => ({
-              title: b.title,
-              image: b.image || "/blog/1.webp",
-              link: b.link || `/blog/${b.id}`
-            }));
-          if (published.length > 0) {
-            setArticles(published);
-          } else {
-            setArticles(staticArticles);
-          }
-        } else {
-          setArticles(staticArticles);
-        }
-      })
-      .catch(() => setArticles(staticArticles));
-  }, []);
-
-  const displayArticles = articles.length > 0 ? articles : staticArticles;
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -143,7 +99,7 @@ export default function BlogPage() {
       });
     });
     return () => ctx.revert();
-  }, [displayArticles]);
+  }, [initialBlogs]);
 
   return (
     <main className="min-h-screen bg-white text-[#525252] selection:bg-[#FFC107] selection:text-[#411A56]">
@@ -220,9 +176,9 @@ export default function BlogPage() {
         `}} />
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-            {displayArticles.map((article, idx) => (
+            {initialBlogs.map((article, idx) => (
               <BlogCard
-                key={idx}
+                key={article.id}
                 article={article}
                 className="w-full h-full flex"
                 cardRef={(el) => { cardsRef.current[idx] = el; }}

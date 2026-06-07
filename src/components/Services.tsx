@@ -1,12 +1,46 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function Services() {
   const containerRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const [services, setServices] = useState<any[]>([]);
+
+  useEffect(() => {
+    fetch("/api/cms")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.services) {
+          const published = data.services.filter((s: any) => s.published);
+          
+          const desiredOrder = [
+            "pruebas-poligraficas",
+            "vetting",
+            "estudio-de-confiabilidad-360",
+            "visitas-domiciliarias",
+            "pruebas-toxicologicas",
+            "evaluaciones-psicometricas",
+            "prueba-de-honestidad-etica-y-valores",
+            "curso-basico-en-poligrafia"
+          ];
+          
+          published.sort((a: any, b: any) => {
+            const indexA = desiredOrder.indexOf(a.id);
+            const indexB = desiredOrder.indexOf(b.id);
+            if (indexA === -1 && indexB === -1) return 0;
+            if (indexA === -1) return 1;
+            if (indexB === -1) return -1;
+            return indexA - indexB;
+          });
+
+          setServices(published);
+        }
+      })
+      .catch((err) => console.error("Error loading services:", err));
+  }, []);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -39,9 +73,9 @@ export default function Services() {
     return () => {
       ctx.revert();
     };
-  }, []);
+  }, [services]);
 
-  const serviceItems = [
+  const defaultServices = [
     {
       title: "Pruebas de Polígrafo Profesionales",
       desc: "Certeza técnica con un 95% de exactitud. Revelamos la verdad en procesos críticos de seguridad y confianza.",
@@ -99,6 +133,8 @@ export default function Services() {
       href: "/curso-basico-en-poligrafia"
     }
   ];
+
+  const serviceItems = services.length > 0 ? services : defaultServices;
 
   return (
     <section id="services" className="bg-white pt-10 pb-24">

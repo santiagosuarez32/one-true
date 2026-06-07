@@ -135,6 +135,21 @@ const OTRAS_SOLUCIONES = [
 ];
 
 export default function Confiabilidad360Page() {
+  const [dbData, setDbData] = useState<any>(null);
+
+  useEffect(() => {
+    fetch("/api/cms")
+      .then((res) => res.json())
+      .then((data) => {
+        const tableKey = data.services ? 'services' : 'courses';
+        if (data[tableKey]) {
+          const item = data[tableKey].find((s: any) => s.id === "estudio-de-confiabilidad-360");
+          if (item) setDbData(item);
+        }
+      })
+      .catch((err) => console.error("Error loading CMS data:", err));
+  }, []);
+
   const containerRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
@@ -176,7 +191,7 @@ export default function Confiabilidad360Page() {
         />
 
         <img 
-          src="/confiabilidad/hero.webp"
+          src={dbData?.pageContent?.heroImage || "/confiabilidad/hero.webp"}
           alt="Fondo de hero: Estudio de Confiabilidad 360 de One True en Ecuador"
           fetchPriority="high"
           className="absolute inset-0 w-full h-full object-cover object-center z-0 opacity-40 mix-blend-overlay pointer-events-none"
@@ -199,7 +214,7 @@ export default function Confiabilidad360Page() {
                   fontFamily: "var(--font-montserrat), sans-serif",
                 }}
               >
-                Confirme la honestidad, el pasado y la estabilidad de su talento humano.
+                {dbData?.pageContent?.heroTagline || "Confirme la honestidad, el pasado y la estabilidad de su talento humano."}
               </span>
             </div>
 
@@ -215,7 +230,7 @@ export default function Confiabilidad360Page() {
                 textShadow: "0 2px 4px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.18)"
               }}
             >
-              Estudio de Confiabilidad <strong style={{ fontWeight: "800", textDecoration: "underline", textDecorationColor: "#FFC107", textUnderlineOffset: "6px" }}>360°</strong>
+              {dbData?.pageContent?.heroTitle || "Estudio de Confiabilidad"} <strong style={{ fontWeight: "800", textDecoration: "underline", textDecorationColor: "#FFC107", textUnderlineOffset: "6px" }}>{dbData?.pageContent?.heroUnderlined || "360°"}</strong>
             </h1>
 
             <p
@@ -227,7 +242,7 @@ export default function Confiabilidad360Page() {
                 color: "#FFFFFF"
               }}
             >
-              Una hoja de vida no lo dice todo. Mitigamos el riesgo de contratación mediante la verificación rigurosa de la experiencia declarada y el análisis del entorno financiero del candidato, identificando vulnerabilidades antes de que afecten a su empresa.
+              {dbData?.pageContent?.heroDesc || "Una hoja de vida no lo dice todo. Mitigamos el riesgo de contratación mediante la verificación rigurosa de la experiencia declarada y el análisis del entorno financiero del candidato, identificando vulnerabilidades antes de que afecten a su empresa."}
             </p>
 
             {/* Hero CTA Button */}
@@ -289,14 +304,14 @@ export default function Confiabilidad360Page() {
                 marginTop: "10px"
               }}
             >
-              ¿Qué verificamos con precisión?
+              {dbData?.pageContent?.aboutTitle || "¿Qué verificamos con precisión?"}
             </h2>
 
             <p 
               className="text-[#525252] text-sm sm:text-base mt-4 max-w-2xl font-light"
               style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
             >
-              Realizamos una auditoría completa del perfil para garantizar total transparencia:
+              {dbData?.pageContent?.aboutDesc || "Realizamos una auditoría completa del perfil para garantizar total transparencia:"}
             </p>
           </div>
 
@@ -411,7 +426,7 @@ export default function Confiabilidad360Page() {
                 fontFamily: "var(--font-montserrat), sans-serif",
               }}
             >
-              Valor Estratégico para su Empresa
+              {dbData?.pageContent?.whyTitle || "Valor Estratégico para su Empresa"}
             </h2>
 
             <ul className="flex flex-col gap-3 w-full mb-6">

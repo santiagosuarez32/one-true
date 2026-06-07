@@ -131,6 +131,19 @@ const NUESTRAS_SOLUCIONES = [
 
 export default function PruebasPoligraficasPage() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [dbData, setDbData] = useState<any>(null);
+
+  useEffect(() => {
+    fetch("/api/cms")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.services) {
+          const item = data.services.find((s: any) => s.id === "pruebas-poligraficas");
+          if (item) setDbData(item);
+        }
+      })
+      .catch((err) => console.error("Error loading CMS data:", err));
+  }, []);
 
   useGSAP(
     () => {
@@ -267,7 +280,7 @@ export default function PruebasPoligraficasPage() {
         />
 
         <img 
-          src="/pruebas-poligrafo/hero.webp"
+          src={dbData?.pageContent?.heroImage || "/pruebas-poligrafo/hero.webp"}
           alt="Fondo de hero: Pruebas de Polígrafo en Ecuador - One True"
           fetchPriority="high"
           className="absolute inset-0 w-full h-full object-cover object-right-top z-0 opacity-40 mix-blend-overlay pointer-events-none"
@@ -290,7 +303,7 @@ export default function PruebasPoligraficasPage() {
                   fontFamily: "var(--font-montserrat), sans-serif",
                 }}
               >
-                Nuestras soluciones
+                 {dbData?.pageContent?.heroTagline || "Nuestras soluciones"}
               </span>
             </div>
 
@@ -306,7 +319,7 @@ export default function PruebasPoligraficasPage() {
                 textShadow: "0 2px 4px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.18)"
               }}
             >
-              Pruebas de <strong style={{ fontWeight: "800", textDecoration: "underline", textDecorationColor: "#FFC107", textUnderlineOffset: "6px" }}>Polígrafo</strong>
+              {dbData?.pageContent?.heroTitle || "Pruebas de"} <strong style={{ fontWeight: "800", textDecoration: "underline", textDecorationColor: "#FFC107", textUnderlineOffset: "6px" }}>{dbData?.pageContent?.heroUnderlined || "Polígrafo"}</strong>
             </h1>
 
             <p
@@ -318,7 +331,7 @@ export default function PruebasPoligraficasPage() {
                 color: "#FFFFFF" // Force color to override global CSS leaks
               }}
             >
-              Aseguramos su toma de decisiones mediante pruebas de polígrafo con un 95% de exactitud. Validamos la integridad en procesos de selección, monitoreo preventivo de su personal y esclarecimiento de incidentes internos bajo estándares internacionales. Obtenga resultados técnicos en tiempo récord para asegurar la transparencia y proteger los activos de su empresa.
+              {dbData?.pageContent?.heroDesc || "Aseguramos su toma de decisiones mediante pruebas de polígrafo con un 95% de exactitud. Validamos la integridad en procesos de selección, monitoreo preventivo de su personal y esclarecimiento de incidentes internos bajo estándares internacionales. Obtenga resultados técnicos en tiempo récord para asegurar la transparencia y proteger los activos de su empresa."}
             </p>
 
             {/* Premium Counters Block */}

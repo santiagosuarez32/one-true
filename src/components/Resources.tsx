@@ -79,34 +79,9 @@ const BlogCard = ({ article, className = "", isWide = false, cardRef }: { articl
 
 export default function Resources() {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const [articles, setArticles] = React.useState<Article[]>([]);
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    const ctx = gsap.context(() => {
-      cardsRef.current.forEach((card) => {
-        if (card) {
-          gsap.fromTo(
-            card,
-            { x: -80, opacity: 0 },
-            {
-              x: 0,
-              opacity: 1,
-              duration: 0.5,
-              ease: "power2.out",
-              scrollTrigger: {
-                trigger: card,
-                start: "top 85%",
-                toggleActions: "play none none none"
-              }
-            }
-          );
-        }
-      });
-    });
-    return () => ctx.revert();
-  }, []);
-
-  const articles: Article[] = [
+  const staticArticles: Article[] = [
     {
       title: "¿Verdad o Mentira? Todo lo que debes saber antes de contratar una prueba de Polígrafo.",
       image: "/blog/1.webp",
@@ -123,6 +98,33 @@ export default function Resources() {
       link: "/blog/garantiza-la-verdad"
     }
   ];
+
+  useEffect(() => {
+    fetch("/api/cms")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.blogs && data.blogs.length > 0) {
+          const published = data.blogs
+            .filter((b: any) => b.published)
+            .slice(0, 3)
+            .map((b: any) => ({
+              title: b.title,
+              image: b.image || "/blog/1.webp",
+              link: b.link || `/blog/${b.id}`
+            }));
+          if (published.length > 0) {
+            setArticles(published);
+          } else {
+            setArticles(staticArticles);
+          }
+        } else {
+          setArticles(staticArticles);
+        }
+      })
+      .catch(() => setArticles(staticArticles));
+  }, []);
+
+  const displayArticles = articles.length > 0 ? articles : staticArticles;
 
   return (
     <section id="recursos" className="bg-white py-16 md:py-24 scroll-mt-20">
@@ -211,7 +213,7 @@ export default function Resources() {
           </div>
 
           {/* Remaining 3 Grid Items: Blog Cards */}
-          {articles.map((article, idx) => (
+          {displayArticles.map((article, idx) => (
             <BlogCard 
               key={idx} 
               article={article} 

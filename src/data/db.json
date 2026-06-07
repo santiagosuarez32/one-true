@@ -1,0 +1,782 @@
+{
+  "services": [
+    {
+      "id": "pruebas-poligraficas",
+      "title": "Pruebas de Polígrafo Profesionales",
+      "desc": "Certeza técnica con un 95% de exactitud. Revelamos la verdad en procesos críticos de seguridad y confianza.",
+      "image": "/servicios/1.webp",
+      "cta": "Ver detalles del servicio",
+      "href": "/pruebas-poligraficas",
+      "template": "poligrafo",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "Aseguramos su toma de decisiones mediante pruebas de polígrafo con un 95% de exactitud. Validamos la integridad en procesos de selección, monitoreo preventivo de su personal y esclarecimiento de incidentes internos bajo estándares internacionales.",
+        "whyTitle": "¿Por qué contratarnos?",
+        "aboutDesc": "Ofrecemos procesos técnicos estandarizados para brindar certidumbre en las decisiones críticas de su negocio:",
+        "heroImage": "/pruebas-poligrafo/hero.webp",
+        "heroTitle": "Pruebas de",
+        "whyPoints": [
+          {
+            "text": "Te ayudamos a eliminar riesgos críticos en tus nuevas contrataciones.",
+            "title": "Reducción de Riesgos"
+          },
+          {
+            "text": "Identificamos responsables de fraudes con certeza técnica de nivel forense.",
+            "title": "Certeza Técnica"
+          },
+          {
+            "text": "Entrega de resultados preliminares en 4 horas y reportes técnicos en 24 horas.",
+            "title": "Rapidez"
+          },
+          {
+            "text": "Detectamos la deshonestidad interna y prevenimos pérdidas de activos.",
+            "title": "Disuasión"
+          }
+        ],
+        "aboutCards": [
+          {
+            "text": "Utilizada en procesos investigativos. Esclarezca incidentes internos, pérdidas, robos, asaltos, fuga de información con absoluta objetividad.",
+            "title": "Polígrafo Específico"
+          },
+          {
+            "text": "Identifica conductas contraproducentes y vulnerabilidades en los candidatos antes de su contratación, permitiéndole mitigar riesgos.",
+            "title": "Polígrafo Pre-empleo"
+          },
+          {
+            "text": "Monitoreo preventivo para personal que labora en la empresa. Fortalece la lealtad y disuade conductas irregulares internas.",
+            "title": "Polígrafo de Rutina"
+          }
+        ],
+        "aboutTitle": "¿Qué resolvemos para su organización?",
+        "heroTagline": "Nuestras soluciones",
+        "contactPhone": "0981296179",
+        "heroUnderlined": "Polígrafo",
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
+      },
+      "created_at": "2026-06-06T16:11:44.014975+00:00"
+    },
+    {
+      "id": "estudio-de-confiabilidad-360",
+      "title": "Estudio de Confiabilidad 360°",
+      "desc": "Confirmamos la honestidad y estabilidad de sus candidatos. Validamos trayectorias (laborales y académicas) y realizamos un análisis profundo de salud financiera y endeudamiento.",
+      "image": "/servicios/3.webp",
+      "cta": "Ver detalles del servicio",
+      "href": "/estudio-de-confiabilidad-360",
+      "template": "vetting",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "Confirmamos la honestidad y estabilidad de sus candidatos. Validamos trayectorias (laborales y académicas) y realizamos un análisis profundo de salud financiera y endeudamiento en +190 bases de datos.",
+        "whyTitle": "El Valor para su Empresa",
+        "aboutDesc": "Llevamos a cabo un cruce completo de información comercial, legal e historial laboral:",
+        "heroImage": "/servicios/3.webp",
+        "heroTitle": "Estudio de Confiabilidad",
+        "whyPoints": [
+          {
+            "text": "Asegura la honestidad e idoneidad de los candidatos seleccionados.",
+            "title": "Personal de Confianza"
+          },
+          {
+            "text": "Evita la contratación de personas con perfiles financieros de alto riesgo.",
+            "title": "Prevención de Fraudes"
+          },
+          {
+            "text": "Brinda reportes estructurados con recomendaciones técnicas claras.",
+            "title": "Decisiones Seguras"
+          }
+        ],
+        "aboutCards": [
+          {
+            "text": "Confirmamos referencias, periodos trabajados y motivos de salida.",
+            "title": "Validación Laboral"
+          },
+          {
+            "text": "Verificamos títulos registrados y autenticidad de diplomas.",
+            "title": "Validación Académica"
+          },
+          {
+            "text": "Analizamos deudas, juicios de coactiva y capacidad crediticia.",
+            "title": "Historial Financiero"
+          }
+        ],
+        "aboutTitle": "¿Qué analizamos?",
+        "heroTagline": "Asegure un equipo confiable y libre de riesgos corporativos.",
+        "contactPhone": "0981296179",
+        "heroUnderlined": "360°",
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
+      },
+      "created_at": "2026-06-06T16:11:44.532465+00:00"
+    },
+    {
+      "id": "visitas-domiciliarias",
+      "title": "Visitas Domiciliarias",
+      "desc": "Evaluamos el entorno socioeconómico y familiar de sus candidatos en el terreno. Prevenimos riesgos de vulnerabilidad y confirmamos la coherencia entre el estilo de vida y el perfil declarado.",
+      "image": "/servicios/4.webp",
+      "cta": "Ver detalles del servicio",
+      "href": "/visitas-domiciliarias",
+      "template": "vetting",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "La seguridad de su empresa no termina en la oficina. Nuestro servicio de visita domiciliaria permite conocer el entorno real del candidato, identificando factores de riesgo y niveles de vulnerabilidad.",
+        "whyTitle": "Beneficios para su Organización",
+        "aboutDesc": "Nuestros especialistas realizan una inspección profesional y ética centrada en:",
+        "heroImage": "/domicilio/hero.webp",
+        "heroTitle": "Visitas",
+        "whyPoints": [
+          {
+            "text": "Detecte a tiempo situaciones personales que puedan comprometer la lealtad del empleado.",
+            "title": "Prevención de Vulnerabilidades"
+          },
+          {
+            "text": "Evite la contratación de personal con entornos que faciliten actos ilícitos.",
+            "title": "Mitigación de Riesgos"
+          },
+          {
+            "text": "Proteja sus activos asegurándose de que el entorno del candidato sea estable y confiable.",
+            "title": "Seguridad Patrimonial"
+          }
+        ],
+        "aboutCards": [
+          {
+            "text": "Validación de la ubicación geográfica y condiciones de habitabilidad del candidato.",
+            "title": "Verificación de Entorno"
+          },
+          {
+            "text": "Identificación del núcleo familiar y detección de posibles conflictos o riesgos externos.",
+            "title": "Análisis Socio-Familiar"
+          },
+          {
+            "text": "Contrastamos que el nivel de vida sea consistente con los ingresos y el cargo al que postula.",
+            "title": "Coherencia de Vida"
+          },
+          {
+            "text": "Obtención de información complementaria sobre la conducta y reputación en su comunidad.",
+            "title": "Referencias de Vecindad"
+          }
+        ],
+        "aboutTitle": "¿Qué evaluamos en el terreno?",
+        "heroTagline": "Verificación de campo para una visión 360° de su futuro colaborador.",
+        "contactPhone": "0981296179",
+        "heroUnderlined": "Domiciliarias",
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
+      },
+      "created_at": "2026-06-06T16:11:44.772206+00:00"
+    },
+    {
+      "id": "pruebas-toxicologicas",
+      "title": "Pruebas Toxicológicas",
+      "desc": "Garantice un ambiente laboral seguro y productivo. Detectamos el consumo de sustancias con un 99% de nivel de confianza, asegurando sobriedad y responsabilidad.",
+      "image": "/servicios/5.webp",
+      "cta": "Ver detalles del servicio",
+      "href": "/pruebas-toxicologicas",
+      "template": "standard",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "El consumo de sustancias no solo afecta la productividad, sino que pone en riesgo la seguridad física y patrimonial de su organización. Implementamos protocolos de detección rápida y efectiva.",
+        "whyTitle": "Beneficios para su Organización",
+        "aboutDesc": "Contamos con test de 5 o 6 sustancias, garantizamos procesos técnicos estandarizados para ofrecer resultados irrefutables:",
+        "heroImage": "/servicios/5.webp",
+        "heroTitle": "Pruebas",
+        "whyPoints": [
+          {
+            "text": "Prevenga incidentes laborales derivados del consumo de sustancias.",
+            "title": "Reducción de Accidentes"
+          },
+          {
+            "text": "Asegure que su personal se encuentre en plenas facultades físicas y mentales.",
+            "title": "Mejora de la Productividad"
+          },
+          {
+            "text": "Fortalece sus políticas de seguridad y salud ocupacional ante la normativa local.",
+            "title": "Cumplimiento"
+          }
+        ],
+        "aboutCards": [
+          {
+            "text": "Resultados con un 99% de nivel de confianza, eliminando dudas en la toma de decisiones.",
+            "title": "Precisión Forense"
+          },
+          {
+            "text": "Detección de las sustancias de mayor incidencia en el entorno laboral (marihuana, cocaína, anfetaminas, etc.).",
+            "title": "Panel Multidrogas"
+          },
+          {
+            "text": "Garantizamos la integridad de cada muestra desde la toma hasta el resultado final.",
+            "title": "Protocolo de Cadena de Custodia"
+          },
+          {
+            "text": "Fomentamos una cultura de cero tolerancia a riesgos para proteger la vida y los activos de la empresa.",
+            "title": "Ambiente Seguro"
+          }
+        ],
+        "aboutTitle": "¿Qué garantizamos en nuestro servicio?",
+        "heroTagline": "Detección precisa de sustancias para un entorno de trabajo 100% confiable.",
+        "contactPhone": "0981296179",
+        "heroUnderlined": "Toxicológicas",
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
+      },
+      "created_at": "2026-06-06T16:11:45.005459+00:00"
+    },
+    {
+      "id": "evaluaciones-psicometricas",
+      "title": "Evaluaciones Psicométricas",
+      "desc": "Análisis profundo de la personalidad, aptitudes, comportamiento ético del personal para asegurar el perfecto ajuste al cargo.",
+      "image": "/servicios/6.webp",
+      "cta": "Ver detalles del servicio",
+      "href": "/evaluaciones-psicometricas",
+      "template": "standard",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "Identifique el potencial intelectual, de personalidad y comportamiento de sus postulantes. Aseguramos el calce cultural y el perfil de honestidad adecuado para cada nivel de su estructura.",
+        "whyTitle": "Beneficios de la Evaluación Psicométrica",
+        "aboutDesc": "Utilizamos baterías psicométricas estandarizadas para medir:",
+        "heroImage": "/servicios/6.webp",
+        "heroTitle": "Evaluaciones",
+        "whyPoints": [
+          {
+            "text": "Garantiza que el candidato tenga las competencias reales para desempeñarse con éxito.",
+            "title": "Ajuste al Perfil del Cargo"
+          },
+          {
+            "text": "Optimiza los procesos de filtrado en reclutamiento masivo.",
+            "title": "Ahorro de Tiempo y Costos"
+          },
+          {
+            "text": "Al contratar personas alineadas a la cultura y funciones del puesto.",
+            "title": "Reducción de la Rotación"
+          }
+        ],
+        "aboutCards": [
+          {
+            "text": "Rasgos conductuales bajo presión, liderazgo, toma de decisiones y calce organizacional.",
+            "title": "Personalidad y Comportamiento"
+          },
+          {
+            "text": "Inteligencia lógica, habilidades numéricas y capacidad de resolución de problemas complejos.",
+            "title": "Capacidad Cognitiva"
+          },
+          {
+            "text": "Alineación ética del candidato y predisposición a conductas de riesgo en la empresa.",
+            "title": "Perfil de Honestidad y Valores"
+          }
+        ],
+        "aboutTitle": "¿Qué evaluamos en nuestro servicio?",
+        "heroTagline": "Análisis científico y conductual para un reclutamiento efectivo.",
+        "contactPhone": "0981296179",
+        "heroUnderlined": "Psicométricas",
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
+      },
+      "created_at": "2026-06-06T16:11:45.238815+00:00"
+    },
+    {
+      "id": "prueba-de-honestidad-etica-y-valores",
+      "title": "Prueba de Honestidad, Ética y Valores",
+      "desc": "Herramienta psicométrica avanzada de 90 reactivos estratégicos diseñada para identificar conductas de riesgo y medir la alineación ética del personal.",
+      "image": "/servicios/8.webp",
+      "cta": "Ver detalles del servicio",
+      "href": "/prueba-de-honestidad-etica-y-valores",
+      "template": "standard",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "Compuesta por 90 reactivos estratégicos, está diseñada para medir la alineación ética del evaluado e identificar conductas contraproducentes que puedan representar riesgos.",
+        "whyTitle": "Valor para la Empresa",
+        "aboutDesc": "Mide de manera científica y detallada diferentes dimensiones de la conducta ética:",
+        "heroImage": "/servicios/8.webp",
+        "heroTitle": "Prueba de Honestidad,",
+        "whyPoints": [
+          {
+            "text": "Promueve una cultura organizacional transparente, basada en el cumplimiento y el respeto.",
+            "title": "Ambiente Seguro"
+          },
+          {
+            "text": "Ideal para aplicar en procesos masivos y en puestos que manejen activos importantes.",
+            "title": "Filtro Eficiente"
+          },
+          {
+            "text": "Resultados cuantitativos y analizados por profesionales.",
+            "title": "Decisiones Objetivas"
+          }
+        ],
+        "aboutCards": [
+          {
+            "text": "Grado de coherencia entre los valores del candidato y las normas corporativas.",
+            "title": "Alineación de Valores"
+          },
+          {
+            "text": "Predisposición al robo, soborno, fuga de información o desacato de normas.",
+            "title": "Identificación de Riesgos"
+          },
+          {
+            "text": "Obtención de informes estructurados con semáforos de riesgo y recomendaciones concretas.",
+            "title": "Reportes Rápidos"
+          }
+        ],
+        "aboutTitle": "¿Qué evalúa la prueba?",
+        "heroTagline": "Un entorno seguro se construye con personas éticas.",
+        "contactPhone": "0981296179",
+        "heroUnderlined": "Ética y Valores",
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
+      },
+      "created_at": "2026-06-06T16:11:45.483517+00:00"
+    },
+    {
+      "id": "curso-basico-en-poligrafia",
+      "title": "Formación en Poligrafía Acreditada por APA",
+      "desc": "Certifíquese como poligrafista profesional con nuestro programa de 400 horas, diseñado bajo los más altos estándares científicos y avalado internacionalmente por la APA.",
+      "image": "/servicios/7.webp",
+      "cta": "Ver formación en poligrafía",
+      "href": "/curso-basico-en-poligrafia",
+      "template": "standard",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "Conviértase en un experto en Poligrafía y evaluador Forense de la Credibilidad. Certifíquese como poligrafista profesional con nuestro programa de 400 horas.",
+        "whyTitle": "¿Por qué formarse con nosotros?",
+        "aboutDesc": "Nuestro programa incluye teoría científica y práctica supervisada:",
+        "heroImage": "/servicios/7.webp",
+        "heroTitle": "Formación en Poligrafía",
+        "whyPoints": [
+          {
+            "text": "Aprenda de poligrafistas en activo con amplia experiencia docente e investigativa.",
+            "title": "Instructores Certificados"
+          },
+          {
+            "text": "Acceda a la biblioteca técnica y herramientas de última generación.",
+            "title": "Material Actualizado"
+          },
+          {
+            "text": "Oportunidades de inserción laboral en agencias y departamentos corporativos.",
+            "title": "Bolsa de Empleo"
+          }
+        ],
+        "aboutCards": [
+          {
+            "text": "Psicofisiología, farmacología, metodologías de pregunta y estándares éticos.",
+            "title": "Temario Científico"
+          },
+          {
+            "text": "Uso de instrumentación de última generación y análisis de gráficas reales.",
+            "title": "Práctica Supervisada"
+          },
+          {
+            "text": "Acreditación oficial que le permite ejercer la profesión internacionalmente.",
+            "title": "Certificación APA"
+          }
+        ],
+        "aboutTitle": "Detalles de la formación profesional",
+        "heroTagline": "Avalado internacionalmente por la APA.",
+        "contactPhone": "0981296179",
+        "heroUnderlined": "Certificada",
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
+      },
+      "created_at": "2026-06-06T16:11:45.708532+00:00"
+    },
+    {
+      "id": "vetting",
+      "title": "Vetting",
+      "desc": "Proteja la integridad de su empresa desde el primer día. Filtramos riesgos mediante el rastreo exhaustivo en más de 190 bases de datos nacionales e internacionales.",
+      "image": "/servicios/2.webp",
+      "cta": "Ver detalles del servicio",
+      "href": "/vetting",
+      "template": "vetting",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "No se conforme con la buena impresión de una entrevista. Validamos la integridad de su futuro talento humano con un análisis profundo de antecedentes and riesgos.",
+        "whyTitle": "El Valor para su Empresa",
+        "aboutDesc": "Cruzamos información en tiempo real en +190 bases de datos para detectar alertas legales, financieras o de reputación:",
+        "heroImage": "/vetting/hero.png",
+        "heroTitle": "Verificación Integral de",
+        "whyPoints": [
+          {
+            "text": "Evite infiltraciones, fraudes o personal no apto.",
+            "title": "Reducción de Riesgos"
+          },
+          {
+            "text": "Resultados técnicos, claros y listos para la toma de decisiones.",
+            "title": "Reportes Ágiles"
+          },
+          {
+            "text": "Estándares de Compliance para su departamento de RR.HH.",
+            "title": "Cumplimiento"
+          }
+        ],
+        "aboutCards": [
+          {
+            "text": "Función Judicial, Policía Nacional y SUPA.",
+            "title": "Historial Legal"
+          },
+          {
+            "text": "Registro Civil y Agencia Nacional de Tránsito.",
+            "title": "Perfil Ciudadano"
+          },
+          {
+            "text": "Listas de control internacional (OFAC, Interpol y Europol).",
+            "title": "Seguridad Global"
+          }
+        ],
+        "aboutTitle": "¿Qué analizamos?",
+        "heroTagline": "Transformamos la incertidumbre en decisiones seguras.",
+        "contactPhone": "0981296179",
+        "heroUnderlined": "Candidatosds",
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
+      },
+      "created_at": "2026-06-06T16:11:44.306955+00:00"
+    }
+  ],
+  "courses": [
+    {
+      "id": "entrevista-pretest",
+      "title": "Entrevista Pretest",
+      "desc": "Estructuración y conducción de la entrevista previa al examen. Técnicas de rapport, formulación de preguntas y detección de conductas evasivas.",
+      "image": "/cursos-avanzados/pretest.jpg",
+      "href": "/entrevista-pretest",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "¿Buscas perfeccionar tu técnica de entrevista pretest y dominar una de las fases más críticas del examen poligráfico? Esta formación especializada está diseñada para llevar tus habilidades al siguiente nivel.",
+        "aboutDesc": "Profundice en los estándares, principios y procesos metodológicos que sostienen una entrevista pretest clara, técnica y alineada al tipo de evaluación poligráfica.",
+        "heroImage": "/pruebas-poligrafo/primer.webp",
+        "heroTitle": "Curso Avanzado: Entrevista Pretest",
+        "aboutTitle": "Ejes Temáticos:",
+        "focusAreas": [
+          {
+            "title": "Fundamentos y estándares",
+            "description": "Domina los principios de las prácticas internacionales estandarizadas en entrevistas pretest y aprende los fundamentos metodológicos que garantizan la confiabilidad técnica de la evaluación."
+          },
+          {
+            "title": "Preparación y desarrollo del pretest",
+            "description": "Aprende cada fase de preparación previa al examen y domina el paso a paso del protocolo de entrevista pretest, asegurando consistencia y validez en tus evaluaciones poligráficas."
+          },
+          {
+            "title": "Evaluaciones diagnósticas y exploratorias",
+            "description": "Especialízate en el análisis de evaluaciones poligráficas diagnósticas y exploratorias, incluyendo el protocolo de preguntas específicas para casos de preempleo, rutina y temas investigativos."
+          }
+        ],
+        "heroTagline": "Especialización avanzada para poligrafistas certificados.",
+        "contactPhone": "099371290",
+        "fichaTecnica": [
+          {
+            "title": "⏱️ 15 horas de duración",
+            "description": "Formación intensiva y estructurada."
+          },
+          {
+            "title": "📚 32 lecciones",
+            "description": "Contenido completo y detallado."
+          },
+          {
+            "title": "📄 Plantillas descargables",
+            "description": "+75 diapositivas y documentos listos."
+          },
+          {
+            "title": "❓ Quizzes interactivos",
+            "description": "Preguntas para reforzar aprendizaje."
+          },
+          {
+            "title": "📺 Acceso 3 meses",
+            "description": "Contenido pregrabado disponible."
+          },
+          {
+            "title": "✅ 30 días de garantía",
+            "description": "Satisfacción garantizada."
+          },
+          {
+            "title": "🔐 Comunidad ONE TRUE",
+            "description": "Acceso exclusivo a la red."
+          },
+          {
+            "title": "🎓 Diploma oficial",
+            "description": "Certificado de finalización."
+          }
+        ],
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593099371290&text=Hola!%20Deseo%20conocer%20mas%20informacion%20sobre%20los%20Cursos%20Avanzados%20en%20Poligrafia."
+      },
+      "created_at": "2026-06-06T16:11:45.947071+00:00"
+    },
+    {
+      "id": "tecnicas-poligraficas",
+      "title": "Técnicas Poligráficas",
+      "desc": "Dominio de protocolos comparativos, de conocimiento y de screening bajo estándares APA. Aplicación en distintos contextos periciales y operativos.",
+      "image": "/cursos-avanzados/tecnicas-poligraficas.webp",
+      "href": "/tecnicas-poligraficas",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "Domine los protocolos comparativos, de conocimiento y de screening bajo estándares APA. Aplicación de técnicas especializadas en distintos contextos periciales y operativos.",
+        "aboutDesc": "Profundice en los estándares metodológicos de la APA y sus principales técnicas de evaluación:",
+        "heroImage": "/cursos-avanzados/tecnicas-poligraficas.webp",
+        "heroTitle": "Curso Avanzado: Técnicas Poligráficas",
+        "aboutTitle": "Ejes Temáticos:",
+        "focusAreas": [
+          {
+            "title": "Técnicas Comparativas (MCCA y MPT)",
+            "description": "Estudio detallado de los formatos de pruebas comparativas, formulación de preguntas y su aplicación operativa."
+          },
+          {
+            "title": "Técnicas de Screening / Tamizaje",
+            "description": "Protocolos recomendados por la APA para selección masiva de personal en seguridad e integridad."
+          },
+          {
+            "title": "Técnicas de Conocimiento (CIT/POT)",
+            "description": "Análisis de pruebas de información oculta o claves del incidente para esclarecimiento judicial."
+          }
+        ],
+        "heroTagline": "Especialización avanzada para poligrafistas certificados.",
+        "contactPhone": "099371290",
+        "fichaTecnica": [
+          {
+            "title": "⏱️ 20 horas de duración",
+            "description": "Formación exhaustiva bajo estándares APA."
+          },
+          {
+            "title": "📚 40 lecciones",
+            "description": "Contenido actualizado a la fecha."
+          },
+          {
+            "title": "📄 Formatos de test",
+            "description": "Acceso a plantillas y modelos de examen."
+          }
+        ],
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593099371290&text=Hola!%20Deseo%20conocer%20mas%20informacion%20sobre%20los%20Cursos%20Avanzados%20en%20Poligrafia."
+      },
+      "created_at": "2026-06-06T16:11:46.183854+00:00"
+    },
+    {
+      "id": "calificacion-graficas-analisis-datos",
+      "title": "Calificación de Gráficas - Análisis de Datos",
+      "desc": "Interpretación numérica y visual de trazados poligráficos. Análisis estadístico de componentes fisiológicos y criterios de evaluación objetiva.",
+      "image": "/cursos-avanzados/calificacion-de-graficas.webp",
+      "href": "/calificacion-graficas-analisis-datos",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "Interpretación numérica y visual de trazados poligráficos. Análisis de componentes fisiológicos y criterios de evaluación objetiva para decisiones periciales de alta precisión.",
+        "aboutDesc": "Profundice en el análisis estadístico de trazados neumográficos, electrodérmicos y cardiovasculares:",
+        "heroImage": "/cursos-avanzados/calificacion-de-graficas.webp",
+        "heroTitle": "Curso Avanzado: Calificación de Gráficas",
+        "aboutTitle": "Ejes Temáticos:",
+        "focusAreas": [
+          {
+            "title": "Análisis de Componentes Fisiológicos",
+            "description": "Criterios para identificar reacciones fisiológicas válidas en neumograma, conductancia y cardiograma."
+          },
+          {
+            "title": "Sistemas de Puntuación Numérica",
+            "description": "Metodología estándar de 3 y 7 posiciones para la evaluación visual sistemática de gráficas."
+          },
+          {
+            "title": "Toma de Decisión Pericial",
+            "description": "Umbrales estadísticos y reducción de la tasa de resultados inconclusos en las evaluaciones."
+          }
+        ],
+        "heroTagline": "Especialización avanzada para poligrafistas certificados.",
+        "contactPhone": "099371290",
+        "fichaTecnica": [
+          {
+            "title": "⏱️ 18 horas de duración",
+            "description": "Módulo de alta exigencia analítica."
+          },
+          {
+            "title": "📚 35 lecciones",
+            "description": "Casos prácticos de estudio."
+          },
+          {
+            "title": "🎓 Diploma oficial",
+            "description": "Acreditado por One True Academia."
+          }
+        ],
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593099371290&text=Hola!%20Deseo%20conocer%20mas%20informacion%20sobre%20los%20Cursos%20Avanzados%20en%20Poligrafia."
+      },
+      "created_at": "2026-06-06T16:11:46.412988+00:00"
+    },
+    {
+      "id": "sistema-calificacion-ess-m",
+      "title": "Sistema de Calificación ESS-M",
+      "desc": "Formación especializada en el sistema empírico de puntuación ESS-M para lograr una calificación consistente, reproducible y científicamente validada.",
+      "image": "/cursos-avanzados/ess-m.webp",
+      "href": "/sistema-calificacion-ess-m",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "Formación especializada en el sistema empírico de puntuación ESS-M para lograr una calificación consistente, reproducible y científicamente validada bajo los últimos consensos.",
+        "aboutDesc": "Aprenda el uso del método ESS-M (Empirical Scoring System - Multinomial) para análisis de datos:",
+        "heroImage": "/cursos-avanzados/ess-m.webp",
+        "heroTitle": "Curso Avanzado: Sistema ESS-M",
+        "aboutTitle": "Ejes Temáticos:",
+        "focusAreas": [
+          {
+            "title": "Criterios del ESS-M",
+            "description": "Reglas objetivas para calificar las reacciones en las diferentes zonas de test poligráfico."
+          },
+          {
+            "title": "Estandarización de Gráficas",
+            "description": "Cómo asegurar que múltiples evaluadores alcancen el mismo resultado en base a criterios multinomiales."
+          },
+          {
+            "title": "Software y Algoritmos",
+            "description": "Integración del ESS-M con plataformas digitales para validación automatizada de resultados."
+          }
+        ],
+        "heroTagline": "Especialización avanzada para poligrafistas certificados.",
+        "contactPhone": "099371290",
+        "fichaTecnica": [
+          {
+            "title": "⏱️ 12 horas de duración",
+            "description": "Módulo especializado en ESS-M."
+          },
+          {
+            "title": "📚 24 lecciones",
+            "description": "Enfoque práctico y herramientas."
+          }
+        ],
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593099371290&text=Hola!%20Deseo%20conocer%20mas%20informacion%20sobre%20los%20Cursos%20Avanzados%20en%20Poligrafia."
+      },
+      "created_at": "2026-06-06T16:11:46.752127+00:00"
+    },
+    {
+      "id": "control-de-calidad-en-poligrafia",
+      "title": "Control de Calidad en Poligrafía",
+      "desc": "Protocolos de auditoría, revisión por pares y mejora continua en la práctica profesional. Garantía de rigor técnico y cumplimiento normativo.",
+      "image": "/cursos-avanzados/control-de-calidad-poligrafia.webp",
+      "href": "/control-de-calidad-en-poligrafia",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "Protocolos de auditoría, revisión por pares y mejora continua en la práctica poligráfica profesional. Garantía de rigor técnico y cumplimiento normativo internacional.",
+        "aboutDesc": "Desarrolle habilidades de auditoría técnica y aseguramiento de la calidad en evaluaciones de credibilidad:",
+        "heroImage": "/cursos-avanzados/control-de-calidad-poligrafia.webp",
+        "heroTitle": "Curso Avanzado: Control de Calidad",
+        "aboutTitle": "Ejes Temáticos:",
+        "focusAreas": [
+          {
+            "title": "Auditoría de Protocolos y Preguntas",
+            "description": "Revisión sistemática de la estructura del test, concordancia de preguntas y justificación metodológica."
+          },
+          {
+            "title": "Proceso de Revisión por Pares (Peer Review)",
+            "description": "Establecimiento de comités y flujos de trabajo internos para doble validación de informes poligráficos."
+          },
+          {
+            "title": "Mejora Continua y Ética",
+            "description": "Alineación ética y reducción de malas prácticas o errores de procedimiento en terreno."
+          }
+        ],
+        "heroTagline": "Especialización avanzada para poligrafistas certificados.",
+        "contactPhone": "099371290",
+        "fichaTecnica": [
+          {
+            "title": "⏱️ 15 horas de duración",
+            "description": "Formación para directores y auditores técnicos."
+          },
+          {
+            "title": "📚 30 lecciones",
+            "description": "Plantillas de auditoría y rúbricas."
+          }
+        ],
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593099371290&text=Hola!%20Deseo%20conocer%20mas%20informacion%20sobre%20los%20Cursos%20Avanzados%20en%20Poligrafia."
+      },
+      "created_at": "2026-06-06T16:11:46.990366+00:00"
+    }
+  ],
+  "blogs": [
+    {
+      "id": "verdad-o-mentira",
+      "title": "¿Verdad o Mentira? Todo lo que debes saber antes de contratar una prueba de Polígrafo.",
+      "image": "/blog/1.webp",
+      "link": "/blog/verdad-o-mentira",
+      "published": true,
+      "publishDate": "15 de Noviembre, 2024",
+      "readTime": "5 min de lectura",
+      "content": "Tomar la decisión de evaluar la confianza de tu personal o investigar un incidente delicado no es fácil. En este artículo, responderemos de manera sencilla las preguntas más frecuentes sobre la poligrafía profesional, separando la verdad de los mitos comunes para ayudarte a tomar decisiones seguras.",
+      "created_at": "2026-06-06T16:11:47.217222+00:00"
+    },
+    {
+      "id": "preempleo-rutina-investigacion",
+      "title": "¿Preempleo, Rutina o Investigación? Descubre qué prueba de polígrafo necesitas realmente.",
+      "image": "/blog/2.webp",
+      "link": "/blog/preempleo-rutina-investigacion",
+      "published": true,
+      "publishDate": "20 de Noviembre, 2024",
+      "readTime": "6 min de lectura",
+      "content": "Elegir la prueba de polígrafo correcta es esencial para obtener las respuestas que buscas. Descubre las diferencias entre las evaluaciones de preempleo, rutina periódica e investigación específica de incidentes en esta guía detallada.",
+      "created_at": "2026-06-06T16:11:47.451442+00:00"
+    },
+    {
+      "id": "garantiza-la-verdad",
+      "title": "Garantiza la Verdad: 10 Requisitos Clave para una Prueba de Polígrafo Confiable y Exitosa.",
+      "image": "/blog/3.webp",
+      "link": "/blog/garantiza-la-verdad",
+      "published": true,
+      "publishDate": "25 de Noviembre, 2024",
+      "readTime": "7 min de lectura",
+      "content": "Para obtener resultados con un 95% de exactitud, la prueba de polígrafo debe realizarse bajo condiciones específicas de control, ética y metodología. Te presentamos las 10 claves fundamentales para un proceso poligráfico exitoso.",
+      "created_at": "2026-06-06T16:11:47.682185+00:00"
+    }
+  ],
+  "podcasts": [
+    {
+      "id": "1",
+      "title": "Cómo Funciona tu Negocio: Fundamentos de la Confianza Corporativa",
+      "description": "En este episodio exploramos cómo los procesos de verificación y evaluación de confianza son fundamentales para el crecimiento sostenible de tu empresa. Descubre cómo proteger tu negocio desde adentro.",
+      "image": "/podcast/episode-1.jpg",
+      "audioUrl": "#",
+      "duration": "32 min",
+      "date": "15 de Junio, 2024",
+      "topic": "Negocios",
+      "published": true,
+      "created_at": "2026-06-06T16:11:47.909986+00:00"
+    },
+    {
+      "id": "2",
+      "title": "Seguridad en la Selección de Personal: Evita Riesgos",
+      "description": "¿Sabes quién realmente es tu equipo? En este episodio analizamos cómo las pruebas de vetting previo a la contratación pueden ahorrarte problemas y pérdidas significativas.",
+      "image": "/podcast/episode-2.jpg",
+      "audioUrl": "#",
+      "duration": "28 min",
+      "date": "8 de Junio, 2024",
+      "topic": "RRHH",
+      "published": true,
+      "created_at": "2026-06-06T16:11:48.145634+00:00"
+    },
+    {
+      "id": "3",
+      "title": "Cumplimiento Normativo y Transparencia: El Camino Seguro",
+      "description": "La regulación y el cumplimiento normativo son pilares de la confianza. Conoce las mejores prácticas para mantener tu empresa en línea con los estándares internacionales.",
+      "image": "/podcast/episode-3.jpg",
+      "audioUrl": "#",
+      "duration": "35 min",
+      "date": "1 de Junio, 2024",
+      "topic": "Legal",
+      "published": true,
+      "created_at": "2026-06-06T16:11:48.38234+00:00"
+    },
+    {
+      "id": "4",
+      "title": "Estudios de Confiabilidad 360°: Visión Integral del Equipo",
+      "description": "Más allá de un simple polígrafo. Descubre cómo los estudios integrales de confiabilidad ofrecen una perspectiva completa de tu personal y cultura organizacional.",
+      "image": "/podcast/episode-4.jpg",
+      "audioUrl": "#",
+      "duration": "31 min",
+      "date": "25 de Mayo, 2024",
+      "topic": "Evaluación",
+      "published": true,
+      "created_at": "2026-06-06T16:11:48.610801+00:00"
+    },
+    {
+      "id": "5",
+      "title": "Honestidad y Ética: La Base de Relaciones Duraderas",
+      "description": "¿Por qué es importante medir la honestidad en el ámbito empresarial? Te compartimos historias reales y lecciones aprendidas de empresas que priorizan la ética.",
+      "image": "/podcast/episode-5.jpg",
+      "audioUrl": "#",
+      "duration": "29 min",
+      "date": "18 de Mayo, 2024",
+      "topic": "Valores",
+      "published": true,
+      "created_at": "2026-06-06T16:11:48.839618+00:00"
+    },
+    {
+      "id": "6",
+      "title": "Transformación Digital: Confianza en la Era Tecnológica",
+      "description": "Los riesgos cibernéticos requieren nuevas estrategias de confianza. Exploram cómo adaptar tus procesos de evaluación al mundo digital.",
+      "image": "/podcast/episode-6.jpg",
+      "audioUrl": "#",
+      "duration": "33 min",
+      "date": "11 de Mayo, 2024",
+      "topic": "Tecnología",
+      "published": true,
+      "created_at": "2026-06-06T16:11:49.069331+00:00"
+    }
+  ]
+}

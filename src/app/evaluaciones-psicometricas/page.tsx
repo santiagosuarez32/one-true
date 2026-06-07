@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -10,6 +10,19 @@ import { FaLinkedin, FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 export default function EvaluacionesPsicometricasPage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [country, setCountry] = useState("ec");
+  const [dbData, setDbData] = useState<any>(null);
+
+  useEffect(() => {
+    fetch("/api/cms")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.services) {
+          const item = data.services.find((s: any) => s.id === "evaluaciones-psicometricas");
+          if (item) setDbData(item);
+        }
+      })
+      .catch((err) => console.error("Error loading CMS data:", err));
+  }, []);
 
 
 
@@ -29,7 +42,7 @@ export default function EvaluacionesPsicometricasPage() {
         />
 
         <img
-          src="/psicometricas/hero.png"
+          src={dbData?.pageContent?.heroImage || "/psicometricas/hero.png"}
           alt="One True Evaluaciones Psicométricas Laborales"
           fetchPriority="high"
           className="absolute inset-0 w-full h-full object-cover object-right-top z-0 opacity-40 mix-blend-overlay pointer-events-none"
@@ -52,7 +65,7 @@ export default function EvaluacionesPsicometricasPage() {
                   fontFamily: "var(--font-montserrat), sans-serif",
                 }}
               >
-                Ciencia de datos aplicada a la selección de personal.
+                 {dbData?.pageContent?.heroTagline || "Ciencia de datos aplicada a la selección de personal."}
               </span>
             </div>
 
@@ -67,7 +80,7 @@ export default function EvaluacionesPsicometricasPage() {
                 textShadow: "0 2px 4px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.18)"
               }}
             >
-              Evaluaciones <strong style={{ fontWeight: "800", textDecoration: "underline", textDecorationColor: "#FFC107", textUnderlineOffset: "6px" }}>Psicométricas</strong>
+              {dbData?.pageContent?.heroTitle || "Evaluaciones"} <strong style={{ fontWeight: "800", textDecoration: "underline", textDecorationColor: "#FFC107", textUnderlineOffset: "6px" }}>{dbData?.pageContent?.heroUnderlined || "Psicométricas"}</strong>
             </h1>
 
             <p
@@ -78,7 +91,7 @@ export default function EvaluacionesPsicometricasPage() {
                 color: "#FFFFFF"
               }}
             >
-              No deje la cultura de su empresa al azar. Nuestras más de 150 evaluaciones psicométricas online permiten predecir el desempeño y la conducta ética de un candidato, garantizando que su perfil psicológico esté alineado con los valores y exigencias de su organización.
+              {dbData?.pageContent?.heroDesc || "No deje la cultura de su empresa al azar. Nuestras más de 150 evaluaciones psicométricas online permiten predecir el desempeño y la conducta ética de un candidato, garantizando que su perfil psicológico esté alineado con los valores y exigencias de su organización."}
             </p>
 
             {/* Hero CTA Button */}
@@ -141,20 +154,20 @@ export default function EvaluacionesPsicometricasPage() {
                 marginTop: "10px"
               }}
             >
-              ¿Qué medimos con precisión?
+              {dbData?.pageContent?.aboutTitle || "¿Qué medimos con precisión?"}
             </h2>
 
             <p 
               className="text-[#525252] text-base mt-4 max-w-3xl font-light animate-fade-in"
               style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
             >
-              A través de herramientas digitales de alta confiabilidad, evaluamos dimensiones clave:
+              {dbData?.pageContent?.aboutDesc || "A través de herramientas digitales de alta confiabilidad, evaluamos dimensiones clave:"}
             </p>
           </div>
 
           {/* Cards Grid - Laid out as 3 on top row and 2 centered on bottom row */}
           <div className="flex flex-wrap justify-center gap-8">
-            {[
+            {(dbData?.pageContent?.aboutCards?.length > 0 ? dbData.pageContent.aboutCards : [
               {
                 title: "Comportamiento Ético y Honestidad",
                 text: "Identificamos tendencias hacia la integridad, el respeto a las normas y la prevención de conductas contraproducentes."
@@ -175,7 +188,7 @@ export default function EvaluacionesPsicometricasPage() {
                 title: "Evaluaciones a medida",
                 text: "Podemos aplicar evaluaciones psicométricas a tu medida y según la necesidad y perfil del candidato, puedes elegir entre nuestro portafolio de más de 150 evaluaciones."
               }
-            ].map((item, idx) => (
+            ]).map((item: any, idx: number) => (
               <div 
                 key={idx} 
                 className="flex flex-col bg-white border border-neutral-200/80 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-neutral-300 transition-all duration-300 relative pl-4 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] min-h-[170px]"
@@ -269,15 +282,15 @@ export default function EvaluacionesPsicometricasPage() {
                 fontFamily: "var(--font-montserrat), sans-serif",
               }}
             >
-              Beneficios para su Organización
+              {dbData?.pageContent?.whyTitle || "Beneficios para su Organización"}
             </h2>
 
             <ul className="flex flex-col gap-3 w-full mb-6">
-              {[
+              {(dbData?.pageContent?.whyPoints?.length > 0 ? dbData.pageContent.whyPoints : [
                 { title: "Resultados Inmediatos", text: "Pruebas 100% online que agilizan sus procesos de selección sin perder profundidad técnica." },
                 { title: "Reducción de la Rotación", text: "Asegure contrataciones que encajen con la cultura de su equipo a largo plazo." },
                 { title: "Objetividad Total", text: "Elimine los sesgos en las entrevistas con datos científicos y reportes comparativos." }
-              ].map((item, idx) => (
+              ]).map((item: any, idx: number) => (
                 <li key={idx} className="flex items-start gap-3 py-1">
                   <div className="w-6 h-6 rounded flex items-center justify-center bg-[#700FA3] text-white shrink-0 mt-0.5 shadow-md">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -374,7 +387,7 @@ export default function EvaluacionesPsicometricasPage() {
                       Teléfono
                     </h3>
                     <a 
-                      href="tel:0981296179" 
+                      href={`tel:${dbData?.pageContent?.contactPhone || "0981296179"}`}
                       style={{ 
                         color: "rgba(255, 255, 255, 0.85)", 
                         fontSize: "16px", 
@@ -383,7 +396,7 @@ export default function EvaluacionesPsicometricasPage() {
                       }}
                       className="hover:text-[#FFC107] transition-colors"
                     >
-                      098 129 6179
+                      {dbData?.pageContent?.contactPhone || "098 129 6179"}
                     </a>
                   </div>
                 </div>
@@ -724,7 +737,7 @@ export default function EvaluacionesPsicometricasPage() {
                         <div className="elementor-button-wrapper flex justify-center w-auto mt-1">
                           <a 
                             className="elementor-button elementor-button-link elementor-size-sm flex items-center justify-center gap-2 px-6 py-2.5 bg-[#00C233] hover:bg-[#00a82c] text-white font-bold transition-all duration-300 rounded shadow-sm hover:shadow hover:scale-[1.02]"
-                            href="https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
+                            href={dbData?.pageContent?.contactWhatsapp || "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"}
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{ 

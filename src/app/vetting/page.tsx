@@ -139,6 +139,19 @@ const OTRAS_SOLUCIONES = [
 
 export default function VettingPage() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [dbData, setDbData] = useState<any>(null);
+
+  useEffect(() => {
+    fetch("/api/cms")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.services) {
+          const item = data.services.find((s: any) => s.id === "vetting");
+          if (item) setDbData(item);
+        }
+      })
+      .catch((err) => console.error("Error loading dynamic vetting data:", err));
+  }, []);
 
   useGSAP(
     () => {
@@ -222,7 +235,7 @@ export default function VettingPage() {
         />
 
         <img
-          src="/vetting/hero.png"
+          src={dbData?.pageContent?.heroImage || "/vetting/hero.png"}
           alt="One True Vetting y Verificación de Antecedentes"
           fetchPriority="high"
           className="absolute inset-0 w-full h-full object-cover object-right-top z-0 opacity-40 mix-blend-overlay pointer-events-none"
@@ -244,7 +257,7 @@ export default function VettingPage() {
                   fontFamily: "var(--font-montserrat), sans-serif",
                 }}
               >
-                Transformamos la incertidumbre en decisiones seguras.
+                {dbData?.pageContent?.heroTagline || "Transformamos la incertidumbre en decisiones seguras."}
               </span>
             </div>
 
@@ -260,7 +273,7 @@ export default function VettingPage() {
                 textShadow: "0 2px 4px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.18)"
               }}
             >
-              Verificación Integral de <strong style={{ fontWeight: "800", textDecoration: "underline", textDecorationColor: "#FFC107", textUnderlineOffset: "6px" }}>Candidatos</strong>
+              {dbData?.pageContent?.heroTitle || "Verificación Integral de"} <strong style={{ fontWeight: "800", textDecoration: "underline", textDecorationColor: "#FFC107", textUnderlineOffset: "6px" }}>{dbData?.pageContent?.heroUnderlined || "Candidatos"}</strong>
             </h1>
 
             <p
@@ -272,7 +285,7 @@ export default function VettingPage() {
                 color: "#FFFFFF"
               }}
             >
-              No se conforme con la buena impresión de una entrevista. Validamos la integridad de su futuro talento humano con un análisis profundo de antecedentes and riesgos.
+              {dbData?.pageContent?.heroDesc || "No se conforme con la buena impresión de una entrevista. Validamos la integridad de su futuro talento humano con un análisis profundo de antecedentes and riesgos."}
             </p>
 
             {/* Hero CTA Button */}
@@ -335,20 +348,20 @@ export default function VettingPage() {
                 marginTop: "10px"
               }}
             >
-              ¿Qué analizamos?
+              {dbData?.pageContent?.aboutTitle || "¿Qué analizamos?"}
             </h2>
 
             <p 
               className="text-[#525252] text-base mt-4 max-w-2xl font-light"
               style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
             >
-              Cruzamos información en tiempo real en <strong className="font-bold underline decoration-[#FFC107] underline-offset-2">+190 bases de datos</strong> para detectar alertas legales, financieras o de reputación:
+              {dbData?.pageContent?.aboutDesc || <>Cruzamos información en tiempo real en <strong className="font-bold underline decoration-[#FFC107] underline-offset-2">+190 bases de datos</strong> para detectar alertas legales, financieras o de reputación:</>}
             </p>
           </div>
 
           {/* Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
+            {(dbData?.pageContent?.aboutCards || [
               {
                 title: "Historial Legal",
                 text: "Función Judicial, Policía Nacional y SUPA."
@@ -361,7 +374,7 @@ export default function VettingPage() {
                 title: "Seguridad Global",
                 text: "Listas de control internacional (OFAC, Interpol y Europol)."
               }
-            ].map((item, idx) => (
+            ]).map((item: any, idx: number) => (
               <div 
                 key={idx} 
                 className="flex flex-col bg-white border border-neutral-200/80 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-neutral-300 transition-all duration-300 relative pl-4"
@@ -453,15 +466,15 @@ export default function VettingPage() {
                 fontFamily: "var(--font-montserrat), sans-serif",
               }}
             >
-              El Valor para su Empresa
+              {dbData?.pageContent?.whyTitle || "El Valor para su Empresa"}
             </h2>
 
             <ul className="flex flex-col gap-3 w-full mb-6">
-              {[
+              {(dbData?.pageContent?.whyPoints || [
                 { title: "Reducción de Riesgos", text: "Evite infiltraciones, fraudes o personal no apto." },
                 { title: "Reportes Ágiles", text: "Resultados técnicos, claros y listos para la toma de decisiones." },
                 { title: "Cumplimiento", text: "Estándares de Compliance para su departamento de RR.HH." }
-              ].map((item, idx) => (
+              ]).map((item: any, idx: number) => (
                 <li key={idx} className="flex items-start gap-3 py-1">
                   <div className="w-6 h-6 rounded flex items-center justify-center bg-[#700FA3] text-white shrink-0 mt-0.5 shadow-md">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -558,7 +571,7 @@ export default function VettingPage() {
                       Teléfono
                     </h3>
                     <a 
-                      href="tel:0981296179" 
+                      href={`tel:${dbData?.pageContent?.contactPhone || "0981296179"}`} 
                       style={{ 
                         color: "rgba(255, 255, 255, 0.85)", 
                         fontSize: "16px", 
@@ -567,7 +580,7 @@ export default function VettingPage() {
                       }}
                       className="hover:text-[#FFC107] transition-colors"
                     >
-                      098 129 6179
+                      {dbData?.pageContent?.contactPhone || "098 129 6179"}
                     </a>
                   </div>
                 </div>
@@ -911,7 +924,7 @@ export default function VettingPage() {
                         <div className="elementor-button-wrapper flex justify-center w-auto mt-1">
                           <a 
                             className="elementor-button elementor-button-link elementor-size-sm flex items-center justify-center gap-2 px-6 py-2.5 bg-[#00C233] hover:bg-[#00a82c] text-white font-bold transition-all duration-300 rounded shadow-sm hover:shadow hover:scale-[1.02]"
-                            href="https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
+                            href={dbData?.pageContent?.contactWhatsapp || "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"}
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{ 
@@ -933,7 +946,7 @@ export default function VettingPage() {
                                   <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L3 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path>
                                 </svg>
                               </span>
-                              <span className="elementor-button-text font-bold" style={{ color: "#ffffff", fontWeight: "bold" }}>+593 98 129 6179</span>
+                              <span className="elementor-button-text font-bold" style={{ color: "#ffffff", fontWeight: "bold" }}>{dbData?.pageContent?.contactPhone === "0981296179" ? "+593 98 129 6179" : (dbData?.pageContent?.contactPhone || "+593 98 129 6179")}</span>
                             </span>
                           </a>
                         </div>

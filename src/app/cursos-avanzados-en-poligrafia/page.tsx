@@ -43,6 +43,23 @@ const MODULOS_AVANZADOS = [
 export default function CursosAvanzadosPoligrafiaPage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [country, setCountry] = useState("ec");
+  const [courses, setCourses] = React.useState<any[]>([]);
+
+  React.useEffect(() => {
+    fetch("/api/cms")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.courses && data.courses.length > 0) {
+          const published = data.courses.filter((c: any) => c.published);
+          if (published.length > 0) {
+            setCourses(published);
+          }
+        }
+      })
+      .catch((err) => console.error("Error loading courses:", err));
+  }, []);
+
+  const displayCourses = courses.length > 0 ? courses : MODULOS_AVANZADOS;
 
   return (
     <main className="min-h-screen bg-white text-[#525252] selection:bg-[#FFC107] selection:text-[#411A56]">
@@ -206,7 +223,7 @@ export default function CursosAvanzadosPoligrafiaPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-0 gap-y-6 auto-rows-max justify-items-center">
-            {MODULOS_AVANZADOS.map((modulo, idx) => {
+            {displayCourses.map((modulo, idx) => {
               let gridClass = "";
               if (idx === 3 || idx === 4) {
                 gridClass = "lg:col-span-1";

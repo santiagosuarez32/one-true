@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -8,6 +8,21 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { FaLinkedin, FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
 export default function PruebaDeHonestidadEticaYValoresPage() {
+  const [dbData, setDbData] = useState<any>(null);
+
+  useEffect(() => {
+    fetch("/api/cms")
+      .then((res) => res.json())
+      .then((data) => {
+        const tableKey = data.services ? 'services' : 'courses';
+        if (data[tableKey]) {
+          const item = data[tableKey].find((s: any) => s.id === "prueba-de-honestidad-etica-y-valores");
+          if (item) setDbData(item);
+        }
+      })
+      .catch((err) => console.error("Error loading CMS data:", err));
+  }, []);
+
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [country, setCountry] = useState("ec");
 

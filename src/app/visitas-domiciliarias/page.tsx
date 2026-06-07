@@ -83,6 +83,21 @@ function AnimatedCounter({ end, suffix = "", duration = 2000, fontSize = "42px" 
 }
 
 export default function VisitasDomiciliariasPage() {
+  const [dbData, setDbData] = useState<any>(null);
+
+  useEffect(() => {
+    fetch("/api/cms")
+      .then((res) => res.json())
+      .then((data) => {
+        const tableKey = data.services ? 'services' : 'courses';
+        if (data[tableKey]) {
+          const item = data[tableKey].find((s: any) => s.id === "visitas-domiciliarias");
+          if (item) setDbData(item);
+        }
+      })
+      .catch((err) => console.error("Error loading CMS data:", err));
+  }, []);
+
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [country, setCountry] = useState("ec");
 
@@ -144,7 +159,7 @@ export default function VisitasDomiciliariasPage() {
         />
 
         <img 
-          src="/domicilio/hero.webp"
+          src={dbData?.pageContent?.heroImage || "/domicilio/hero.webp"}
           alt="One True Visitas Domiciliarias y Estudios Socioeconómicos"
           fetchPriority="high"
           className="absolute inset-0 w-full h-full object-cover object-right-top z-0 opacity-40 mix-blend-overlay pointer-events-none"
@@ -167,7 +182,7 @@ export default function VisitasDomiciliariasPage() {
                   fontFamily: "var(--font-montserrat), sans-serif",
                 }}
               >
-                Verificación de campo para una visión 360° de su futuro colaborador
+                {dbData?.pageContent?.heroTagline || "Verificación de campo para una visión 360° de su futuro colaborador"}
               </span>
             </div>
 
@@ -182,7 +197,7 @@ export default function VisitasDomiciliariasPage() {
                 textShadow: "0 2px 4px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.18)"
               }}
             >
-              Visitas <strong style={{ fontWeight: "800", textDecoration: "underline", textDecorationColor: "#FFC107", textUnderlineOffset: "6px" }}>Domiciliarias</strong>
+              {dbData?.pageContent?.heroTitle || "Visitas"} <strong style={{ fontWeight: "800", textDecoration: "underline", textDecorationColor: "#FFC107", textUnderlineOffset: "6px" }}>{dbData?.pageContent?.heroUnderlined || "Domiciliarias"}</strong>
             </h1>
 
             <p
@@ -193,7 +208,7 @@ export default function VisitasDomiciliariasPage() {
                 color: "#FFFFFF"
               }}
             >
-              La seguridad de su empresa no termina en la oficina. Nuestro servicio de visita domiciliaria permite conocer el entorno real del candidato, identificando factores de riesgo, niveles de vulnerabilidad y la veracidad de su situación socioeconómica.
+              {dbData?.pageContent?.heroDesc || "La seguridad de su empresa no termina en la oficina. Nuestro servicio de visita domiciliaria permite conocer el entorno real del candidato, identificando factores de riesgo, niveles de vulnerabilidad y la veracidad de su situación socioeconómica."}
             </p>
 
             {/* Hero CTA Button */}

@@ -111,7 +111,7 @@ export default function PodcastPage() {
     return () => ctx.revert();
   }, []);
 
-  const episodes: PodcastEpisode[] = [
+  const staticEpisodes: PodcastEpisode[] = [
     {
       id: "1",
       title: "Cómo Funciona tu Negocio: Fundamentos de la Confianza Corporativa",
@@ -173,6 +173,28 @@ export default function PodcastPage() {
       topic: "Tecnología",
     },
   ];
+
+  const [episodes, setEpisodes] = React.useState<PodcastEpisode[]>([]);
+
+  useEffect(() => {
+    fetch("/api/cms")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.podcasts && data.podcasts.length > 0) {
+          const published = data.podcasts.filter((p: any) => p.published);
+          if (published.length > 0) {
+            setEpisodes(published);
+          } else {
+            setEpisodes(staticEpisodes);
+          }
+        } else {
+          setEpisodes(staticEpisodes);
+        }
+      })
+      .catch(() => setEpisodes(staticEpisodes));
+  }, []);
+
+  const displayEpisodes = episodes.length > 0 ? episodes : staticEpisodes;
 
   return (
     <main className="min-h-screen bg-white text-[#525252] selection:bg-[#FFC107] selection:text-[#411A56]">
@@ -259,7 +281,7 @@ export default function PodcastPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {episodes.slice(0, 1).map((episode, idx) => (
+            {displayEpisodes.map((episode, idx) => (
               <PodcastCard
                 key={episode.id}
                 episode={episode}
