@@ -1,112 +1,6 @@
 {
   "services": [
     {
-      "id": "pruebas-poligraficas",
-      "title": "Pruebas de Polígrafo Profesionales",
-      "desc": "Certeza técnica con un 95% de exactitud. Revelamos la verdad en procesos críticos de seguridad y confianza.",
-      "image": "/servicios/1.webp",
-      "cta": "Ver detalles del servicio",
-      "href": "/pruebas-poligraficas",
-      "template": "poligrafo",
-      "published": true,
-      "pageContent": {
-        "heroDesc": "Aseguramos su toma de decisiones mediante pruebas de polígrafo con un 95% de exactitud. Validamos la integridad en procesos de selección, monitoreo preventivo de su personal y esclarecimiento de incidentes internos bajo estándares internacionales.",
-        "whyTitle": "¿Por qué contratarnos?",
-        "aboutDesc": "Ofrecemos procesos técnicos estandarizados para brindar certidumbre en las decisiones críticas de su negocio:",
-        "heroImage": "/pruebas-poligrafo/hero.webp",
-        "heroTitle": "Pruebas de",
-        "whyPoints": [
-          {
-            "text": "Te ayudamos a eliminar riesgos críticos en tus nuevas contrataciones.",
-            "title": "Reducción de Riesgos"
-          },
-          {
-            "text": "Identificamos responsables de fraudes con certeza técnica de nivel forense.",
-            "title": "Certeza Técnica"
-          },
-          {
-            "text": "Entrega de resultados preliminares en 4 horas y reportes técnicos en 24 horas.",
-            "title": "Rapidez"
-          },
-          {
-            "text": "Detectamos la deshonestidad interna y prevenimos pérdidas de activos.",
-            "title": "Disuasión"
-          }
-        ],
-        "aboutCards": [
-          {
-            "text": "Utilizada en procesos investigativos. Esclarezca incidentes internos, pérdidas, robos, asaltos, fuga de información con absoluta objetividad.",
-            "title": "Polígrafo Específico"
-          },
-          {
-            "text": "Identifica conductas contraproducentes y vulnerabilidades en los candidatos antes de su contratación, permitiéndole mitigar riesgos.",
-            "title": "Polígrafo Pre-empleo"
-          },
-          {
-            "text": "Monitoreo preventivo para personal que labora en la empresa. Fortalece la lealtad y disuade conductas irregulares internas.",
-            "title": "Polígrafo de Rutina"
-          }
-        ],
-        "aboutTitle": "¿Qué resolvemos para su organización?",
-        "heroTagline": "Nuestras soluciones",
-        "contactPhone": "0981296179",
-        "heroUnderlined": "Polígrafo",
-        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
-      },
-      "created_at": "2026-06-06T16:11:44.014975+00:00"
-    },
-    {
-      "id": "estudio-de-confiabilidad-360",
-      "title": "Estudio de Confiabilidad 360°",
-      "desc": "Confirmamos la honestidad y estabilidad de sus candidatos. Validamos trayectorias (laborales y académicas) y realizamos un análisis profundo de salud financiera y endeudamiento.",
-      "image": "/servicios/3.webp",
-      "cta": "Ver detalles del servicio",
-      "href": "/estudio-de-confiabilidad-360",
-      "template": "vetting",
-      "published": true,
-      "pageContent": {
-        "heroDesc": "Confirmamos la honestidad y estabilidad de sus candidatos. Validamos trayectorias (laborales y académicas) y realizamos un análisis profundo de salud financiera y endeudamiento en +190 bases de datos.",
-        "whyTitle": "El Valor para su Empresa",
-        "aboutDesc": "Llevamos a cabo un cruce completo de información comercial, legal e historial laboral:",
-        "heroImage": "/servicios/3.webp",
-        "heroTitle": "Estudio de Confiabilidad",
-        "whyPoints": [
-          {
-            "text": "Asegura la honestidad e idoneidad de los candidatos seleccionados.",
-            "title": "Personal de Confianza"
-          },
-          {
-            "text": "Evita la contratación de personas con perfiles financieros de alto riesgo.",
-            "title": "Prevención de Fraudes"
-          },
-          {
-            "text": "Brinda reportes estructurados con recomendaciones técnicas claras.",
-            "title": "Decisiones Seguras"
-          }
-        ],
-        "aboutCards": [
-          {
-            "text": "Confirmamos referencias, periodos trabajados y motivos de salida.",
-            "title": "Validación Laboral"
-          },
-          {
-            "text": "Verificamos títulos registrados y autenticidad de diplomas.",
-            "title": "Validación Académica"
-          },
-          {
-            "text": "Analizamos deudas, juicios de coactiva y capacidad crediticia.",
-            "title": "Historial Financiero"
-          }
-        ],
-        "aboutTitle": "¿Qué analizamos?",
-        "heroTagline": "Asegure un equipo confiable y libre de riesgos corporativos.",
-        "contactPhone": "0981296179",
-        "heroUnderlined": "360°",
-        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
-      },
-      "created_at": "2026-06-06T16:11:44.532465+00:00"
-    },
-    {
       "id": "visitas-domiciliarias",
       "title": "Visitas Domiciliarias",
       "desc": "Evaluamos el entorno socioeconómico y familiar de sus candidatos en el terreno. Prevenimos riesgos de vulnerabilidad y confirmamos la coherencia entre el estilo de vida y el perfil declarado.",
@@ -160,6 +54,31 @@
         "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
       },
       "created_at": "2026-06-06T16:11:44.772206+00:00"
+    },
+    {
+      "id": "pruebas-poligraficas",
+      "title": "Pruebas de Polígrafo Profesionales",
+      "desc": "Certeza técnica con un 95% de exactitud. Revelamos la verdad en procesos críticos de seguridad y confianza.",
+      "image": "/servicios/1.webp",
+      "cta": "Ver detalles",
+      "href": "/pruebas-poligraficas",
+      "template": "poligrafo",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "Aseguramos su toma de decisiones mediante pruebas de polígrafo con un 95% de exactitud. Validamos la integridad en procesos de selección, monitoreo preventivo de su personal y esclarecimiento de incidentes internos bajo estándares internacionales. Obtenga resultados técnicos en tiempo récord para asegurar la transparencia y proteger los activos de su empresa.",
+        "whyTitle": "El Valor para su Empresa",
+        "aboutDesc": "",
+        "heroImage": "/pruebas-poligrafo/hero.webp",
+        "heroTitle": "Pruebas de",
+        "whyPoints": [],
+        "aboutCards": [],
+        "aboutTitle": "¿Qué resolvemos para su organización?",
+        "heroTagline": "Nuestras soluciones",
+        "contactPhone": "0981296179",
+        "heroUnderlined": "Polígrafo",
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
+      },
+      "created_at": "2026-06-06T16:11:44.014975+00:00"
     },
     {
       "id": "pruebas-toxicologicas",
@@ -370,10 +289,61 @@
       "created_at": "2026-06-06T16:11:45.708532+00:00"
     },
     {
+      "id": "estudio-de-confiabilidad-360",
+      "title": "Estudio de Confiabilidad 3600°",
+      "desc": "Confirmamos la honestidad y estabilidad de sus candidatos. Validamos trayectorias (laborales y académicas) y realizamos un análisis profundo de salud financiera y endeudamiento.",
+      "image": "/servicios/3.webp",
+      "cta": "Ver detalles del servicio",
+      "href": "/estudio-de-confiabilidad-360",
+      "template": "vetting",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "Confirmamos la honestidad y estabilidad de sus candidatos. Validamos trayectorias (laborales y académicas) y realizamos un análisis profundo de salud financiera y endeudamiento en +190 bases de datos.",
+        "whyTitle": "El Valor para su Empresa",
+        "aboutDesc": "Llevamos a cabo un cruce completo de información comercial, legal e historial laboral:",
+        "heroImage": "/servicios/3.webp",
+        "heroTitle": "Estudio de Confiabilidad",
+        "whyPoints": [
+          {
+            "text": "Asegura la honestidad e idoneidad de los candidatos seleccionados.",
+            "title": "Personal de Confianza"
+          },
+          {
+            "text": "Evita la contratación de personas con perfiles financieros de alto riesgo.",
+            "title": "Prevención de Fraudes"
+          },
+          {
+            "text": "Brinda reportes estructurados con recomendaciones técnicas claras.",
+            "title": "Decisiones Seguras"
+          }
+        ],
+        "aboutCards": [
+          {
+            "text": "Confirmamos referencias, periodos trabajados y motivos de salida.",
+            "title": "Validación Laboral"
+          },
+          {
+            "text": "Verificamos títulos registrados y autenticidad de diplomas.",
+            "title": "Validación Académica"
+          },
+          {
+            "text": "Analizamos deudas, juicios de coactiva y capacidad crediticia.",
+            "title": "Historial Financiero"
+          }
+        ],
+        "aboutTitle": "¿Qué analizamos?",
+        "heroTagline": "Asegure un equipo confiable y libre de riesgos corporativos.",
+        "contactPhone": "0981296179",
+        "heroUnderlined": "360°",
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
+      },
+      "created_at": "2026-06-06T16:11:44.532465+00:00"
+    },
+    {
       "id": "vetting",
       "title": "Vetting",
-      "desc": "Proteja la integridad de su empresa desde el primer día. Filtramos riesgos mediante el rastreo exhaustivo en más de 190 bases de datos nacionales e internacionales.",
-      "image": "/servicios/2.webp",
+      "desc": "Proteja la integridad de su empresa desde el primer día. Filtramos riesgos mediante el rastreo exhaustivo en más de 190 bases de datos nacionales e internacionales (Interpol/OFAC) para garantizar contrataciones 100% seguras.",
+      "image": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services/1780796702388-2-9pc6yy.webp",
       "cta": "Ver detalles del servicio",
       "href": "/vetting",
       "template": "vetting",
@@ -382,7 +352,7 @@
         "heroDesc": "No se conforme con la buena impresión de una entrevista. Validamos la integridad de su futuro talento humano con un análisis profundo de antecedentes and riesgos.",
         "whyTitle": "El Valor para su Empresa",
         "aboutDesc": "Cruzamos información en tiempo real en +190 bases de datos para detectar alertas legales, financieras o de reputación:",
-        "heroImage": "/vetting/hero.png",
+        "heroImage": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services-hero/1780768705224-chatgpt-image-5-jun-2026--02-0-6ef2ty.webp",
         "heroTitle": "Verificación Integral de",
         "whyPoints": [
           {
@@ -415,80 +385,13 @@
         "aboutTitle": "¿Qué analizamos?",
         "heroTagline": "Transformamos la incertidumbre en decisiones seguras.",
         "contactPhone": "0981296179",
-        "heroUnderlined": "Candidatosds",
+        "heroUnderlined": "Candidatos",
         "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
       },
       "created_at": "2026-06-06T16:11:44.306955+00:00"
     }
   ],
   "courses": [
-    {
-      "id": "entrevista-pretest",
-      "title": "Entrevista Pretest",
-      "desc": "Estructuración y conducción de la entrevista previa al examen. Técnicas de rapport, formulación de preguntas y detección de conductas evasivas.",
-      "image": "/cursos-avanzados/pretest.jpg",
-      "href": "/entrevista-pretest",
-      "published": true,
-      "pageContent": {
-        "heroDesc": "¿Buscas perfeccionar tu técnica de entrevista pretest y dominar una de las fases más críticas del examen poligráfico? Esta formación especializada está diseñada para llevar tus habilidades al siguiente nivel.",
-        "aboutDesc": "Profundice en los estándares, principios y procesos metodológicos que sostienen una entrevista pretest clara, técnica y alineada al tipo de evaluación poligráfica.",
-        "heroImage": "/pruebas-poligrafo/primer.webp",
-        "heroTitle": "Curso Avanzado: Entrevista Pretest",
-        "aboutTitle": "Ejes Temáticos:",
-        "focusAreas": [
-          {
-            "title": "Fundamentos y estándares",
-            "description": "Domina los principios de las prácticas internacionales estandarizadas en entrevistas pretest y aprende los fundamentos metodológicos que garantizan la confiabilidad técnica de la evaluación."
-          },
-          {
-            "title": "Preparación y desarrollo del pretest",
-            "description": "Aprende cada fase de preparación previa al examen y domina el paso a paso del protocolo de entrevista pretest, asegurando consistencia y validez en tus evaluaciones poligráficas."
-          },
-          {
-            "title": "Evaluaciones diagnósticas y exploratorias",
-            "description": "Especialízate en el análisis de evaluaciones poligráficas diagnósticas y exploratorias, incluyendo el protocolo de preguntas específicas para casos de preempleo, rutina y temas investigativos."
-          }
-        ],
-        "heroTagline": "Especialización avanzada para poligrafistas certificados.",
-        "contactPhone": "099371290",
-        "fichaTecnica": [
-          {
-            "title": "⏱️ 15 horas de duración",
-            "description": "Formación intensiva y estructurada."
-          },
-          {
-            "title": "📚 32 lecciones",
-            "description": "Contenido completo y detallado."
-          },
-          {
-            "title": "📄 Plantillas descargables",
-            "description": "+75 diapositivas y documentos listos."
-          },
-          {
-            "title": "❓ Quizzes interactivos",
-            "description": "Preguntas para reforzar aprendizaje."
-          },
-          {
-            "title": "📺 Acceso 3 meses",
-            "description": "Contenido pregrabado disponible."
-          },
-          {
-            "title": "✅ 30 días de garantía",
-            "description": "Satisfacción garantizada."
-          },
-          {
-            "title": "🔐 Comunidad ONE TRUE",
-            "description": "Acceso exclusivo a la red."
-          },
-          {
-            "title": "🎓 Diploma oficial",
-            "description": "Certificado de finalización."
-          }
-        ],
-        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593099371290&text=Hola!%20Deseo%20conocer%20mas%20informacion%20sobre%20los%20Cursos%20Avanzados%20en%20Poligrafia."
-      },
-      "created_at": "2026-06-06T16:11:45.947071+00:00"
-    },
     {
       "id": "tecnicas-poligraficas",
       "title": "Técnicas Poligráficas",
@@ -668,6 +571,104 @@
         "contactWhatsapp": "https://api.whatsapp.com/send?phone=593099371290&text=Hola!%20Deseo%20conocer%20mas%20informacion%20sobre%20los%20Cursos%20Avanzados%20en%20Poligrafia."
       },
       "created_at": "2026-06-06T16:11:46.990366+00:00"
+    },
+    {
+      "id": "pruebas",
+      "title": "pruebas",
+      "desc": "pruebas",
+      "image": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/courses/1780945003438-adobestock-514417566-2r9s09.webp",
+      "href": "/pruebas",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "pruebas",
+        "aboutDesc": "pruebas",
+        "heroImage": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/courses-hero/1780945053387-adobestock-514417566-j2fuun.webp",
+        "heroTitle": "pruebas",
+        "aboutTitle": "pruebas",
+        "focusAreas": [
+          {
+            "title": "pruebas",
+            "description": "pruebas"
+          }
+        ],
+        "heroTagline": "pruebas",
+        "contactPhone": "099371290",
+        "fichaTecnica": [
+          {
+            "title": "pruebas",
+            "description": "pruebas"
+          }
+        ],
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593099371290"
+      },
+      "created_at": "2026-06-07T01:49:12.688927+00:00"
+    },
+    {
+      "id": "entrevista-pretest",
+      "title": "Entrevista Pretest",
+      "desc": "Estructuración y conducción de la entrevista previa al examen. Técnicas de rapport, formulación de preguntas y detección de conductas evasivas.",
+      "image": "/cursos-avanzados/pretest.jpg",
+      "href": "/entrevista-pretest",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "¿Buscas perfeccionar tu técnica de entrevista pretest y dominar una de las fases más críticas del examen poligráfico? Esta formación especializada está diseñada para llevar tus habilidades al siguiente nivel.",
+        "aboutDesc": "Profundice en los estándares, principios y procesos metodológicos que sostienen una entrevista pretest clara, técnica y alineada al tipo de evaluación poligráfica.",
+        "heroImage": "/pruebas-poligrafo/primer.webp",
+        "heroTitle": "Curso Avanzado: Entrevista Pretest",
+        "aboutTitle": "Ejes Temáticos:",
+        "focusAreas": [
+          {
+            "title": "Fundamentos y estándares",
+            "description": "Domina los principios de las prácticas internacionales estandarizadas en entrevistas pretest y aprende los fundamentos metodológicos que garantizan la confiabilidad técnica de la evaluación."
+          },
+          {
+            "title": "Preparación y desarrollo del pretest",
+            "description": "Aprende cada fase de preparación previa al examen y domina el paso a paso del protocolo de entrevista pretest, asegurando consistencia y validez en tus evaluaciones poligráficas."
+          },
+          {
+            "title": "Evaluaciones diagnósticas y exploratorias",
+            "description": "Especialízate en el análisis de evaluaciones poligráficas diagnósticas y exploratorias, incluyendo el protocolo de preguntas específicas para casos de preempleo, rutina y temas investigativos."
+          }
+        ],
+        "heroTagline": "Especialización avanzada para poligrafistas certificados.",
+        "contactPhone": "099371290",
+        "fichaTecnica": [
+          {
+            "title": "⏱️ 15 horas de duración",
+            "description": "Formación intensiva y estructurada."
+          },
+          {
+            "title": "📚 32 lecciones",
+            "description": "Contenido completo y detallado."
+          },
+          {
+            "title": "📄 Plantillas descargables",
+            "description": "+75 diapositivas y documentos listos."
+          },
+          {
+            "title": "❓ Quizzes interactivos",
+            "description": "Preguntas para reforzar aprendizaje."
+          },
+          {
+            "title": "📺 Acceso 3 meses",
+            "description": "Contenido pregrabado disponible."
+          },
+          {
+            "title": "✅ 30 días de garantía",
+            "description": "Satisfacción garantizada."
+          },
+          {
+            "title": "🔐 Comunidad ONE TRUE",
+            "description": "Acceso exclusivo a la red."
+          },
+          {
+            "title": "🎓 Diploma oficial",
+            "description": "Certificado de finalización."
+          }
+        ],
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593099371290&text=Hola!%20Deseo%20conocer%20mas%20informacion%20sobre%20los%20Cursos%20Avanzados%20en%20Poligrafia."
+      },
+      "created_at": "2026-06-06T16:11:45.947071+00:00"
     }
   ],
   "blogs": [
@@ -703,6 +704,17 @@
       "readTime": "7 min de lectura",
       "content": "Para obtener resultados con un 95% de exactitud, la prueba de polígrafo debe realizarse bajo condiciones específicas de control, ética y metodología. Te presentamos las 10 claves fundamentales para un proceso poligráfico exitoso.",
       "created_at": "2026-06-06T16:11:47.682185+00:00"
+    },
+    {
+      "id": "pruebas",
+      "title": "pruebas",
+      "image": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/blogs/1780797016612-1-6mlwvl.webp",
+      "link": "/blog/pruebas",
+      "published": false,
+      "publishDate": "pruebas",
+      "readTime": "pruebas",
+      "content": "pruebas",
+      "created_at": "2026-06-07T01:50:33.39157+00:00"
     }
   ],
   "podcasts": [
@@ -777,6 +789,18 @@
       "topic": "Tecnología",
       "published": true,
       "created_at": "2026-06-06T16:11:49.069331+00:00"
+    },
+    {
+      "id": "pruebas",
+      "title": "pruebas",
+      "description": "pruebas",
+      "image": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/podcasts/1780797055073-1-jqfvi9.webp",
+      "audioUrl": "#",
+      "duration": "30 min",
+      "date": "6 de junio de 2026",
+      "topic": "General",
+      "published": false,
+      "created_at": "2026-06-07T01:51:07.28199+00:00"
     }
   ]
 }

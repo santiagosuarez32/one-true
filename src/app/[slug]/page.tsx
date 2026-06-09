@@ -4,6 +4,13 @@ import CoursePageTemplate from "@/components/CoursePageTemplate";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
+import TecnicasPoligraficasPage from "./components/TecnicasPoligraficas";
+import CursoBasicoPage from "./components/CursoBasico";
+import EntrevistaPretestPage from "./components/EntrevistaPretest";
+import CalificacionGraficasPage from "./components/CalificacionGraficas";
+import SistemaCalificacionESSMPage from "./components/SistemaCalificacion";
+import ControlDeCalidadEnPoligrafiaPage from "./components/ControlCalidad";
+
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
@@ -60,6 +67,29 @@ export default async function DynamicSlugPage({ params }: PageProps) {
   // Try to find as course
   const course = await getCourseBySlug(slug);
   if (course && course.published) {
+    const template = course.template || (
+      course.id === "curso-avanzado-tecnicas-poligraficas" || course.id === "tecnicas-poligraficas" ? "tecnicas" :
+      course.id === "curso-basico-de-poligrafia" ? "basico" :
+      course.id === "entrevista-pretest-y-postest" || course.id === "entrevista-pretest" ? "pretest" :
+      course.id === "calificacion-de-graficas" || course.id === "calificacion-graficas-analisis-datos" ? "graficas" :
+      course.id === "sistema-de-calificacion-ess-m" || course.id === "sistema-calificacion-ess-m" ? "ess-m" :
+      course.id === "control-de-calidad-en-poligrafia" ? "control-calidad" :
+      "standard"
+    );
+
+    if (template === "tecnicas") {
+      return <TecnicasPoligraficasPage course={course} />;
+    } else if (template === "basico") {
+      return <CursoBasicoPage course={course} />;
+    } else if (template === "pretest") {
+      return <EntrevistaPretestPage course={course} />;
+    } else if (template === "graficas") {
+      return <CalificacionGraficasPage course={course} />;
+    } else if (template === "ess-m") {
+      return <SistemaCalificacionESSMPage course={course} />;
+    } else if (template === "control-calidad") {
+      return <ControlDeCalidadEnPoligrafiaPage course={course} />;
+    }
     return <CoursePageTemplate course={course} />;
   }
   

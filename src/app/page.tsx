@@ -10,8 +10,14 @@ import Podcast from "@/components/Podcast";
 import Ebook from "@/components/Ebook";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import { getServices, getBlogs } from "@/lib/cms";
 
-export default function Home() {
+export default async function Home() {
+  const [services, blogs] = await Promise.all([
+    getServices(),
+    getBlogs()
+  ]);
+
   return (
     <main className="min-h-screen selection:bg-white selection:text-black">
       {/* Navbar */}
@@ -24,7 +30,7 @@ export default function Home() {
       <Clients />
 
       {/* Services Section */}
-      <Services />
+      <Services initialServices={services} />
 
       {/* Why Choose Us / Results Section */}
       <WhyChooseUs />
@@ -36,7 +42,7 @@ export default function Home() {
       <Testimonials />
 
       {/* Resources / Blog Section */}
-      <Resources />
+      <Resources initialArticles={blogs} />
 
       {/* Podcast Section */}
       <Podcast />

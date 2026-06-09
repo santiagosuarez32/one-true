@@ -121,7 +121,7 @@ export default function ServicePageTemplate({ service, allServices }: { service:
     .filter((s) => s.id !== service.id && s.published)
     .slice(0, 6);
 
-  const faqs = [
+  const faqs = pageContent.faqs && pageContent.faqs.length > 0 ? pageContent.faqs : [
     {
       q: "¿Cuál es el nivel de exactitud de las pruebas de polígrafo?",
       a: "Bajo los estándares científicos de la American Polygraph Association (APA), y utilizando técnicas y metodologías validadas modernas (como el sistema de puntuación ESS-M), nuestras pruebas tienen un nivel de exactitud comprobado del 92% al 98%, promediando una certeza técnica superior al 95%."
@@ -280,7 +280,7 @@ export default function ServicePageTemplate({ service, allServices }: { service:
             <div className="relative w-full max-w-md">
               <div className="rounded-3xl overflow-hidden shadow-2xl relative z-10 border-4 border-white">
                 <img 
-                  src="/pruebas-poligrafo/primer.webp" 
+                  src={pageContent.whyImage1 || "/pruebas-poligrafo/primer.webp"}
                   alt="Servicios One True" 
                   loading="lazy"
                   className="w-full h-auto object-cover aspect-[4/5]"
@@ -289,7 +289,7 @@ export default function ServicePageTemplate({ service, allServices }: { service:
               
               <div className="absolute -bottom-12 -right-12 w-2/3 rounded-3xl overflow-hidden shadow-xl z-20 border-4 border-white hidden md:block">
                 <img 
-                  src="/pruebas-poligrafo/segunda.webp" 
+                  src={pageContent.whyImage2 || "/pruebas-poligrafo/segunda.webp"}
                   alt="Análisis de confianza One True" 
                   loading="lazy"
                   className="w-full h-auto object-cover aspect-square"

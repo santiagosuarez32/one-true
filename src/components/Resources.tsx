@@ -77,9 +77,8 @@ const BlogCard = ({ article, className = "", isWide = false, cardRef }: { articl
   </div>
 );
 
-export default function Resources() {
+export default function Resources({ initialArticles = [] }: { initialArticles?: Article[] }) {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
-  const [articles, setArticles] = React.useState<Article[]>([]);
 
   const staticArticles: Article[] = [
     {
@@ -99,32 +98,7 @@ export default function Resources() {
     }
   ];
 
-  useEffect(() => {
-    fetch("/api/cms")
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.blogs && data.blogs.length > 0) {
-          const published = data.blogs
-            .filter((b: any) => b.published)
-            .slice(0, 3)
-            .map((b: any) => ({
-              title: b.title,
-              image: b.image || "/blog/1.webp",
-              link: b.link || `/blog/${b.id}`
-            }));
-          if (published.length > 0) {
-            setArticles(published);
-          } else {
-            setArticles(staticArticles);
-          }
-        } else {
-          setArticles(staticArticles);
-        }
-      })
-      .catch(() => setArticles(staticArticles));
-  }, []);
-
-  const displayArticles = articles.length > 0 ? articles : staticArticles;
+  const displayArticles = initialArticles.length > 0 ? initialArticles : staticArticles;
 
   return (
     <section id="recursos" className="bg-white py-16 md:py-24 scroll-mt-20">

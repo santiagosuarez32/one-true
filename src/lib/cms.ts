@@ -31,6 +31,9 @@ export type Service = {
     aboutCards: { title: string; text: string }[];
     whyTitle: string;
     whyPoints: { title: string; text: string }[];
+    whyImage1?: string;
+    whyImage2?: string;
+    faqs?: { q: string; a: string }[];
     contactPhone: string;
     contactWhatsapp?: string;
   };
@@ -48,6 +51,7 @@ export type Course = {
   image: string;
   href: string;
   published: boolean;
+  template?: "tecnicas" | "basico" | "pretest" | "graficas" | "ess-m" | "control-calidad" | "standard";
   pageContent: {
     heroTagline: string;
     heroTitle: string;
@@ -56,9 +60,22 @@ export type Course = {
     aboutTitle: string;
     aboutDesc: string;
     focusAreas: FocusArea[];
+    svgFocusAreas?: {
+      title: string;
+      description?: string;
+      iconViewBox?: string;
+      iconPaths?: string[];
+    }[];
+    customCards?: {
+      title: string;
+      description?: string;
+      items?: string[];
+      icon: string;
+    }[];
     fichaTecnica: { title: string; description: string }[];
     contactPhone: string;
     contactWhatsapp: string;
+    template?: string;
   };
 };
 
@@ -103,9 +120,13 @@ export async function getDb(): Promise<DatabaseSchema> {
     
     // Check if we retrieved data without schema cache/missing table errors
     if (!servicesRes.error && !coursesRes.error && !blogsRes.error && !podcastsRes.error) {
+      const dbCourses = (coursesRes.data || []).map(c => ({
+        ...c,
+        template: c.template || c.pageContent?.template
+      }));
       const db = {
         services: servicesRes.data || [],
-        courses: coursesRes.data || [],
+        courses: dbCourses,
         blogs: blogsRes.data || [],
         podcasts: podcastsRes.data || []
       };
@@ -207,9 +228,18 @@ export async function saveCourse(course: Course): Promise<void> {
   }
   await writeDb(db);
 
+  // Sync to Supabase by omitting template from root and adding to pageContent
+  const { template, ...supabaseCourse } = course;
+  if (supabaseCourse.pageContent) {
+    supabaseCourse.pageContent = {
+      ...supabaseCourse.pageContent,
+      template: template
+    };
+  }
+
   // Sync to Supabase
   try {
-    const { error } = await supabase.from("courses").upsert(course);
+    const { error } = await supabase.from("courses").upsert(supabaseCourse);
     if (error) {
       console.error(`Supabase sync failed for course ${course.id}:`, error.message);
     }

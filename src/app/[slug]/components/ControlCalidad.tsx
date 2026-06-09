@@ -5,90 +5,161 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
-import { FaLinkedin, FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
-import { Monitor, Brain, Fingerprint, Globe, UserFocus, Devices, BookOpen, Certificate, Medal, Shield, Microscope, Crown } from "@phosphor-icons/react";
 
-export default function CursoBasicoPoligrafiaPage() {
+const focusAreas = [
+  {
+    title: "Ejes Temáticos",
+    items: [
+      "Un recorrido profundo por el proceso de auditoría y control de calidad:",
+      "Estándares de práctica internacional en calidad.",
+      "Auditoría sistemática de procedimientos.",
+      "Validación de datos y registros.",
+      "Revisión por pares y evaluación cruzada.",
+      "Calibración y control de equipos.",
+      "Análisis de discrepancias y variaciones.",
+      "Documentación y trazabilidad.",
+      "Mejora continua basada en hallazgos.",
+      "Conformidad normativa y regulatoria.",
+      "Investigación de incidentes y no-conformidades.",
+      "Competencias del auditor en poligrafía.",
+      "Reportes y comunicación de resultados.",
+    ],
+    iconViewBox: "0 0 85 93",
+    iconPaths: [
+      "M27.648 39.7c0 13.904 11.447 25.217 25.516 25.217s25.5-11.312 25.5-25.217a24.71 24.71 0 0 0-2.78-11.457c-1.654-3.2-4.024-6.058-6.878-8.302v-2.443c0-5.292-1.704-9.778-4.926-12.973C61.215 1.672 57.342.066 53.187 0a.87.87 0 0 0-.043 0c-4.158.065-8.033 1.672-10.9 4.524-3.224 3.194-4.927 7.68-4.927 12.973v2.443a25.54 25.54 0 0 0-6.878 8.302c-1.845 3.57-2.78 7.424-2.78 11.457zm44.387 12.6a22.85 22.85 0 0 1-18.871 9.916c-7.844 0-14.775-3.938-18.876-9.918v-3.36c0-5.464 3.526-7.155 7.72-8.368l8.472 4.913c.976.62 1.828.93 2.68.93s1.705-.3 2.68-.93l8.473-4.913c4.193 1.214 7.72 2.904 7.72 8.37v3.36zm-26.4-12.76c1.4-.62 2.137-1.917 2.584-2.96a15.43 15.43 0 0 0 .849.344c1.46.534 2.783.8 4.106.8s2.646-.267 4.102-.8a15.4 15.4 0 0 0 .85-.344c.446 1.045 1.184 2.34 2.584 2.96l-6.263 3.632a1.15 1.15 0 0 0-.051.031c-1.075.688-1.372.688-2.448 0l-.05-.03-6.262-3.63zm30.32.16a22.19 22.19 0 0 1-1.29 7.47c-.774-6.183-5.648-8.096-10.156-9.353l-.033-.01-1.5-.407-.958-.255c-.723-.194-1.163-1.092-1.467-1.86 4.334-2.777 7.708-7.484 8.368-11.878 4.508 4.237 7.047 10.042 7.047 16.3zm-22.78-37c5.98.104 12.385 4.3 13.064 13.2-1.392-.376-2.108-1.098-2.856-1.853-1.046-1.056-2.348-2.37-5.1-1.67l-1.96.5c-1.63.43-2.446.647-3.148.647s-1.528-.217-3.167-.65l-1.947-.507c-2.748-.7-4.05.613-5.094 1.668-.75.755-1.466 1.48-2.862 1.855.68-8.923 7.087-13.108 13.07-13.212zm-13.13 15.988c2.625-.478 3.904-1.767 4.87-2.743.93-.938 1.243-1.253 2.463-.943l1.923.5c1.8.48 2.808.742 3.872.742s2.053-.262 3.854-.74L58.962 15c1.225-.312 1.538.005 2.47.944.967.975 2.244 2.263 4.866 2.74v3.193c0 4.72-4.66 10.568-9.97 12.513-2.327.854-3.978.854-6.3 0-5.312-1.946-9.97-7.794-9.97-12.513v-3.193zm-2.6 4.72c.66 4.393 4.035 9.1 8.37 11.878-.304.767-.745 1.665-1.464 1.86l-.955.254-1.505.405a1.26 1.26 0 0 0-.075.021c-4.5 1.257-9.354 3.175-10.127 9.343a22.18 22.18 0 0 1-1.3-7.47c0-6.25 2.54-12.054 7.047-16.3zm38.193-6.053l-2.087-1.9c-.58-.477-1.44-.4-1.922.175a1.34 1.34 0 0 0 .177 1.9l1.902 1.722C79.23 24.722 82.27 31.98 82.27 39.7s-3.04 14.977-8.562 20.435c-11.4 11.268-29.948 11.268-41.347 0C26.84 54.677 23.8 47.42 23.8 39.7s3.04-14.977 8.563-20.435c.53-.525 1.028-.983 1.52-1.4a1.34 1.34 0 0 0 .148-1.903c-.5-.566-1.352-.63-1.925-.146a29.31 29.31 0 0 0-1.673 1.54C24.395 23.324 21.07 31.26 21.07 39.7a31.12 31.12 0 0 0 6 18.439l-6.165 6.094-.126-.125a2.36 2.36 0 0 0-1.669-.682 2.36 2.36 0 0 0-1.67.683l-4.22 4.175c-.01.01-.02.017-.03.026s-.018.02-.027.03l-3.2 3.16a1.34 1.34 0 0 0 .001 1.908c.533.527 1.398.526 1.93-.001l2.26-2.236 7.036 6.954-9.977 9.86a4.96 4.96 0 0 1-3.517 1.435c-1.333 0-2.582-.5-3.518-1.436a4.87 4.87 0 0 1-1.45-3.477c0-1.317.515-2.553 1.45-3.477l3.56-3.518a1.34 1.34 0 0 0 0-1.908c-.533-.527-1.397-.527-1.93 0l-3.56 3.518A7.52 7.52 0 0 0 0 84.508c0 2.04.8 3.952 2.248 5.385a7.69 7.69 0 0 0 5.449 2.227c2.064 0 4-.8 5.448-2.227l15.2-15c.445-.44.7-1.027.7-1.653s-.245-1.213-.7-1.653l-.123-.122 6.168-6.097c5.55 3.947 12.102 5.922 18.654 5.922 8.186 0 16.372-3.08 22.604-9.24C81.676 56.074 85 48.14 85 39.698s-3.325-16.375-9.362-22.343zM23.122 76.22l-7.037-6.955 3.023-3 7.038 6.957-3.024 2.988zm3.16-6.67l-3.448-3.408 5.936-5.868a32.34 32.34 0 0 0 1.66 1.769c.58.573 1.176 1.12 1.787 1.638L26.28 69.55z",
+    ],
+  },
+];
+
+const advancedTechniques = [
+  {
+    title: "Auditoría de Procedimientos",
+    items: ["Revisión sistemática del cumplimiento de estándares en cada examinación."],
+    icon: "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
+  },
+  {
+    title: "Validación de Datos",
+    items: ["Verificación de la integridad y consistencia en registros poligráficos."],
+    icon: "/icons/Browser-Hand--Streamline-Ultimate.webp",
+  },
+  {
+    title: "Revisión por Pares",
+    items: ["Evaluación cruzada de casos entre examinadores certificados."],
+    icon: "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
+  },
+  {
+    title: "Calibración de Equipos",
+    items: ["Mantenimiento preventivo y control de precisión instrumental."],
+    icon: "/icons/Password-Desktop--Streamline-Ultimate.webp",
+  },
+  {
+    title: "Análisis de Discrepancias",
+    items: ["Investigación de variaciones en resultados e identificación de causas."],
+    icon: "/icons/Task-Checklist--Streamline-Ultimate.webp",
+  },
+  {
+    title: "Documentación de Conformidad",
+    items: ["Registro exhaustivo de auditorías y mejoras implementadas."],
+    icon: "/icons/Monitor-Find--Streamline-Ultimate.webp",
+  },
+  {
+    title: "Mejora Continua",
+    items: ["Actualización de protocolos basada en hallazgos de auditoría."],
+    icon: "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
+  },
+];
+
+
+import { Course } from "@/lib/cms";
+
+export default function ControlDeCalidadEnPoligrafiaPage({ course }: { course: Course }) {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [country, setCountry] = useState("ec");
 
+  const {
+    heroTagline,
+    heroTitle,
+    heroDesc,
+    heroImage,
+    contactPhone,
+    contactWhatsapp,
+    focusAreas: dbFocusAreas,
+    fichaTecnica
+  } = course.pageContent;
+
   return (
     <main className="min-h-screen bg-white text-[#525252] selection:bg-[#FFC107] selection:text-[#411A56]">
-      {/* Navbar */}
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-36 pb-24 bg-[#700FA3]">
-        {/* Purple Overlay */}
-        <div 
+      <section className="relative min-h-[80vh] flex items-start md:items-center justify-center overflow-hidden pt-32 pb-24 bg-[#700FA3]">
+        <div
           className="absolute inset-0 z-0 pointer-events-none"
           style={{
-            background: "linear-gradient(to right, #700FA3 0%, #700FA3 35%, rgba(112, 15, 163, 0.9) 48%, rgba(112, 15, 163, 0.6) 60%, rgba(112, 15, 163, 0.3) 72%, rgba(112, 15, 163, 0.05) 86%, transparent 100%)"
+            background:
+              "linear-gradient(to right, #700FA3 0%, #700FA3 35%, rgba(112, 15, 163, 0.9) 48%, rgba(112, 15, 163, 0.6) 60%, rgba(112, 15, 163, 0.3) 72%, rgba(112, 15, 163, 0.05) 86%, transparent 100%)",
           }}
         />
 
-        <img 
-          src="/servicios/7.webp"
-          alt="Academia de Poligrafía One True"
+        <img
+          src={heroImage || "/servicios/1.webp"}
+          alt={heroTitle || "Control de Calidad en Poligrafía - One True Academia"}
           fetchPriority="high"
-          className="absolute inset-0 w-full h-full object-cover object-right-top z-0 opacity-45 mix-blend-overlay pointer-events-none"
+          className="absolute inset-0 w-full h-full object-cover object-right-top z-0 opacity-40 mix-blend-overlay pointer-events-none"
         />
 
-        {/* Hero Content Container */}
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 z-10 flex justify-start items-center">
-          <div className="max-w-3xl text-left">
-            
-            {/* Tag Prefix */}
+          <div className="max-w-5xl text-left">
             <Breadcrumbs />
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-[3px] bg-[#FFC107]" />
               <span
-                className="text-xs sm:text-sm md:text-base font-semibold"
+                className="text-xs sm:text-sm md:text-base"
                 style={{
                   letterSpacing: "0.5px",
                   color: "#FFC107",
+                  fontWeight: "600",
                   fontFamily: "var(--font-montserrat), sans-serif",
                 }}
               >
-                Forma parte de la próxima generación de expertos en evaluación de la credibilidad.
+                {heroTagline}
               </span>
             </div>
 
             <h1
-              className="mb-6 !text-3xl sm:!text-4xl md:!text-5xl lg:!text-[52px] font-semibold leading-tight"
+              className="mb-6 !text-3xl sm:!text-4xl md:!text-5xl lg:!text-[52px] font-semibold"
               style={{
                 textAlign: "start",
                 fontFamily: "var(--font-montserrat), sans-serif",
                 margin: "0 0 28px 0",
                 padding: 0,
                 color: "#FFFFFF",
-                textShadow: "0 2px 4px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.18)"
+                textShadow: "0 2px 4px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.18)",
               }}
             >
-              Certificación en Poligrafía (400H) <br className="hidden sm:inline" />
-              Acreditada por la <strong style={{ fontWeight: "800", textDecoration: "underline", textDecorationColor: "#FFC107", textUnderlineOffset: "6px" }}>APA</strong>.
+              {heroTitle}
             </h1>
 
             <p
-              className="mb-8 opacity-95 !text-sm sm:!text-base md:!text-lg font-medium"
+              className="mb-6 opacity-95 !text-sm sm:!text-base md:!text-lg font-medium"
               style={{
                 textAlign: "start",
                 fontFamily: "var(--font-montserrat), sans-serif",
-                lineHeight: "32px",
-                color: "#FFFFFF"
+                color: "#FFFFFF",
               }}
             >
-              Inicie su carrera en una de las disciplinas forenses de mayor demanda global. Nuestro programa académico integral le brinda las herramientas teóricas, técnicas y prácticas para desempeñarse como un poligrafista de élite, respaldado por el reconocimiento de la <strong style={{ fontWeight: "800", textDecoration: "underline", textDecorationColor: "#FFC107", textUnderlineOffset: "4px" }}>American Polygraph Association (APA)</strong>.
+              {heroDesc}
             </p>
 
-            {/* Hero Action Button */}
-            <div className="flex flex-wrap items-center gap-6">
-              <a 
+            <div className="flex flex-wrap items-center gap-6 mt-6 mb-8">
+              <a
                 href="#contacto"
-                className="px-8 py-3.5 rounded transition-all hover:brightness-110 shadow-lg text-center"
+                className="px-8 py-3 rounded transition-all hover:brightness-110 shadow-lg"
                 style={{
+                  WebkitTextSizeAdjust: "100%",
+                  WebkitTapHighlightColor: "transparent",
                   fontFamily: "var(--font-montserrat), sans-serif",
                   lineHeight: "1",
+                  textAlign: "center",
                   fontSize: "14px",
                   fontWeight: "600",
                   color: "#5F0091",
@@ -99,228 +170,164 @@ export default function CursoBasicoPoligrafiaPage() {
                   cursor: "pointer",
                 }}
               >
-                <span>Solicitar Admisión e Información</span>
+                Solicitar información del módulo
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Sección Curricular: "¿Qué obtendrá en esta formación?" (Grid en Fila de Estilo Vetting) */}
-      <section className="bg-white py-24">
-        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1650px] mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Centered Small Header */}
-          <div className="flex flex-col items-center text-center mb-16">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-[3px] bg-[#700FA3]" />
-              <span
-                style={{
-                  letterSpacing: "0.5px",
-                  fontSize: "18px",
-                  color: "#700FA3",
-                  fontWeight: "600",
-                  fontFamily: "var(--font-montserrat), sans-serif",
-                }}
-              >
-                Beneficios Académicos
-              </span>
-            </div>
-            
-            <h2
-              style={{
-                fontSize: "clamp(24px, 5vw, 36px)",
-                fontWeight: "bold",
-                lineHeight: "46px",
-                color: "#48255A",
-                fontFamily: "var(--font-montserrat), sans-serif",
-                marginTop: "10px"
-              }}
-            >
-              ¿Qué obtendrá en esta formación?
-            </h2>
-
-            <p 
-              className="text-[#525252] text-base mt-4 max-w-2xl font-light"
-              style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-            >
-              Un entrenamiento riguroso diseñado para alcanzar la excelencia profesional:
-            </p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-6 max-w-[1400px] mx-auto">
-            {[
-              {
-                title: "Certificación Internacional APA",
-                desc: "Rompe las fronteras profesionales. Obtén el único aval que te faculta global y técnicamente para ejercer la poligrafía a nivel mundial. No es un diploma local, es tu pasaporte a la élite forense internacional.",
-                icon: <Monitor size={72} weight="thin" color="#700FA3" className="shrink-0" />
-              },
-              {
-                title: "Ciencia Antifraude Infalible",
-                desc: "Domina el ecosistema científico de la verdad: desde carga cognitiva hasta patrones psicofisiológicos avanzados. Aprende a blindar tus evaluaciones contra cualquier contramedida o técnica de manipulación con precisión matemática.",
-                icon: <Brain size={72} weight="thin" color="#700FA3" className="shrink-0" />
-              },
-              {
-                title: "Práctica Forense de Alto Rendimiento",
-                desc: "Desarrollarás habilidades críticas operando instrumentación digital avanzada y resolviendo casos reales de alta complejidad. Un entorno diseñado para transferir la teoría a la práctica pericial, garantizando tu destreza técnica bajo la mentoría directa de instructores Senior.",
-                icon: <Fingerprint size={72} weight="thin" color="#700FA3" className="shrink-0" />
-              },
-              {
-                title: "Autoridad y Liderazgo Pericial",
-                desc: "Deja de competir por precio. Esta formación te otorga el estatus y la competencia técnica para liderar la toma de decisiones críticas y cotizar tus servicios en los niveles más altos del sector corporativo, multinacional y gubernamental.",
-                icon: <Globe size={72} weight="thin" color="#700FA3" className="shrink-0" />
-              }
-            ].map((item, idx) => (
-              <div
-                key={idx}
-                className="flex flex-col bg-white border border-neutral-200/80 rounded-xl p-8 shadow-sm relative pl-6 pt-8 text-left w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
-              >
-                {/* Elegant left gold accent bar */}
-                <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#FFC107] rounded-l-xl" />
-                
-                {/* Icon Container with elegant soft glow background */}
-                <div className="flex justify-start mb-6 h-[76px] items-center text-[#700FA3] relative">
-                  <div className="absolute -left-2 w-16 h-16 rounded-full bg-[#700FA3]/5 blur-[8px] pointer-events-none" />
-                  <div className="relative z-10">
-                    {item.icon}
-                  </div>
+      <section className="bg-white py-20">
+        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16">
+          <div className="flex flex-col gap-16">
+            <div className="flex flex-col gap-12 items-start">
+              <div className="w-full max-w-4xl flex flex-col text-left">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-12 h-[2px] bg-[#700FA3]" />
+                  <span
+                    style={{
+                      letterSpacing: "1px",
+                      fontSize: "14px",
+                      color: "#700FA3",
+                      fontWeight: "600",
+                      fontFamily: "var(--font-montserrat), sans-serif",
+                    }}
+                  >
+                    Ejes Temáticos
+                  </span>
                 </div>
-                
-                {/* Card Title */}
-                <h3 
-                  className="text-lg font-bold mb-16 text-[#48255A]"
-                  style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}
-                >
-                  {item.title}
-                </h3>
-                
-                {/* Description Text */}
-                <p 
-                  className="text-[#525252] text-sm leading-relaxed font-light flex-1"
-                  style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                >
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
 
-        </div>
-      </section>
-
-      {/* Cuadrícula de Requisitos y Recursos (2x2 Soft Grid) */}
-      <section className="bg-white py-24 relative overflow-hidden">
-        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1650px] mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Section Header */}
-          <div className="flex flex-col items-center text-center mb-16">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-[2px] bg-[#700FA3]" />
-              <span
-                style={{
-                  letterSpacing: "0.5px",
-                  fontSize: "16px",
-                  color: "#700FA3",
-                  fontWeight: "600",
-                  fontFamily: "var(--font-montserrat), sans-serif",
-                }}
-              >
-                Detalles de Admisión
-              </span>
-            </div>
-            
-            <h2
-              className="text-2xl sm:text-3xl md:text-[36px]"
-              style={{
-                fontWeight: "bold",
-                lineHeight: "1.2",
-                color: "#48255A",
-                fontFamily: "var(--font-montserrat), sans-serif",
-              }}
-            >
-              El Ecosistema del Éxito: Tu Pasaporte a la Élite Forense
-            </h2>
-          </div>
-
-          {/* Grid Cards - Rediseñadas en una sola fila (4 columnas en escritorio) con fondo amarillo y sin hover */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                title: "Kit y Software Forense Incluido",
-                text: "Todo lo que necesitas para ejercer con éxito. Olvídate de costos ocultos: desde el primer día accedes a las licencias de software especializado, manuales de vanguardia y guías periciales avaladas que exigen los estándares de la industria.",
-                icon: <UserFocus size={72} weight="thin" color="#700FA3" className="shrink-0" />
-              },
-              {
-                title: "Comunidad y Respaldo Continuo",
-                text: "Tu formación no termina al graduarte. Te integras a una red viva de soporte técnico y consultoría para resolver tus primeros casos reales. El respaldo experto de tus instructores te acompaña durante toda tu trayectoria",
-                icon: <Devices size={72} weight="thin" color="#700FA3" className="shrink-0" />
-              },
-              {
-                title: "Certificación de Éxito Asegurado",
-                text: "Inversión con cero riesgo. Si cumples con el plan y superas las evaluaciones, garantizamos tu incorporación técnica definitiva y la preparación total exigida para postular como miembro activo a las asociaciones globales más influyentes.",
-                icon: <Medal size={72} weight="thin" color="#700FA3" className="shrink-0" />
-              },
-              {
-                title: "Acceso y Filtro de Admisión",
-                text: "No es para todos. Mantenemos el estándar de la comunidad mediante un riguroso proceso de selección de perfiles honorables. Si eres admitido, te aseguras de conectar y hacer networking con la verdadera élite profesional del sector.",
-                icon: <Shield size={72} weight="thin" color="#700FA3" className="shrink-0" />
-              }
-            ].map((item, idx) => (
-              <div
-                key={idx}
-                className="flex flex-col bg-white rounded-3xl p-6 shadow-sm relative text-left border border-neutral-200/80"
-              >
-                {/* Icon Container with elegant soft glow background */}
-                <div className="flex justify-start mb-6 h-[76px] items-center text-[#700FA3] relative">
-                  <div className="absolute -left-2 w-16 h-16 rounded-full bg-[#700FA3]/10 blur-[6px] pointer-events-none" />
-                  <div className="relative z-10">
-                    {item.icon}
-                  </div>
-                </div>
-                
-                {/* Card Title */}
-                <h3 
-                  className="text-lg font-bold mb-16 text-[#48255A]"
-                  style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}
+                <h2
+                  className="mb-6"
+                  style={{
+                    fontFamily: "var(--font-montserrat), sans-serif",
+                    fontSize: "clamp(24px, 5vw, 36px)",
+                    fontWeight: "700",
+                    lineHeight: "1.2",
+                    color: "#48255A",
+                  }}
                 >
-                  {item.title}
-                </h3>
-                
-                {/* Description Text */}
+                  Ejes Temáticos:
+                </h2>
+
                 <p
-                  className="text-[#525252] text-sm leading-relaxed font-light flex-1 text-justify"
+                  className="text-[#525252] text-[15px] leading-[26px] font-light mb-6"
                   style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                 >
-                  {item.text}
+                  Cumplimos estrictamente con los 12 pilares fundamentales para la formación de un auditor de élite en control de calidad en poligrafía forense:
+                </p>
+
+                <div className="mb-8">
+                  <ul className="flex flex-col gap-2 list-disc pl-5">
+                    {(dbFocusAreas && dbFocusAreas.length > 0 ? dbFocusAreas : [
+                      { title: "Estándares de Práctica (APA-ASTM)", description: "Marco normativo internacional que rige la profesión." },
+                      { title: "Bases del Aseguramiento de Calidad (QA)", description: "Principios preventivos para mantener la integridad del proceso." },
+                      { title: "Bases del Control de Calidad (CQ)", description: "Metodologías de supervisión técnica directa." },
+                      { title: "Auditoría de la Etapa Previa", description: "Revisión de la logística, selección de objetivos y preparación de la examinación." },
+                      { title: "Auditoría de la Entrevista Pre-Test", description: "Supervisión de la fase de entrevista previa a la prueba." },
+                      { title: "Auditoría de la Prueba In-Test", description: "Verificación de la correcta administración de la etapa de toma de data fisiológica." },
+                      { title: "Auditoría del Análisis de Datos", description: "Revisión profunda de la interpretación de trazados fisiológicos." },
+                      { title: "Auditoría de la Entrevista Post-Test", description: "Evaluación del manejo del evaluado tras la examinación." },
+                      { title: "Sistemas de Calificación Manual y CQ", description: "Protocolo de puntuación manual ESS-M." },
+                      { title: "Sistema de Calificación Algorítmico OSS-3", description: "Auditoría del análisis computarizado avanzado." },
+                      { title: "Evaluación Teórica del Control de Calidad", description: "Validación de los conocimientos científicos y normativos en PDD." },
+                      { title: "Evaluación Práctica del Proceso Integral", description: "Ejecución real de una auditoría completa de control de calidad." },
+                    ]).map((area, idx) => (
+                      <li key={idx} className="text-[#525252] text-sm font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                        <strong>{area.title}:</strong> {area.description}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <p
+                  className="text-[#525252] text-[15px] leading-[26px] font-light"
+                  style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                >
+                  Cada pilar ha sido diseñado para garantizar que los auditores obtengan las competencias necesarias para asegurar que los resultados sean técnica y legalmente incuestionables.
                 </p>
               </div>
-            ))}
-          </div>
+            </div>
 
+          </div>
         </div>
       </section>
 
-      {/* Sección: Ventajas de formarse con nosotros (Estilo Beneficios Vetting) */}
+      {/* Características Generales Section */}
+      <section className="bg-white py-16 md:py-24">
+        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1000px] mx-auto px-8 md:px-12 lg:px-16">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-12 h-[2px] bg-[#700FA3]" />
+            <span
+              style={{
+                letterSpacing: "1px",
+                fontSize: "14px",
+                color: "#700FA3",
+                fontWeight: "600",
+                fontFamily: "var(--font-montserrat), sans-serif",
+              }}
+            >
+              Ficha Técnica
+            </span>
+          </div>
+
+          <h2
+            className="text-2xl sm:text-3xl md:text-[36px] font-bold text-[#48255A] mb-12"
+            style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.2" }}
+          >
+            Características Generales del Curso
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {(fichaTecnica && fichaTecnica.length > 0 ? fichaTecnica : [
+              { title: "💻 Modalidad", description: "100% en línea" },
+              { title: "📅 Fechas", description: "Consulte nuestra próxima convocatoria." },
+              { title: "⏰ Horarios", description: "Lunes a viernes (19:00 a 22:00) y dos sábados (08:00 a 13:00)." }
+            ]).map((feat, index) => {
+              const emojiRegex = /([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g;
+              const emojiMatch = feat.title.match(emojiRegex);
+              const icon = emojiMatch ? emojiMatch[0] : "📌";
+              const titleClean = feat.title.replace(icon, "").trim();
+              const isThirdCardColSpan = (fichaTecnica && fichaTecnica.length > 0) ? "" : (index === 2 ? "md:col-span-2" : "");
+
+              return (
+                <div key={index} className={`flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 ${isThirdCardColSpan}`}>
+                  <div className="text-4xl mb-3">{icon}</div>
+                  <h3 className="text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
+                    {titleClean}
+                  </h3>
+                  <p className="text-[#525252] text-sm leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                    {feat.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Beneficios Section */}
       <section className="bg-white py-12 md:py-16 overflow-hidden relative">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#700FA3]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
-        
+
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16 flex flex-col lg:flex-row items-center gap-8 lg:gap-12 relative z-10">
-          
+
           {/* Left Column: Images */}
           <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-start">
             <div className="relative w-full max-w-md">
               <div className="rounded-3xl overflow-hidden shadow-2xl relative z-10 border-4 border-white">
-                <img 
-                  src="/pruebas-poligrafo/primer.webp" 
-                  alt="Estudiante de poligrafía en formación técnica" 
+                <img
+                  src="/servicios/3.webp"
+                  alt="Control de Calidad en Poligrafía"
                   loading="lazy"
                   className="w-full h-auto object-cover aspect-[4/5]"
                 />
               </div>
-              
+
               <div className="absolute -bottom-12 -right-12 w-2/3 rounded-3xl overflow-hidden shadow-xl z-20 border-4 border-white hidden md:block">
-                <img 
-                  src="/pruebas-poligrafo/segunda.webp" 
-                  alt="Práctica pericial con polígrafo" 
+                <img
+                  src="/capacitacion.webp"
+                  alt="Capacitación en Control de Calidad"
                   loading="lazy"
                   className="w-full h-auto object-cover aspect-square"
                 />
@@ -348,10 +355,10 @@ export default function CursoBasicoPoligrafiaPage() {
                   fontFamily: "var(--font-montserrat), sans-serif",
                 }}
               >
-                Ventajas Exclusivas
+                Beneficios
               </span>
             </div>
-            
+
             <h2
               className="text-2xl sm:text-3xl md:text-[36px] mb-6"
               style={{
@@ -361,40 +368,15 @@ export default function CursoBasicoPoligrafiaPage() {
                 fontFamily: "var(--font-montserrat), sans-serif",
               }}
             >
-              Ventajas de formarse con nosotros
+              ¿Qué obtendrá al finalizar?
             </h2>
 
-            <ul className="flex flex-col gap-3 w-full mb-6">
-              {[
-                { 
-                  title: "Experiencia Docente", 
-                  text: "Aprenda de instructores activos con amplia trayectoria en el ámbito forense y de seguridad." 
-                },
-                { 
-                  title: "Networking de Élite", 
-                  text: "Forme parte de una comunidad profesional de poligrafistas en toda la región." 
-                },
-                { 
-                  title: "Carrera de Futuro", 
-                  text: "Acceda a oportunidades laborales en agencias gubernamentales, inteligencia y seguridad corporativa privada." 
-                }
-              ].map((item, idx) => (
-                <li key={idx} className="flex items-start gap-3 py-1">
-                  <div className="w-6 h-6 rounded flex items-center justify-center bg-[#700FA3] text-white shrink-0 mt-0.5 shadow-md">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span 
-                    className="text-base text-[#525252] font-medium leading-relaxed"
-                    style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                  >
-                    <strong className="font-bold text-[#48255A]">{item.title}: </strong>
-                    {item.text}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <p
+              className="text-base text-[#525252] font-light leading-relaxed mb-6"
+              style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+            >
+              Al aprobar satisfactoriamente el programa, recibirá la <strong className="font-bold text-[#48255A]">certificación oficial de Auditor Profesional en Control de Calidad en Poligrafía</strong>, otorgada por <strong className="font-bold text-[#48255A]">One True Polygraph Training Academy</strong>.
+            </p>
 
             <a
               href="#contacto"
@@ -410,16 +392,16 @@ export default function CursoBasicoPoligrafiaPage() {
                 border: "none"
               }}
             >
-              <span>Solicitar Admisión e Información</span>
+              <span>Solicitar información del módulo</span>
             </a>
 
           </div>
         </div>
       </section>
 
-      {/* ── FORMULARIO DE CONTACTO (Estilo Vetting) ── */}
-      <section 
-        id="contacto" 
+      {/* ── FORMULARIO DE CONTACTO ── */}
+      <section
+        id="contacto"
         className="py-12 md:py-16 relative overflow-hidden"
         style={{
           backgroundImage: "linear-gradient(60deg, #700FA3 50%, #8A15C4 90%)",
@@ -432,7 +414,7 @@ export default function CursoBasicoPoligrafiaPage() {
 
         <div className="max-w-6xl lg:max-w-7xl xl:max-w-[1200px] mx-auto px-6 md:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-            
+
             {/* LADO IZQUIERDO: Información Comercial */}
             <div className="lg:col-span-6 flex flex-col text-left">
               {/* Logo de One True */}
@@ -440,6 +422,7 @@ export default function CursoBasicoPoligrafiaPage() {
                 <img src="/FORM.webp" alt="One True Logo" loading="lazy" className="h-20 md:h-24 w-auto object-contain" />
               </div>
 
+              {/* Título adaptado al estilo estándar de la página */}
               <h2
                 style={{
                   fontSize: "clamp(24px, 5vw, 36px)",
@@ -462,28 +445,28 @@ export default function CursoBasicoPoligrafiaPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.387a12.035 12.035 0 01-7.108-7.108c-.155-.44.011-.928.387-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                   </svg>
                   <div className="flex flex-col">
-                    <h3 
-                      style={{ 
-                        fontSize: "18px", 
-                        fontWeight: "bold", 
-                        color: "#ffffff", 
+                    <h3
+                      style={{
+                        fontSize: "18px",
+                        fontWeight: "bold",
+                        color: "#ffffff",
                         fontFamily: "var(--font-montserrat), sans-serif",
                         marginBottom: "4px"
                       }}
                     >
                       Teléfono
                     </h3>
-                    <a 
-                      href="tel:593099371290" 
-                      style={{ 
-                        color: "rgba(255, 255, 255, 0.85)", 
-                        fontSize: "16px", 
-                        fontWeight: "300", 
-                        fontFamily: "var(--font-montserrat), sans-serif" 
+                    <a
+                      href={`tel:${contactPhone || "0981296179"}`}
+                      style={{
+                        color: "rgba(255, 255, 255, 0.85)",
+                        fontSize: "16px",
+                        fontWeight: "300",
+                        fontFamily: "var(--font-montserrat), sans-serif"
                       }}
                       className="hover:text-[#FFC107] transition-colors"
                     >
-                      +593 099 371 2790
+                      {contactPhone || "098 129 6179"}
                     </a>
                   </div>
                 </div>
@@ -494,22 +477,22 @@ export default function CursoBasicoPoligrafiaPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75m3-3h.75m-.75 3h.75m-6 3h.75m3 0h.75m3 0h.75" />
                   </svg>
                   <div className="flex flex-col">
-                    <h3 
-                      style={{ 
-                        fontSize: "18px", 
-                        fontWeight: "bold", 
-                        color: "#ffffff", 
+                    <h3
+                      style={{
+                        fontSize: "18px",
+                        fontWeight: "bold",
+                        color: "#ffffff",
                         fontFamily: "var(--font-montserrat), sans-serif",
                         marginBottom: "4px"
                       }}
                     >
                       Agencia Quito
                     </h3>
-                    <p 
-                      style={{ 
-                        color: "rgba(255, 255, 255, 0.85)", 
-                        fontSize: "15px", 
-                        fontWeight: "300", 
+                    <p
+                      style={{
+                        color: "rgba(255, 255, 255, 0.85)",
+                        fontSize: "15px",
+                        fontWeight: "300",
                         fontFamily: "var(--font-montserrat), sans-serif",
                         lineHeight: "1.4"
                       }}
@@ -526,22 +509,22 @@ export default function CursoBasicoPoligrafiaPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                   </svg>
                   <div className="flex flex-col">
-                    <h3 
-                      style={{ 
-                        fontSize: "18px", 
-                        fontWeight: "bold", 
-                        color: "#ffffff", 
+                    <h3
+                      style={{
+                        fontSize: "18px",
+                        fontWeight: "bold",
+                        color: "#ffffff",
                         fontFamily: "var(--font-montserrat), sans-serif",
                         marginBottom: "4px"
                       }}
                     >
                       Agencia Guayaquil
                     </h3>
-                    <p 
-                      style={{ 
-                        color: "rgba(255, 255, 255, 0.85)", 
-                        fontSize: "15px", 
-                        fontWeight: "300", 
+                    <p
+                      style={{
+                        color: "rgba(255, 255, 255, 0.85)",
+                        fontSize: "15px",
+                        fontWeight: "300",
                         fontFamily: "var(--font-montserrat), sans-serif",
                         lineHeight: "1.4"
                       }}
@@ -557,24 +540,24 @@ export default function CursoBasicoPoligrafiaPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                   </svg>
                   <div className="flex flex-col">
-                    <h3 
-                      style={{ 
-                        fontSize: "18px", 
-                        fontWeight: "bold", 
-                        color: "#ffffff", 
+                    <h3
+                      style={{
+                        fontSize: "18px",
+                        fontWeight: "bold",
+                        color: "#ffffff",
                         fontFamily: "var(--font-montserrat), sans-serif",
                         marginBottom: "4px"
                       }}
                     >
                       Correo
                     </h3>
-                    <a 
-                      href="mailto:info@somosonetrue.com" 
-                      style={{ 
-                        color: "rgba(255, 255, 255, 0.85)", 
-                        fontSize: "16px", 
-                        fontWeight: "300", 
-                        fontFamily: "var(--font-montserrat), sans-serif" 
+                    <a
+                      href="mailto:info@somosonetrue.com"
+                      style={{
+                        color: "rgba(255, 255, 255, 0.85)",
+                        fontSize: "16px",
+                        fontWeight: "300",
+                        fontFamily: "var(--font-montserrat), sans-serif"
                       }}
                       className="hover:text-[#FFC107] transition-colors"
                     >
@@ -586,11 +569,11 @@ export default function CursoBasicoPoligrafiaPage() {
 
               {/* Redes Sociales y Síguenos */}
               <div className="flex flex-col items-start gap-3 mt-6 pt-4 border-t border-white/10 w-full">
-                <h3 
-                  style={{ 
-                    fontSize: "18px", 
-                    fontWeight: "bold", 
-                    color: "#ffffff", 
+                <h3
+                  style={{
+                    fontSize: "18px",
+                    fontWeight: "bold",
+                    color: "#ffffff",
                     fontFamily: "var(--font-montserrat), sans-serif",
                     marginBottom: "4px"
                   }}
@@ -598,8 +581,9 @@ export default function CursoBasicoPoligrafiaPage() {
                   Síguenos:
                 </h3>
                 <div className="flex items-center gap-3">
-                  <a 
-                    href="https://www.facebook.com/share/1F8T24NNKE/" 
+                  {/* Facebook */}
+                  <a
+                    href="https://www.facebook.com/somosonetrue"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Síguenos en Facebook"
@@ -609,8 +593,9 @@ export default function CursoBasicoPoligrafiaPage() {
                       <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
                     </svg>
                   </a>
-                  <a 
-                    href="https://www.instagram.com/somosonetrue?igsh=bXNmOWYwaWpsdDVh" 
+                  {/* Instagram */}
+                  <a
+                    href="https://www.instagram.com/somosonetrue"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Síguenos en Instagram"
@@ -620,8 +605,9 @@ export default function CursoBasicoPoligrafiaPage() {
                       <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                     </svg>
                   </a>
-                  <a 
-                    href="https://www.linkedin.com/in/david-coli-fiallo-75679a198?utm_source=share_via&utm_content=profile&utm_medium=member_android" 
+                  {/* LinkedIn */}
+                  <a
+                    href="https://www.linkedin.com/company/somosonetrue"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Síguenos en LinkedIn"
@@ -638,48 +624,52 @@ export default function CursoBasicoPoligrafiaPage() {
             {/* LADO DERECHO: Tarjeta de Formulario */}
             <div className="lg:col-span-6 relative">
               <div className="bg-white rounded p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.35)] border border-neutral-100 relative overflow-hidden transition-all duration-500">
-                
+
                 {!formSubmitted ? (
+                  /* FORMULARIO ACTIVO */
                   <div>
-                    <form 
+
+                    <form
                       onSubmit={(e) => {
                         e.preventDefault();
                         setFormSubmitted(true);
                       }}
                       className="flex flex-col gap-3"
                     >
+                      {/* Fila 1: Nombre y Apellido */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                         <div className="flex flex-col gap-1">
                           <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Nombre *</label>
-                          <input 
-                            type="text" 
-                            placeholder="Tu nombre" 
-                            className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
+                          <input
+                            type="text"
+                            placeholder="Tu nombre"
+                            className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium"
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                            required 
+                            required
                           />
                         </div>
                         <div className="flex flex-col gap-1">
                           <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Apellido *</label>
-                          <input 
-                            type="text" 
-                            placeholder="Tu apellido" 
-                            className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
+                          <input
+                            type="text"
+                            placeholder="Tu apellido"
+                            className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium"
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                            required 
+                            required
                           />
                         </div>
                       </div>
 
+                      {/* Correo electrónico */}
                       <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Correo electrónico *</label>
                         <div className="relative">
-                          <input 
-                            type="email" 
-                            placeholder="correo@empresa.com" 
-                            className="px-4 py-2.5 pr-10 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
+                          <input
+                            type="email"
+                            placeholder="correo@empresa.com"
+                            className="px-4 py-2.5 pr-10 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium"
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                            required 
+                            required
                           />
                           <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-[#700FA3]">
                             <svg className="w-5 h-5 text-[#700FA3]" viewBox="0 0 20 20" fill="currentColor">
@@ -690,20 +680,22 @@ export default function CursoBasicoPoligrafiaPage() {
                         </div>
                       </div>
 
+                      {/* Teléfono con Selector Bandera y Prefijo Real de Países */}
                       <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Número de teléfono *</label>
                         <div className="relative flex items-center border-0 rounded bg-neutral-50 focus-within:ring-2 focus-within:ring-[#700FA3]/20 focus-within:bg-white focus-within:shadow-md transition-all overflow-hidden">
+                          {/* Selector de Bandera y Prefijo Real de Países */}
                           <div className="flex items-center gap-2 pl-3 border-r border-neutral-200/60 bg-transparent shrink-0">
-                            <img 
-                              src={`https://flagcdn.com/w20/${country}.png`} 
-                              alt={country} 
-                              className="w-5 h-auto object-contain select-none" 
+                            <img
+                              src={`https://flagcdn.com/w20/${country}.png`}
+                              alt={country}
+                              className="w-5 h-auto object-contain select-none"
                             />
-                            <select 
+                            <select
                               value={country}
                               onChange={(e) => setCountry(e.target.value)}
                               className="bg-transparent border-0 py-2.5 pl-1 pr-6 text-sm font-semibold text-neutral-700 outline-none focus:ring-0 cursor-pointer appearance-none"
-                              style={{ 
+                              style={{
                                 fontFamily: "var(--font-montserrat), sans-serif",
                                 backgroundImage: `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E")`,
                                 backgroundPosition: 'right 0.1rem center',
@@ -721,12 +713,13 @@ export default function CursoBasicoPoligrafiaPage() {
                               <option value="us">+1</option>
                             </select>
                           </div>
-                          <input 
-                            type="tel" 
-                            placeholder="+593 099 371 2790" 
-                            className="flex-1 px-4 py-2.5 bg-transparent border-none text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-0 text-sm font-medium" 
+                          {/* Input */}
+                          <input
+                            type="tel"
+                            placeholder="098 129 6179"
+                            className="flex-1 px-4 py-2.5 bg-transparent border-none text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-0 text-sm font-medium"
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                            required 
+                            required
                           />
                           <div className="pr-3 text-[#700FA3] pointer-events-none">
                             <svg className="w-5 h-5 text-[#700FA3]" viewBox="0 0 20 20" fill="currentColor">
@@ -736,52 +729,62 @@ export default function CursoBasicoPoligrafiaPage() {
                         </div>
                       </div>
 
+                      {/* Ciudad */}
                       <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Ciudad *</label>
-                        <input 
-                          type="text" 
-                          placeholder="Tu ciudad" 
-                          className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
+                        <input
+                          type="text"
+                          placeholder="Tu ciudad"
+                          className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium"
                           style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                          required 
+                          required
                         />
                       </div>
 
+                      {/* Mensaje */}
                       <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Mensaje *</label>
-                        <textarea 
-                          placeholder="Escribe tu mensaje aquí..." 
-                          rows={2} 
-                          className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium resize-none" 
+                        <textarea
+                          placeholder="Escribe tu mensaje aquí..."
+                          rows={2}
+                          className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium resize-none"
                           style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                          required 
+                          required
                         ></textarea>
                       </div>
 
+                      {/* Cláusula de Aceptación */}
                       <div className="flex flex-col gap-4 mt-2">
                         <p className="text-[11px] text-neutral-500 leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                           Al enviar este formulario, acepto que mis datos personales sean tratados de acuerdo con la{" "}
-                          <a href="#" className="text-[#700FA3] hover:underline font-bold">
+                          <a
+                            href="#"
+                            className="text-[#700FA3] hover:underline font-bold"
+                          >
                             Política de tratamiento de datos personales
                           </a>{" "}
                           y los{" "}
-                          <a href="#" className="text-[#700FA3] hover:underline font-bold">
+                          <a
+                            href="#"
+                            className="text-[#700FA3] hover:underline font-bold"
+                          >
                             términos establecidos en ella
                           </a>.
                         </p>
                         <div className="flex items-center gap-3">
-                          <input 
-                            type="checkbox" 
-                            id="aceptar-curso" 
-                            className="w-4 h-4 rounded border-neutral-300 text-[#700FA3] focus:ring-[#700FA3] cursor-pointer" 
-                            required 
+                          <input
+                            type="checkbox"
+                            id="aceptar"
+                            className="w-4 h-4 rounded border-neutral-300 text-[#700FA3] focus:ring-[#700FA3] cursor-pointer"
+                            required
                           />
-                          <label htmlFor="aceptar-curso" className="text-xs font-bold text-neutral-700 cursor-pointer select-none" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                          <label htmlFor="aceptar" className="text-xs font-bold text-neutral-700 cursor-pointer select-none" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                             Aceptar
                           </label>
                         </div>
                       </div>
 
+                      {/* Botón de Cotización */}
                       <button
                         type="submit"
                         className="mt-2 px-8 py-3.5 bg-[#700FA3] hover:bg-[#5C0B87] text-white font-bold rounded transition-all duration-300 w-full shadow-lg shadow-[#700FA3]/25 hover:scale-[1.01] active:scale-[0.99] text-base"
@@ -790,9 +793,10 @@ export default function CursoBasicoPoligrafiaPage() {
                         Cotizar ahora
                       </button>
 
+                      {/* WhatsApp Callout inside the Form */}
                       <div className="flex flex-col items-center gap-1.5 mt-5 pt-4 border-t border-neutral-100 w-full">
-                        <span 
-                          style={{ 
+                        <span
+                          style={{
                             fontFamily: "var(--font-montserrat), sans-serif",
                             fontSize: "14px",
                             fontWeight: "bold",
@@ -802,31 +806,31 @@ export default function CursoBasicoPoligrafiaPage() {
                           O escríbenos
                         </span>
                         <div className="elementor-button-wrapper flex justify-center w-auto mt-1">
-                          <a 
+                          <a
                             className="elementor-button elementor-button-link elementor-size-sm flex items-center justify-center gap-2 px-6 py-2.5 bg-[#00C233] hover:bg-[#00a82c] text-white font-bold transition-all duration-300 rounded shadow-sm hover:shadow hover:scale-[1.02]"
-                            href="https://api.whatsapp.com/send?phone=593099371290&text=Hola!%20Deseo%20conocer%20mas%20informacion%20sobre%20el%20Curso%20Basico%20de%20Poligrafia%20400H."
+                            href="https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
                             target="_blank"
                             rel="noopener noreferrer"
-                            style={{ 
-                              fontFamily: "var(--font-montserrat), sans-serif", 
-                              fontSize: "15px", 
+                            style={{
+                              fontFamily: "var(--font-montserrat), sans-serif",
+                              fontSize: "15px",
                               fontWeight: "bold",
-                              color: "#ffffff" 
+                              color: "#ffffff"
                             }}
                           >
                             <span className="elementor-button-content-wrapper flex items-center justify-center gap-2" style={{ color: "#ffffff" }}>
                               <span className="elementor-button-icon flex items-center">
-                                <svg 
-                                  aria-hidden="true" 
-                                  className="e-font-icon-svg e-fab-whatsapp w-4.5 h-4.5 fill-current" 
-                                  viewBox="0 0 448 512" 
+                                <svg
+                                  aria-hidden="true"
+                                  className="e-font-icon-svg e-fab-whatsapp w-4.5 h-4.5 fill-current"
+                                  viewBox="0 0 448 512"
                                   xmlns="http://www.w3.org/2000/svg"
                                   style={{ fill: "#ffffff", color: "#ffffff" }}
                                 >
                                   <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L3 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path>
                                 </svg>
                               </span>
-                              <span className="elementor-button-text font-bold" style={{ color: "#ffffff", fontWeight: "bold" }}>+593 099 371 2790</span>
+                              <span className="elementor-button-text font-bold" style={{ color: "#ffffff", fontWeight: "bold" }}>+593 98 129 6179</span>
                             </span>
                           </a>
                         </div>
@@ -834,6 +838,7 @@ export default function CursoBasicoPoligrafiaPage() {
                     </form>
                   </div>
                 ) : (
+                  /* PANTALLA DE ÉXITO */
                   <div className="flex flex-col items-center text-center py-10">
                     <div className="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mb-6 animate-bounce">
                       <svg className="w-10 h-10 text-green-500" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -866,10 +871,7 @@ export default function CursoBasicoPoligrafiaPage() {
         </div>
       </section>
 
-      {/* Footer */}
       <Footer />
-      
-      {/* WhatsApp Button */}
       <FloatingWhatsApp />
     </main>
   );

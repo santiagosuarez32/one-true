@@ -4,47 +4,12 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-export default function Services() {
+export default function Services({ initialServices = [] }: { initialServices?: any[] }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
-  const [services, setServices] = useState<any[]>([]);
-
-  useEffect(() => {
-    fetch("/api/cms")
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.services) {
-          const published = data.services.filter((s: any) => s.published);
-          
-          const desiredOrder = [
-            "pruebas-poligraficas",
-            "vetting",
-            "estudio-de-confiabilidad-360",
-            "visitas-domiciliarias",
-            "pruebas-toxicologicas",
-            "evaluaciones-psicometricas",
-            "prueba-de-honestidad-etica-y-valores",
-            "curso-basico-en-poligrafia"
-          ];
-          
-          published.sort((a: any, b: any) => {
-            const indexA = desiredOrder.indexOf(a.id);
-            const indexB = desiredOrder.indexOf(b.id);
-            if (indexA === -1 && indexB === -1) return 0;
-            if (indexA === -1) return 1;
-            if (indexB === -1) return -1;
-            return indexA - indexB;
-          });
-
-          setServices(published);
-        }
-      })
-      .catch((err) => console.error("Error loading services:", err));
-  }, []);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-
     const ctx = gsap.context(() => {
       cardsRef.current.forEach((card, index) => {
         if (card) {
@@ -73,7 +38,7 @@ export default function Services() {
     return () => {
       ctx.revert();
     };
-  }, [services]);
+  }, [initialServices]);
 
   const defaultServices = [
     {
@@ -134,7 +99,7 @@ export default function Services() {
     }
   ];
 
-  const serviceItems = services.length > 0 ? services : defaultServices;
+  const serviceItems = initialServices.length > 0 ? initialServices : defaultServices;
 
   return (
     <section id="services" className="bg-white pt-10 pb-24">

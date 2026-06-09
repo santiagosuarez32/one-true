@@ -1,175 +1,116 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
+const focusAreas = [
+  {
+    title: "Ejes Temáticos",
+    items: [
+      "Un recorrido profundo por el proceso de análisis de datos poligráficos:",
+      "Latencia Inferior.",
+      "Latencia superior.",
+      "Ventana de inicio de respuesta fija.",
+      "Ventana de inicio de respuesta permisiva.",
+      "Ventana de Evaluación Fija.",
+      "Ventana de Evaluación permisiva.",
+      "Reacciones simples en EDA y Cardio.",
+      "Reacciones Complejas en EDA y Cardio.",
+      "Plano cartesiano y el análisis de datos.",
+      "Variables extrañas y su impacto en el análisis de los datos.",
+      "Criterios de tolerancia para la extracción de características.",
+      "Eventos de artefactos y su impacto en el análisis de datos.",
+    ],
+    iconViewBox: "0 0 85 93",
+    iconPaths: [
+      "M27.648 39.7c0 13.904 11.447 25.217 25.516 25.217s25.5-11.312 25.5-25.217a24.71 24.71 0 0 0-2.78-11.457c-1.654-3.2-4.024-6.058-6.878-8.302v-2.443c0-5.292-1.704-9.778-4.926-12.973C61.215 1.672 57.342.066 53.187 0a.87.87 0 0 0-.043 0c-4.158.065-8.033 1.672-10.9 4.524-3.224 3.194-4.927 7.68-4.927 12.973v2.443a25.54 25.54 0 0 0-6.878 8.302c-1.845 3.57-2.78 7.424-2.78 11.457zm44.387 12.6a22.85 22.85 0 0 1-18.871 9.916c-7.844 0-14.775-3.938-18.876-9.918v-3.36c0-5.464 3.526-7.155 7.72-8.368l8.472 4.913c.976.62 1.828.93 2.68.93s1.705-.3 2.68-.93l8.473-4.913c4.193 1.214 7.72 2.904 7.72 8.37v3.36zm-26.4-12.76c1.4-.62 2.137-1.917 2.584-2.96a15.43 15.43 0 0 0 .849.344c1.46.534 2.783.8 4.106.8s2.646-.267 4.102-.8a15.4 15.4 0 0 0 .85-.344c.446 1.045 1.184 2.34 2.584 2.96l-6.263 3.632a1.15 1.15 0 0 0-.051.031c-1.075.688-1.372.688-2.448 0l-.05-.03-6.262-3.63zm30.32.16a22.19 22.19 0 0 1-1.29 7.47c-.774-6.183-5.648-8.096-10.156-9.353l-.033-.01-1.5-.407-.958-.255c-.723-.194-1.163-1.092-1.467-1.86 4.334-2.777 7.708-7.484 8.368-11.878 4.508 4.237 7.047 10.042 7.047 16.3zm-22.78-37c5.98.104 12.385 4.3 13.064 13.2-1.392-.376-2.108-1.098-2.856-1.853-1.046-1.056-2.348-2.37-5.1-1.67l-1.96.5c-1.63.43-2.446.647-3.148.647s-1.528-.217-3.167-.65l-1.947-.507c-2.748-.7-4.05.613-5.094 1.668-.75.755-1.466 1.48-2.862 1.855.68-8.923 7.087-13.108 13.07-13.212zm-13.13 15.988c2.625-.478 3.904-1.767 4.87-2.743.93-.938 1.243-1.253 2.463-.943l1.923.5c1.8.48 2.808.742 3.872.742s2.053-.262 3.854-.74L58.962 15c1.225-.312 1.538.005 2.47.944.967.975 2.244 2.263 4.866 2.74v3.193c0 4.72-4.66 10.568-9.97 12.513-2.327.854-3.978.854-6.3 0-5.312-1.946-9.97-7.794-9.97-12.513v-3.193zm-2.6 4.72c.66 4.393 4.035 9.1 8.37 11.878-.304.767-.745 1.665-1.464 1.86l-.955.254-1.505.405a1.26 1.26 0 0 0-.075.021c-4.5 1.257-9.354 3.175-10.127 9.343a22.18 22.18 0 0 1-1.3-7.47c0-6.25 2.54-12.054 7.047-16.3zm38.193-6.053l-2.087-1.9c-.58-.477-1.44-.4-1.922.175a1.34 1.34 0 0 0 .177 1.9l1.902 1.722C79.23 24.722 82.27 31.98 82.27 39.7s-3.04 14.977-8.562 20.435c-11.4 11.268-29.948 11.268-41.347 0C26.84 54.677 23.8 47.42 23.8 39.7s3.04-14.977 8.563-20.435c.53-.525 1.028-.983 1.52-1.4a1.34 1.34 0 0 0 .148-1.903c-.5-.566-1.352-.63-1.925-.146a29.31 29.31 0 0 0-1.673 1.54C24.395 23.324 21.07 31.26 21.07 39.7a31.12 31.12 0 0 0 6 18.439l-6.165 6.094-.126-.125a2.36 2.36 0 0 0-1.669-.682 2.36 2.36 0 0 0-1.67.683l-4.22 4.175c-.01.01-.02.017-.03.026s-.018.02-.027.03l-3.2 3.16a1.34 1.34 0 0 0 .001 1.908c.533.527 1.398.526 1.93-.001l2.26-2.236 7.036 6.954-9.977 9.86a4.96 4.96 0 0 1-3.517 1.435c-1.333 0-2.582-.5-3.518-1.436a4.87 4.87 0 0 1-1.45-3.477c0-1.317.515-2.553 1.45-3.477l3.56-3.518a1.34 1.34 0 0 0 0-1.908c-.533-.527-1.397-.527-1.93 0l-3.56 3.518A7.52 7.52 0 0 0 0 84.508c0 2.04.8 3.952 2.248 5.385a7.69 7.69 0 0 0 5.449 2.227c2.064 0 4-.8 5.448-2.227l15.2-15c.445-.44.7-1.027.7-1.653s-.245-1.213-.7-1.653l-.123-.122 6.168-6.097c5.55 3.947 12.102 5.922 18.654 5.922 8.186 0 16.372-3.08 22.604-9.24C81.676 56.074 85 48.14 85 39.698s-3.325-16.375-9.362-22.343zM23.122 76.22l-7.037-6.955 3.023-3 7.038 6.957-3.024 2.988zm3.16-6.67l-3.448-3.408 5.936-5.868a32.34 32.34 0 0 0 1.66 1.769c.58.573 1.176 1.12 1.787 1.638L26.28 69.55z",
+    ],
+  },
+];
 
-interface CounterProps {
-  end: number;
-  suffix?: string;
-  duration?: number;
-  fontSize?: string;
-}
+const advancedTechniques = [
+  {
+    title: "Análisis de Respiración (RIN/RSC)",
+    items: ["Evaluación de patrones respiratorios como indicadores de estrés y respuesta fisiológica."],
+    icon: "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
+  },
+  {
+    title: "Análisis Cardiovascular (CVT/GSR)",
+    items: ["Interpretación de cambios en presión arterial y respuesta galvánica de la piel."],
+    icon: "/icons/Browser-Hand--Streamline-Ultimate.webp",
+  },
+  {
+    title: "Zona de Comparación Relativa",
+    items: ["Técnica de comparación entre zonas de respuesta para identificar reacciones relevantes."],
+    icon: "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
+  },
+  {
+    title: "Análisis de Artefactos",
+    items: ["Identificación y evaluación de respuestas causadas por movimiento o factores externos."],
+    icon: "/icons/Password-Desktop--Streamline-Ultimate.webp",
+  },
+  {
+    title: "Scoring Automatizado",
+    items: ["Uso de software especializado para análisis cuantitativo y comparación de datos."],
+    icon: "/icons/Task-Checklist--Streamline-Ultimate.webp",
+  },
+  {
+    title: "Interpretación Forense",
+    items: ["Estándares de análisis aplicados en contextos legales y periciales."],
+    icon: "/icons/Monitor-Find--Streamline-Ultimate.webp",
+  },
+  {
+    title: "Reporte Técnico Profesional",
+    items: ["Redacción de conclusiones y dictámenes basados en análisis e interpretación de datos."],
+    icon: "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
+  },
+];
 
-function AnimatedCounter({ end, suffix = "", duration = 2000, fontSize = "42px" }: CounterProps) {
-  const [count, setCount] = useState(0);
-  const elementRef = useRef<HTMLDivElement>(null);
-  const [hasStarted, setHasStarted] = useState(false);
+import { Course } from "@/lib/cms";
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setHasStarted(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    const currentRef = elementRef.current;
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
-
-    return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!hasStarted) return;
-
-    let startTime: number | null = null;
-
-    const animate = (timestamp: number) => {
-      if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / duration, 1);
-      
-      // Easing: easeOutQuad
-      const easeProgress = progress * (2 - progress);
-      const currentCount = Math.floor(easeProgress * end);
-      
-      setCount(currentCount);
-
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      }
-    };
-
-    requestAnimationFrame(animate);
-  }, [hasStarted, end, duration]);
-
-  return (
-    <span 
-      ref={elementRef} 
-      style={{ 
-        color: "#FFC107", 
-        fontSize: fontSize, 
-        fontWeight: "900", 
-        lineHeight: "1",
-        fontFamily: "var(--font-montserrat), sans-serif",
-        letterSpacing: "-1px",
-        userSelect: "none"
-      }}
-    >
-      {count.toLocaleString("es-ES")}{suffix}
-    </span>
-  );
-}
-
-export default function VisitasDomiciliariasPage() {
-  const [dbData, setDbData] = useState<any>(null);
-
-  useEffect(() => {
-    fetch("/api/cms")
-      .then((res) => res.json())
-      .then((data) => {
-        const tableKey = data.services ? 'services' : 'courses';
-        if (data[tableKey]) {
-          const item = data[tableKey].find((s: any) => s.id === "visitas-domiciliarias");
-          if (item) setDbData(item);
-        }
-      })
-      .catch((err) => console.error("Error loading CMS data:", err));
-  }, []);
-
+export default function CalificacionGraficasPage({ course }: { course: Course }) {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [country, setCountry] = useState("ec");
 
-  const testTypes = [
-    {
-      title: "Visita Domiciliaria de Preempleo",
-      subtitle: "Filtro inicial de seguridad y entorno",
-      desc: "Verifique la honestidad de sus candidatos antes de la contratación. Confirmamos su lugar de residencia, referencias vecinales y las condiciones reales de su entorno sociofamiliar.",
-      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80",
-      details: [
-        "Validación del croquis de ubicación y dirección exacta.",
-        "Evaluación de las condiciones de habitabilidad y servicios.",
-        "Constatación de relaciones y convivencia familiar.",
-        "Entrevista vecinal discreta sobre conducta y reputación."
-      ],
-      cta: "Cotizar visita preempleo"
-    },
-    {
-      title: "Visita Domiciliaria de Control / Rutina",
-      subtitle: "Monitoreo continuo para puestos críticos",
-      desc: "Evaluación periódica diseñada para colaboradores activos que manejan información confidencial, dinero o activos críticos. Previene vulnerabilidades sobrevenidas en el tiempo.",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
-      details: [
-        "Análisis de cambios drásticos en el nivel socioeconómico.",
-        "Actualización de residencia y composición del grupo familiar.",
-        "Identificación de nuevas deudas u obligaciones críticas.",
-        "Detección de presiones externas en el entorno habitacional."
-      ],
-      cta: "Cotizar visita de control"
-    },
-    {
-      title: "Estudio Socioeconómico Completo 360°",
-      subtitle: "Auditoría integral del perfil sociofamiliar",
-      desc: "El análisis más profundo del entorno de un candidato. Combina la visita de campo presencial con validaciones rigurosas en más de 190 bases de datos legales y financieras.",
-      image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80",
-      details: [
-        "Auditoría patrimonial y de estilo de vida en campo.",
-        "Cruce con bases de datos financieras y tributarias.",
-        "Entrevistas estructuradas al candidato y grupo familiar.",
-        "Informe forense de confiabilidad y nivel de riesgo."
-      ],
-      cta: "Cotizar estudio completo"
-    }
-  ];
+  const {
+    heroTagline,
+    heroTitle,
+    heroDesc,
+    heroImage,
+    aboutTitle,
+    aboutDesc,
+    focusAreas: dbFocusAreas,
+    customCards,
+    fichaTecnica,
+    contactPhone,
+    contactWhatsapp
+  } = course.pageContent;
 
   return (
     <main className="min-h-screen bg-white text-[#525252] selection:bg-[#FFC107] selection:text-[#411A56]">
-      {/* Navbar */}
       <Navbar />
 
-      {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-start md:items-center justify-center overflow-hidden pt-32 pb-24 bg-[#700FA3]">
-        {/* Purple Overlay */}
-        <div 
+        <div
           className="absolute inset-0 z-0 pointer-events-none"
           style={{
-            background: "linear-gradient(to right, #700FA3 0%, #700FA3 35%, rgba(112, 15, 163, 0.9) 48%, rgba(112, 15, 163, 0.6) 60%, rgba(112, 15, 163, 0.3) 72%, rgba(112, 15, 163, 0.05) 86%, transparent 100%)"
+            background:
+              "linear-gradient(to right, #700FA3 0%, #700FA3 35%, rgba(112, 15, 163, 0.9) 48%, rgba(112, 15, 163, 0.6) 60%, rgba(112, 15, 163, 0.3) 72%, rgba(112, 15, 163, 0.05) 86%, transparent 100%)",
           }}
         />
 
-        <img 
-          src={dbData?.pageContent?.heroImage || "/domicilio/hero.webp"}
-          alt="One True Visitas Domiciliarias y Estudios Socioeconómicos"
+        <img
+          src={heroImage || "/servicios/1.webp"}
+          alt={heroTitle || "Calificación de Gráficas - One True Academia"}
           fetchPriority="high"
           className="absolute inset-0 w-full h-full object-cover object-right-top z-0 opacity-40 mix-blend-overlay pointer-events-none"
         />
 
-        {/* Centered Grid Container */}
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 z-10 flex justify-start items-center">
-          <div className="max-w-3xl text-left">
-            
-            {/* Tag Prefix */}
+          <div className="max-w-5xl text-left">
             <Breadcrumbs />
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-[3px] bg-[#FFC107]" />
@@ -182,7 +123,7 @@ export default function VisitasDomiciliariasPage() {
                   fontFamily: "var(--font-montserrat), sans-serif",
                 }}
               >
-                {dbData?.pageContent?.heroTagline || "Verificación de campo para una visión 360° de su futuro colaborador"}
+                {heroTagline}
               </span>
             </div>
 
@@ -194,10 +135,10 @@ export default function VisitasDomiciliariasPage() {
                 margin: "0 0 28px 0",
                 padding: 0,
                 color: "#FFFFFF",
-                textShadow: "0 2px 4px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.18)"
+                textShadow: "0 2px 4px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.18)",
               }}
             >
-              {dbData?.pageContent?.heroTitle || "Visitas"} <strong style={{ fontWeight: "800", textDecoration: "underline", textDecorationColor: "#FFC107", textUnderlineOffset: "6px" }}>{dbData?.pageContent?.heroUnderlined || "Domiciliarias"}</strong>
+              {heroTitle}
             </h1>
 
             <p
@@ -205,15 +146,14 @@ export default function VisitasDomiciliariasPage() {
               style={{
                 textAlign: "start",
                 fontFamily: "var(--font-montserrat), sans-serif",
-                color: "#FFFFFF"
+                color: "#FFFFFF",
               }}
             >
-              {dbData?.pageContent?.heroDesc || "La seguridad de su empresa no termina en la oficina. Nuestro servicio de visita domiciliaria permite conocer el entorno real del candidato, identificando factores de riesgo, niveles de vulnerabilidad y la veracidad de su situación socioeconómica."}
+              {heroDesc}
             </p>
 
-            {/* Hero CTA Button */}
             <div className="flex flex-wrap items-center gap-6 mt-6 mb-8">
-              <a 
+              <a
                 href="#contacto"
                 className="px-8 py-3 rounded transition-all hover:brightness-110 shadow-lg"
                 style={{
@@ -232,217 +172,185 @@ export default function VisitasDomiciliariasPage() {
                   cursor: "pointer",
                 }}
               >
-                <span className="elementor-button-text">Cotizar mi evaluación ahora</span>
+                Solicitar información del módulo
               </a>
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* Sobre el Servicio Section */}
       <section className="bg-white py-20">
-        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16">
-          
-          {/* Centered Small Header */}
-          <div className="flex flex-col items-center text-center mb-16">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-[3px] bg-[#700FA3]" />
-              <span
-                style={{
-                  letterSpacing: "0.5px",
-                  fontSize: "18px",
-                  color: "#700FA3",
-                  fontWeight: "600",
-                  fontFamily: "var(--font-montserrat), sans-serif",
-                }}
-              >
-                Sobre el Servicio
-              </span>
-            </div>
-            
-            <h2
-              style={{
-                fontSize: "clamp(24px, 5vw, 36px)",
-                fontWeight: "bold",
-                lineHeight: "46px",
-                color: "#48255A",
-                fontFamily: "var(--font-montserrat), sans-serif",
-                marginTop: "10px"
-              }}
-            >
-              ¿Qué evaluamos en el terreno?
-            </h2>
+        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
+          <div className="flex flex-col gap-16">
+            <div className="flex flex-col gap-12 items-start">
+              <div className="w-full max-w-4xl flex flex-col text-left">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-12 h-[2px] bg-[#700FA3]" />
+                  <span
+                    style={{
+                      letterSpacing: "1px",
+                      fontSize: "14px",
+                      color: "#700FA3",
+                      fontWeight: "600",
+                      fontFamily: "var(--font-montserrat), sans-serif",
+                    }}
+                  >
+                    Conoce nuestra metodología
+                  </span>
+                </div>
 
-            <p 
-              className="text-[#525252] text-base mt-4 max-w-2xl font-light"
-              style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-            >
-              Nuestros especialistas realizan una inspección profesional y ética centrada en:
-            </p>
-          </div>
-
-          {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              {
-                title: "Verificación de Entorno",
-                text: "Validación de la ubicación geográfica y condiciones de habitabilidad del candidato."
-              },
-              {
-                title: "Análisis Socio-Familiar",
-                text: "Identificación del núcleo familiar y detección de posibles conflictos de interés o riesgos externos."
-              },
-              {
-                title: "Coherencia de Vida",
-                text: "Contrastamos que el nivel de vida sea consistente con los ingresos y el cargo al que postula."
-              },
-              {
-                title: "Referencias de Vecindad",
-                text: "Obtención de información complementaria sobre la conducta y reputación del candidato en su comunidad."
-              }
-            ].map((item, idx) => (
-              <div 
-                key={idx} 
-                className="flex flex-col bg-white border border-neutral-200/80 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-neutral-300 transition-all duration-300 relative pl-4"
-              >
-                {/* Elegant left gold accent bar */}
-                <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#FFC107] rounded-l-xl" />
-                
-                {/* Card Title */}
-                <h3
-                  className="text-lg font-bold text-[#48255A]"
-                  style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3", marginBottom: "14px" }}
+                <h2
+                  className="mb-6"
+                  style={{
+                    fontFamily: "var(--font-montserrat), sans-serif",
+                    fontSize: "clamp(24px, 5vw, 36px)",
+                    fontWeight: "700",
+                    lineHeight: "1.2",
+                    color: "#48255A",
+                  }}
                 >
-                  {item.title}
-                </h3>
-                
-                {/* Description Text */}
-                <p 
-                  className="text-[#525252] text-sm leading-relaxed font-light flex-1"
+                  {aboutTitle || "Marco metodológico para análisis objetivos"}
+                </h2>
+
+                <p
+                  className="text-[#525252] text-[15px] leading-[26px] font-light"
                   style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                 >
-                  {item.text}
+                  {aboutDesc || "La calificación de gráficas poligráficas se estructura en tres ejes metodológicos que garantizan precisión y objetividad en cada evaluación, eliminando la subjetividad del análisis."}
                 </p>
               </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
-      {/* ¿Por qué contratarnos? Section */}
-      <section className="bg-white py-12 md:py-16 overflow-hidden relative">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#700FA3]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
-        
-        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-8 md:px-12 lg:px-16 flex flex-col lg:flex-row items-center gap-8 lg:gap-12 relative z-10">
-          
-          {/* Left Column: Images */}
-          <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-start">
-            <div className="relative w-full max-w-md">
-              <div className="rounded-3xl overflow-hidden shadow-2xl relative z-10 border-4 border-white">
-                <img 
-                  src="/pruebas-poligrafo/primer.webp" 
-                  alt="Profesional verificando entorno residencial" 
-                  loading="lazy"
-                  className="w-full h-auto object-cover aspect-[4/5]"
-                />
-              </div>
-              
-              <div className="absolute -bottom-12 -right-12 w-2/3 rounded-3xl overflow-hidden shadow-xl z-20 border-4 border-white hidden md:block">
-                <img 
-                  src="/pruebas-poligrafo/segunda.webp" 
-                  alt="Rastreo y entrevista en terreno" 
-                  loading="lazy"
-                  className="w-full h-auto object-cover aspect-square"
-                />
-              </div>
-
-              <div className="absolute -top-8 -left-8 w-24 h-24 z-0 opacity-20"
-                style={{
-                  backgroundImage: 'radial-gradient(#700FA3 2px, transparent 2px)',
-                  backgroundSize: '12px 12px'
-                }}
-              />
             </div>
-          </div>
 
-          {/* Right Column: Content */}
-          <div className="w-full lg:w-1/2 flex flex-col items-start lg:pl-10">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-[2px] bg-[#700FA3]" />
-              <span
-                style={{
-                  letterSpacing: "0.5px",
-                  fontSize: "16px",
-                  color: "#700FA3",
-                  fontWeight: "600",
-                  fontFamily: "var(--font-montserrat), sans-serif",
-                }}
-              >
-                Beneficios
-              </span>
-            </div>
-            
-            <h2
-              className="text-2xl sm:text-3xl md:text-[36px] mb-6"
-              style={{
-                fontWeight: "bold",
-                lineHeight: "1.2",
-                color: "#48255A",
-                fontFamily: "var(--font-montserrat), sans-serif",
-              }}
-            >
-              Beneficios para su Organización
-            </h2>
-
-            <ul className="flex flex-col gap-3 w-full mb-6">
-              {[
-                { title: "Prevención de Vulnerabilidades", text: "Detecte a tiempo situaciones personales que puedan comprometer la lealtad del empleado." },
-                { title: "Mitigación de Riesgos", text: "Evite la contratación de personal con entornos que faciliten actos ilícitos o fugas de información." },
-                { title: "Seguridad Patrimonial", text: "Proteja sus activos asegurándose de que el entorno del candidato sea estable y confiable." }
-              ].map((item, idx) => (
-                <li key={idx} className="flex items-start gap-3 py-1">
-                  <div className="w-6 h-6 rounded flex items-center justify-center bg-[#700FA3] text-white shrink-0 mt-0.5 shadow-md">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
-                    </svg>
+            <div className="flex flex-col gap-8">
+              {/* Ejes Temáticos (Big Card) */}
+              {(dbFocusAreas && dbFocusAreas.length > 0 ? dbFocusAreas : focusAreas).map((area, idx) => {
+                const anyArea = area as any;
+                return (
+                  <div key={`focus-${idx}`} className="flex flex-col items-start gap-8 lg:gap-12 bg-white p-8 lg:p-10 rounded-2xl border-l-4 border-l-[#FFC107] border border-neutral-100 shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_15px_35px_rgba(112,15,163,0.04)] transition-all duration-300 w-full">
+                    <div className="flex-1 w-full">
+                      <h3 className="text-lg md:text-xl font-bold text-[#48255A] mb-4" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
+                        {area.title}
+                      </h3>
+                      {anyArea.description && (
+                        <p className="text-sm text-[#525252] leading-relaxed font-light mb-3 font-normal text-[#48255A]" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                          {anyArea.description}
+                        </p>
+                      )}
+                      <div className="flex flex-col gap-2 list-disc pl-5">
+                        {(anyArea.items || []).map((item: string, itemIdx: number) => (
+                          <div key={itemIdx} className="flex items-start gap-2">
+                            <span className="text-[#700FA3] font-bold text-lg leading-none mt-0.5">•</span>
+                            <p className="text-sm text-[#525252] leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                              <strong className="font-semibold text-[#48255A]">{item}</strong>
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                  <span 
-                    className="text-base text-[#525252] font-medium leading-relaxed"
-                    style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                  >
-                    <strong className="font-bold text-[#48255A]">{item.title}: </strong>
-                    {item.text}
-                  </span>
-                </li>
-              ))}
-            </ul>
+                );
+              })}
 
-            <a
-              href="#contacto"
-              className="px-8 py-3 rounded transition-all hover:brightness-110 shadow-lg inline-block text-center cursor-pointer"
-              style={{
-                fontFamily: "var(--font-montserrat), sans-serif",
-                lineHeight: "1",
-                fontSize: "14px",
-                fontWeight: "600",
-                color: "#5F0091",
-                backgroundColor: "#FFC107",
-                textDecoration: "none",
-                border: "none"
-              }}
-            >
-              <span>Cotizar mi visita domiciliaria</span>
-            </a>
-
+              {/* Tarjetas Personalizadas Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                {(customCards && customCards.length > 0 ? customCards : advancedTechniques).map((technique, idx) => {
+                  const anyTechnique = technique as any;
+                  const icon = anyTechnique.icon || advancedTechniques[idx]?.icon || "/icons/Browser-Page-Account--Streamline-Ultimate.webp";
+                  return (
+                    <div key={`card-${idx}`} className="flex flex-col items-start gap-4 bg-white p-6 rounded-2xl border border-neutral-100 shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_15px_35px_rgba(112,15,163,0.04)] transition-all duration-300 h-full">
+                      <div className="shrink-0 w-12 h-12 flex items-center justify-center">
+                        {icon.endsWith(".svg") || icon.endsWith(".png") || icon.endsWith(".webp") || icon.endsWith(".jpg") || icon.endsWith(".jpeg") || icon.startsWith("/") || icon.startsWith("http") ? (
+                          <img src={icon} alt={technique.title} className="w-12 h-12 object-contain" />
+                        ) : (
+                          <div className="text-3xl">{icon}</div>
+                        )}
+                      </div>
+                      <div className="flex-1 w-full">
+                        <h3 className="text-base md:text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
+                          {technique.title}
+                        </h3>
+                        {anyTechnique.description && (
+                          <p className="text-sm text-[#525252] leading-relaxed font-light mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                            <strong className="font-semibold text-[#48255A]">{anyTechnique.description}</strong>
+                          </p>
+                        )}
+                        <div className="flex flex-col gap-2">
+                          {(technique.items || []).map((item, itemIdx) => (
+                            <p key={itemIdx} className="text-sm text-[#525252] leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                              <strong className="font-semibold text-[#48255A]">{item}</strong>
+                            </p>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── FORMULARIO DE CONTACTO ── */}
-      <section 
-        id="contacto" 
+
+      {/* Características Generales Section */}
+      <section className="bg-white py-16 md:py-24">
+        <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1000px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-12 h-[2px] bg-[#700FA3]" />
+            <span
+              style={{
+                letterSpacing: "1px",
+                fontSize: "14px",
+                color: "#700FA3",
+                fontWeight: "600",
+                fontFamily: "var(--font-montserrat), sans-serif",
+              }}
+            >
+              Ficha Técnica
+            </span>
+          </div>
+
+          <h2
+            className="text-2xl sm:text-3xl md:text-[36px] font-bold text-[#48255A] mb-12"
+            style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.2" }}
+          >
+            Características Generales del Curso
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {(fichaTecnica && fichaTecnica.length > 0 ? fichaTecnica : [
+              { title: "⏱️ 15 horas intensivas", description: "Entrenamiento especializado en análisis." },
+              { title: "📚 30 lecciones", description: "Especializadas en análisis cuantitativo." },
+              { title: "📊 Ejercicios prácticos", description: "Gráficas reales para calibrar criterio." },
+              { title: "📄 Guías descargables", description: "Tablas de puntuación y herramientas." },
+              { title: "✅ 30 días garantía", description: "Satisfacción garantizada." },
+              { title: "🔐 Comunidad ONE TRUE", description: "Resolución de dudas complejas." },
+              { title: "🎓 Diploma oficial", description: "Certifica competencia en análisis." }
+            ]).map((feat, index) => {
+              const emojiRegex = /([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g;
+              const emojiMatch = feat.title.match(emojiRegex);
+              const icon = emojiMatch ? emojiMatch[0] : "📌";
+              const titleClean = feat.title.replace(icon, "").trim();
+
+              return (
+                <div key={index} className="flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                  <div className="text-4xl mb-3">{icon}</div>
+                  <h3 className="text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
+                    {titleClean}
+                  </h3>
+                  <p className="text-[#525252] text-sm leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                    {feat.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FORMULARIO DE CONTACTO (ESTILO EXACTO GLOBALWORK #NOSOTROS - ADAPTADO A ONE TRUE) ── */}
+      <section
+        id="contacto"
         className="py-12 md:py-16 relative overflow-hidden"
         style={{
           backgroundImage: "linear-gradient(60deg, #700FA3 50%, #8A15C4 90%)",
@@ -455,7 +363,7 @@ export default function VisitasDomiciliariasPage() {
 
         <div className="max-w-6xl lg:max-w-7xl xl:max-w-[1200px] mx-auto px-6 md:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-            
+
             {/* LADO IZQUIERDO: Información Comercial */}
             <div className="lg:col-span-6 flex flex-col text-left">
               {/* Logo de One True */}
@@ -486,28 +394,28 @@ export default function VisitasDomiciliariasPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.387a12.035 12.035 0 01-7.108-7.108c-.155-.44.011-.928.387-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                   </svg>
                   <div className="flex flex-col">
-                    <h3 
-                      style={{ 
-                        fontSize: "18px", 
-                        fontWeight: "bold", 
-                        color: "#ffffff", 
+                    <h3
+                      style={{
+                        fontSize: "18px",
+                        fontWeight: "bold",
+                        color: "#ffffff",
                         fontFamily: "var(--font-montserrat), sans-serif",
                         marginBottom: "4px"
                       }}
                     >
                       Teléfono
                     </h3>
-                    <a 
-                      href="tel:0981296179" 
-                      style={{ 
-                        color: "rgba(255, 255, 255, 0.85)", 
-                        fontSize: "16px", 
-                        fontWeight: "300", 
-                        fontFamily: "var(--font-montserrat), sans-serif" 
+                    <a
+                      href={`tel:${contactPhone || "0981296179"}`}
+                      style={{
+                        color: "rgba(255, 255, 255, 0.85)",
+                        fontSize: "16px",
+                        fontWeight: "300",
+                        fontFamily: "var(--font-montserrat), sans-serif"
                       }}
                       className="hover:text-[#FFC107] transition-colors"
                     >
-                      098 129 6179
+                      {contactPhone || "098 129 6179"}
                     </a>
                   </div>
                 </div>
@@ -518,22 +426,22 @@ export default function VisitasDomiciliariasPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75m3-3h.75m-.75 3h.75m-6 3h.75m3 0h.75m3 0h.75" />
                   </svg>
                   <div className="flex flex-col">
-                    <h3 
-                      style={{ 
-                        fontSize: "18px", 
-                        fontWeight: "bold", 
-                        color: "#ffffff", 
+                    <h3
+                      style={{
+                        fontSize: "18px",
+                        fontWeight: "bold",
+                        color: "#ffffff",
                         fontFamily: "var(--font-montserrat), sans-serif",
                         marginBottom: "4px"
                       }}
                     >
                       Agencia Quito
                     </h3>
-                    <p 
-                      style={{ 
-                        color: "rgba(255, 255, 255, 0.85)", 
-                        fontSize: "15px", 
-                        fontWeight: "300", 
+                    <p
+                      style={{
+                        color: "rgba(255, 255, 255, 0.85)",
+                        fontSize: "15px",
+                        fontWeight: "300",
                         fontFamily: "var(--font-montserrat), sans-serif",
                         lineHeight: "1.4"
                       }}
@@ -550,22 +458,22 @@ export default function VisitasDomiciliariasPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                   </svg>
                   <div className="flex flex-col">
-                    <h3 
-                      style={{ 
-                        fontSize: "18px", 
-                        fontWeight: "bold", 
-                        color: "#ffffff", 
+                    <h3
+                      style={{
+                        fontSize: "18px",
+                        fontWeight: "bold",
+                        color: "#ffffff",
                         fontFamily: "var(--font-montserrat), sans-serif",
                         marginBottom: "4px"
                       }}
                     >
                       Agencia Guayaquil
                     </h3>
-                    <p 
-                      style={{ 
-                        color: "rgba(255, 255, 255, 0.85)", 
-                        fontSize: "15px", 
-                        fontWeight: "300", 
+                    <p
+                      style={{
+                        color: "rgba(255, 255, 255, 0.85)",
+                        fontSize: "15px",
+                        fontWeight: "300",
                         fontFamily: "var(--font-montserrat), sans-serif",
                         lineHeight: "1.4"
                       }}
@@ -581,24 +489,24 @@ export default function VisitasDomiciliariasPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                   </svg>
                   <div className="flex flex-col">
-                    <h3 
-                      style={{ 
-                        fontSize: "18px", 
-                        fontWeight: "bold", 
-                        color: "#ffffff", 
+                    <h3
+                      style={{
+                        fontSize: "18px",
+                        fontWeight: "bold",
+                        color: "#ffffff",
                         fontFamily: "var(--font-montserrat), sans-serif",
                         marginBottom: "4px"
                       }}
                     >
                       Correo
                     </h3>
-                    <a 
-                      href="mailto:info@somosonetrue.com" 
-                      style={{ 
-                        color: "rgba(255, 255, 255, 0.85)", 
-                        fontSize: "16px", 
-                        fontWeight: "300", 
-                        fontFamily: "var(--font-montserrat), sans-serif" 
+                    <a
+                      href="mailto:info@somosonetrue.com"
+                      style={{
+                        color: "rgba(255, 255, 255, 0.85)",
+                        fontSize: "16px",
+                        fontWeight: "300",
+                        fontFamily: "var(--font-montserrat), sans-serif"
                       }}
                       className="hover:text-[#FFC107] transition-colors"
                     >
@@ -610,11 +518,11 @@ export default function VisitasDomiciliariasPage() {
 
               {/* Redes Sociales y Síguenos */}
               <div className="flex flex-col items-start gap-3 mt-6 pt-4 border-t border-white/10 w-full">
-                <h3 
-                  style={{ 
-                    fontSize: "18px", 
-                    fontWeight: "bold", 
-                    color: "#ffffff", 
+                <h3
+                  style={{
+                    fontSize: "18px",
+                    fontWeight: "bold",
+                    color: "#ffffff",
                     fontFamily: "var(--font-montserrat), sans-serif",
                     marginBottom: "4px"
                   }}
@@ -623,8 +531,8 @@ export default function VisitasDomiciliariasPage() {
                 </h3>
                 <div className="flex items-center gap-3">
                   {/* Facebook */}
-                  <a 
-                    href="https://www.facebook.com/share/1F8T24NNKE/" 
+                  <a
+                    href="https://www.facebook.com/somosonetrue"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Síguenos en Facebook"
@@ -635,8 +543,8 @@ export default function VisitasDomiciliariasPage() {
                     </svg>
                   </a>
                   {/* Instagram */}
-                  <a 
-                    href="https://www.instagram.com/somosonetrue?igsh=bXNmOWYwaWpsdDVh" 
+                  <a
+                    href="https://www.instagram.com/somosonetrue"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Síguenos en Instagram"
@@ -647,8 +555,8 @@ export default function VisitasDomiciliariasPage() {
                     </svg>
                   </a>
                   {/* LinkedIn */}
-                  <a 
-                    href="https://www.linkedin.com/in/david-coli-fiallo-75679a198?utm_source=share_via&utm_content=profile&utm_medium=member_android" 
+                  <a
+                    href="https://www.linkedin.com/company/somosonetrue"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Síguenos en LinkedIn"
@@ -665,11 +573,12 @@ export default function VisitasDomiciliariasPage() {
             {/* LADO DERECHO: Tarjeta de Formulario */}
             <div className="lg:col-span-6 relative">
               <div className="bg-white rounded p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.35)] border border-neutral-100 relative overflow-hidden transition-all duration-500">
-                
+
                 {!formSubmitted ? (
                   /* FORMULARIO ACTIVO */
                   <div>
-                    <form 
+
+                    <form
                       onSubmit={(e) => {
                         e.preventDefault();
                         setFormSubmitted(true);
@@ -680,22 +589,22 @@ export default function VisitasDomiciliariasPage() {
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                         <div className="flex flex-col gap-1">
                           <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Nombre *</label>
-                          <input 
-                            type="text" 
-                            placeholder="Tu nombre" 
-                            className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
+                          <input
+                            type="text"
+                            placeholder="Tu nombre"
+                            className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium"
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                            required 
+                            required
                           />
                         </div>
                         <div className="flex flex-col gap-1">
                           <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Apellido *</label>
-                          <input 
-                            type="text" 
-                            placeholder="Tu apellido" 
-                            className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
+                          <input
+                            type="text"
+                            placeholder="Tu apellido"
+                            className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium"
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                            required 
+                            required
                           />
                         </div>
                       </div>
@@ -704,12 +613,12 @@ export default function VisitasDomiciliariasPage() {
                       <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Correo electrónico *</label>
                         <div className="relative">
-                          <input 
-                            type="email" 
-                            placeholder="correo@empresa.com" 
-                            className="px-4 py-2.5 pr-10 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
+                          <input
+                            type="email"
+                            placeholder="correo@empresa.com"
+                            className="px-4 py-2.5 pr-10 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium"
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                            required 
+                            required
                           />
                           <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-[#700FA3]">
                             <svg className="w-5 h-5 text-[#700FA3]" viewBox="0 0 20 20" fill="currentColor">
@@ -726,16 +635,16 @@ export default function VisitasDomiciliariasPage() {
                         <div className="relative flex items-center border-0 rounded bg-neutral-50 focus-within:ring-2 focus-within:ring-[#700FA3]/20 focus-within:bg-white focus-within:shadow-md transition-all overflow-hidden">
                           {/* Selector de Bandera y Prefijo Real de Países */}
                           <div className="flex items-center gap-2 pl-3 border-r border-neutral-200/60 bg-transparent shrink-0">
-                            <img 
-                              src={`https://flagcdn.com/w20/${country}.png`} 
-                              alt={country} 
-                              className="w-5 h-auto object-contain select-none" 
+                            <img
+                              src={`https://flagcdn.com/w20/${country}.png`}
+                              alt={country}
+                              className="w-5 h-auto object-contain select-none"
                             />
-                            <select 
+                            <select
                               value={country}
                               onChange={(e) => setCountry(e.target.value)}
                               className="bg-transparent border-0 py-2.5 pl-1 pr-6 text-sm font-semibold text-neutral-700 outline-none focus:ring-0 cursor-pointer appearance-none"
-                              style={{ 
+                              style={{
                                 fontFamily: "var(--font-montserrat), sans-serif",
                                 backgroundImage: `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E")`,
                                 backgroundPosition: 'right 0.1rem center',
@@ -754,12 +663,12 @@ export default function VisitasDomiciliariasPage() {
                             </select>
                           </div>
                           {/* Input */}
-                          <input 
-                            type="tel" 
-                            placeholder="098 129 6179" 
-                            className="flex-1 px-4 py-2.5 bg-transparent border-none text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-0 text-sm font-medium" 
+                          <input
+                            type="tel"
+                            placeholder="098 129 6179"
+                            className="flex-1 px-4 py-2.5 bg-transparent border-none text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-0 text-sm font-medium"
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                            required 
+                            required
                           />
                           <div className="pr-3 text-[#700FA3] pointer-events-none">
                             <svg className="w-5 h-5 text-[#700FA3]" viewBox="0 0 20 20" fill="currentColor">
@@ -772,24 +681,24 @@ export default function VisitasDomiciliariasPage() {
                       {/* Ciudad */}
                       <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Ciudad *</label>
-                        <input 
-                          type="text" 
-                          placeholder="Tu ciudad" 
-                          className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
+                        <input
+                          type="text"
+                          placeholder="Tu ciudad"
+                          className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium"
                           style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                          required 
+                          required
                         />
                       </div>
 
                       {/* Mensaje */}
                       <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Mensaje *</label>
-                        <textarea 
-                          placeholder="Escribe tu mensaje aquí..." 
-                          rows={2} 
-                          className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium resize-none" 
+                        <textarea
+                          placeholder="Escribe tu mensaje aquí..."
+                          rows={2}
+                          className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium resize-none"
                           style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                          required 
+                          required
                         ></textarea>
                       </div>
 
@@ -797,26 +706,26 @@ export default function VisitasDomiciliariasPage() {
                       <div className="flex flex-col gap-4 mt-2">
                         <p className="text-[11px] text-neutral-500 leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                           Al enviar este formulario, acepto que mis datos personales sean tratados de acuerdo con la{" "}
-                          <a 
-                            href="#" 
+                          <a
+                            href="#"
                             className="text-[#700FA3] hover:underline font-bold"
                           >
                             Política de tratamiento de datos personales
                           </a>{" "}
                           y los{" "}
-                          <a 
-                            href="#" 
+                          <a
+                            href="#"
                             className="text-[#700FA3] hover:underline font-bold"
                           >
                             términos establecidos en ella
                           </a>.
                         </p>
                         <div className="flex items-center gap-3">
-                          <input 
-                            type="checkbox" 
-                            id="aceptar" 
-                            className="w-4 h-4 rounded border-neutral-300 text-[#700FA3] focus:ring-[#700FA3] cursor-pointer" 
-                            required 
+                          <input
+                            type="checkbox"
+                            id="aceptar"
+                            className="w-4 h-4 rounded border-neutral-300 text-[#700FA3] focus:ring-[#700FA3] cursor-pointer"
+                            required
                           />
                           <label htmlFor="aceptar" className="text-xs font-bold text-neutral-700 cursor-pointer select-none" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                             Aceptar
@@ -835,8 +744,8 @@ export default function VisitasDomiciliariasPage() {
 
                       {/* WhatsApp Callout inside the Form */}
                       <div className="flex flex-col items-center gap-1.5 mt-5 pt-4 border-t border-neutral-100 w-full">
-                        <span 
-                          style={{ 
+                        <span
+                          style={{
                             fontFamily: "var(--font-montserrat), sans-serif",
                             fontSize: "14px",
                             fontWeight: "bold",
@@ -846,24 +755,24 @@ export default function VisitasDomiciliariasPage() {
                           O escríbenos
                         </span>
                         <div className="elementor-button-wrapper flex justify-center w-auto mt-1">
-                          <a 
+                          <a
                             className="elementor-button elementor-button-link elementor-size-sm flex items-center justify-center gap-2 px-6 py-2.5 bg-[#00C233] hover:bg-[#00a82c] text-white font-bold transition-all duration-300 rounded shadow-sm hover:shadow hover:scale-[1.02]"
                             href="https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
                             target="_blank"
                             rel="noopener noreferrer"
-                            style={{ 
-                              fontFamily: "var(--font-montserrat), sans-serif", 
-                              fontSize: "15px", 
+                            style={{
+                              fontFamily: "var(--font-montserrat), sans-serif",
+                              fontSize: "15px",
                               fontWeight: "bold",
-                              color: "#ffffff" 
+                              color: "#ffffff"
                             }}
                           >
                             <span className="elementor-button-content-wrapper flex items-center justify-center gap-2" style={{ color: "#ffffff" }}>
                               <span className="elementor-button-icon flex items-center">
-                                <svg 
-                                  aria-hidden="true" 
-                                  className="e-font-icon-svg e-fab-whatsapp w-4.5 h-4.5 fill-current" 
-                                  viewBox="0 0 448 512" 
+                                <svg
+                                  aria-hidden="true"
+                                  className="e-font-icon-svg e-fab-whatsapp w-4.5 h-4.5 fill-current"
+                                  viewBox="0 0 448 512"
                                   xmlns="http://www.w3.org/2000/svg"
                                   style={{ fill: "#ffffff", color: "#ffffff" }}
                                 >
@@ -911,12 +820,7 @@ export default function VisitasDomiciliariasPage() {
         </div>
       </section>
 
-
-
-      {/* Footer */}
       <Footer />
-      
-      {/* WhatsApp Button */}
       <FloatingWhatsApp />
     </main>
   );

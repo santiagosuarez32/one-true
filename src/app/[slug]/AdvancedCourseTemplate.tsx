@@ -7,7 +7,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { Course } from "@/lib/cms";
 
-export default function CoursePageTemplate({ course }: { course: Course }) {
+export default function TecnicasPoligraficasTemplate({ course }: { course: Course }) {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [country, setCountry] = useState("ec");
 
