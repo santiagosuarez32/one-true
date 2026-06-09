@@ -306,30 +306,29 @@ export default function SistemaCalificacionESSMPage({ course }: { course: Course
             Características Generales del Curso
           </h2>
 
-          <div className="overflow-hidden rounded border border-[#700FA3]/20 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
-            <table className="w-full table-fixed text-left border-collapse bg-white">
-              <thead>
-                <tr className="bg-[#700FA3] border-b-2 border-[#FFC107]">
-                  <th className="py-4 px-3 sm:py-5 sm:px-6 font-bold text-white text-sm sm:text-lg w-1/3 break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Característica</th>
-                  <th className="py-4 px-3 sm:py-5 sm:px-6 font-bold text-white text-sm sm:text-lg w-2/3 border-l border-[#700FA3]/30 break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Especificación Técnica</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-[#700FA3]/20">
-                {(fichaTecnica && fichaTecnica.length > 0 ? fichaTecnica : [
-                  { title: "Modalidad", description: "Presencial o en línea" },
-                  { title: "¿Qué incluye este curso?", description: "• 15 horas de formación técnica profunda.\n• 32 lecciones con enfoque en rigor científico.\n• Tablas de referencia y hojas de trabajo para análisis manual y automatizado.\n• Guía de referencia rápida del ESS-M para consulta en campo.\n• Acceso por 3 meses a contenido pregrabado de alta definición.\n• Garantía de satisfacción de 30 días.\n• Comunidad ONE TRUE: Soporte continuo en casos complejos.\n• Diploma de finalización: Respaldo de su competencia en el sistema de calificación más actual." }
-                ]).map((item, idx) => (
-                  <tr key={idx} className={idx % 2 === 0 ? "bg-white" : "bg-[#700FA3]/5"}>
-                    <td className="py-4 px-3 sm:py-5 sm:px-6 font-semibold text-[#48255A] text-sm sm:text-base break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                      {item.title}
-                    </td>
-                    <td className="py-4 px-3 sm:py-5 sm:px-6 text-[#525252] font-light border-l border-[#700FA3]/20 text-sm sm:text-base break-words align-top whitespace-pre-line" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                      {item.description}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {(fichaTecnica && fichaTecnica.length > 0 ? fichaTecnica : [
+              { title: "💻 Modalidad", description: "Presencial o en línea" },
+              { title: "📚 ¿Qué incluye este curso?", description: "• 15 horas de formación técnica profunda.\n• 32 lecciones con enfoque en rigor científico.\n• Tablas de referencia y hojas de trabajo para análisis manual y automatizado.\n• Guía de referencia rápida del ESS-M para consulta en campo.\n• Acceso por 3 meses a contenido pregrabado de alta definición.\n• Garantía de satisfacción de 30 días.\n• Comunidad ONE TRUE: Soporte continuo en casos complejos.\n• Diploma de finalización: Respaldo de su competencia en el sistema de calificación más actual." }
+            ]).map((feat, index) => {
+              const emojiRegex = /([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g;
+              const emojiMatch = feat.title.match(emojiRegex);
+              const icon = emojiMatch ? emojiMatch[0] : "📌";
+              const titleClean = feat.title.replace(icon, "").trim();
+              const isSecondCardColSpan = (fichaTecnica && fichaTecnica.length > 0) ? "" : (index === 1 ? "md:col-span-2" : "");
+
+              return (
+                <div key={index} className={`flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 ${isSecondCardColSpan}`}>
+                  <div className="text-4xl mb-3">{icon}</div>
+                  <h3 className="text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
+                    {titleClean}
+                  </h3>
+                  <p className="text-[#525252] text-sm leading-relaxed font-light whitespace-pre-line" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                    {feat.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

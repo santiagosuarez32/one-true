@@ -1010,6 +1010,93 @@ function TableSkeleton() {
   );
 }
 
+const parseBlogContent = (html: string): any[] => {
+  if (typeof window === "undefined") return [];
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html || "", "text/html");
+  const blocks: any[] = [];
+
+  const children = Array.from(doc.body.children);
+  children.forEach((child) => {
+    const tagName = child.tagName.toLowerCase();
+    if (tagName === "h2") {
+      blocks.push({
+        type: "h2",
+        text: child.innerHTML.trim()
+      });
+    } else if (tagName === "h3") {
+      const svgEl = child.querySelector("svg");
+      let svgHtml = "";
+      let text = child.innerHTML;
+      if (svgEl) {
+        svgHtml = svgEl.outerHTML;
+        const temp = child.cloneNode(true) as HTMLElement;
+        temp.querySelector("svg")?.remove();
+        text = temp.innerHTML.trim();
+      }
+      blocks.push({
+        type: "h3",
+        text: text,
+        svg: svgHtml
+      });
+    } else if (tagName === "p") {
+      blocks.push({
+        type: "p",
+        text: child.innerHTML.trim()
+      });
+    } else if (tagName === "ul") {
+      const items = Array.from(child.querySelectorAll("li")).map((li) => li.innerHTML.trim());
+      const isNone = child.classList.contains("list-none");
+      blocks.push({
+        type: isNone ? "ul-none" : "ul",
+        items: items
+      });
+    }
+  });
+
+  if (blocks.length === 0 && html) {
+    blocks.push({ type: "p", text: html });
+  }
+
+  return blocks;
+};
+
+const serializeBlogContent = (blocks: any[]): string => {
+  let isFirstH2 = true;
+  return blocks
+    .map((block) => {
+      if (block.type === "h2") {
+        const h2Class = isFirstH2 ? "text-2xl font-bold mt-0 mb-6" : "text-2xl font-bold mt-12 mb-6";
+        isFirstH2 = false;
+        return `<h2 class="${h2Class}" style="color: #48255A">${block.text || ""}</h2>`;
+      }
+      if (block.type === "h3") {
+        if (block.svg) {
+          return `<h3 class="text-xl font-bold mt-8 mb-4 flex items-center gap-3" style="color: #700FA3">${block.svg} ${block.text || ""}</h3>`;
+        } else {
+          return `<h3 class="text-xl font-bold mt-8 mb-4" style="color: #700FA3">${block.text || ""}</h3>`;
+        }
+      }
+      if (block.type === "p") {
+        return `<p class="text-lg leading-relaxed mb-6 text-gray-700">${block.text || ""}</p>`;
+      }
+      if (block.type === "ul") {
+        const items = block.items || [];
+        return `<ul class="list-disc list-inside mb-6 text-lg leading-relaxed text-gray-700">\n${items
+          .map((item: string) => `  <li>${item || ""}</li>`)
+          .join("\n")}\n</ul>`;
+      }
+      if (block.type === "ul-none") {
+        const items = block.items || [];
+        return `<ul class="list-none mb-8 text-lg leading-relaxed text-gray-700">\n${items
+          .map((item: string) => `  <li class="mb-4">${item || ""}</li>`)
+          .join("\n")}\n</ul>`;
+      }
+      return "";
+    })
+    .join("\n\n");
+};
+
 /* Slide Editor Form Component */
 function SideEditorForm({
   type,
@@ -1029,6 +1116,47 @@ function SideEditorForm({
   useEffect(() => {
     setForm(data);
   }, [data]);
+
+  const [blogBlocks, setBlogBlocks] = useState<any[]>([]);
+
+  useEffect(() => {
+    if (type === "blogs" && data) {
+      setBlogBlocks(parseBlogContent(data.content || ""));
+    }
+  }, [data, type]);
+
+  const handleAddBlock = (blockType: string) => {
+    setBlogBlocks((prev) => [
+      ...prev,
+      blockType.startsWith("ul")
+        ? { type: blockType, items: ["Nuevo ítem"] }
+        : { type: blockType, text: "Nuevo contenido" }
+    ]);
+  };
+
+  const handleRemoveBlock = (index: number) => {
+    setBlogBlocks((prev) => prev.filter((_, i) => i !== index));
+  };
+
+  const handleUpdateBlock = (index: number, field: string, value: any) => {
+    setBlogBlocks((prev) => {
+      const copy = [...prev];
+      copy[index] = { ...copy[index], [field]: value };
+      return copy;
+    });
+  };
+
+  const handleMoveBlock = (index: number, direction: "up" | "down") => {
+    setBlogBlocks((prev) => {
+      const copy = [...prev];
+      const targetIndex = direction === "up" ? index - 1 : index + 1;
+      if (targetIndex < 0 || targetIndex >= copy.length) return prev;
+      const temp = copy[index];
+      copy[index] = copy[targetIndex];
+      copy[targetIndex] = temp;
+      return copy;
+    });
+  };
 
   const updateField = (key: string, val: any) => {
     setForm((prev: any) => ({ ...prev, [key]: val }));
@@ -1332,14 +1460,15 @@ function SideEditorForm({
                     />
                   </label>
                 </div>
-
-                {/* About Cards Builder */}
                 <div className="space-y-3">
                   <div className="flex items-center justify-between border-b border-neutral-200 pb-2">
-                    <span className="text-xs font-bold text-neutral-700 uppercase tracking-wider">Tarjetas de Análisis</span>
+                    <div>
+                      <span className="text-xs font-bold text-neutral-700 uppercase tracking-wider">Soluciones desarrolladas / Ejes de Análisis</span>
+                      <span className="text-[10px] text-neutral-500 font-semibold block mt-0.5">Podés subir imágenes/iconos y agregar sub-ítems (uno por línea) para las soluciones.</span>
+                    </div>
                     <button
                       type="button"
-                      onClick={() => handleAddListItem("aboutCards", { title: "", text: "" })}
+                      onClick={() => handleAddListItem("aboutCards", { title: "", text: "", icon: "", items: [] })}
                       className="rounded-full bg-neutral-50 border border-neutral-300 px-3.5 py-1 text-2xs text-[#700FA3] hover:bg-neutral-100 font-bold"
                     >
                       + Agregar Tarjeta
@@ -1347,30 +1476,129 @@ function SideEditorForm({
                   </div>
 
                   {(!form.pageContent?.aboutCards || form.pageContent.aboutCards.length === 0) ? (
-                    <p className="text-xs text-neutral-400 italic font-semibold">No hay tarjetas registradas.</p>
+                    <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-4 text-center">
+                      <p className="text-xs text-neutral-400 italic font-semibold mb-2">No hay tarjetas registradas.</p>
+                      {form.id === "prueba-de-honestidad-etica-y-valores" && (
+                        <button
+                          type="button"
+                          onClick={() => {
+                            updateNestedContentField("aboutCards", [
+                              {
+                                title: "Factores de Integridad y Ética Laboral",
+                                text: "Nuestra prueba analiza de manera integral la orientación conductual y los valores de los evaluados a través de dimensiones críticas estructuradas en tres grandes ejes de riesgo corporativo.",
+                                icon: "/icons/eje1.svg",
+                                items: [
+                                  "Honestidad: Mide la inclinación natural del evaluado a actuar con transparencia y rectitud. Permite predecir la probabilidad de conductas deshonestas en comparación con perfiles de alta integridad.",
+                                  "Moralidad: Evalúa la solidez y firmeza de los valores morales individuales frente a presiones externas, identificando si el perfil es altamente manipulable o propenso a quebrantar sus principios.",
+                                  "Honestidad al Responder (Control de Deseabilidad Social): Detecta la consistencia y veracidad de la prueba, identificando si el evaluado intenta manipular el test o simular un perfil \"socialmente aceptable\" para ocultar su verdadera conducta."
+                                ]
+                              },
+                              {
+                                title: "Identificación de Comportamientos Riesgosos",
+                                text: "Nuestra prueba analiza de manera integral la orientación conductual y los valores de los evaluados a través de dimensiones críticas estructuradas en tres grandes ejes de riesgo corporativo.",
+                                icon: "/icons/eje2.svg",
+                                items: [
+                                  "Propensión al Robo: Analiza los indicadores actitudinales que se correlacionan directamente con un mayor riesgo estadístico de cometer robos o apropiación ilícita de recursos.",
+                                  "Tendencia al Abuso o Manipulación: Identifica perfiles con rasgos impulsivos o bajo autocontrol que podrían usar la manipulación para fines personales, afectando el clima laboral o el trato al equipo.",
+                                  "Riesgo de Daño y Sabotaje: Mide la capacidad de autorregulación emocional ante la frustración o la rabia, previniendo reacciones negativas que pongan en peligro los activos tangibles o el entorno de la empresa.",
+                                  "Conductas de Descuido: Evalúa el nivel de rigurosidad y atención al detalle, detectando la tendencia a normalizar errores o priorizar la velocidad por encima de los estándares de calidad requeridos."
+                                ]
+                              },
+                              {
+                                title: "Alineación y Cultura Organizacional",
+                                text: "Nuestra prueba analiza de manera integral la orientación conductual y los valores de los evaluados a través de dimensiones críticas estructuradas en tres grandes ejes de riesgo corporativo.",
+                                icon: "/icons/eje3.svg",
+                                items: [
+                                  "Apego a las Reglas: Determina el respeto y la importancia que el evaluado otorga a las normas internas, diferenciando a quienes las consideran directrices obligatorias de aquellos que las ven como simples sugerencias opcionales.",
+                                  "Equidad y Justicia: Mide la disposición a actuar de manera imparcial y equitativa con los demás, identificando riesgos de sesgos corporativos, prejuicios o tratos de conveniencia.",
+                                  "Trabajo en Equipo: Mide el nivel de adaptabilidad y alineación con los objetivos colectivos, priorizando el éxito del equipo por encima de las metas netamente individuales.",
+                                  "Interés por el Trabajo (Compromiso Organizacional): Evalúa el valor que la persona le otorga al esfuerzo laboral y su nivel de enfoque para alcanzar las metas estratégicas de la empresa.",
+                                  "Interés Egocéntrico: Identifica el grado de focalización exclusiva en el beneficio propio, determinando si esta tendencia puede llegar a desmedro o perjuicio de sus compañeros o de la organización."
+                                ]
+                              }
+                            ]);
+                          }}
+                          className="rounded-lg bg-neutral-200 border border-neutral-300 px-3 py-1.5 text-xs text-neutral-700 hover:bg-neutral-250 font-semibold"
+                        >
+                          Cargar ejes por defecto
+                        </button>
+                      )}
+                    </div>
                   ) : (
-                    <div className="space-y-3">
+                    <div className="space-y-4">
                       {form.pageContent.aboutCards.map((card: any, idx: number) => (
-                        <div key={idx} className="relative rounded-xl border border-neutral-200 bg-neutral-50 p-3 flex gap-3 flex-col sm:flex-row">
-                          <input
-                            value={card.title || ""}
-                            onChange={(e) => handleUpdateListItem("aboutCards", idx, "title", e.target.value)}
-                            placeholder="Título"
-                            className="bg-white border border-neutral-300 rounded px-2.5 py-1 text-xs text-neutral-800 placeholder-neutral-400 flex-1 outline-none"
-                          />
-                          <input
+                        <div key={idx} className="relative rounded-xl border border-neutral-200 bg-neutral-50 p-4 flex gap-3 flex-col">
+                          <div className="flex gap-3 items-center flex-wrap">
+                            <div className="h-10 w-10 shrink-0 rounded border border-neutral-200 bg-white flex items-center justify-center overflow-hidden shadow-2xs">
+                              {card.icon && (card.icon.startsWith("/") || card.icon.startsWith("http")) ? (
+                                <img src={card.icon} alt="Icono" className="h-full w-full object-contain p-0.5" />
+                              ) : form.id === "prueba-de-honestidad-etica-y-valores" ? (
+                                <img src={`/icons/eje${(idx % 3) + 1}.svg`} alt="Por defecto" className="h-full w-full object-contain p-0.5 opacity-60" />
+                              ) : (
+                                <span className="text-[10px] text-neutral-400 font-bold">Img</span>
+                              )}
+                            </div>
+                            <input
+                              value={card.icon || ""}
+                              onChange={(e) => handleUpdateListItem("aboutCards", idx, "icon", e.target.value)}
+                              placeholder="Icono (Emoji o URL)"
+                              className="bg-white border border-neutral-300 rounded px-2.5 py-1 text-xs text-neutral-800 placeholder-neutral-400 w-48 outline-none font-bold"
+                            />
+                            <input
+                              type="file"
+                              id={`file-about-card-${idx}`}
+                              accept="image/*"
+                              className="hidden"
+                              onChange={async (e) => {
+                                const files = e.target.files;
+                                if (!files || files.length === 0) return;
+                                try {
+                                  const url = await compressAndUploadImage(files[0], "service-icons");
+                                  handleUpdateListItem("aboutCards", idx, "icon", url);
+                                } catch (err) {
+                                  console.error("Error upload:", err);
+                                  alert("Error al subir la imagen");
+                                }
+                              }}
+                            />
+                            <button
+                              type="button"
+                              onClick={() => document.getElementById(`file-about-card-${idx}`)?.click()}
+                              className="rounded border border-neutral-300 bg-white px-2.5 py-1 text-2xs font-bold text-neutral-700 hover:bg-neutral-50 transition shrink-0"
+                            >
+                              Subir foto
+                            </button>
+                            
+                            <input
+                              value={card.title || ""}
+                              onChange={(e) => handleUpdateListItem("aboutCards", idx, "title", e.target.value)}
+                              placeholder="Título del Eje"
+                              className="bg-white border border-neutral-300 rounded px-2.5 py-1 text-xs text-neutral-800 placeholder-neutral-400 flex-1 min-w-[150px] outline-none font-bold"
+                            />
+                            <button
+                              type="button"
+                              onClick={() => handleRemoveListItem("aboutCards", idx)}
+                              className="text-red-600 hover:text-red-500 text-xs font-bold"
+                            >
+                              Eliminar
+                            </button>
+                          </div>
+
+                          <textarea
+                            rows={2}
                             value={card.text || ""}
                             onChange={(e) => handleUpdateListItem("aboutCards", idx, "text", e.target.value)}
-                            placeholder="Detalle o descripción"
-                            className="bg-white border border-neutral-300 rounded px-2.5 py-1 text-xs text-neutral-800 placeholder-neutral-400 flex-[2] outline-none"
+                            placeholder="Descripción corta o introducción..."
+                            className="bg-white border border-neutral-300 rounded px-2.5 py-1.5 text-xs text-neutral-800 placeholder-neutral-400 outline-none resize-y"
                           />
-                          <button
-                            type="button"
-                            onClick={() => handleRemoveListItem("aboutCards", idx)}
-                            className="text-red-600 hover:text-red-500 text-xs shrink-0 self-center font-bold"
-                          >
-                            Eliminar
-                          </button>
+
+                          <textarea
+                            rows={4}
+                            value={card.items ? card.items.join('\n') : ""}
+                            onChange={(e) => handleUpdateListItem("aboutCards", idx, "items", e.target.value.split('\n'))}
+                            placeholder="Sub-ítems (uno por línea, ej: Honestidad: Mide la inclinación...)"
+                            className="bg-white border border-neutral-300 rounded px-2.5 py-1.5 text-xs text-neutral-800 placeholder-neutral-400 outline-none resize-y"
+                          />
                         </div>
                       ))}
                     </div>
@@ -1496,6 +1724,74 @@ function SideEditorForm({
                     </div>
                   )}
                 </div>
+
+                {/* Ficha Técnica Section (Only for Prueba de Honestidad, Ética y Valores) */}
+                {form.id === "prueba-de-honestidad-etica-y-valores" && (
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between border-b border-neutral-200 pb-2">
+                      <div>
+                        <span className="text-xs font-bold text-neutral-700 uppercase tracking-wider">Ficha Técnica / Características</span>
+                        <span className="text-[10px] text-neutral-500 font-semibold block mt-0.5">Podés agregar emojis en el título (ej: 📊 Volumen de Evaluación) para mantener el estilo original.</span>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => handleAddListItem("fichaTecnica", { title: "", description: "" })}
+                        className="rounded-full bg-neutral-50 border border-neutral-300 px-3.5 py-1 text-2xs text-[#700FA3] hover:bg-neutral-100 font-bold"
+                      >
+                        + Agregar Característica
+                      </button>
+                    </div>
+
+                    {(!form.pageContent?.fichaTecnica || form.pageContent.fichaTecnica.length === 0) ? (
+                      <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-4 text-center">
+                        <p className="text-xs text-neutral-400 italic font-semibold mb-2">No hay características registradas. Se usarán las por defecto.</p>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            updateNestedContentField("fichaTecnica", [
+                              { title: "📊 Volumen de Evaluación", description: "90 reactivos dinámicos y validados psicométricamente." },
+                              { title: "💻 Modalidad de Aplicación", description: "Formato flexible: 100% online." },
+                              { title: "📄 Entrega de Resultados", description: "Reportes analíticos disponibles de forma inmediata tras finalizar la prueba." },
+                              { title: "🔬 Metodología", description: "Indicador referencial de alta precisión para complementar filtros de seguridad y selección." }
+                            ]);
+                          }}
+                          className="rounded-lg bg-neutral-200 border border-neutral-300 px-3 py-1.5 text-xs text-neutral-700 hover:bg-neutral-250 font-semibold"
+                        >
+                          Cargar valores por defecto
+                        </button>
+                      </div>
+                    ) : (
+                      <div className="space-y-3">
+                        {form.pageContent.fichaTecnica.map((feat: any, idx: number) => (
+                          <div key={idx} className="relative rounded-xl border border-neutral-200 bg-neutral-50 p-3 flex gap-3 flex-col">
+                            <div className="flex gap-3 items-center">
+                              <input
+                                value={feat.title || ""}
+                                onChange={(e) => handleUpdateListItem("fichaTecnica", idx, "title", e.target.value)}
+                                placeholder="Título (ej: 📊 Volumen de Evaluación)"
+                                className="bg-white border border-neutral-300 rounded px-2.5 py-1 text-xs text-neutral-800 placeholder-neutral-400 flex-1 outline-none font-bold"
+                              />
+                              <button
+                                type="button"
+                                onClick={() => handleRemoveListItem("fichaTecnica", idx)}
+                                className="text-red-600 hover:text-red-500 text-xs font-bold"
+                              >
+                                Eliminar
+                              </button>
+                            </div>
+                            <textarea
+                              rows={2}
+                              value={feat.description || ""}
+                              onChange={(e) => handleUpdateListItem("fichaTecnica", idx, "description", e.target.value)}
+                              placeholder="Especificación o descripción..."
+                              className="bg-white border border-neutral-300 rounded px-2.5 py-1.5 text-xs text-neutral-800 placeholder-neutral-400 outline-none resize-y"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
 
                 {/* Contacts */}
                 <div className="grid gap-4 sm:grid-cols-2">
@@ -1694,6 +1990,13 @@ function SideEditorForm({
                           </div>
 
                           <div className="flex gap-3 items-center flex-wrap">
+                            <div className="h-10 w-10 shrink-0 rounded border border-neutral-200 bg-white flex items-center justify-center overflow-hidden shadow-2xs">
+                              {area.icon && (area.icon.startsWith("/") || area.icon.startsWith("http")) ? (
+                                <img src={area.icon} alt="Icono" className="h-full w-full object-contain p-0.5" />
+                              ) : (
+                                <span className="text-[10px] text-neutral-400 font-bold">Img</span>
+                              )}
+                            </div>
                             <input
                               value={area.icon || ""}
                               onChange={(e) => handleUpdateListItem("svgFocusAreas", idx, "icon", e.target.value)}
@@ -1724,9 +2027,6 @@ function SideEditorForm({
                             >
                               Subir foto
                             </button>
-                            {area.icon && (area.icon.startsWith("/") || area.icon.startsWith("http")) && (
-                              <img src={area.icon} alt="" className="h-6 w-6 object-contain rounded border border-neutral-200" onError={(e) => { e.currentTarget.style.display = "none"; }} />
-                            )}
                           </div>
 
                           <div className="grid gap-2 sm:grid-cols-2">
@@ -1784,6 +2084,13 @@ function SideEditorForm({
                       {form.pageContent.customCards.map((card: any, idx: number) => (
                         <div key={idx} className="relative rounded-xl border border-neutral-200 bg-neutral-50 p-3 flex gap-3 flex-col">
                           <div className="flex gap-3 items-center flex-wrap">
+                            <div className="h-10 w-10 shrink-0 rounded border border-neutral-200 bg-white flex items-center justify-center overflow-hidden shadow-2xs">
+                              {card.icon && (card.icon.startsWith("/") || card.icon.startsWith("http")) ? (
+                                <img src={card.icon} alt="Icono" className="h-full w-full object-contain p-0.5" />
+                              ) : (
+                                <span className="text-[10px] text-neutral-400 font-bold">Img</span>
+                              )}
+                            </div>
                             <input
                               value={card.icon || ""}
                               onChange={(e) => handleUpdateListItem("customCards", idx, "icon", e.target.value)}
@@ -1814,9 +2121,6 @@ function SideEditorForm({
                             >
                               Subir foto
                             </button>
-                            {card.icon && (card.icon.startsWith("/") || card.icon.startsWith("http")) && (
-                              <img src={card.icon} alt="" className="h-6 w-6 object-contain rounded border border-neutral-200" onError={(e) => { e.currentTarget.style.display = "none"; }} />
-                            )}
                             
                             <input
                               value={card.title || ""}
@@ -1956,18 +2260,140 @@ function SideEditorForm({
                   </label>
                 </div>
 
-                <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
-                  Cuerpo del Artículo
-                  <textarea
-                    rows={12}
-                    value={form.content || ""}
-                    onChange={(e) => updateField("content", e.target.value)}
-                    placeholder="Escriba el artículo. Para subtítulos use '# Título' o '## Título'..."
-                    className="mt-1.5 w-full bg-white border border-neutral-350 rounded-lg px-3 py-3 text-xs text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2 resize-y font-sans leading-relaxed"
-                    onFocus={(e) => (e.currentTarget.style.boxShadow = `0 0 0 2px #700FA322`)}
-                    onBlur={(e) => (e.currentTarget.style.boxShadow = "none")}
-                  />
-                </label>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between border-b border-neutral-200 pb-2">
+                    <div>
+                      <span className="text-xs font-bold text-neutral-700 uppercase tracking-wider font-semibold">Secciones / Bloques de Contenido</span>
+                      <span className="text-[10px] text-neutral-500 font-semibold block mt-0.5">Editá las secciones de forma estructurada. Podes reordenar, agregar y eliminar bloques.</span>
+                    </div>
+                  </div>
+
+                  {blogBlocks.length === 0 ? (
+                    <p className="text-xs text-neutral-400 italic font-semibold">No hay bloques de contenido creados.</p>
+                  ) : (
+                    <div className="space-y-4">
+                      {blogBlocks.map((block, idx) => (
+                        <div key={idx} className="relative rounded-xl border border-neutral-200 bg-neutral-50 p-4 flex gap-3 flex-col">
+                          {/* Block Header Controls */}
+                          <div className="flex items-center justify-between border-b border-neutral-150 pb-2 flex-wrap gap-2">
+                            <div className="flex items-center gap-2">
+                              <span className="text-2xs font-extrabold px-2 py-0.5 rounded bg-[#700FA3]/10 text-[#700FA3] uppercase">
+                                {idx + 1}. {block.type === "h2" ? "Subtítulo H2" : block.type === "h3" ? "Subtítulo H3" : block.type === "p" ? "Párrafo" : block.type === "ul" ? "Lista Viñetas" : "Checklist"}
+                              </span>
+                              <select
+                                value={block.type}
+                                onChange={(e) => handleUpdateBlock(idx, "type", e.target.value)}
+                                className="bg-white border border-neutral-300 rounded px-1.5 py-0.5 text-2xs text-neutral-700 font-semibold outline-none"
+                              >
+                                <option value="p">Párrafo</option>
+                                <option value="h2">Subtítulo Principal (H2)</option>
+                                <option value="h3">Subtítulo Secundario (H3)</option>
+                                <option value="ul">Lista con Viñetas</option>
+                                <option value="ul-none">Checklist (Guía)</option>
+                              </select>
+                            </div>
+
+                            <div className="flex items-center gap-1">
+                              <button
+                                type="button"
+                                disabled={idx === 0}
+                                onClick={() => handleMoveBlock(idx, "up")}
+                                className="rounded border border-neutral-200 bg-white p-1 text-2xs font-bold text-neutral-700 hover:bg-neutral-100 disabled:opacity-30 disabled:hover:bg-white transition"
+                                title="Mover arriba"
+                              >
+                                ▲
+                              </button>
+                              <button
+                                type="button"
+                                disabled={idx === blogBlocks.length - 1}
+                                onClick={() => handleMoveBlock(idx, "down")}
+                                className="rounded border border-neutral-200 bg-white p-1 text-2xs font-bold text-neutral-700 hover:bg-neutral-100 disabled:opacity-30 disabled:hover:bg-white transition"
+                                title="Mover abajo"
+                              >
+                                ▼
+                              </button>
+                              <button
+                                type="button"
+                                onClick={() => handleRemoveBlock(idx)}
+                                className="rounded border border-red-200 bg-white px-2 py-1 text-2xs font-bold text-red-700 hover:bg-red-50 transition"
+                              >
+                                Eliminar
+                              </button>
+                            </div>
+                          </div>
+
+                          {/* Block Content Inputs */}
+                          {block.type.startsWith("ul") ? (
+                            <textarea
+                              rows={4}
+                              value={block.items ? block.items.join("\n") : ""}
+                              onChange={(e) => handleUpdateBlock(idx, "items", e.target.value.split("\n"))}
+                              placeholder="Escribe cada elemento de la lista en una nueva línea..."
+                              className="bg-white border border-neutral-300 rounded-lg px-3 py-2 text-xs text-neutral-800 placeholder-neutral-400 outline-none resize-y leading-relaxed font-sans"
+                            />
+                          ) : (
+                            <textarea
+                              rows={block.type === "p" ? 4 : 2}
+                              value={block.text || ""}
+                              onChange={(e) => handleUpdateBlock(idx, "text", e.target.value)}
+                              placeholder={block.type === "p" ? "Escribe el contenido del párrafo..." : "Escribe el texto del subtítulo..."}
+                              className="bg-white border border-neutral-300 rounded-lg px-3 py-2 text-xs text-neutral-800 placeholder-neutral-400 outline-none resize-y leading-relaxed font-sans"
+                            />
+                          )}
+
+                          {/* Read-only preview of original SVG if present */}
+                          {block.type === "h3" && block.svg && (
+                            <div className="flex items-center gap-2 mt-1 bg-neutral-100 border border-neutral-200 rounded px-2.5 py-1 text-2xs text-neutral-500 font-semibold">
+                              <span>Icono SVG asociado:</span>
+                              <div className="h-5 w-5 bg-white border border-neutral-200 rounded flex items-center justify-center p-0.5" dangerouslySetInnerHTML={{ __html: block.svg }} />
+                              <span className="italic text-neutral-400">(Código SVG conservado automáticamente)</span>
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Add Block Row */}
+                  <div className="flex flex-wrap items-center gap-2 border-t border-neutral-150 pt-4">
+                    <span className="text-2xs font-bold uppercase tracking-wider text-neutral-500">Agregar Bloque:</span>
+                    <button
+                      type="button"
+                      onClick={() => handleAddBlock("p")}
+                      className="rounded-full bg-white border border-neutral-300 px-3.5 py-1 text-2xs font-bold text-[#700FA3] hover:bg-neutral-50 transition"
+                    >
+                      + Párrafo
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => handleAddBlock("h2")}
+                      className="rounded-full bg-white border border-neutral-300 px-3.5 py-1 text-2xs font-bold text-[#700FA3] hover:bg-neutral-50 transition"
+                    >
+                      + Subtítulo H2
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => handleAddBlock("h3")}
+                      className="rounded-full bg-white border border-neutral-300 px-3.5 py-1 text-2xs font-bold text-[#700FA3] hover:bg-neutral-50 transition"
+                    >
+                      + Subtítulo H3
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => handleAddBlock("ul")}
+                      className="rounded-full bg-white border border-neutral-300 px-3.5 py-1 text-2xs font-bold text-[#700FA3] hover:bg-neutral-50 transition"
+                    >
+                      + Lista Viñetas
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => handleAddBlock("ul-none")}
+                      className="rounded-full bg-white border border-neutral-300 px-3.5 py-1 text-2xs font-bold text-[#700FA3] hover:bg-neutral-50 transition"
+                    >
+                      + Checklist
+                    </button>
+                  </div>
+                </div>
               </div>
             )}
 
@@ -2036,7 +2462,14 @@ function SideEditorForm({
                 Cancelar
               </button>
               <button
-                onClick={() => onSave(form)}
+                onClick={() => {
+                  if (type === "blogs") {
+                    const html = serializeBlogContent(blogBlocks);
+                    onSave({ ...form, content: html });
+                  } else {
+                    onSave(form);
+                  }
+                }}
                 className="rounded-full px-6 py-2.5 text-xs font-bold text-white transition-all shadow-md"
                 style={{ backgroundColor: "#700FA3" }}
                 onMouseEnter={(e) => ((e.currentTarget as HTMLButtonElement).style.backgroundColor = "#5C0B87")}

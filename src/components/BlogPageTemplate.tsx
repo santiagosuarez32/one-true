@@ -32,7 +32,7 @@ export default function BlogPageTemplate({ blog, allBlogs }: { blog: Blog; allBl
       }
       if (trimmed.startsWith("## ")) {
         return (
-          <h3 key={index} className="text-xl font-bold mt-8 mb-4 style={{ color: '#700FA3' }}">
+          <h3 key={index} className="text-xl font-bold mt-8 mb-4" style={{ color: '#700FA3' }}>
             {trimmed.replace("## ", "")}
           </h3>
         );

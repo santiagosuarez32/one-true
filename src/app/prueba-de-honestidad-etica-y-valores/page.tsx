@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
@@ -124,7 +124,7 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
       </section>
 
       {/* Sobre el Servicio Section */}
-      <section className="bg-white py-20">
+      <section className="bg-white pt-20 pb-8">
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
           <div className="flex flex-col gap-16">
             
@@ -157,128 +157,105 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
                     color: "#48255A",
                   }}
                 >
-                  Soluciones desarrolladas para mitigar el riesgo interno en tu organización
+                  {dbData?.pageContent?.aboutTitle || "Soluciones desarrolladas para mitigar el riesgo interno en tu organización"}
                 </h2>
 
                 <p
                   className="text-[#525252] text-[15px] leading-[26px] font-light"
                   style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                 >
-                  Nuestra prueba analiza de manera integral la orientación conductual y los valores de los evaluados a través de dimensiones críticas estructuradas en tres grandes ejes de riesgo corporativo.
+                  {dbData?.pageContent?.aboutDesc || "Nuestra prueba analiza de manera integral la orientación conductual y los valores de los evaluados a través de dimensiones críticas estructuradas en tres grandes ejes de riesgo corporativo."}
                 </p>
               </div>
             </div>
 
             {/* LAS 3 CARDS (APILADAS) */}
             <div className="flex flex-col gap-8">
-              
-              {/* EJE 1: Factores de Integridad y Ética Laboral */}
-              <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12 bg-white p-8 lg:p-10 rounded-2xl border border-neutral-100 shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_15px_35px_rgba(112,15,163,0.04)] transition-all duration-300">
-                <div className="shrink-0 w-[70px]">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="70" height="78" fill="#700FA3" viewBox="0 0 85 93">
-                    <path d="M27.648 39.7c0 13.904 11.447 25.217 25.516 25.217s25.5-11.312 25.5-25.217a24.71 24.71 0 0 0-2.78-11.457c-1.654-3.2-4.024-6.058-6.878-8.302v-2.443c0-5.292-1.704-9.778-4.926-12.973C61.215 1.672 57.342.066 53.187 0a.87.87 0 0 0-.043 0c-4.158.065-8.033 1.672-10.9 4.524-3.224 3.194-4.927 7.68-4.927 12.973v2.443a25.54 25.54 0 0 0-6.878 8.302c-1.845 3.57-2.78 7.424-2.78 11.457zm44.387 12.6a22.85 22.85 0 0 1-18.871 9.916c-7.844 0-14.775-3.938-18.876-9.918v-3.36c0-5.464 3.526-7.155 7.72-8.368l8.472 4.913c.976.62 1.828.93 2.68.93s1.705-.3 2.68-.93l8.473-4.913c4.193 1.214 7.72 2.904 7.72 8.37v3.36zm-26.4-12.76c1.4-.62 2.137-1.917 2.584-2.96a15.43 15.43 0 0 0 .849.344c1.46.534 2.783.8 4.106.8s2.646-.267 4.102-.8a15.4 15.4 0 0 0 .85-.344c.446 1.045 1.184 2.34 2.584 2.96l-6.263 3.632a1.15 1.15 0 0 0-.051.031c-1.075.688-1.372.688-2.448 0l-.05-.03-6.262-3.63zm30.32.16a22.19 22.19 0 0 1-1.29 7.47c-.774-6.183-5.648-8.096-10.156-9.353l-.033-.01-1.5-.407-.958-.255c-.723-.194-1.163-1.092-1.467-1.86 4.334-2.777 7.708-7.484 8.368-11.878 4.508 4.237 7.047 10.042 7.047 16.3zm-22.78-37c5.98.104 12.385 4.3 13.064 13.2-1.392-.376-2.108-1.098-2.856-1.853-1.046-1.056-2.348-2.37-5.1-1.67l-1.96.5c-1.63.43-2.446.647-3.148.647s-1.528-.217-3.167-.65l-1.947-.507c-2.748-.7-4.05.613-5.094 1.668-.75.755-1.466 1.48-2.862 1.855.68-8.923 7.087-13.108 13.07-13.212zm-13.13 15.988c2.625-.478 3.904-1.767 4.87-2.743.93-.938 1.243-1.253 2.463-.943l1.923.5c1.8.48 2.808.742 3.872.742s2.053-.262 3.854-.74L58.962 15c1.225-.312 1.538.005 2.47.944.967.975 2.244 2.263 4.866 2.74v3.193c0 4.72-4.66 10.568-9.97 12.513-2.327.854-3.978.854-6.3 0-5.312-1.946-9.97-7.794-9.97-12.513v-3.193zm-2.6 4.72c.66 4.393 4.035 9.1 8.37 11.878-.304.767-.745 1.665-1.464 1.86l-.955.254-1.505.405a1.26 1.26 0 0 0-.075.021c-4.5 1.257-9.354 3.175-10.127 9.343a22.18 22.18 0 0 1-1.3-7.47c0-6.25 2.54-12.054 7.047-16.3zm38.193-6.053l-2.087-1.9c-.58-.477-1.44-.4-1.922.175a1.34 1.34 0 0 0 .177 1.9l1.902 1.722C79.23 24.722 82.27 31.98 82.27 39.7s-3.04 14.977-8.562 20.435c-11.4 11.268-29.948 11.268-41.347 0C26.84 54.677 23.8 47.42 23.8 39.7s3.04-14.977 8.563-20.435c.53-.525 1.028-.983 1.52-1.4a1.34 1.34 0 0 0 .148-1.903c-.5-.566-1.352-.63-1.925-.146a29.31 29.31 0 0 0-1.673 1.54C24.395 23.324 21.07 31.26 21.07 39.7a31.12 31.12 0 0 0 6 18.439l-6.165 6.094-.126-.125a2.36 2.36 0 0 0-1.669-.682 2.36 2.36 0 0 0-1.67.683l-4.22 4.175c-.01.01-.02.017-.03.026s-.018.02-.027.03l-3.2 3.16a1.34 1.34 0 0 0 .001 1.908c.533.527 1.398.526 1.93-.001l2.26-2.236 7.036 6.954-9.977 9.86a4.96 4.96 0 0 1-3.517 1.435c-1.333 0-2.582-.5-3.518-1.436a4.87 4.87 0 0 1-1.45-3.477c0-1.317.515-2.553 1.45-3.477l3.56-3.518a1.34 1.34 0 0 0 0-1.908c-.533-.527-1.397-.527-1.93 0l-3.56 3.518A7.52 7.52 0 0 0 0 84.508c0 2.04.8 3.952 2.248 5.385a7.69 7.69 0 0 0 5.449 2.227c2.064 0 4-.8 5.448-2.227l15.2-15c.445-.44.7-1.027.7-1.653s-.245-1.213-.7-1.653l-.123-.122 6.168-6.097c5.55 3.947 12.102 5.922 18.654 5.922 8.186 0 16.372-3.08 22.604-9.24C81.676 56.074 85 48.14 85 39.698s-3.325-16.375-9.362-22.343zM23.122 76.22l-7.037-6.955 3.023-3 7.038 6.957-3.024 2.988zm3.16-6.67l-3.448-3.408 5.936-5.868a32.34 32.34 0 0 0 1.66 1.769c.58.573 1.176 1.12 1.787 1.638L26.28 69.55z"/>
-                  </svg>
-                </div>
-                <div className="flex-1">
-                  <h3
-                    className="text-lg md:text-xl font-bold text-[#48255A]"
-                    style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3", marginBottom: "14px" }}
-                  >
-                    Factores de Integridad y Ética Laboral
-                  </h3>
-                  <div className="flex flex-col gap-3">
-                    <p className="text-sm text-[#525252] leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                      <strong className="font-semibold text-[#48255A]">Honestidad:</strong> Mide la inclinación natural del evaluado a actuar con transparencia y rectitud. Permite predecir la probabilidad de conductas deshonestas en comparación con perfiles de alta integridad.
-                    </p>
-                    <p className="text-sm text-[#525252] leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                      <strong className="font-semibold text-[#48255A]">Moralidad:</strong> Evalúa la solidez y firmeza de los valores morales individuales frente a presiones externas, identificando si el perfil es altamente manipulable o propenso a quebrantar sus principios.
-                    </p>
-                    <p className="text-sm text-[#525252] leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                      <strong className="font-semibold text-[#48255A]">Honestidad al Responder (Control de Deseabilidad Social):</strong> Detecta la consistencia y veracidad de la prueba, identificando si el evaluado intenta manipular el test o simular un perfil "socialmente aceptable" para ocultar su verdadera conducta.
-                    </p>
+              {(dbData?.pageContent?.aboutCards && dbData.pageContent.aboutCards.length > 0
+                ? dbData.pageContent.aboutCards
+                : [
+                    {
+                      title: "Factores de Integridad y Ética Laboral",
+                      text: "Nuestra prueba analiza de manera integral la orientación conductual y los valores de los evaluados a través de dimensiones críticas estructuradas en tres grandes ejes de riesgo corporativo.",
+                      icon: "/icons/eje1.svg",
+                      items: [
+                        "Honestidad: Mide la inclinación natural del evaluado a actuar con transparencia y rectitud. Permite predecir la probabilidad de conductas deshonestas en comparación con perfiles de alta integridad.",
+                        "Moralidad: Evalúa la solidez y firmeza de los valores morales individuales frente a presiones externas, identificando si el perfil es altamente manipulable o propenso a quebrantar sus principios.",
+                        "Honestidad al Responder (Control de Deseabilidad Social): Detecta la consistencia y veracidad de la prueba, identificando si el evaluado intenta manipular el test o simular un perfil \"socialmente aceptable\" para ocultar su verdadera conducta."
+                      ]
+                    },
+                    {
+                      title: "Identificación de Comportamientos Riesgosos",
+                      text: "Nuestra prueba analiza de manera integral la orientación conductual y los valores de los evaluados a través de dimensiones críticas estructuradas en tres grandes ejes de riesgo corporativo.",
+                      icon: "/icons/eje2.svg",
+                      items: [
+                        "Propensión al Robo: Analiza los indicadores actitudinales que se correlacionan directamente con un mayor riesgo estadístico de cometer robos o apropiación ilícita de recursos.",
+                        "Tendencia al Abuso o Manipulación: Identifica perfiles con rasgos impulsivos o bajo autocontrol que podrían usar la manipulación para fines personales, afectando el clima laboral o el trato al equipo.",
+                        "Riesgo de Daño y Sabotaje: Mide la capacidad de autorregulación emocional ante la frustración o la rabia, previniendo reacciones negativas que pongan en peligro los activos tangibles o el entorno de la empresa.",
+                        "Conductas de Descuido: Evalúa el nivel de rigurosidad y atención al detalle, detectando la tendencia a normalizar errores o priorizar la velocidad por encima de los estándares de calidad requeridos."
+                      ]
+                    },
+                    {
+                      title: "Alineación y Cultura Organizacional",
+                      text: "Nuestra prueba analiza de manera integral la orientación conductual y los valores de los evaluados a través de dimensiones críticas estructuradas en tres grandes ejes de riesgo corporativo.",
+                      icon: "/icons/eje3.svg",
+                      items: [
+                        "Apego a las Reglas: Determina el respeto y la importancia que el evaluado otorga a las normas internas, diferenciando a quienes las consideran directrices obligatorias de aquellos que las ven como simples sugerencias opcionales.",
+                        "Equidad y Justicia: Mide la disposición a actuar de manera imparcial y equitativa con los demás, identificando riesgos de sesgos corporativos, prejuicios o tratos de conveniencia.",
+                        "Trabajo en Equipo: Mide el nivel de adaptabilidad y alineación con los objetivos colectivos, priorizando el éxito del equipo por encima de las metas netamente individuales.",
+                        "Interés por el Trabajo (Compromiso Organizacional): Evalúa el valor que la persona le otorga al esfuerzo laboral y su nivel de enfoque para alcanzar las metas estratégicas de la empresa.",
+                        "Interés Egocéntrico: Identifica el grado de focalización exclusiva en el beneficio propio, determinando si esta tendencia puede llegar a desmedro o perjuicio de sus compañeros o de la organización."
+                      ]
+                    }
+                  ]
+              ).map((card: any, idx: number) => {
+                return (
+                  <div key={idx} className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12 bg-white p-8 lg:p-10 rounded-2xl border border-neutral-100 shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_15px_35px_rgba(112,15,163,0.04)] transition-all duration-300">
+                    <div className="shrink-0 w-[70px] flex justify-center">
+                      {card.icon && (card.icon.startsWith("/") || card.icon.startsWith("http")) ? (
+                        <img src={card.icon} alt="" className="w-[70px] h-auto max-h-[78px] object-contain rounded" />
+                      ) : (
+                        <img src={`/icons/eje${(idx % 3) + 1}.svg`} alt="" className="w-[70px] h-auto max-h-[78px] object-contain rounded" />
+                      )}
+                    </div>
+                    <div className="flex-1">
+                      <h3
+                        className="text-lg md:text-xl font-bold text-[#48255A]"
+                        style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3", marginBottom: "14px" }}
+                      >
+                        {card.title}
+                      </h3>
+                      {card.text && (
+                        <p className="text-sm text-[#525252]/80 leading-relaxed font-light mb-4" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                          {card.text}
+                        </p>
+                      )}
+                      {card.items && card.items.length > 0 && (
+                        <div className="flex flex-col gap-3">
+                          {card.items.map((item: string, sIdx: number) => {
+                            const colonIdx = item.indexOf(":");
+                            const label = colonIdx !== -1 ? item.substring(0, colonIdx + 1) : "";
+                            const desc = colonIdx !== -1 ? item.substring(colonIdx + 1) : item;
+                            return (
+                              <p key={sIdx} className="text-sm text-[#525252] leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                                {label && <strong className="font-semibold text-[#48255A]">{label}</strong>} {desc}
+                              </p>
+                            );
+                          })}
+                        </div>
+                      )}
+                    </div>
                   </div>
-                </div>
-              </div>
-
-              {/* EJE 2: Identificación de Comportamientos Riesgosos */}
-              <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12 bg-white p-8 lg:p-10 rounded-2xl border border-neutral-100 shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_15px_35px_rgba(112,15,163,0.04)] transition-all duration-300">
-                <div className="shrink-0 w-[70px]">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="#700FA3" viewBox="0 0 84 84">
-                    <path d="M32.86 25.184h15.535c.898 0 1.627-.734 1.627-1.64s-.73-1.64-1.627-1.64H32.86c-.898 0-1.627.735-1.627 1.64s.728 1.64 1.627 1.64z"/>
-                    <path d="M24.51 22.383l-4.24 4.277-.98-.988c-.636-.64-1.666-.64-2.3 0a1.65 1.65 0 0 0 0 2.32l2.13 2.148c.318.32.734.48 1.15.48s.832-.16 1.15-.48l5.39-5.438a1.65 1.65 0 0 0 0-2.32c-.636-.64-1.665-.64-2.3 0z"/>
-                    <path d="M32.86 31.746h7.36c.898 0 1.627-.734 1.627-1.64s-.73-1.64-1.627-1.64h-7.36c-.898 0-1.627.735-1.627 1.64s.728 1.64 1.627 1.64z"/>
-                    <path d="M24.51 39.446l-4.24 4.277-.98-.988c-.636-.64-1.666-.64-2.3 0a1.65 1.65 0 0 0 0 2.32l2.13 2.148c.318.32.734.48 1.15.48s.832-.16 1.15-.48l5.39-5.438a1.65 1.65 0 0 0 0-2.32c-.636-.64-1.665-.64-2.3 0z"/>
-                    <path d="M32.86 42.247h15.535c.898 0 1.627-.734 1.627-1.64s-.73-1.64-1.627-1.64H32.86c-.898 0-1.627.735-1.627 1.64s.728 1.64 1.627 1.64z"/>
-                    <path d="M32.86 48.81h7.36c.898 0 1.627-.734 1.627-1.64s-.73-1.64-1.627-1.64h-7.36c-.898 0-1.627.734-1.627 1.64s.728 1.64 1.627 1.64z"/>
-                    <path d="M24.51 56.672l-4.24 4.277-.98-.988c-.636-.64-1.666-.64-2.3 0a1.65 1.65 0 0 0 0 2.32l2.13 2.148c.318.32.734.48 1.15.48s.832-.16 1.15-.48l5.39-5.438a1.65 1.65 0 0 0 0-2.32c-.636-.64-1.665-.64-2.3 0z"/>
-                    <path d="M32.86 59.473h15.535c.898 0 1.627-.735 1.627-1.64s-.73-1.64-1.627-1.64H32.86c-.898 0-1.627.734-1.627 1.64s.728 1.64 1.627 1.64zm0 6.562h7.36c.898 0 1.627-.734 1.627-1.64s-.73-1.64-1.627-1.64h-7.36c-.898 0-1.627.734-1.627 1.64s.728 1.64 1.627 1.64zM83.286 42c0-9.806-7.866-17.792-17.568-17.88V13.043c0-4.523-3.648-8.203-8.133-8.203H40.42C39.126 1.937 36.233 0 33.002 0h-.286c-3.23 0-6.124 1.937-7.42 4.84H8.133C3.65 4.84 0 8.52 0 13.043v62.754C0 80.32 3.65 84 8.133 84h49.45c4.485 0 8.133-3.68 8.133-8.203V59.88a17.57 17.57 0 0 0 11.463-4.39c.1-.065.172-.14.246-.22 3.596-3.275 5.86-8 5.86-13.27zm-3.253 0a14.61 14.61 0 0 1-3.225 9.177 12.78 12.78 0 0 0-6.276-5.85 6.74 6.74 0 0 0 1.701-4.483V39.57c0-3.714-2.995-6.735-6.678-6.735s-6.677 3.02-6.677 6.735v1.273c0 1.72.644 3.3 1.7 4.483a12.78 12.78 0 0 0-6.276 5.85A14.61 14.61 0 0 1 51.078 42c0-8.05 6.495-14.602 14.478-14.602S80.033 33.95 80.033 42zM56.777 53.603c1.404-3.593 4.878-6.025 8.778-6.025s7.375 2.422 8.78 6.025c-2.437 1.88-5.48 3-8.778 3a14.32 14.32 0 0 1-8.778-3zm5.355-12.76V39.57c0-1.904 1.536-3.454 3.424-3.454s3.424 1.55 3.424 3.454v1.273c0 1.904-1.537 3.453-3.424 3.453s-3.424-1.55-3.424-3.453zm.333-27.8V24.4a17.48 17.48 0 0 0-4.555 1.477v-11.5c0-.906-.728-1.64-1.627-1.64H47.5V9.3c0-.412-.056-.8-.16-1.2h10.246c2.7 0 4.88 2.208 4.88 4.922zM26.437 8.12a1.63 1.63 0 0 0 1.57-1.211c.575-2.136 2.5-3.63 4.7-3.63h.286c2.197 0 4.133 1.493 4.7 3.63a1.63 1.63 0 0 0 1.569 1.211h3.787c.65 0 1.18.534 1.18 1.2v3.404H21.472V9.3c0-.656.53-1.2 1.18-1.2h3.786zm31.148 72.6H8.133c-2.7 0-4.88-2.208-4.88-4.922V13.043c0-2.714 2.2-4.922 4.88-4.922H18.38a4.49 4.49 0 0 0-.16 1.19v3.404H9.435c-.898 0-1.627.734-1.627 1.64v60.13c0 .906.728 1.64 1.627 1.64h16.917c.898 0 1.627-.734 1.627-1.64s-.728-1.64-1.627-1.64H11.06v-56.85h43.595v11.908c-3.404 2.683-5.815 6.6-6.575 11.06H32.86c-.9 0-1.627.735-1.627 1.64s.728 1.64 1.627 1.64h14.97c.07 5.162 2.317 9.803 5.86 13.027a1.51 1.51 0 0 0 .242.216c.237.2.48.4.73.607v16.748h-15.3c-.898 0-1.627.734-1.627 1.64s.728 1.64 1.627 1.64H56.3c.898 0 1.627-.734 1.627-1.64v-16.35a17.48 17.48 0 0 0 4.555 1.477v16.186c0 2.714-2.2 4.922-4.88 4.922z"/>
-                  </svg>
-                </div>
-                <div className="flex-1">
-                  <h3
-                    className="text-lg md:text-xl font-bold text-[#48255A]"
-                    style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3", marginBottom: "14px" }}
-                  >
-                    Identificación de Comportamientos Riesgosos
-                  </h3>
-                  <div className="flex flex-col gap-3">
-                    <p className="text-sm text-[#525252] leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                      <strong className="font-semibold text-[#48255A]">Propensión al Robo:</strong> Analiza los indicadores actitudinales que se correlacionan directamente con un mayor riesgo estadístico de cometer robos o apropiación ilícita de recursos.
-                    </p>
-                    <p className="text-sm text-[#525252] leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                      <strong className="font-semibold text-[#48255A]">Tendencia al Abuso o Manipulación:</strong> Identifica perfiles con rasgos impulsivos o bajo autocontrol que podrían usar la manipulación para fines personales, afectando el clima laboral o el trato al equipo.
-                    </p>
-                    <p className="text-sm text-[#525252] leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                      <strong className="font-semibold text-[#48255A]">Riesgo de Daño y Sabotaje:</strong> Mide la capacidad de autorregulación emocional ante la frustración o la rabia, previniendo reacciones negativas que pongan en peligro los activos tangibles o el entorno de la empresa.
-                    </p>
-                    <p className="text-sm text-[#525252] leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                      <strong className="font-semibold text-[#48255A]">Conductas de Descuido:</strong> Evalúa el nivel de rigurosidad y atención al detalle, detectando la tendencia a normalizar errores o priorizar la velocidad por encima de los estándares de calidad requeridos.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* EJE 3: Alineación y Cultura Organizacional */}
-              <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12 bg-white p-8 lg:p-10 rounded-2xl border border-neutral-100 shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_15px_35px_rgba(112,15,163,0.04)] transition-all duration-300">
-                <div className="shrink-0 w-[70px]">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="#700FA3" viewBox="0 0 84 84">
-                    <path d="M57.58 75.012a1.23 1.23 0 0 0-1.23 1.23v5.297h-8.8v-2.084a1.23 1.23 0 1 0-2.461 0v2.084h-7.203l1.996-1.996a8.02 8.02 0 0 0 0-11.417c-2.83-2.83-7.314-3.108-10.467-.8a8.13 8.13 0 0 0-10.467.8 8.02 8.02 0 0 0 0 11.417l1.996 1.996H13.73v-2.084a1.231 1.231 0 1 0-2.461 0v2.084H2.46v-5.297a1.23 1.23 0 1 0-2.461 0v6.527A1.23 1.23 0 0 0 1.229 84h56.35a1.23 1.23 0 0 0 1.23-1.231v-6.527a1.23 1.23 0 0 0-1.23-1.23zm-36.9 2.792c-1.06-1.06-1.644-2.47-1.644-3.968s.584-2.908 1.644-3.968a5.64 5.64 0 0 1 7.871-.062 1.23 1.23 0 0 0 1.712 0c2.187-2.12 5.718-2.1 7.87.062 1.06 1.06 1.644 2.47 1.644 3.968s-.584 2.908-1.644 3.968l-3.736 3.736h-9.982l-3.736-3.736zm28.604-26.03l-12.848-3.426V43.08c4.156-2.317 7.06-6.62 7.42-11.615h.465c2.872 0 5.208-2.336 5.208-5.208 0-1.33-.502-2.545-1.326-3.467V11.837a7.87 7.87 0 0 0-7.86-7.86h-.795C39.267 1.738 37.353 0 35.04 0h-9.944a14.51 14.51 0 0 0-14.489 14.489v8.3c-.824.922-1.326 2.136-1.326 3.467 0 2.872 2.336 5.208 5.208 5.208h.465c.36 4.996 3.264 9.298 7.42 11.615v5.268l-12.85 3.426A12.85 12.85 0 0 0 0 64.171v6.314a1.23 1.23 0 1 0 2.461 0V64.17c0-4.7 3.166-8.812 7.698-10.02l7.267-1.938c1.326 5.453 6.248 9.413 11.978 9.413s10.652-3.96 11.978-9.413l7.267 1.938c4.533 1.2 7.7 5.33 7.7 10.02v6.313a1.231 1.231 0 1 0 2.461 0V64.17a12.85 12.85 0 0 0-9.525-12.398zm-4.964-22.77h-.427V23.5h.427a2.75 2.75 0 0 1 2.747 2.747 2.75 2.75 0 0 1-2.747 2.747zm1.42-17.165v9.4a5.19 5.19 0 0 0-1.421-.199H43.17l-3.588-3.588V6.438h.758a5.41 5.41 0 0 1 5.4 5.4zm-34 14.42a2.75 2.75 0 0 1 2.747-2.747h.427v5.494h-.427a2.75 2.75 0 0 1-2.747-2.747zm5.635 4.158V23.5H21.6a1.231 1.231 0 1 0 0-2.461h-7.1a5.19 5.19 0 0 0-1.421.199V14.5c0-6.632 5.396-12.028 12.028-12.028h9.944c1.15 0 2.084.935 2.084 2.084V17.46l-2.007 2.007a5.36 5.36 0 0 1-3.817 1.58h-3.96a1.23 1.23 0 1 0 0 2.461h3.96a7.81 7.81 0 0 0 5.558-2.302l1.497-1.497 3.078 3.078v7.626c0 6.632-5.396 12.028-12.028 12.028s-12.028-5.396-12.028-12.028zm12.028 14.5a14.43 14.43 0 0 0 4.57-.739v5.128c0 2.52-2.05 4.57-4.57 4.57s-4.57-2.05-4.57-4.57v-5.128a14.43 14.43 0 0 0 4.57.739zm0 14.263a9.89 9.89 0 0 1-9.601-7.587l2.745-.732c.7 3.13 3.513 5.476 6.855 5.476s6.146-2.345 6.856-5.476l2.745.732a9.89 9.89 0 0 1-9.601 7.587zm38.45-56.4c-8.903 0-16.146 7.243-16.146 16.146a16.21 16.21 0 0 0 4.485 11.166l-1.885 4.06a1.23 1.23 0 0 0 1.634 1.635l4.942-2.294a16.2 16.2 0 0 0 6.97 1.58A16.17 16.17 0 0 0 84 18.916C84 10.012 76.756 2.77 67.853 2.77zm0 29.83a13.71 13.71 0 0 1-6.375-1.573A1.23 1.23 0 0 0 60.386 31l-2.43 1.128.833-1.795a1.23 1.23 0 0 0-.276-1.417 13.55 13.55 0 0 1-4.345-10.001c0-7.546 6.14-13.685 13.685-13.685S81.54 11.37 81.54 18.916 75.4 32.6 67.853 32.6zm8.31-20.046c-2.242-2.242-5.767-2.505-8.308-.77-2.54-1.734-6.066-1.47-8.308.77a6.49 6.49 0 0 0-1.914 4.62 6.49 6.49 0 0 0 1.914 4.62l7.438 7.438c.24.24.555.36.87.36s.63-.12.87-.36l7.438-7.438a6.54 6.54 0 0 0 0-9.24zm-1.74 7.5l-6.568 6.568-6.568-6.568c-.77-.77-1.193-1.792-1.193-2.88a4.05 4.05 0 0 1 1.193-2.88A4.06 4.06 0 0 1 67 14.249a1.23 1.23 0 0 0 1.713 0 4.09 4.09 0 0 1 5.712.045 4.08 4.08 0 0 1 0 5.76z"/>
-                  </svg>
-                </div>
-                <div className="flex-1">
-                  <h3
-                    className="text-lg md:text-xl font-bold text-[#48255A]"
-                    style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3", marginBottom: "14px" }}
-                  >
-                    Alineación y Cultura Organizacional
-                  </h3>
-                  <div className="flex flex-col gap-3">
-                    <p className="text-sm text-[#525252] leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                      <strong className="font-semibold text-[#48255A]">Apego a las Reglas:</strong> Determina el respeto y la importancia que el evaluado otorga a las normas internas, diferenciando a quienes las consideran directrices obligatorias de aquellos que las ven como simples sugerencias opcionales.
-                    </p>
-                    <p className="text-sm text-[#525252] leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                      <strong className="font-semibold text-[#48255A]">Equidad y Justicia:</strong> Mide la disposición a actuar de manera imparcial y equitativa con los demás, identificando riesgos de sesgos corporativos, prejuicios o tratos de conveniencia.
-                    </p>
-                    <p className="text-sm text-[#525252] leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                      <strong className="font-semibold text-[#48255A]">Trabajo en Equipo:</strong> Mide el nivel de adaptabilidad y alineación con los objetivos colectivos, priorizando el éxito del equipo por encima de las metas netamente individuales.
-                    </p>
-                    <p className="text-sm text-[#525252] leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                      <strong className="font-semibold text-[#48255A]">Interés por el Trabajo (Compromiso Organizacional):</strong> Evalúa el valor que la persona le otorga al esfuerzo laboral y su nivel de enfoque para alcanzar las metas estratégicas de la empresa.
-                    </p>
-                    <p className="text-sm text-[#525252] leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                      <strong className="font-semibold text-[#48255A]">Interés Egocéntrico:</strong> Identifica el grado de focalización exclusiva en el beneficio propio, determinando si esta tendencia puede llegar a desmedro o perjuicio de sus compañeros o de la organización.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
+                );
+              })}
             </div>
+
           </div>
         </div>
       </section>
 
       {/* Características Generales Section */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="bg-white py-8">
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1000px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-12 h-[2px] bg-[#700FA3]" />
@@ -303,55 +280,39 @@ export default function PruebaDeHonestidadEticaYValoresPage() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Card 1 */}
-            <div className="flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
-              <div className="text-4xl mb-3">📊</div>
-              <h3 className="text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
-                Volumen de Evaluación
-              </h3>
-              <p className="text-[#525252] text-sm leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                90 reactivos dinámicos y validados psicométricamente.
-              </p>
-            </div>
+            {(dbData?.pageContent?.fichaTecnica && dbData.pageContent.fichaTecnica.length > 0
+              ? dbData.pageContent.fichaTecnica
+              : [
+                  { title: "📊 Volumen de Evaluación", description: "90 reactivos dinámicos y validados psicométricamente." },
+                  { title: "💻 Modalidad de Aplicación", description: "Formato flexible: 100% online." },
+                  { title: "📄 Entrega de Resultados", description: "Reportes analíticos disponibles de forma inmediata tras finalizar la prueba." },
+                  { title: "🔬 Metodología", description: "Indicador referencial de alta precisión para complementar filtros de seguridad y selección." }
+                ]
+            ).map((card: any, idx: number) => {
+              // Extract emoji from the title if present. Emojis can be at the start of the title.
+              const emojiRegex = /([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g;
+              const match = card.title.match(emojiRegex);
+              const emoji = match ? match[0] : "📋";
+              const titleWithoutEmoji = card.title.replace(emojiRegex, "").trim();
 
-            {/* Card 2 */}
-            <div className="flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
-              <div className="text-4xl mb-3">💻</div>
-              <h3 className="text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
-                Modalidad de Aplicación
-              </h3>
-              <p className="text-[#525252] text-sm leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                Formato flexible: 100% online.
-              </p>
-            </div>
-
-            {/* Card 3 */}
-            <div className="flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
-              <div className="text-4xl mb-3">📄</div>
-              <h3 className="text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
-                Entrega de Resultados
-              </h3>
-              <p className="text-[#525252] text-sm leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                Reportes analíticos disponibles de forma inmediata tras finalizar la prueba.
-              </p>
-            </div>
-
-            {/* Card 4 */}
-            <div className="flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
-              <div className="text-4xl mb-3">🔬</div>
-              <h3 className="text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
-                Metodología
-              </h3>
-              <p className="text-[#525252] text-sm leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                Indicador referencial de alta precisión para complementar filtros de seguridad y selección.
-              </p>
-            </div>
+              return (
+                <div key={idx} className="flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                  <div className="text-4xl mb-3">{emoji}</div>
+                  <h3 className="text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
+                    {titleWithoutEmoji}
+                  </h3>
+                  <p className="text-[#525252] text-sm leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                    {card.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* ¿Cuándo implementar esta evaluación? Section */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="bg-white pt-8 pb-20">
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
           <div className="flex items-center gap-3 mb-6 justify-center">
             <div className="w-12 h-[2px] bg-[#700FA3]" />

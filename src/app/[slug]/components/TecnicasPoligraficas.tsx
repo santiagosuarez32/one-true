@@ -307,30 +307,29 @@ export default function TecnicasPoligraficasPage({ course }: { course: Course })
             Características Generales del Curso
           </h2>
 
-          <div className="overflow-hidden rounded border border-[#700FA3]/20 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
-            <table className="w-full table-fixed text-left border-collapse bg-white">
-              <thead>
-                <tr className="bg-[#700FA3] border-b-2 border-[#FFC107]">
-                  <th className="py-4 px-3 sm:py-5 sm:px-6 font-bold text-white text-sm sm:text-lg w-1/3 break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Característica</th>
-                  <th className="py-4 px-3 sm:py-5 sm:px-6 font-bold text-white text-sm sm:text-lg w-2/3 border-l border-[#700FA3]/30 break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Especificación Técnica</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-[#700FA3]/20">
-                {(fichaTecnica && fichaTecnica.length > 0 ? fichaTecnica : [
-                  { title: "Modalidad", description: "Presencial o en línea" },
-                  { title: "¿Qué incluye este curso avanzado?", description: "• 20 horas de formación especializada.\n• +40 lecciones de alto contenido técnico.\n• Plantillas de calificación y protocolos descargables.\n• Evaluaciones modulares (Quizzes) para medir tu progreso.\n• 30 días de garantía de satisfacción.\n• Acceso a la comunidad privada ONE TRUE.\n• Diploma de finalización que avala tu actualización." }
-                ]).map((item, idx) => (
-                  <tr key={idx} className={idx % 2 === 0 ? "bg-white" : "bg-[#700FA3]/5"}>
-                    <td className="py-4 px-3 sm:py-5 sm:px-6 font-semibold text-[#48255A] text-sm sm:text-base break-words align-top" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                      {item.title}
-                    </td>
-                    <td className="py-4 px-3 sm:py-5 sm:px-6 text-[#525252] font-light border-l border-[#700FA3]/20 text-sm sm:text-base break-words align-top whitespace-pre-line" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                      {item.description}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {(fichaTecnica && fichaTecnica.length > 0 ? fichaTecnica : [
+              { title: "💻 Modalidad", description: "Presencial o en línea" },
+              { title: "📚 ¿Qué incluye este curso avanzado?", description: "• 20 horas de formación especializada.\n• +40 lecciones de alto contenido técnico.\n• Plantillas de calificación y protocolos descargables.\n• Evaluaciones modulares (Quizzes) para medir tu progreso.\n• 30 días de garantía de satisfacción.\n• Acceso a la comunidad privada ONE TRUE.\n• Diploma de finalización que avala tu actualización." }
+            ]).map((feat, index) => {
+              const emojiRegex = /([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g;
+              const emojiMatch = feat.title.match(emojiRegex);
+              const icon = emojiMatch ? emojiMatch[0] : "📌";
+              const titleClean = feat.title.replace(icon, "").trim();
+              const isSecondCardColSpan = (fichaTecnica && fichaTecnica.length > 0) ? "" : (index === 1 ? "md:col-span-2" : "");
+
+              return (
+                <div key={index} className={`flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 ${isSecondCardColSpan}`}>
+                  <div className="text-4xl mb-3">{icon}</div>
+                  <h3 className="text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
+                    {titleClean}
+                  </h3>
+                  <p className="text-[#525252] text-sm leading-relaxed font-light whitespace-pre-line" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                    {feat.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

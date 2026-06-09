@@ -26,57 +26,6 @@
       "created_at": "2026-06-06T16:11:44.014975+00:00"
     },
     {
-      "id": "prueba-de-honestidad-etica-y-valores",
-      "title": "Prueba de Honestidad, Ética y Valores",
-      "desc": "Herramienta psicométrica avanzada de 90 reactivos estratégicos diseñada para identificar conductas de riesgo y medir la alineación ética del personal.",
-      "image": "/servicios/8.webp",
-      "cta": "Ver detalles del servicio",
-      "href": "/prueba-de-honestidad-etica-y-valores",
-      "template": "standard",
-      "published": true,
-      "pageContent": {
-        "heroDesc": "Compuesta por 90 reactivos estratégicos, está diseñada para medir la alineación ética del evaluado e identificar conductas contraproducentes que puedan representar riesgos.",
-        "whyTitle": "Valor para la Empresa",
-        "aboutDesc": "Mide de manera científica y detallada diferentes dimensiones de la conducta ética:",
-        "heroImage": "/servicios/8.webp",
-        "heroTitle": "Prueba de Honestidad,",
-        "whyPoints": [
-          {
-            "text": "Promueve una cultura organizacional transparente, basada en el cumplimiento y el respeto.",
-            "title": "Ambiente Seguro"
-          },
-          {
-            "text": "Ideal para aplicar en procesos masivos y en puestos que manejen activos importantes.",
-            "title": "Filtro Eficiente"
-          },
-          {
-            "text": "Resultados cuantitativos y analizados por profesionales.",
-            "title": "Decisiones Objetivas"
-          }
-        ],
-        "aboutCards": [
-          {
-            "text": "Grado de coherencia entre los valores del candidato y las normas corporativas.",
-            "title": "Alineación de Valores"
-          },
-          {
-            "text": "Predisposición al robo, soborno, fuga de información o desacato de normas.",
-            "title": "Identificación de Riesgos"
-          },
-          {
-            "text": "Obtención de informes estructurados con semáforos de riesgo y recomendaciones concretas.",
-            "title": "Reportes Rápidos"
-          }
-        ],
-        "aboutTitle": "¿Qué evalúa la prueba?",
-        "heroTagline": "Un entorno seguro se construye con personas éticas.",
-        "contactPhone": "0981296179",
-        "heroUnderlined": "Ética y Valores",
-        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
-      },
-      "created_at": "2026-06-06T16:11:45.483517+00:00"
-    },
-    {
       "id": "curso-basico-en-poligrafia",
       "title": "Formación en Poligrafía Acreditada por APA",
       "desc": "Certifíquese como poligrafista profesional con nuestro programa de 400 horas, diseñado bajo los más altos estándares científicos y avalado internacionalmente por la APA.",
@@ -302,6 +251,134 @@
       "created_at": "2026-06-06T16:11:45.238815+00:00"
     },
     {
+      "id": "visitas-domiciliarias",
+      "title": "Visitas Domiciliarias",
+      "desc": "Evaluamos el entorno socioeconómico y familiar de sus candidatos en el terreno. Prevenimos riesgos de vulnerabilidad y confirmamos la coherencia entre el estilo de vida y el perfil declarado.",
+      "image": "/servicios/4.webp",
+      "cta": "Ver detalles del servicio",
+      "href": "/visitas-domiciliarias",
+      "template": "vetting",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "La seguridad de su empresa no termina en la oficina. Nuestro servicio de visita domiciliaria permite conocer el entorno real del candidato, identificando factores de riesgo, niveles de vulnerabilidad y la veracidad de su situación socioeconómica.",
+        "whyTitle": "Beneficios para su Organización",
+        "aboutDesc": "¿Qué evaluamos en el terreno?",
+        "heroImage": "/domicilio/hero.webp",
+        "heroTitle": "Visitas",
+        "whyPoints": [
+          {
+            "text": "Detecte a tiempo situaciones personales que puedan comprometer la lealtad del empleado.",
+            "title": "Prevención de Vulnerabilidades"
+          },
+          {
+            "text": "Evite la contratación de personal con entornos que faciliten actos ilícitos.",
+            "title": "Mitigación de Riesgos"
+          },
+          {
+            "text": "Proteja sus activos asegurándose de que el entorno del candidato sea estable y confiable.",
+            "title": "Seguridad Patrimonial"
+          }
+        ],
+        "aboutCards": [
+          {
+            "text": "Validación de la ubicación geográfica y condiciones de habitabilidad del candidato.",
+            "title": "Verificación de Entorno"
+          },
+          {
+            "text": "Identificación del núcleo familiar y detección de posibles conflictos o riesgos externos.",
+            "title": "Análisis Socio-Familiar"
+          },
+          {
+            "text": "Contrastamos que el nivel de vida sea consistente con los ingresos y el cargo al que postula.",
+            "title": "Coherencia de Vida"
+          },
+          {
+            "text": "Obtención de información complementaria sobre la conducta y reputación en su comunidad.",
+            "title": "Referencias de Vecindad"
+          }
+        ],
+        "aboutTitle": "Nuestros especialistas realizan una inspección profesional y ética centrada en:",
+        "heroTagline": "Verificación de campo para una visión 360° de su futuro colaborador.",
+        "contactPhone": "0981296179",
+        "heroUnderlined": "Domiciliarias",
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True",
+        "showOtherSolutions": false
+      },
+      "created_at": "2026-06-06T16:11:44.772206+00:00"
+    },
+    {
+      "id": "prueba-de-honestidad-etica-y-valores",
+      "title": "Prueba de Honestidad, Ética y Valores",
+      "desc": "Herramienta psicométrica avanzada de 90 reactivos estratégicos diseñada para identificar conductas de riesgo y medir la alineación ética del personal.",
+      "image": "/servicios/8.webp",
+      "cta": "Ver detalles del servicio",
+      "href": "/prueba-de-honestidad-etica-y-valores",
+      "template": "standard",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "Compuesta por 90 reactivos estratégicos, está diseñada para medir la alineación ética del evaluado e identificar conductas contraproducentes que puedan representar riesgos.",
+        "whyTitle": "Valor para la Empresa",
+        "aboutDesc": "Mide de manera científica y detallada diferentes dimensiones de la conducta ética:",
+        "heroImage": "/servicios/8.webp",
+        "heroTitle": "Prueba de Honestidad,",
+        "whyPoints": [
+          {
+            "text": "Promueve una cultura organizacional transparente, basada en el cumplimiento y el respeto.",
+            "title": "Ambiente Seguro"
+          },
+          {
+            "text": "Ideal para aplicar en procesos masivos y en puestos que manejen activos importantes.",
+            "title": "Filtro Eficiente"
+          },
+          {
+            "text": "Resultados cuantitativos y analizados por profesionales.",
+            "title": "Decisiones Objetivas"
+          }
+        ],
+        "aboutCards": [
+          {
+            "icon": "/icons/eje1.svg",
+            "text": "Nuestra prueba analiza de manera integral la orientación conductual y los valores de los evaluados a través de dimensiones críticas estructuradas en tres grandes ejes de riesgo corporativo.",
+            "items": [
+              "Honestidad: Mide la inclinación natural del evaluado a actuar con transparencia y rectitud. Permite predecir la probabilidad de conductas deshonestas en comparación con perfiles de alta integridad.",
+              "Moralidad: Evalúa la solidez y firmeza de los valores morales individuales frente a presiones externas, identificando si el perfil es altamente manipulable o propenso a quebrantar sus principios.",
+              "Honestidad al Responder (Control de Deseabilidad Social): Detecta la consistencia y veracidad de la prueba, identificando si el evaluado intenta manipular el test o simular un perfil \"socialmente aceptable\" para ocultar su verdadera conducta."
+            ],
+            "title": "Factores de Integridad y Ética Laboral"
+          },
+          {
+            "icon": "/icons/eje2.svg",
+            "text": "Nuestra prueba analiza de manera integral la orientación conductual y los valores de los evaluados a través de dimensiones críticas estructuradas en tres grandes ejes de riesgo corporativo.",
+            "items": [
+              "Propensión al Robo: Analiza los indicadores actitudinales que se correlacionan directamente con un mayor riesgo estadístico de cometer robos o apropiación ilícita de recursos.",
+              "Tendencia al Abuso o Manipulación: Identifica perfiles con rasgos impulsivos o bajo autocontrol que podrían usar la manipulación para fines personales, afectando el clima laboral o el trato al equipo.",
+              "Riesgo de Daño y Sabotaje: Mide la capacidad de autorregulación emocional ante la frustración o la rabia, previniendo reacciones negativas que pongan en peligro los activos tangibles o el entorno de la empresa.",
+              "Conductas de Descuido: Evalúa el nivel de rigurosidad y atención al detalle, detectando la tendencia a normalizar errores o priorizar la velocidad por encima de los estándares de calidad requeridos."
+            ],
+            "title": "Identificación de Comportamientos Riesgosos"
+          },
+          {
+            "icon": "/icons/eje3.svg",
+            "text": "Nuestra prueba analiza de manera integral la orientación conductual y los valores de los evaluados a través de dimensiones críticas estructuradas en tres grandes ejes de riesgo corporativo.",
+            "items": [
+              "Apego a las Reglas: Determina el respeto y la importancia que el evaluado otorga a las normas internas, diferenciando a quienes las consideran directrices obligatorias de aquellos que las ven como simples sugerencias opcionales.",
+              "Equidad y Justicia: Mide la disposición a actuar de manera imparcial y equitativa con los demás, identificando riesgos de sesgos corporativos, prejuicios o tratos de conveniencia.",
+              "Trabajo en Equipo: Mide el nivel de adaptabilidad y alineación con los objetivos colectivos, priorizando el éxito del equipo por encima de las metas netamente individuales.",
+              "Interés por el Trabajo (Compromiso Organizacional): Evalúa el valor que la persona le otorga al esfuerzo laboral y su nivel de enfoque para alcanzar las metas estratégicas de la empresa.",
+              "Interés Egocéntrico: Identifica el grado de focalización exclusiva en el beneficio propio, determinando si esta tendencia puede llegar a desmedro o perjuicio de sus compañeros o de la organización."
+            ],
+            "title": "Alineación y Cultura Organizacional"
+          }
+        ],
+        "aboutTitle": "¿Qué evalúa la prueba?",
+        "heroTagline": "Un entorno seguro se construye con personas éticas.",
+        "contactPhone": "0981296179",
+        "heroUnderlined": "Ética y Valores",
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
+      },
+      "created_at": "2026-06-06T16:11:45.483517+00:00"
+    },
+    {
       "id": "estudio-de-confiabilidad-360",
       "title": "Estudio de Confiabilidad 360°",
       "desc": "Confirmamos la honestidad y estabilidad de sus candidatos. Validamos trayectorias (laborales y académicas) y realizamos un análisis profundo de salud financiera y endeudamiento.",
@@ -358,112 +435,9 @@
         "showOtherSolutions": false
       },
       "created_at": "2026-06-06T16:11:44.532465+00:00"
-    },
-    {
-      "id": "visitas-domiciliarias",
-      "title": "Visitas Domiciliarias",
-      "desc": "Evaluamos el entorno socioeconómico y familiar de sus candidatos en el terreno. Prevenimos riesgos de vulnerabilidad y confirmamos la coherencia entre el estilo de vida y el perfil declarado.",
-      "image": "/servicios/4.webp",
-      "cta": "Ver detalles del servicio",
-      "href": "/visitas-domiciliarias",
-      "template": "vetting",
-      "published": true,
-      "pageContent": {
-        "heroDesc": "La seguridad de su empresa no termina en la oficina. Nuestro servicio de visita domiciliaria permite conocer el entorno real del candidato, identificando factores de riesgo, niveles de vulnerabilidad y la veracidad de su situación socioeconómica.",
-        "whyTitle": "Beneficios para su Organización",
-        "aboutDesc": "¿Qué evaluamos en el terreno?",
-        "heroImage": "/domicilio/hero.webp",
-        "heroTitle": "Visitas",
-        "whyPoints": [
-          {
-            "text": "Detecte a tiempo situaciones personales que puedan comprometer la lealtad del empleado.",
-            "title": "Prevención de Vulnerabilidades"
-          },
-          {
-            "text": "Evite la contratación de personal con entornos que faciliten actos ilícitos.",
-            "title": "Mitigación de Riesgos"
-          },
-          {
-            "text": "Proteja sus activos asegurándose de que el entorno del candidato sea estable y confiable.",
-            "title": "Seguridad Patrimonial"
-          }
-        ],
-        "aboutCards": [
-          {
-            "text": "Validación de la ubicación geográfica y condiciones de habitabilidad del candidato.",
-            "title": "Verificación de Entorno"
-          },
-          {
-            "text": "Identificación del núcleo familiar y detección de posibles conflictos o riesgos externos.",
-            "title": "Análisis Socio-Familiar"
-          },
-          {
-            "text": "Contrastamos que el nivel de vida sea consistente con los ingresos y el cargo al que postula.",
-            "title": "Coherencia de Vida"
-          },
-          {
-            "text": "Obtención de información complementaria sobre la conducta y reputación en su comunidad.",
-            "title": "Referencias de Vecindad"
-          }
-        ],
-        "aboutTitle": "Nuestros especialistas realizan una inspección profesional y ética centrada en:",
-        "heroTagline": "Verificación de campo para una visión 360° de su futuro colaborador.",
-        "contactPhone": "0981296179",
-        "heroUnderlined": "Domiciliarias",
-        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True",
-        "showOtherSolutions": false
-      },
-      "created_at": "2026-06-06T16:11:44.772206+00:00"
     }
   ],
   "courses": [
-    {
-      "id": "calificacion-graficas-analisis-datos",
-      "title": "Calificación de Gráficas - Análisis de Datos",
-      "desc": "Interpretación numérica y visual de trazados poligráficos. Análisis estadístico de componentes fisiológicos y criterios de evaluación objetiva.",
-      "image": "/cursos-avanzados/calificacion-de-graficas.webp",
-      "href": "/calificacion-graficas-analisis-datos",
-      "published": true,
-      "pageContent": {
-        "heroDesc": "Interpretación numérica y visual de trazados poligráficos. Análisis de componentes fisiológicos y criterios de evaluación objetiva para decisiones periciales de alta precisión.",
-        "aboutDesc": "Profundice en el análisis estadístico de trazados neumográficos, electrodérmicos y cardiovasculares:",
-        "heroImage": "/cursos-avanzados/calificacion-de-graficas.webp",
-        "heroTitle": "Curso Avanzado: Calificación de Gráficas",
-        "aboutTitle": "Ejes Temáticos:",
-        "focusAreas": [
-          {
-            "title": "Análisis de Componentes Fisiológicos",
-            "description": "Criterios para identificar reacciones fisiológicas válidas en neumograma, conductancia y cardiograma."
-          },
-          {
-            "title": "Sistemas de Puntuación Numérica",
-            "description": "Metodología estándar de 3 y 7 posiciones para la evaluación visual sistemática de gráficas."
-          },
-          {
-            "title": "Toma de Decisión Pericial",
-            "description": "Umbrales estadísticos y reducción de la tasa de resultados inconclusos en las evaluaciones."
-          }
-        ],
-        "heroTagline": "Especialización avanzada para poligrafistas certificados.",
-        "contactPhone": "099371290",
-        "fichaTecnica": [
-          {
-            "title": "⏱️ 18 horas de duración",
-            "description": "Módulo de alta exigencia analítica."
-          },
-          {
-            "title": "📚 35 lecciones",
-            "description": "Casos prácticos de estudio."
-          },
-          {
-            "title": "🎓 Diploma oficial",
-            "description": "Acreditado por One True Academia."
-          }
-        ],
-        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593099371290&text=Hola!%20Deseo%20conocer%20mas%20informacion%20sobre%20los%20Cursos%20Avanzados%20en%20Poligrafia."
-      },
-      "created_at": "2026-06-06T16:11:46.412988+00:00"
-    },
     {
       "id": "sistema-calificacion-ess-m",
       "title": "Sistema de Calificación ESS-M",
@@ -601,6 +575,120 @@
       "template": "tecnicas"
     },
     {
+      "id": "entrevista-pretest",
+      "title": "Entrevista Pretest",
+      "desc": "Estructuración y conducción de la entrevista previa al examen. Técnicas de rapport, formulación de preguntas y detección de conductas evasivas.",
+      "image": "/cursos-avanzados/pretest.jpg",
+      "href": "/entrevista-pretest",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "¿Buscas perfeccionar tu técnica de entrevista pretest y dominar una de las fases más críticas del examen poligráfico? Esta formación especializada está diseñada para llevar tus habilidades al siguiente nivel.",
+        "aboutDesc": "Profundice en los estándares, principios y procesos metodológicos que sostienen una entrevista pretest clara, técnica y alineada al tipo de evaluación poligráfica.",
+        "heroImage": "/pruebas-poligrafo/primer.webp",
+        "heroTitle": "Curso Avanzado: Entrevista Pretest",
+        "aboutTitle": "Ejes Temáticos:",
+        "focusAreas": [
+          {
+            "title": "Fundamentos y estándares",
+            "description": "Domina los principios de las prácticas internacionales estandarizadas en entrevistas pretest y aprende los fundamentos metodológicos que garantizan la confiabilidad técnica de la evaluación."
+          },
+          {
+            "title": "Preparación y desarrollo del pretest",
+            "description": "Aprende cada fase de preparación previa al examen y domina el paso a paso del protocolo de entrevista pretest, asegurando consistencia y validez en tus evaluaciones poligráficas."
+          },
+          {
+            "title": "Evaluaciones diagnósticas y exploratorias",
+            "description": "Especialízate en el análisis de evaluaciones poligráficas diagnósticas y exploratorias, incluyendo el protocolo de preguntas específicas para casos de preempleo, rutina y temas investigativos."
+          }
+        ],
+        "heroTagline": "Especialización avanzada para poligrafistas certificados.",
+        "contactPhone": "099371290",
+        "fichaTecnica": [
+          {
+            "title": "⏱️ 15 horas de duración",
+            "description": "Formación intensiva y estructurada."
+          },
+          {
+            "title": "📚 32 lecciones",
+            "description": "Contenido completo y detallado."
+          },
+          {
+            "title": "📄 Plantillas descargables",
+            "description": "+75 diapositivas y documentos listos."
+          },
+          {
+            "title": "❓ Quizzes interactivos",
+            "description": "Preguntas para reforzar aprendizaje."
+          },
+          {
+            "title": "📺 Acceso 3 meses",
+            "description": "Contenido pregrabado disponible."
+          },
+          {
+            "title": "✅ 30 días de garantía",
+            "description": "Satisfacción garantizada."
+          },
+          {
+            "title": "🔐 Comunidad ONE TRUE",
+            "description": "Acceso exclusivo a la red."
+          },
+          {
+            "title": "🎓 Diploma oficial",
+            "description": "Certificado de finalización."
+          }
+        ],
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593099371290&text=Hola!%20Deseo%20conocer%20mas%20informacion%20sobre%20los%20Cursos%20Avanzados%20en%20Poligrafia."
+      },
+      "created_at": "2026-06-06T16:11:45.947071+00:00"
+    },
+    {
+      "id": "calificacion-graficas-analisis-datos",
+      "title": "Calificación de Gráficas - Análisis de Datos",
+      "desc": "Interpretación numérica y visual de trazados poligráficos. Análisis estadístico de componentes fisiológicos y criterios de evaluación objetiva.",
+      "image": "/cursos-avanzados/calificacion-de-graficas.webp",
+      "href": "/calificacion-graficas-analisis-datos",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "Interpretación numérica y visual de trazados poligráficos. Análisis de componentes fisiológicos y criterios de evaluación objetiva para decisiones periciales de alta precisión.",
+        "aboutDesc": "Profundice en el análisis estadístico de trazados neumográficos, electrodérmicos y cardiovasculares:",
+        "heroImage": "/cursos-avanzados/calificacion-de-graficas.webp",
+        "heroTitle": "Curso Avanzado: Calificación de Gráficas",
+        "aboutTitle": "Ejes Temáticos:",
+        "focusAreas": [
+          {
+            "title": "Análisis de Componentes Fisiológicos",
+            "description": "Criterios para identificar reacciones fisiológicas válidas en neumograma, conductancia y cardiograma."
+          },
+          {
+            "title": "Sistemas de Puntuación Numérica",
+            "description": "Metodología estándar de 3 y 7 posiciones para la evaluación visual sistemática de gráficas."
+          },
+          {
+            "title": "Toma de Decisión Pericial",
+            "description": "Umbrales estadísticos y reducción de la tasa de resultados inconclusos en las evaluaciones."
+          }
+        ],
+        "heroTagline": "Especialización avanzada para poligrafistas certificados.",
+        "contactPhone": "099371290",
+        "fichaTecnica": [
+          {
+            "title": "⏱️ 18 horas de duración",
+            "description": "Módulo de alta exigencia analítica."
+          },
+          {
+            "title": "📚 35 lecciones",
+            "description": "Casos prácticos de estudio."
+          },
+          {
+            "title": "🎓 Diploma oficial",
+            "description": "Acreditado por One True Academia."
+          }
+        ],
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593099371290&text=Hola!%20Deseo%20conocer%20mas%20informacion%20sobre%20los%20Cursos%20Avanzados%20en%20Poligrafia."
+      },
+      "created_at": "2026-06-06T16:11:46.412988+00:00"
+    },
+    {
       "id": "control-de-calidad-en-poligrafia",
       "title": "Control de Calidad en Poligrafía",
       "desc": "Protocolos de auditoría, revisión por pares y mejora continua en la práctica profesional. Garantía de rigor técnico y cumplimiento normativo.",
@@ -673,109 +761,9 @@
         "contactWhatsapp": "https://api.whatsapp.com/send?phone=593099371290"
       },
       "created_at": "2026-06-07T01:49:12.688927+00:00"
-    },
-    {
-      "id": "entrevista-pretest",
-      "title": "Entrevista Pretest",
-      "desc": "Estructuración y conducción de la entrevista previa al examen. Técnicas de rapport, formulación de preguntas y detección de conductas evasivas.",
-      "image": "/cursos-avanzados/pretest.jpg",
-      "href": "/entrevista-pretest",
-      "published": true,
-      "pageContent": {
-        "heroDesc": "¿Buscas perfeccionar tu técnica de entrevista pretest y dominar una de las fases más críticas del examen poligráfico? Esta formación especializada está diseñada para llevar tus habilidades al siguiente nivel.",
-        "aboutDesc": "Profundice en los estándares, principios y procesos metodológicos que sostienen una entrevista pretest clara, técnica y alineada al tipo de evaluación poligráfica.",
-        "heroImage": "/pruebas-poligrafo/primer.webp",
-        "heroTitle": "Curso Avanzado: Entrevista Pretest",
-        "aboutTitle": "Ejes Temáticos:",
-        "focusAreas": [
-          {
-            "title": "Fundamentos y estándares",
-            "description": "Domina los principios de las prácticas internacionales estandarizadas en entrevistas pretest y aprende los fundamentos metodológicos que garantizan la confiabilidad técnica de la evaluación."
-          },
-          {
-            "title": "Preparación y desarrollo del pretest",
-            "description": "Aprende cada fase de preparación previa al examen y domina el paso a paso del protocolo de entrevista pretest, asegurando consistencia y validez en tus evaluaciones poligráficas."
-          },
-          {
-            "title": "Evaluaciones diagnósticas y exploratorias",
-            "description": "Especialízate en el análisis de evaluaciones poligráficas diagnósticas y exploratorias, incluyendo el protocolo de preguntas específicas para casos de preempleo, rutina y temas investigativos."
-          }
-        ],
-        "heroTagline": "Especialización avanzada para poligrafistas certificados.",
-        "contactPhone": "099371290",
-        "fichaTecnica": [
-          {
-            "title": "⏱️ 15 horas de duración",
-            "description": "Formación intensiva y estructurada."
-          },
-          {
-            "title": "📚 32 lecciones",
-            "description": "Contenido completo y detallado."
-          },
-          {
-            "title": "📄 Plantillas descargables",
-            "description": "+75 diapositivas y documentos listos."
-          },
-          {
-            "title": "❓ Quizzes interactivos",
-            "description": "Preguntas para reforzar aprendizaje."
-          },
-          {
-            "title": "📺 Acceso 3 meses",
-            "description": "Contenido pregrabado disponible."
-          },
-          {
-            "title": "✅ 30 días de garantía",
-            "description": "Satisfacción garantizada."
-          },
-          {
-            "title": "🔐 Comunidad ONE TRUE",
-            "description": "Acceso exclusivo a la red."
-          },
-          {
-            "title": "🎓 Diploma oficial",
-            "description": "Certificado de finalización."
-          }
-        ],
-        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593099371290&text=Hola!%20Deseo%20conocer%20mas%20informacion%20sobre%20los%20Cursos%20Avanzados%20en%20Poligrafia."
-      },
-      "created_at": "2026-06-06T16:11:45.947071+00:00"
     }
   ],
   "blogs": [
-    {
-      "id": "verdad-o-mentira",
-      "title": "¿Verdad o Mentira? Todo lo que debes saber antes de contratar una prueba de Polígrafo.",
-      "image": "/blog/1.webp",
-      "link": "/blog/verdad-o-mentira",
-      "published": true,
-      "publishDate": "15 de Noviembre, 2024",
-      "readTime": "5 min de lectura",
-      "content": "Tomar la decisión de evaluar la confianza de tu personal o investigar un incidente delicado no es fácil. En este artículo, responderemos de manera sencilla las preguntas más frecuentes sobre la poligrafía profesional, separando la verdad de los mitos comunes para ayudarte a tomar decisiones seguras.",
-      "created_at": "2026-06-06T16:11:47.217222+00:00"
-    },
-    {
-      "id": "preempleo-rutina-investigacion",
-      "title": "¿Preempleo, Rutina o Investigación? Descubre qué prueba de polígrafo necesitas realmente.",
-      "image": "/blog/2.webp",
-      "link": "/blog/preempleo-rutina-investigacion",
-      "published": true,
-      "publishDate": "20 de Noviembre, 2024",
-      "readTime": "6 min de lectura",
-      "content": "Elegir la prueba de polígrafo correcta es esencial para obtener las respuestas que buscas. Descubre las diferencias entre las evaluaciones de preempleo, rutina periódica e investigación específica de incidentes en esta guía detallada.",
-      "created_at": "2026-06-06T16:11:47.451442+00:00"
-    },
-    {
-      "id": "garantiza-la-verdad",
-      "title": "Garantiza la Verdad: 10 Requisitos Clave para una Prueba de Polígrafo Confiable y Exitosa.",
-      "image": "/blog/3.webp",
-      "link": "/blog/garantiza-la-verdad",
-      "published": true,
-      "publishDate": "25 de Noviembre, 2024",
-      "readTime": "7 min de lectura",
-      "content": "Para obtener resultados con un 95% de exactitud, la prueba de polígrafo debe realizarse bajo condiciones específicas de control, ética y metodología. Te presentamos las 10 claves fundamentales para un proceso poligráfico exitoso.",
-      "created_at": "2026-06-06T16:11:47.682185+00:00"
-    },
     {
       "id": "pruebas",
       "title": "pruebas",
@@ -786,6 +774,39 @@
       "readTime": "pruebas",
       "content": "pruebas",
       "created_at": "2026-06-07T01:50:33.39157+00:00"
+    },
+    {
+      "id": "preempleo-rutina-investigacion",
+      "title": "¿Preempleo, Rutina o Investigación? Descubre qué prueba de polígrafo necesitas realmente.",
+      "image": "/blog/2.webp",
+      "link": "/blog/preempleo-rutina-investigacion",
+      "published": true,
+      "publishDate": "20 de Noviembre, 2024",
+      "readTime": "6 min de lectura",
+      "content": "<h2 class=\"text-2xl font-bold mt-0 mb-6\" style=\"color: #48255A\">\n            Introducción\n          </h2>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            ¿Sientes que necesitas evaluar la confiabilidad de alguien en tu empresa, pero no estás seguro de cómo hacerlo? No te preocupes, es una duda muy frecuente. Sabes que el polígrafo (o detector de mentiras) es la herramienta adecuada, pero quizás no sabías que existen diferentes tipos de pruebas diseñadas para situaciones muy distintas.\n          </p>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            Elegir la prueba incorrecta puede llevarte a no obtener las respuestas que buscas. Por eso, en OneTrue, hemos preparado esta guía sencilla. Nuestro objetivo es ayudarte a identificar tu situación actual para que elijas la prueba de polígrafo exacta que te dará la tranquilidad y la información objetiva que necesitas para tomar decisiones acertadas.\n          </p>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            ¡Vamos a verlo!\n          </p>\n\n          <h2 class=\"text-2xl font-bold mt-12 mb-6\" style=\"color: #48255A\">\n            Los 3 tipos principales de pruebas de polígrafo\n          </h2>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            No todas las pruebas son iguales. Dependiendo de si estás contratando, evaluando a tu personal actual o resolviendo un problema, el enfoque cambia por completo. Aquí te explicamos las tres categorías clave:\n          </p>\n\n          <h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            1. Prueba de Preempleo: Para elegir al mejor candidato\n          </h3>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            Esta es, quizás, la más conocida y contratada. Su objetivo es filtrar y seleccionar al personal más confiable antes de que ingresen a tu empresa.\n          </p>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            <strong>¿Cuándo la necesitas?</strong>\n          </p>\n\n          <ul class=\"list-disc list-inside mb-6 text-lg leading-relaxed text-gray-700\">\n            <li>Estás en pleno proceso de contratación de nuevo personal.</li>\n            <li>El puesto a cubrir es sensible (manejo de dinero, información confidencial, seguridad).</li>\n          </ul>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            <strong>¿Qué evalúa?</strong>\n          </p>\n\n          <ul class=\"list-disc list-inside mb-6 text-lg leading-relaxed text-gray-700\">\n            <li>Verifica la veracidad de la información en su currículum y solicitud.</li>\n            <li>Explora temas de integridad como: antecedentes laborales negativos no declarados, historial de robos en empleos anteriores, consumo de sustancias ilegales, o vínculos con actividades ilícitas.</li>\n          </ul>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            <strong>El Beneficio Principal:</strong> Prevenir es mejor que lamentar. Te ayuda a evitar contratar a personas que podrían representar un riesgo futuro para tu organización, asegurando un equipo de trabajo íntegro desde el primer día.\n          </p>\n\n          <h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            2. Prueba de Rutina o Permanencia: Para mantener la confianza\n          </h3>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            La confianza no es algo de una sola vez; hay que mantenerla. Esta prueba se aplica al personal que ya trabaja contigo.\n          </p>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            <strong>¿Cuándo la necesitas?</strong>\n          </p>\n\n          <ul class=\"list-disc list-inside mb-6 text-lg leading-relaxed text-gray-700\">\n            <li>De forma periódica (por ejemplo, cada tres meses, cada seis meses o cada año) para empleados en puestos clave, el rango del tiempo está en función de los riesgos que maneje cada persona.</li>\n            <li>Cuando vas a promover a alguien a un cargo de mayor responsabilidad.</li>\n          </ul>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            <strong>¿Qué evalúa?</strong>\n          </p>\n\n          <ul class=\"list-disc list-inside mb-6 text-lg leading-relaxed text-gray-700\">\n            <li>Se enfoca en el comportamiento del empleado durante el tiempo que ha estado en tu empresa.</li>\n            <li>Busca asegurar que no hayan incurrido en faltas graves como robo hormiga, fuga de información, violaciones a políticas de seguridad o beneficios indebidos desde su última evaluación o ingreso.</li>\n          </ul>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            <strong>El Beneficio Principal:</strong> Actúa como un poderoso disuasivo contra malas prácticas y te permite detectar focos rojos a tiempo, manteniendo un ambiente laboral sano y seguro.\n          </p>\n\n          <h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            3. Prueba Específica o de Investigación: Para resolver un incidente\n          </h3>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            Esta prueba es reactiva. Se utiliza cuando lamentablemente ya ha ocurrido un hecho concreto y negativo dentro de la empresa.\n          </p>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            <strong>¿Cuándo la necesitas?</strong>\n          </p>\n\n          <ul class=\"list-disc list-inside mb-6 text-lg leading-relaxed text-gray-700\">\n            <li>Se ha detectado un robo interno, fraude, abuso de confianza, acoso o filtración de información confidencial.</li>\n            <li>Hay sospechosos identificados pero no pruebas contundentes.</li>\n          </ul>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            <strong>¿Qué evalúa?</strong>\n          </p>\n\n          <ul class=\"list-disc list-inside mb-6 text-lg leading-relaxed text-gray-700\">\n            <li>A diferencia de las otras, esta prueba se centra exclusivamente en el incidente en cuestión.</li>\n            <li>Las preguntas buscan determinar si la persona evaluada participó directamente, tiene conocimiento de quién lo hizo, o se benefició del hecho.</li>\n          </ul>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            <strong>El Beneficio Principal:</strong> Es una herramienta crucial para esclarecer la verdad en situaciones críticas, ayudando a identificar a los responsables y, muy importante, a descartar a los inocentes, permitiendo tomar medidas disciplinarias o legales basadas en información objetiva.\n          </p>\n\n          <h2 class=\"text-2xl font-bold mt-12 mb-6\" style=\"color: #48255A\">\n            Guía rápida: ¿Cuál es tu caso?\n          </h2>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            Para hacértelo aún más fácil, responde a esta simple pregunta: ¿En qué situación te encuentras ahora mismo?\n          </p>\n\n          <ul class=\"list-none mb-8 text-lg leading-relaxed text-gray-700\">\n            <li class=\"mb-4\">\n              <strong style=\"color: #700FA3\">🔴 \"Estoy a punto de contratar a alguien nuevo.\"</strong>\n              <br />→ Necesitas una Prueba de Preempleo.\n            </li>\n            <li class=\"mb-4\">\n              <strong style=\"color: #700FA3\">🟡 \"Quiero asegurarme de que mi personal actual sigue siendo confiable.\"</strong>\n              <br />→ Necesitas una Prueba de Rutina/Permanencia.\n            </li>\n            <li class=\"mb-4\">\n              <strong style=\"color: #700FA3\">🟣 \"Pasó algo malo en la empresa (robo, fraude) y necesito saber quién fue.\"</strong>\n              <br />→ Necesitas una Prueba Específica de Investigación.\n            </li>\n          </ul>\n\n          <h2 class=\"text-2xl font-bold mt-12 mb-6\" style=\"color: #48255A\">\n            Conclusión\n          </h2>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            Como ves, el polígrafo es una herramienta versátil que se adapta a tus necesidades. Elegir el tipo correcto de prueba es el primer paso para obtener resultados útiles y confiables.\n          </p>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            En OneTrue somos expertos en aplicar cada una de estas evaluaciones con el máximo rigor científico y profesionalismo. Si después de leer esto aún tienes dudas sobre cuál es la ideal para tu caso particular, no dudes en contactarnos. Estaremos encantados de asesorarte gratuitamente para que tomes la mejor decisión para tu empresa.\n          </p>",
+      "created_at": "2026-06-06T16:11:47.451442+00:00"
+    },
+    {
+      "id": "garantiza-la-verdad",
+      "title": "Garantiza la Verdad: 10 Requisitos Clave para una Prueba de Polígrafo Confiable y Exitosa.",
+      "image": "/blog/3.webp",
+      "link": "/blog/garantiza-la-verdad",
+      "published": true,
+      "publishDate": "25 de Noviembre, 2024",
+      "readTime": "7 min de lectura",
+      "content": "<h2 class=\"text-2xl font-bold mt-0 mb-6\" style=\"color: #48255A\">\n            Introducción\n          </h2>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            Has tomado una decisión importante para tu empresa o proceso personal al optar por una prueba de polígrafo. Sin embargo, es crucial entender que la confiabilidad de los resultados no depende únicamente de la tecnología avanzada que utilizamos en OneTrue, sino también de las condiciones en las que se realiza la evaluación.\n          </p>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            Tanto si eres el contratante del servicio como si eres la persona que se someterá a la prueba, tu colaboración es fundamental. Un estado físico o mental inadecuado puede interferir con los registros fisiológicos de la prueba de polígrafo, afectando la precisión del análisis.\n          </p>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            Por eso, hemos creado esta guía con 10 recomendaciones esenciales. Seguir estos pasos no es solo un trámite, es la garantía de que obtendremos un resultado objetivo, científico y 100% útil para ti.\n          </p>\n\n          <h2 class=\"text-2xl font-bold mt-12 mb-6\" style=\"color: #48255A\">\n            Los 10 Pasos para un Resultado Exitoso\n          </h2>\n\n          <p class=\"text-lg leading-relaxed mb-8 text-gray-700\">\n            Aquí te detallamos lo que debes hacer (y lo que debes evitar) antes de tu cita:\n          </p>\n\n          <h3 class=\"text-xl font-bold mt-8 mb-4 flex items-center gap-3\" style=\"color: #700FA3\">\n            <svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n              <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z\" />\n            </svg>\n            1. El Descanso es Prioritario\n          </h3>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            El cansancio extremo afecta tu concentración y las reacciones de tu cuerpo. Es fundamental que hayas dormido al menos 6 horas la noche anterior. Venir bien descansado asegura que tus respuestas fisiológicas sean claras y analizables por el polígrafo.\n          </p>\n\n          <h3 class=\"text-xl font-bold mt-8 mb-4 flex items-center gap-3\" style=\"color: #700FA3\">\n            <svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n              <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 6v6m0 0v6m0-6h6m-6 0H6\" />\n            </svg>\n            2. No Vengas en Ayunas\n          </h3>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            Contrario a otros exámenes médicos, para la prueba de polígrafo necesitamos que tu cuerpo esté funcionando con normalidad. Por favor, come con normalidad (desayuno o almuerzo ligero) antes de acudir. El hambre genera malestar que puede interferir con el procedimiento.\n          </p>\n\n          <h3 class=\"text-xl font-bold mt-8 mb-4 flex items-center gap-3\" style=\"color: #700FA3\">\n            <svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n              <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 6v12m6-3H6\" />\n            </svg>\n            3. Mantén tu Medicación\n          </h3>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            Si tomas medicamentos recetados para controlar condiciones como la presión arterial, diabetes u otras, NO SUSPENDAS TU TRATAMIENTO. Tomar tu medicina habitual es vital para que tus signos vitales estén estables y reflejen tu estado natural.\n          </p>\n\n          <h3 class=\"text-xl font-bold mt-8 mb-4 flex items-center gap-3\" style=\"color: #700FA3\">\n            <svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n              <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z\" />\n            </svg>\n            4. Cero Sustancias Psicoactivas y Alcohol\n          </h3>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            Esta es una regla de oro. Está estrictamente prohibido el consumo de licor o cualquier sustancia psicoactiva (drogas ilegales) en las 24 horas previas a la examinación. Estas sustancias alteran directamente el sistema nervioso central, haciendo imposible una lectura válida del detector de mentiras.\n          </p>\n\n          <h3 class=\"text-xl font-bold mt-8 mb-4 flex items-center gap-3\" style=\"color: #700FA3\">\n            <svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n              <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 8v4m0 4v.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\" />\n            </svg>\n            5. Infórmanos sobre tu Salud\n          </h3>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            La transparencia es clave. Si tienes gripe y tos fuerte, o tienes algún dolor importante que sea comprobable o presentas algún síntoma inusual el día de la prueba, es importante reportarlo antes de comenzar. Esto le permite al poligrafista profesional tomar las medidas necesarias o evaluar si es viable proceder.\n          </p>\n\n          <h3 class=\"text-xl font-bold mt-8 mb-4 flex items-center gap-3\" style=\"color: #700FA3\">\n            <svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n              <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z\" />\n            </svg>\n            6. Puntualidad y Tiempo\n          </h3>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            El proceso no se puede apresurar. Planifica tu agenda para disponer de aproximadamente 90 a 120 minutos. Además, te pedimos llegar 20 minutos antes de la hora agendada para completar cualquier trámite inicial con calma y sin prisas que generen estrés innecesario.\n          </p>\n\n          <h3 class=\"text-xl font-bold mt-8 mb-4 flex items-center gap-3\" style=\"color: #700FA3\">\n            <svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n              <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z\" />\n            </svg>\n            7. Documentación Obligatoria\n          </h3>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            Para garantizar la legalidad y formalidad del proceso, es indispensable que traigas tu Cédula de Identidad original y vigente. Sin este documento, no podremos iniciar la evaluación.\n          </p>\n\n          <h3 class=\"text-xl font-bold mt-8 mb-4 flex items-center gap-3\" style=\"color: #700FA3\">\n            <svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n              <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4l1-12z\" />\n            </svg>\n            8. Comodidad ante Todo\n          </h3>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            La prueba implica estar sentado y conectado a sensores durante un tiempo. Te recomendamos usar ropa cómoda y holgada. Evita prendas demasiado ajustadas, mangas muy largas o exceso de accesorios que puedan incomodarte o interferir con la colocación de los componentes del polígrafo.\n          </p>\n\n          <h3 class=\"text-xl font-bold mt-8 mb-4 flex items-center gap-3\" style=\"color: #700FA3\">\n            <svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n              <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z\" />\n            </svg>\n            9. Privacidad y Confidencialidad\n          </h3>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            El entorno de la prueba debe ser completamente neutral y libre de distracciones. Por favor, acude solo/a a tu cita. No se permite la presencia de niños, familiares o acompañantes dentro de la sala de evaluación para garantizar la integridad y confidencialidad del proceso.\n          </p>\n\n          <h3 class=\"text-xl font-bold mt-8 mb-4 flex items-center gap-3\" style=\"color: #700FA3\">\n            <svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n              <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z\" />\n            </svg>\n            10. Actitud de Cooperación\n          </h3>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            Finalmente, el requisito más importante es tu voluntad. El procedimiento es voluntario. Venir con una actitud cooperativa y la intención de aclarar la verdad facilita enormemente el trabajo del examinador y contribuye a un resultado exitoso y transparente.\n          </p>\n\n          <h2 class=\"text-2xl font-bold mt-12 mb-6\" style=\"color: #48255A\">\n            Conclusión\n          </h2>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            En OneTrue, nos comprometemos a brindarte el servicio de poligrafía más profesional y preciso de Ecuador. Al cumplir con estos sencillos pero vitales requisitos, nos ayudas a cumplir esa promesa.\n          </p>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            Si tienes alguna duda adicional sobre estas recomendaciones antes de tu cita, no dudes en contactar a nuestro equipo. Estamos aquí para guiarte en cada paso del camino hacia la verdad.\n          </p>",
+      "created_at": "2026-06-06T16:11:47.682185+00:00"
+    },
+    {
+      "id": "verdad-o-mentira",
+      "title": "¿Verdad o Mentira? Todo lo que debes saber antes de contratar una prueba de Polígrafo.",
+      "image": "/blog/1.webp",
+      "link": "/blog/verdad-o-mentira",
+      "published": true,
+      "publishDate": "15 de Noviembre, 2024",
+      "readTime": "5 min de lectura",
+      "content": "<h2 class=\"text-2xl font-bold mt-0 mb-6\" style=\"color: #48255A\">Introducción</h2>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Tomar la decisión de evaluar la confianza de tu personal o investigar un incidente delicado (como un robo o fraude interno) no es fácil. Seguramente has escuchado hablar del polígrafo o detector de mentiras, pero es normal que surjan dudas: ¿Realmente funciona? ¿Es legal? ¿Qué tan complicado es?</p>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">En mi experiencia ayudando a empresas a seleccionar candidatos confiables, he notado que la falta de información clara es el principal obstáculo. Por eso, he recopilado las preguntas más habituales que recibo sobre la poligrafía y las he respondido de forma sencilla. El objetivo es que tengas toda la información sobre la mesa para tomar una decisión objetiva y segura para tu empresa.</p>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Las pruebas de polígrafo son una herramienta forense ampliamente utilizada en procesos de selección, investigaciones internas y evaluaciones de confiabilidad. Sin embargo, existen muchos mitos y malinterpretaciones sobre cómo funcionan y qué tan precisas son. En este artículo, te ayudaremos a separar la verdad de la ficción.</p>\n\n<h2 class=\"text-2xl font-bold mt-12 mb-6\" style=\"color: #48255A\">Lo que necesitas saber sobre las pruebas de polígrafo (Preguntas Frecuentes)</h2>\n\n<h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            1. ¿Qué tan confiable es realmente el polígrafo o también llamado \"detector de mentiras\"?\n          </h3>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Esta es la duda número uno. A diferencia de lo que se ve en las películas, el polígrafo es un instrumento científico, no mágico. Estudios internacionales han demostrado que, cuando la prueba es realizada por un profesional certificado, la precisión de los resultados supera el 90%. Actualmente, es la tecnología más precisa para evaluar la credibilidad de una persona, superando a otras herramientas de evaluación de credibilidad.</p>\n\n<h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            2. ¿Cómo funciona una prueba de polígrafo? ¿Es solo conectar cables?\n          </h3>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">No, es un proceso mucho más completo y humano. Una prueba de Polígrafo profesional consta de tres etapas claras:</p>\n\n<ul class=\"list-disc list-inside mb-6 text-lg leading-relaxed text-gray-700\">\n  <li><strong>La entrevista previa (Pre-test):</strong> Conversamos con la persona para entender su contexto y explicarle el procedimiento.</li>\n  <li><strong>La fase de prueba (In-test):</strong> Aquí es donde se usa el polígrafo para registrar las reacciones psicofisiológicas del cuerpo mientras se hacen las preguntas.</li>\n  <li><strong>El análisis:</strong> Interpretamos esos datos para entregarte un resultado objetivo.</li>\n</ul>\n\n<h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            3. ¿Cuánto tiempo tarda todo el proceso?\n          </h3>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Para garantizar un resultado de calidad, no podemos apresurarnos. Una prueba de polígrafo bien hecha dura normalmente entre 90 y 120 minutos según estándares internacionales. Este tiempo es necesario para que la persona evaluada esté tranquila y el procedimiento se haga correctamente.</p>\n\n<h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            4. ¿Qué se necesita para hacerle la prueba a un empleado o candidato?\n          </h3>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">El requisito más importante es el consentimiento. La poligrafía es un proceso voluntario; la persona debe firmar una autorización escrita aceptando someterse a la evaluación. No se puede obligar a nadie, ya que la cooperación es clave para el éxito de la prueba, nosotros nos encargamos de todo.</p>\n\n<h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            5. ¿Puedo hacer todas las preguntas que quiera?\n          </h3>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Muchas veces los clientes quieren aprovechar para preguntar de todo, pero para que la prueba de polígrafo sea efectiva, debemos enfocarnos. Aunque en la entrevista previa se tocan muchos temas, durante la prueba instrumental (con el equipo conectado) nos centramos generalmente en 3 o 4 preguntas clave relacionadas directamente con el objetivo (ej. \"¿Robaste el dinero de la caja?\", \"¿Has cometido fraude en tu empleo anterior?\"). Esto garantiza mayor precisión.</p>\n\n<h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            6. ¿Tengo que llevar a mi personal a sus oficinas o pueden venir a mi empresa?\n          </h3>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Sabemos que la logística a veces es complicada. Por eso, las pruebas de polígrafo pueden realizarse en tus instalaciones si así lo prefieres. Solo necesitamos un espacio privado, libre de distracciones, con un escritorio y dos sillas. Nosotros nos encargamos del resto.</p>\n\n<h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            7. ¿Cuánto tardan en entregarme los resultados?\n          </h3>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Entendemos que en situaciones de robos o contratación, el tiempo es dinero. Por lo general, entregamos los resultados en tan solo 4 horas después de haber concluido las pruebas y los informes técnicos en 24 horas.</p>\n\n<h2 class=\"text-2xl font-bold mt-12 mb-6\" style=\"color: #48255A\">Conclusión: La tranquilidad de decidir con la verdad</h2>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Contratar un servicio de poligrafía no se trata solo de \"atrapar a alguien\", sino de crear un ambiente de trabajo seguro y honesto. Ya sea que necesites filtrar a un nuevo candidato o resolver un incidente interno, ahora sabes cómo funciona esta herramienta.</p>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Si tienes más dudas o necesitas asesoría sobre qué tipo de prueba es la ideal para tu caso, no dudes en contactarnos. Estamos aquí para ayudarte a descubrir la verdad.</p>",
+      "created_at": "2026-06-06T16:11:47.217222+00:00"
     }
   ],
   "podcasts": [
