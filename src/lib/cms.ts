@@ -37,6 +37,7 @@ export type Service = {
     contactPhone: string;
     contactWhatsapp?: string;
     showOtherSolutions?: boolean;
+    showFaqs?: boolean;
   };
 };
 
@@ -76,6 +77,7 @@ export type Course = {
     fichaTecnica: { title: string; description: string }[];
     contactPhone: string;
     contactWhatsapp: string;
+    contactWhatsappText?: string;
     template?: string;
   };
 };

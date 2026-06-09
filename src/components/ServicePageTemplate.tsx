@@ -346,9 +346,9 @@ export default function ServicePageTemplate({ service, allServices }: { service:
         </div>
       </section>
 
-      {/* FAQ Accordion if it is the polygraph template */}
-      {service.template === "poligrafo" && (
-        <section className="bg-white py-20 border-t border-neutral-100">
+      {/* FAQ Accordion if showFaqs is enabled (defaults to true for polygraph template) */}
+      {(pageContent.showFaqs !== false && (service.template === "poligrafo" || pageContent.showFaqs === true)) && (
+        <section className="bg-white py-20">
           <div className="w-full max-w-4xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-[#48255A] text-center mb-12" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
               Preguntas Frecuentes
@@ -379,7 +379,7 @@ export default function ServicePageTemplate({ service, allServices }: { service:
 
       {/* Otras soluciones */}
       {pageContent.showOtherSolutions !== false && otherSolutions.length > 0 && (
-        <section className="bg-white py-24 overflow-hidden relative border-t border-neutral-100">
+        <section className="bg-white py-24 overflow-hidden relative">
           <div className="mx-auto max-w-6xl lg:max-w-7xl xl:max-w-[1350px] px-8 md:px-12 lg:px-16 relative z-10">
             <div className="mb-16 flex flex-col items-center text-center">
               <div className="flex items-center gap-3 mb-4">
@@ -490,7 +490,8 @@ export default function ServicePageTemplate({ service, allServices }: { service:
 
                 <div className="flex items-start gap-5">
                   <svg className="w-8 h-8 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75m3-3h.75m-.75 3h.75m-6 3h.75m3 0h.75m3 0h.75" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                   </svg>
                   <div className="flex flex-col">
                     <h3 style={{ fontSize: "18px", fontWeight: "bold", color: "#ffffff", fontFamily: "var(--font-montserrat), sans-serif", marginBottom: "4px" }}>
@@ -537,14 +538,21 @@ export default function ServicePageTemplate({ service, allServices }: { service:
                   Síguenos:
                 </h3>
                 <div className="flex items-center gap-3">
-                  <a href="https://www.facebook.com/share/1F8T24NNKE/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#700FA3] shadow-md hover:scale-110 transition-transform">
+                  {/* LinkedIn */}
+                  <a href="https://www.linkedin.com/in/david-coli-fiallo-75679a198?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en LinkedIn" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#700FA3] shadow-md hover:scale-110 transition-transform">
+                    <FaLinkedin className="w-5 h-5" />
+                  </a>
+                  {/* Facebook */}
+                  <a href="https://www.facebook.com/share/1F8T24NNKE/" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Facebook" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#700FA3] shadow-md hover:scale-110 transition-transform">
                     <FaFacebook className="w-5 h-5" />
                   </a>
-                  <a href="https://www.instagram.com/somosonetrue?igsh=bXNmOWYwaWpsdDVh" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#700FA3] shadow-md hover:scale-110 transition-transform">
+                  {/* Instagram */}
+                  <a href="https://www.instagram.com/somosonetrue?igsh=bXNmOWYwaWpsdDVh" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Instagram" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#700FA3] shadow-md hover:scale-110 transition-transform">
                     <FaInstagram className="w-5 h-5" />
                   </a>
-                  <a href="https://www.linkedin.com/in/david-coli-fiallo-75679a198?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#700FA3] shadow-md hover:scale-110 transition-transform">
-                    <FaLinkedin className="w-5 h-5" />
+                  {/* YouTube */}
+                  <a href="https://youtube.com/@somosonetrue?si=8OI3ZQ0A-4OzF_H0" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en YouTube" className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#700FA3] shadow-md hover:scale-110 transition-transform">
+                    <FaYoutube className="w-5 h-5" />
                   </a>
                 </div>
               </div>
@@ -616,7 +624,14 @@ export default function ServicePageTemplate({ service, allServices }: { service:
 
                     <div className="flex flex-col gap-4 mt-2">
                       <p className="text-[11px] text-neutral-500 leading-relaxed font-light">
-                        Al enviar este formulario, acepto que mis datos personales sean tratados de acuerdo con la política de tratamiento de datos personales.
+                        Al enviar este formulario, acepto que mis datos personales sean tratados de acuerdo con la{" "}
+                        <a href="#" className="text-[#700FA3] hover:underline font-bold" style={{ fontSize: "inherit" }}>
+                          Política de tratamiento de datos personales
+                        </a>{" "}
+                        y los{" "}
+                        <a href="#" className="text-[#700FA3] hover:underline font-bold" style={{ fontSize: "inherit" }}>
+                          términos establecidos en ella
+                        </a>.
                       </p>
                       <div className="flex items-center gap-3">
                         <input type="checkbox" id="aceptar-term" className="w-4 h-4 rounded border-neutral-300 text-[#700FA3] cursor-pointer" required />

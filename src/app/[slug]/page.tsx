@@ -69,7 +69,7 @@ export default async function DynamicSlugPage({ params }: PageProps) {
   if (course && course.published) {
     const template = course.template || (
       course.id === "curso-avanzado-tecnicas-poligraficas" || course.id === "tecnicas-poligraficas" ? "tecnicas" :
-      course.id === "curso-basico-de-poligrafia" ? "basico" :
+      course.id === "curso-basico-de-poligrafia" || course.id === "curso-basico-en-poligrafia" ? "basico" :
       course.id === "entrevista-pretest-y-postest" || course.id === "entrevista-pretest" ? "pretest" :
       course.id === "calificacion-de-graficas" || course.id === "calificacion-graficas-analisis-datos" ? "graficas" :
       course.id === "sistema-de-calificacion-ess-m" || course.id === "sistema-calificacion-ess-m" ? "ess-m" :

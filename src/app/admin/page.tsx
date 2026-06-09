@@ -36,7 +36,7 @@ function prepopulateCourseDefaults(course: any) {
 
   const template = course.template || (
     course.id === "curso-avanzado-tecnicas-poligraficas" || course.id === "tecnicas-poligraficas" ? "tecnicas" :
-    course.id === "curso-basico-de-poligrafia" ? "basico" :
+    course.id === "curso-basico-de-poligrafia" || course.id === "curso-basico-en-poligrafia" ? "basico" :
     course.id === "entrevista-pretest-y-postest" || course.id === "entrevista-pretest" ? "pretest" :
     course.id === "calificacion-de-graficas" || course.id === "calificacion-graficas-analisis-datos" ? "graficas" :
     course.id === "sistema-de-calificacion-ess-m" || course.id === "sistema-calificacion-ess-m" ? "ess-m" :
@@ -479,7 +479,7 @@ export default function AdminDashboard() {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const res = await fetch("/api/cms");
+      const res = await fetch("/api/cms?t=" + Date.now(), { cache: "no-store" });
       const data = await res.json();
       setDb(data);
     } catch (error) {
@@ -1523,6 +1523,36 @@ function SideEditorForm({
                           Cargar ejes por defecto
                         </button>
                       )}
+                      {form.id === "pruebas-poligraficas" && (
+                        <button
+                          type="button"
+                          onClick={() => {
+                            updateNestedContentField("aboutCards", [
+                              {
+                                title: "Polígrafo Específico",
+                                text: "Utilizada en procesos investigativos. Esclarezca incidentes internos, pérdidas, robos, asaltos, fuga de información con absoluta objetividad.",
+                                icon: "",
+                                items: []
+                              },
+                              {
+                                title: "Polígrafo Pre-empleo",
+                                text: "Identifica conductas contraproducentes y vulnerabilidades en los candidatos antes de su contratación, permitiéndole mitigar riesgos.",
+                                icon: "",
+                                items: []
+                              },
+                              {
+                                title: "Polígrafo de Rutina",
+                                text: "Monitoreo preventivo para personal que labora en la empresa. Fortalece la lealtad y disuade conductas irregulares internas.",
+                                icon: "",
+                                items: []
+                              }
+                            ]);
+                          }}
+                          className="rounded-lg bg-neutral-200 border border-neutral-300 px-3 py-1.5 text-xs text-neutral-700 hover:bg-neutral-250 font-semibold"
+                        >
+                          Cargar tarjetas por defecto
+                        </button>
+                      )}
                     </div>
                   ) : (
                     <div className="space-y-4">
@@ -1632,7 +1662,37 @@ function SideEditorForm({
                   </div>
 
                   {(!form.pageContent?.whyPoints || form.pageContent.whyPoints.length === 0) ? (
-                    <p className="text-xs text-neutral-400 italic font-semibold">No hay beneficios registrados.</p>
+                    <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-4 text-center">
+                      <p className="text-xs text-neutral-400 italic font-semibold mb-2">No hay beneficios registrados.</p>
+                      {form.id === "pruebas-poligraficas" && (
+                        <button
+                          type="button"
+                          onClick={() => {
+                            updateNestedContentField("whyPoints", [
+                              {
+                                title: "Reducción de Riesgos",
+                                text: "Te ayudamos a eliminar riesgos críticos en tus nuevas contrataciones."
+                              },
+                              {
+                                title: "Certeza Técnica",
+                                text: "Identificamos responsables de fraudes con certeza técnica de nivel forense."
+                              },
+                              {
+                                title: "Rapidez",
+                                text: "Entrega de resultados preliminares en 4 horas y reportes técnicos en 24 horas."
+                              },
+                              {
+                                title: "Disuasión",
+                                text: "Detectamos la deshonestidad interna y prevenimos pérdidas de activos."
+                              }
+                            ]);
+                          }}
+                          className="rounded-lg bg-neutral-200 border border-neutral-300 px-3 py-1.5 text-xs text-neutral-700 hover:bg-neutral-250 font-semibold"
+                        >
+                          Cargar beneficios por defecto
+                        </button>
+                      )}
+                    </div>
                   ) : (
                     <div className="space-y-3">
                       {form.pageContent.whyPoints.map((point: any, idx: number) => (
@@ -1680,8 +1740,29 @@ function SideEditorForm({
 
                 {/* FAQs Builder */}
                 <div className="space-y-3">
-                  <div className="flex items-center justify-between border-b border-neutral-200 pb-2">
-                    <span className="text-xs font-bold text-neutral-700 uppercase tracking-wider">Preguntas Frecuentes (FAQs)</span>
+                  <div className="flex items-center justify-between border-b border-neutral-200 pb-2 flex-wrap gap-2">
+                    <div className="flex items-center gap-4">
+                      <span className="text-xs font-bold text-neutral-700 uppercase tracking-wider">Preguntas Frecuentes (FAQs)</span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-2xs font-semibold text-neutral-500">Mostrar Sección:</span>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            const currentVal = form.pageContent?.showFaqs !== false;
+                            updateNestedContentField("showFaqs", !currentVal);
+                          }}
+                          className={`relative h-5 w-9 rounded-full transition-colors shrink-0 ${
+                            form.pageContent?.showFaqs !== false ? "bg-green-500" : "bg-neutral-300"
+                          }`}
+                        >
+                          <span
+                            className={`absolute top-0.5 left-0.5 h-4 w-4 rounded-full bg-white shadow transition-transform ${
+                              form.pageContent?.showFaqs !== false ? "translate-x-4" : "translate-x-0"
+                            }`}
+                          />
+                        </button>
+                      </div>
+                    </div>
                     <button
                       type="button"
                       onClick={() => handleAddListItem("faqs", { q: "", a: "" })}
