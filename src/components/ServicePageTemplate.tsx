@@ -6,14 +6,7 @@ import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { FaLinkedin, FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Service } from "@/lib/cms";
-
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-}
 
 interface CounterProps {
   end: number;
@@ -94,25 +87,33 @@ export default function ServicePageTemplate({ service, allServices }: { service:
   const [country, setCountry] = useState("ec");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  useGSAP(
-    () => {
-      if (!containerRef.current) return;
-      
-      gsap.from(".solucion-card", {
-        opacity: 0,
-        y: 40,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-      });
-    },
-    { scope: containerRef }
-  );
+  // Animate "Otras Soluciones" cards on scroll using IntersectionObserver (more reliable than GSAP ScrollTrigger)
+  useEffect(() => {
+    if (!containerRef.current) return;
+    const cards = containerRef.current.querySelectorAll(".solucion-card");
+    if (cards.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const card = entry.target as HTMLElement;
+            // Stagger delay based on card index
+            const idx = Array.from(cards).indexOf(card);
+            setTimeout(() => {
+              card.style.opacity = "1";
+              card.style.transform = "translateY(0)";
+            }, idx * 120);
+            observer.unobserve(card);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    cards.forEach((card) => observer.observe(card));
+    return () => observer.disconnect();
+  }, []);
 
   const { pageContent } = service;
 
@@ -157,6 +158,8 @@ export default function ServicePageTemplate({ service, allServices }: { service:
           src={pageContent.heroImage}
           alt={`One True ${service.title}`}
           fetchPriority="high"
+          loading="eager"
+          decoding="async"
           className="absolute inset-0 w-full h-full object-cover object-right-top z-0 opacity-40 mix-blend-overlay pointer-events-none"
         />
 
@@ -251,28 +254,33 @@ export default function ServicePageTemplate({ service, allServices }: { service:
           </div>
 
           {/* Cards Grid */}
-          <div className="flex flex-wrap justify-center gap-6 max-w-[1100px] mx-auto">
-            {pageContent.aboutCards.map((item, idx) => (
-              <div 
-                key={idx} 
-                className={`flex flex-col bg-white border border-neutral-200/80 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-neutral-300 transition-all duration-300 relative pl-4 w-full sm:w-[calc(50%-12px)] ${service.template === "standard" ? "lg:w-[calc(25%-18px)]" : "lg:w-[calc(33.3333%-16px)]"}`}
-              >
-                <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#FFC107] rounded-l-xl" />
-                <h3 className="text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
-                  {item.title}
-                </h3>
-                <p className="text-[#525252] text-sm leading-relaxed font-light flex-1" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                  {item.text}
-                </p>
-              </div>
-            ))}
+          <div className="flex flex-wrap justify-center gap-6 max-w-[1200px] mx-auto">
+            {pageContent.aboutCards.map((item, idx) => {
+              const cardsLength = pageContent.aboutCards?.length || 0;
+              const cardWidth = (cardsLength % 4 === 0)
+                ? "lg:w-[calc(25%-18px)]"
+                : "lg:w-[calc(33.3333%-16px)]";
+              return (
+                <div 
+                  key={idx} 
+                  className={`flex flex-col bg-white border border-neutral-200/80 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-neutral-300 transition-all duration-300 relative pl-6 w-full sm:w-[calc(50%-12px)] ${cardWidth}`}
+                >
+                  <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#FFC107] rounded-l-xl" />
+                  <h3 className="text-lg font-bold text-[#48255A]" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3", marginBottom: "14px" }}>
+                    {item.title}
+                  </h3>
+                  <p className="text-[#333333] text-sm leading-relaxed font-normal flex-1" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                    {item.text}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Beneficios / ¿Por qué contratarnos? Section */}
       <section className="bg-white py-12 md:py-16 overflow-hidden relative">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#700FA3]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
         
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 flex flex-col lg:flex-row items-center gap-8 lg:gap-12 relative z-10">
           {/* Left Column: Images */}
@@ -295,13 +303,6 @@ export default function ServicePageTemplate({ service, allServices }: { service:
                   className="w-full h-auto object-cover aspect-square"
                 />
               </div>
-
-              <div className="absolute -top-8 -left-8 w-24 h-24 z-0 opacity-20"
-                style={{
-                  backgroundImage: 'radial-gradient(#700FA3 2px, transparent 2px)',
-                  backgroundSize: '12px 12px'
-                }}
-              />
             </div>
           </div>
 
@@ -377,7 +378,7 @@ export default function ServicePageTemplate({ service, allServices }: { service:
       )}
 
       {/* Otras soluciones */}
-      {otherSolutions.length > 0 && (
+      {pageContent.showOtherSolutions !== false && otherSolutions.length > 0 && (
         <section className="bg-white py-24 overflow-hidden relative border-t border-neutral-100">
           <div className="mx-auto max-w-6xl lg:max-w-7xl xl:max-w-[1350px] px-8 md:px-12 lg:px-16 relative z-10">
             <div className="mb-16 flex flex-col items-center text-center">
@@ -401,7 +402,8 @@ export default function ServicePageTemplate({ service, allServices }: { service:
                     }
                   }}
                   key={idx}
-                  className="solucion-card relative group flex flex-col bg-white border border-neutral-100 rounded-2xl overflow-hidden shadow-[0_4px_25px_rgba(0,0,0,0.02)] transition-all duration-500 cursor-pointer scroll-mt-28 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.3333%-16px)]"
+                  className="solucion-card relative group flex flex-col bg-white border border-neutral-100 rounded-2xl overflow-hidden shadow-[0_4px_25px_rgba(0,0,0,0.02)] transition-all duration-700 ease-out cursor-pointer scroll-mt-28 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.3333%-16px)]"
+                  style={{ opacity: 0, transform: "translateY(40px)" }}
                   onMouseMove={(e) => {
                     const rect = e.currentTarget.getBoundingClientRect();
                     const x = e.clientX - rect.left;
@@ -632,15 +634,24 @@ export default function ServicePageTemplate({ service, allServices }: { service:
                       <span style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: "14px", fontWeight: "bold", color: "#48255A" }}>
                         O escríbenos
                       </span>
-                      <a
-                        className="flex items-center justify-center gap-2 px-6 py-2.5 bg-[#00C233] hover:bg-[#00a82c] text-white font-bold transition-all rounded shadow-sm w-full"
-                        href={pageContent.contactWhatsapp || `https://api.whatsapp.com/send?phone=593981296179&text=Hola,%20deseo%20más%20información.`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: "15px" }}
-                      >
-                        WhatsApp Directo
-                      </a>
+                      <div className="elementor-button-wrapper flex justify-center w-auto mt-1">
+                        <a
+                          className="elementor-button elementor-button-link elementor-size-sm flex items-center justify-center gap-2 px-6 py-2.5 bg-[#00C233] hover:bg-[#00a82c] text-white font-bold transition-all duration-300 rounded shadow-sm hover:shadow hover:scale-[1.02]"
+                          href={pageContent.contactWhatsapp || `https://api.whatsapp.com/send?phone=593981296179&text=Hola,%20deseo%20más%20información.`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{ fontFamily: "var(--font-montserrat), sans-serif", fontSize: "15px", fontWeight: "bold", color: "#ffffff" }}
+                        >
+                          <span className="elementor-button-content-wrapper flex items-center justify-center gap-2" style={{ color: "#ffffff" }}>
+                            <span className="elementor-button-icon flex items-center">
+                              <svg aria-hidden="true" className="e-font-icon-svg e-fab-whatsapp w-4.5 h-4.5 fill-current" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" style={{ fill: "#ffffff", color: "#ffffff" }}>
+                                <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L3 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path>
+                              </svg>
+                            </span>
+                            <span className="elementor-button-text font-bold" style={{ color: "#ffffff", fontWeight: "bold" }}>+593 98 129 6179</span>
+                          </span>
+                        </a>
+                      </div>
                     </div>
                   </form>
                 ) : (

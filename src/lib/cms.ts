@@ -36,6 +36,7 @@ export type Service = {
     faqs?: { q: string; a: string }[];
     contactPhone: string;
     contactWhatsapp?: string;
+    showOtherSolutions?: boolean;
   };
 };
 

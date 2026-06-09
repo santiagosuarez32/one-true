@@ -742,8 +742,8 @@ export default function AdminDashboard() {
       <header className="sticky top-0 z-40 border-b border-neutral-200 bg-white/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <div className="flex items-center gap-3">
-            <div className="grid h-9 w-9 place-items-center rounded-full text-white font-extrabold text-sm" style={{ backgroundColor: PURPLE }}>
-              OT
+            <div className="h-9 w-9 rounded-full overflow-hidden flex items-center justify-center bg-white border border-neutral-200 shrink-0">
+              <img src="/footer.webp" alt="Logo" className="w-7 h-7 object-contain" />
             </div>
             <div>
               <h1 className="text-base font-extrabold leading-5 text-neutral-900">Panel de administración</h1>
@@ -1228,7 +1228,23 @@ function SideEditorForm({
             {/* SERVICES FIELDS SECTION */}
             {type === "services" && (
               <div className="border-t border-neutral-200 pt-6 space-y-6">
-                <h4 className="text-xs font-bold text-[#700FA3] uppercase tracking-wider">Contenido de la Página</h4>
+                <div className="flex items-center justify-between border-b border-neutral-200 pb-2">
+                  <h4 className="text-xs font-bold text-[#700FA3] uppercase tracking-wider">Contenido de la Página</h4>
+                </div>
+
+                <div className="flex items-center justify-between rounded-xl border border-neutral-300 bg-neutral-50 px-4 py-3">
+                  <div>
+                    <span className="block text-xs font-bold uppercase tracking-wider text-neutral-600">Mostrar "Otras Soluciones"</span>
+                    <span className="text-[10px] text-neutral-500 font-semibold">Habilitar la sección de otras soluciones al final de la página</span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => updateNestedContentField("showOtherSolutions", form.pageContent?.showOtherSolutions !== false ? false : true)}
+                    className={`relative h-6 w-11 rounded-full transition-colors ${form.pageContent?.showOtherSolutions !== false ? "bg-green-500" : "bg-neutral-300"}`}
+                  >
+                    <span className={`absolute top-0.5 left-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform ${form.pageContent?.showOtherSolutions !== false ? "translate-x-5" : "translate-x-0"}`} />
+                  </button>
+                </div>
 
                 <div className="grid gap-4 sm:grid-cols-2">
                   <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">

@@ -1,0 +1,325 @@
+[
+  {
+    "id": "calificacion-graficas-analisis-datos",
+    "title": "Calificación de Gráficas - Análisis de Datos",
+    "desc": "Interpretación numérica y visual de trazados poligráficos. Análisis estadístico de componentes fisiológicos y criterios de evaluación objetiva.",
+    "image": "/cursos-avanzados/calificacion-de-graficas.webp",
+    "href": "/calificacion-graficas-analisis-datos",
+    "published": true,
+    "pageContent": {
+      "heroDesc": "Interpretación numérica y visual de trazados poligráficos. Análisis de componentes fisiológicos y criterios de evaluación objetiva para decisiones periciales de alta precisión.",
+      "aboutDesc": "Profundice en el análisis estadístico de trazados neumográficos, electrodérmicos y cardiovasculares:",
+      "heroImage": "/cursos-avanzados/calificacion-de-graficas.webp",
+      "heroTitle": "Curso Avanzado: Calificación de Gráficas",
+      "aboutTitle": "Ejes Temáticos:",
+      "focusAreas": [
+        {
+          "title": "Análisis de Componentes Fisiológicos",
+          "description": "Criterios para identificar reacciones fisiológicas válidas en neumograma, conductancia y cardiograma."
+        },
+        {
+          "title": "Sistemas de Puntuación Numérica",
+          "description": "Metodología estándar de 3 y 7 posiciones para la evaluación visual sistemática de gráficas."
+        },
+        {
+          "title": "Toma de Decisión Pericial",
+          "description": "Umbrales estadísticos y reducción de la tasa de resultados inconclusos en las evaluaciones."
+        }
+      ],
+      "heroTagline": "Especialización avanzada para poligrafistas certificados.",
+      "contactPhone": "099371290",
+      "fichaTecnica": [
+        {
+          "title": "⏱️ 18 horas de duración",
+          "description": "Módulo de alta exigencia analítica."
+        },
+        {
+          "title": "📚 35 lecciones",
+          "description": "Casos prácticos de estudio."
+        },
+        {
+          "title": "🎓 Diploma oficial",
+          "description": "Acreditado por One True Academia."
+        }
+      ],
+      "contactWhatsapp": "https://api.whatsapp.com/send?phone=593099371290&text=Hola!%20Deseo%20conocer%20mas%20informacion%20sobre%20los%20Cursos%20Avanzados%20en%20Poligrafia."
+    },
+    "created_at": "2026-06-06T16:11:46.412988+00:00"
+  },
+  {
+    "id": "sistema-calificacion-ess-m",
+    "title": "Sistema de Calificación ESS-M",
+    "desc": "Formación especializada en el sistema empírico de puntuación ESS-M para lograr una calificación consistente, reproducible y científicamente validada.",
+    "image": "/cursos-avanzados/ess-m.webp",
+    "href": "/sistema-calificacion-ess-m",
+    "published": true,
+    "pageContent": {
+      "heroDesc": "Formación especializada en el sistema empírico de puntuación ESS-M para lograr una calificación consistente, reproducible y científicamente validada bajo los últimos consensos.",
+      "aboutDesc": "Aprenda el uso del método ESS-M (Empirical Scoring System - Multinomial) para análisis de datos:",
+      "heroImage": "/cursos-avanzados/ess-m.webp",
+      "heroTitle": "Curso Avanzado: Sistema ESS-M",
+      "aboutTitle": "Ejes Temáticos:",
+      "focusAreas": [
+        {
+          "title": "Criterios del ESS-M",
+          "description": "Reglas objetivas para calificar las reacciones en las diferentes zonas de test poligráfico."
+        },
+        {
+          "title": "Estandarización de Gráficas",
+          "description": "Cómo asegurar que múltiples evaluadores alcancen el mismo resultado en base a criterios multinomiales."
+        },
+        {
+          "title": "Software y Algoritmos",
+          "description": "Integración del ESS-M con plataformas digitales para validación automatizada de resultados."
+        }
+      ],
+      "heroTagline": "Especialización avanzada para poligrafistas certificados.",
+      "contactPhone": "099371290",
+      "fichaTecnica": [
+        {
+          "title": "⏱️ 12 horas de duración",
+          "description": "Módulo especializado en ESS-M."
+        },
+        {
+          "title": "📚 24 lecciones",
+          "description": "Enfoque práctico y herramientas."
+        }
+      ],
+      "contactWhatsapp": "https://api.whatsapp.com/send?phone=593099371290&text=Hola!%20Deseo%20conocer%20mas%20informacion%20sobre%20los%20Cursos%20Avanzados%20en%20Poligrafia."
+    },
+    "created_at": "2026-06-06T16:11:46.752127+00:00"
+  },
+  {
+    "id": "tecnicas-poligraficas",
+    "title": "Técnicas Poligráficas",
+    "desc": "Dominio de protocolos comparativos, de conocimiento y de screening bajo estándares APA. Aplicación en distintos contextos periciales y operativos.",
+    "image": "/cursos-avanzados/tecnicas-poligraficas.webp",
+    "href": "/tecnicas-poligraficas",
+    "published": true,
+    "pageContent": {
+      "heroDesc": "Domine los protocolos comparativos, de conocimiento y de screening bajo estándares APA. Aplicación de técnicas especializadas en distintos contextos periciales y operativos.",
+      "template": "tecnicas",
+      "aboutDesc": "Profundice en los estándares metodológicos de la APA y sus principales técnicas de evaluación:",
+      "heroImage": "/cursos-avanzados/tecnicas-poligraficas.webp",
+      "heroTitle": "Curso Avanzado: Técnicas Poligráficas",
+      "aboutTitle": "Ejes Temáticos:",
+      "focusAreas": [
+        {
+          "title": "Técnicas Comparativas (MCCA y MPT)",
+          "description": "Estudio detallado de los formatos de pruebas comparativas, formulación de preguntas y su aplicación operativa."
+        },
+        {
+          "title": "Técnicas de Screening / Tamizaje",
+          "description": "Protocolos recomendados por la APA para selección masiva de personal en seguridad e integridad."
+        },
+        {
+          "title": "Técnicas de Conocimiento (CIT/POT)",
+          "description": "Análisis de pruebas de información oculta o claves del incidente para esclarecimiento judicial."
+        }
+      ],
+      "customCards": [
+        {
+          "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
+          "items": [],
+          "title": "ZCT Federal",
+          "description": "Protocolo estándar federal para evaluaciones de control de informaciónes."
+        },
+        {
+          "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
+          "items": [],
+          "title": "Bi-Zona (Fase Usted)",
+          "description": "Técnica de dos zonas de respuesta adaptada a contextos específicos."
+        },
+        {
+          "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
+          "items": [],
+          "title": "UTAH 3R",
+          "description": "Protocolo UTAH 3R para evaluaciones de responsabilidad relativa."
+        },
+        {
+          "icon": "/icons/Password-Desktop--Streamline-Ultimate.webp",
+          "items": [],
+          "title": "UTAH 4R",
+          "description": "Protocolo UTAH 4R para evaluaciones cuadrantes de responsabilidad."
+        },
+        {
+          "icon": "/icons/Task-Checklist--Streamline-Ultimate.webp",
+          "items": [],
+          "title": "AFMGQT V1 y V2",
+          "description": "Versiones 1 y 2 del cuestionario de respuesta forzada para diagnósticos y evaluaciones exploratorias."
+        },
+        {
+          "icon": "/icons/Monitor-Find--Streamline-Ultimate.webp",
+          "items": [],
+          "title": "DLST",
+          "description": "Prueba estándar de discriminación de mentiras para evaluaciones de veracidad."
+        },
+        {
+          "icon": "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
+          "items": [],
+          "title": "CIT (Concealed Information Test)",
+          "description": "Protocolo estándar internacional para la detección de información oculta."
+        }
+      ],
+      "heroTagline": "Especialización avanzada para poligrafistas certificados.",
+      "contactPhone": "099371290",
+      "fichaTecnica": [
+        {
+          "title": "⏱️ 20 horas de duración",
+          "description": "Formación exhaustiva bajo estándares APA."
+        },
+        {
+          "title": "📚 40 lecciones",
+          "description": "Contenido actualizado a la fecha."
+        },
+        {
+          "title": "📄 Formatos de test",
+          "description": "Acceso a plantillas y modelos de examen."
+        }
+      ],
+      "contactWhatsapp": "https://api.whatsapp.com/send?phone=593099371290&text=Hola!%20Deseo%20conocer%20mas%20informacion%20sobre%20los%20Cursos%20Avanzados%20en%20Poligrafia."
+    },
+    "created_at": "2026-06-06T16:11:46.183854+00:00"
+  },
+  {
+    "id": "control-de-calidad-en-poligrafia",
+    "title": "Control de Calidad en Poligrafía",
+    "desc": "Protocolos de auditoría, revisión por pares y mejora continua en la práctica profesional. Garantía de rigor técnico y cumplimiento normativo.",
+    "image": "/cursos-avanzados/control-de-calidad-poligrafia.webp",
+    "href": "/control-de-calidad-en-poligrafia",
+    "published": true,
+    "pageContent": {
+      "heroDesc": "Protocolos de auditoría, revisión por pares y mejora continua en la práctica poligráfica profesional. Garantía de rigor técnico y cumplimiento normativo internacional.",
+      "aboutDesc": "Desarrolle habilidades de auditoría técnica y aseguramiento de la calidad en evaluaciones de credibilidad:",
+      "heroImage": "/cursos-avanzados/control-de-calidad-poligrafia.webp",
+      "heroTitle": "Curso Avanzado: Control de Calidad",
+      "aboutTitle": "Ejes Temáticos:",
+      "focusAreas": [
+        {
+          "title": "Auditoría de Protocolos y Preguntas",
+          "description": "Revisión sistemática de la estructura del test, concordancia de preguntas y justificación metodológica."
+        },
+        {
+          "title": "Proceso de Revisión por Pares (Peer Review)",
+          "description": "Establecimiento de comités y flujos de trabajo internos para doble validación de informes poligráficos."
+        },
+        {
+          "title": "Mejora Continua y Ética",
+          "description": "Alineación ética y reducción de malas prácticas o errores de procedimiento en terreno."
+        }
+      ],
+      "heroTagline": "Especialización avanzada para poligrafistas certificados.",
+      "contactPhone": "099371290",
+      "fichaTecnica": [
+        {
+          "title": "⏱️ 15 horas de duración",
+          "description": "Formación para directores y auditores técnicos."
+        },
+        {
+          "title": "📚 30 lecciones",
+          "description": "Plantillas de auditoría y rúbricas."
+        }
+      ],
+      "contactWhatsapp": "https://api.whatsapp.com/send?phone=593099371290&text=Hola!%20Deseo%20conocer%20mas%20informacion%20sobre%20los%20Cursos%20Avanzados%20en%20Poligrafia."
+    },
+    "created_at": "2026-06-06T16:11:46.990366+00:00"
+  },
+  {
+    "id": "pruebas",
+    "title": "pruebas",
+    "desc": "pruebas",
+    "image": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/courses/1780945003438-adobestock-514417566-2r9s09.webp",
+    "href": "/pruebas",
+    "published": true,
+    "pageContent": {
+      "heroDesc": "pruebas",
+      "aboutDesc": "pruebas",
+      "heroImage": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/courses-hero/1780945053387-adobestock-514417566-j2fuun.webp",
+      "heroTitle": "pruebas",
+      "aboutTitle": "pruebas",
+      "focusAreas": [
+        {
+          "title": "pruebas",
+          "description": "pruebas"
+        }
+      ],
+      "heroTagline": "pruebas",
+      "contactPhone": "099371290",
+      "fichaTecnica": [
+        {
+          "title": "pruebas",
+          "description": "pruebas"
+        }
+      ],
+      "contactWhatsapp": "https://api.whatsapp.com/send?phone=593099371290"
+    },
+    "created_at": "2026-06-07T01:49:12.688927+00:00"
+  },
+  {
+    "id": "entrevista-pretest",
+    "title": "Entrevista Pretest",
+    "desc": "Estructuración y conducción de la entrevista previa al examen. Técnicas de rapport, formulación de preguntas y detección de conductas evasivas.",
+    "image": "/cursos-avanzados/pretest.jpg",
+    "href": "/entrevista-pretest",
+    "published": true,
+    "pageContent": {
+      "heroDesc": "¿Buscas perfeccionar tu técnica de entrevista pretest y dominar una de las fases más críticas del examen poligráfico? Esta formación especializada está diseñada para llevar tus habilidades al siguiente nivel.",
+      "aboutDesc": "Profundice en los estándares, principios y procesos metodológicos que sostienen una entrevista pretest clara, técnica y alineada al tipo de evaluación poligráfica.",
+      "heroImage": "/pruebas-poligrafo/primer.webp",
+      "heroTitle": "Curso Avanzado: Entrevista Pretest",
+      "aboutTitle": "Ejes Temáticos:",
+      "focusAreas": [
+        {
+          "title": "Fundamentos y estándares",
+          "description": "Domina los principios de las prácticas internacionales estandarizadas en entrevistas pretest y aprende los fundamentos metodológicos que garantizan la confiabilidad técnica de la evaluación."
+        },
+        {
+          "title": "Preparación y desarrollo del pretest",
+          "description": "Aprende cada fase de preparación previa al examen y domina el paso a paso del protocolo de entrevista pretest, asegurando consistencia y validez en tus evaluaciones poligráficas."
+        },
+        {
+          "title": "Evaluaciones diagnósticas y exploratorias",
+          "description": "Especialízate en el análisis de evaluaciones poligráficas diagnósticas y exploratorias, incluyendo el protocolo de preguntas específicas para casos de preempleo, rutina y temas investigativos."
+        }
+      ],
+      "heroTagline": "Especialización avanzada para poligrafistas certificados.",
+      "contactPhone": "099371290",
+      "fichaTecnica": [
+        {
+          "title": "⏱️ 15 horas de duración",
+          "description": "Formación intensiva y estructurada."
+        },
+        {
+          "title": "📚 32 lecciones",
+          "description": "Contenido completo y detallado."
+        },
+        {
+          "title": "📄 Plantillas descargables",
+          "description": "+75 diapositivas y documentos listos."
+        },
+        {
+          "title": "❓ Quizzes interactivos",
+          "description": "Preguntas para reforzar aprendizaje."
+        },
+        {
+          "title": "📺 Acceso 3 meses",
+          "description": "Contenido pregrabado disponible."
+        },
+        {
+          "title": "✅ 30 días de garantía",
+          "description": "Satisfacción garantizada."
+        },
+        {
+          "title": "🔐 Comunidad ONE TRUE",
+          "description": "Acceso exclusivo a la red."
+        },
+        {
+          "title": "🎓 Diploma oficial",
+          "description": "Certificado de finalización."
+        }
+      ],
+      "contactWhatsapp": "https://api.whatsapp.com/send?phone=593099371290&text=Hola!%20Deseo%20conocer%20mas%20informacion%20sobre%20los%20Cursos%20Avanzados%20en%20Poligrafia."
+    },
+    "created_at": "2026-06-06T16:11:45.947071+00:00"
+  }
+]

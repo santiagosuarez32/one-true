@@ -1,0 +1,417 @@
+[
+  {
+    "id": "pruebas-poligraficas",
+    "title": "Pruebas de Polígrafo Profesionales",
+    "desc": "Certeza técnica con un 95% de exactitud. Revelamos la verdad en procesos críticos de seguridad y confianza.",
+    "image": "/servicios/1.webp",
+    "cta": "Ver detalles",
+    "href": "/pruebas-poligraficas",
+    "template": "poligrafo",
+    "published": true,
+    "pageContent": {
+      "heroDesc": "Aseguramos su toma de decisiones mediante pruebas de polígrafo con un 95% de exactitud. Validamos la integridad en procesos de selección, monitoreo preventivo de su personal y esclarecimiento de incidentes internos bajo estándares internacionales. Obtenga resultados técnicos en tiempo récord para asegurar la transparencia y proteger los activos de su empresa.",
+      "whyTitle": "El Valor para su Empresa",
+      "aboutDesc": "",
+      "heroImage": "/pruebas-poligrafo/hero.webp",
+      "heroTitle": "Pruebas de",
+      "whyPoints": [],
+      "aboutCards": [],
+      "aboutTitle": "¿Qué resolvemos para su organización?",
+      "heroTagline": "Nuestras soluciones",
+      "contactPhone": "0981296179",
+      "heroUnderlined": "Polígrafo",
+      "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
+    },
+    "created_at": "2026-06-06T16:11:44.014975+00:00"
+  },
+  {
+    "id": "prueba-de-honestidad-etica-y-valores",
+    "title": "Prueba de Honestidad, Ética y Valores",
+    "desc": "Herramienta psicométrica avanzada de 90 reactivos estratégicos diseñada para identificar conductas de riesgo y medir la alineación ética del personal.",
+    "image": "/servicios/8.webp",
+    "cta": "Ver detalles del servicio",
+    "href": "/prueba-de-honestidad-etica-y-valores",
+    "template": "standard",
+    "published": true,
+    "pageContent": {
+      "heroDesc": "Compuesta por 90 reactivos estratégicos, está diseñada para medir la alineación ética del evaluado e identificar conductas contraproducentes que puedan representar riesgos.",
+      "whyTitle": "Valor para la Empresa",
+      "aboutDesc": "Mide de manera científica y detallada diferentes dimensiones de la conducta ética:",
+      "heroImage": "/servicios/8.webp",
+      "heroTitle": "Prueba de Honestidad,",
+      "whyPoints": [
+        {
+          "text": "Promueve una cultura organizacional transparente, basada en el cumplimiento y el respeto.",
+          "title": "Ambiente Seguro"
+        },
+        {
+          "text": "Ideal para aplicar en procesos masivos y en puestos que manejen activos importantes.",
+          "title": "Filtro Eficiente"
+        },
+        {
+          "text": "Resultados cuantitativos y analizados por profesionales.",
+          "title": "Decisiones Objetivas"
+        }
+      ],
+      "aboutCards": [
+        {
+          "text": "Grado de coherencia entre los valores del candidato y las normas corporativas.",
+          "title": "Alineación de Valores"
+        },
+        {
+          "text": "Predisposición al robo, soborno, fuga de información o desacato de normas.",
+          "title": "Identificación de Riesgos"
+        },
+        {
+          "text": "Obtención de informes estructurados con semáforos de riesgo y recomendaciones concretas.",
+          "title": "Reportes Rápidos"
+        }
+      ],
+      "aboutTitle": "¿Qué evalúa la prueba?",
+      "heroTagline": "Un entorno seguro se construye con personas éticas.",
+      "contactPhone": "0981296179",
+      "heroUnderlined": "Ética y Valores",
+      "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
+    },
+    "created_at": "2026-06-06T16:11:45.483517+00:00"
+  },
+  {
+    "id": "curso-basico-en-poligrafia",
+    "title": "Formación en Poligrafía Acreditada por APA",
+    "desc": "Certifíquese como poligrafista profesional con nuestro programa de 400 horas, diseñado bajo los más altos estándares científicos y avalado internacionalmente por la APA.",
+    "image": "/servicios/7.webp",
+    "cta": "Ver formación en poligrafía",
+    "href": "/curso-basico-en-poligrafia",
+    "template": "standard",
+    "published": true,
+    "pageContent": {
+      "heroDesc": "Conviértase en un experto en Poligrafía y evaluador Forense de la Credibilidad. Certifíquese como poligrafista profesional con nuestro programa de 400 horas.",
+      "whyTitle": "¿Por qué formarse con nosotros?",
+      "aboutDesc": "Nuestro programa incluye teoría científica y práctica supervisada:",
+      "heroImage": "/servicios/7.webp",
+      "heroTitle": "Formación en Poligrafía",
+      "whyPoints": [
+        {
+          "text": "Aprenda de poligrafistas en activo con amplia experiencia docente e investigativa.",
+          "title": "Instructores Certificados"
+        },
+        {
+          "text": "Acceda a la biblioteca técnica y herramientas de última generación.",
+          "title": "Material Actualizado"
+        },
+        {
+          "text": "Oportunidades de inserción laboral en agencias y departamentos corporativos.",
+          "title": "Bolsa de Empleo"
+        }
+      ],
+      "aboutCards": [
+        {
+          "text": "Psicofisiología, farmacología, metodologías de pregunta y estándares éticos.",
+          "title": "Temario Científico"
+        },
+        {
+          "text": "Uso de instrumentación de última generación y análisis de gráficas reales.",
+          "title": "Práctica Supervisada"
+        },
+        {
+          "text": "Acreditación oficial que le permite ejercer la profesión internacionalmente.",
+          "title": "Certificación APA"
+        }
+      ],
+      "aboutTitle": "Detalles de la formación profesional",
+      "heroTagline": "Avalado internacionalmente por la APA.",
+      "contactPhone": "0981296179",
+      "heroUnderlined": "Certificada",
+      "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
+    },
+    "created_at": "2026-06-06T16:11:45.708532+00:00"
+  },
+  {
+    "id": "pruebas-toxicologicas",
+    "title": "Pruebas Toxicológicas",
+    "desc": "Garantice un ambiente laboral seguro y productivo. Detectamos el consumo de sustancias con un 99% de nivel de confianza, asegurando sobriedad y responsabilidad.",
+    "image": "/servicios/5.webp",
+    "cta": "Ver detalles del servicio",
+    "href": "/pruebas-toxicologicas",
+    "template": "standard",
+    "published": true,
+    "pageContent": {
+      "heroDesc": "El consumo de sustancias no solo afecta la productividad, sino que pone en riesgo la seguridad física y patrimonial de su organización. Implementamos protocolos de detección rápida y efectiva para mitigar riesgos operativos y legales.\n\n",
+      "whyTitle": "Beneficios para su Organización",
+      "aboutDesc": "¿Qué garantizamos en nuestro servicio?",
+      "heroImage": "/servicios/5.webp",
+      "heroTitle": "Pruebas Toxicológicas y Seguridad Laboral",
+      "whyImage1": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services-why/1780975706529-primer-yotqrv.webp",
+      "whyImage2": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services-why/1780975708157-segunda-xhcgoo.webp",
+      "whyPoints": [
+        {
+          "text": "Prevenga incidentes laborales derivados del consumo de sustancias.",
+          "title": "Reducción de Accidentes"
+        },
+        {
+          "text": "Asegure que su personal se encuentre en plenas facultades físicas y mentales.",
+          "title": "Mejora de la Productividad"
+        },
+        {
+          "text": "Fortalece sus políticas de seguridad y salud ocupacional ante la normativa local.",
+          "title": "Cumplimiento"
+        }
+      ],
+      "aboutCards": [
+        {
+          "text": "Resultados con un 99% de nivel de confianza, eliminando dudas en la toma de decisiones.",
+          "title": "Precisión Forense"
+        },
+        {
+          "text": "Detección de las sustancias de mayor incidencia en el entorno laboral (marihuana, cocaína, anfetaminas, etc.).",
+          "title": "Panel Multidrogas"
+        },
+        {
+          "text": "Garantizamos la integridad de cada muestra desde la toma hasta el resultado final.",
+          "title": "Protocolo de Cadena de Custodia"
+        },
+        {
+          "text": "Fomentamos una cultura de cero tolerancia a riesgos para proteger la vida y los activos de la empresa.",
+          "title": "Ambiente Seguro"
+        }
+      ],
+      "aboutTitle": "Sobre el servicio",
+      "heroTagline": "Detección precisa de sustancias para un entorno de trabajo 100% confiable.",
+      "contactPhone": "0981296179",
+      "heroUnderlined": "Toxicológicas",
+      "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True",
+      "showOtherSolutions": false
+    },
+    "created_at": "2026-06-06T16:11:45.005459+00:00"
+  },
+  {
+    "id": "vetting",
+    "title": "Vetting",
+    "desc": "Proteja la integridad de su empresa desde el primer día. Filtramos riesgos mediante el rastreo exhaustivo en más de 190 bases de datos nacionales e internacionales (Interpol/OFAC) para garantizar contrataciones 100% seguras.",
+    "image": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services/1780796702388-2-9pc6yy.webp",
+    "cta": "Ver detalles del servicio",
+    "href": "/vetting",
+    "template": "vetting",
+    "published": true,
+    "pageContent": {
+      "heroDesc": "No se conforme con la buena impresión de una entrevista. Validamos la integridad de su futuro talento humano con un análisis profundo de antecedentes and riesgos.",
+      "whyTitle": "El Valor para su Empresa",
+      "aboutDesc": "Cruzamos información en tiempo real en +190 bases de datos para detectar alertas legales, financieras o de reputación:",
+      "heroImage": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services-hero/1780768705224-chatgpt-image-5-jun-2026--02-0-6ef2ty.webp",
+      "heroTitle": "Verificación Integral de",
+      "whyImage1": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services-why/1780974176352-primer-bkl7ro.webp",
+      "whyImage2": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services-why/1780974178485-segunda-9xwijd.webp",
+      "whyPoints": [
+        {
+          "text": "Evite infiltraciones, fraudes o personal no apto.",
+          "title": "Reducción de Riesgos"
+        },
+        {
+          "text": "Resultados técnicos, claros y listos para la toma de decisiones.",
+          "title": "Reportes Ágiles"
+        },
+        {
+          "text": "Estándares de Compliance para su departamento de RR.HH.",
+          "title": "Cumplimiento"
+        }
+      ],
+      "aboutCards": [
+        {
+          "text": "Función Judicial, Policía Nacional y SUPA.",
+          "title": "Historial Legal"
+        },
+        {
+          "text": "Registro Civil y Agencia Nacional de Tránsito.",
+          "title": "Perfil Ciudadano"
+        },
+        {
+          "text": "Listas de control internacional (OFAC, Interpol y Europol).",
+          "title": "Seguridad Global"
+        }
+      ],
+      "aboutTitle": "¿Qué analizamos?",
+      "heroTagline": "Transformamos la incertidumbre en decisiones seguras.",
+      "contactPhone": "0981296179",
+      "heroUnderlined": "Candidatos",
+      "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True",
+      "showOtherSolutions": false
+    },
+    "created_at": "2026-06-06T16:11:44.306955+00:00"
+  },
+  {
+    "id": "evaluaciones-psicometricas",
+    "title": "Evaluaciones Psicométricas",
+    "desc": "Análisis profundo de la personalidad, aptitudes, comportamiento ético del personal para asegurar el perfecto ajuste al cargo.",
+    "image": "/servicios/6.webp",
+    "cta": "Ver detalles del servicio",
+    "href": "/evaluaciones-psicometricas",
+    "template": "standard",
+    "published": true,
+    "pageContent": {
+      "heroDesc": "No deje la cultura de su empresa al azar. Nuestras más de 150 evaluaciones psicométricas online permiten predecir el desempeño y la conducta ética de un candidato, garantizando que su perfil psicológico esté alineado con los valores y exigencias de su organización.",
+      "whyTitle": "Beneficios de la Evaluación Psicométrica",
+      "aboutDesc": "Sobre el Servicio",
+      "heroImage": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services-hero/1780975774638-hero-qj830w.webp",
+      "heroTitle": "Evaluaciones",
+      "whyImage1": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services-why/1780973549450-primer-e885t1.webp",
+      "whyImage2": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services-why/1780973553481-segunda-rrwrgn.webp",
+      "whyPoints": [
+        {
+          "text": "Pruebas 100% online que agilizan sus procesos de selección sin perder profundidad técnica.",
+          "title": "Resultados Inmediatos"
+        },
+        {
+          "text": "Asegure contrataciones que encajen con la cultura de su equipo a largo plazo.",
+          "title": "Reducción de la Rotación"
+        },
+        {
+          "text": "Elimine los sesgos en las entrevistas con datos científicos y reportes comparativos.",
+          "title": "Objetividad Total"
+        }
+      ],
+      "aboutCards": [
+        {
+          "text": "Identificamos tendencias hacia la integridad, el respeto a las normas y la prevención de conductas contraproducentes.",
+          "title": "Comportamiento Ético y Honestidad"
+        },
+        {
+          "text": "Analizamos rasgos de carácter, manejo de estrés, liderazgo y estabilidad emocional.",
+          "title": "Personalidad y Perfil Psicológico"
+        },
+        {
+          "text": "Medimos la capacidad cognitiva, resolución de problemas y habilidades específicas para el cargo.",
+          "title": "Aptitudes y Competencias"
+        },
+        {
+          "text": "Determinamos si el candidato tiene la estructura mental necesaria para tener éxito en su puesto.",
+          "title": "Ajuste al Cargo"
+        },
+        {
+          "text": "Podemos aplicar evaluaciones psicométricas a tu medida y según la necesidad y perfil del candidato, puedes elegir entre nuestro portafolio de más de 150 evaluaciones.",
+          "title": "Evaluaciones a medida"
+        }
+      ],
+      "aboutTitle": "¿Qué medimos con precisión?",
+      "heroTagline": "Ciencia de datos aplicada a la selección de personal.",
+      "contactPhone": "0981296179",
+      "heroUnderlined": "Psicométricas",
+      "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True",
+      "showOtherSolutions": false
+    },
+    "created_at": "2026-06-06T16:11:45.238815+00:00"
+  },
+  {
+    "id": "estudio-de-confiabilidad-360",
+    "title": "Estudio de Confiabilidad 360°",
+    "desc": "Confirmamos la honestidad y estabilidad de sus candidatos. Validamos trayectorias (laborales y académicas) y realizamos un análisis profundo de salud financiera y endeudamiento.",
+    "image": "/servicios/3.webp",
+    "cta": "Ver detalles del servicio",
+    "href": "/estudio-de-confiabilidad-360",
+    "template": "vetting",
+    "published": true,
+    "pageContent": {
+      "heroDesc": "Confirmamos la honestidad y estabilidad de sus candidatos. Validamos trayectorias (laborales y académicas) y realizamos un análisis profundo de salud financiera y endeudamiento en +190 bases de datos.",
+      "whyTitle": "Valor Estratégico para su Empresa",
+      "aboutDesc": "Llevamos a cabo un cruce completo de información comercial, legal e historial laboral:",
+      "heroImage": "/servicios/3.webp",
+      "heroTitle": "Estudio de Confiabilidad",
+      "whyImage1": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services-why/1780974241855-primer-h83p4j.webp",
+      "whyImage2": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services-why/1780974243657-segunda-1rzqt5.webp",
+      "whyPoints": [
+        {
+          "text": "Identifique candidatos con presiones financieras que puedan comprometer la integridad del cargo.",
+          "title": "Prevención de Riesgos"
+        },
+        {
+          "text": "Detecte inconsistencias o títulos inexistentes de forma inmediata.",
+          "title": "Cero Falsificaciones"
+        },
+        {
+          "text": "Reportes técnicos que avalan la idoneidad moral y profesional del postulante.",
+          "title": "Seguridad en la Toma de Decisión"
+        }
+      ],
+      "aboutCards": [
+        {
+          "text": "Verificación directa de sus tres últimas referencias laborales, verificamos cómo fue su desempeño laboral con sus superiores, constatamos los motivos reales de salida.",
+          "title": "Validación de su Trayectoria laboral"
+        },
+        {
+          "text": "Rastreo profundo de antecedentes legales, judiciales y listas de control internacional.",
+          "title": "Vetting en +190 Bases de Datos"
+        },
+        {
+          "text": "Evaluamos niveles de endeudamiento y comportamiento crediticio para detectar posibles factores de riesgo o vulnerabilidad.",
+          "title": "Análisis de Salud Financiera"
+        },
+        {
+          "text": "Verificación de la autenticidad de sus títulos académicos registrados y reportados.",
+          "title": "Verificación Académica"
+        }
+      ],
+      "aboutTitle": "¿Qué analizamos?",
+      "heroTagline": "Confirme la honestidad, el pasado y la estabilidad de su talento humano.",
+      "contactPhone": "0981296179",
+      "heroUnderlined": "360°",
+      "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True",
+      "showOtherSolutions": false
+    },
+    "created_at": "2026-06-06T16:11:44.532465+00:00"
+  },
+  {
+    "id": "visitas-domiciliarias",
+    "title": "Visitas Domiciliarias",
+    "desc": "Evaluamos el entorno socioeconómico y familiar de sus candidatos en el terreno. Prevenimos riesgos de vulnerabilidad y confirmamos la coherencia entre el estilo de vida y el perfil declarado.",
+    "image": "/servicios/4.webp",
+    "cta": "Ver detalles del servicio",
+    "href": "/visitas-domiciliarias",
+    "template": "vetting",
+    "published": true,
+    "pageContent": {
+      "heroDesc": "La seguridad de su empresa no termina en la oficina. Nuestro servicio de visita domiciliaria permite conocer el entorno real del candidato, identificando factores de riesgo, niveles de vulnerabilidad y la veracidad de su situación socioeconómica.",
+      "whyTitle": "Beneficios para su Organización",
+      "aboutDesc": "¿Qué evaluamos en el terreno?",
+      "heroImage": "/domicilio/hero.webp",
+      "heroTitle": "Visitas",
+      "whyPoints": [
+        {
+          "text": "Detecte a tiempo situaciones personales que puedan comprometer la lealtad del empleado.",
+          "title": "Prevención de Vulnerabilidades"
+        },
+        {
+          "text": "Evite la contratación de personal con entornos que faciliten actos ilícitos.",
+          "title": "Mitigación de Riesgos"
+        },
+        {
+          "text": "Proteja sus activos asegurándose de que el entorno del candidato sea estable y confiable.",
+          "title": "Seguridad Patrimonial"
+        }
+      ],
+      "aboutCards": [
+        {
+          "text": "Validación de la ubicación geográfica y condiciones de habitabilidad del candidato.",
+          "title": "Verificación de Entorno"
+        },
+        {
+          "text": "Identificación del núcleo familiar y detección de posibles conflictos o riesgos externos.",
+          "title": "Análisis Socio-Familiar"
+        },
+        {
+          "text": "Contrastamos que el nivel de vida sea consistente con los ingresos y el cargo al que postula.",
+          "title": "Coherencia de Vida"
+        },
+        {
+          "text": "Obtención de información complementaria sobre la conducta y reputación en su comunidad.",
+          "title": "Referencias de Vecindad"
+        }
+      ],
+      "aboutTitle": "Nuestros especialistas realizan una inspección profesional y ética centrada en:",
+      "heroTagline": "Verificación de campo para una visión 360° de su futuro colaborador.",
+      "contactPhone": "0981296179",
+      "heroUnderlined": "Domiciliarias",
+      "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True",
+      "showOtherSolutions": false
+    },
+    "created_at": "2026-06-06T16:11:44.772206+00:00"
+  }
+]
