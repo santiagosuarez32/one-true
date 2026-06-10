@@ -29,8 +29,8 @@ function prepopulateCourseDefaults(course: any) {
       svgFocusAreas: [],
       customCards: [],
       fichaTecnica: [],
-      contactPhone: "099371290",
-      contactWhatsapp: "https://api.whatsapp.com/send?phone=593099371290"
+      contactPhone: "099 371 2790",
+      contactWhatsapp: "https://api.whatsapp.com/send?phone=593993712790"
     };
   }
 

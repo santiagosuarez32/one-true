@@ -35,7 +35,7 @@ const PodcastCard = ({ episode, className = "", cardRef }: { episode: PodcastEpi
       {/* Play Button */}
       <a href="https://open.spotify.com/show/0IFnAb2T0WTWKCHEDceAIa?si=RPGdRbVvTn-CzMywI4qSpA" target="_blank" rel="noopener noreferrer" className="absolute inset-0 flex items-center justify-center">
         <button
-          className="w-16 h-16 bg-[#1E88E5] rounded-full flex items-center justify-center text-white transition-transform duration-300 group-hover:scale-110 group-hover:shadow-2xl shadow-lg"
+          className="w-16 h-16 bg-[#FFC107] rounded-full flex items-center justify-center text-[#5F0091] transition-transform duration-300 group-hover:scale-110 group-hover:shadow-2xl shadow-lg"
           aria-label="Reproducir episodio"
         >
           <svg

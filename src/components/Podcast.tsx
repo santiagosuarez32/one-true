@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
@@ -34,20 +35,40 @@ export default function Podcast() {
     <section id="podcast" className="bg-white py-16 md:py-24 overflow-hidden relative scroll-mt-20">
       <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 flex flex-col md:flex-row items-center gap-12 lg:gap-20">
         
-        {/* Left: Podcast Image (Static) */}
+        {/* Left: Podcast Image with Link and Play Button */}
         <div ref={cardRef} className="w-full md:w-1/2 relative flex justify-center">
           <div className="absolute inset-0 bg-[#700FA3] blur-[100px] opacity-20 rounded-full"></div>
-          <div className="relative w-full max-w-[500px] aspect-[4/3] rounded-[20px] overflow-hidden shadow-2xl border-2 border-[#FFC107]">
+          <Link
+            href="/podcast"
+            aria-label="Escuchar Podcast"
+            className="group relative w-full max-w-[500px] aspect-[4/3] rounded-[20px] overflow-hidden shadow-2xl border-2 border-[#FFC107] block transition-transform duration-300 hover:scale-[1.02]"
+          >
             <img
               src="/blog/PODCAST.webp"
               alt="Podcast One True: Beneficio de un estudio de confiabilidad en Ecuador"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
+            {/* Play Button Overlay */}
+            <div className="absolute inset-0 flex items-center justify-center bg-black/25 group-hover:bg-black/35 transition-colors duration-300">
+              <div className="relative flex items-center justify-center w-16 h-16 rounded-full bg-[#FFC107] text-[#5F0091] shadow-lg transition-all duration-300 group-hover:scale-110">
+                {/* Ripple outer effects */}
+                <span className="absolute inline-flex h-full w-full rounded-full bg-[#FFC107] opacity-75 animate-ping"></span>
+                {/* Play SVG icon */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-8 h-8 relative z-10 translate-x-[2px]"
+                >
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
             {/* Badge */}
-            <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-md text-white text-[10px] font-bold tracking-wider px-4 py-1.5 rounded-full uppercase">
+            <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-md text-white text-[10px] font-bold tracking-wider px-4 py-1.5 rounded-full uppercase z-10">
               Podcast
             </div>
-          </div>
+          </Link>
         </div>
 
         {/* Right: Content */}
@@ -68,7 +89,7 @@ export default function Podcast() {
           </div>
           
           <h2
-            className="text-2xl sm:text-3xl lg:text-[40px]"
+            className="text-xl sm:text-2xl lg:text-[32px]"
             style={{
               margin: 0,
               padding: 0,
@@ -79,16 +100,16 @@ export default function Podcast() {
               marginBottom: "24px",
             }}
           >
-            Podcast en el que te cuento sobre el maravilloso mundo de la detección de mentiras.
+            En este capítulo abordaremos de manera muy puntual las etapas de las pruebas de polígrafo establecidas por los estándares internacionales de práctica.
           </h2>
 
           <p className="text-lg text-neutral-600 mb-10 leading-relaxed max-w-lg">
             Descubre en este episodio cómo un estudio de confiabilidad puede proteger tu empresa, reducir riesgos y asegurar que estás tomando las mejores decisiones en la gestión de tu talento humano.
           </p>
           
-          <a
+          <Link
             href="/podcast"
-            aria-label="Ver más sobre el podcast de detección de mentiras y poligrafía"
+            aria-label="Escucha todos los capítulos del podcast de detección de mentiras y poligrafía"
             className="px-8 py-3 rounded transition-all hover:brightness-110 shadow-lg text-sm md:text-base inline-block"
             style={{
               fontFamily: "var(--font-montserrat), sans-serif",
@@ -104,8 +125,8 @@ export default function Podcast() {
               cursor: "pointer",
             }}
           >
-            Ver más
-          </a>
+            Escucha todos los capítulos aquí
+          </Link>
         </div>
 
       </div>

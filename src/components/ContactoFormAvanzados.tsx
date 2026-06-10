@@ -59,7 +59,7 @@ export default function ContactoFormAvanzados({
                     Teléfono
                   </h3>
                   <a href={contactPhone.startsWith("+") ? `tel:${contactPhone}` : `tel:593${contactPhone.replace(/\D/g, "")}`} style={{ color: "rgba(255, 255, 255, 0.85)", fontSize: "16px", fontWeight: "300", fontFamily: "var(--font-montserrat), sans-serif" }} className="hover:text-[#FFC107] transition-colors">
-                    {contactPhone.startsWith("+") ? contactPhone : `+593 ${contactPhone}`}
+                    {contactPhone}
                   </a>
                 </div>
               </div>

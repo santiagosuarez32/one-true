@@ -344,9 +344,9 @@ export default async function FormacionesComplementariasPage() {
 
       {/* ── FORMULARIO DE CONTACTO ── */}
       <ContactoFormAvanzados
-        contactPhone="0981296179"
-        contactWhatsapp="https://api.whatsapp.com/send?phone=593981296179&text=Hola!%20Deseo%20conocer%20mas%20informacion%20sobre%20las%20Formaciones%20Complementarias."
-        contactWhatsappText="+593 98 129 6179"
+        contactPhone="099 371 2790"
+        contactWhatsapp="https://api.whatsapp.com/send?phone=593993712790&text=Hola!%20Deseo%20conocer%20mas%20informacion%20sobre%20las%20Formaciones%20Complementarias."
+        contactWhatsappText="+593 99 371 2790"
       />
 
       <Footer />

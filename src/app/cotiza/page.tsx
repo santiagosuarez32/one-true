@@ -60,10 +60,10 @@ export default function CotizaPage() {
         />
 
         <img
-          src="/servicios/7.webp"
+          src="/psicometricas/hero.png"
           alt="Cotiza Gratis - One True"
           fetchPriority="high"
-          className="absolute inset-0 w-full h-full object-cover object-right-top z-0 opacity-45 mix-blend-overlay pointer-events-none"
+          className="absolute inset-0 w-full h-full object-cover object-right-top z-0 opacity-45 mix-blend-overlay pointer-events-none -scale-x-100"
         />
 
         <div className="w-full max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 z-10">
