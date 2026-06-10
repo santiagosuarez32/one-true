@@ -36,8 +36,10 @@ export async function middleware(request: NextRequest) {
   } = await supabase.auth.getUser();
 
   // Si intenta acceder a /admin y no hay usuario, redirigir a login
-  if (request.nextUrl.pathname.startsWith("/admin") && !user) {
-    return NextResponse.redirect(new URL("/login", request.url));
+  if (request.nextUrl.pathname.startsWith("/admin") && !request.nextUrl.pathname.startsWith("/admin/login") && !user) {
+    const loginUrl = new URL("/admin/login", request.url);
+    loginUrl.searchParams.set("redirect", request.nextUrl.pathname);
+    return NextResponse.redirect(loginUrl);
   }
 
   return response;

@@ -93,7 +93,7 @@ function LoginForm() {
               <span>Autenticando...</span>
             </>
           ) : (
-            <span>Ingresar al panel</span>
+            <span className="text-white">Ingresar al panel</span>
           )}
         </button>
       </form>
@@ -110,7 +110,7 @@ function LoginForm() {
 
 export default function LoginPage() {
   return (
-    <div 
+    <div
       className="flex min-h-screen items-center justify-center px-4 sm:px-6 relative overflow-hidden bg-neutral-50 text-neutral-800 select-none selection:bg-[#FFC107] selection:text-neutral-900"
       style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
     >
