@@ -1014,82 +1014,6 @@
       "template": "basico"
     },
     {
-      "id": "elicitacion-conversacional",
-      "title": "Elicitación Conversacional",
-      "desc": "Formación avanzada en técnicas de obtención de información sutil y estratégica mediante interacciones fluidas y persuasivas.",
-      "image": "/formaciones/elicitacion.webp",
-      "href": "/elicitacion-conversacional",
-      "published": true,
-      "pageContent": {
-        "heroDesc": "Esta formación especializada está diseñada para llevar tus habilidades al siguiente nivel, permitiéndote recopilar datos críticos sin levantar sospechas ni activar mecanismos defensivos en la administración de riesgos corporativos.",
-        "template": "graficas",
-        "aboutDesc": "Modalidad: Presencial o en línea.",
-        "heroImage": "/formaciones/elicitacion.webp",
-        "heroTitle": "Especialización en Elicitación Conversacional",
-        "aboutTitle": "Ejes Temáticos",
-        "focusAreas": [
-          {
-            "items": [
-              "Fundamentos y Arquitectura de la Elicitación: Diferencias entre interrogatorio, entrevista y obtención sutil de información en entornos de contrainteligencia.",
-              "Dinámicas de la Comunicación Persuasiva: El uso del rapport estratégico, empatía táctica y neutralización de barreras psicológicas conscientes.",
-              "Disparadores Cognitivos y Vulnerabilidades del Discurso: Explotación ética de tendencias humanas (necesidad de corregir, deseo de reconocimiento, validación social y sesgo de reciprocidad).",
-              "Ingeniería de Preguntas y Estímulos Conversacionales: Diseño de narrativas de apariencia natural para la activación micro-selectiva de memoria sin generar reactividad.",
-              "Estrategias Avanzadas de Extracción de información: Técnicas de asunción deliberada, declaraciones provocativas y contrastes de información para la confirmación de datos no públicos.",
-              "Detección de Inconsistencias en Flujos Pasivos: Identificación de indicadores de ocultamiento, desvío conductual y evasión en entornos no restrictivos.",
-              "Aplicación en la Gestión de Riesgos Corporativos: Protocolos de elicitación aplicados a auditorías de seguridad, debida diligencia (due diligence) e investigaciones internas."
-            ],
-            "title": "Ejes Temáticos"
-          }
-        ],
-        "customCards": [],
-        "heroTagline": "¿Quieres dominar la obtención estratégica de información mediante interacciones fluidas, estrategias de persuasión argumentativa y técnicas científicamente comprobadas?",
-        "contactPhone": "0981296179",
-        "fichaTecnica": [
-          {
-            "title": "⏱️ 15 horas de duración",
-            "description": "Formación de alto nivel con enfoque analítico."
-          },
-          {
-            "title": "📚 35 lecciones",
-            "description": "Lecciones especializadas en la materia."
-          },
-          {
-            "title": "📄 Guiones de práctica y matrices de planificación conversacional descargables.",
-            "description": "Material práctico descargable."
-          },
-          {
-            "title": "📊 +80 Diapositivas académicas descargables.",
-            "description": "Diapositivas académicas descargables."
-          },
-          {
-            "title": "✏️ Ejercicios y Quizzes interactivos.",
-            "description": "Evaluaciones continuas interactiva."
-          },
-          {
-            "title": "📺 Acceso por 3 meses (pregrabado)",
-            "description": "Material pregrabado disponible."
-          },
-          {
-            "title": "✅ 30 días de garantía.",
-            "description": "Garantía de satisfacción total."
-          },
-          {
-            "title": "🔐 Acceso a la comunidad ONE TRUE.",
-            "description": "Acceso exclusivo a la red académica."
-          },
-          {
-            "title": "🎓 Diploma de finalización.",
-            "description": "Diploma oficial al concluir."
-          }
-        ],
-        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179",
-        "isComplementary": true,
-        "contactWhatsappText": "+593 98 129 6179"
-      },
-      "created_at": "2026-06-10T00:06:44.999126+00:00",
-      "template": "graficas"
-    },
-    {
       "id": "control-de-calidad-en-poligrafia",
       "title": "Control de Calidad en Poligrafía",
       "desc": "Protocolos de auditoría, revisión por pares y mejora continua en la práctica profesional. Garantía de rigor técnico y cumplimiento normativo.",
@@ -1258,84 +1182,9 @@
           }
         ],
         "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179",
-        "isComplementary": true,
         "contactWhatsappText": "+593 98 129 6179"
       },
       "created_at": "2026-06-10T00:04:20.430189+00:00",
-      "template": "graficas"
-    },
-    {
-      "id": "modelos-de-entrevista-investigativa",
-      "title": "Modelos de Entrevista Investigativa",
-      "desc": "Formación en técnicas de obtención de información de alta calidad, basadas en principios de respeto y efectividad forense.",
-      "image": "/formaciones/entrevista.webp",
-      "href": "/modelos-de-entrevista-investigativa",
-      "published": true,
-      "pageContent": {
-        "heroDesc": "Esta formación especializada está diseñada para llevar tus habilidades al siguiente nivel, implementando los protocolos internacionales basados en ciencia que maximizan la obtención de información verídica y mitigan el riesgo de falsas confesiones.",
-        "template": "graficas",
-        "aboutDesc": "Modalidad: Presencial o en línea.",
-        "heroImage": "/formaciones/entrevista.webp",
-        "heroTitle": "Especialización en Modelos de Entrevista Investigativa",
-        "aboutTitle": "Ejes Temáticos",
-        "focusAreas": [
-          {
-            "items": [
-              "Evolución y Ciencia de la Entrevista Forense: Transición de los métodos coercitivos tradicionales hacia los modelos basados en evidencia científica.",
-              "El Modelo PEACE: Estructuración metodológica de la entrevista corporativa y judicial (Planificación, Explicación, Relato, Cierre y Evaluación).",
-              "El Protocolo ORBIT (OxForenses): Gestión de la resistencia, negociación táctica e interacciones con perfiles complejos o no cooperativos bajo principios humanitarios.",
-              "La Técnica SUE (Strategic Use of Evidence): Manejo y presentación estratégica de la evidencia para evaluar la consistencia del relato.",
-              "Entrevista Cognitiva (EC) y Entrevista Cognitiva Mejorada (MCI): Técnicas avanzadas de reactivación de huellas de memoria y transferencia de control para optimizar el recuerdo de testigos y víctimas."
-            ],
-            "title": "Ejes Temáticos"
-          }
-        ],
-        "customCards": [],
-        "heroTagline": "¿Buscas transformar tus entrevistas tradicionales en entrevistas de alta calidad basadas en el respeto y la efectividad forense?",
-        "contactPhone": "0981296179",
-        "fichaTecnica": [
-          {
-            "title": "⏱️ 30 horas de duración",
-            "description": "Formación de alto nivel con enfoque analítico."
-          },
-          {
-            "title": "📚 45 lecciones",
-            "description": "Lecciones especializadas en la materia."
-          },
-          {
-            "title": "📄 Plantillas de planeación y bitácoras de entrevista forense descargables.",
-            "description": "Material práctico descargable."
-          },
-          {
-            "title": "📊 +100 Diapositivas académicas descargables.",
-            "description": "Diapositivas académicas descargables."
-          },
-          {
-            "title": "✏️ Evaluaciones de caso práctico y Quizzes interactivos.",
-            "description": "Evaluaciones continuas interactiva."
-          },
-          {
-            "title": "📺 Acceso por 3 meses (pregrabado)",
-            "description": "Material pregrabado disponible."
-          },
-          {
-            "title": "✅ 30 días de garantía.",
-            "description": "Garantía de satisfacción total."
-          },
-          {
-            "title": "🔐 Acceso a la comunidad ONE TRUE.",
-            "description": "Acceso exclusivo a la red académica."
-          },
-          {
-            "title": "🎓 Diploma de finalización.",
-            "description": "Diploma oficial al concluir."
-          }
-        ],
-        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179",
-        "isComplementary": true,
-        "contactWhatsappText": "+593 98 129 6179"
-      },
-      "created_at": "2026-06-10T00:08:25.01446+00:00",
       "template": "graficas"
     }
   ],
