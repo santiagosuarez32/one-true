@@ -484,3 +484,187 @@ export async function saveSetting(key: string, value: string): Promise<void> {
   }
 }
 
+/* ==================== Backups API ==================== */
+const backupsDir = path.join(process.cwd(), "backups");
+
+export async function createBackup(isAuto: boolean = false): Promise<string> {
+  const db = await getDb();
+  await fs.mkdir(backupsDir, { recursive: true });
+  
+  const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
+  const prefix = isAuto ? "auto-backup" : "manual-backup";
+  const filename = `${prefix}-${timestamp}.json`;
+  const filePath = path.join(backupsDir, filename);
+  
+  await fs.writeFile(filePath, JSON.stringify(db, null, 2), "utf8");
+  
+  if (isAuto) {
+    await rotateAutoBackups();
+  }
+  return filename;
+}
+
+export async function rotateAutoBackups(): Promise<void> {
+  try {
+    await fs.mkdir(backupsDir, { recursive: true });
+    const files = await fs.readdir(backupsDir);
+    
+    // Filter automatic backups
+    const autoBackups = files
+      .filter(f => f.startsWith("auto-backup-") && f.endsWith(".json"))
+      .map(f => ({
+        name: f,
+        path: path.join(backupsDir, f),
+        time: 0
+      }));
+      
+    for (const b of autoBackups) {
+      const stats = await fs.stat(b.path);
+      b.time = stats.mtimeMs;
+    }
+    
+    // Sort oldest to newest
+    autoBackups.sort((a, b) => a.time - b.time);
+    
+    // Keep only the last 15. Delete the rest.
+    if (autoBackups.length > 15) {
+      const toDelete = autoBackups.slice(0, autoBackups.length - 15);
+      for (const file of toDelete) {
+        await fs.unlink(file.path);
+      }
+    }
+  } catch (err) {
+    console.error("Failed to rotate auto backups:", err);
+  }
+}
+
+export async function listBackups(): Promise<any[]> {
+  try {
+    await fs.mkdir(backupsDir, { recursive: true });
+    const files = await fs.readdir(backupsDir);
+    
+    const backups = [];
+    for (const file of files) {
+      if ((file.startsWith("auto-backup-") || file.startsWith("manual-backup-")) && file.endsWith(".json")) {
+        const filePath = path.join(backupsDir, file);
+        const stats = await fs.stat(filePath);
+        backups.push({
+          id: file,
+          name: file,
+          type: file.startsWith("auto-backup-") ? "auto" : "manual",
+          date: stats.mtime.toISOString(),
+          size: stats.size
+        });
+      }
+    }
+    
+    // Sort newest first
+    return backups.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  } catch (err) {
+    console.error("Failed to list backups:", err);
+    return [];
+  }
+}
+
+export async function deleteBackupFile(filename: string): Promise<void> {
+  const resolvedPath = path.resolve(backupsDir, filename);
+  if (!resolvedPath.startsWith(backupsDir)) {
+    throw new Error("Acceso no autorizado al archivo de backup.");
+  }
+  await fs.unlink(resolvedPath);
+}
+
+export async function restoreBackup(backupData: DatabaseSchema): Promise<void> {
+  if (!backupData || typeof backupData !== "object") {
+    throw new Error("El archivo de copia de seguridad no es válido.");
+  }
+  const requiredKeys: (keyof DatabaseSchema)[] = ["services", "courses", "blogs", "podcasts", "calendarIntakes", "settings"];
+  for (const key of requiredKeys) {
+    if (!Array.isArray(backupData[key])) {
+      throw new Error(`Falta la colección '${key}' en la copia de seguridad.`);
+    }
+  }
+
+  // Clear all data in Supabase tables
+  console.log("Restoring backup: clearing Supabase tables...");
+  
+  const clearServices = supabase.from("services").delete().neq("id", "_non_existent_id_");
+  const clearCourses = supabase.from("courses").delete().neq("id", "_non_existent_id_");
+  const clearBlogs = supabase.from("blogs").delete().neq("id", "_non_existent_id_");
+  const clearPodcasts = supabase.from("podcasts").delete().neq("id", "_non_existent_id_");
+  const clearCalendar = supabase.from("calendar_intakes").delete().neq("id", "_non_existent_id_");
+  const clearSettings = supabase.from("settings").delete().neq("key", "_non_existent_key_");
+
+  const clearResults = await Promise.all([
+    clearServices,
+    clearCourses,
+    clearBlogs,
+    clearPodcasts,
+    clearCalendar,
+    clearSettings
+  ]);
+
+  for (const res of clearResults) {
+    if (res.error) {
+      console.error("Clear table failed during restore:", res.error.message);
+      throw new Error(`Fallo al vaciar tabla en Supabase: ${res.error.message}`);
+    }
+  }
+
+  // Insert records back
+  console.log("Restoring backup: inserting data into Supabase...");
+
+  const insertPromises = [];
+
+  if (backupData.services.length > 0) {
+    insertPromises.push(supabase.from("services").insert(backupData.services));
+  }
+  if (backupData.courses.length > 0) {
+    const coursesToInsert = backupData.courses.map(c => {
+      const { template, ...supCourse } = c;
+      if (supCourse.pageContent) {
+        supCourse.pageContent = {
+          ...supCourse.pageContent,
+          template: template
+        };
+      }
+      return supCourse;
+    });
+    insertPromises.push(supabase.from("courses").insert(coursesToInsert));
+  }
+  if (backupData.blogs.length > 0) {
+    insertPromises.push(supabase.from("blogs").insert(backupData.blogs));
+  }
+  if (backupData.podcasts.length > 0) {
+    insertPromises.push(supabase.from("podcasts").insert(backupData.podcasts));
+  }
+  if (backupData.calendarIntakes.length > 0) {
+    insertPromises.push(supabase.from("calendar_intakes").insert(backupData.calendarIntakes));
+  }
+  if (backupData.settings.length > 0) {
+    insertPromises.push(supabase.from("settings").insert(backupData.settings));
+  }
+
+  const insertResults = await Promise.all(insertPromises);
+  for (const res of insertResults) {
+    if (res.error) {
+      console.error("Insert failed during restore:", res.error.message);
+      throw new Error(`Fallo al repoblar tabla en Supabase: ${res.error.message}`);
+    }
+  }
+
+  // Update local db.json cache
+  console.log("Restoring backup: updating local cache db.json...");
+  await writeDb(backupData);
+}
+
+export async function restoreBackupFromFile(filename: string): Promise<void> {
+  const resolvedPath = path.resolve(backupsDir, filename);
+  if (!resolvedPath.startsWith(backupsDir)) {
+    throw new Error("Acceso no autorizado al archivo de backup.");
+  }
+  const data = await fs.readFile(resolvedPath, "utf8");
+  const backupData = JSON.parse(data) as DatabaseSchema;
+  await restoreBackup(backupData);
+}
+

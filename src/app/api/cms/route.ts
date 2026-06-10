@@ -12,12 +12,49 @@ import {
   saveCalendarIntake,
   deleteCalendarIntake,
   saveSetting,
+  createBackup,
+  listBackups,
+  deleteBackupFile,
+  restoreBackup,
+  restoreBackupFromFile,
 } from "@/lib/cms";
 import { revalidatePath } from "next/cache";
+import { createServerClient } from "@supabase/ssr";
+import { cookies } from "next/headers";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
+async function verifyAuth() {
+  try {
+    const cookieStore = await cookies();
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
+    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+
+    const supabase = createServerClient(supabaseUrl, supabaseAnonKey, {
+      cookies: {
+        getAll() {
+          return cookieStore.getAll();
+        },
+        setAll(cookiesToSet) {
+          try {
+            cookiesToSet.forEach(({ name, value, options }) =>
+              cookieStore.set(name, value, options)
+            );
+          } catch {
+            // Can be ignored if middleware is refreshing sessions
+          }
+        },
+      },
+    });
+
+    const { data: { user } } = await supabase.auth.getUser();
+    return !!user;
+  } catch (err) {
+    console.error("Auth check failed:", err);
+    return false;
+  }
+}
 
 export async function GET() {
   try {
@@ -31,6 +68,12 @@ export async function GET() {
 
 export async function POST(request: Request) {
   try {
+    // 1. Verify authenticated admin session in server
+    const isAuthenticated = await verifyAuth();
+    if (!isAuthenticated) {
+      return NextResponse.json({ error: "No autorizado. Por favor inicie sesión." }, { status: 401 });
+    }
+
     const body = await request.json();
     let { type, action, data, id } = body;
 
@@ -45,6 +88,18 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Missing type or action" }, { status: 400 });
     }
 
+    // 2. Trigger automatic backup prior to write/modify/delete operations
+    const isWriteAction = action === "save" || action === "delete";
+    if (isWriteAction && type !== "backup") {
+      try {
+        await createBackup(true); // isAuto = true
+        console.log("Automatic backup generated successfully before database modification.");
+      } catch (backupErr) {
+        console.error("Warning: Automatic backup failed to write:", backupErr);
+      }
+    }
+
+    // 3. Process actions
     if (type === "service") {
       if (action === "save") {
         await saveService(data);
@@ -90,6 +145,30 @@ export async function POST(request: Request) {
         await saveSetting(data.key, data.value);
       } else {
         return NextResponse.json({ error: "Invalid action" }, { status: 400 });
+      }
+    } else if (type === "backup") {
+      if (action === "list") {
+        const backups = await listBackups();
+        return NextResponse.json({ success: true, data: backups });
+      } else if (action === "create") {
+        const filename = await createBackup(false);
+        return NextResponse.json({ success: true, filename });
+      } else if (action === "delete") {
+        if (!id) {
+          return NextResponse.json({ error: "Missing backup ID/filename" }, { status: 400 });
+        }
+        await deleteBackupFile(id);
+        return NextResponse.json({ success: true });
+      } else if (action === "restore") {
+        if (data && data.backupData) {
+          await restoreBackup(data.backupData);
+        } else if (id) {
+          await restoreBackupFromFile(id);
+        } else {
+          return NextResponse.json({ error: "Missing restore parameters" }, { status: 400 });
+        }
+      } else {
+        return NextResponse.json({ error: "Invalid backup action" }, { status: 400 });
       }
     } else {
       return NextResponse.json({ error: "Invalid type" }, { status: 400 });

@@ -13,7 +13,7 @@ const PURPLE = "#700FA3";
 const PURPLE_HOVER = "#5C0B87";
 const ACCENT_YELLOW = "#FFC107";
 
-type Tab = "services" | "courses" | "complementarias" | "blogs" | "podcasts" | "calendar" | "ebook";
+type Tab = "services" | "courses" | "complementarias" | "blogs" | "podcasts" | "calendar" | "ebook" | "backups";
 
 function prepopulateCourseDefaults(course: any) {
   if (!course) return course;
@@ -476,7 +476,16 @@ export default function AdminDashboard() {
   const [db, setDb] = useState<DatabaseSchema>({ services: [], courses: [], blogs: [], podcasts: [], calendarIntakes: [], settings: [] });
 
   const [ebookPdfUrl, setEbookPdfUrl] = useState("");
+  const [ebookFileName, setEbookFileName] = useState("");
   const [savingSettings, setSavingSettings] = useState(false);
+
+  // Backup & Restore states
+  const [backups, setBackups] = useState<any[]>([]);
+  const [loadingBackups, setLoadingBackups] = useState(false);
+  const [savingBackup, setSavingBackup] = useState(false);
+  const [restoringBackup, setRestoringBackup] = useState<string | null>(null);
+  const [restoringFile, setRestoringFile] = useState(false);
+  const backupFileRef = useRef<HTMLInputElement>(null);
 
   const [search, setSearch] = useState("");
   const [showForm, setShowForm] = useState(false);
@@ -546,9 +555,13 @@ export default function AdminDashboard() {
 
   useEffect(() => {
     if (db.settings) {
-      const found = db.settings.find(s => s.key === "ebook_pdf_url");
-      if (found) {
-        setEbookPdfUrl(found.value);
+      const foundUrl = db.settings.find(s => s.key === "ebook_pdf_url");
+      if (foundUrl) {
+        setEbookPdfUrl(foundUrl.value);
+      }
+      const foundName = db.settings.find(s => s.key === "ebook_filename");
+      if (foundName) {
+        setEbookFileName(foundName.value);
       }
     }
   }, [db]);
@@ -556,7 +569,7 @@ export default function AdminDashboard() {
   const handleSaveEbookSettings = async () => {
     setSavingSettings(true);
     try {
-      const res = await fetch("/api/cms", {
+      const saveUrl = fetch("/api/cms", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -565,7 +578,20 @@ export default function AdminDashboard() {
           data: { key: "ebook_pdf_url", value: ebookPdfUrl }
         })
       });
-      if (res.ok) {
+
+      const saveName = fetch("/api/cms", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "settings",
+          action: "save",
+          data: { key: "ebook_filename", value: ebookFileName }
+        })
+      });
+
+      const [resUrl, resName] = await Promise.all([saveUrl, saveName]);
+
+      if (resUrl.ok && resName.ok) {
         showToast("ok", "Configuración de Ebook guardada correctamente");
         fetchData();
       } else {
@@ -575,6 +601,169 @@ export default function AdminDashboard() {
       showToast("err", "Error al guardar la configuración del Ebook.");
     } finally {
       setSavingSettings(false);
+    }
+  };
+
+  const fetchBackups = async () => {
+    setLoadingBackups(true);
+    try {
+      const res = await fetch("/api/cms", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: "backup", action: "list" })
+      });
+      const data = await res.json();
+      if (data.success) {
+        setBackups(data.data || []);
+      } else {
+        throw new Error(data.error);
+      }
+    } catch (error: any) {
+      console.error("Failed to fetch backups:", error);
+      showToast("err", error.message || "Error al leer copias de seguridad del servidor.");
+    } finally {
+      setLoadingBackups(false);
+    }
+  };
+
+  useEffect(() => {
+    if (activeTab === "backups") {
+      fetchBackups();
+    }
+  }, [activeTab]);
+
+  const handleCreateBackup = async () => {
+    setSavingBackup(true);
+    try {
+      const res = await fetch("/api/cms", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: "backup", action: "create" })
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        showToast("ok", "Copia de seguridad creada correctamente: " + data.filename);
+        fetchBackups();
+      } else {
+        throw new Error(data.error || "Fallo en la API.");
+      }
+    } catch (err: any) {
+      showToast("err", err.message || "Error al crear copia de seguridad.");
+    } finally {
+      setSavingBackup(false);
+    }
+  };
+
+  const handleDeleteBackup = async (filename: string) => {
+    if (!window.confirm(`¿Estás seguro de que deseas eliminar la copia de seguridad "${filename}" permanentemente?`)) return;
+    try {
+      const res = await fetch("/api/cms", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: "backup", action: "delete", id: filename })
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        showToast("ok", "Copia de seguridad eliminada.");
+        fetchBackups();
+      } else {
+        throw new Error(data.error);
+      }
+    } catch (err: any) {
+      showToast("err", err.message || "Error al eliminar la copia de seguridad.");
+    }
+  };
+
+  const handleRestoreBackup = async (filename: string) => {
+    if (!window.confirm(`⚠️ ADVERTENCIA CRÍTICA: ¿Estás seguro de que deseas restaurar la base de datos al estado de la copia "${filename}"? Todos los cambios posteriores se perderán.`)) return;
+    setRestoringBackup(filename);
+    try {
+      const res = await fetch("/api/cms", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: "backup", action: "restore", id: filename })
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        showToast("ok", "Base de datos restaurada correctamente.");
+        fetchData();
+        fetchBackups();
+      } else {
+        throw new Error(data.error);
+      }
+    } catch (err: any) {
+      showToast("err", err.message || "Error al restaurar la copia de seguridad.");
+    } finally {
+      setRestoringBackup(null);
+    }
+  };
+
+  const handleDownloadBackup = () => {
+    try {
+      const jsonString = `data:text/json;charset=utf-8,${encodeURIComponent(
+        JSON.stringify(db, null, 2)
+      )}`;
+      const downloadAnchor = document.createElement("a");
+      const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
+      downloadAnchor.setAttribute("href", jsonString);
+      downloadAnchor.setAttribute("download", `manual-backup-${timestamp}.json`);
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.removeChild(downloadAnchor);
+      showToast("ok", "Copia de seguridad descargada a tu PC.");
+    } catch (err) {
+      showToast("err", "Error al generar archivo de descarga.");
+    }
+  };
+
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files;
+    if (!files || files.length === 0) return;
+    const file = files[0];
+    
+    if (file.type !== "application/json" && !file.name.endsWith(".json")) {
+      showToast("err", "El archivo debe ser de tipo JSON.");
+      return;
+    }
+
+    if (!window.confirm("⚠️ ADVERTENCIA CRÍTICA: ¿Estás seguro de que deseas restaurar la base de datos a partir de este archivo JSON subido? Todos los datos actuales en Supabase y local serán reemplazados.")) return;
+
+    setRestoringFile(true);
+    try {
+      const reader = new FileReader();
+      reader.onload = async (event) => {
+        try {
+          const content = event.target?.result as string;
+          const backupData = JSON.parse(content);
+
+          const res = await fetch("/api/cms", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              type: "backup",
+              action: "restore",
+              data: { backupData }
+            })
+          });
+          const data = await res.json();
+          if (res.ok && data.success) {
+            showToast("ok", "Base de datos restaurada correctamente desde el archivo local.");
+            fetchData();
+            fetchBackups();
+          } else {
+            throw new Error(data.error || "Fallo en la API de restauración.");
+          }
+        } catch (parseErr: any) {
+          showToast("err", "Error al procesar el archivo JSON: " + (parseErr.message || "Estructura inválida."));
+        } finally {
+          setRestoringFile(false);
+          if (backupFileRef.current) backupFileRef.current.value = "";
+        }
+      };
+      reader.readAsText(file);
+    } catch (err: any) {
+      showToast("err", "Fallo al leer el archivo.");
+      setRestoringFile(false);
     }
   };
 
@@ -977,13 +1166,23 @@ export default function AdminDashboard() {
               <span>Configuración Ebook</span>
               <span className="text-xs font-medium px-2 py-0.5 rounded bg-neutral-200 text-neutral-700">1</span>
             </button>
+            <button
+              onClick={() => { setActiveTab("backups"); setSearch(""); }}
+              className={`flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold transition-all ${
+                activeTab === "backups" ? "bg-neutral-100 text-neutral-900 border-l-4 pl-2" : "text-neutral-600 hover:bg-neutral-50"
+              }`}
+              style={activeTab === "backups" ? { borderLeftColor: PURPLE } : undefined}
+            >
+              <span>Copias de Seguridad</span>
+              <span className="text-xs font-medium px-2 py-0.5 rounded bg-neutral-200 text-neutral-700">{backups.length}</span>
+            </button>
           </nav>
         </aside>
 
         {/* Dashboard Main Workspace */}
         <section className="space-y-6 lg:col-span-9">
           {/* Dashboard Metrics */}
-          {activeTab !== "ebook" && (
+          {activeTab !== "ebook" && activeTab !== "backups" && (
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
               <MetricCard title={`Total ${activeTab === "services" ? "Servicios" : activeTab === "courses" ? "Cursos" : activeTab === "complementarias" ? "Formaciones" : activeTab === "blogs" ? "Artículos" : activeTab === "calendar" ? "Convocatorias" : "Episodios"}`} value={activeMetrics.total} />
               <MetricCard title="Publicados" value={activeMetrics.published} accent />
@@ -992,7 +1191,7 @@ export default function AdminDashboard() {
           )}
 
           {/* Action Row */}
-          {activeTab !== "ebook" && (
+          {activeTab !== "ebook" && activeTab !== "backups" && (
             <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div className="relative w-full sm:w-80">
                 <input
@@ -1033,13 +1232,29 @@ export default function AdminDashboard() {
               </div>
 
               <div className="border-t border-neutral-200 pt-6 space-y-6">
-                <div className="max-w-xl">
+                <div className="max-w-xl space-y-5">
                   <DocumentUploadBox
                     label="Archivo del Ebook (PDF)"
                     value={ebookPdfUrl}
                     onChange={setEbookPdfUrl}
                     pathPrefix="ebooks"
                   />
+
+                  <div className="space-y-1.5 w-full">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                      Nombre del archivo al descargar
+                    </label>
+                    <input
+                      type="text"
+                      value={ebookFileName}
+                      onChange={(e) => setEbookFileName(e.target.value)}
+                      placeholder="Ej: EBOOK JUNIO 2026.pdf o Guia-Poligrafia.pdf"
+                      className="w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2 font-semibold"
+                      onFocus={(e) => (e.currentTarget.style.boxShadow = `0 0 0 2px #700FA322`)}
+                      onBlur={(e) => (e.currentTarget.style.boxShadow = "none")}
+                    />
+                    <p className="text-[10px] text-neutral-400 font-semibold mt-0.5">Define cómo se llamará el archivo cuando el usuario lo guarde en su dispositivo.</p>
+                  </div>
                 </div>
 
                 <div className="flex justify-start">
@@ -1060,6 +1275,181 @@ export default function AdminDashboard() {
                       "Guardar Configuración"
                     )}
                   </button>
+                </div>
+              </div>
+            </div>
+          ) : activeTab === "backups" ? (
+            <div className="rounded-2xl border border-neutral-200 bg-white overflow-hidden shadow-sm p-6 sm:p-8 space-y-6 animate-fade-in">
+              <div>
+                <h2 className="text-lg font-bold text-neutral-850" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Copias de Seguridad y Restauración</h2>
+                <p className="text-xs text-neutral-500 font-semibold mt-1">
+                  Administra los respaldos de la base de datos de tu sitio. El sistema realiza un backup automático antes de cualquier cambio o eliminación para que puedas restaurarlo si te equivocas.
+                </p>
+              </div>
+
+              <div className="border-t border-neutral-200 pt-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Local Backup Panel */}
+                  <div className="rounded-xl border border-neutral-200 bg-neutral-50/50 p-5 space-y-4">
+                    <h3 className="text-sm font-bold text-neutral-800" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Copia de Seguridad Local (PC)</h3>
+                    <p className="text-xs text-neutral-500 font-semibold">Descarga toda la base de datos del CMS a tu computadora como un archivo JSON, o sube uno previamente descargado para restaurar el sitio.</p>
+                    
+                    <div className="flex flex-col gap-3">
+                      <button
+                        onClick={handleDownloadBackup}
+                        className="rounded-lg border border-neutral-300 bg-white px-4 py-2.5 text-xs font-bold text-neutral-700 hover:bg-neutral-50 transition flex items-center justify-center gap-2 cursor-pointer shadow-sm w-full"
+                      >
+                        <svg className="w-4 h-4 text-neutral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                        Descargar copia de seguridad a PC
+                      </button>
+
+                      <div
+                        onClick={() => !restoringFile && backupFileRef.current?.click()}
+                        className="rounded-lg border-2 border-dashed border-neutral-300 bg-white p-4 text-center cursor-pointer hover:bg-neutral-50 hover:border-neutral-400 transition flex flex-col items-center justify-center gap-2"
+                      >
+                        <input
+                          type="file"
+                          ref={backupFileRef}
+                          onChange={handleFileUpload}
+                          accept=".json"
+                          className="hidden"
+                          disabled={restoringFile}
+                        />
+                        {restoringFile ? (
+                          <div className="flex items-center gap-2 py-2">
+                            <div className="h-4 w-4 animate-spin rounded-full border-2 border-[#700FA3] border-l-transparent" />
+                            <span className="text-xs font-bold text-neutral-600">Restaurando archivo...</span>
+                          </div>
+                        ) : (
+                          <>
+                            <svg className="w-6 h-6 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+                            </svg>
+                            <span className="text-xs font-bold text-[#700FA3] hover:underline">Sube o arrastra un archivo .json</span>
+                            <span className="text-[10px] text-neutral-400 font-semibold">Para restaurar la base de datos de inmediato</span>
+                          </>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Server Backup Panel */}
+                  <div className="rounded-xl border border-neutral-200 bg-neutral-50/50 p-5 flex flex-col justify-between space-y-4">
+                    <div className="space-y-2">
+                      <h3 className="text-sm font-bold text-neutral-800" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Copia de Seguridad en Servidor</h3>
+                      <p className="text-xs text-neutral-500 font-semibold">Genera un respaldo instantáneo que se guardará permanentemente en el servidor de la aplicación, permitiendo recuperarlo en cualquier momento.</p>
+                    </div>
+
+                    <button
+                      onClick={handleCreateBackup}
+                      disabled={savingBackup}
+                      className="w-full rounded-lg px-4 py-3 text-xs font-bold text-white transition flex items-center justify-center gap-2 cursor-pointer shadow-sm disabled:opacity-75 disabled:cursor-not-allowed"
+                      style={{ backgroundColor: PURPLE }}
+                      onMouseEnter={(e) => !savingBackup && ((e.currentTarget as HTMLButtonElement).style.backgroundColor = PURPLE_HOVER)}
+                      onMouseLeave={(e) => !savingBackup && ((e.currentTarget as HTMLButtonElement).style.backgroundColor = PURPLE)}
+                    >
+                      {savingBackup ? (
+                        <>
+                          <div className="h-4 w-4 animate-spin rounded-full border-2 border-white border-l-transparent" />
+                          Creando copia de respaldo...
+                        </>
+                      ) : (
+                        <>
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                          Generar copia en servidor
+                        </>
+                      )}
+                    </button>
+                  </div>
+                </div>
+
+                {/* Server Backup History */}
+                <div className="mt-8 space-y-4">
+                  <div className="flex justify-between items-center">
+                    <h3 className="text-sm font-bold text-neutral-800" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Historial de Respaldos en Servidor</h3>
+                    <button
+                      onClick={fetchBackups}
+                      className="text-xs font-bold text-[#700FA3] hover:underline cursor-pointer flex items-center gap-1"
+                    >
+                      Actualizar lista
+                    </button>
+                  </div>
+
+                  <div className="rounded-xl border border-neutral-200 overflow-hidden bg-white">
+                    {loadingBackups ? (
+                      <div className="py-12 flex flex-col items-center justify-center gap-2">
+                        <div className="h-6 w-6 animate-spin rounded-full border-2 border-[#700FA3] border-l-transparent" />
+                        <span className="text-xs text-neutral-400 font-semibold">Cargando historial...</span>
+                      </div>
+                    ) : backups.length === 0 ? (
+                      <p className="px-5 py-12 text-center text-xs text-neutral-400 font-semibold">No se encontraron copias de seguridad en el servidor.</p>
+                    ) : (
+                      <div className="overflow-x-auto">
+                        <table className="w-full text-left text-xs border-collapse">
+                          <thead>
+                            <tr className="bg-neutral-50 text-neutral-500 font-bold border-b border-neutral-200">
+                              <th className="px-4 py-3 font-bold">Tipo</th>
+                              <th className="px-4 py-3 font-bold">Nombre del Archivo</th>
+                              <th className="px-4 py-3 font-bold">Fecha de Creación</th>
+                              <th className="px-4 py-3 font-bold">Tamaño</th>
+                              <th className="px-4 py-3 font-bold text-right">Acciones</th>
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-neutral-100">
+                            {backups.map((b) => {
+                              const isRestoring = restoringBackup === b.name;
+                              return (
+                                <tr key={b.id} className="hover:bg-neutral-50/55 transition">
+                                  <td className="px-4 py-3.5 whitespace-nowrap">
+                                    {b.type === "auto" ? (
+                                      <span className="rounded-full bg-blue-50 border border-blue-200 px-2 py-0.5 text-[10px] font-bold text-blue-700">
+                                        Automático
+                                      </span>
+                                    ) : (
+                                      <span className="rounded-full bg-purple-50 border border-purple-200 px-2 py-0.5 text-[10px] font-bold text-[#700FA3]">
+                                        Manual
+                                      </span>
+                                    )}
+                                  </td>
+                                  <td className="px-4 py-3.5 font-mono text-[11px] text-neutral-700 max-w-[200px] truncate" title={b.name}>
+                                    {b.name}
+                                  </td>
+                                  <td className="px-4 py-3.5 text-neutral-500 font-medium">
+                                    {new Date(b.date).toLocaleString("es-ES")}
+                                  </td>
+                                  <td className="px-4 py-3.5 text-neutral-500 font-semibold">
+                                    {(b.size / 1024).toFixed(1)} KB
+                                  </td>
+                                  <td className="px-4 py-3.5 text-right whitespace-nowrap">
+                                    <div className="flex justify-end gap-2">
+                                      <button
+                                        onClick={() => handleRestoreBackup(b.name)}
+                                        disabled={!!restoringBackup}
+                                        className="rounded border border-green-200 bg-green-50 px-2.5 py-1 text-[11px] font-bold text-green-700 hover:bg-green-100 disabled:opacity-50 transition cursor-pointer"
+                                      >
+                                        {isRestoring ? "Restaurando..." : "Restaurar"}
+                                      </button>
+                                      <button
+                                        onClick={() => handleDeleteBackup(b.name)}
+                                        disabled={!!restoringBackup}
+                                        className="rounded border border-red-200 bg-red-50 px-2 py-1 text-[11px] font-bold text-red-700 hover:bg-red-100 disabled:opacity-50 transition cursor-pointer"
+                                      >
+                                        Eliminar
+                                      </button>
+                                    </div>
+                                  </td>
+                                </tr>
+                              );
+                            })}
+                          </tbody>
+                        </table>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>

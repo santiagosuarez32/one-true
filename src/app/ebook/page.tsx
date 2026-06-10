@@ -21,6 +21,7 @@ export default function EbookPage() {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
   const [ebookPdfUrl, setEbookPdfUrl] = useState("/ebook-poligrafia.pdf");
+  const [ebookFileName, setEbookFileName] = useState("One-True-Guia-Poligrafia-Confiable.pdf");
 
   useEffect(() => {
     // Fetch ebook settings dynamically
@@ -34,10 +35,14 @@ export default function EbookPage() {
             if (found && found.value) {
               setEbookPdfUrl(found.value);
             }
+            const foundName = data.settings.find((s: any) => s.key === "ebook_filename");
+            if (foundName && foundName.value) {
+              setEbookFileName(foundName.value);
+            }
           }
         }
       } catch (err) {
-        console.error("Failed to load ebook PDF url:", err);
+        console.error("Failed to load ebook settings:", err);
       }
     })();
   }, []);
@@ -83,6 +88,15 @@ export default function EbookPage() {
   }, []);
 
   const triggerDownload = async () => {
+    // Normalize download filename and ensure it has a proper extension
+    let downloadName = ebookFileName.trim();
+    if (!downloadName) {
+      downloadName = "One-True-Guia-Poligrafia-Confiable.pdf";
+    }
+    if (!/\.(pdf|doc|docx)$/i.test(downloadName)) {
+      downloadName += ".pdf";
+    }
+
     try {
       const fileResponse = await fetch(ebookPdfUrl);
       if (!fileResponse.ok) throw new Error("Error de red al obtener el archivo.");
@@ -91,7 +105,7 @@ export default function EbookPage() {
       
       const link = document.createElement("a");
       link.href = blobUrl;
-      link.download = "One-True-Guia-Poligrafia-Confiable.pdf";
+      link.download = downloadName;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -101,7 +115,7 @@ export default function EbookPage() {
       const link = document.createElement("a");
       link.href = ebookPdfUrl;
       link.target = "_blank";
-      link.download = "One-True-Guia-Poligrafia-Confiable.pdf";
+      link.download = downloadName;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
