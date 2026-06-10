@@ -55,6 +55,7 @@ export type Course = {
   published: boolean;
   template?: "tecnicas" | "basico" | "pretest" | "graficas" | "ess-m" | "control-calidad" | "standard";
   pageContent: {
+    isComplementary?: boolean;
     heroTagline: string;
     heroTitle: string;
     heroDesc: string;

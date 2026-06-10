@@ -283,7 +283,7 @@ export default function TecnicasPoligraficasPage({ course }: { course: Course })
         </div>
       </section>
 
-      {/* ¿Qué incluye este curso? Section */}
+      {/* Características Generales Section */}
       <section className="bg-white py-16 md:py-24">
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1000px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
           <div className="flex items-center gap-3 mb-6">
@@ -297,7 +297,7 @@ export default function TecnicasPoligraficasPage({ course }: { course: Course })
                 fontFamily: "var(--font-montserrat), sans-serif",
               }}
             >
-              Contenido del Curso
+              Ficha Técnica
             </span>
           </div>
 
@@ -310,13 +310,13 @@ export default function TecnicasPoligraficasPage({ course }: { course: Course })
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {(fichaTecnica && fichaTecnica.length > 0 ? fichaTecnica : [
-              { title: "⏱️ 20 horas de formación especializada", description: "Formación intensiva y estructurada en técnicas poligráficas." },
-              { title: "📚 +40 lecciones de alto contenido técnico", description: "Material completo y detallado sobre cada técnica." },
-              { title: "📄 Plantillas de calificación y protocolos descargables", description: "Documentos listos para usar en tu práctica profesional." },
-              { title: "❓ Evaluaciones modulares (Quizzes)", description: "Preguntas para medir tu progreso en cada módulo." },
-              { title: "✅ 30 días de garantía de satisfacción", description: "Tu inversión está protegida." },
-              { title: "🔐 Acceso a la comunidad privada ONE TRUE", description: "Red exclusiva de profesionales en poligrafía." },
-              { title: "🎓 Diploma de finalización", description: "Certificado que avala tu actualización profesional." }
+              { title: "⏱️ 20 horas de formación especializada.", description: "Capacitación de alto nivel con enfoque analítico." },
+              { title: "📚 +40 lecciones de alto contenido técnico.", description: "Explicaciones detalladas y rigurosas." },
+              { title: "📄 Plantillas de calificación y protocolos descargables.", description: "Material listo para su uso práctico diario." },
+              { title: "❓ Evaluaciones modulares (Quizzes) para medir tu progreso.", description: "Comprobación del nivel de asimilación." },
+              { title: "✅ 30 días de garantía de satisfacción.", description: "Respaldo y seguridad total en su formación." },
+              { title: "🔐 Acceso a la comunidad privada ONE TRUE.", description: "Forma parte del grupo exclusivo de egresados." },
+              { title: "🎓 Diploma de finalización que avala tu actualización.", description: "Certificación formal del curso completado." }
             ]).map((feat, index) => {
               const emojiRegex = /([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g;
               const emojiMatch = feat.title.match(emojiRegex);

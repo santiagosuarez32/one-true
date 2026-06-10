@@ -13,7 +13,7 @@ const PURPLE = "#700FA3";
 const PURPLE_HOVER = "#5C0B87";
 const ACCENT_YELLOW = "#FFC107";
 
-type Tab = "services" | "courses" | "blogs" | "podcasts";
+type Tab = "services" | "courses" | "complementarias" | "blogs" | "podcasts";
 
 function prepopulateCourseDefaults(course: any) {
   if (!course) return course;
@@ -408,6 +408,52 @@ function prepopulateCourseDefaults(course: any) {
         { title: "Evaluación Práctica del Proceso Integral", description: "Ejecución real de una auditoría completa de control de calidad." }
       ];
     }
+    if (!pc.customCards || pc.customCards.length === 0) {
+      pc.customCards = [
+        {
+          title: "Auditoría de Procedimientos",
+          description: "Revisión sistemática del cumplimiento de estándares en cada examinación.",
+          icon: "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
+          items: []
+        },
+        {
+          title: "Validación de Datos",
+          description: "Verificación de la integridad y consistencia en registros poligráficos.",
+          icon: "/icons/Browser-Hand--Streamline-Ultimate.webp",
+          items: []
+        },
+        {
+          title: "Revisión por Pares",
+          description: "Evaluación cruzada de casos entre examinadores certificados.",
+          icon: "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
+          items: []
+        },
+        {
+          title: "Calibración de Equipos",
+          description: "Mantenimiento preventivo y control de precisión instrumental.",
+          icon: "/icons/Password-Desktop--Streamline-Ultimate.webp",
+          items: []
+        },
+        {
+          title: "Análisis de Discrepancias",
+          description: "Investigación de variaciones en resultados e identificación de causas.",
+          icon: "/icons/Task-Checklist--Streamline-Ultimate.webp",
+          items: []
+        },
+        {
+          title: "Documentación de Conformidad",
+          description: "Registro exhaustivo de auditorías y mejoras implementadas.",
+          icon: "/icons/Monitor-Find--Streamline-Ultimate.webp",
+          items: []
+        },
+        {
+          title: "Mejora Continua",
+          description: "Actualización de protocolos basada en hallazgos de auditoría.",
+          icon: "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
+          items: []
+        }
+      ];
+    }
     if (!pc.fichaTecnica || pc.fichaTecnica.length === 0) {
       pc.fichaTecnica = [
         { title: "💻 Modalidad", description: "100% en línea" },
@@ -523,8 +569,13 @@ export default function AdminDashboard() {
     const totalServices = db.services.length;
     const publishedServices = db.services.filter((s) => s.published).length;
 
-    const totalCourses = db.courses.length;
-    const publishedCourses = db.courses.filter((c) => c.published).length;
+    const allCourses = db.courses.filter((c: any) => !c.pageContent?.isComplementary);
+    const totalCourses = allCourses.length;
+    const publishedCourses = allCourses.filter((c) => c.published).length;
+
+    const allComplementarias = db.courses.filter((c: any) => c.pageContent?.isComplementary === true);
+    const totalComplementarias = allComplementarias.length;
+    const publishedComplementarias = allComplementarias.filter((c) => c.published).length;
 
     const totalBlogs = db.blogs.length;
     const publishedBlogs = db.blogs.filter((b) => b.published).length;
@@ -535,6 +586,7 @@ export default function AdminDashboard() {
     return {
       services: { total: totalServices, published: publishedServices, drafts: totalServices - publishedServices },
       courses: { total: totalCourses, published: publishedCourses, drafts: totalCourses - publishedCourses },
+      complementarias: { total: totalComplementarias, published: publishedComplementarias, drafts: totalComplementarias - publishedComplementarias },
       blogs: { total: totalBlogs, published: publishedBlogs, drafts: totalBlogs - publishedBlogs },
       podcasts: { total: totalPodcasts, published: publishedPodcasts, drafts: totalPodcasts - publishedPodcasts }
     };
@@ -547,8 +599,14 @@ export default function AdminDashboard() {
       return db.services.filter((s) => s.title.toLowerCase().includes(q) || s.id.toLowerCase().includes(q));
     }
     if (activeTab === "courses") {
-      if (!q) return db.courses;
-      return db.courses.filter((c) => c.title.toLowerCase().includes(q) || c.id.toLowerCase().includes(q));
+      const nonComplementary = db.courses.filter((c: any) => !c.pageContent?.isComplementary);
+      if (!q) return nonComplementary;
+      return nonComplementary.filter((c) => c.title.toLowerCase().includes(q) || c.id.toLowerCase().includes(q));
+    }
+    if (activeTab === "complementarias") {
+      const complementary = db.courses.filter((c: any) => c.pageContent?.isComplementary === true);
+      if (!q) return complementary;
+      return complementary.filter((c) => c.title.toLowerCase().includes(q) || c.id.toLowerCase().includes(q));
     }
     if (activeTab === "blogs") {
       if (!q) return db.blogs;
@@ -585,7 +643,7 @@ export default function AdminDashboard() {
           contactWhatsapp: "https://api.whatsapp.com/send?phone=593981296179"
         }
       });
-    } else if (activeTab === "courses") {
+    } else if (activeTab === "courses" || activeTab === "complementarias") {
       setEditingCourse({
         id: "",
         title: "",
@@ -602,8 +660,9 @@ export default function AdminDashboard() {
           aboutDesc: "",
           focusAreas: [],
           fichaTecnica: [],
-          contactPhone: "099371290",
-          contactWhatsapp: "https://api.whatsapp.com/send?phone=593099371290"
+          contactPhone: "0981296179",
+          contactWhatsapp: "https://api.whatsapp.com/send?phone=593981296179",
+          ...(activeTab === "complementarias" ? { isComplementary: true } : {})
         }
       });
     } else if (activeTab === "blogs") {
@@ -637,7 +696,7 @@ export default function AdminDashboard() {
     setIsNewEntity(false);
     if (activeTab === "services") {
       setEditingService(JSON.parse(JSON.stringify(item)));
-    } else if (activeTab === "courses") {
+    } else if (activeTab === "courses" || activeTab === "complementarias") {
       setEditingCourse(prepopulateCourseDefaults(JSON.parse(JSON.stringify(item))));
     } else if (activeTab === "blogs") {
       setEditingBlog(JSON.parse(JSON.stringify(item)));
@@ -649,11 +708,12 @@ export default function AdminDashboard() {
 
   const togglePublishedState = async (type: Tab, item: any) => {
     const updated = { ...item, published: !item.published };
+    const saveType = type === "complementarias" ? "courses" : type;
     try {
       const res = await fetch("/api/cms", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ type, action: "save", data: updated })
+        body: JSON.stringify({ type: saveType, action: "save", data: updated })
       });
       if (res.ok) {
         showToast("ok", updated.published ? "Publicado" : "Pasó a borrador");
@@ -668,11 +728,12 @@ export default function AdminDashboard() {
 
   const handleConfirmDelete = async () => {
     if (!confirmDel) return;
+    const delType = confirmDel.type === "complementarias" ? "courses" : confirmDel.type;
     try {
       const res = await fetch("/api/cms", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ type: confirmDel.type, action: "delete", id: confirmDel.id })
+        body: JSON.stringify({ type: delType, action: "delete", id: confirmDel.id })
       });
       if (res.ok) {
         showToast("ok", "Eliminado correctamente");
@@ -698,7 +759,7 @@ export default function AdminDashboard() {
 
     if (type === "services") {
       payload.href = `/${payload.id}`;
-    } else if (type === "courses") {
+    } else if (type === "courses" || type === "complementarias") {
       payload.href = `/${payload.id}`;
     } else if (type === "blogs") {
       payload.link = `/blog/${payload.id}`;
@@ -734,7 +795,7 @@ export default function AdminDashboard() {
     );
   }
 
-  const activeMetrics = activeTab === "services" ? metrics.services : activeTab === "courses" ? metrics.courses : activeTab === "blogs" ? metrics.blogs : metrics.podcasts;
+  const activeMetrics = activeTab === "services" ? metrics.services : activeTab === "courses" ? metrics.courses : activeTab === "complementarias" ? metrics.complementarias : activeTab === "blogs" ? metrics.blogs : metrics.podcasts;
 
   return (
     <main className={`${manrope.className} min-h-screen bg-neutral-50 text-neutral-800 selection:bg-[#FFC107] selection:text-neutral-900`}>
@@ -805,6 +866,16 @@ export default function AdminDashboard() {
               <span className="text-xs font-medium px-2 py-0.5 rounded bg-neutral-200 text-neutral-700">{db.blogs.length}</span>
             </button>
             <button
+              onClick={() => { setActiveTab("complementarias"); setSearch(""); }}
+              className={`flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold transition-all ${
+                activeTab === "complementarias" ? "bg-neutral-100 text-neutral-900 border-l-4 pl-2" : "text-neutral-600 hover:bg-neutral-50"
+              }`}
+              style={activeTab === "complementarias" ? { borderLeftColor: PURPLE } : undefined}
+            >
+              <span>Formaciones Comp.</span>
+              <span className="text-xs font-medium px-2 py-0.5 rounded bg-neutral-200 text-neutral-700">{db.courses.filter((c: any) => c.pageContent?.isComplementary === true).length}</span>
+            </button>
+            <button
               onClick={() => { setActiveTab("podcasts"); setSearch(""); }}
               className={`flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold transition-all ${
                 activeTab === "podcasts" ? "bg-neutral-100 text-neutral-900 border-l-4 pl-2" : "text-neutral-600 hover:bg-neutral-50"
@@ -821,7 +892,7 @@ export default function AdminDashboard() {
         <section className="space-y-6 lg:col-span-9">
           {/* Dashboard Metrics */}
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-            <MetricCard title={`Total ${activeTab === "services" ? "Servicios" : activeTab === "courses" ? "Cursos" : activeTab === "blogs" ? "Artículos" : "Episodios"}`} value={activeMetrics.total} />
+            <MetricCard title={`Total ${activeTab === "services" ? "Servicios" : activeTab === "courses" ? "Cursos" : activeTab === "complementarias" ? "Formaciones" : activeTab === "blogs" ? "Artículos" : "Episodios"}`} value={activeMetrics.total} />
             <MetricCard title="Publicados" value={activeMetrics.published} accent />
             <MetricCard title="Borradores" value={activeMetrics.drafts} />
           </div>
@@ -854,7 +925,7 @@ export default function AdminDashboard() {
               onMouseEnter={(e) => ((e.currentTarget as HTMLButtonElement).style.backgroundColor = PURPLE_HOVER)}
               onMouseLeave={(e) => ((e.currentTarget as HTMLButtonElement).style.backgroundColor = PURPLE)}
             >
-              + Nuevo {activeTab === "services" ? "Servicio" : activeTab === "courses" ? "Curso" : activeTab === "blogs" ? "Artículo" : "Episodio"}
+              + Nuevo {activeTab === "services" ? "Servicio" : activeTab === "courses" ? "Curso" : activeTab === "complementarias" ? "Formación" : activeTab === "blogs" ? "Artículo" : "Episodio"}
             </button>
           </div>
 
@@ -862,7 +933,7 @@ export default function AdminDashboard() {
           <div className="rounded-2xl border border-neutral-200 bg-white overflow-hidden shadow-sm">
             <div className="flex items-center justify-between border-b border-neutral-200 px-5 py-4 bg-white">
               <h2 className="text-base font-extrabold text-neutral-850">
-                {activeTab === "services" ? "Servicios" : activeTab === "courses" ? "Cursos Avanzados" : activeTab === "blogs" ? "Blog & Artículos" : "Episodios de Podcast"}
+                {activeTab === "services" ? "Servicios" : activeTab === "courses" ? "Cursos Avanzados" : activeTab === "complementarias" ? "Formaciones Complementarias" : activeTab === "blogs" ? "Blog & Artículos" : "Episodios de Podcast"}
               </h2>
               <span className="text-xs text-neutral-500 font-semibold">{filteredData.length} resultados</span>
             </div>
@@ -899,6 +970,7 @@ export default function AdminDashboard() {
                         <p className="text-xs text-neutral-500 font-semibold mt-0.5">
                           ID: <code className="text-[#700FA3] font-mono">{item.id}</code>
                           {activeTab === "services" && ` — Plantilla: ${item.template}`}
+                          {activeTab === "complementarias" && ` — Formación Complementaria`}
                           {activeTab === "podcasts" && ` — Duración: ${item.duration} | Tema: ${item.topic}`}
                         </p>
                       </div>
@@ -942,7 +1014,7 @@ export default function AdminDashboard() {
         <SideEditorForm
           type={activeTab}
           isNew={isNewEntity}
-          data={activeTab === "services" ? editingService : activeTab === "courses" ? editingCourse : activeTab === "blogs" ? editingBlog : editingPodcast}
+          data={activeTab === "services" ? editingService : (activeTab === "courses" || activeTab === "complementarias") ? editingCourse : activeTab === "blogs" ? editingBlog : editingPodcast}
           onClose={() => {
             setShowForm(false);
             setEditingService(null);
@@ -950,7 +1022,13 @@ export default function AdminDashboard() {
             setEditingBlog(null);
             setEditingPodcast(null);
           }}
-          onSave={(payload) => handleSaveEntity(activeTab, payload)}
+          onSave={(payload) => {
+            const saveTab = activeTab === "complementarias" ? "courses" as Tab : activeTab;
+            if (activeTab === "complementarias") {
+              payload.pageContent = { ...(payload.pageContent || {}), isComplementary: true };
+            }
+            handleSaveEntity(saveTab, payload);
+          }}
         />
       )}
 
@@ -1203,7 +1281,7 @@ function SideEditorForm({
         <div className="mb-6 flex items-center justify-between border-b border-neutral-200 pb-4 shrink-0">
           <div>
             <h3 className="text-lg font-extrabold text-neutral-850">
-              {isNew ? "Crear" : "Editar"} {type === "services" ? "Servicio" : type === "courses" ? "Curso" : type === "blogs" ? "Artículo" : type === "podcasts" ? "Episodio" : "Elemento"}
+              {isNew ? "Crear" : "Editar"} {type === "services" ? "Servicio" : type === "courses" ? "Curso" : type === "complementarias" ? "Formación Complementaria" : type === "blogs" ? "Artículo" : type === "podcasts" ? "Episodio" : "Elemento"}
             </h3>
             <p className="text-xs text-neutral-500 font-semibold mt-0.5">Complete todos los detalles del contenido editable</p>
           </div>
@@ -1277,7 +1355,7 @@ function SideEditorForm({
                 </label>
               )}
 
-              {type === "courses" && (
+              {(type === "courses" || type === "complementarias") && (
                 <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
                   Estilo / Plantilla del Curso
                   <select
@@ -1904,7 +1982,7 @@ function SideEditorForm({
             )}
 
             {/* COURSES FIELDS SECTION */}
-            {type === "courses" && (
+            {(type === "courses" || type === "complementarias") && (
               <div className="border-t border-neutral-200 pt-6 space-y-6">
                 <h4 className="text-xs font-bold text-[#700FA3] uppercase tracking-wider">Contenido de la Página</h4>
 

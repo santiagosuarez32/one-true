@@ -13,7 +13,7 @@ export default async function CursosAvanzadosPoligrafiaPage() {
   let displayCourses: any[] = [];
   try {
     const courses = await getCourses();
-    displayCourses = courses.filter((c: any) => c.published);
+    displayCourses = courses.filter((c: any) => c.published && c.id !== "curso-basico-en-poligrafia" && !c.pageContent?.isComplementary);
   } catch (err) {
     console.error("Error loading courses in server component:", err);
   }
@@ -93,7 +93,7 @@ export default async function CursosAvanzadosPoligrafiaPage() {
                 color: "#FFFFFF",
               }}
             >
-              Profundice sus competencias técnicas con módulos especializados diseñados para elevar su desempeño pericial. Ideal para profesionales que buscan actualización continua bajo los estándares de la{" "}
+              Profundice sus competencias técnicas con cursos especializados diseñados para elevar su desempeño en el área de Poligrafía. Ideal para profesionales que buscan actualización continua bajo los estándares de la{" "}
               <strong
                 style={{
                   fontWeight: "800",
@@ -102,7 +102,7 @@ export default async function CursosAvanzadosPoligrafiaPage() {
                   textUnderlineOffset: "4px",
                 }}
               >
-                APA
+                APA y ASTM
               </strong>
               .
             </p>
@@ -122,7 +122,7 @@ export default async function CursosAvanzadosPoligrafiaPage() {
                   textDecoration: "none",
                 }}
               >
-                Ver módulos disponibles
+                Ver cursos disponibles
               </a>
               <a
                 href="#contacto"

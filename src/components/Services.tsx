@@ -99,7 +99,12 @@ export default function Services({ initialServices = [] }: { initialServices?: a
     }
   ];
 
-  const serviceItems = initialServices.length > 0 ? initialServices : defaultServices;
+  let serviceItems = initialServices.length > 0 ? [...initialServices] : defaultServices;
+  const hasFormacion = serviceItems.some(s => s.href === "/curso-basico-en-poligrafia" || s.id === "curso-basico-en-poligrafia" || s.title?.toLowerCase().includes("formación en poligrafía"));
+  if (!hasFormacion) {
+    const formacionItem = defaultServices.find(s => s.href === "/curso-basico-en-poligrafia") || defaultServices[7];
+    serviceItems = [...serviceItems, formacionItem];
+  }
 
   return (
     <section id="services" className="bg-white pt-10 pb-24">

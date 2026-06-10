@@ -71,7 +71,7 @@ export default async function DynamicSlugPage({ params }: PageProps) {
       course.id === "curso-avanzado-tecnicas-poligraficas" || course.id === "tecnicas-poligraficas" ? "tecnicas" :
       course.id === "curso-basico-de-poligrafia" || course.id === "curso-basico-en-poligrafia" ? "basico" :
       course.id === "entrevista-pretest-y-postest" || course.id === "entrevista-pretest" ? "pretest" :
-      course.id === "calificacion-de-graficas" || course.id === "calificacion-graficas-analisis-datos" ? "graficas" :
+      course.id === "calificacion-de-graficas" || course.id === "calificacion-graficas-analisis-datos" || course.id === "evaluacion-forense-de-la-credibilidad" || course.id === "elicitacion-conversacional" || course.id === "modelos-de-entrevista-investigativa" ? "graficas" :
       course.id === "sistema-de-calificacion-ess-m" || course.id === "sistema-calificacion-ess-m" ? "ess-m" :
       course.id === "control-de-calidad-en-poligrafia" ? "control-calidad" :
       "standard"

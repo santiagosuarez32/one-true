@@ -253,40 +253,42 @@ export default function CalificacionGraficasPage({ course }: { course: Course })
               })}
 
               {/* Tarjetas Personalizadas Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-                {(customCards && customCards.length > 0 ? customCards : advancedTechniques).map((technique, idx) => {
-                  const anyTechnique = technique as any;
-                  const icon = anyTechnique.icon || advancedTechniques[idx]?.icon || "/icons/Browser-Page-Account--Streamline-Ultimate.webp";
-                  return (
-                    <div key={`card-${idx}`} className="flex flex-col items-start gap-4 bg-white p-6 rounded-2xl border border-neutral-100 shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_15px_35px_rgba(112,15,163,0.04)] transition-all duration-300 h-full">
-                      <div className="shrink-0 w-12 h-12 flex items-center justify-center">
-                        {icon.endsWith(".svg") || icon.endsWith(".png") || icon.endsWith(".webp") || icon.endsWith(".jpg") || icon.endsWith(".jpeg") || icon.startsWith("/") || icon.startsWith("http") ? (
-                          <img src={icon} alt={technique.title} className="w-12 h-12 object-contain" />
-                        ) : (
-                          <div className="text-3xl">{icon}</div>
-                        )}
-                      </div>
-                      <div className="flex-1 w-full">
-                        <h3 className="text-base md:text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
-                          {technique.title}
-                        </h3>
-                        {anyTechnique.description && (
-                          <p className="text-sm text-[#525252] leading-relaxed font-light mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                            <strong className="font-semibold text-[#48255A]">{anyTechnique.description}</strong>
-                          </p>
-                        )}
-                        <div className="flex flex-col gap-2">
-                          {(technique.items || []).map((item, itemIdx) => (
-                            <p key={itemIdx} className="text-sm text-[#525252] leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                              <strong className="font-semibold text-[#48255A]">{item}</strong>
+              {((customCards && customCards.length > 0) || (customCards === undefined && advancedTechniques.length > 0)) && (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                  {(customCards !== undefined ? customCards : advancedTechniques).map((technique, idx) => {
+                    const anyTechnique = technique as any;
+                    const icon = anyTechnique.icon || advancedTechniques[idx]?.icon || "/icons/Browser-Page-Account--Streamline-Ultimate.webp";
+                    return (
+                      <div key={`card-${idx}`} className="flex flex-col items-start gap-4 bg-white p-6 rounded-2xl border border-neutral-100 shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_15px_35px_rgba(112,15,163,0.04)] transition-all duration-300 h-full">
+                        <div className="shrink-0 w-12 h-12 flex items-center justify-center">
+                          {icon.endsWith(".svg") || icon.endsWith(".png") || icon.endsWith(".webp") || icon.endsWith(".jpg") || icon.endsWith(".jpeg") || icon.startsWith("/") || icon.startsWith("http") ? (
+                            <img src={icon} alt={technique.title} className="w-12 h-12 object-contain" />
+                          ) : (
+                            <div className="text-3xl">{icon}</div>
+                          )}
+                        </div>
+                        <div className="flex-1 w-full">
+                          <h3 className="text-base md:text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
+                            {technique.title}
+                          </h3>
+                          {anyTechnique.description && (
+                            <p className="text-sm text-[#525252] leading-relaxed font-light mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                              <strong className="font-semibold text-[#48255A]">{anyTechnique.description}</strong>
                             </p>
-                          ))}
+                          )}
+                          <div className="flex flex-col gap-2">
+                            {(technique.items || []).map((item, itemIdx) => (
+                              <p key={itemIdx} className="text-sm text-[#525252] leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                                <strong className="font-semibold text-[#48255A]">{item}</strong>
+                              </p>
+                            ))}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  );
-                })}
-              </div>
+                    );
+                  })}
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -315,18 +317,18 @@ export default function CalificacionGraficasPage({ course }: { course: Course })
             className="text-2xl sm:text-3xl md:text-[36px] font-bold text-[#48255A] mb-12"
             style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.2" }}
           >
-            Características Generales del Curso
+            ¿Qué incluye este curso?
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {(fichaTecnica && fichaTecnica.length > 0 ? fichaTecnica : [
-              { title: "⏱️ 15 horas intensivas", description: "Entrenamiento especializado en análisis." },
-              { title: "📚 30 lecciones", description: "Especializadas en análisis cuantitativo." },
-              { title: "📊 Ejercicios prácticos", description: "Gráficas reales para calibrar criterio." },
-              { title: "📄 Guías descargables", description: "Tablas de puntuación y herramientas." },
-              { title: "✅ 30 días garantía", description: "Satisfacción garantizada." },
-              { title: "🔐 Comunidad ONE TRUE", description: "Resolución de dudas complejas." },
-              { title: "🎓 Diploma oficial", description: "Certifica competencia en análisis." }
+              { title: "⏱️ 15 horas de entrenamiento intensivo.", description: "Formación de alto nivel con enfoque analítico." },
+              { title: "📚 30 lecciones especializadas en análisis cuantitativo.", description: "Explicaciones detalladas y rigurosas." },
+              { title: "📊 Ejercicios prácticos con gráficas reales para calibrar tu criterio.", description: "Casos de estudio y trazados reales." },
+              { title: "📄 Guías y tablas de puntuación descargables.", description: "Material de apoyo pericial." },
+              { title: "✅ 30 días de garantía de satisfacción.", description: "Respaldo y seguridad total en su formación." },
+              { title: "🔐 Acceso a la comunidad ONE TRUE para resolución de dudas complejas.", description: "Forma parte del grupo exclusivo de egresados." },
+              { title: "🎓 Diploma de finalización que certifica tu competencia en análisis de datos.", description: "Certificación formal del curso completado." }
             ]).map((feat, index) => {
               const emojiRegex = /([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g;
               const emojiMatch = feat.title.match(emojiRegex);

@@ -21,6 +21,9 @@ const TRAIL: Record<string, Crumb[]> = {
   "/curso-basico-en-poligrafia": [{ label: "Academia", href: "/#service-7" }, { label: "Curso Básico en Poligrafía" }],
   "/cursos-avanzados-en-poligrafia": [{ label: "Academia", href: "/#service-7" }, { label: "Cursos Avanzados en Poligrafía" }],
   "/formaciones-complementarias": [{ label: "Academia", href: "/#service-7" }, { label: "Formaciones Complementarias" }],
+  "/evaluacion-forense-de-la-credibilidad": [{ label: "Academia", href: "/#service-7" }, { label: "Formaciones Complementarias", href: "/formaciones-complementarias" }, { label: "Evaluación Forense de la Credibilidad" }],
+  "/elicitacion-conversacional": [{ label: "Academia", href: "/#service-7" }, { label: "Formaciones Complementarias", href: "/formaciones-complementarias" }, { label: "Elicitación Conversacional" }],
+  "/modelos-de-entrevista-investigativa": [{ label: "Academia", href: "/#service-7" }, { label: "Formaciones Complementarias", href: "/formaciones-complementarias" }, { label: "Modelos de Entrevista Investigativa" }],
 
   // Cursos avanzados (detalle)
   "/calificacion-graficas-analisis-datos": [{ label: "Academia", href: "/#service-7" }, { label: "Cursos Avanzados", href: "/cursos-avanzados-en-poligrafia" }, { label: "Calificación de Gráficas y Análisis de Datos" }],

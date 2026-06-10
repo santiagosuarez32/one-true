@@ -269,7 +269,7 @@ export default function ServicePageTemplate({ service, allServices }: { service:
                   <h3 className="text-lg font-bold text-[#48255A]" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3", marginBottom: "14px" }}>
                     {item.title}
                   </h3>
-                  <p className="text-[#333333] text-sm leading-relaxed font-normal flex-1" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                  <p className="text-[#333333] text-sm leading-relaxed font-normal flex-1 text-justify" style={{ fontFamily: "var(--font-montserrat), sans-serif", textAlign: "justify" }}>
                     {item.text}
                   </p>
                 </div>

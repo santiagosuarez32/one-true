@@ -304,27 +304,32 @@ export default function SistemaCalificacionESSMPage({ course }: { course: Course
             className="text-2xl sm:text-3xl md:text-[36px] font-bold text-[#48255A] mb-12"
             style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.2" }}
           >
-            Características Generales del Curso
+            ¿Qué incluye este curso?
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {(fichaTecnica && fichaTecnica.length > 0 ? fichaTecnica : [
-              { title: "💻 Modalidad", description: "Presencial o en línea" },
-              { title: "📚 ¿Qué incluye este curso?", description: "• 15 horas de formación técnica profunda.\n• 32 lecciones con enfoque en rigor científico.\n• Tablas de referencia y hojas de trabajo para análisis manual y automatizado.\n• Guía de referencia rápida del ESS-M para consulta en campo.\n• Acceso por 3 meses a contenido pregrabado de alta definición.\n• Garantía de satisfacción de 30 días.\n• Comunidad ONE TRUE: Soporte continuo en casos complejos.\n• Diploma de finalización: Respaldo de su competencia en el sistema de calificación más actual." }
+              { title: "⏱️ 15 horas de formación técnica profunda.", description: "Formación de alto nivel con enfoque en rigor científico." },
+              { title: "📚 32 lecciones con enfoque en rigor científico.", description: "Clases estructuradas y detalladas." },
+              { title: "📄 Tablas de referencia y hojas de trabajo para análisis manual y automatizado.", description: "Material listo para su uso práctico diario." },
+              { title: "🔍 Guía de referencia rápida del ESS-M para consulta en campo.", description: "Herramientas de consulta rápida." },
+              { title: "📺 Acceso por 3 meses a contenido pregrabado de alta definición.", description: "Material de estudio disponible en línea." },
+              { title: "✅ Garantía de satisfacción de 30 días.", description: "Respaldo y seguridad total en su formación." },
+              { title: "🔐 Comunidad ONE TRUE: Soporte continuo en casos complejos.", description: "Forma parte del grupo exclusivo de egresados." },
+              { title: "🎓 Diploma de finalización: Respaldo de su competencia en el sistema de calificación más actual.", description: "Certificación formal del curso completado." }
             ]).map((feat, index) => {
               const emojiRegex = /([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g;
               const emojiMatch = feat.title.match(emojiRegex);
               const icon = emojiMatch ? emojiMatch[0] : "📌";
               const titleClean = feat.title.replace(icon, "").trim();
-              const isSecondCardColSpan = (fichaTecnica && fichaTecnica.length > 0) ? "" : (index === 1 ? "md:col-span-2" : "");
 
               return (
-                <div key={index} className={`flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 ${isSecondCardColSpan}`}>
+                <div key={index} className="flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
                   <div className="text-4xl mb-3">{icon}</div>
                   <h3 className="text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
                     {titleClean}
                   </h3>
-                  <p className="text-[#525252] text-sm leading-relaxed font-light whitespace-pre-line" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                  <p className="text-[#525252] text-sm leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                     {feat.description}
                   </p>
                 </div>

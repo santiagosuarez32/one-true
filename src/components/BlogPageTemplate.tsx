@@ -14,7 +14,12 @@ export default function BlogPageTemplate({ blog, allBlogs }: { blog: Blog; allBl
 
   // Format content body to support rich text html or basic text with newlines
   const renderContent = () => {
-    if (blog.content.includes("<p>") || blog.content.includes("</h2>") || blog.content.includes("</h3>")) {
+    if (
+      blog.content.includes("<p") ||
+      blog.content.includes("<h2") ||
+      blog.content.includes("<h3") ||
+      blog.content.includes("<ul")
+    ) {
       return <div dangerouslySetInnerHTML={{ __html: blog.content }} />;
     }
     // If it's plain text, convert double newlines to paragraphs and support headers
