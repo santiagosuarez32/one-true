@@ -106,20 +106,57 @@ export type Podcast = {
   published: boolean;
 };
 
+export type CalendarIntake = {
+  id: string;
+  title: string;
+  courseId: string;
+  category: string;
+  badgeText: string;
+  badgeColor: string;
+  dateDisplay: string;
+  durationDisplay: string;
+  year: number;
+  modalityType: string;
+  durationType: string;
+  isFeatured: boolean;
+  brochureUrl: string;
+  brochureFileName?: string;
+  href: string;
+  published: boolean;
+  sortOrder: number;
+};
+
+export type Setting = {
+  key: string;
+  value: string;
+};
+
 export type DatabaseSchema = {
   services: Service[];
   courses: Course[];
   blogs: Blog[];
   podcasts: Podcast[];
+  calendarIntakes: CalendarIntake[];
+  settings: Setting[];
 };
 
 export async function getDb(): Promise<DatabaseSchema> {
+  const safeSettingsQuery = async () => {
+    try {
+      return await supabase.from("settings").select("*");
+    } catch (err: any) {
+      return { data: [], error: err };
+    }
+  };
+
   try {
-    const [servicesRes, coursesRes, blogsRes, podcastsRes] = await Promise.all([
+    const [servicesRes, coursesRes, blogsRes, podcastsRes, calendarRes, settingsRes] = await Promise.all([
       supabase.from("services").select("*"),
       supabase.from("courses").select("*"),
       supabase.from("blogs").select("*"),
-      supabase.from("podcasts").select("*")
+      supabase.from("podcasts").select("*"),
+      supabase.from("calendar_intakes").select("*"),
+      safeSettingsQuery()
     ]);
     
     // Check if we retrieved data without schema cache/missing table errors
@@ -128,11 +165,13 @@ export async function getDb(): Promise<DatabaseSchema> {
         ...c,
         template: c.template || c.pageContent?.template
       }));
-      const db = {
+      const db: DatabaseSchema = {
         services: servicesRes.data || [],
         courses: dbCourses,
         blogs: blogsRes.data || [],
-        podcasts: podcastsRes.data || []
+        podcasts: podcastsRes.data || [],
+        calendarIntakes: calendarRes.data || [],
+        settings: settingsRes.data || []
       };
       // Save locally as backup cache
       await fs.writeFile(dbPath, JSON.stringify(db, null, 2), "utf8");
@@ -152,10 +191,18 @@ export async function getDb(): Promise<DatabaseSchema> {
   // Local file fallback
   try {
     const data = await fs.readFile(dbPath, "utf8");
-    return JSON.parse(data);
+    const parsed = JSON.parse(data);
+    return {
+      services: parsed.services || [],
+      courses: parsed.courses || [],
+      blogs: parsed.blogs || [],
+      podcasts: parsed.podcasts || [],
+      calendarIntakes: parsed.calendarIntakes || [],
+      settings: parsed.settings || []
+    };
   } catch (error) {
     console.error("Error reading db.json, returning empty structure:", error);
-    return { services: [], courses: [], blogs: [], podcasts: [] };
+    return { services: [], courses: [], blogs: [], podcasts: [], calendarIntakes: [], settings: [] };
   }
 }
 
@@ -363,3 +410,77 @@ export async function deletePodcast(id: string): Promise<void> {
     console.error(`Failed to delete podcast ${id} from Supabase:`, err);
   }
 }
+
+/* ==================== Calendar Intakes API ==================== */
+export async function getCalendarIntakes(): Promise<CalendarIntake[]> {
+  const db = await getDb();
+  return (db.calendarIntakes || []).sort((a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0));
+}
+
+export async function saveCalendarIntake(intake: CalendarIntake): Promise<void> {
+  const db = await getDb();
+  const idx = db.calendarIntakes.findIndex(i => i.id === intake.id);
+  if (idx !== -1) {
+    db.calendarIntakes[idx] = intake;
+  } else {
+    db.calendarIntakes.push(intake);
+  }
+  await writeDb(db);
+
+  // Sync to Supabase
+  try {
+    const { error } = await supabase.from("calendar_intakes").upsert(intake);
+    if (error) {
+      console.error(`Supabase sync failed for calendar intake ${intake.id}:`, error.message);
+    }
+  } catch (err) {
+    console.error(`Failed to push calendar intake ${intake.id} to Supabase:`, err);
+  }
+}
+
+export async function deleteCalendarIntake(id: string): Promise<void> {
+  const db = await getDb();
+  db.calendarIntakes = db.calendarIntakes.filter(i => i.id !== id);
+  await writeDb(db);
+
+  // Sync delete
+  try {
+    const { error } = await supabase.from("calendar_intakes").delete().eq("id", id);
+    if (error) {
+      console.error(`Supabase delete failed for calendar intake ${id}:`, error.message);
+    }
+  } catch (err) {
+    console.error(`Failed to delete calendar intake ${id} from Supabase:`, err);
+  }
+}
+
+/* ==================== Settings API ==================== */
+export async function getSettings(): Promise<Setting[]> {
+  const db = await getDb();
+  return db.settings || [];
+}
+
+export async function saveSetting(key: string, value: string): Promise<void> {
+  const db = await getDb();
+  if (!db.settings) db.settings = [];
+  const idx = db.settings.findIndex(s => s.key === key);
+  if (idx !== -1) {
+    db.settings[idx].value = value;
+  } else {
+    db.settings.push({ key, value });
+  }
+  await writeDb(db);
+
+  // Sync to Supabase
+  try {
+    const { error } = await supabase
+      .from("settings")
+      .upsert({ key, value });
+    if (error) {
+      console.error(`Supabase settings sync failed for setting ${key}:`, error.message);
+    }
+  } catch (err) {
+    console.error(`Failed to push setting ${key} to Supabase:`, err);
+  }
+}
+

@@ -103,3 +103,38 @@ CREATE POLICY "Allow authenticated write access on podcasts"
     TO authenticated 
     USING (true) 
     WITH CHECK (true);
+
+-- 7. Create calendar_intakes table
+CREATE TABLE IF NOT EXISTS public.calendar_intakes (
+    id TEXT PRIMARY KEY,
+    title TEXT NOT NULL,
+    "courseId" TEXT,
+    category TEXT NOT NULL,
+    "badgeText" TEXT NOT NULL,
+    "badgeColor" TEXT NOT NULL,
+    "dateDisplay" TEXT NOT NULL,
+    "durationDisplay" TEXT NOT NULL,
+    year INTEGER NOT NULL,
+    "modalityType" TEXT NOT NULL,
+    "durationType" TEXT NOT NULL,
+    "isFeatured" BOOLEAN NOT NULL DEFAULT false,
+    "brochureUrl" TEXT,
+    "brochureFileName" TEXT,
+    href TEXT NOT NULL,
+    published BOOLEAN NOT NULL DEFAULT false,
+    "sortOrder" INTEGER NOT NULL DEFAULT 0,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
+);
+
+ALTER TABLE public.calendar_intakes ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Allow public read-only access on calendar_intakes" 
+    ON public.calendar_intakes FOR SELECT 
+    USING (true);
+
+CREATE POLICY "Allow authenticated write access on calendar_intakes" 
+    ON public.calendar_intakes FOR ALL 
+    TO authenticated 
+    USING (true) 
+    WITH CHECK (true);
+

@@ -153,7 +153,7 @@ export default function Navbar() {
     { label: "Curso Básico en Poligrafía 400 H", href: "/curso-basico-en-poligrafia" },
     { label: "Cursos Avanzados en Poligrafía", href: "/cursos-avanzados-en-poligrafia" },
     { label: "Formaciones Complementarias", href: "/formaciones-complementarias" },
-    { label: "Calendario Académico", href: "/#service-7" }
+    { label: "Calendario Académico", href: "/calendario-academico" }
   ];
 
   const aprendeList = [

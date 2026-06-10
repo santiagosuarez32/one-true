@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Manrope } from "next/font/google";
 import { supabase } from "@/lib/supabase";
-import { Service, Course, Blog, Podcast, DatabaseSchema } from "@/lib/cms";
+import { Service, Course, Blog, Podcast, CalendarIntake, DatabaseSchema } from "@/lib/cms";
 
 const manrope = Manrope({ subsets: ["latin"], weight: ["500", "600", "700", "800"] });
 
@@ -13,7 +13,7 @@ const PURPLE = "#700FA3";
 const PURPLE_HOVER = "#5C0B87";
 const ACCENT_YELLOW = "#FFC107";
 
-type Tab = "services" | "courses" | "complementarias" | "blogs" | "podcasts";
+type Tab = "services" | "courses" | "complementarias" | "blogs" | "podcasts" | "calendar" | "ebook";
 
 function prepopulateCourseDefaults(course: any) {
   if (!course) return course;
@@ -473,7 +473,10 @@ export default function AdminDashboard() {
 
   const [activeTab, setActiveTab] = useState<Tab>("services");
   const [loading, setLoading] = useState(true);
-  const [db, setDb] = useState<DatabaseSchema>({ services: [], courses: [], blogs: [], podcasts: [] });
+  const [db, setDb] = useState<DatabaseSchema>({ services: [], courses: [], blogs: [], podcasts: [], calendarIntakes: [], settings: [] });
+
+  const [ebookPdfUrl, setEbookPdfUrl] = useState("");
+  const [savingSettings, setSavingSettings] = useState(false);
 
   const [search, setSearch] = useState("");
   const [showForm, setShowForm] = useState(false);
@@ -483,6 +486,7 @@ export default function AdminDashboard() {
   const [editingCourse, setEditingCourse] = useState<Course | null>(null);
   const [editingBlog, setEditingBlog] = useState<Blog | null>(null);
   const [editingPodcast, setEditingPodcast] = useState<Podcast | null>(null);
+  const [editingCalendarIntake, setEditingCalendarIntake] = useState<CalendarIntake | null>(null);
   const [isNewEntity, setIsNewEntity] = useState(false);
 
   const [confirmDel, setConfirmDel] = useState<{ type: Tab; id: string; title: string } | null>(null);
@@ -540,6 +544,40 @@ export default function AdminDashboard() {
     if (!checking) fetchData();
   }, [checking]);
 
+  useEffect(() => {
+    if (db.settings) {
+      const found = db.settings.find(s => s.key === "ebook_pdf_url");
+      if (found) {
+        setEbookPdfUrl(found.value);
+      }
+    }
+  }, [db]);
+
+  const handleSaveEbookSettings = async () => {
+    setSavingSettings(true);
+    try {
+      const res = await fetch("/api/cms", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "settings",
+          action: "save",
+          data: { key: "ebook_pdf_url", value: ebookPdfUrl }
+        })
+      });
+      if (res.ok) {
+        showToast("ok", "Configuración de Ebook guardada correctamente");
+        fetchData();
+      } else {
+        throw new Error();
+      }
+    } catch {
+      showToast("err", "Error al guardar la configuración del Ebook.");
+    } finally {
+      setSavingSettings(false);
+    }
+  };
+
   // Lock body and html scroll when editor drawer or confirmation dialog is open
   useEffect(() => {
     if (showForm || confirmDel) {
@@ -583,12 +621,16 @@ export default function AdminDashboard() {
     const totalPodcasts = db.podcasts?.length || 0;
     const publishedPodcasts = (db.podcasts || []).filter((p) => p.published).length;
 
+    const totalCalendarIntakes = db.calendarIntakes?.length || 0;
+    const publishedCalendarIntakes = (db.calendarIntakes || []).filter((i) => i.published).length;
+
     return {
       services: { total: totalServices, published: publishedServices, drafts: totalServices - publishedServices },
       courses: { total: totalCourses, published: publishedCourses, drafts: totalCourses - publishedCourses },
       complementarias: { total: totalComplementarias, published: publishedComplementarias, drafts: totalComplementarias - publishedComplementarias },
       blogs: { total: totalBlogs, published: publishedBlogs, drafts: totalBlogs - publishedBlogs },
-      podcasts: { total: totalPodcasts, published: publishedPodcasts, drafts: totalPodcasts - publishedPodcasts }
+      podcasts: { total: totalPodcasts, published: publishedPodcasts, drafts: totalPodcasts - publishedPodcasts },
+      calendar: { total: totalCalendarIntakes, published: publishedCalendarIntakes, drafts: totalCalendarIntakes - publishedCalendarIntakes }
     };
   }, [db]);
 
@@ -611,6 +653,10 @@ export default function AdminDashboard() {
     if (activeTab === "blogs") {
       if (!q) return db.blogs;
       return db.blogs.filter((b) => b.title.toLowerCase().includes(q) || b.id.toLowerCase().includes(q));
+    }
+    if (activeTab === "calendar") {
+      if (!q) return db.calendarIntakes || [];
+      return (db.calendarIntakes || []).filter((i) => i.title.toLowerCase().includes(q) || i.id.toLowerCase().includes(q));
     }
     if (!q) return db.podcasts || [];
     return (db.podcasts || []).filter((p) => p.title.toLowerCase().includes(q) || p.id.toLowerCase().includes(q));
@@ -676,6 +722,26 @@ export default function AdminDashboard() {
         readTime: "5 min de lectura",
         content: ""
       });
+    } else if (activeTab === "calendar") {
+      setEditingCalendarIntake({
+        id: "",
+        title: "",
+        courseId: "",
+        category: "avanzado",
+        badgeText: "100% ONLINE",
+        badgeColor: "green",
+        dateDisplay: "Próximamente",
+        durationDisplay: "15 horas",
+        year: new Date().getFullYear(),
+        modalityType: "online",
+        durationType: "corto",
+        isFeatured: false,
+        brochureUrl: "",
+        brochureFileName: "",
+        href: "",
+        published: false,
+        sortOrder: ((db.calendarIntakes || []).length + 1) * 10
+      });
     } else {
       setEditingPodcast({
         id: "",
@@ -700,6 +766,8 @@ export default function AdminDashboard() {
       setEditingCourse(prepopulateCourseDefaults(JSON.parse(JSON.stringify(item))));
     } else if (activeTab === "blogs") {
       setEditingBlog(JSON.parse(JSON.stringify(item)));
+    } else if (activeTab === "calendar") {
+      setEditingCalendarIntake(JSON.parse(JSON.stringify(item)));
     } else {
       setEditingPodcast(JSON.parse(JSON.stringify(item)));
     }
@@ -708,7 +776,7 @@ export default function AdminDashboard() {
 
   const togglePublishedState = async (type: Tab, item: any) => {
     const updated = { ...item, published: !item.published };
-    const saveType = type === "complementarias" ? "courses" : type;
+    const saveType = type === "calendar" ? "calendar_intakes" : (type === "complementarias" ? "courses" : type);
     try {
       const res = await fetch("/api/cms", {
         method: "POST",
@@ -728,7 +796,7 @@ export default function AdminDashboard() {
 
   const handleConfirmDelete = async () => {
     if (!confirmDel) return;
-    const delType = confirmDel.type === "complementarias" ? "courses" : confirmDel.type;
+    const delType = confirmDel.type === "calendar" ? "calendar_intakes" : (confirmDel.type === "complementarias" ? "courses" : confirmDel.type);
     try {
       const res = await fetch("/api/cms", {
         method: "POST",
@@ -765,11 +833,13 @@ export default function AdminDashboard() {
       payload.link = `/blog/${payload.id}`;
     }
 
+    const saveType = type === "calendar" ? "calendar_intakes" : type;
+
     try {
       const res = await fetch("/api/cms", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ type, action: "save", data: payload })
+        body: JSON.stringify({ type: saveType, action: "save", data: payload })
       });
       if (res.ok) {
         showToast("ok", "Guardado correctamente");
@@ -778,6 +848,7 @@ export default function AdminDashboard() {
         setEditingCourse(null);
         setEditingBlog(null);
         setEditingPodcast(null);
+        setEditingCalendarIntake(null);
         fetchData();
       } else {
         throw new Error();
@@ -795,7 +866,8 @@ export default function AdminDashboard() {
     );
   }
 
-  const activeMetrics = activeTab === "services" ? metrics.services : activeTab === "courses" ? metrics.courses : activeTab === "complementarias" ? metrics.complementarias : activeTab === "blogs" ? metrics.blogs : metrics.podcasts;
+  const activeMetrics = activeTab === "services" ? metrics.services : activeTab === "courses" ? metrics.courses : activeTab === "complementarias" ? metrics.complementarias : activeTab === "blogs" ? metrics.blogs : activeTab === "podcasts" ? metrics.podcasts : metrics.calendar;
+
 
   return (
     <main className={`${manrope.className} min-h-screen bg-neutral-50 text-neutral-800 selection:bg-[#FFC107] selection:text-neutral-900`}>
@@ -885,127 +957,192 @@ export default function AdminDashboard() {
               <span>Podcasts</span>
               <span className="text-xs font-medium px-2 py-0.5 rounded bg-neutral-200 text-neutral-700">{db.podcasts?.length || 0}</span>
             </button>
+            <button
+              onClick={() => { setActiveTab("calendar"); setSearch(""); }}
+              className={`flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold transition-all ${
+                activeTab === "calendar" ? "bg-neutral-100 text-neutral-900 border-l-4 pl-2" : "text-neutral-600 hover:bg-neutral-50"
+              }`}
+              style={activeTab === "calendar" ? { borderLeftColor: PURPLE } : undefined}
+            >
+              <span>Calendario Académico</span>
+              <span className="text-xs font-medium px-2 py-0.5 rounded bg-neutral-200 text-neutral-700">{db.calendarIntakes?.length || 0}</span>
+            </button>
+            <button
+              onClick={() => { setActiveTab("ebook"); setSearch(""); }}
+              className={`flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold transition-all ${
+                activeTab === "ebook" ? "bg-neutral-100 text-neutral-900 border-l-4 pl-2" : "text-neutral-600 hover:bg-neutral-50"
+              }`}
+              style={activeTab === "ebook" ? { borderLeftColor: PURPLE } : undefined}
+            >
+              <span>Configuración Ebook</span>
+              <span className="text-xs font-medium px-2 py-0.5 rounded bg-neutral-200 text-neutral-700">1</span>
+            </button>
           </nav>
         </aside>
 
         {/* Dashboard Main Workspace */}
         <section className="space-y-6 lg:col-span-9">
           {/* Dashboard Metrics */}
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-            <MetricCard title={`Total ${activeTab === "services" ? "Servicios" : activeTab === "courses" ? "Cursos" : activeTab === "complementarias" ? "Formaciones" : activeTab === "blogs" ? "Artículos" : "Episodios"}`} value={activeMetrics.total} />
-            <MetricCard title="Publicados" value={activeMetrics.published} accent />
-            <MetricCard title="Borradores" value={activeMetrics.drafts} />
-          </div>
+          {activeTab !== "ebook" && (
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+              <MetricCard title={`Total ${activeTab === "services" ? "Servicios" : activeTab === "courses" ? "Cursos" : activeTab === "complementarias" ? "Formaciones" : activeTab === "blogs" ? "Artículos" : activeTab === "calendar" ? "Convocatorias" : "Episodios"}`} value={activeMetrics.total} />
+              <MetricCard title="Publicados" value={activeMetrics.published} accent />
+              <MetricCard title="Borradores" value={activeMetrics.drafts} />
+            </div>
+          )}
 
           {/* Action Row */}
-          <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <div className="relative w-full sm:w-80">
-              <input
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                placeholder="Buscar por título o identificador..."
-                className="w-full bg-white border border-neutral-300 rounded-full px-4 py-2.5 text-sm text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2 transition-all"
-                onFocus={(e) => (e.currentTarget.style.boxShadow = `0 0 0 2px ${PURPLE}22`)}
-                onBlur={(e) => (e.currentTarget.style.boxShadow = "none")}
-              />
-              {search && (
-                <button
-                  className="absolute right-3 top-1/2 -translate-y-1/2 rounded px-2 text-xs text-neutral-500 hover:bg-neutral-100"
-                  onClick={() => setSearch("")}
-                >
-                  Limpiar
-                </button>
+          {activeTab !== "ebook" && (
+            <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <div className="relative w-full sm:w-80">
+                <input
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  placeholder="Buscar por título o identificador..."
+                  className="w-full bg-white border border-neutral-300 rounded-full px-4 py-2.5 text-sm text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2 transition-all"
+                  onFocus={(e) => (e.currentTarget.style.boxShadow = `0 0 0 2px ${PURPLE}22`)}
+                  onBlur={(e) => (e.currentTarget.style.boxShadow = "none")}
+                />
+                {search && (
+                  <button
+                    className="absolute right-3 top-1/2 -translate-y-1/2 rounded px-2 text-xs text-neutral-500 hover:bg-neutral-100"
+                    onClick={() => setSearch("")}
+                  >
+                    Limpiar
+                  </button>
+                )}
+              </div>
+
+              <button
+                onClick={handleAddNew}
+                className="rounded-full px-5 py-2.5 font-semibold text-white transition-colors"
+                style={{ backgroundColor: PURPLE }}
+                onMouseEnter={(e) => ((e.currentTarget as HTMLButtonElement).style.backgroundColor = PURPLE_HOVER)}
+                onMouseLeave={(e) => ((e.currentTarget as HTMLButtonElement).style.backgroundColor = PURPLE)}
+              >
+                + Nuevo {activeTab === "services" ? "Servicio" : activeTab === "courses" ? "Curso" : activeTab === "complementarias" ? "Formación" : activeTab === "blogs" ? "Artículo" : activeTab === "calendar" ? "Convocatoria" : "Episodio"}
+              </button>
+            </div>
+          )}
+
+          {activeTab === "ebook" ? (
+            <div className="rounded-2xl border border-neutral-200 bg-white overflow-hidden shadow-sm p-6 sm:p-8 space-y-6 animate-fade-in">
+              <div>
+                <h2 className="text-lg font-extrabold text-neutral-850 font-bold" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Configuración del Ebook</h2>
+                <p className="text-xs text-neutral-500 font-semibold mt-1">Configurá el archivo PDF que se descargará automáticamente cuando los usuarios completen el formulario en la página de Ebook.</p>
+              </div>
+
+              <div className="border-t border-neutral-200 pt-6 space-y-6">
+                <div className="max-w-xl">
+                  <DocumentUploadBox
+                    label="Archivo del Ebook (PDF)"
+                    value={ebookPdfUrl}
+                    onChange={setEbookPdfUrl}
+                    pathPrefix="ebooks"
+                  />
+                </div>
+
+                <div className="flex justify-start">
+                  <button
+                    onClick={handleSaveEbookSettings}
+                    disabled={savingSettings}
+                    className="rounded-full px-6 py-2.5 font-semibold text-white transition-colors flex items-center gap-2 cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed"
+                    style={{ backgroundColor: PURPLE }}
+                    onMouseEnter={(e) => !savingSettings && ((e.currentTarget as HTMLButtonElement).style.backgroundColor = PURPLE_HOVER)}
+                    onMouseLeave={(e) => !savingSettings && ((e.currentTarget as HTMLButtonElement).style.backgroundColor = PURPLE)}
+                  >
+                    {savingSettings ? (
+                      <>
+                        <div className="h-4 w-4 animate-spin rounded-full border-2 border-white border-l-transparent" />
+                        Guardando...
+                      </>
+                    ) : (
+                      "Guardar Configuración"
+                    )}
+                  </button>
+                </div>
+              </div>
+            </div>
+          ) : (
+            /* Records Table List */
+            <div className="rounded-2xl border border-neutral-200 bg-white overflow-hidden shadow-sm">
+              <div className="flex items-center justify-between border-b border-neutral-200 px-5 py-4 bg-white">
+                <h2 className="text-base font-extrabold text-neutral-850">
+                  {activeTab === "services" ? "Servicios" : activeTab === "courses" ? "Cursos Avanzados" : activeTab === "complementarias" ? "Formaciones Complementarias" : activeTab === "blogs" ? "Blog & Artículos" : activeTab === "calendar" ? "Calendario Académico" : "Episodios de Podcast"}
+                </h2>
+                <span className="text-xs text-neutral-500 font-semibold">{filteredData.length} resultados</span>
+              </div>
+
+              {loading ? (
+                <TableSkeleton />
+              ) : filteredData.length === 0 ? (
+                <p className="px-5 py-12 text-center text-sm text-neutral-500 font-semibold">No se encontraron elementos.</p>
+              ) : (
+                <ul className="divide-y divide-neutral-100">
+                  {filteredData.map((item: any) => {
+                    const imageSrc = activeTab === "calendar" ? "/hero/slider-3.webp" : (item.image || "/blog/1.webp");
+                    const badge = item.published ? (
+                      <span className="rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-semibold text-green-700">Publicado</span>
+                    ) : (
+                      <span className="rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-semibold text-amber-700">Borrador</span>
+                    );
+
+                    return (
+                      <li key={item.id} className="flex items-center gap-4 px-5 py-4 hover:bg-neutral-50 transition-colors duration-150">
+                        {/* Thumbnail Cover */}
+                        <div className="h-12 w-16 overflow-hidden rounded bg-neutral-100 shrink-0 border border-neutral-200">
+                          <img src={imageSrc} alt="" className="h-full w-full object-cover" onError={(e) => { e.currentTarget.src = "/blog/1.webp"; }} />
+                        </div>
+
+                        {/* Details */}
+                        <div className="min-w-0 grow">
+                          <div className="flex flex-wrap items-center gap-2">
+                            <span className="font-bold text-sm text-neutral-850 truncate" title={item.title}>
+                              {item.title}
+                            </span>
+                            {badge}
+                          </div>
+                          <p className="text-xs text-neutral-500 font-semibold mt-0.5">
+                            ID: <code className="text-[#700FA3] font-mono">{item.id}</code>
+                            {activeTab === "services" && ` — Plantilla: ${item.template}`}
+                            {activeTab === "complementarias" && ` — Formación Complementaria`}
+                            {activeTab === "podcasts" && ` — Duración: ${item.duration} | Tema: ${item.topic}`}
+                            {activeTab === "calendar" && ` — Fechas: ${item.dateDisplay} | Mod: ${item.modalityType} | Orden: ${item.sortOrder}`}
+                          </p>
+                        </div>
+
+                        {/* Table Controls */}
+                        <div className="flex items-center gap-2 shrink-0">
+                          <button
+                            onClick={() => togglePublishedState(activeTab, item)}
+                            className={`rounded-full px-3 py-1 text-xs font-semibold border transition ${
+                              item.published
+                                ? "text-neutral-600 border-neutral-200 hover:bg-neutral-50"
+                                : "text-amber-700 border-amber-200 hover:bg-amber-50"
+                            }`}
+                          >
+                            {item.published ? "Ocultar" : "Publicar"}
+                          </button>
+                          <button
+                            onClick={() => handleEdit(item)}
+                            className="rounded-full border border-neutral-200 px-3 py-1 text-xs text-neutral-700 hover:bg-neutral-50 transition"
+                          >
+                            Editar
+                          </button>
+                          <button
+                            onClick={() => setConfirmDel({ type: activeTab, id: item.id, title: item.title })}
+                            className="rounded-full border border-red-200 px-3 py-1 text-xs text-red-700 hover:bg-red-50 transition"
+                          >
+                            Borrar
+                          </button>
+                        </div>
+                      </li>
+                    );
+                  })}
+                </ul>
               )}
             </div>
-
-            <button
-              onClick={handleAddNew}
-              className="rounded-full px-5 py-2.5 font-semibold text-white transition-colors"
-              style={{ backgroundColor: PURPLE }}
-              onMouseEnter={(e) => ((e.currentTarget as HTMLButtonElement).style.backgroundColor = PURPLE_HOVER)}
-              onMouseLeave={(e) => ((e.currentTarget as HTMLButtonElement).style.backgroundColor = PURPLE)}
-            >
-              + Nuevo {activeTab === "services" ? "Servicio" : activeTab === "courses" ? "Curso" : activeTab === "complementarias" ? "Formación" : activeTab === "blogs" ? "Artículo" : "Episodio"}
-            </button>
-          </div>
-
-          {/* Records Table List */}
-          <div className="rounded-2xl border border-neutral-200 bg-white overflow-hidden shadow-sm">
-            <div className="flex items-center justify-between border-b border-neutral-200 px-5 py-4 bg-white">
-              <h2 className="text-base font-extrabold text-neutral-850">
-                {activeTab === "services" ? "Servicios" : activeTab === "courses" ? "Cursos Avanzados" : activeTab === "complementarias" ? "Formaciones Complementarias" : activeTab === "blogs" ? "Blog & Artículos" : "Episodios de Podcast"}
-              </h2>
-              <span className="text-xs text-neutral-500 font-semibold">{filteredData.length} resultados</span>
-            </div>
-
-            {loading ? (
-              <TableSkeleton />
-            ) : filteredData.length === 0 ? (
-              <p className="px-5 py-12 text-center text-sm text-neutral-500 font-semibold">No se encontraron elementos.</p>
-            ) : (
-              <ul className="divide-y divide-neutral-100">
-                {filteredData.map((item: any) => {
-                  const imageSrc = item.image || "/blog/1.webp";
-                  const badge = item.published ? (
-                    <span className="rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-semibold text-green-700">Publicado</span>
-                  ) : (
-                    <span className="rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-semibold text-amber-700">Borrador</span>
-                  );
-
-                  return (
-                    <li key={item.id} className="flex items-center gap-4 px-5 py-4 hover:bg-neutral-50 transition-colors duration-150">
-                      {/* Thumbnail Cover */}
-                      <div className="h-12 w-16 overflow-hidden rounded bg-neutral-100 shrink-0 border border-neutral-200">
-                        <img src={imageSrc} alt="" className="h-full w-full object-cover" onError={(e) => { e.currentTarget.src = "/blog/1.webp"; }} />
-                      </div>
-
-                      {/* Details */}
-                      <div className="min-w-0 grow">
-                        <div className="flex flex-wrap items-center gap-2">
-                          <span className="font-bold text-sm text-neutral-850 truncate" title={item.title}>
-                            {item.title}
-                          </span>
-                          {badge}
-                        </div>
-                        <p className="text-xs text-neutral-500 font-semibold mt-0.5">
-                          ID: <code className="text-[#700FA3] font-mono">{item.id}</code>
-                          {activeTab === "services" && ` — Plantilla: ${item.template}`}
-                          {activeTab === "complementarias" && ` — Formación Complementaria`}
-                          {activeTab === "podcasts" && ` — Duración: ${item.duration} | Tema: ${item.topic}`}
-                        </p>
-                      </div>
-
-                      {/* Table Controls */}
-                      <div className="flex items-center gap-2 shrink-0">
-                        <button
-                          onClick={() => togglePublishedState(activeTab, item)}
-                          className={`rounded-full px-3 py-1 text-xs font-semibold border transition ${
-                            item.published
-                              ? "text-neutral-600 border-neutral-200 hover:bg-neutral-50"
-                              : "text-amber-700 border-amber-200 hover:bg-amber-50"
-                          }`}
-                        >
-                          {item.published ? "Ocultar" : "Publicar"}
-                        </button>
-                        <button
-                          onClick={() => handleEdit(item)}
-                          className="rounded-full border border-neutral-200 px-3 py-1 text-xs text-neutral-700 hover:bg-neutral-50 transition"
-                        >
-                          Editar
-                        </button>
-                        <button
-                          onClick={() => setConfirmDel({ type: activeTab, id: item.id, title: item.title })}
-                          className="rounded-full border border-red-200 px-3 py-1 text-xs text-red-700 hover:bg-red-50 transition"
-                        >
-                          Borrar
-                        </button>
-                      </div>
-                    </li>
-                  );
-                })}
-              </ul>
-            )}
-          </div>
+          )}
         </section>
       </div>
 
@@ -1014,13 +1151,16 @@ export default function AdminDashboard() {
         <SideEditorForm
           type={activeTab}
           isNew={isNewEntity}
-          data={activeTab === "services" ? editingService : (activeTab === "courses" || activeTab === "complementarias") ? editingCourse : activeTab === "blogs" ? editingBlog : editingPodcast}
+          data={activeTab === "services" ? editingService : (activeTab === "courses" || activeTab === "complementarias") ? editingCourse : activeTab === "blogs" ? editingBlog : activeTab === "calendar" ? editingCalendarIntake : activeTab === "podcasts" ? editingPodcast : null}
+          courses={db.courses}
+          services={db.services}
           onClose={() => {
             setShowForm(false);
             setEditingService(null);
             setEditingCourse(null);
             setEditingBlog(null);
             setEditingPodcast(null);
+            setEditingCalendarIntake(null);
           }}
           onSave={(payload) => {
             const saveTab = activeTab === "complementarias" ? "courses" as Tab : activeTab;
@@ -1181,13 +1321,17 @@ function SideEditorForm({
   isNew,
   data,
   onClose,
-  onSave
+  onSave,
+  courses = [],
+  services = []
 }: {
   type: Tab;
   isNew: boolean;
   data: any;
   onClose: () => void;
   onSave: (payload: any) => void;
+  courses?: Course[];
+  services?: Service[];
 }) {
   const [form, setForm] = useState<any>(data);
 
@@ -1281,7 +1425,7 @@ function SideEditorForm({
         <div className="mb-6 flex items-center justify-between border-b border-neutral-200 pb-4 shrink-0">
           <div>
             <h3 className="text-lg font-extrabold text-neutral-850">
-              {isNew ? "Crear" : "Editar"} {type === "services" ? "Servicio" : type === "courses" ? "Curso" : type === "complementarias" ? "Formación Complementaria" : type === "blogs" ? "Artículo" : type === "podcasts" ? "Episodio" : "Elemento"}
+              {isNew ? "Crear" : "Editar"} {type === "services" ? "Servicio" : type === "courses" ? "Curso" : type === "complementarias" ? "Formación Complementaria" : type === "blogs" ? "Artículo" : type === "podcasts" ? "Episodio" : type === "calendar" ? "Convocatoria" : "Elemento"}
             </h3>
             <p className="text-xs text-neutral-500 font-semibold mt-0.5">Complete todos los detalles del contenido editable</p>
           </div>
@@ -1321,7 +1465,7 @@ function SideEditorForm({
             </div>
 
             {/* Description (List card) */}
-            {type !== "blogs" && (
+            {type !== "blogs" && type !== "calendar" && (
               <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
                 {type === "podcasts" ? "Descripción del Episodio" : "Descripción en listado de Inicio"}
                 <textarea
@@ -1424,12 +1568,14 @@ function SideEditorForm({
             </div>
 
             {/* Cover Image URL & Drag-Drop Uploader */}
-            <ImageUploadBox
-              label="Imagen representativa (URL de imagen)"
-              value={form.image || ""}
-              onChange={(val) => updateField("image", val)}
-              pathPrefix={type}
-            />
+            {type !== "calendar" && (
+              <ImageUploadBox
+                label="Imagen representativa (URL de imagen)"
+                value={form.image || ""}
+                onChange={(val) => updateField("image", val)}
+                pathPrefix={type}
+              />
+            )}
 
             {/* SERVICES FIELDS SECTION */}
             {type === "services" && (
@@ -2556,6 +2702,201 @@ function SideEditorForm({
               </div>
             )}
 
+            {/* CALENDAR FIELDS SECTION */}
+            {type === "calendar" && (
+              <div className="border-t border-neutral-200 pt-6 space-y-6">
+                <h4 className="text-xs font-bold text-[#700FA3] uppercase tracking-wider">Detalles de la Convocatoria</h4>
+
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                    Curso Vinculado (courseId)
+                    <select
+                      value={form.courseId || ""}
+                      onChange={(e) => {
+                        const val = e.target.value;
+                        const matched = courses.find(c => c.id === val) || services.find(s => s.id === val);
+                        setForm((prev: any) => ({
+                          ...prev,
+                          courseId: val,
+                          href: val ? `/${val}` : "",
+                          title: matched ? matched.title : prev.title
+                        }));
+                      }}
+                      className="mt-1.5 w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 outline-none focus:ring-2"
+                    >
+                      <option value="">-- No vincular a un curso --</option>
+                      {[...courses, ...services].map((c) => (
+                        <option key={c.id} value={c.id}>
+                          {c.title} ({c.id})
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+
+                  <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                    Enlace de Destino (href)
+                    <input
+                      value={form.href || ""}
+                      onChange={(e) => updateField("href", e.target.value)}
+                      placeholder="ej: /curso-basico-en-poligrafia"
+                      className="mt-1.5 w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2 font-mono"
+                    />
+                  </label>
+                </div>
+
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                    Categoría del Calendario
+                    <select
+                      value={form.category || "avanzado"}
+                      onChange={(e) => updateField("category", e.target.value)}
+                      className="mt-1.5 w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 outline-none focus:ring-2"
+                    >
+                      <option value="certificacion">Certificación</option>
+                      <option value="avanzado">Avanzado</option>
+                      <option value="complementaria">Complementaria</option>
+                    </select>
+                  </label>
+
+                  <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                    Orden de aparición (Sort Order)
+                    <input
+                      type="number"
+                      value={form.sortOrder ?? 0}
+                      onChange={(e) => updateField("sortOrder", parseInt(e.target.value) || 0)}
+                      className="mt-1.5 w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 outline-none focus:ring-2"
+                    />
+                  </label>
+                </div>
+
+                <div className="grid gap-4 sm:grid-cols-3">
+                  <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                    Modalidad
+                    <select
+                      value={form.modalityType || "online"}
+                      onChange={(e) => updateField("modalityType", e.target.value)}
+                      className="mt-1.5 w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 outline-none focus:ring-2"
+                    >
+                      <option value="online">Online</option>
+                      <option value="presencial">Presencial</option>
+                      <option value="hibrido">Híbrido</option>
+                    </select>
+                  </label>
+
+                  <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                    Tipo de duración
+                    <select
+                      value={form.durationType || "corto"}
+                      onChange={(e) => updateField("durationType", e.target.value)}
+                      className="mt-1.5 w-full bg-white border border-neutral-355 rounded-lg px-3 py-2 text-xs text-neutral-800 outline-none focus:ring-2"
+                    >
+                      <option value="corto">Corto</option>
+                      <option value="certificacion">Certificación</option>
+                    </select>
+                  </label>
+
+                  <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                    Año
+                    <select
+                      value={form.year ?? 2026}
+                      onChange={(e) => updateField("year", parseInt(e.target.value) || 2026)}
+                      className="mt-1.5 w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 outline-none focus:ring-2"
+                    >
+                      <option value={2026}>2026</option>
+                      <option value={2027}>2027</option>
+                      <option value={2028}>2028</option>
+                    </select>
+                  </label>
+                </div>
+
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                    Texto del Badge (ej: "100% ONLINE")
+                    <input
+                      value={form.badgeText || ""}
+                      onChange={(e) => updateField("badgeText", e.target.value)}
+                      placeholder="ej: CERTIFICACIÓN COMPLETA - 100% PRESENCIAL"
+                      className="mt-1.5 w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2"
+                    />
+                  </label>
+
+                  <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                    Color del Badge
+                    <select
+                      value={form.badgeColor || "green"}
+                      onChange={(e) => updateField("badgeColor", e.target.value)}
+                      className="mt-1.5 w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 outline-none focus:ring-2"
+                    >
+                      <option value="green">Amarillo (Morado sobre Amarillo)</option>
+                      <option value="blue">Morado (Blanco sobre Morado)</option>
+                    </select>
+                  </label>
+                </div>
+
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                    Texto de Fecha (dateDisplay)
+                    <input
+                      value={form.dateDisplay || ""}
+                      onChange={(e) => updateField("dateDisplay", e.target.value)}
+                      placeholder="ej: Fechas: Feb - Abr 2027"
+                      className="mt-1.5 w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2"
+                    />
+                  </label>
+
+                  <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                    Texto de Duración (durationDisplay)
+                    <input
+                      value={form.durationDisplay || ""}
+                      onChange={(e) => updateField("durationDisplay", e.target.value)}
+                      placeholder="ej: Duración: 400 horas"
+                      className="mt-1.5 w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2"
+                    />
+                  </label>
+                </div>
+
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <DocumentUploadBox
+                    label="Archivo del Brochure (PDF o Word)"
+                    value={form.brochureUrl || ""}
+                    onChange={(val) => updateField("brochureUrl", val)}
+                    pathPrefix="brochures"
+                  />
+
+                  <div className="space-y-4">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                      Nombre del archivo descargado (opcional)
+                      <input
+                        value={form.brochureFileName || ""}
+                        onChange={(e) => updateField("brochureFileName", e.target.value)}
+                        placeholder="ej: Programa-Completo-Poligrafia.pdf"
+                        className="mt-1.5 w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2 font-semibold"
+                        onFocus={(e) => (e.currentTarget.style.boxShadow = `0 0 0 2px #700FA322`)}
+                        onBlur={(e) => (e.currentTarget.style.boxShadow = "none")}
+                      />
+                      <span className="mt-1 block text-[10px] text-neutral-450 normal-case font-medium leading-normal">
+                        Si se deja vacío, se descargará usando el título de la convocatoria.
+                      </span>
+                    </label>
+
+                    <div className="flex items-center justify-between rounded-xl border border-neutral-300 bg-neutral-50 px-4 py-3">
+                      <div>
+                        <span className="block text-xs font-bold uppercase tracking-wider text-neutral-600">Destacado (Featured)</span>
+                        <span className="text-[10px] text-neutral-500 font-semibold">Borde amarillo en listado</span>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => updateField("isFeatured", !form.isFeatured)}
+                        className={`relative h-6 w-11 rounded-full transition-colors ${form.isFeatured ? "bg-green-500" : "bg-neutral-300"}`}
+                      >
+                        <span className={`absolute top-0.5 left-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform ${form.isFeatured ? "translate-x-5" : "translate-x-0"}`} />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* PODCASTS FIELDS SECTION */}
             {type === "podcasts" && (
               <div className="border-t border-neutral-200 pt-6 space-y-6">
@@ -2848,6 +3189,166 @@ function ImageUploadBox({
             </svg>
             <span className="text-xs font-semibold text-neutral-500 group-hover:text-neutral-700">
               Subir desde tu computadora
+            </span>
+          </div>
+        )}
+      </div>
+      {error && <p className="text-[10px] font-bold text-red-650">{error}</p>}
+    </div>
+  );
+}
+
+/* --- Dashed Document/Brochure Uploader Box Component --- */
+function DocumentUploadBox({
+  label,
+  value,
+  onChange,
+  pathPrefix = "brochures"
+}: {
+  label: string;
+  value: string;
+  onChange: (val: string) => void;
+  pathPrefix?: string;
+}) {
+  const [uploading, setUploading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files;
+    if (!files || files.length === 0) return;
+    await processUpload(files[0]);
+  };
+
+  const processUpload = async (file: File) => {
+    const isDoc = file.type === "application/pdf" || 
+                  file.type === "application/msword" || 
+                  file.type === "application/vnd.openxmlformats-officedocument.wordprocessingml.document" ||
+                  file.name.endsWith(".pdf") ||
+                  file.name.endsWith(".doc") ||
+                  file.name.endsWith(".docx");
+
+    if (!isDoc) {
+      setError("El archivo seleccionado debe ser un PDF o documento Word (.doc, .docx).");
+      return;
+    }
+
+    setUploading(true);
+    setError(null);
+    try {
+      const filename = file.name.toLowerCase().replace(/[^a-z0-9.]/g, "-");
+      const rand = Math.random().toString(36).substring(2, 8);
+      const filePath = `${pathPrefix}/${Date.now()}-${rand}-${filename}`;
+
+      const { error: uploadError } = await supabase.storage
+        .from("imagenes")
+        .upload(filePath, file, {
+          contentType: file.type || "application/octet-stream",
+          cacheControl: "3600",
+          upsert: false
+        });
+
+      if (uploadError) {
+        throw uploadError;
+      }
+
+      const { data } = supabase.storage
+        .from("imagenes")
+        .getPublicUrl(filePath);
+
+      onChange(data.publicUrl);
+    } catch (err: any) {
+      console.error("Document upload failed:", err);
+      setError(err.message || "Error al subir el documento.");
+    } finally {
+      setUploading(false);
+    }
+  };
+
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+  };
+
+  const handleDrop = async (e: React.DragEvent) => {
+    e.preventDefault();
+    const files = e.dataTransfer.files;
+    if (files && files.length > 0) {
+      await processUpload(files[0]);
+    }
+  };
+
+  return (
+    <div className="space-y-1.5 w-full">
+      <div className="flex justify-between items-baseline">
+        <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+          {label}
+        </label>
+        {value && (
+          <button
+            type="button"
+            onClick={() => onChange("")}
+            className="text-[10px] font-bold text-red-600 hover:underline"
+          >
+            Quitar
+          </button>
+        )}
+      </div>
+
+      {/* Input URL */}
+      <input
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        placeholder="ej: /brochures/documento.pdf o pegar URL absoluta"
+        className="w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2 font-mono"
+        onFocus={(e) => (e.currentTarget.style.boxShadow = `0 0 0 2px #700FA322`)}
+        onBlur={(e) => (e.currentTarget.style.boxShadow = "none")}
+      />
+
+      {/* Dashed Drag/Upload Box */}
+      <div
+        onDragOver={handleDragOver}
+        onDrop={handleDrop}
+        onClick={() => fileInputRef.current?.click()}
+        className="relative flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-neutral-350 bg-neutral-50 px-4 py-5 hover:bg-neutral-100 hover:border-neutral-400 transition cursor-pointer group"
+      >
+        <input
+          type="file"
+          ref={fileInputRef}
+          onChange={handleFileChange}
+          accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          className="hidden"
+        />
+
+        {uploading ? (
+          <div className="flex items-center gap-2">
+            <div className="h-4 w-4 animate-spin rounded-full border-2 border-neutral-400 border-l-transparent" />
+            <span className="text-xs font-semibold text-neutral-500">Subiendo archivo...</span>
+          </div>
+        ) : value ? (
+          <div className="flex flex-col items-center gap-1.5">
+            <span className="text-xs font-semibold text-green-700 bg-green-50 px-3 py-1 rounded-full border border-green-200 truncate max-w-[250px]" title={value}>
+              📄 Archivo Cargado
+            </span>
+            <span className="text-[10px] font-bold text-neutral-400 group-hover:text-neutral-600">Hacé clic para reemplazar el documento</span>
+          </div>
+        ) : (
+          <div className="flex flex-col items-center gap-1">
+            <svg
+              className="mx-auto h-7 w-7 text-neutral-400 group-hover:text-neutral-500 transition-colors"
+              stroke="currentColor"
+              fill="none"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+              />
+            </svg>
+            <span className="text-xs font-semibold text-neutral-500 group-hover:text-neutral-700">
+              Subir PDF o Word desde tu computadora
             </span>
           </div>
         )}

@@ -9,6 +9,9 @@ import {
   deleteBlog,
   savePodcast,
   deletePodcast,
+  saveCalendarIntake,
+  deleteCalendarIntake,
+  saveSetting,
 } from "@/lib/cms";
 import { revalidatePath } from "next/cache";
 
@@ -36,6 +39,7 @@ export async function POST(request: Request) {
     if (type === "courses") type = "course";
     if (type === "blogs") type = "blog";
     if (type === "podcasts") type = "podcast";
+    if (type === "calendar_intakes") type = "calendar_intake";
 
     if (!type || !action) {
       return NextResponse.json({ error: "Missing type or action" }, { status: 400 });
@@ -70,6 +74,20 @@ export async function POST(request: Request) {
         await savePodcast(data);
       } else if (action === "delete") {
         await deletePodcast(id);
+      } else {
+        return NextResponse.json({ error: "Invalid action" }, { status: 400 });
+      }
+    } else if (type === "calendar_intake") {
+      if (action === "save") {
+        await saveCalendarIntake(data);
+      } else if (action === "delete") {
+        await deleteCalendarIntake(id);
+      } else {
+        return NextResponse.json({ error: "Invalid action" }, { status: 400 });
+      }
+    } else if (type === "settings") {
+      if (action === "save") {
+        await saveSetting(data.key, data.value);
       } else {
         return NextResponse.json({ error: "Invalid action" }, { status: 400 });
       }
