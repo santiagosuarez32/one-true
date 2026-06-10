@@ -39,6 +39,9 @@ export type Service = {
     showOtherSolutions?: boolean;
     showFaqs?: boolean;
   };
+  seoTitle?: string;
+  seoDescription?: string;
+  seoKeywords?: string;
 };
 
 export type FocusArea = {
@@ -81,6 +84,9 @@ export type Course = {
     contactWhatsappText?: string;
     template?: string;
   };
+  seoTitle?: string;
+  seoDescription?: string;
+  seoKeywords?: string;
 };
 
 export type Blog = {
@@ -92,6 +98,9 @@ export type Blog = {
   publishDate: string;
   readTime: string;
   content: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  seoKeywords?: string;
 };
 
 export type Podcast = {
@@ -104,6 +113,7 @@ export type Podcast = {
   date: string;
   topic: string;
   published: boolean;
+  sortOrder: number;
 };
 
 export type CalendarIntake = {
@@ -366,7 +376,7 @@ export async function deleteBlog(id: string): Promise<void> {
 /* ==================== Podcasts API ==================== */
 export async function getPodcasts(): Promise<Podcast[]> {
   const db = await getDb();
-  return db.podcasts || [];
+  return (db.podcasts || []).sort((a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0));
 }
 
 export async function getPodcastBySlug(slug: string): Promise<Podcast | undefined> {
@@ -530,7 +540,13 @@ export async function rotateAutoBackups(): Promise<void> {
     if (autoBackups.length > 15) {
       const toDelete = autoBackups.slice(0, autoBackups.length - 15);
       for (const file of toDelete) {
-        await fs.unlink(file.path);
+        try {
+          await fs.unlink(file.path);
+        } catch (unlinkErr: any) {
+          if (unlinkErr.code !== "ENOENT") {
+            throw unlinkErr;
+          }
+        }
       }
     }
   } catch (err) {

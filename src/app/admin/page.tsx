@@ -34,11 +34,11 @@ function prepopulateCourseDefaults(course: any) {
     };
   }
 
-  const template = course.template || (
+  const template = course.template || course.pageContent?.template || (
     course.id === "curso-avanzado-tecnicas-poligraficas" || course.id === "tecnicas-poligraficas" ? "tecnicas" :
     course.id === "curso-basico-de-poligrafia" || course.id === "curso-basico-en-poligrafia" ? "basico" :
     course.id === "entrevista-pretest-y-postest" || course.id === "entrevista-pretest" ? "pretest" :
-    course.id === "calificacion-de-graficas" || course.id === "calificacion-graficas-analisis-datos" ? "graficas" :
+    course.id === "calificacion-de-graficas" || course.id === "calificacion-graficas-analisis-datos" || course.id === "evaluacion-forense-de-la-credibilidad" || course.id === "elicitacion-conversacional" || course.id === "modelos-de-entrevista-investigativa" ? "graficas" :
     course.id === "sistema-de-calificacion-ess-m" || course.id === "sistema-calificacion-ess-m" ? "ess-m" :
     course.id === "control-de-calidad-en-poligrafia" ? "control-calidad" :
     "standard"
@@ -294,6 +294,39 @@ function prepopulateCourseDefaults(course: any) {
           iconViewBox: "0 0 84 84",
           iconPaths: [
             "M57.58 75.012a1.23 1.23 0 0 0-1.23 1.23v5.297h-8.8v-2.084a1.23 1.23 0 1 0-2.461 0v2.084h-7.203l1.996-1.996a8.02 8.02 0 0 0 0-11.417c-2.83-2.83-7.314-3.108-10.467-.8a8.13 8.13 0 0 0-10.467.8 8.02 8.02 0 0 0 0 11.417l1.996 1.996H13.73v-2.084a1.231 1.231 0 1 0-2.461 0v2.084H2.46v-5.297a1.23 1.23 0 1 0-2.461 0v6.527A1.23 1.23 0 0 0 1.229 84h56.35a1.23 1.23 0 0 0 1.23-1.231v-6.527a1.23 1.23 0 0 0-1.23-1.23zm-36.9 2.792c-1.06-1.06-1.644-2.47-1.644-3.968s.584-2.908 1.644-3.968a5.64 5.64 0 0 1 7.871-.062 1.23 1.23 0 0 0 1.712 0c2.187-2.12 5.718-2.1 7.87.062 1.06 1.06 1.644 2.47 1.644 3.968s-.584 2.908-1.644 3.968l-3.736 3.736h-9.982l-3.736-3.736zm28.604-26.03l-12.848-3.426V43.08c4.156-2.317 7.06-6.62 7.42-11.615h.465c2.872 0 5.208-2.336 5.208-5.208 0-1.33-.502-2.545-1.326-3.467V11.837a7.87 7.87 0 0 0-7.86-7.86h-.795C39.267 1.738 37.353 0 35.04 0h-9.944a14.51 14.51 0 0 0-14.489 14.489v8.3c-.824.922-1.326 2.136-1.326 3.467 0 2.872 2.336 5.208 5.208 5.208h.465c.36 4.996 3.264 9.298 7.42 11.615v5.268l-12.85 3.426A12.85 12.85 0 0 0 0 64.171v6.314a1.23 1.23 0 1 0 2.461 0V64.17c0-4.7 3.166-8.812 7.698-10.02l7.267-1.938c1.326 5.453 6.248 9.413 11.978 9.413s10.652-3.96 11.978-9.413l7.267 1.938c4.533 1.2 7.7 5.33 7.7 10.02v6.313a1.231 1.231 0 1 0 2.461 0V64.17a12.85 12.85 0 0 0-9.525-12.398zm-4.964-22.77h-.427V23.5h.427a2.75 2.75 0 0 1 2.747 2.747 2.75 2.75 0 0 1-2.747 2.747zm1.42-17.165v9.4a5.19 5.19 0 0 0-1.421-.199H43.17l-3.588-3.588V6.438h.758a5.41 5.41 0 0 1 5.4 5.4zm-34 14.42a2.75 2.75 0 0 1 2.747-2.747h.427v5.494h-.427a2.75 2.75 0 0 1-2.747-2.747zm5.635 4.158V23.5H21.6a1.231 1.231 0 1 0 0-2.461h-7.1a5.19 5.19 0 0 0-1.421.199V14.5c0-6.632 5.396-12.028 12.028-12.028h9.944c1.15 0 2.084.935 2.084 2.084V17.46l-2.007 2.007a5.36 5.36 0 0 1-3.817 1.58h-3.96a1.23 1.23 0 1 0 0 2.461h3.96a7.81 7.81 0 0 0 5.558-2.302l1.497-1.497 3.078 3.078v7.626c0 6.632-5.396 12.028-12.028 12.028s-12.028-5.396-12.028-12.028zm12.028 14.5a14.43 14.43 0 0 0 4.57-.739v5.128c0 2.52-2.05 4.57-4.57 4.57s-4.57-2.05-4.57-4.57v-5.128a14.43 14.43 0 0 0 4.57.739zm0 14.263a9.89 9.89 0 0 1-9.601-7.587l2.745-.732c.7 3.13 3.513 5.476 6.855 5.476s6.146-2.345 6.856-5.476l2.745.732a9.89 9.89 0 0 1-9.601 7.587zm38.45-56.4c-8.903 0-16.146 7.243-16.146 16.146a16.21 16.21 0 0 0 4.485 11.166l-1.885 4.06a1.23 1.23 0 0 0 1.634 1.635l4.942-2.294a16.2 1.23 0 0 0 6.97 1.58A16.17 16.17 0 0 0 84 18.916C84 10.012 76.756 2.77 67.853 2.77zm0 29.83a13.71 13.71 0 0 1-6.375-1.573A1.23 1.23 0 0 0 60.386 31l-2.43 1.128.833-1.795a1.23 1.23 0 0 0-.276-1.417 13.55 13.55 0 0 1-4.345-10.001c0-7.546 6.14-13.685 13.685-13.685S81.54 11.37 81.54 18.916 75.4 32.6 67.853 32.6zm8.31-20.046c-2.242-2.242-5.767-2.505-8.308-.77-2.54-1.734-6.066-1.47-8.308.77a6.49 6.49 0 0 0-1.914 4.62 6.49 6.49 0 0 0 1.914 4.62l7.438 7.438c.24.24.555.36.87.36s.63-.12.87-.36l7.438-7.438a6.54 6.54 0 0 0 0-9.24zm-1.74 7.5l-6.568 6.568-6.568-6.568c-.77-.77-1.193-1.792-1.193-2.88a4.05 4.05 0 0 1 1.193-2.88A4.06 4.06 0 0 1 67 14.249a1.23 1.23 0 0 0 1.713 0 4.09 4.09 0 0 1 5.712.045 4.08 4.08 0 0 1 0 5.76z"
+          ]
+        }
+      ];
+    }
+    if (!pc.customCards || pc.customCards.length === 0) {
+      pc.customCards = [
+        {
+          title: "Fundamentos y estándares",
+          description: "Domina los principios de las prácticas internacionales estandarizadas en entrevistas pretest y aprende los fundamentos metodológicos que garantizan la confiabilidad técnica de la evaluación.",
+          icon: "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
+          items: [
+            "Estándares de práctica Internacionales y entrevista pretest.",
+            "Principios metodológicos de la entrevista pretest."
+          ]
+        },
+        {
+          title: "Preparación y desarrollo del pretest",
+          description: "Aprende cada fase de preparación previa al examen y domina el paso a paso del protocolo de entrevista pretest, asegurando consistencia y validez en tus evaluaciones poligráficas.",
+          icon: "/icons/Browser-Hand--Streamline-Ultimate.webp",
+          items: [
+            "La fase de preparación como antesala del pretest.",
+            "El paso a paso de la entrevista pretest."
+          ]
+        },
+        {
+          title: "Evaluaciones diagnósticas y exploratorias",
+          description: "Especialízate en el análisis de evaluaciones poligráficas diagnósticas y exploratorias, incluyendo el protocolo de preguntas específicas para casos de preempleo, rutina y temas investigativos.",
+          icon: "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
+          items: [
+            "Proceso metodológico del pretest en evaluaciones poligráficas diagnósticas (Específicas).",
+            "Desarrollo de preguntas para evaluaciones poligráficas diagnósticas (Específicas).",
+            "Proceso metodológico del pretest en evaluaciones poligráficas exploratorias (Preempleo - Rutina).",
+            "Desarrollo de preguntas para evaluaciones poligráficas Exploratorias (Preempleo - Rutina)."
           ]
         }
       ];
@@ -847,8 +880,8 @@ export default function AdminDashboard() {
       if (!q) return db.calendarIntakes || [];
       return (db.calendarIntakes || []).filter((i) => i.title.toLowerCase().includes(q) || i.id.toLowerCase().includes(q));
     }
-    if (!q) return db.podcasts || [];
-    return (db.podcasts || []).filter((p) => p.title.toLowerCase().includes(q) || p.id.toLowerCase().includes(q));
+    if (!q) return (db.podcasts || []).sort((a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0));
+    return (db.podcasts || []).filter((p) => p.title.toLowerCase().includes(q) || p.id.toLowerCase().includes(q)).sort((a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0));
   }, [db, activeTab, search]);
 
   const handleAddNew = () => {
@@ -941,7 +974,8 @@ export default function AdminDashboard() {
         duration: "30 min",
         date: new Date().toLocaleDateString("es-ES", { day: "numeric", month: "long", year: "numeric" }),
         topic: "General",
-        published: false
+        published: false,
+        sortOrder: ((db.podcasts || []).length + 1) * 10
       });
     }
     setShowForm(true);
@@ -1469,7 +1503,7 @@ export default function AdminDashboard() {
                 <p className="px-5 py-12 text-center text-sm text-neutral-500 font-semibold">No se encontraron elementos.</p>
               ) : (
                 <ul className="divide-y divide-neutral-100">
-                  {filteredData.map((item: any) => {
+                  {filteredData.map((item: any, listIdx: number) => {
                     const imageSrc = activeTab === "calendar" ? "/hero/slider-3.webp" : (item.image || "/blog/1.webp");
                     const badge = item.published ? (
                       <span className="rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-semibold text-green-700">Publicado</span>
@@ -1477,8 +1511,96 @@ export default function AdminDashboard() {
                       <span className="rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-semibold text-amber-700">Borrador</span>
                     );
 
+                    const canReorder = activeTab === "podcasts" || activeTab === "calendar";
+
+                    const handleSwapOrder = async (direction: "up" | "down") => {
+                      const targetIdx = direction === "up" ? listIdx - 1 : listIdx + 1;
+                      if (targetIdx < 0 || targetIdx >= filteredData.length) return;
+
+                      const saveType = activeTab === "calendar" ? "calendar_intakes" : activeTab;
+                      
+                      // Check if any items need sortOrder initialization (i.e. they have undefined/0/null sortOrder or duplicate sortOrder)
+                      const hasUndefinedOrZero = filteredData.some((x: any) => !x.sortOrder);
+                      const uniqueOrders = new Set(filteredData.map((x: any) => x.sortOrder ?? 0));
+                      const needsInit = hasUndefinedOrZero || uniqueOrders.size < filteredData.length;
+
+                      try {
+                        if (needsInit) {
+                          // Create deep clone of filteredData to assign fresh sequential sortOrders
+                          const initializedData = filteredData.map((x: any, idx: number) => ({
+                            ...x,
+                            sortOrder: (idx + 1) * 10
+                          }));
+
+                          // Swap the target items in the initialized list
+                          const temp = initializedData[listIdx].sortOrder;
+                          initializedData[listIdx].sortOrder = initializedData[targetIdx].sortOrder;
+                          initializedData[targetIdx].sortOrder = temp;
+
+                          // Save all of them to make sure order is normalized and cached
+                          await Promise.all(
+                            initializedData.map((x: any) =>
+                              fetch("/api/cms", {
+                                method: "POST",
+                                headers: { "Content-Type": "application/json" },
+                                body: JSON.stringify({ type: saveType, action: "save", data: x })
+                              })
+                            )
+                          );
+                        } else {
+                          // Standard swap of only two items
+                          const currentItem = filteredData[listIdx] as any;
+                          const targetItem = filteredData[targetIdx] as any;
+
+                          const currentOrder = currentItem.sortOrder;
+                          const targetOrder = targetItem.sortOrder;
+
+                          const updatedCurrent = { ...currentItem, sortOrder: targetOrder };
+                          const updatedTarget = { ...targetItem, sortOrder: currentOrder };
+
+                          await Promise.all([
+                            fetch("/api/cms", {
+                              method: "POST",
+                              headers: { "Content-Type": "application/json" },
+                              body: JSON.stringify({ type: saveType, action: "save", data: updatedCurrent })
+                            }),
+                            fetch("/api/cms", {
+                              method: "POST",
+                              headers: { "Content-Type": "application/json" },
+                              body: JSON.stringify({ type: saveType, action: "save", data: updatedTarget })
+                            })
+                          ]);
+                        }
+                        fetchData();
+                      } catch {
+                        showToast("err", "Error al reordenar.");
+                      }
+                    };
+
                     return (
                       <li key={item.id} className="flex items-center gap-4 px-5 py-4 hover:bg-neutral-50 transition-colors duration-150">
+                        {/* Reorder Arrows */}
+                        {canReorder && (
+                          <div className="flex flex-col gap-0.5 shrink-0">
+                            <button
+                              onClick={() => handleSwapOrder("up")}
+                              disabled={listIdx === 0}
+                              className="rounded p-0.5 text-neutral-400 hover:text-[#700FA3] hover:bg-neutral-100 disabled:opacity-25 disabled:cursor-not-allowed transition"
+                              title="Subir"
+                            >
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" /></svg>
+                            </button>
+                            <button
+                              onClick={() => handleSwapOrder("down")}
+                              disabled={listIdx === filteredData.length - 1}
+                              className="rounded p-0.5 text-neutral-400 hover:text-[#700FA3] hover:bg-neutral-100 disabled:opacity-25 disabled:cursor-not-allowed transition"
+                              title="Bajar"
+                            >
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                            </button>
+                          </div>
+                        )}
+
                         {/* Thumbnail Cover */}
                         <div className="h-12 w-16 overflow-hidden rounded bg-neutral-100 shrink-0 border border-neutral-200">
                           <img src={imageSrc} alt="" className="h-full w-full object-cover" onError={(e) => { e.currentTarget.src = "/blog/1.webp"; }} />
@@ -1496,7 +1618,7 @@ export default function AdminDashboard() {
                             ID: <code className="text-[#700FA3] font-mono">{item.id}</code>
                             {activeTab === "services" && ` — Plantilla: ${item.template}`}
                             {activeTab === "complementarias" && ` — Formación Complementaria`}
-                            {activeTab === "podcasts" && ` — Duración: ${item.duration} | Tema: ${item.topic}`}
+                            {activeTab === "podcasts" && ` — Duración: ${item.duration} | Tema: ${item.topic} | Orden: ${item.sortOrder ?? 0}`}
                             {activeTab === "calendar" && ` — Fechas: ${item.dateDisplay} | Mod: ${item.modalityType} | Orden: ${item.sortOrder}`}
                           </p>
                         </div>
@@ -3343,6 +3465,69 @@ function SideEditorForm({
                     />
                   </label>
                 </div>
+
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                    Orden de aparición (Sort Order)
+                    <input
+                      type="number"
+                      value={form.sortOrder ?? 0}
+                      onChange={(e) => updateField("sortOrder", parseInt(e.target.value) || 0)}
+                      className="mt-1.5 w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 outline-none focus:ring-2"
+                      onFocus={(e) => (e.currentTarget.style.boxShadow = `0 0 0 2px #700FA322`)}
+                      onBlur={(e) => (e.currentTarget.style.boxShadow = "none")}
+                    />
+                    <span className="text-[10px] text-neutral-400 font-semibold mt-0.5 block">Números más bajos aparecen primero. Usa múltiplos de 10 para dejar espacio (10, 20, 30...).</span>
+                  </label>
+                </div>
+              </div>
+            )}
+
+            {/* SEO & Indexación Section */}
+            {(type === "services" || type === "courses" || type === "complementarias" || type === "blogs") && (
+              <div className="border-t border-neutral-200 pt-6 mt-6 space-y-4">
+                <h4 className="text-sm font-extrabold text-[#700FA3] uppercase tracking-wider">Optimización SEO & Indexación</h4>
+                <p className="text-[11px] text-neutral-500 font-semibold mt-0.5">Define metadatos personalizados para mejorar el posicionamiento de esta página en buscadores.</p>
+                
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                    Título de la página (SEO)
+                    <input
+                      value={form.seoTitle || ""}
+                      onChange={(e) => updateField("seoTitle", e.target.value)}
+                      placeholder={`Por defecto: ${form.title || ""}`}
+                      className="mt-1.5 w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2"
+                      onFocus={(e) => (e.currentTarget.style.boxShadow = `0 0 0 2px #700FA322`)}
+                      onBlur={(e) => (e.currentTarget.style.boxShadow = "none")}
+                    />
+                  </label>
+
+                  <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                    Palabras clave (Keywords, separadas por coma)
+                    <input
+                      value={form.seoKeywords || ""}
+                      onChange={(e) => updateField("seoKeywords", e.target.value)}
+                      placeholder="ej: poligrafo ecuador, evaluacion de confianza, somos one true"
+                      className="mt-1.5 w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2"
+                      onFocus={(e) => (e.currentTarget.style.boxShadow = `0 0 0 2px #700FA322`)}
+                      onBlur={(e) => (e.currentTarget.style.boxShadow = "none")}
+                    />
+                  </label>
+                </div>
+
+                <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                  Descripción meta (SEO)
+                  <textarea
+                    rows={3}
+                    value={form.seoDescription || ""}
+                    onChange={(e) => updateField("seoDescription", e.target.value)}
+                    placeholder={`Por defecto: ${type === "blogs" ? "Resumen automático del contenido" : (form.desc || "")}`}
+                    className="mt-1.5 w-full bg-white border border-neutral-355 rounded-lg px-3 py-2 text-xs text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2 resize-y"
+                    onFocus={(e) => (e.currentTarget.style.boxShadow = `0 0 0 2px #700FA322`)}
+                    onBlur={(e) => (e.currentTarget.style.boxShadow = "none")}
+                  />
+                  <span className="text-[10px] text-neutral-400 font-semibold mt-0.5 block">Se recomienda mantener la descripción por debajo de los 160 caracteres.</span>
+                </label>
               </div>
             )}
 

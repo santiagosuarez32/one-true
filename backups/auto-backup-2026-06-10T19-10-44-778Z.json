@@ -724,6 +724,32 @@
             "description": "Especialízate en el análisis de evaluaciones poligráficas diagnósticas y exploratorias, incluyendo el protocolo de preguntas específicas para casos de preempleo, rutina y temas investigativos."
           }
         ],
+        "customCards": [
+          {
+            "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
+            "items": [
+              ""
+            ],
+            "title": "Estándares de práctica Internacionales y entrevista pretest.",
+            "description": ""
+          },
+          {
+            "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
+            "items": [
+              ""
+            ],
+            "title": "Principios metodológicos de la entrevista pretest.",
+            "description": ""
+          },
+          {
+            "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
+            "items": [
+              ""
+            ],
+            "title": "La fase de preparación como antesala del pretest.",
+            "description": ""
+          }
+        ],
         "heroTagline": "¿Buscas perfeccionar tu técnica de entrevista pretest y dominar una de las la fases más críticas del examen poligráfico?",
         "contactPhone": "099 371 2790",
         "fichaTecnica": [
@@ -857,7 +883,80 @@
             "iconViewBox": "0 0 85 93"
           }
         ],
-        "customCards": [],
+        "customCards": [
+          {
+            "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Latencia Inferior.",
+            "description": ""
+          },
+          {
+            "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Latencia superior.",
+            "description": ""
+          },
+          {
+            "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Ventana de inicio de respuesta fija.",
+            "description": ""
+          },
+          {
+            "icon": "/icons/Password-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Ventana de inicio de respuesta permisiva.",
+            "description": ""
+          },
+          {
+            "icon": "/icons/Task-Checklist--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Ventana de Evaluación Fija.",
+            "description": ""
+          },
+          {
+            "icon": "/icons/Monitor-Find--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Ventana de Evaluación permisiva.",
+            "description": ""
+          },
+          {
+            "icon": "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Reacciones simples en EDA y Cardio.",
+            "description": ""
+          },
+          {
+            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118361408-challenge-ufivoy.webp",
+            "items": [],
+            "title": "Reacciones Complejas en EDA y Cardio.",
+            "description": ""
+          },
+          {
+            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118383266-check-list-g8bemm.webp",
+            "items": [],
+            "title": "Plano cartesiano y el análisis de datos.",
+            "description": ""
+          },
+          {
+            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118402636-engineer-rwbwow.webp",
+            "items": [],
+            "title": "Variables extrañas y su impacto en el análisis de los datos.",
+            "description": ""
+          },
+          {
+            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118421370-brain-mj9erz.webp",
+            "items": [],
+            "title": "Criterios de tolerancia para la extracción de características.",
+            "description": ""
+          },
+          {
+            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118437807-briefcase-rdfbe4.webp",
+            "items": [],
+            "title": "Eventos de artefactos y su impacto en el análisis de datos.",
+            "description": ""
+          }
+        ],
         "heroTagline": "Transforme trazados fisiológicos en decisiones técnicas basadas en evidencia.",
         "contactPhone": "099 371 2790",
         "fichaTecnica": [
@@ -895,68 +994,6 @@
       },
       "created_at": "2026-06-06T16:11:46.412988+00:00",
       "template": "graficas"
-    },
-    {
-      "id": "control-de-calidad-en-poligrafia",
-      "title": "Control de Calidad en Poligrafía",
-      "desc": "Protocolos de auditoría, revisión por pares y mejora continua en la práctica profesional. Garantía de rigor técnico y cumplimiento normativo.",
-      "image": "/cursos-avanzados/control-de-calidad-poligrafia.webp",
-      "href": "/control-de-calidad-en-poligrafia",
-      "published": true,
-      "pageContent": {
-        "heroDesc": "La excelencia en poligrafía se logra a través de una supervisión rigurosa. Este programa académico de 40 horas le otorga las competencias necesarias para auditar cada fase del proceso de evaluación, asegurando que los resultados sean técnica y legalmente incuestionables.",
-        "template": "control-calidad",
-        "aboutDesc": "Cumplimos estrictamente con los 12 pilares fundamentales para la formación de un auditor de élite en control de calidad en poligrafía forense:",
-        "heroImage": "/servicios/1.webp",
-        "heroTitle": "Especialización Avanzada: Control de Calidad en Poligrafía",
-        "aboutTitle": "Ejes Temáticos:",
-        "focusAreas": [
-          {
-            "items": [
-              "Estándares de Práctica (APA-ASTM): Marco normativo internacional que rige la profesión.",
-              "Bases del Aseguramiento de Calidad (QA): Principios preventivos para mantener la integridad del proceso.",
-              "Bases del Control de Calidad (CQ): Metodologías de supervisión técnica directa.",
-              "Auditoría de la Etapa Previa: Revisión de la logística, selección de objetivos y preparación de la examinación.",
-              "Auditoría de la Entrevista Pre-Test: Supervisión de la fase de entrevista previa a la prueba.",
-              "Auditoría de la Prueba In-Test: Verificación de la correcta administración de la etapa de toma de data fisiológica.",
-              "Auditoría del Análisis de Datos: Revisión profunda de la interpretación de trazados fisiológicos.",
-              "Auditoría de la Entrevista Post-Test: Evaluación del manejo del evaluado tras la examinación.",
-              "Sistemas de Calificación Manual y CQ: Protocolo de puntuación manual ESS-M.",
-              "Sistema de Calificación Algorítmico OSS-3: Auditoría del análisis computarizado avanzado.",
-              "Evaluación Teórica del Control de Calidad: Validación de los conocimientos científicos y normativos en PDD.",
-              "Evaluación Práctica del Proceso Integral: Ejecución real de una auditoría completa de control de calidad.",
-              ""
-            ],
-            "title": "Ejes Temáticos",
-            "iconPaths": [
-              "M27.648 39.7c0 13.904 11.447 25.217 25.516 25.217s25.5-11.312 25.5-25.217a24.71 24.71 0 0 0-2.78-11.457c-1.654-3.2-4.024-6.058-6.878-8.302v-2.443c0-5.292-1.704-9.778-4.926-12.973C61.215 1.672 57.342.066 53.187 0a.87.87 0 0 0-.043 0c-4.158.065-8.033 1.672-10.9 4.524-3.224 3.194-4.927 7.68-4.927 12.973v2.443a25.54 25.54 0 0 0-6.878 8.302c-1.845 3.57-2.78 7.424-2.78 11.457zm44.387 12.6a22.85 22.85 0 0 1-18.871 9.916c-7.844 0-14.775-3.938-18.876-9.918v-3.36c0-5.464 3.526-7.155 7.72-8.368l8.472 4.913c.976.62 1.828.93 2.68.93s1.705-.3 2.68-.93l8.473-4.913c4.193 1.214 7.72 2.904 7.72 8.37v3.36zm-26.4-12.76c1.4-.62 2.137-1.917 2.584-2.96a15.43 15.43 0 0 0 .849.344c1.46.534 2.783.8 4.106.8s2.646-.267 4.102-.8a15.4 15.4 0 0 0 .85-.344c.446 1.045 1.184 2.34 2.584 2.96l-6.263 3.632a1.15 1.15 0 0 0-.051.031c-1.075.688-1.372.688-2.448 0l-.05-.03-6.262-3.63zm30.32.16a22.19 22.19 0 0 1-1.29 7.47c-.774-6.183-5.648-8.096-10.156-9.353l-.033-.01-1.5-.407-.958-.255c-.723-.194-1.163-1.092-1.467-1.86 4.334-2.777 7.708-7.484 8.368-11.878 4.508 4.237 7.047 10.042 7.047 16.3zm-22.78-37c5.98.104 12.385 4.3 13.064 13.2-1.392-.376-2.108-1.098-2.856-1.853-1.046-1.056-2.348-2.37-5.1-1.67l-1.96.5c-1.63.43-2.446.647-3.148.647s-1.528-.217-3.167-.65l-1.947-.507c-2.748-.7-4.05.613-5.094 1.668-.75.755-1.466 1.48-2.862 1.855.68-8.923 7.087-13.108 13.07-13.212zm-13.13 15.988c2.625-.478 3.904-1.767 4.87-2.743.93-.938 1.243-1.253 2.463-.943l1.923.5c1.8.48 2.808.742 3.872.742s2.053-.262 3.854-.74L58.962 15c1.225-.312 1.538.005 2.47.944.967.975 2.244 2.263 4.866 2.74v3.193c0 4.72-4.66 10.568-9.97 12.513-2.327.854-3.978.854-6.3 0-5.312-1.946-9.97-7.794-9.97-12.513v-3.193zm-2.6 4.72c.66 4.393 4.035 9.1 8.37 11.878-.304.767-.745 1.665-1.464 1.86l-.955.254-1.505.405a1.26 1.26 0 0 0-.075.021c-4.5 1.257-9.354 3.175-10.127 9.343a22.18 22.18 0 0 1-1.3-7.47c0-6.25 2.54-12.054 7.047-16.3zm38.193-6.053l-2.087-1.9c-.58-.477-1.44-.4-1.922.175a1.34 1.34 0 0 0 .177 1.9l1.902 1.722C79.23 24.722 82.27 31.98 82.27 39.7s-3.04 14.977-8.562 20.435c-11.4 11.268-29.948 11.268-41.347 0C26.84 54.677 23.8 47.42 23.8 39.7s3.04-14.977 8.563-20.435c.53-.525 1.028-.983 1.52-1.4a1.34 1.34 0 0 0 .148-1.903c-.5-.566-1.352-.63-1.925-.146a29.31 29.31 0 0 0-1.673 1.54C24.395 23.324 21.07 31.26 21.07 39.7a31.12 31.12 0 0 0 6 18.439l-6.165 6.094-.126-.125a2.36 2.36 0 0 0-1.669-.682 2.36 2.36 0 0 0-1.67.683l-4.22 4.175c-.01.01-.02.017-.03.026s-.018.02-.027.03l-3.2 3.16a1.34 1.34 0 0 0 .001 1.908c.533.527 1.398.526 1.93-.001l2.26-2.236 7.036 6.954-9.977 9.86a4.96 4.96 0 0 1-3.517 1.435c-1.333 0-2.582-.5-3.518-1.436a4.87 4.87 0 0 1-1.45-3.477c0-1.317.515-2.553 1.45-3.477l3.56-3.518a1.34 1.34 0 0 0 0-1.908c-.533-.527-1.397-.527-1.93 0l-3.56 3.518A7.52 7.52 0 0 0 0 84.508c0 2.04.8 3.952 2.248 5.385a7.69 7.69 0 0 0 5.449 2.227c2.064 0 4-.8 5.448-2.227l15.2-15c.445-.44.7-1.027.7-1.653s-.245-1.213-.7-1.653l-.123-.122 6.168-6.097c5.55 3.947 12.102 5.922 18.654 5.922 8.186 0 16.372-3.08 22.604-9.24C81.676 56.074 85 48.14 85 39.698s-3.325-16.375-9.362-22.343zM23.122 76.22l-7.037-6.955 3.023-3 7.038 6.957-3.024 2.988zm3.16-6.67l-3.448-3.408 5.936-5.868a32.34 32.34 0 0 0 1.66 1.769c.58.573 1.176 1.12 1.787 1.638L26.28 69.55z"
-            ],
-            "description": "Cada pilar ha sido diseñado para garantizar que los auditores obtengan las competencias necesarias para asegurar que los resultados sean técnica y legalmente incuestionables.",
-            "iconViewBox": "0 0 85 93"
-          }
-        ],
-        "customCards": [],
-        "heroTagline": "Certifíquese como Auditor Profesional en Control de Calidad en Poligrafía con la única academia en Ecuador acreditada por la APA.",
-        "contactPhone": "099 371 2790",
-        "fichaTecnica": [
-          {
-            "title": "Modalidad",
-            "description": "100% en línea"
-          },
-          {
-            "title": "Fechas",
-            "description": "Consulte nuestra próxima convocatoria."
-          },
-          {
-            "title": "Horarios",
-            "description": "Lunes a viernes (19:00 a 22:00) y dos sábados (08:00 a 13:00)."
-          }
-        ],
-        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True",
-        "contactWhatsappText": "+593 98 129 6179"
-      },
-      "created_at": "2026-06-06T16:11:46.990366+00:00",
-      "template": "control-calidad"
     },
     {
       "id": "curso-basico-en-poligrafia",
@@ -1067,50 +1104,7 @@
             "title": "Ejes Temáticos"
           }
         ],
-        "customCards": [
-          {
-            "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Análisis de Respiración (RIN/RSC)",
-            "description": "Evaluación de patrones respiratorios como indicadores de estrés y respuesta fisiológica."
-          },
-          {
-            "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Análisis Cardiovascular (CVT/GSR)",
-            "description": "Interpretación de cambios en presión arterial y respuesta galvánica de la piel."
-          },
-          {
-            "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Zona de Comparación Relativa",
-            "description": "Técnica de comparación entre zonas de respuesta para identificar reacciones relevantes."
-          },
-          {
-            "icon": "/icons/Password-Desktop--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Análisis de Artefactos",
-            "description": "Identificación y evaluación de respuestas causadas por movimiento o factores externos."
-          },
-          {
-            "icon": "/icons/Task-Checklist--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Scoring Automatizado",
-            "description": "Uso de software especializado para análisis cuantitativo y comparación de datos."
-          },
-          {
-            "icon": "/icons/Monitor-Find--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Interpretación Forense",
-            "description": "Estándares de análisis aplicados en contextos legales y periciales."
-          },
-          {
-            "icon": "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Reporte Técnico Profesional",
-            "description": "Redacción de conclusiones y dictámenes basados en análisis e interpretación de datos."
-          }
-        ],
+        "customCards": [],
         "heroTagline": "¿Buscas transformar tus entrevistas tradicionales en entrevistas de alta calidad basadas en el respeto y la efectividad forense?",
         "contactPhone": "099 371 2790",
         "fichaTecnica": [
@@ -1186,50 +1180,7 @@
             "title": "Ejes Temáticos"
           }
         ],
-        "customCards": [
-          {
-            "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Análisis de Respiración (RIN/RSC)",
-            "description": "Evaluación de patrones respiratorios como indicadores de estrés y respuesta fisiológica."
-          },
-          {
-            "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Análisis Cardiovascular (CVT/GSR)",
-            "description": "Interpretación de cambios en presión arterial y respuesta galvánica de la piel."
-          },
-          {
-            "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Zona de Comparación Relativa",
-            "description": "Técnica de comparación entre zonas de respuesta para identificar reacciones relevantes."
-          },
-          {
-            "icon": "/icons/Password-Desktop--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Análisis de Artefactos",
-            "description": "Identificación y evaluación de respuestas causadas por movimiento o factores externos."
-          },
-          {
-            "icon": "/icons/Task-Checklist--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Scoring Automatizado",
-            "description": "Uso de software especializado para análisis cuantitativo y comparación de datos."
-          },
-          {
-            "icon": "/icons/Monitor-Find--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Interpretación Forense",
-            "description": "Estándares de análisis aplicados en contextos legales y periciales."
-          },
-          {
-            "icon": "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Reporte Técnico Profesional",
-            "description": "Redacción de conclusiones y dictámenes basados en análisis e interpretación de datos."
-          }
-        ],
+        "customCards": [],
         "heroTagline": "¿Quieres dominar la obtención estratégica de información mediante interacciones fluidas, estrategias de persuasión argumentativa y técnicas científicamente comprobadas?",
         "contactPhone": "099 371 2790",
         "fichaTecnica": [
@@ -1278,6 +1229,111 @@
       "template": "graficas"
     },
     {
+      "id": "control-de-calidad-en-poligrafia",
+      "title": "Control de Calidad en Poligrafía",
+      "desc": "Protocolos de auditoría, revisión por pares y mejora continua en la práctica profesional. Garantía de rigor técnico y cumplimiento normativo.",
+      "image": "/cursos-avanzados/control-de-calidad-poligrafia.webp",
+      "href": "/control-de-calidad-en-poligrafia",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "La excelencia en poligrafía se logra a través de una supervisión rigurosa. Este programa académico de 40 horas le otorga las competencias necesarias para auditar cada fase del proceso de evaluación, asegurando que los resultados sean técnica y legalmente incuestionables.",
+        "template": "control-calidad",
+        "aboutDesc": "",
+        "heroImage": "/servicios/1.webp",
+        "heroTitle": "Especialización Avanzada: Control de Calidad en Poligrafía",
+        "aboutTitle": "Ejes Temáticos:",
+        "focusAreas": [
+          {
+            "items": [
+              "Estándares de Práctica (APA-ASTM): Marco normativo internacional que rige la profesión.",
+              "Bases del Aseguramiento de Calidad (QA): Principios preventivos para mantener la integridad del proceso.",
+              "Bases del Control de Calidad (CQ): Metodologías de supervisión técnica directa.",
+              "Auditoría de la Etapa Previa: Revisión de la logística, selección de objetivos y preparación de la examinación.",
+              "Auditoría de la Entrevista Pre-Test: Supervisión de la fase de entrevista previa a la prueba.",
+              "Auditoría de la Prueba In-Test: Verificación de la correcta administración de la etapa de toma de data fisiológica.",
+              "Auditoría del Análisis de Datos: Revisión profunda de la interpretación de trazados fisiológicos.",
+              "Auditoría de la Entrevista Post-Test: Evaluación del manejo del evaluado tras la examinación.",
+              "Sistemas de Calificación Manual y CQ: Protocolo de puntuación manual ESS-M.",
+              "Sistema de Calificación Algorítmico OSS-3: Auditoría del análisis computarizado avanzado.",
+              "Evaluación Teórica del Control de Calidad: Validación de los conocimientos científicos y normativos en PDD.",
+              "Evaluación Práctica del Proceso Integral: Ejecución real de una auditoría completa de control de calidad.",
+              ""
+            ],
+            "title": "Ejes Temáticos",
+            "iconPaths": [
+              "M27.648 39.7c0 13.904 11.447 25.217 25.516 25.217s25.5-11.312 25.5-25.217a24.71 24.71 0 0 0-2.78-11.457c-1.654-3.2-4.024-6.058-6.878-8.302v-2.443c0-5.292-1.704-9.778-4.926-12.973C61.215 1.672 57.342.066 53.187 0a.87.87 0 0 0-.043 0c-4.158.065-8.033 1.672-10.9 4.524-3.224 3.194-4.927 7.68-4.927 12.973v2.443a25.54 25.54 0 0 0-6.878 8.302c-1.845 3.57-2.78 7.424-2.78 11.457zm44.387 12.6a22.85 22.85 0 0 1-18.871 9.916c-7.844 0-14.775-3.938-18.876-9.918v-3.36c0-5.464 3.526-7.155 7.72-8.368l8.472 4.913c.976.62 1.828.93 2.68.93s1.705-.3 2.68-.93l8.473-4.913c4.193 1.214 7.72 2.904 7.72 8.37v3.36zm-26.4-12.76c1.4-.62 2.137-1.917 2.584-2.96a15.43 15.43 0 0 0 .849.344c1.46.534 2.783.8 4.106.8s2.646-.267 4.102-.8a15.4 15.4 0 0 0 .85-.344c.446 1.045 1.184 2.34 2.584 2.96l-6.263 3.632a1.15 1.15 0 0 0-.051.031c-1.075.688-1.372.688-2.448 0l-.05-.03-6.262-3.63zm30.32.16a22.19 22.19 0 0 1-1.29 7.47c-.774-6.183-5.648-8.096-10.156-9.353l-.033-.01-1.5-.407-.958-.255c-.723-.194-1.163-1.092-1.467-1.86 4.334-2.777 7.708-7.484 8.368-11.878 4.508 4.237 7.047 10.042 7.047 16.3zm-22.78-37c5.98.104 12.385 4.3 13.064 13.2-1.392-.376-2.108-1.098-2.856-1.853-1.046-1.056-2.348-2.37-5.1-1.67l-1.96.5c-1.63.43-2.446.647-3.148.647s-1.528-.217-3.167-.65l-1.947-.507c-2.748-.7-4.05.613-5.094 1.668-.75.755-1.466 1.48-2.862 1.855.68-8.923 7.087-13.108 13.07-13.212zm-13.13 15.988c2.625-.478 3.904-1.767 4.87-2.743.93-.938 1.243-1.253 2.463-.943l1.923.5c1.8.48 2.808.742 3.872.742s2.053-.262 3.854-.74L58.962 15c1.225-.312 1.538.005 2.47.944.967.975 2.244 2.263 4.866 2.74v3.193c0 4.72-4.66 10.568-9.97 12.513-2.327.854-3.978.854-6.3 0-5.312-1.946-9.97-7.794-9.97-12.513v-3.193zm-2.6 4.72c.66 4.393 4.035 9.1 8.37 11.878-.304.767-.745 1.665-1.464 1.86l-.955.254-1.505.405a1.26 1.26 0 0 0-.075.021c-4.5 1.257-9.354 3.175-10.127 9.343a22.18 22.18 0 0 1-1.3-7.47c0-6.25 2.54-12.054 7.047-16.3zm38.193-6.053l-2.087-1.9c-.58-.477-1.44-.4-1.922.175a1.34 1.34 0 0 0 .177 1.9l1.902 1.722C79.23 24.722 82.27 31.98 82.27 39.7s-3.04 14.977-8.562 20.435c-11.4 11.268-29.948 11.268-41.347 0C26.84 54.677 23.8 47.42 23.8 39.7s3.04-14.977 8.563-20.435c.53-.525 1.028-.983 1.52-1.4a1.34 1.34 0 0 0 .148-1.903c-.5-.566-1.352-.63-1.925-.146a29.31 29.31 0 0 0-1.673 1.54C24.395 23.324 21.07 31.26 21.07 39.7a31.12 31.12 0 0 0 6 18.439l-6.165 6.094-.126-.125a2.36 2.36 0 0 0-1.669-.682 2.36 2.36 0 0 0-1.67.683l-4.22 4.175c-.01.01-.02.017-.03.026s-.018.02-.027.03l-3.2 3.16a1.34 1.34 0 0 0 .001 1.908c.533.527 1.398.526 1.93-.001l2.26-2.236 7.036 6.954-9.977 9.86a4.96 4.96 0 0 1-3.517 1.435c-1.333 0-2.582-.5-3.518-1.436a4.87 4.87 0 0 1-1.45-3.477c0-1.317.515-2.553 1.45-3.477l3.56-3.518a1.34 1.34 0 0 0 0-1.908c-.533-.527-1.397-.527-1.93 0l-3.56 3.518A7.52 7.52 0 0 0 0 84.508c0 2.04.8 3.952 2.248 5.385a7.69 7.69 0 0 0 5.449 2.227c2.064 0 4-.8 5.448-2.227l15.2-15c.445-.44.7-1.027.7-1.653s-.245-1.213-.7-1.653l-.123-.122 6.168-6.097c5.55 3.947 12.102 5.922 18.654 5.922 8.186 0 16.372-3.08 22.604-9.24C81.676 56.074 85 48.14 85 39.698s-3.325-16.375-9.362-22.343zM23.122 76.22l-7.037-6.955 3.023-3 7.038 6.957-3.024 2.988zm3.16-6.67l-3.448-3.408 5.936-5.868a32.34 32.34 0 0 0 1.66 1.769c.58.573 1.176 1.12 1.787 1.638L26.28 69.55z"
+            ],
+            "description": "",
+            "iconViewBox": "0 0 85 93"
+          }
+        ],
+        "customCards": [
+          {
+            "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Auditoría de Procedimientos",
+            "description": "Revisión sistemática del cumplimiento de estándares en cada examinación."
+          },
+          {
+            "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Validación de Datos",
+            "description": "Verificación de la integridad y consistencia en registros poligráficos."
+          },
+          {
+            "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Revisión por Pares",
+            "description": "Evaluación cruzada de casos entre examinadores certificados."
+          },
+          {
+            "icon": "/icons/Password-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Calibración de Equipos",
+            "description": "Mantenimiento preventivo y control de precisión instrumental."
+          },
+          {
+            "icon": "/icons/Task-Checklist--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Análisis de Discrepancias",
+            "description": "Investigación de variaciones en resultados e identificación de causas."
+          },
+          {
+            "icon": "/icons/Monitor-Find--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Documentación de Conformidad",
+            "description": "Registro exhaustivo de auditorías y mejoras implementadas."
+          },
+          {
+            "icon": "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Mejora Continua",
+            "description": "Actualización de protocolos basada en hallazgos de auditoría."
+          }
+        ],
+        "heroTagline": "Certifíquese como Auditor Profesional en Control de Calidad en Poligrafía con la única academia en Ecuador acreditada por la APA.",
+        "contactPhone": "099 371 2790",
+        "fichaTecnica": [
+          {
+            "title": "Modalidad",
+            "description": "100% en línea"
+          },
+          {
+            "title": "Fechas",
+            "description": "Consulte nuestra próxima convocatoria."
+          },
+          {
+            "title": "Horarios",
+            "description": "Lunes a viernes (19:00 a 22:00) y dos sábados (08:00 a 13:00)."
+          }
+        ],
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True",
+        "contactWhatsappText": "+593 98 129 6179"
+      },
+      "created_at": "2026-06-06T16:11:46.990366+00:00",
+      "template": "control-calidad"
+    },
+    {
       "id": "evaluacion-forense-de-la-credibilidad",
       "title": "Evaluación Forense de la Credibilidad",
       "desc": "Análisis científico del testimonio y detección de indicadores de engaño mediante protocolos estandarizados.",
@@ -1306,50 +1362,7 @@
             "title": "Ejes Temáticos"
           }
         ],
-        "customCards": [
-          {
-            "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Análisis de Respiración (RIN/RSC)",
-            "description": "Evaluación de patrones respiratorios como indicadores de estrés y respuesta fisiológica."
-          },
-          {
-            "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Análisis Cardiovascular (CVT/GSR)",
-            "description": "Interpretación de cambios en presión arterial y respuesta galvánica de la piel."
-          },
-          {
-            "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Zona de Comparación Relativa",
-            "description": "Técnica de comparación entre zonas de respuesta para identificar reacciones relevantes."
-          },
-          {
-            "icon": "/icons/Password-Desktop--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Análisis de Artefactos",
-            "description": "Identificación y evaluación de respuestas causadas por movimiento o factores externos."
-          },
-          {
-            "icon": "/icons/Task-Checklist--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Scoring Automatizado",
-            "description": "Uso de software especializado para análisis cuantitativo y comparación de datos."
-          },
-          {
-            "icon": "/icons/Monitor-Find--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Interpretación Forense",
-            "description": "Estándares de análisis aplicados en contextos legales y periciales."
-          },
-          {
-            "icon": "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Reporte Técnico Profesional",
-            "description": "Redacción de conclusiones y dictámenes basados en análisis e interpretación de datos."
-          }
-        ],
+        "customCards": [],
         "heroTagline": "¿Buscas dominar el análisis científico del testimonio y aplicar las técnicas de evaluación de credibilidad más avanzadas del mundo?",
         "contactPhone": "099 371 2790",
         "fichaTecnica": [
@@ -1435,16 +1448,17 @@
   ],
   "podcasts": [
     {
-      "id": "4",
-      "title": "Ciencia y Poligrafía Parte #1",
-      "description": "Más allá de un simple polígrafo. Descubre cómo los estudios integrales de confiabilidad ofrecen una perspectiva completa de tu personal y cultura organizacional.",
-      "image": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/podcasts/1781064394703-podcast-hero-uc8sfh.webp",
-      "audioUrl": "https://open.spotify.com/episod e/5hh42wsH11ASovXtm7cRtH? si=7A8qO6nAScaDr6BI9w-amw",
-      "duration": "31 min",
-      "date": "25 de Mayo, 2024",
-      "topic": "Evaluación",
+      "id": "1",
+      "title": "¿Se puede detectar mentiras por medio del lenguaje corporal?",
+      "description": "En este episodio exploramos cómo los procesos de verificación y evaluación de confianza son fundamentales para el crecimiento sostenible de tu empresa. Descubre cómo proteger tu negocio desde adentro.",
+      "image": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/podcasts/1781064428014-podcast-hero-v0ge0n.webp",
+      "audioUrl": "https://open.spotify.com/episod e/3GpRmWnQYrrB7Qhk0qXPQf ?si=GC4n8iVETg0eqM5AX3W8w",
+      "duration": "32 min",
+      "date": "15 de Junio, 2024",
+      "topic": "Negocios",
       "published": true,
-      "created_at": "2026-06-06T16:11:48.610801+00:00"
+      "created_at": "2026-06-06T16:11:47.909986+00:00",
+      "sortOrder": 20
     },
     {
       "id": "5",
@@ -1456,43 +1470,8 @@
       "date": "18 de Mayo, 2024",
       "topic": "Valores",
       "published": true,
-      "created_at": "2026-06-06T16:11:48.839618+00:00"
-    },
-    {
-      "id": "1",
-      "title": "¿Se puede detectar mentiras por medio del lenguaje corporal?",
-      "description": "En este episodio exploramos cómo los procesos de verificación y evaluación de confianza son fundamentales para el crecimiento sostenible de tu empresa. Descubre cómo proteger tu negocio desde adentro.",
-      "image": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/podcasts/1781064428014-podcast-hero-v0ge0n.webp",
-      "audioUrl": "https://open.spotify.com/episod e/3GpRmWnQYrrB7Qhk0qXPQf ?si=GC4n8iVETg0eqM5AX3W8w",
-      "duration": "32 min",
-      "date": "15 de Junio, 2024",
-      "topic": "Negocios",
-      "published": true,
-      "created_at": "2026-06-06T16:11:47.909986+00:00"
-    },
-    {
-      "id": "3",
-      "title": "¿Cuántas etapas tiene una prueba de polígrafo?",
-      "description": "La regulación y el cumplimiento normativo son pilares de la confianza. Conoce las mejores prácticas para mantener tu empresa en línea con los estándares internacionales.",
-      "image": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/podcasts/1781064294442-podcast-hero-cc9umw.webp",
-      "audioUrl": "https://open.spotify.com/episo de/2YVRb0slgeyK3ht00OT27P ?si=f89813aa89ba445a",
-      "duration": "35 min",
-      "date": "1 de Junio, 2024",
-      "topic": "Legal",
-      "published": true,
-      "created_at": "2026-06-06T16:11:48.38234+00:00"
-    },
-    {
-      "id": "2",
-      "title": "Ciencia y Poligrafía Parte #3",
-      "description": "¿Sabes quién realmente es tu equipo? En este episodio analizamos cómo las pruebas de vetting previo a la contratación pueden ahorrarte problemas y pérdidas significativas.",
-      "image": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/podcasts/1781064352913-podcast-hero-x1ra1u.webp",
-      "audioUrl": "https://open.spotify.com/episo de/3wFj8LuoSGxHZp96bKlRfF ? si=Orn0Y05aQ060rTvgp6GzD g",
-      "duration": "28 min",
-      "date": "8 de Junio, 2024",
-      "topic": "RRHH",
-      "published": true,
-      "created_at": "2026-06-06T16:11:48.145634+00:00"
+      "created_at": "2026-06-06T16:11:48.839618+00:00",
+      "sortOrder": 10
     },
     {
       "id": "6",
@@ -1504,7 +1483,47 @@
       "date": "11 de Mayo, 2024",
       "topic": "Tecnología",
       "published": true,
-      "created_at": "2026-06-06T16:11:49.069331+00:00"
+      "created_at": "2026-06-06T16:11:49.069331+00:00",
+      "sortOrder": 40
+    },
+    {
+      "id": "2",
+      "title": "Ciencia y Poligrafía Parte #3",
+      "description": "¿Sabes quién realmente es tu equipo? En este episodio analizamos cómo las pruebas de vetting previo a la contratación pueden ahorrarte problemas y pérdidas significativas.",
+      "image": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/podcasts/1781064352913-podcast-hero-x1ra1u.webp",
+      "audioUrl": "https://open.spotify.com/episo de/3wFj8LuoSGxHZp96bKlRfF ? si=Orn0Y05aQ060rTvgp6GzD g",
+      "duration": "28 min",
+      "date": "8 de Junio, 2024",
+      "topic": "RRHH",
+      "published": true,
+      "created_at": "2026-06-06T16:11:48.145634+00:00",
+      "sortOrder": 50
+    },
+    {
+      "id": "3",
+      "title": "¿Cuántas etapas tiene una prueba de polígrafo?",
+      "description": "La regulación y el cumplimiento normativo son pilares de la confianza. Conoce las mejores prácticas para mantener tu empresa en línea con los estándares internacionales.",
+      "image": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/podcasts/1781064294442-podcast-hero-cc9umw.webp",
+      "audioUrl": "https://open.spotify.com/episo de/2YVRb0slgeyK3ht00OT27P ?si=f89813aa89ba445a",
+      "duration": "35 min",
+      "date": "1 de Junio, 2024",
+      "topic": "Legal",
+      "published": true,
+      "created_at": "2026-06-06T16:11:48.38234+00:00",
+      "sortOrder": 60
+    },
+    {
+      "id": "4",
+      "title": "Ciencia y Poligrafía Parte #1",
+      "description": "Más allá de un simple polígrafo. Descubre cómo los estudios integrales de confiabilidad ofrecen una perspectiva completa de tu personal y cultura organizacional.",
+      "image": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/podcasts/1781064394703-podcast-hero-uc8sfh.webp",
+      "audioUrl": "https://open.spotify.com/episod e/5hh42wsH11ASovXtm7cRtH? si=7A8qO6nAScaDr6BI9w-amw",
+      "duration": "31 min",
+      "date": "25 de Mayo, 2024",
+      "topic": "Evaluación",
+      "published": true,
+      "created_at": "2026-06-06T16:11:48.610801+00:00",
+      "sortOrder": 30
     }
   ],
   "calendarIntakes": [

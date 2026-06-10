@@ -40,6 +40,38 @@ const focusAreas = [
   },
 ];
 
+const advancedTechniques = [
+  {
+    title: "Fundamentos y estándares",
+    description: "Domina los principios de las prácticas internacionales estandarizadas en entrevistas pretest y aprende los fundamentos metodológicos que garantizan la confiabilidad técnica de la evaluación.",
+    icon: "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
+    items: [
+      "Estándares de práctica Internacionales y entrevista pretest.",
+      "Principios metodológicos de la entrevista pretest."
+    ]
+  },
+  {
+    title: "Preparación y desarrollo del pretest",
+    description: "Aprende cada fase de preparación previa al examen y domina el paso a paso del protocolo de entrevista pretest, asegurando consistencia y validez en tus evaluaciones poligráficas.",
+    icon: "/icons/Browser-Hand--Streamline-Ultimate.webp",
+    items: [
+      "La fase de preparación como antesala del pretest.",
+      "El paso a paso de la entrevista pretest."
+    ]
+  },
+  {
+    title: "Evaluaciones diagnósticas y exploratorias",
+    description: "Especialízate en el análisis de evaluaciones poligráficas diagnósticas y exploratorias, incluyendo el protocolo de preguntas específicas para casos de preempleo, rutina y temas investigativos.",
+    icon: "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
+    items: [
+      "Proceso metodológico del pretest en evaluaciones poligráficas diagnósticas (Específicas).",
+      "Desarrollo de preguntas para evaluaciones poligráficas diagnósticas (Específicas).",
+      "Proceso metodológico del pretest en evaluaciones poligráficas exploratorias (Preempleo - Rutina).",
+      "Desarrollo de preguntas para evaluaciones poligráficas Exploratorias (Preempleo - Rutina)."
+    ]
+  }
+];
+
 import { Course } from "@/lib/cms";
 
 export default function EntrevistaPretestPage({ course }: { course: Course }) {
@@ -51,11 +83,13 @@ export default function EntrevistaPretestPage({ course }: { course: Course }) {
     heroTitle,
     heroDesc,
     heroImage,
-    svgFocusAreas,
     fichaTecnica,
     contactPhone,
     contactWhatsapp,
-    contactWhatsappText
+    contactWhatsappText,
+    customCards,
+    aboutTitle,
+    aboutDesc
   } = course.pageContent;
 
   return (
@@ -178,64 +212,50 @@ export default function EntrevistaPretestPage({ course }: { course: Course }) {
                     color: "#48255A",
                   }}
                 >
-                  Ejes Temáticos:
+                  {aboutTitle !== undefined && aboutTitle !== null ? aboutTitle : "Ejes Temáticos:"}
                 </h2>
 
                 <p
                   className="text-[#525252] text-[15px] leading-[26px] font-light"
                   style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                 >
-                  Profundice en los estándares, principios y procesos metodológicos que sostienen una entrevista pretest clara, técnica y alineada al tipo de evaluación poligráfica.
+                  {aboutDesc !== undefined && aboutDesc !== null ? aboutDesc : "Profundice en los estándares, principios y procesos metodológicos que sostienen una entrevista pretest clara, técnica y alineada al tipo de evaluación poligráfica."}
                 </p>
               </div>
             </div>
 
-            <div className="flex flex-col gap-8">
-              {(svgFocusAreas && svgFocusAreas.length > 0 ? svgFocusAreas : focusAreas).map((area, idx) => {
-                const anyArea = area as any;
-                const icon = anyArea.icon;
-                const iconViewBox = anyArea.iconViewBox || focusAreas[idx]?.iconViewBox || "0 0 84 84";
-                const iconPaths = anyArea.iconPaths || focusAreas[idx]?.iconPaths || [];
-                const items = anyArea.items || [];
-                const isImage = icon && (icon.endsWith(".svg") || icon.endsWith(".png") || icon.endsWith(".webp") || icon.endsWith(".jpg") || icon.endsWith(".jpeg") || icon.startsWith("/") || icon.startsWith("http"));
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {(customCards && customCards.length > 0 ? customCards : advancedTechniques).map((technique, idx) => {
+                const anyTechnique = technique as any;
+                const icon = anyTechnique.icon || advancedTechniques[idx]?.icon || "/icons/Browser-Page-Account--Streamline-Ultimate.webp";
                 return (
-                  <div key={idx} className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12 bg-white p-8 lg:p-10 rounded-2xl border border-neutral-100 shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_15px_35px_rgba(112,15,163,0.04)] transition-all duration-300">
-                    <div className="shrink-0 w-[70px] h-[70px] flex items-center justify-center">
-                      {isImage ? (
-                        <img src={icon} alt={area.title} className="w-[70px] h-[70px] object-contain" />
-                      ) : icon ? (
-                        <div className="text-5xl">{icon}</div>
+                  <div key={idx} className="flex flex-col items-start gap-4 bg-white p-5 rounded border border-neutral-100 shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_15px_35px_rgba(112,15,163,0.04)] transition-all duration-300 h-full">
+                    <div className="shrink-0">
+                      {icon.endsWith(".svg") || icon.endsWith(".png") || icon.endsWith(".webp") ? (
+                        <img src={icon} alt={technique.title} width={50} height={50} className="w-[50px] h-[50px] object-contain" />
                       ) : (
-                        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="#700FA3" viewBox={iconViewBox}>
-                          {(iconPaths || []).map((path: string, pIdx: number) => (
-                            <path key={pIdx} d={path} />
-                          ))}
-                        </svg>
+                        <div className="text-4xl">{icon}</div>
                       )}
                     </div>
-                    <div className="flex-1">
+                    <div className="flex-1 w-full">
                       <h3
                         className="text-lg md:text-xl font-bold text-[#48255A] mb-4"
-                        style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3", marginBottom: "14px" }}
+                        style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}
                       >
-                        {area.title}
+                        {technique.title}
                       </h3>
-                      {items.length > 0 ? (
-                        <ul className="flex flex-col gap-2">
-                          {items.map((item: string, iIdx: number) => (
-                            <li key={iIdx} className="flex items-start gap-3">
-                              <span className="mt-1.5 w-2 h-2 rounded-full bg-[#700FA3] shrink-0" />
-                              <span className="text-sm text-[#525252] leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                                {item}
-                              </span>
-                            </li>
-                          ))}
-                        </ul>
-                      ) : (
-                        <p className="text-sm text-[#525252] leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                          {area.description}
+                      {anyTechnique.description && (
+                        <p className="text-sm text-[#525252] leading-relaxed font-light mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                          <strong className="font-semibold text-[#48255A]">{anyTechnique.description}</strong>
                         </p>
                       )}
+                      <div className="flex flex-col gap-3">
+                        {(technique.items || []).map((item, itemIdx) => (
+                          <p key={itemIdx} className="text-sm text-[#525252] leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                            <strong className="font-semibold text-[#48255A]">{item}</strong>
+                          </p>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 );

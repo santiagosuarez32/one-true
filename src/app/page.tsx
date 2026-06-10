@@ -12,6 +12,8 @@ import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { getServices, getBlogs } from "@/lib/cms";
 
+export const revalidate = 3600;
+
 export default async function Home() {
   const [services, blogs] = await Promise.all([
     getServices(),

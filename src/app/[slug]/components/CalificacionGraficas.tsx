@@ -222,73 +222,42 @@ export default function CalificacionGraficasPage({ course }: { course: Course })
               </div>
             </div>
 
-            <div className="flex flex-col gap-8">
-              {/* Ejes Temáticos (Big Card) */}
-              {(dbFocusAreas && dbFocusAreas.length > 0 ? dbFocusAreas : focusAreas).map((area, idx) => {
-                const anyArea = area as any;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {(customCards && customCards.length > 0 ? customCards : advancedTechniques).map((technique, idx) => {
+                const anyTechnique = technique as any;
+                const icon = anyTechnique.icon || advancedTechniques[idx]?.icon || "/icons/Browser-Page-Account--Streamline-Ultimate.webp";
                 return (
-                  <div key={`focus-${idx}`} className="flex flex-col items-start gap-8 lg:gap-12 bg-white p-8 lg:p-10 rounded-2xl border-l-4 border-l-[#FFC107] border border-neutral-100 shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_15px_35px_rgba(112,15,163,0.04)] transition-all duration-300 w-full">
+                  <div key={idx} className="flex flex-col items-start gap-4 bg-white p-5 rounded border border-neutral-100 shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_15px_35px_rgba(112,15,163,0.04)] transition-all duration-300 h-full">
+                    <div className="shrink-0">
+                      {icon.endsWith(".svg") || icon.endsWith(".png") || icon.endsWith(".webp") ? (
+                        <img src={icon} alt={technique.title} width={50} height={50} className="w-[50px] h-[50px] object-contain" />
+                      ) : (
+                        <div className="text-4xl">{icon}</div>
+                      )}
+                    </div>
                     <div className="flex-1 w-full">
-                      <h3 className="text-lg md:text-xl font-bold text-[#48255A] mb-4" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
-                        {area.title}
+                      <h3
+                        className="text-lg md:text-xl font-bold text-[#48255A] mb-4"
+                        style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}
+                      >
+                        {technique.title}
                       </h3>
-                      {anyArea.description && (
-                        <p className="text-sm text-[#525252] leading-relaxed font-light mb-3 font-normal text-[#48255A]" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                          {anyArea.description}
+                      {anyTechnique.description && (
+                        <p className="text-sm text-[#525252] leading-relaxed font-light mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                          <strong className="font-semibold text-[#48255A]">{anyTechnique.description}</strong>
                         </p>
                       )}
-                      <div className="flex flex-col gap-2 list-disc pl-5">
-                        {(anyArea.items || []).map((item: string, itemIdx: number) => (
-                          <div key={itemIdx} className="flex items-start gap-2">
-                            <span className="text-[#700FA3] font-bold text-lg leading-none mt-0.5">•</span>
-                            <p className="text-sm text-[#525252] leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                              <strong className="font-semibold text-[#48255A]">{item}</strong>
-                            </p>
-                          </div>
+                      <div className="flex flex-col gap-3">
+                        {(technique.items || []).map((item, itemIdx) => (
+                          <p key={itemIdx} className="text-sm text-[#525252] leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                            <strong className="font-semibold text-[#48255A]">{item}</strong>
+                          </p>
                         ))}
                       </div>
                     </div>
                   </div>
                 );
               })}
-
-              {/* Tarjetas Personalizadas Grid */}
-              {((customCards && customCards.length > 0) || (customCards === undefined && advancedTechniques.length > 0)) && (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-                  {(customCards !== undefined ? customCards : advancedTechniques).map((technique, idx) => {
-                    const anyTechnique = technique as any;
-                    const icon = anyTechnique.icon || advancedTechniques[idx]?.icon || "/icons/Browser-Page-Account--Streamline-Ultimate.webp";
-                    return (
-                      <div key={`card-${idx}`} className="flex flex-col items-start gap-4 bg-white p-6 rounded-2xl border border-neutral-100 shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_15px_35px_rgba(112,15,163,0.04)] transition-all duration-300 h-full">
-                        <div className="shrink-0 w-12 h-12 flex items-center justify-center">
-                          {icon.endsWith(".svg") || icon.endsWith(".png") || icon.endsWith(".webp") || icon.endsWith(".jpg") || icon.endsWith(".jpeg") || icon.startsWith("/") || icon.startsWith("http") ? (
-                            <img src={icon} alt={technique.title} className="w-12 h-12 object-contain" />
-                          ) : (
-                            <div className="text-3xl">{icon}</div>
-                          )}
-                        </div>
-                        <div className="flex-1 w-full">
-                          <h3 className="text-base md:text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
-                            {technique.title}
-                          </h3>
-                          {anyTechnique.description && (
-                            <p className="text-sm text-[#525252] leading-relaxed font-light mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                              <strong className="font-semibold text-[#48255A]">{anyTechnique.description}</strong>
-                            </p>
-                          )}
-                          <div className="flex flex-col gap-2">
-                            {(technique.items || []).map((item, itemIdx) => (
-                              <p key={itemIdx} className="text-sm text-[#525252] leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                                <strong className="font-semibold text-[#48255A]">{item}</strong>
-                              </p>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              )}
             </div>
           </div>
         </div>

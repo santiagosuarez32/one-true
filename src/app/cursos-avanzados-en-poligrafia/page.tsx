@@ -6,6 +6,19 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ContactoFormAvanzados from "@/components/ContactoFormAvanzados";
 import { getCourses } from "@/lib/cms";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Cursos Avanzados en Poligrafía | Academia One True",
+  description: "Especializaciones y entrenamientos avanzados de poligrafía para profesionales certificados. Actualización continua bajo estándares APA y ASTM en Quito, Guayaquil y online.",
+  keywords: ["cursos avanzados de poligrafia", "academia de poligrafia ecuador", "especializacion en poligrafia", "perfeccionamiento poligrafico", "estandares APA", "normas ASTM"],
+  openGraph: {
+    title: "Cursos Avanzados en Poligrafía | Academia One True",
+    description: "Especializaciones y entrenamientos avanzados de poligrafía para profesionales certificados. Actualización continua bajo estándares APA y ASTM en Quito, Guayaquil y online.",
+    url: "https://somosonetrue.com/cursos-avanzados-en-poligrafia",
+    type: "website",
+  }
+};
 
 export const revalidate = 3600; // Revalidate every hour or via on-demand revalidation
 

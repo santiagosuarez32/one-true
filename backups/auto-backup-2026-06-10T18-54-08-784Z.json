@@ -724,6 +724,37 @@
             "description": "Especialízate en el análisis de evaluaciones poligráficas diagnósticas y exploratorias, incluyendo el protocolo de preguntas específicas para casos de preempleo, rutina y temas investigativos."
           }
         ],
+        "customCards": [
+          {
+            "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
+            "items": [
+              "Estándares de práctica Internacionales y entrevista pretest.",
+              "Principios metodológicos de la entrevista pretest."
+            ],
+            "title": "Fundamentos y estándares",
+            "description": "Domina los principios de las prácticas internacionales estandarizadas en entrevistas pretest y aprende los fundamentos metodológicos que garantizan la confiabilidad técnica de la evaluación."
+          },
+          {
+            "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
+            "items": [
+              "La fase de preparación como antesala del pretest.",
+              "El paso a paso de la entrevista pretest."
+            ],
+            "title": "Preparación y desarrollo del pretest",
+            "description": "Aprende cada fase de preparación previa al examen y domina el paso a paso del protocolo de entrevista pretest, asegurando consistencia y validez en tus evaluaciones poligráficas."
+          },
+          {
+            "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
+            "items": [
+              "Proceso metodológico del pretest en evaluaciones poligráficas diagnósticas (Específicas).",
+              "Desarrollo de preguntas para evaluaciones poligráficas diagnósticas (Específicas).",
+              "Proceso metodológico del pretest en evaluaciones poligráficas exploratorias (Preempleo - Rutina).",
+              "Desarrollo de preguntas para evaluaciones poligráficas Exploratorias (Preempleo - Rutina)."
+            ],
+            "title": "Evaluaciones diagnósticas y exploratorias",
+            "description": "Especialízate en el análisis de evaluaciones poligráficas diagnósticas y exploratorias, incluyendo el protocolo de preguntas específicas para casos de preempleo, rutina y temas investigativos."
+          }
+        ],
         "heroTagline": "¿Buscas perfeccionar tu técnica de entrevista pretest y dominar una de las la fases más críticas del examen poligráfico?",
         "contactPhone": "099 371 2790",
         "fichaTecnica": [
@@ -857,7 +888,50 @@
             "iconViewBox": "0 0 85 93"
           }
         ],
-        "customCards": [],
+        "customCards": [
+          {
+            "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Análisis de Respiración (RIN/RSC)",
+            "description": "Evaluación de patrones respiratorios como indicadores de estrés y respuesta fisiológica."
+          },
+          {
+            "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Análisis Cardiovascular (CVT/GSR)",
+            "description": "Interpretación de cambios en presión arterial y respuesta galvánica de la piel."
+          },
+          {
+            "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Zona de Comparación Relativa",
+            "description": "Técnica de comparación entre zonas de respuesta para identificar reacciones relevantes."
+          },
+          {
+            "icon": "/icons/Password-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Análisis de Artefactos",
+            "description": "Identificación y evaluación de respuestas causadas por movimiento o factores externos."
+          },
+          {
+            "icon": "/icons/Task-Checklist--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Scoring Automatizado",
+            "description": "Uso de software especializado para análisis cuantitativo y comparación de datos."
+          },
+          {
+            "icon": "/icons/Monitor-Find--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Interpretación Forense",
+            "description": "Estándares de análisis aplicados en contextos legales y periciales."
+          },
+          {
+            "icon": "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Reporte Técnico Profesional",
+            "description": "Redacción de conclusiones y dictámenes basados en análisis e interpretación de datos."
+          }
+        ],
         "heroTagline": "Transforme trazados fisiológicos en decisiones técnicas basadas en evidencia.",
         "contactPhone": "099 371 2790",
         "fichaTecnica": [
@@ -980,6 +1054,156 @@
       "template": "basico"
     },
     {
+      "id": "modelos-de-entrevista-investigativa",
+      "title": "Modelos de Entrevista Investigativa",
+      "desc": "Formación en técnicas de obtención de información de alta calidad, basadas en principios de respeto y efectividad forense.",
+      "image": "/formaciones/entrevista.webp",
+      "href": "/modelos-de-entrevista-investigativa",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "Esta formación especializada está diseñada para llevar tus habilidades al siguiente nivel, implementando los protocolos internacionales basados en ciencia que maximizan la obtención de información verídica y mitigan el riesgo de falsas confesiones.",
+        "template": "graficas",
+        "aboutDesc": "Modalidad: Presencial o en línea.",
+        "heroImage": "/formaciones/entrevista.webp",
+        "heroTitle": "Especialización en Modelos de Entrevista Investigativa",
+        "aboutTitle": "Ejes Temáticos",
+        "focusAreas": [
+          {
+            "items": [
+              "Evolución y Ciencia de la Entrevista Forense: Transición de los métodos coercitivos tradicionales hacia los modelos basados en evidencia científica.",
+              "El Modelo PEACE: Estructuración metodológica de la entrevista corporativa y judicial (Planificación, Explicación, Relato, Cierre y Evaluación).",
+              "El Protocolo ORBIT (OxForenses): Gestión de la resistencia, negociación táctica e interacciones con perfiles complejos o no cooperativos bajo principios humanitarios.",
+              "La Técnica SUE (Strategic Use of Evidence): Manejo y presentación estratégica de la evidencia para evaluar la consistencia del relato.",
+              "Entrevista Cognitiva (EC) y Entrevista Cognitiva Mejorada (MCI): Técnicas avanzadas de reactivación de huellas de memoria y transferencia de control para optimizar el recuerdo de testigos y víctimas."
+            ],
+            "title": "Ejes Temáticos"
+          }
+        ],
+        "customCards": [],
+        "heroTagline": "¿Buscas transformar tus entrevistas tradicionales en entrevistas de alta calidad basadas en el respeto y la efectividad forense?",
+        "contactPhone": "099 371 2790",
+        "fichaTecnica": [
+          {
+            "title": "⏱️ 30 horas de duración",
+            "description": "Formación de alto nivel con enfoque analítico."
+          },
+          {
+            "title": "📚 45 lecciones",
+            "description": "Lecciones especializadas en la materia."
+          },
+          {
+            "title": "📄 Plantillas de planeación y bitácoras de entrevista forense descargables.",
+            "description": "Material práctico descargable."
+          },
+          {
+            "title": "📊 +100 Diapositivas académicas descargables.",
+            "description": "Diapositivas académicas descargables."
+          },
+          {
+            "title": "✏️ Evaluaciones de caso práctico y Quizzes interactivos.",
+            "description": "Evaluaciones continuas interactiva."
+          },
+          {
+            "title": "📺 Acceso por 3 meses (pregrabado)",
+            "description": "Material pregrabado disponible."
+          },
+          {
+            "title": "✅ 30 días de garantía.",
+            "description": "Garantía de satisfacción total."
+          },
+          {
+            "title": "🔐 Acceso a la comunidad ONE TRUE.",
+            "description": "Acceso exclusivo a la red académica."
+          },
+          {
+            "title": "🎓 Diploma de finalización.",
+            "description": "Diploma oficial al concluir."
+          }
+        ],
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=0993712790",
+        "isComplementary": true,
+        "contactWhatsappText": "+593 98 129 6179"
+      },
+      "created_at": "2026-06-10T00:08:25.01446+00:00",
+      "template": "graficas"
+    },
+    {
+      "id": "elicitacion-conversacional",
+      "title": "Elicitación Conversacional",
+      "desc": "Formación avanzada en técnicas de obtención de información sutil y estratégica mediante interacciones fluidas y persuasivas.",
+      "image": "/formaciones/elicitacion.webp",
+      "href": "/elicitacion-conversacional",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "Esta formación especializada está diseñada para llevar tus habilidades al siguiente nivel, permitiéndote recopilar datos críticos sin levantar sospechas ni activar mecanismos defensivos en la administración de riesgos corporativos.",
+        "template": "graficas",
+        "aboutDesc": "Modalidad: Presencial o en línea.",
+        "heroImage": "/formaciones/elicitacion.webp",
+        "heroTitle": "Especialización en Elicitación Conversacional",
+        "aboutTitle": "Ejes Temáticos",
+        "focusAreas": [
+          {
+            "items": [
+              "Fundamentos y Arquitectura de la Elicitación: Diferencias entre interrogatorio, entrevista y obtención sutil de información en entornos de contrainteligencia.",
+              "Dinámicas de la Comunicación Persuasiva: El uso del rapport estratégico, empatía táctica y neutralización de barreras psicológicas conscientes.",
+              "Disparadores Cognitivos y Vulnerabilidades del Discurso: Explotación ética de tendencias humanas (necesidad de corregir, deseo de reconocimiento, validación social y sesgo de reciprocidad).",
+              "Ingeniería de Preguntas y Estímulos Conversacionales: Diseño de narrativas de apariencia natural para la activación micro-selectiva de memoria sin generar reactividad.",
+              "Estrategias Avanzadas de Extracción de información: Técnicas de asunción deliberada, declaraciones provocativas y contrastes de información para la confirmación de datos no públicos.",
+              "Detección de Inconsistencias en Flujos Pasivos: Identificación de indicadores de ocultamiento, desvío conductual y evasión en entornos no restrictivos.",
+              "Aplicación en la Gestión de Riesgos Corporativos: Protocolos de elicitación aplicados a auditorías de seguridad, debida diligencia (due diligence) e investigaciones internas."
+            ],
+            "title": "Ejes Temáticos"
+          }
+        ],
+        "customCards": [],
+        "heroTagline": "¿Quieres dominar la obtención estratégica de información mediante interacciones fluidas, estrategias de persuasión argumentativa y técnicas científicamente comprobadas?",
+        "contactPhone": "099 371 2790",
+        "fichaTecnica": [
+          {
+            "title": "⏱️ 15 horas de duración",
+            "description": "Formación de alto nivel con enfoque analítico."
+          },
+          {
+            "title": "📚 35 lecciones",
+            "description": "Lecciones especializadas en la materia."
+          },
+          {
+            "title": "📄 Guiones de práctica y matrices de planificación conversacional descargables.",
+            "description": "Material práctico descargable."
+          },
+          {
+            "title": "📊 +80 Diapositivas académicas descargables.",
+            "description": "Diapositivas académicas descargables."
+          },
+          {
+            "title": "✏️ Ejercicios y Quizzes interactivos.",
+            "description": "Evaluaciones continuas interactiva."
+          },
+          {
+            "title": "📺 Acceso por 3 meses (pregrabado)",
+            "description": "Material pregrabado disponible."
+          },
+          {
+            "title": "✅ 30 días de garantía.",
+            "description": "Garantía de satisfacción total."
+          },
+          {
+            "title": "🔐 Acceso a la comunidad ONE TRUE.",
+            "description": "Acceso exclusivo a la red académica."
+          },
+          {
+            "title": "🎓 Diploma de finalización.",
+            "description": "Diploma oficial al concluir."
+          }
+        ],
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=0993712790",
+        "isComplementary": true,
+        "contactWhatsappText": "+593 98 129 6179"
+      },
+      "created_at": "2026-06-10T00:06:44.999126+00:00",
+      "template": "graficas"
+    },
+    {
       "id": "control-de-calidad-en-poligrafia",
       "title": "Control de Calidad en Poligrafía",
       "desc": "Protocolos de auditoría, revisión por pares y mejora continua en la práctica profesional. Garantía de rigor técnico y cumplimiento normativo.",
@@ -989,7 +1213,7 @@
       "pageContent": {
         "heroDesc": "La excelencia en poligrafía se logra a través de una supervisión rigurosa. Este programa académico de 40 horas le otorga las competencias necesarias para auditar cada fase del proceso de evaluación, asegurando que los resultados sean técnica y legalmente incuestionables.",
         "template": "control-calidad",
-        "aboutDesc": "Cumplimos estrictamente con los 12 pilares fundamentales para la formación de un auditor de élite en control de calidad en poligrafía forense:",
+        "aboutDesc": "",
         "heroImage": "/servicios/1.webp",
         "heroTitle": "Especialización Avanzada: Control de Calidad en Poligrafía",
         "aboutTitle": "Ejes Temáticos:",
@@ -1085,242 +1309,6 @@
       "template": "control-calidad"
     },
     {
-      "id": "modelos-de-entrevista-investigativa",
-      "title": "Modelos de Entrevista Investigativa",
-      "desc": "Formación en técnicas de obtención de información de alta calidad, basadas en principios de respeto y efectividad forense.",
-      "image": "/formaciones/entrevista.webp",
-      "href": "/modelos-de-entrevista-investigativa",
-      "published": true,
-      "pageContent": {
-        "heroDesc": "Esta formación especializada está diseñada para llevar tus habilidades al siguiente nivel, implementando los protocolos internacionales basados en ciencia que maximizan la obtención de información verídica y mitigan el riesgo de falsas confesiones.",
-        "template": "graficas",
-        "aboutDesc": "Modalidad: Presencial o en línea.",
-        "heroImage": "/formaciones/entrevista.webp",
-        "heroTitle": "Especialización en Modelos de Entrevista Investigativa",
-        "aboutTitle": "Ejes Temáticos",
-        "focusAreas": [
-          {
-            "items": [
-              "Evolución y Ciencia de la Entrevista Forense: Transición de los métodos coercitivos tradicionales hacia los modelos basados en evidencia científica.",
-              "El Modelo PEACE: Estructuración metodológica de la entrevista corporativa y judicial (Planificación, Explicación, Relato, Cierre y Evaluación).",
-              "El Protocolo ORBIT (OxForenses): Gestión de la resistencia, negociación táctica e interacciones con perfiles complejos o no cooperativos bajo principios humanitarios.",
-              "La Técnica SUE (Strategic Use of Evidence): Manejo y presentación estratégica de la evidencia para evaluar la consistencia del relato.",
-              "Entrevista Cognitiva (EC) y Entrevista Cognitiva Mejorada (MCI): Técnicas avanzadas de reactivación de huellas de memoria y transferencia de control para optimizar el recuerdo de testigos y víctimas."
-            ],
-            "title": "Ejes Temáticos"
-          }
-        ],
-        "customCards": [
-          {
-            "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Análisis de Respiración (RIN/RSC)",
-            "description": "Evaluación de patrones respiratorios como indicadores de estrés y respuesta fisiológica."
-          },
-          {
-            "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Análisis Cardiovascular (CVT/GSR)",
-            "description": "Interpretación de cambios en presión arterial y respuesta galvánica de la piel."
-          },
-          {
-            "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Zona de Comparación Relativa",
-            "description": "Técnica de comparación entre zonas de respuesta para identificar reacciones relevantes."
-          },
-          {
-            "icon": "/icons/Password-Desktop--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Análisis de Artefactos",
-            "description": "Identificación y evaluación de respuestas causadas por movimiento o factores externos."
-          },
-          {
-            "icon": "/icons/Task-Checklist--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Scoring Automatizado",
-            "description": "Uso de software especializado para análisis cuantitativo y comparación de datos."
-          },
-          {
-            "icon": "/icons/Monitor-Find--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Interpretación Forense",
-            "description": "Estándares de análisis aplicados en contextos legales y periciales."
-          },
-          {
-            "icon": "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Reporte Técnico Profesional",
-            "description": "Redacción de conclusiones y dictámenes basados en análisis e interpretación de datos."
-          }
-        ],
-        "heroTagline": "¿Buscas transformar tus entrevistas tradicionales en entrevistas de alta calidad basadas en el respeto y la efectividad forense?",
-        "contactPhone": "099 371 2790",
-        "fichaTecnica": [
-          {
-            "title": "⏱️ 30 horas de duración",
-            "description": "Formación de alto nivel con enfoque analítico."
-          },
-          {
-            "title": "📚 45 lecciones",
-            "description": "Lecciones especializadas en la materia."
-          },
-          {
-            "title": "📄 Plantillas de planeación y bitácoras de entrevista forense descargables.",
-            "description": "Material práctico descargable."
-          },
-          {
-            "title": "📊 +100 Diapositivas académicas descargables.",
-            "description": "Diapositivas académicas descargables."
-          },
-          {
-            "title": "✏️ Evaluaciones de caso práctico y Quizzes interactivos.",
-            "description": "Evaluaciones continuas interactiva."
-          },
-          {
-            "title": "📺 Acceso por 3 meses (pregrabado)",
-            "description": "Material pregrabado disponible."
-          },
-          {
-            "title": "✅ 30 días de garantía.",
-            "description": "Garantía de satisfacción total."
-          },
-          {
-            "title": "🔐 Acceso a la comunidad ONE TRUE.",
-            "description": "Acceso exclusivo a la red académica."
-          },
-          {
-            "title": "🎓 Diploma de finalización.",
-            "description": "Diploma oficial al concluir."
-          }
-        ],
-        "contactWhatsapp": "https://api.whatsapp.com/send?phone=0993712790",
-        "isComplementary": true,
-        "contactWhatsappText": "+593 98 129 6179"
-      },
-      "created_at": "2026-06-10T00:08:25.01446+00:00",
-      "template": "graficas"
-    },
-    {
-      "id": "elicitacion-conversacional",
-      "title": "Elicitación Conversacional",
-      "desc": "Formación avanzada en técnicas de obtención de información sutil y estratégica mediante interacciones fluidas y persuasivas.",
-      "image": "/formaciones/elicitacion.webp",
-      "href": "/elicitacion-conversacional",
-      "published": true,
-      "pageContent": {
-        "heroDesc": "Esta formación especializada está diseñada para llevar tus habilidades al siguiente nivel, permitiéndote recopilar datos críticos sin levantar sospechas ni activar mecanismos defensivos en la administración de riesgos corporativos.",
-        "template": "graficas",
-        "aboutDesc": "Modalidad: Presencial o en línea.",
-        "heroImage": "/formaciones/elicitacion.webp",
-        "heroTitle": "Especialización en Elicitación Conversacional",
-        "aboutTitle": "Ejes Temáticos",
-        "focusAreas": [
-          {
-            "items": [
-              "Fundamentos y Arquitectura de la Elicitación: Diferencias entre interrogatorio, entrevista y obtención sutil de información en entornos de contrainteligencia.",
-              "Dinámicas de la Comunicación Persuasiva: El uso del rapport estratégico, empatía táctica y neutralización de barreras psicológicas conscientes.",
-              "Disparadores Cognitivos y Vulnerabilidades del Discurso: Explotación ética de tendencias humanas (necesidad de corregir, deseo de reconocimiento, validación social y sesgo de reciprocidad).",
-              "Ingeniería de Preguntas y Estímulos Conversacionales: Diseño de narrativas de apariencia natural para la activación micro-selectiva de memoria sin generar reactividad.",
-              "Estrategias Avanzadas de Extracción de información: Técnicas de asunción deliberada, declaraciones provocativas y contrastes de información para la confirmación de datos no públicos.",
-              "Detección de Inconsistencias en Flujos Pasivos: Identificación de indicadores de ocultamiento, desvío conductual y evasión en entornos no restrictivos.",
-              "Aplicación en la Gestión de Riesgos Corporativos: Protocolos de elicitación aplicados a auditorías de seguridad, debida diligencia (due diligence) e investigaciones internas."
-            ],
-            "title": "Ejes Temáticos"
-          }
-        ],
-        "customCards": [
-          {
-            "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Análisis de Respiración (RIN/RSC)",
-            "description": "Evaluación de patrones respiratorios como indicadores de estrés y respuesta fisiológica."
-          },
-          {
-            "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Análisis Cardiovascular (CVT/GSR)",
-            "description": "Interpretación de cambios en presión arterial y respuesta galvánica de la piel."
-          },
-          {
-            "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Zona de Comparación Relativa",
-            "description": "Técnica de comparación entre zonas de respuesta para identificar reacciones relevantes."
-          },
-          {
-            "icon": "/icons/Password-Desktop--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Análisis de Artefactos",
-            "description": "Identificación y evaluación de respuestas causadas por movimiento o factores externos."
-          },
-          {
-            "icon": "/icons/Task-Checklist--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Scoring Automatizado",
-            "description": "Uso de software especializado para análisis cuantitativo y comparación de datos."
-          },
-          {
-            "icon": "/icons/Monitor-Find--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Interpretación Forense",
-            "description": "Estándares de análisis aplicados en contextos legales y periciales."
-          },
-          {
-            "icon": "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Reporte Técnico Profesional",
-            "description": "Redacción de conclusiones y dictámenes basados en análisis e interpretación de datos."
-          }
-        ],
-        "heroTagline": "¿Quieres dominar la obtención estratégica de información mediante interacciones fluidas, estrategias de persuasión argumentativa y técnicas científicamente comprobadas?",
-        "contactPhone": "099 371 2790",
-        "fichaTecnica": [
-          {
-            "title": "⏱️ 15 horas de duración",
-            "description": "Formación de alto nivel con enfoque analítico."
-          },
-          {
-            "title": "📚 35 lecciones",
-            "description": "Lecciones especializadas en la materia."
-          },
-          {
-            "title": "📄 Guiones de práctica y matrices de planificación conversacional descargables.",
-            "description": "Material práctico descargable."
-          },
-          {
-            "title": "📊 +80 Diapositivas académicas descargables.",
-            "description": "Diapositivas académicas descargables."
-          },
-          {
-            "title": "✏️ Ejercicios y Quizzes interactivos.",
-            "description": "Evaluaciones continuas interactiva."
-          },
-          {
-            "title": "📺 Acceso por 3 meses (pregrabado)",
-            "description": "Material pregrabado disponible."
-          },
-          {
-            "title": "✅ 30 días de garantía.",
-            "description": "Garantía de satisfacción total."
-          },
-          {
-            "title": "🔐 Acceso a la comunidad ONE TRUE.",
-            "description": "Acceso exclusivo a la red académica."
-          },
-          {
-            "title": "🎓 Diploma de finalización.",
-            "description": "Diploma oficial al concluir."
-          }
-        ],
-        "contactWhatsapp": "https://api.whatsapp.com/send?phone=0993712790",
-        "isComplementary": true,
-        "contactWhatsappText": "+593 98 129 6179"
-      },
-      "created_at": "2026-06-10T00:06:44.999126+00:00",
-      "template": "graficas"
-    },
-    {
       "id": "evaluacion-forense-de-la-credibilidad",
       "title": "Evaluación Forense de la Credibilidad",
       "desc": "Análisis científico del testimonio y detección de indicadores de engaño mediante protocolos estandarizados.",
@@ -1349,50 +1337,7 @@
             "title": "Ejes Temáticos"
           }
         ],
-        "customCards": [
-          {
-            "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Análisis de Respiración (RIN/RSC)",
-            "description": "Evaluación de patrones respiratorios como indicadores de estrés y respuesta fisiológica."
-          },
-          {
-            "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Análisis Cardiovascular (CVT/GSR)",
-            "description": "Interpretación de cambios en presión arterial y respuesta galvánica de la piel."
-          },
-          {
-            "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Zona de Comparación Relativa",
-            "description": "Técnica de comparación entre zonas de respuesta para identificar reacciones relevantes."
-          },
-          {
-            "icon": "/icons/Password-Desktop--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Análisis de Artefactos",
-            "description": "Identificación y evaluación de respuestas causadas por movimiento o factores externos."
-          },
-          {
-            "icon": "/icons/Task-Checklist--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Scoring Automatizado",
-            "description": "Uso de software especializado para análisis cuantitativo y comparación de datos."
-          },
-          {
-            "icon": "/icons/Monitor-Find--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Interpretación Forense",
-            "description": "Estándares de análisis aplicados en contextos legales y periciales."
-          },
-          {
-            "icon": "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Reporte Técnico Profesional",
-            "description": "Redacción de conclusiones y dictámenes basados en análisis e interpretación de datos."
-          }
-        ],
+        "customCards": [],
         "heroTagline": "¿Buscas dominar el análisis científico del testimonio y aplicar las técnicas de evaluación de credibilidad más avanzadas del mundo?",
         "contactPhone": "099 371 2790",
         "fichaTecnica": [
@@ -1478,16 +1423,17 @@
   ],
   "podcasts": [
     {
-      "id": "4",
-      "title": "Ciencia y Poligrafía Parte #1",
-      "description": "Más allá de un simple polígrafo. Descubre cómo los estudios integrales de confiabilidad ofrecen una perspectiva completa de tu personal y cultura organizacional.",
-      "image": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/podcasts/1781064394703-podcast-hero-uc8sfh.webp",
-      "audioUrl": "https://open.spotify.com/episod e/5hh42wsH11ASovXtm7cRtH? si=7A8qO6nAScaDr6BI9w-amw",
-      "duration": "31 min",
-      "date": "25 de Mayo, 2024",
-      "topic": "Evaluación",
+      "id": "1",
+      "title": "¿Se puede detectar mentiras por medio del lenguaje corporal?",
+      "description": "En este episodio exploramos cómo los procesos de verificación y evaluación de confianza son fundamentales para el crecimiento sostenible de tu empresa. Descubre cómo proteger tu negocio desde adentro.",
+      "image": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/podcasts/1781064428014-podcast-hero-v0ge0n.webp",
+      "audioUrl": "https://open.spotify.com/episod e/3GpRmWnQYrrB7Qhk0qXPQf ?si=GC4n8iVETg0eqM5AX3W8w",
+      "duration": "32 min",
+      "date": "15 de Junio, 2024",
+      "topic": "Negocios",
       "published": true,
-      "created_at": "2026-06-06T16:11:48.610801+00:00"
+      "created_at": "2026-06-06T16:11:47.909986+00:00",
+      "sortOrder": 20
     },
     {
       "id": "5",
@@ -1499,43 +1445,8 @@
       "date": "18 de Mayo, 2024",
       "topic": "Valores",
       "published": true,
-      "created_at": "2026-06-06T16:11:48.839618+00:00"
-    },
-    {
-      "id": "1",
-      "title": "¿Se puede detectar mentiras por medio del lenguaje corporal?",
-      "description": "En este episodio exploramos cómo los procesos de verificación y evaluación de confianza son fundamentales para el crecimiento sostenible de tu empresa. Descubre cómo proteger tu negocio desde adentro.",
-      "image": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/podcasts/1781064428014-podcast-hero-v0ge0n.webp",
-      "audioUrl": "https://open.spotify.com/episod e/3GpRmWnQYrrB7Qhk0qXPQf ?si=GC4n8iVETg0eqM5AX3W8w",
-      "duration": "32 min",
-      "date": "15 de Junio, 2024",
-      "topic": "Negocios",
-      "published": true,
-      "created_at": "2026-06-06T16:11:47.909986+00:00"
-    },
-    {
-      "id": "3",
-      "title": "¿Cuántas etapas tiene una prueba de polígrafo?",
-      "description": "La regulación y el cumplimiento normativo son pilares de la confianza. Conoce las mejores prácticas para mantener tu empresa en línea con los estándares internacionales.",
-      "image": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/podcasts/1781064294442-podcast-hero-cc9umw.webp",
-      "audioUrl": "https://open.spotify.com/episo de/2YVRb0slgeyK3ht00OT27P ?si=f89813aa89ba445a",
-      "duration": "35 min",
-      "date": "1 de Junio, 2024",
-      "topic": "Legal",
-      "published": true,
-      "created_at": "2026-06-06T16:11:48.38234+00:00"
-    },
-    {
-      "id": "2",
-      "title": "Ciencia y Poligrafía Parte #3",
-      "description": "¿Sabes quién realmente es tu equipo? En este episodio analizamos cómo las pruebas de vetting previo a la contratación pueden ahorrarte problemas y pérdidas significativas.",
-      "image": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/podcasts/1781064352913-podcast-hero-x1ra1u.webp",
-      "audioUrl": "https://open.spotify.com/episo de/3wFj8LuoSGxHZp96bKlRfF ? si=Orn0Y05aQ060rTvgp6GzD g",
-      "duration": "28 min",
-      "date": "8 de Junio, 2024",
-      "topic": "RRHH",
-      "published": true,
-      "created_at": "2026-06-06T16:11:48.145634+00:00"
+      "created_at": "2026-06-06T16:11:48.839618+00:00",
+      "sortOrder": 10
     },
     {
       "id": "6",
@@ -1547,7 +1458,47 @@
       "date": "11 de Mayo, 2024",
       "topic": "Tecnología",
       "published": true,
-      "created_at": "2026-06-06T16:11:49.069331+00:00"
+      "created_at": "2026-06-06T16:11:49.069331+00:00",
+      "sortOrder": 40
+    },
+    {
+      "id": "2",
+      "title": "Ciencia y Poligrafía Parte #3",
+      "description": "¿Sabes quién realmente es tu equipo? En este episodio analizamos cómo las pruebas de vetting previo a la contratación pueden ahorrarte problemas y pérdidas significativas.",
+      "image": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/podcasts/1781064352913-podcast-hero-x1ra1u.webp",
+      "audioUrl": "https://open.spotify.com/episo de/3wFj8LuoSGxHZp96bKlRfF ? si=Orn0Y05aQ060rTvgp6GzD g",
+      "duration": "28 min",
+      "date": "8 de Junio, 2024",
+      "topic": "RRHH",
+      "published": true,
+      "created_at": "2026-06-06T16:11:48.145634+00:00",
+      "sortOrder": 50
+    },
+    {
+      "id": "3",
+      "title": "¿Cuántas etapas tiene una prueba de polígrafo?",
+      "description": "La regulación y el cumplimiento normativo son pilares de la confianza. Conoce las mejores prácticas para mantener tu empresa en línea con los estándares internacionales.",
+      "image": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/podcasts/1781064294442-podcast-hero-cc9umw.webp",
+      "audioUrl": "https://open.spotify.com/episo de/2YVRb0slgeyK3ht00OT27P ?si=f89813aa89ba445a",
+      "duration": "35 min",
+      "date": "1 de Junio, 2024",
+      "topic": "Legal",
+      "published": true,
+      "created_at": "2026-06-06T16:11:48.38234+00:00",
+      "sortOrder": 60
+    },
+    {
+      "id": "4",
+      "title": "Ciencia y Poligrafía Parte #1",
+      "description": "Más allá de un simple polígrafo. Descubre cómo los estudios integrales de confiabilidad ofrecen una perspectiva completa de tu personal y cultura organizacional.",
+      "image": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/podcasts/1781064394703-podcast-hero-uc8sfh.webp",
+      "audioUrl": "https://open.spotify.com/episod e/5hh42wsH11ASovXtm7cRtH? si=7A8qO6nAScaDr6BI9w-amw",
+      "duration": "31 min",
+      "date": "25 de Mayo, 2024",
+      "topic": "Evaluación",
+      "published": true,
+      "created_at": "2026-06-06T16:11:48.610801+00:00",
+      "sortOrder": 30
     }
   ],
   "calendarIntakes": [

@@ -10,6 +10,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://somosonetrue.com"),
   title: "One True Ecuador | Pruebas de Polígrafo y Vetting de Antecedentes",
   description: "Expertos en evaluación de confianza y poligrafía forense en Ecuador. Servicios de vetting de antecedentes, estudios de confiabilidad 360° y visitas domiciliarias en Quito y Guayaquil para proteger la seguridad de su empresa.",
   keywords: ["poligrafo ecuador", "vetting ecuador", "pruebas de poligrafo quito", "verificacion de antecedentes guayaquil", "estudios de confiabilidad", "seleccion de personal", "seguridad corporativa", "evaluacion de confianza", "One True"],

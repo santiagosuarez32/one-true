@@ -1,7 +1,7 @@
 const { createClient } = require('@supabase/supabase-js');
 const fs = require('fs');
 
-const envFile = fs.readFileSync('.env', 'utf8');
+const envFile = fs.readFileSync('.env.local', 'utf8');
 const env = {};
 envFile.split('\n').forEach(line => {
   const match = line.match(/^\s*([\w.-]+)\s*=\s*(.*)?\s*$/);
@@ -21,11 +21,12 @@ const supabaseKey = env.SUPABASE_SERVICE_ROLE_KEY || env.NEXT_PUBLIC_SUPABASE_AN
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 async function run() {
-  const { data, error } = await supabase.from('services').select('*').eq('id', 'prueba-de-honestidad-etica-y-valores').single();
+  const { data, error } = await supabase.from('podcasts').select('*');
   if (error) {
-    console.error('Error:', error);
+    console.error('Error fetching podcasts:', error);
   } else {
-    console.log(JSON.stringify(data, null, 2));
+    console.log('Successfully fetched podcasts. Sample podcast:', data[0]);
+    console.log('Columns on first item:', Object.keys(data[0] || {}));
   }
 }
 

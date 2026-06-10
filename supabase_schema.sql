@@ -52,6 +52,7 @@ CREATE TABLE IF NOT EXISTS public.podcasts (
     date TEXT NOT NULL,
     topic TEXT NOT NULL,
     published BOOLEAN NOT NULL DEFAULT false,
+    "sortOrder" INTEGER NOT NULL DEFAULT 0,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
 );
 

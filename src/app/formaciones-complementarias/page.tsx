@@ -6,6 +6,21 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import Link from "next/link";
 import ContactoFormAvanzados from "@/components/ContactoFormAvanzados";
 import { getCourses } from "@/lib/cms";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Formaciones Complementarias | Academia One True",
+  description: "Cursos y talleres complementarios sobre técnicas de entrevista, rapport y psicología del comportamiento. Programas basados en ciencia para investigadores y psicólogos forenses.",
+  keywords: ["tecnicas de entrevista", "psicologia del comportamiento", "evaluacion de credibilidad", "entrevistas basadas en ciencia", "psicologia forense", "criminologia"],
+  openGraph: {
+    title: "Formaciones Complementarias | Academia One True",
+    description: "Cursos y talleres complementarios sobre técnicas de entrevista, rapport y psicología del comportamiento. Programas basados en ciencia para investigadores y psicólogos forenses.",
+    url: "https://somosonetrue.com/formaciones-complementarias",
+    type: "website",
+  }
+};
+
+export const revalidate = 3600;
 
 const focusAreas = [
   {

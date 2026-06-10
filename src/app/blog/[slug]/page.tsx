@@ -3,6 +3,8 @@ import BlogPageTemplate from "@/components/BlogPageTemplate";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
+export const revalidate = 3600;
+
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
@@ -16,13 +18,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const blog = await getBlogBySlug(slug);
   if (blog) {
+    const title = blog.seoTitle || `${blog.title} | Blog One True`;
+    const cleanDescription = blog.seoDescription || blog.content.replace(/<[^>]*>/g, "").trim().substring(0, 160);
+    const keywords = blog.seoKeywords ? blog.seoKeywords.split(",").map(k => k.trim()) : undefined;
     return {
-      title: `${blog.title} | Blog One True`,
-      description: blog.content.substring(0, 160),
+      title,
+      description: cleanDescription,
+      keywords,
       openGraph: {
-        title: `${blog.title} | Blog One True`,
-        description: blog.content.substring(0, 160),
+        title,
+        description: cleanDescription,
         images: [{ url: blog.image }],
+        url: `https://somosonetrue.com/blog/${slug}`,
+        type: "article",
       }
     };
   }

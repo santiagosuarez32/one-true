@@ -27,32 +27,46 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   
   const service = await getServiceBySlug(slug);
   if (service) {
+    const title = service.seoTitle || `${service.title} | One True Ecuador`;
+    const description = service.seoDescription || service.desc;
+    const keywords = service.seoKeywords ? service.seoKeywords.split(",").map(k => k.trim()) : undefined;
     return {
-      title: `${service.title} | One True Ecuador`,
-      description: service.desc,
+      title,
+      description,
+      keywords,
       openGraph: {
-        title: `${service.title} | One True Ecuador`,
-        description: service.desc,
+        title,
+        description,
         images: [{ url: service.image }],
+        url: `https://somosonetrue.com/${slug}`,
+        type: "website",
       }
     };
   }
 
   const course = await getCourseBySlug(slug);
   if (course) {
+    const title = course.seoTitle || `${course.title} | Academia One True`;
+    const description = course.seoDescription || course.desc;
+    const keywords = course.seoKeywords ? course.seoKeywords.split(",").map(k => k.trim()) : undefined;
     return {
-      title: `${course.title} | Academia One True`,
-      description: course.desc,
+      title,
+      description,
+      keywords,
       openGraph: {
-        title: `${course.title} | Academia One True`,
-        description: course.desc,
+        title,
+        description,
         images: [{ url: course.image }],
+        url: `https://somosonetrue.com/${slug}`,
+        type: "website",
       }
     };
   }
 
   return {};
 }
+
+export const revalidate = 3600;
 
 export default async function DynamicSlugPage({ params }: PageProps) {
   const { slug } = await params;
@@ -67,7 +81,7 @@ export default async function DynamicSlugPage({ params }: PageProps) {
   // Try to find as course
   const course = await getCourseBySlug(slug);
   if (course && course.published) {
-    const template = course.template || (
+    const template = course.template || course.pageContent?.template || (
       course.id === "curso-avanzado-tecnicas-poligraficas" || course.id === "tecnicas-poligraficas" ? "tecnicas" :
       course.id === "curso-basico-de-poligrafia" || course.id === "curso-basico-en-poligrafia" ? "basico" :
       course.id === "entrevista-pretest-y-postest" || course.id === "entrevista-pretest" ? "pretest" :
