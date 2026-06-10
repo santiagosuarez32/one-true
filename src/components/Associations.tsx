@@ -61,7 +61,7 @@ export default function Associations() {
 
         {/* Text / H2 Title */}
         <h2
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] leading-tight sm:leading-snug md:leading-[52px]"
+          className="text-fluid-h2"
           style={{
             margin: "0 auto 32px auto",
             padding: 0,
@@ -70,7 +70,7 @@ export default function Associations() {
             textAlign: "center",
             fontFamily: "var(--font-montserrat), sans-serif",
             boxSizing: "border-box",
-            maxWidth: "850px",
+            maxWidth: "800px",
             width: "100%",
           }}
         >

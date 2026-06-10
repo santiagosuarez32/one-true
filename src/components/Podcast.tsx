@@ -89,7 +89,7 @@ export default function Podcast() {
           </div>
           
           <h2
-            className="text-xl sm:text-2xl lg:text-[32px]"
+            className="text-fluid-h3"
             style={{
               margin: 0,
               padding: 0,

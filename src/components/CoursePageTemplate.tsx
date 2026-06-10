@@ -64,7 +64,7 @@ export default function CoursePageTemplate({ course }: { course: Course }) {
             </div>
 
             <h1
-              className="mb-6 !text-3xl sm:!text-4xl md:!text-5xl lg:!text-[52px] font-semibold"
+              className="mb-6 text-fluid-h1 font-semibold"
               style={{
                 textAlign: "start",
                 fontFamily: "var(--font-montserrat), sans-serif",
@@ -258,8 +258,8 @@ export default function CoursePageTemplate({ course }: { course: Course }) {
           </div>
 
           <h2
-            className="text-2xl sm:text-3xl md:text-[36px] font-bold text-[#48255A] mb-12"
-            style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.2" }}
+            className="text-fluid-h2 font-bold text-[#48255A] mb-12"
+            style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
           >
             Características Generales del Curso
           </h2>

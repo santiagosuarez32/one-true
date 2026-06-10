@@ -124,13 +124,15 @@ export default function WhyChooseUs() {
 
         {/* Title Heading - Forced color to white to completely bypass aggressive global CSS style leaks */}
         <h2 
-          className="max-w-4xl mb-12 text-2xl sm:text-3xl md:text-4xl lg:text-[40px] leading-tight sm:leading-snug md:leading-[52px]" 
+          className="text-fluid-h2" 
           style={{
             color: "#FFFFFF",
             fontWeight: "bold",
             textAlign: "center",
             fontFamily: "var(--font-montserrat), sans-serif",
-            margin: "0px 0px 48px 0px",
+            margin: "0 auto 48px auto",
+            maxWidth: "800px",
+            width: "100%",
           }}
         >
           Información que impacta la contratación de las empresas

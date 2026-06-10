@@ -15,7 +15,7 @@ interface CounterProps {
   fontSize?: string;
 }
 
-function AnimatedCounter({ end, suffix = "", duration = 2000, fontSize = "42px" }: CounterProps) {
+function AnimatedCounter({ end, suffix = "", duration = 2000, fontSize = "clamp(1.75rem, 5vw, 2.5rem)" }: CounterProps) {
   const [count, setCount] = useState(0);
   const elementRef = useRef<HTMLDivElement>(null);
   const [hasStarted, setHasStarted] = useState(false);
@@ -146,7 +146,7 @@ export default function ServicePageTemplate({ service, allServices }: { service:
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-start md:items-center justify-center overflow-hidden pt-32 pb-24 bg-[#700FA3]">
+      <section className="relative min-h-[80vh] flex items-start md:items-center justify-center overflow-hidden pt-28 sm:pt-32 md:pt-32 pb-20 bg-[#700FA3]">
         <div 
           className="absolute inset-0 z-0 pointer-events-none"
           style={{
@@ -180,7 +180,7 @@ export default function ServicePageTemplate({ service, allServices }: { service:
             </div>
 
             <h1
-              className="mb-6 !text-3xl sm:!text-4xl md:!text-5xl lg:!text-[52px] font-semibold"
+              className="mb-6 !text-[24px] sm:!text-[32px] md:!text-fluid-h1 font-semibold"
               style={{
                 textAlign: "start",
                 fontFamily: "var(--font-montserrat), sans-serif",
@@ -195,7 +195,7 @@ export default function ServicePageTemplate({ service, allServices }: { service:
             </h1>
 
             <p
-              className="mb-6 opacity-95 !text-sm sm:!text-base md:!text-lg font-medium text-white"
+              className="mb-6 opacity-95 !text-[13px] sm:!text-base md:!text-lg font-medium text-white"
               style={{
                 textAlign: "start",
                 fontFamily: "var(--font-montserrat), sans-serif",
@@ -207,7 +207,7 @@ export default function ServicePageTemplate({ service, allServices }: { service:
 
             {/* Render premium counters if it is the polygraph template */}
             {service.template === "poligrafo" && (
-              <div className="flex flex-wrap items-center gap-10 mt-6 mb-8 border-t border-white/10 pt-6 w-full max-w-xl">
+              <div className="grid grid-cols-2 gap-6 sm:gap-10 mt-6 mb-6 border-t border-white/10 pt-6 w-full max-w-xl">
                 <div className="flex flex-col text-left">
                   <AnimatedCounter end={95} suffix="%" />
                   <span style={{ color: "#FFFFFF", fontSize: "13px", fontWeight: "600", fontFamily: "var(--font-montserrat), sans-serif", marginTop: "4px", opacity: 0.9 }}>
@@ -241,14 +241,17 @@ export default function ServicePageTemplate({ service, allServices }: { service:
       <section className="bg-white py-20">
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16">
           <div className="flex flex-col items-center text-center mb-16">
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center justify-center gap-3 mb-4">
               <div className="w-10 h-[3px] bg-[#700FA3]" />
-              <span style={{ letterSpacing: "0.5px", fontSize: "18px", color: "#700FA3", fontWeight: "600", fontFamily: "var(--font-montserrat), sans-serif" }}>
+              <span
+                className="text-sm md:text-[18px] text-left"
+                style={{ letterSpacing: "0.5px", color: "#700FA3", fontWeight: "600", fontFamily: "var(--font-montserrat), sans-serif" }}
+              >
                 {pageContent.aboutTitle}
               </span>
             </div>
             
-            <h2 style={{ fontSize: "clamp(24px, 5vw, 36px)", fontWeight: "bold", lineHeight: "46px", color: "#48255A", fontFamily: "var(--font-montserrat), sans-serif", marginTop: "10px" }}>
+            <h2 className="text-fluid-h2 max-w-3xl mx-auto" style={{ fontWeight: "bold", color: "#48255A", fontFamily: "var(--font-montserrat), sans-serif", marginTop: "10px" }}>
               {pageContent.aboutDesc}
             </h2>
           </div>
@@ -310,12 +313,15 @@ export default function ServicePageTemplate({ service, allServices }: { service:
           <div className="w-full lg:w-1/2 flex flex-col items-start lg:pl-10">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-[2px] bg-[#700FA3]" />
-              <span style={{ letterSpacing: "0.5px", fontSize: "16px", color: "#700FA3", fontWeight: "600", fontFamily: "var(--font-montserrat), sans-serif" }}>
+              <span
+                className="text-sm md:text-[16px]"
+                style={{ letterSpacing: "0.5px", color: "#700FA3", fontWeight: "600", fontFamily: "var(--font-montserrat), sans-serif" }}
+              >
                 Beneficios
               </span>
             </div>
             
-            <h2 className="text-2xl sm:text-3xl md:text-[36px] mb-6 font-bold text-[#48255A]" style={{ lineHeight: "1.2", fontFamily: "var(--font-montserrat), sans-serif" }}>
+            <h2 className="text-fluid-h2 mb-6 font-bold text-[#48255A] max-w-3xl" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
               {pageContent.whyTitle}
             </h2>
 
@@ -382,13 +388,16 @@ export default function ServicePageTemplate({ service, allServices }: { service:
         <section className="bg-white py-24 overflow-hidden relative">
           <div className="mx-auto max-w-6xl lg:max-w-7xl xl:max-w-[1350px] px-8 md:px-12 lg:px-16 relative z-10">
             <div className="mb-16 flex flex-col items-center text-center">
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center justify-center gap-3 mb-4">
                 <div className="w-12 h-[3px] bg-[#700FA3]" />
-                <span style={{ letterSpacing: "0.5px", fontSize: "18px", color: "#700FA3", fontWeight: "600", fontFamily: "var(--font-montserrat), sans-serif" }}>
+                <span
+                  className="text-sm md:text-[18px] text-left"
+                  style={{ letterSpacing: "0.5px", color: "#700FA3", fontWeight: "600", fontFamily: "var(--font-montserrat), sans-serif" }}
+                >
                   Servicios Integrales
                 </span>
               </div>
-              <h2 className="text-2xl sm:text-3xl md:text-[36px] font-bold text-[#48255A]" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.2" }}>
+              <h2 className="text-fluid-h2 font-bold text-[#48255A] max-w-3xl mx-auto" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                 Otras Soluciones
               </h2>
             </div>

@@ -79,7 +79,7 @@ export default function Hero() {
   return (
     <section 
       ref={heroRef} 
-      className="relative min-h-screen md:h-screen flex items-start md:items-center justify-center overflow-hidden pt-24 sm:pt-28 md:pt-0"
+      className="relative min-h-screen md:h-screen flex items-start md:items-center justify-center overflow-hidden pt-36 sm:pt-40 md:pt-0"
     >
       {/* Responsive background behaviour: on mobile/tablet the artwork is shown
           full-bleed (cover, centred) so it never collapses to a tiny strip; on
@@ -128,7 +128,7 @@ export default function Hero() {
       <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] px-4 sm:px-8 md:px-12 lg:px-16 z-10 flex justify-start items-center mt-6 md:mt-16">
         <div 
           ref={textContainerRef}
-          className="relative w-full max-w-xl md:max-w-2xl text-left min-h-[460px] sm:min-h-[380px] md:min-h-[290px] flex items-center"
+          className="relative w-full max-w-xl md:max-w-2xl text-left min-h-[340px] sm:min-h-[290px] md:min-h-[270px] flex items-center"
         >
           {slides.map((slide, idx) => (
             <div
@@ -142,7 +142,7 @@ export default function Hero() {
               {/* Slide Title */}
               {slide.id === 1 ? (
                 <h1 
-                  className="mb-6 !text-2xl sm:!text-3xl md:!text-4xl lg:!text-[46px] leading-[1.2] md:leading-[1.1]"
+                  className="mb-6 !text-[20px] sm:!text-[28px] md:!text-fluid-h1 leading-[1.2] md:leading-[1.1]"
                   style={{
                     WebkitTextSizeAdjust: "100%",
                     WebkitTapHighlightColor: "transparent",
@@ -159,7 +159,7 @@ export default function Hero() {
                 </h1>
               ) : (
                 <h2 
-                  className="mb-6 !text-2xl sm:!text-3xl md:!text-4xl lg:!text-[46px] leading-[1.2] md:leading-[1.1]"
+                  className="mb-6 !text-[20px] sm:!text-[28px] md:!text-fluid-h1 leading-[1.2] md:leading-[1.1]"
                   style={{
                     WebkitTextSizeAdjust: "100%",
                     WebkitTapHighlightColor: "transparent",
@@ -178,7 +178,7 @@ export default function Hero() {
 
               {/* Slide Subtitle */}
               <p 
-                className="mb-10 !text-sm sm:!text-base md:!text-lg leading-relaxed md:leading-[30px]"
+                className="mb-10 !text-[13px] sm:!text-base md:!text-lg leading-relaxed md:leading-[30px]"
                 style={{
                   WebkitTextSizeAdjust: "100%",
                   WebkitTapHighlightColor: "transparent",

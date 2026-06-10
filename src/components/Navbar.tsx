@@ -180,7 +180,7 @@ export default function Navbar() {
       `}} />
       <div className="w-full max-w-[1600px] mx-auto flex items-center justify-between relative">
         {/* Left Column: Logo */}
-        <div className="w-[170px] sm:w-[180px] lg:w-[220px] flex items-center justify-start shrink-0">
+        <div className="w-[150px] sm:w-[160px] lg:w-[170px] xl:w-[200px] 2xl:w-[220px] flex items-center justify-start shrink-0">
           <a href="/" aria-label="Ir a la página de inicio de One True" className="inline-flex">
             <img src="/navbar.webp" alt="One True Ecuador Logo" className="h-14 sm:h-14 md:h-18 w-auto object-contain" />
           </a>
@@ -190,12 +190,12 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center justify-center flex-1">
           <nav className="flex items-center">
             {/* Inicio */}
-            <a href="/" style={navLinkStyle} className="hover:!text-[#FFC107] transition-colors duration-300 lg:!text-[13px] xl:!text-[15px] 2xl:!text-[16px] lg:!px-1.5 xl:!px-3 2xl:!px-3.5">
+            <a href="/" style={navLinkStyle} className="hover:!text-[#FFC107] transition-colors duration-300 lg:!text-[11px] xl:!text-[14px] 2xl:!text-[16px] lg:!px-1 xl:!px-2.5 2xl:!px-3.5">
               Inicio
             </a>
 
             {/* Pruebas Poligráficas */}
-            <a href="/pruebas-poligraficas" style={navLinkStyle} className="hover:!text-[#FFC107] transition-colors duration-300 lg:!text-[13px] xl:!text-[15px] 2xl:!text-[16px] lg:!px-1.5 xl:!px-3 2xl:!px-3.5">
+            <a href="/pruebas-poligraficas" style={navLinkStyle} className="hover:!text-[#FFC107] transition-colors duration-300 lg:!text-[11px] xl:!text-[14px] 2xl:!text-[16px] lg:!px-1 xl:!px-2.5 2xl:!px-3.5">
               Pruebas Poligráficas
             </a>
             
@@ -205,7 +205,7 @@ export default function Navbar() {
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
-              <a href="/#services" style={navLinkStyle} className="flex items-center hover:!text-[#FFC107] transition-colors duration-300 lg:!text-[13px] xl:!text-[15px] 2xl:!text-[16px] lg:!px-1.5 xl:!px-3 2xl:!px-3.5">
+              <a href="/#services" style={navLinkStyle} className="flex items-center hover:!text-[#FFC107] transition-colors duration-300 lg:!text-[11px] xl:!text-[14px] 2xl:!text-[16px] lg:!px-1 xl:!px-2.5 2xl:!px-3.5">
                 Evaluaciones 
                 <svg 
                   className={`w-3 h-3 ml-1.5 transition-transform duration-300 ${isDropdownOpen ? "rotate-180" : ""}`}
@@ -249,7 +249,7 @@ export default function Navbar() {
               onMouseEnter={() => setIsAcademiaOpen(true)}
               onMouseLeave={() => setIsAcademiaOpen(false)}
             >
-              <a href="/#service-7" style={navLinkStyle} className="flex items-center hover:!text-[#FFC107] transition-colors duration-300 lg:!text-[13px] xl:!text-[15px] 2xl:!text-[16px] lg:!px-1.5 xl:!px-3 2xl:!px-3.5">
+              <a href="/#service-7" style={navLinkStyle} className="flex items-center hover:!text-[#FFC107] transition-colors duration-300 lg:!text-[11px] xl:!text-[14px] 2xl:!text-[16px] lg:!px-1 xl:!px-2.5 2xl:!px-3.5">
                 Academia 
                 <svg 
                   className={`w-3 h-3 ml-1.5 transition-transform duration-300 ${isAcademiaOpen ? "rotate-180" : ""}`}
@@ -287,7 +287,7 @@ export default function Navbar() {
             </div>
 
             {/* Comunidad */}
-            <a href="/comunidad" style={navLinkStyle} className="hover:!text-[#FFC107] transition-colors duration-300 lg:!text-[13px] xl:!text-[15px] 2xl:!text-[16px] lg:!px-1.5 xl:!px-3 2xl:!px-3.5">
+            <a href="/comunidad" style={navLinkStyle} className="hover:!text-[#FFC107] transition-colors duration-300 lg:!text-[11px] xl:!text-[14px] 2xl:!text-[16px] lg:!px-1 xl:!px-2.5 2xl:!px-3.5">
               Comunidad
             </a>
 
@@ -297,7 +297,7 @@ export default function Navbar() {
               onMouseEnter={() => setIsAprendeOpen(true)}
               onMouseLeave={() => setIsAprendeOpen(false)}
             >
-              <a href="/#recursos" style={navLinkStyle} className="flex items-center hover:!text-[#FFC107] transition-colors duration-300 lg:!text-[13px] xl:!text-[15px] 2xl:!text-[16px] lg:!px-1.5 xl:!px-3 2xl:!px-3.5">
+              <a href="/#recursos" style={navLinkStyle} className="flex items-center hover:!text-[#FFC107] transition-colors duration-300 lg:!text-[11px] xl:!text-[14px] 2xl:!text-[16px] lg:!px-1 xl:!px-2.5 2xl:!px-3.5">
                 Aprende gratis 
                 <svg 
                   className={`w-3 h-3 ml-1.5 transition-transform duration-300 ${isAprendeOpen ? "rotate-180" : ""}`}
@@ -340,7 +340,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4 justify-end shrink-0">
           <a
             href="/cotiza"
-            className="hidden lg:block px-8 py-3 rounded transition-all hover:brightness-110 shadow-lg text-sm whitespace-nowrap"
+            className="hidden lg:block rounded transition-all hover:brightness-110 shadow-lg whitespace-nowrap lg:px-4 lg:py-2 lg:text-xs xl:px-6 xl:py-2.5 xl:text-sm 2xl:px-8 2xl:py-3 2xl:text-base"
             style={{
               fontFamily: "var(--font-montserrat), sans-serif",
               lineHeight: "1",

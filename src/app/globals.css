@@ -533,6 +533,25 @@ p, span, li, a {
     transition-delay: 0s!important;
     transition-duration: 0s!important;
     box-sizing: border-box;
-    transition: background .3s,border .3s,border-radius .3s,box-shadow .3s,transform var(--e-transform-transition-duration,.4s); 
+  }
 }
+
+@utility text-fluid-h1 {
+  font-size: clamp(2rem, 4.5vw, 3rem) !important;
 }
+@utility text-fluid-h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2.125rem) !important;
+}
+@utility text-fluid-h3 {
+  font-size: clamp(1.375rem, 2.5vw, 1.875rem) !important;
+}
+@utility text-fluid-h4 {
+  font-size: clamp(1.25rem, 2vw, 1.5rem) !important;
+}
+@utility text-body-lg {
+  font-size: clamp(1.125rem, 1.8vw, 1.25rem) !important;
+}
+@utility text-body {
+  font-size: clamp(1rem, 1.5vw, 1.125rem) !important;
+}
+

@@ -93,7 +93,7 @@ export default function BlogPageTemplate({ blog, allBlogs }: { blog: Blog; allBl
           </div>
 
           <h1
-            className="max-md:text-2xl! text-3xl md:text-5xl font-bold mb-6"
+            className="text-fluid-h1 font-bold mb-6"
             style={{
               color: "#48255A",
               fontFamily: "var(--font-montserrat), sans-serif",

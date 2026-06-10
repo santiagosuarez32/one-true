@@ -112,9 +112,13 @@ export default function Resources({ initialArticles = [] }: { initialArticles?: 
         {/* Header Section */}
         <div className="flex flex-col items-center text-center mb-16">
           <h2
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#48255A] mb-6"
+            className="text-fluid-h2"
             style={{
               fontFamily: "var(--font-montserrat), sans-serif",
+              fontWeight: "bold",
+              color: "#48255A",
+              margin: "0 auto 24px auto",
+              maxWidth: "800px"
             }}
           >
             Aprende con nuestros recursos gratuitos
@@ -151,7 +155,7 @@ export default function Resources({ initialArticles = [] }: { initialArticles?: 
             </div>
             
             <h2
-              className="text-2xl sm:text-3xl lg:text-[32px]"
+              className="text-fluid-h3"
               style={{
                 margin: 0,
                 padding: 0,

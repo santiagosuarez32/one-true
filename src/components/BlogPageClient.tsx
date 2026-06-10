@@ -140,7 +140,7 @@ export default function BlogPageClient({ initialBlogs }: { initialBlogs: Blog[] 
             </div>
 
             <h1
-              className="mb-6 text-3xl! sm:text-4xl! md:text-5xl! lg:text-6xl! font-semibold"
+              className="mb-6 text-fluid-h1 font-semibold"
               style={{
                 textAlign: "start",
                 fontFamily: "var(--font-montserrat), sans-serif",

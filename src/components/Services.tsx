@@ -137,15 +137,15 @@ export default function Services({ initialServices = [] }: { initialServices?: a
 
           {/* H2 Title */}
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] leading-tight sm:leading-snug md:leading-[52px]"
+            className="text-fluid-h2"
             style={{
-              margin: 0,
+              margin: "0 auto",
               padding: 0,
               fontWeight: "bold",
               color: "#48255A",
               fontFamily: "var(--font-montserrat), sans-serif",
               boxSizing: "border-box",
-              maxWidth: "850px",
+              maxWidth: "800px",
               width: "100%",
             }}
           >
@@ -220,10 +220,10 @@ export default function Services({ initialServices = [] }: { initialServices?: a
                 <a
                   href={item.href}
                   aria-label={`${item.cta} para ${item.title}`}
-                  className="service-cta-btn px-4 py-2 bg-[#FFC107] text-[#411A56] font-bold rounded transition-colors duration-300 text-xs whitespace-nowrap w-auto self-start mt-auto group-hover:bg-[#700FA3] group-hover:text-[#FFC107] flex items-center justify-center"
+                  className="service-cta-btn px-4 py-2 bg-[#FFC107] text-[#411A56] font-bold rounded transition-colors duration-300 text-xs w-auto self-start mt-auto group-hover:bg-[#700FA3] group-hover:text-[#FFC107] inline-flex items-center justify-center whitespace-nowrap"
                   style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                 >
-                  {item.cta}
+                  {item.cta === "Ver detalles" ? "Ver detalles del servicio" : item.cta}
                 </a>
               </div>
             </div>

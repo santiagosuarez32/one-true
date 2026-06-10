@@ -50,7 +50,7 @@ export default function CotizaPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-[#700FA3]">
+      <section className="relative min-h-screen flex items-center justify-center overflow-x-hidden pt-32 pb-20 lg:pt-36 lg:pb-20 bg-[#700FA3]">
         <div
           className="absolute inset-0 z-0 pointer-events-none"
           style={{
@@ -66,8 +66,8 @@ export default function CotizaPage() {
           className="absolute inset-0 w-full h-full object-cover object-right-top z-0 opacity-45 mix-blend-overlay pointer-events-none -scale-x-100"
         />
 
-        <div className="w-full max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="w-full max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-8 xl:px-16 z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-8 xl:gap-12 items-center">
             {/* Left Content */}
             <div className="text-left">
               <div className="flex items-center gap-3 mb-6">
@@ -85,7 +85,7 @@ export default function CotizaPage() {
               </div>
 
               <h1
-                className="mb-6 !text-3xl sm:!text-4xl md:!text-5xl font-bold"
+                className="mb-6 text-fluid-h1 font-bold"
                 style={{
                   fontFamily: "var(--font-montserrat), sans-serif",
                   color: "#FFFFFF",
@@ -118,7 +118,7 @@ export default function CotizaPage() {
             </div>
 
             {/* Right Form */}
-            <div className="bg-white rounded p-4 sm:p-6 shadow-[0_25px_60px_rgba(0,0,0,0.35)] border border-neutral-100 relative overflow-hidden transition-all duration-500">
+            <div className="bg-white rounded p-4 sm:p-6 lg:p-5 xl:p-6 shadow-[0_25px_60px_rgba(0,0,0,0.35)] border border-neutral-100 relative overflow-hidden transition-all duration-500">
               {!formSubmitted ? (
                 <form
                   onSubmit={handleSubmit}

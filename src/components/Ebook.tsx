@@ -1,11 +1,47 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function Ebook() {
   const cardRef = useRef<HTMLDivElement>(null);
+
+  const [email, setEmail] = useState("");
+  const [whatsapp, setWhatsapp] = useState("");
+  const [puesto, setPuesto] = useState("");
+  const [rubro, setRubro] = useState("");
+  const [cantPersonas, setCantPersonas] = useState("");
+
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState(false);
+  const [ebookPdfUrl, setEbookPdfUrl] = useState("/ebook-poligrafia.pdf");
+  const [ebookFileName, setEbookFileName] = useState("One-True-Guia-Poligrafia-Confiable.pdf");
+
+  useEffect(() => {
+    // Fetch ebook settings dynamically
+    (async () => {
+      try {
+        const res = await fetch("/api/cms");
+        if (res.ok) {
+          const data = await res.json();
+          if (data.settings) {
+            const found = data.settings.find((s: any) => s.key === "ebook_pdf_url");
+            if (found && found.value) {
+              setEbookPdfUrl(found.value);
+            }
+            const foundName = data.settings.find((s: any) => s.key === "ebook_filename");
+            if (foundName && foundName.value) {
+              setEbookFileName(foundName.value);
+            }
+          }
+        }
+      } catch (err) {
+        console.error("Failed to load ebook settings:", err);
+      }
+    })();
+  }, []);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -30,6 +66,78 @@ export default function Ebook() {
     });
     return () => ctx.revert();
   }, []);
+
+  const triggerDownload = async () => {
+    // Normalize download filename and ensure it has a proper extension
+    let downloadName = ebookFileName.trim();
+    if (!downloadName) {
+      downloadName = "One-True-Guia-Poligrafia-Confiable.pdf";
+    }
+    if (!/\.(pdf|doc|docx)$/i.test(downloadName)) {
+      downloadName += ".pdf";
+    }
+
+    try {
+      const fileResponse = await fetch(ebookPdfUrl);
+      if (!fileResponse.ok) throw new Error("Error de red al obtener el archivo.");
+      const blob = await fileResponse.blob();
+      const blobUrl = window.URL.createObjectURL(blob);
+      
+      const link = document.createElement("a");
+      link.href = blobUrl;
+      link.download = downloadName;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(blobUrl);
+    } catch (err) {
+      console.warn("Blob download failed, falling back to direct link", err);
+      const link = document.createElement("a");
+      link.href = ebookPdfUrl;
+      link.target = "_blank";
+      link.download = downloadName;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+
+    try {
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          whatsapp,
+          puesto,
+          rubro,
+          cantPersonas,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Ocurrió un error al registrar tus datos.");
+      }
+
+      setSuccess(true);
+      await triggerDownload();
+    } catch (err: any) {
+      console.error("Form submit error:", err);
+      setError(err.message || "Error al conectar con el servidor.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section id="ebook" className="bg-white py-16 md:py-24 relative overflow-hidden scroll-mt-20">
       {/* Decorative background blobs matching the screenshot vibe but with brand colors */}
@@ -58,27 +166,24 @@ export default function Ebook() {
           </div>
           
           <h2
-            className="text-2xl sm:text-3xl lg:text-[40px]"
+            className="text-fluid-h2"
             style={{
-              margin: 0,
+              margin: "0 auto 24px 0",
               padding: 0,
               fontWeight: "bold",
               lineHeight: "1.25",
               color: "#48255A",
               fontFamily: "var(--font-montserrat), sans-serif",
-              marginBottom: "24px",
+              maxWidth: "800px",
+              width: "100%",
             }}
           >
             Guía práctica para saber si estoy contratando un servicio de poligrafía confiable.
           </h2>
 
-          <p className="text-lg text-neutral-600 mb-4 leading-relaxed max-w-lg">
+          <p className="text-lg text-neutral-600 mb-4 leading-relaxed max-w-lg" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: "700" }}>
             Descarga nuestro Ebook gratuito con la entrega del mes. Nuestro equipo trabaja constantemente para seguir trayendo nuevos ebooks gratuitos una vez al mes.
           </p>
-
-
-
-
         </div>
 
         {/* Right Column: Form Card */}
@@ -97,47 +202,132 @@ export default function Ebook() {
             </div>
 
             {/* Form */}
-            <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
-              <input 
-                type="email" 
-                placeholder="Correo" 
-                className="w-full px-5 py-4 rounded border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all"
-                required
-              />
-              <input 
-                type="tel" 
-                placeholder="WhatsApp" 
-                className="w-full px-5 py-4 rounded border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all"
-                required
-              />
-              <input 
-                type="text" 
-                placeholder="¿Qué puesto tienes en tu empresa?" 
-                className="w-full px-5 py-4 rounded border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all"
-                required
-              />
-              <input 
-                type="text" 
-                placeholder="¿A qué se dedica tu empresa?" 
-                className="w-full px-5 py-4 rounded border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all"
-                required
-              />
-              <input 
-                type="text" 
-                placeholder="¿Cuántas personas trabajan en tu empresa?" 
-                className="w-full px-5 py-4 rounded border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all"
-                required
-              />
-              
-              <button 
-                type="submit"
-                aria-label="Descargar u obtener Ebook gratuito de Poligrafía"
-                className="w-full mt-2 px-6 py-4 bg-[#700FA3] text-white font-bold rounded hover:bg-[#5a0c82] transition-colors duration-300 text-lg shadow-[0_4px_20px_rgba(112,15,163,0.3)]"
-                style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-              >
-                Obtener Ebook Gratis
-              </button>
-            </form>
+            {success ? (
+              <div className="flex flex-col items-center text-center py-6 px-2">
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6 border" style={{ backgroundColor: "#DCFCE7", borderColor: "#86EFAC" }}>
+                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: "#15803D" }}>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3.5} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                  ¡Registro Exitoso!
+                </h3>
+                <p className="text-sm text-neutral-500 mb-8 leading-relaxed max-w-sm" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                  Tu Ebook se ha descargado de forma automática. Si la descarga no inició, haz clic en el botón de abajo.
+                </p>
+                
+                <button
+                  onClick={triggerDownload}
+                  className="w-full px-6 py-4 bg-[#700FA3] text-white font-bold rounded hover:bg-[#5a0c82] transition-colors duration-300 text-base shadow-[0_4px_20px_rgba(112,15,163,0.3)] flex items-center justify-center gap-2 cursor-pointer"
+                  style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
+                  Descargar de nuevo
+                </button>
+              </div>
+            ) : (
+              <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+                {error && (
+                  <div className="p-4 bg-red-50 border border-red-200 rounded text-red-650 text-xs font-semibold leading-relaxed">
+                    ⚠️ {error}
+                  </div>
+                )}
+
+                <div className="flex flex-col gap-1.5 text-left">
+                  <label className="text-xs font-bold text-neutral-500 uppercase tracking-wider" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                    Correo Electrónico
+                  </label>
+                  <input 
+                    type="email" 
+                    placeholder="Correo corporativo o personal" 
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full px-5 py-4 rounded border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all font-semibold"
+                    required
+                    disabled={loading}
+                  />
+                </div>
+
+                <div className="flex flex-col gap-1.5 text-left">
+                  <label className="text-xs font-bold text-neutral-500 uppercase tracking-wider" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                    Número de WhatsApp / Teléfono
+                  </label>
+                  <input 
+                    type="tel" 
+                    placeholder="Ej: +593 99 999 9999" 
+                    value={whatsapp}
+                    onChange={(e) => setWhatsapp(e.target.value)}
+                    className="w-full px-5 py-4 rounded border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all font-semibold"
+                    required
+                    disabled={loading}
+                  />
+                </div>
+
+                <div className="flex flex-col gap-1.5 text-left">
+                  <label className="text-xs font-bold text-neutral-500 uppercase tracking-wider" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                    ¿Qué puesto tienes en tu empresa?
+                  </label>
+                  <input 
+                    type="text" 
+                    placeholder="Ej: Director de RRHH, Gerente de Seguridad..." 
+                    value={puesto}
+                    onChange={(e) => setPuesto(e.target.value)}
+                    className="w-full px-5 py-4 rounded border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all font-semibold"
+                    required
+                    disabled={loading}
+                  />
+                </div>
+
+                <div className="flex flex-col gap-1.5 text-left">
+                  <label className="text-xs font-bold text-neutral-500 uppercase tracking-wider" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                    ¿A qué se dedica tu empresa? (Rubro)
+                  </label>
+                  <input 
+                    type="text" 
+                    placeholder="Ej: Logística, Seguridad, Retail..." 
+                    value={rubro}
+                    onChange={(e) => setRubro(e.target.value)}
+                    className="w-full px-5 py-4 rounded border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all font-semibold"
+                    required
+                    disabled={loading}
+                  />
+                </div>
+
+                <div className="flex flex-col gap-1.5 text-left">
+                  <label className="text-xs font-bold text-neutral-500 uppercase tracking-wider" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                    ¿Cuántas personas trabajan en tu empresa?
+                  </label>
+                  <input 
+                    type="text" 
+                    placeholder="Ej: 1-10, 11-50, más de 200..." 
+                    value={cantPersonas}
+                    onChange={(e) => setCantPersonas(e.target.value)}
+                    className="w-full px-5 py-4 rounded border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all font-semibold"
+                    required
+                    disabled={loading}
+                  />
+                </div>
+                
+                <button 
+                  type="submit"
+                  aria-label="Descargar u obtener Ebook gratuito de Poligrafía"
+                  disabled={loading}
+                  className="w-full mt-2 px-6 py-4 bg-[#700FA3] text-white font-bold rounded hover:bg-[#5a0c82] transition-colors duration-300 text-lg shadow-[0_4px_20px_rgba(112,15,163,0.3)] flex items-center justify-center gap-2 disabled:opacity-75 disabled:cursor-not-allowed cursor-pointer"
+                  style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                >
+                  {loading ? (
+                    <>
+                      <div className="h-5 w-5 animate-spin rounded-full border-2 border-white border-l-transparent" />
+                      Procesando...
+                    </>
+                  ) : (
+                    "Obtener Ebook Gratis"
+                  )}
+                </button>
+              </form>
+            )}
 
           </div>
         </div>
