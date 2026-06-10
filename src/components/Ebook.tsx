@@ -310,6 +310,13 @@ export default function Ebook() {
                   />
                 </div>
                 
+                <p className="text-[11px] text-neutral-500 leading-relaxed font-light text-center mt-1" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                  Al solicitar el Ebook, aceptas que tus datos sean recopilados para gestionar la descarga y realizar un contacto y seguimiento comercial posterior, de acuerdo con nuestra{" "}
+                  <a href="/politica-de-privacidad" className="text-[#700FA3] hover:underline font-bold" style={{ fontSize: "inherit" }}>
+                    Política de Privacidad
+                  </a>.
+                </p>
+
                 <button 
                   type="submit"
                   aria-label="Descargar u obtener Ebook gratuito de Poligrafía"

@@ -634,11 +634,11 @@ export default function ServicePageTemplate({ service, allServices }: { service:
                     <div className="flex flex-col gap-4 mt-2">
                       <p className="text-[11px] text-neutral-500 leading-relaxed font-light">
                         Al enviar este formulario, acepto que mis datos personales sean tratados de acuerdo con la{" "}
-                        <a href="#" className="text-[#700FA3] hover:underline font-bold" style={{ fontSize: "inherit" }}>
+                        <a href="/politica-de-privacidad" className="text-[#700FA3] hover:underline font-bold" style={{ fontSize: "inherit" }}>
                           Política de tratamiento de datos personales
                         </a>{" "}
                         y los{" "}
-                        <a href="#" className="text-[#700FA3] hover:underline font-bold" style={{ fontSize: "inherit" }}>
+                        <a href="/terminos-y-condiciones" className="text-[#700FA3] hover:underline font-bold" style={{ fontSize: "inherit" }}>
                           términos establecidos en ella
                         </a>.
                       </p>

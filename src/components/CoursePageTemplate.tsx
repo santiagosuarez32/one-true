@@ -420,9 +420,9 @@ export default function CoursePageTemplate({ course }: { course: Course }) {
                     <div className="flex flex-col gap-4 mt-2">
                       <p className="text-[11px] text-neutral-500 leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                         Al enviar este formulario, acepto que mis datos personales sean tratados de acuerdo con la{" "}
-                        <a href="#" className="text-[#700FA3] hover:underline font-bold" style={{ fontSize: "inherit" }}>Política de tratamiento de datos personales</a>{" "}
+                        <a href="/politica-de-privacidad" className="text-[#700FA3] hover:underline font-bold" style={{ fontSize: "inherit" }}>Política de tratamiento de datos personales</a>{" "}
                         y los{" "}
-                        <a href="#" className="text-[#700FA3] hover:underline font-bold" style={{ fontSize: "inherit" }}>términos establecidos en ella</a>.
+                        <a href="/terminos-y-condiciones" className="text-[#700FA3] hover:underline font-bold" style={{ fontSize: "inherit" }}>términos establecidos en ella</a>.
                       </p>
                       <div className="flex items-center gap-3">
                         <input type="checkbox" id="aceptar-cpt" className="w-4 h-4 rounded border-neutral-300 text-[#700FA3] focus:ring-[#700FA3] cursor-pointer" required />

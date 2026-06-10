@@ -148,7 +148,8 @@ export default function Footer() {
         <div className={`pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs md:text-sm font-semibold ${borderBottomClass}`} style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
           <p className={copyTextColor}>© Copyright One True 2026</p>
           <div className="flex gap-6">
-            <Link href="#" className={`transition-colors ${copyLinkColor}`}>Política de Privacidad y Cookies</Link>
+            <Link href="/politica-de-privacidad" className={`transition-colors ${copyLinkColor}`}>Política de Privacidad</Link>
+            <Link href="/terminos-y-condiciones" className={`transition-colors ${copyLinkColor}`}>Términos y Condiciones</Link>
           </div>
         </div>
 

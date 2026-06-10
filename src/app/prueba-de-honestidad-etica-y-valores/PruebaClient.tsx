@@ -651,7 +651,7 @@ export default function PruebaClient({ initialData }: PruebaClientProps) {
                       <div className="flex flex-col gap-4 mt-2">
                         <p className="text-[11px] text-neutral-500 leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                           Al enviar este formulario, acepto que mis datos personales sean tratados de acuerdo con la{" "}
-                          <a href="#" className="text-[#700FA3] hover:underline font-bold">Política de Privacidad</a>.
+                          <a href="/politica-de-privacidad" className="text-[#700FA3] hover:underline font-bold">Política de Privacidad</a>.
                         </p>
                         
                         <div className="flex items-center gap-4">

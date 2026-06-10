@@ -781,7 +781,7 @@ export default function ControlDeCalidadEnPoligrafiaPage({ course }: { course: C
                         <p className="text-[11px] text-neutral-500 leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                           Al enviar este formulario, acepto que mis datos personales sean tratados de acuerdo con la{" "}
                           <a
-                            href="#"
+                            href="/politica-de-privacidad"
                             className="text-[#700FA3] hover:underline font-bold"
                             style={{ fontSize: "inherit" }}
                           >
@@ -789,7 +789,7 @@ export default function ControlDeCalidadEnPoligrafiaPage({ course }: { course: C
                           </a>{" "}
                           y los{" "}
                           <a
-                            href="#"
+                            href="/terminos-y-condiciones"
                             className="text-[#700FA3] hover:underline font-bold"
                             style={{ fontSize: "inherit" }}
                           >

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
+import CookieConsent from "@/components/CookieConsent";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -11,11 +12,11 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://somosonetrue.com"),
-  title: "One True Ecuador | Pruebas de Polígrafo y Vetting de Antecedentes",
+  title: "One True | Servicios Profesionales de Polígrafo en Ecuador",
   description: "Expertos en evaluación de confianza y poligrafía forense en Ecuador. Servicios de vetting de antecedentes, estudios de confiabilidad 360° y visitas domiciliarias en Quito y Guayaquil para proteger la seguridad de su empresa.",
   keywords: ["poligrafo ecuador", "vetting ecuador", "pruebas de poligrafo quito", "verificacion de antecedentes guayaquil", "estudios de confiabilidad", "seleccion de personal", "seguridad corporativa", "evaluacion de confianza", "One True"],
   openGraph: {
-    title: "One True Ecuador | Pruebas de Polígrafo y Vetting de Antecedentes",
+    title: "One True | Servicios Profesionales de Polígrafo en Ecuador",
     description: "Expertos en evaluación de confianza y poligrafía forense en Ecuador. Servicios de vetting de antecedentes, estudios de confiabilidad 360° y visitas domiciliarias en Quito y Guayaquil para proteger la seguridad de su empresa.",
     url: "https://somosonetrue.com",
     siteName: "One True Ecuador",
@@ -74,6 +75,7 @@ export default function RootLayout({
         <SmoothScroll>
           {children}
         </SmoothScroll>
+        <CookieConsent />
       </body>
     </html>
   );
