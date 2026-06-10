@@ -79,7 +79,7 @@ export default async function FormacionesComplementariasPage() {
             </div>
 
             <h1
-              className="mb-6 !text-3xl sm:!text-4xl md:!text-5xl lg:!text-[52px] font-semibold"
+              className="mb-6 !text-2xl sm:!text-3xl md:!text-4xl lg:!text-[42px] font-semibold"
               style={{
                 textAlign: "start",
                 fontFamily: "var(--font-montserrat), sans-serif",

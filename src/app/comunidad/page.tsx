@@ -97,7 +97,7 @@ export default function CommunityPage() {
           src="/servicios/1.webp"
           alt="Comunidad One True"
           fetchPriority="high"
-          className="absolute inset-0 w-full h-full object-cover object-right-top z-0 opacity-40 mix-blend-overlay pointer-events-none"
+          className="absolute inset-0 w-full h-full object-cover object-[75%_top] md:object-right-top z-0 opacity-40 mix-blend-overlay pointer-events-none"
         />
 
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-8 xl:px-16 z-10 flex flex-col lg:flex-row justify-between items-center gap-6 lg:gap-8 xl:gap-12">
@@ -200,8 +200,8 @@ export default function CommunityPage() {
           </div>
 
           {/* Right Column - Benefits Box */}
-          <div ref={benefitsRef} className="hidden lg:block flex-shrink-0 mr-0">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 lg:p-5 xl:p-6 max-w-md lg:max-w-[380px] xl:max-w-md mr-0">
+          <div ref={benefitsRef} className="w-full lg:w-auto flex-shrink-0 mr-0 flex justify-center lg:block">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 lg:p-5 xl:p-6 w-full max-w-md mr-0">
               <h2
                 className="text-lg font-bold mb-4"
                 style={{

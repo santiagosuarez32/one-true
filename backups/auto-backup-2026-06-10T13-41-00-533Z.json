@@ -1143,7 +1143,50 @@
             "title": "Ejes Temáticos"
           }
         ],
-        "customCards": [],
+        "customCards": [
+          {
+            "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Análisis de Respiración (RIN/RSC)",
+            "description": "Evaluación de patrones respiratorios como indicadores de estrés y respuesta fisiológica."
+          },
+          {
+            "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Análisis Cardiovascular (CVT/GSR)",
+            "description": "Interpretación de cambios en presión arterial y respuesta galvánica de la piel."
+          },
+          {
+            "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Zona de Comparación Relativa",
+            "description": "Técnica de comparación entre zonas de respuesta para identificar reacciones relevantes."
+          },
+          {
+            "icon": "/icons/Password-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Análisis de Artefactos",
+            "description": "Identificación y evaluación de respuestas causadas por movimiento o factores externos."
+          },
+          {
+            "icon": "/icons/Task-Checklist--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Scoring Automatizado",
+            "description": "Uso de software especializado para análisis cuantitativo y comparación de datos."
+          },
+          {
+            "icon": "/icons/Monitor-Find--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Interpretación Forense",
+            "description": "Estándares de análisis aplicados en contextos legales y periciales."
+          },
+          {
+            "icon": "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Reporte Técnico Profesional",
+            "description": "Redacción de conclusiones y dictámenes basados en análisis e interpretación de datos."
+          }
+        ],
         "heroTagline": "¿Quieres dominar la obtención estratégica de información mediante interacciones fluidas, estrategias de persuasión argumentativa y técnicas científicamente comprobadas?",
         "contactPhone": "099 371 2790",
         "fichaTecnica": [
@@ -1220,7 +1263,50 @@
             "title": "Ejes Temáticos"
           }
         ],
-        "customCards": [],
+        "customCards": [
+          {
+            "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Análisis de Respiración (RIN/RSC)",
+            "description": "Evaluación de patrones respiratorios como indicadores de estrés y respuesta fisiológica."
+          },
+          {
+            "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Análisis Cardiovascular (CVT/GSR)",
+            "description": "Interpretación de cambios en presión arterial y respuesta galvánica de la piel."
+          },
+          {
+            "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Zona de Comparación Relativa",
+            "description": "Técnica de comparación entre zonas de respuesta para identificar reacciones relevantes."
+          },
+          {
+            "icon": "/icons/Password-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Análisis de Artefactos",
+            "description": "Identificación y evaluación de respuestas causadas por movimiento o factores externos."
+          },
+          {
+            "icon": "/icons/Task-Checklist--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Scoring Automatizado",
+            "description": "Uso de software especializado para análisis cuantitativo y comparación de datos."
+          },
+          {
+            "icon": "/icons/Monitor-Find--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Interpretación Forense",
+            "description": "Estándares de análisis aplicados en contextos legales y periciales."
+          },
+          {
+            "icon": "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Reporte Técnico Profesional",
+            "description": "Redacción de conclusiones y dictámenes basados en análisis e interpretación de datos."
+          }
+        ],
         "heroTagline": "¿Buscas dominar el análisis científico del testimonio y aplicar las técnicas de evaluación de credibilidad más avanzadas del mundo?",
         "contactPhone": "099 371 2790",
         "fichaTecnica": [

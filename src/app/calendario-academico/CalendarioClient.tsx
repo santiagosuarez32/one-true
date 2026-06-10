@@ -148,21 +148,35 @@ export default function CalendarioClient({ initialCourses, initialIntakes }: Cal
 
       {/* Hero Section */}
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden pt-36 pb-20 bg-[#700FA3]">
-        <div
-          className="absolute inset-0 z-0 pointer-events-none"
-          style={{
-            background:
-              "linear-gradient(to right, #700FA3 0%, #700FA3 35%, rgba(112, 15, 163, 0.9) 48%, rgba(112, 15, 163, 0.6) 60%, rgba(112, 15, 163, 0.3) 72%, rgba(112, 15, 163, 0.05) 86%, transparent 100%)",
-          }}
-        />
+        <style dangerouslySetInnerHTML={{ __html: `
+          .calendario-bg {
+            object-fit: cover;
+            object-position: center center;
+          }
+          @media (min-width: 768px) {
+            .calendario-bg {
+              object-fit: cover;
+              object-position: right center;
+            }
+          }
+          .calendario-overlay {
+            background: linear-gradient(to bottom, rgba(112,15,163,0.96) 0%, rgba(112,15,163,0.82) 45%, rgba(112,15,163,0.55) 100%);
+          }
+          @media (min-width: 768px) {
+            .calendario-overlay {
+              background: linear-gradient(to right, #700FA3 0%, #700FA3 35%, rgba(112, 15, 163, 0.9) 48%, rgba(112, 15, 163, 0.6) 60%, rgba(112, 15, 163, 0.3) 72%, rgba(112, 15, 163, 0.05) 86%, transparent 100%);
+            }
+          }
+        `}} />
 
         <img
           src="/hero/slider-3.webp"
           alt="Calendario Académico One True"
           fetchPriority="high"
-          className="absolute inset-0 w-full h-full object-cover z-0 opacity-40 mix-blend-overlay pointer-events-none"
-          style={{ objectPosition: "center -250px" }}
+          className="calendario-bg absolute inset-0 w-full h-full z-0 pointer-events-none"
         />
+
+        <div className="calendario-overlay absolute inset-0 z-0 pointer-events-none" />
 
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 z-10 flex justify-start items-center">
           <div className="max-w-3xl text-left">
@@ -216,146 +230,136 @@ export default function CalendarioClient({ initialCourses, initialIntakes }: Cal
             <span>PRÓXIMOS</span>
             <span className="text-[#FFC107]">CURSOS</span>
           </h2>
-
           {/* Navigation/Filters bar */}
-          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12 bg-white rounded-3xl p-6 border border-neutral-150 shadow-[0_4px_25px_rgba(0,0,0,0.03)] max-w-5xl mx-auto mb-16 select-none">
+          <div className="flex flex-col lg:flex-row lg:flex-nowrap w-full items-center justify-center gap-4 lg:gap-6 bg-white rounded-3xl p-6 border border-[#700FA3]/10 shadow-[0_4px_25px_rgba(112,15,163,0.04)] max-w-[1200px] mx-auto mb-16 select-none">
             {/* AÑO FILTER */}
-            <div className="flex items-center gap-3">
-              <span className="text-xs font-extrabold tracking-wider text-[#4b5563] uppercase" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Año:</span>
-              <div className="flex items-center gap-3 bg-neutral-50 px-4 py-2 rounded-full border border-neutral-100">
+            <div className="flex flex-col lg:flex-row items-center gap-1.5 lg:gap-2">
+              <span className="text-xs font-extrabold tracking-wider text-[#700FA3] uppercase" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Año:</span>
+              <div className="flex items-center gap-1.5 lg:gap-2 bg-[#700FA3]/5 px-2.5 py-1.5 lg:px-3 lg:py-2 rounded-full border border-[#700FA3]/15">
                 {/* Toggle switch icon */}
                 <div 
                   onClick={toggleYear}
-                  className={`w-11 h-6 rounded-full relative cursor-pointer flex items-center transition-colors duration-300 ${
-                    yearFilter === "todos" ? "bg-slate-700" : "bg-[#700FA3]"
-                  }`}
+                  className="w-9 h-5 rounded-full relative cursor-pointer flex items-center transition-colors duration-300 bg-[#700FA3]"
                 >
                   <div 
-                    className={`w-5 h-5 rounded-full bg-white shadow-sm absolute transition-all duration-300 ease-out ${
+                    className={`w-4 h-4 rounded-full shadow-sm absolute transition-all duration-300 ease-out bg-[#FFC107] ${
                       yearFilter === "todos" ? "left-0.5" : 
-                      yearFilter === "2026" ? "left-[14px]" : 
-                      "left-[26px]"
+                      (yearFilter === "2026" ? "left-[10px]" : "left-[18px]")
                     }`} 
                   />
                 </div>
                 {/* Text selectors */}
-                <div className="flex items-center gap-1.5 text-xs font-bold text-neutral-400" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                  <span>[</span>
+                <div className="flex items-center gap-1 lg:gap-1.5 text-[10px] lg:text-xs font-bold text-[#48255A]/50" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                  <span className="text-[#700FA3]/30">[</span>
                   <button 
                     onClick={() => setYearFilter("todos")}
-                    className={`hover:text-[#700FA3] transition-colors cursor-pointer uppercase font-extrabold ${yearFilter === "todos" ? "text-[#111827]" : "text-neutral-400"}`}
+                    className={`hover:text-[#FFC107] transition-colors cursor-pointer uppercase font-extrabold ${yearFilter === "todos" ? "text-[#700FA3]" : "text-[#48255A]/60"}`}
                   >
                     TODOS
                   </button>
-                  <span>|</span>
+                  <span className="text-[#700FA3]/30">|</span>
                   <button 
                     onClick={() => setYearFilter("2026")}
-                    className={`hover:text-[#700FA3] transition-colors cursor-pointer uppercase font-extrabold ${yearFilter === "2026" ? "text-[#111827]" : "text-neutral-400"}`}
+                    className={`hover:text-[#FFC107] transition-colors cursor-pointer uppercase font-extrabold ${yearFilter === "2026" ? "text-[#700FA3]" : "text-[#48255A]/60"}`}
                   >
                     2026
                   </button>
-                  <span>|</span>
+                  <span className="text-[#700FA3]/30">|</span>
                   <button 
                     onClick={() => setYearFilter("2027")}
-                    className={`hover:text-[#700FA3] transition-colors cursor-pointer uppercase font-extrabold ${yearFilter === "2027" ? "text-[#111827]" : "text-neutral-400"}`}
+                    className={`hover:text-[#FFC107] transition-colors cursor-pointer uppercase font-extrabold ${yearFilter === "2027" ? "text-[#700FA3]" : "text-[#48255A]/60"}`}
                   >
                     2027
                   </button>
-                  <span>]</span>
+                  <span className="text-[#700FA3]/30">]</span>
                 </div>
               </div>
             </div>
 
             {/* MODALIDAD FILTER */}
-            <div className="flex items-center gap-3">
-              <span className="text-xs font-extrabold tracking-wider text-[#4b5563] uppercase" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Modalidad:</span>
-              <div className="flex items-center gap-3 bg-neutral-50 px-4 py-2 rounded-full border border-neutral-100">
+            <div className="flex flex-col lg:flex-row items-center gap-1.5 lg:gap-2">
+              <span className="text-xs font-extrabold tracking-wider text-[#700FA3] uppercase" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Modalidad:</span>
+              <div className="flex items-center gap-1.5 lg:gap-2 bg-[#700FA3]/5 px-2.5 py-1.5 lg:px-3 lg:py-2 rounded-full border border-[#700FA3]/15">
                 {/* Toggle switch icon */}
                 <div 
                   onClick={toggleModality}
-                  className={`w-11 h-6 rounded-full relative cursor-pointer flex items-center transition-colors duration-300 ${
-                    modalityFilter === "todos" ? "bg-slate-700" : "bg-[#700FA3]"
-                  }`}
+                  className="w-9 h-5 rounded-full relative cursor-pointer flex items-center transition-colors duration-300 bg-[#700FA3]"
                 >
                   <div 
-                    className={`w-5 h-5 rounded-full bg-white shadow-sm absolute transition-all duration-300 ease-out ${
+                    className={`w-4 h-4 rounded-full shadow-sm absolute transition-all duration-300 ease-out bg-[#FFC107] ${
                       modalityFilter === "todos" ? "left-0.5" : 
-                      modalityFilter === "online" ? "left-[14px]" : 
-                      "left-[26px]"
+                      (modalityFilter === "online" ? "left-[10px]" : "left-[18px]")
                     }`} 
                   />
                 </div>
                 {/* Text selectors */}
-                <div className="flex items-center gap-1.5 text-xs font-bold text-neutral-400" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                  <span>[</span>
+                <div className="flex items-center gap-1 lg:gap-1.5 text-[10px] lg:text-xs font-bold text-[#48255A]/50" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                  <span className="text-[#700FA3]/30">[</span>
                   <button 
                     onClick={() => setModalityFilter("todos")}
-                    className={`hover:text-[#700FA3] transition-colors cursor-pointer uppercase font-extrabold ${modalityFilter === "todos" ? "text-[#111827]" : "text-neutral-400"}`}
+                    className={`hover:text-[#FFC107] transition-colors cursor-pointer uppercase font-extrabold ${modalityFilter === "todos" ? "text-[#700FA3]" : "text-[#48255A]/60"}`}
                   >
                     TODOS
                   </button>
-                  <span>|</span>
+                  <span className="text-[#700FA3]/30">|</span>
                   <button 
                     onClick={() => setModalityFilter("online")}
-                    className={`hover:text-[#700FA3] transition-colors cursor-pointer uppercase font-extrabold ${modalityFilter === "online" ? "text-[#111827]" : "text-neutral-400"}`}
+                    className={`hover:text-[#FFC107] transition-colors cursor-pointer uppercase font-extrabold ${modalityFilter === "online" ? "text-[#700FA3]" : "text-[#48255A]/60"}`}
                   >
                     ONLINE
                   </button>
-                  <span>|</span>
+                  <span className="text-[#700FA3]/30">|</span>
                   <button 
                     onClick={() => setModalityFilter("presencial")}
-                    className={`hover:text-[#700FA3] transition-colors cursor-pointer uppercase font-extrabold ${modalityFilter === "presencial" ? "text-[#111827]" : "text-neutral-400"}`}
+                    className={`hover:text-[#FFC107] transition-colors cursor-pointer uppercase font-extrabold ${modalityFilter === "presencial" ? "text-[#700FA3]" : "text-[#48255A]/60"}`}
                   >
                     PRESENCIAL
                   </button>
-                  <span>]</span>
+                  <span className="text-[#700FA3]/30">]</span>
                 </div>
               </div>
             </div>
 
             {/* DURACIÓN FILTER */}
-            <div className="flex items-center gap-3">
-              <span className="text-xs font-extrabold tracking-wider text-[#4b5563] uppercase" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Duración:</span>
-              <div className="flex items-center gap-3 bg-neutral-50 px-4 py-2 rounded-full border border-neutral-100">
+            <div className="flex flex-col lg:flex-row items-center gap-1.5 lg:gap-2">
+              <span className="text-xs font-extrabold tracking-wider text-[#700FA3] uppercase" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Duración:</span>
+              <div className="flex items-center gap-1.5 lg:gap-2 bg-[#700FA3]/5 px-2.5 py-1.5 lg:px-3 lg:py-2 rounded-full border border-[#700FA3]/15">
                 {/* Toggle switch icon */}
                 <div 
                   onClick={toggleDuration}
-                  className={`w-11 h-6 rounded-full relative cursor-pointer flex items-center transition-colors duration-300 ${
-                    durationFilter === "todos" ? "bg-slate-700" : "bg-[#700FA3]"
-                  }`}
+                  className="w-9 h-5 rounded-full relative cursor-pointer flex items-center transition-colors duration-300 bg-[#700FA3]"
                 >
                   <div 
-                    className={`w-5 h-5 rounded-full bg-white shadow-sm absolute transition-all duration-300 ease-out ${
+                    className={`w-4 h-4 rounded-full shadow-sm absolute transition-all duration-300 ease-out bg-[#FFC107] ${
                       durationFilter === "todos" ? "left-0.5" : 
-                      durationFilter === "cortos" ? "left-[14px]" : 
-                      "left-[26px]"
+                      (durationFilter === "cortos" ? "left-[10px]" : "left-[18px]")
                     }`} 
                   />
                 </div>
                 {/* Text selectors */}
-                <div className="flex items-center gap-1.5 text-xs font-bold text-neutral-400" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                  <span>[</span>
+                <div className="flex items-center gap-1 lg:gap-1.5 text-[10px] lg:text-xs font-bold text-[#48255A]/50" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                  <span className="text-[#700FA3]/30">[</span>
                   <button 
                     onClick={() => setDurationFilter("todos")}
-                    className={`hover:text-[#700FA3] transition-colors cursor-pointer uppercase font-extrabold ${durationFilter === "todos" ? "text-[#111827]" : "text-neutral-400"}`}
+                    className={`hover:text-[#FFC107] transition-colors cursor-pointer uppercase font-extrabold ${durationFilter === "todos" ? "text-[#700FA3]" : "text-[#48255A]/60"}`}
                   >
                     TODOS
                   </button>
-                  <span>|</span>
+                  <span className="text-[#700FA3]/30">|</span>
                   <button 
                     onClick={() => setDurationFilter("cortos")}
-                    className={`hover:text-[#700FA3] transition-colors cursor-pointer uppercase font-extrabold ${durationFilter === "cortos" ? "text-[#111827]" : "text-neutral-400"}`}
+                    className={`hover:text-[#FFC107] transition-colors cursor-pointer uppercase font-extrabold ${durationFilter === "cortos" ? "text-[#700FA3]" : "text-[#48255A]/60"}`}
                   >
                     CORTOS
                   </button>
-                  <span>|</span>
+                  <span className="text-[#700FA3]/30">|</span>
                   <button 
                     onClick={() => setDurationFilter("certificaciones")}
-                    className={`hover:text-[#700FA3] transition-colors cursor-pointer uppercase font-extrabold ${durationFilter === "certificaciones" ? "text-[#111827]" : "text-neutral-400"}`}
+                    className={`hover:text-[#FFC107] transition-colors cursor-pointer uppercase font-extrabold ${durationFilter === "certificaciones" ? "text-[#700FA3]" : "text-[#48255A]/60"}`}
                   >
                     CERTIFICACIONES
                   </button>
-                  <span>]</span>
+                  <span className="text-[#700FA3]/30">]</span>
                 </div>
               </div>
             </div>

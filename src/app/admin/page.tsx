@@ -392,7 +392,7 @@ function prepopulateCourseDefaults(course: any) {
       ];
     }
   } else if (template === "control-calidad") {
-    if (!pc.focusAreas || pc.focusAreas.length === 0) {
+    if (pc.focusAreas === undefined || pc.focusAreas === null) {
       pc.focusAreas = [
         { title: "Estándares de Práctica (APA-ASTM)", description: "Marco normativo internacional que rige la profesión." },
         { title: "Bases del Aseguramiento de Calidad (QA)", description: "Principios preventivos para mantener la integridad del proceso." },
@@ -408,7 +408,7 @@ function prepopulateCourseDefaults(course: any) {
         { title: "Evaluación Práctica del Proceso Integral", description: "Ejecución real de una auditoría completa de control de calidad." }
       ];
     }
-    if (!pc.customCards || pc.customCards.length === 0) {
+    if (pc.customCards === undefined || pc.customCards === null) {
       pc.customCards = [
         {
           title: "Auditoría de Procedimientos",
@@ -454,7 +454,7 @@ function prepopulateCourseDefaults(course: any) {
         }
       ];
     }
-    if (!pc.fichaTecnica || pc.fichaTecnica.length === 0) {
+    if (pc.fichaTecnica === undefined || pc.fichaTecnica === null) {
       pc.fichaTecnica = [
         { title: "💻 Modalidad", description: "100% en línea" },
         { title: "📅 Fechas", description: "Consulte nuestra próxima convocatoria." },

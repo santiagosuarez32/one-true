@@ -29,21 +29,35 @@ export default async function CursosAvanzadosPoligrafiaPage() {
 
       {/* Hero */}
       <section className="relative min-h-[75vh] flex items-center justify-center overflow-hidden pt-36 pb-24 bg-[#700FA3]">
-        <div
-          className="absolute inset-0 z-0 pointer-events-none"
-          style={{
-            background:
-              "linear-gradient(to right, #700FA3 0%, #700FA3 35%, rgba(112, 15, 163, 0.9) 48%, rgba(112, 15, 163, 0.6) 60%, rgba(112, 15, 163, 0.3) 72%, rgba(112, 15, 163, 0.05) 86%, transparent 100%)",
-          }}
-        />
+        <style dangerouslySetInnerHTML={{ __html: `
+          .cursos-avanzados-bg {
+            object-fit: cover;
+            object-position: center center;
+          }
+          @media (min-width: 768px) {
+            .cursos-avanzados-bg {
+              object-fit: cover;
+              object-position: right center;
+            }
+          }
+          .cursos-avanzados-overlay {
+            background: linear-gradient(to bottom, rgba(112,15,163,0.96) 0%, rgba(112,15,163,0.82) 45%, rgba(112,15,163,0.55) 100%);
+          }
+          @media (min-width: 768px) {
+            .cursos-avanzados-overlay {
+              background: linear-gradient(to right, #700FA3 0%, #700FA3 35%, rgba(112, 15, 163, 0.9) 48%, rgba(112, 15, 163, 0.6) 60%, rgba(112, 15, 163, 0.3) 72%, rgba(112, 15, 163, 0.05) 86%, transparent 100%);
+            }
+          }
+        `}} />
 
         <img
           src="/hero/slider-3.webp"
           alt="Cursos Avanzados en Poligrafía - One True Academia"
           fetchPriority="high"
-          className="absolute inset-0 w-full h-full object-cover z-0 opacity-45 mix-blend-overlay pointer-events-none"
-          style={{ objectPosition: 'center -350px' }}
+          className="cursos-avanzados-bg absolute inset-0 w-full h-full z-0 pointer-events-none"
         />
+
+        <div className="cursos-avanzados-overlay absolute inset-0 z-0 pointer-events-none" />
 
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 z-10 flex justify-start items-center">
           <div className="max-w-3xl text-left">
@@ -148,12 +162,12 @@ export default async function CursosAvanzadosPoligrafiaPage() {
       <section id="modulos" className="bg-white py-24 scroll-mt-24">
         <div className="w-full max-w-6xl lg:max-w-7xl xl:max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center text-center mb-16">
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center justify-center gap-3 mb-4">
               <div className="w-10 h-[3px] bg-[#700FA3]" />
               <span
+                className="text-sm md:text-[18px] text-left"
                 style={{
                   letterSpacing: "0.5px",
-                  fontSize: "18px",
                   color: "#700FA3",
                   fontWeight: "600",
                   fontFamily: "var(--font-montserrat), sans-serif",
@@ -164,6 +178,7 @@ export default async function CursosAvanzadosPoligrafiaPage() {
             </div>
 
             <h2
+              className="max-w-3xl mx-auto"
               style={{
                 fontSize: "clamp(24px, 5vw, 36px)",
                 fontWeight: "bold",

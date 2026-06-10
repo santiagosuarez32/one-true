@@ -86,7 +86,9 @@ export default function ControlDeCalidadEnPoligrafiaPage({ course }: { course: C
     contactWhatsappText,
     focusAreas: dbFocusAreas,
     customCards,
-    fichaTecnica
+    fichaTecnica,
+    aboutTitle,
+    aboutDesc
   } = course.pageContent;
 
   return (
@@ -209,14 +211,14 @@ export default function ControlDeCalidadEnPoligrafiaPage({ course }: { course: C
                     color: "#48255A",
                   }}
                 >
-                  Ejes Temáticos:
+                  {aboutTitle !== undefined && aboutTitle !== null ? aboutTitle : "Ejes Temáticos:"}
                 </h2>
 
                 <p
                   className="text-[#525252] text-[15px] leading-[26px] font-light mb-6"
                   style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                 >
-                  Cumplimos estrictamente con los 12 pilares fundamentales para la formación de un auditor de élite en control de calidad en poligrafía forense:
+                  {aboutDesc !== undefined && aboutDesc !== null ? aboutDesc : "Cumplimos estrictamente con los 12 pilares fundamentales para la formación de un auditor de élite en control de calidad en poligrafía forense:"}
                 </p>
 
                 <div className="mb-8">
@@ -274,7 +276,7 @@ export default function ControlDeCalidadEnPoligrafiaPage({ course }: { course: C
 
             {/* Tarjetas Personalizadas Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
-              {(customCards && customCards.length > 0 ? customCards : advancedTechniques).map((technique, idx) => {
+              {(customCards !== undefined && customCards !== null ? customCards : advancedTechniques).map((technique, idx) => {
                 const anyTechnique = technique as any;
                 const icon = anyTechnique.icon || advancedTechniques[idx]?.icon || "/icons/Browser-Page-Account--Streamline-Ultimate.webp";
                 return (

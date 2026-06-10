@@ -7,7 +7,7 @@ import { FaLinkedin, FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
 export default function Footer() {
   const pathname = usePathname();
-  const isHome = pathname === "/";
+  const isHome = pathname === "/" || pathname === "/calendario-academico" || pathname === "/calendario-academico/";
 
   // Dynamic styles based on whether we are on the homepage
   const footerBg = isHome ? "bg-[#700FA3] text-white border-t border-[#8c1cc7]" : "bg-white text-[#525252] border-t border-neutral-200";

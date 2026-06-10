@@ -1018,7 +1018,50 @@
             "iconViewBox": "0 0 85 93"
           }
         ],
-        "customCards": [],
+        "customCards": [
+          {
+            "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Auditoría de Procedimientos",
+            "description": "Revisión sistemática del cumplimiento de estándares en cada examinación."
+          },
+          {
+            "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Validación de Datos",
+            "description": "Verificación de la integridad y consistencia en registros poligráficos."
+          },
+          {
+            "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Revisión por Pares",
+            "description": "Evaluación cruzada de casos entre examinadores certificados."
+          },
+          {
+            "icon": "/icons/Password-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Calibración de Equipos",
+            "description": "Mantenimiento preventivo y control de precisión instrumental."
+          },
+          {
+            "icon": "/icons/Task-Checklist--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Análisis de Discrepancias",
+            "description": "Investigación de variaciones en resultados e identificación de causas."
+          },
+          {
+            "icon": "/icons/Monitor-Find--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Documentación de Conformidad",
+            "description": "Registro exhaustivo de auditorías y mejoras implementadas."
+          },
+          {
+            "icon": "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Mejora Continua",
+            "description": "Actualización de protocolos basada en hallazgos de auditoría."
+          }
+        ],
         "heroTagline": "Certifíquese como Auditor Profesional en Control de Calidad en Poligrafía con la única academia en Ecuador acreditada por la APA.",
         "contactPhone": "099 371 2790",
         "fichaTecnica": [
@@ -1067,7 +1110,50 @@
             "title": "Ejes Temáticos"
           }
         ],
-        "customCards": [],
+        "customCards": [
+          {
+            "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Análisis de Respiración (RIN/RSC)",
+            "description": "Evaluación de patrones respiratorios como indicadores de estrés y respuesta fisiológica."
+          },
+          {
+            "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Análisis Cardiovascular (CVT/GSR)",
+            "description": "Interpretación de cambios en presión arterial y respuesta galvánica de la piel."
+          },
+          {
+            "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Zona de Comparación Relativa",
+            "description": "Técnica de comparación entre zonas de respuesta para identificar reacciones relevantes."
+          },
+          {
+            "icon": "/icons/Password-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Análisis de Artefactos",
+            "description": "Identificación y evaluación de respuestas causadas por movimiento o factores externos."
+          },
+          {
+            "icon": "/icons/Task-Checklist--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Scoring Automatizado",
+            "description": "Uso de software especializado para análisis cuantitativo y comparación de datos."
+          },
+          {
+            "icon": "/icons/Monitor-Find--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Interpretación Forense",
+            "description": "Estándares de análisis aplicados en contextos legales y periciales."
+          },
+          {
+            "icon": "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Reporte Técnico Profesional",
+            "description": "Redacción de conclusiones y dictámenes basados en análisis e interpretación de datos."
+          }
+        ],
         "heroTagline": "¿Buscas transformar tus entrevistas tradicionales en entrevistas de alta calidad basadas en el respeto y la efectividad forense?",
         "contactPhone": "099 371 2790",
         "fichaTecnica": [
@@ -1143,7 +1229,50 @@
             "title": "Ejes Temáticos"
           }
         ],
-        "customCards": [],
+        "customCards": [
+          {
+            "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Análisis de Respiración (RIN/RSC)",
+            "description": "Evaluación de patrones respiratorios como indicadores de estrés y respuesta fisiológica."
+          },
+          {
+            "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Análisis Cardiovascular (CVT/GSR)",
+            "description": "Interpretación de cambios en presión arterial y respuesta galvánica de la piel."
+          },
+          {
+            "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Zona de Comparación Relativa",
+            "description": "Técnica de comparación entre zonas de respuesta para identificar reacciones relevantes."
+          },
+          {
+            "icon": "/icons/Password-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Análisis de Artefactos",
+            "description": "Identificación y evaluación de respuestas causadas por movimiento o factores externos."
+          },
+          {
+            "icon": "/icons/Task-Checklist--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Scoring Automatizado",
+            "description": "Uso de software especializado para análisis cuantitativo y comparación de datos."
+          },
+          {
+            "icon": "/icons/Monitor-Find--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Interpretación Forense",
+            "description": "Estándares de análisis aplicados en contextos legales y periciales."
+          },
+          {
+            "icon": "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Reporte Técnico Profesional",
+            "description": "Redacción de conclusiones y dictámenes basados en análisis e interpretación de datos."
+          }
+        ],
         "heroTagline": "¿Quieres dominar la obtención estratégica de información mediante interacciones fluidas, estrategias de persuasión argumentativa y técnicas científicamente comprobadas?",
         "contactPhone": "099 371 2790",
         "fichaTecnica": [
@@ -1220,7 +1349,50 @@
             "title": "Ejes Temáticos"
           }
         ],
-        "customCards": [],
+        "customCards": [
+          {
+            "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Análisis de Respiración (RIN/RSC)",
+            "description": "Evaluación de patrones respiratorios como indicadores de estrés y respuesta fisiológica."
+          },
+          {
+            "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Análisis Cardiovascular (CVT/GSR)",
+            "description": "Interpretación de cambios en presión arterial y respuesta galvánica de la piel."
+          },
+          {
+            "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Zona de Comparación Relativa",
+            "description": "Técnica de comparación entre zonas de respuesta para identificar reacciones relevantes."
+          },
+          {
+            "icon": "/icons/Password-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Análisis de Artefactos",
+            "description": "Identificación y evaluación de respuestas causadas por movimiento o factores externos."
+          },
+          {
+            "icon": "/icons/Task-Checklist--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Scoring Automatizado",
+            "description": "Uso de software especializado para análisis cuantitativo y comparación de datos."
+          },
+          {
+            "icon": "/icons/Monitor-Find--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Interpretación Forense",
+            "description": "Estándares de análisis aplicados en contextos legales y periciales."
+          },
+          {
+            "icon": "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Reporte Técnico Profesional",
+            "description": "Redacción de conclusiones y dictámenes basados en análisis e interpretación de datos."
+          }
+        ],
         "heroTagline": "¿Buscas dominar el análisis científico del testimonio y aplicar las técnicas de evaluación de credibilidad más avanzadas del mundo?",
         "contactPhone": "099 371 2790",
         "fichaTecnica": [
