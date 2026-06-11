@@ -2596,13 +2596,21 @@ function SideEditorForm({
                                 Eliminar
                               </button>
                             </div>
-                            <textarea
-                              rows={2}
-                              value={feat.description || ""}
-                              onChange={(e) => handleUpdateListItem("fichaTecnica", idx, "description", e.target.value)}
-                              placeholder="Especificación o descripción..."
-                              className="bg-white border border-neutral-300 rounded px-2.5 py-1.5 text-xs text-neutral-800 placeholder-neutral-400 outline-none resize-y"
-                            />
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                              <textarea
+                                rows={2}
+                                value={feat.description || ""}
+                                onChange={(e) => handleUpdateListItem("fichaTecnica", idx, "description", e.target.value)}
+                                placeholder="Especificación o descripción..."
+                                className="bg-white border border-neutral-300 rounded px-2.5 py-1.5 text-xs text-neutral-800 placeholder-neutral-400 outline-none resize-y"
+                              />
+                              <input
+                                value={feat.link || ""}
+                                onChange={(e) => handleUpdateListItem("fichaTecnica", idx, "link", e.target.value)}
+                                placeholder="Enlace opcional (ej: /calendario-academico)"
+                                className="bg-white border border-neutral-300 rounded px-2.5 py-1 text-xs text-neutral-800 placeholder-neutral-400 outline-none self-start font-mono text-[11px]"
+                              />
+                            </div>
                           </div>
                         ))}
                       </div>
@@ -2979,7 +2987,7 @@ function SideEditorForm({
                     <span className="text-xs font-bold text-neutral-700 uppercase tracking-wider">Ficha Técnica / Características</span>
                     <button
                       type="button"
-                      onClick={() => handleAddListItem("fichaTecnica", { title: "", description: "" })}
+                      onClick={() => handleAddListItem("fichaTecnica", { title: "", description: "", link: "" })}
                       className="rounded-full bg-neutral-50 border border-neutral-300 px-3.5 py-1 text-2xs text-[#700FA3] hover:bg-neutral-100 font-bold"
                     >
                       + Agregar Ficha
@@ -2991,26 +2999,36 @@ function SideEditorForm({
                   ) : (
                     <div className="space-y-3">
                       {form.pageContent.fichaTecnica.map((feat: any, idx: number) => (
-                        <div key={idx} className="relative rounded-xl border border-neutral-200 bg-neutral-50 p-3 flex gap-3 flex-col sm:flex-row">
-                          <input
-                            value={feat.title || ""}
-                            onChange={(e) => handleUpdateListItem("fichaTecnica", idx, "title", e.target.value)}
-                            placeholder="Ej: ⏱️ 15 horas de duración"
-                            className="bg-white border border-neutral-300 rounded px-2.5 py-1 text-xs text-neutral-800 placeholder-neutral-400 flex-1 outline-none font-bold"
-                          />
-                          <input
-                            value={feat.description || ""}
-                            onChange={(e) => handleUpdateListItem("fichaTecnica", idx, "description", e.target.value)}
-                            placeholder="Detalle (ej: Formación intensiva)"
-                            className="bg-white border border-neutral-300 rounded px-2.5 py-1 text-xs text-neutral-800 placeholder-neutral-400 flex-[2] outline-none"
-                          />
-                          <button
-                            type="button"
-                            onClick={() => handleRemoveListItem("fichaTecnica", idx)}
-                            className="text-red-600 hover:text-red-500 text-xs shrink-0 self-center font-bold"
-                          >
-                            Eliminar
-                          </button>
+                        <div key={idx} className="relative rounded-xl border border-neutral-200 bg-neutral-50 p-3 flex gap-2.5 flex-col">
+                          <div className="flex gap-2.5 items-center">
+                            <input
+                              value={feat.title || ""}
+                              onChange={(e) => handleUpdateListItem("fichaTecnica", idx, "title", e.target.value)}
+                              placeholder="Título (ej: 📅 Fechas)"
+                              className="bg-white border border-neutral-300 rounded px-2.5 py-1 text-xs text-neutral-800 placeholder-neutral-400 flex-1 outline-none font-bold"
+                            />
+                            <button
+                              type="button"
+                              onClick={() => handleRemoveListItem("fichaTecnica", idx)}
+                              className="text-red-600 hover:text-red-500 text-xs shrink-0 font-bold"
+                            >
+                              Eliminar
+                            </button>
+                          </div>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            <input
+                              value={feat.description || ""}
+                              onChange={(e) => handleUpdateListItem("fichaTecnica", idx, "description", e.target.value)}
+                              placeholder="Detalle (ej: Consulte nuestra próxima convocatoria.)"
+                              className="bg-white border border-neutral-300 rounded px-2.5 py-1 text-xs text-neutral-800 placeholder-neutral-400 outline-none"
+                            />
+                            <input
+                              value={feat.link || ""}
+                              onChange={(e) => handleUpdateListItem("fichaTecnica", idx, "link", e.target.value)}
+                              placeholder="Enlace opcional (ej: /calendario-academico)"
+                              className="bg-white border border-neutral-300 rounded px-2.5 py-1 text-xs text-neutral-800 placeholder-neutral-400 outline-none font-mono text-[11px]"
+                            />
+                          </div>
                         </div>
                       ))}
                     </div>

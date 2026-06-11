@@ -728,31 +728,56 @@
           {
             "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
             "items": [
-              "Estándares de práctica Internacionales y entrevista pretest.",
-              "Principios metodológicos de la entrevista pretest."
+              ""
             ],
-            "title": "Fundamentos y estándares",
-            "description": "Domina los principios de las prácticas internacionales estandarizadas en entrevistas pretest y aprende los fundamentos metodológicos que garantizan la confiabilidad técnica de la evaluación."
+            "title": "Estándares de práctica Internacionales y entrevista pretest.",
+            "description": ""
           },
           {
             "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
             "items": [
-              "La fase de preparación como antesala del pretest.",
-              "El paso a paso de la entrevista pretest."
+              ""
             ],
-            "title": "Preparación y desarrollo del pretest",
-            "description": "Aprende cada fase de preparación previa al examen y domina el paso a paso del protocolo de entrevista pretest, asegurando consistencia y validez en tus evaluaciones poligráficas."
+            "title": "Principios metodológicos de la entrevista pretest.",
+            "description": ""
           },
           {
             "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
             "items": [
-              "Proceso metodológico del pretest en evaluaciones poligráficas diagnósticas (Específicas).",
-              "Desarrollo de preguntas para evaluaciones poligráficas diagnósticas (Específicas).",
-              "Proceso metodológico del pretest en evaluaciones poligráficas exploratorias (Preempleo - Rutina).",
-              "Desarrollo de preguntas para evaluaciones poligráficas Exploratorias (Preempleo - Rutina)."
+              ""
             ],
-            "title": "Evaluaciones diagnósticas y exploratorias",
-            "description": "Especialízate en el análisis de evaluaciones poligráficas diagnósticas y exploratorias, incluyendo el protocolo de preguntas específicas para casos de preempleo, rutina y temas investigativos."
+            "title": "La fase de preparación como antesala del pretest.",
+            "description": ""
+          },
+          {
+            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118557511-password-desktop--streamline-u-8jehbj.webp",
+            "items": [],
+            "title": "El paso a paso de la entrevista pretest.",
+            "description": ""
+          },
+          {
+            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118584081-monitor-find--streamline-ultim-1uwk7o.webp",
+            "items": [],
+            "title": "Proceso metodológico del pretetst en evaluaciones poligráficas diagnósticas (Específicas). ",
+            "description": ""
+          },
+          {
+            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118607830-check-list-22w8ff.webp",
+            "items": [],
+            "title": "Desarrollo de preguntas para evaluaciones poligráficas diagnósticas (Específicas). ",
+            "description": ""
+          },
+          {
+            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118625737-grow-up-together-r7ah7g.webp",
+            "items": [],
+            "title": "Proceso metodológico del pretetst en evaluaciones poligráficas exploratorias (Preempleo - Rutina).",
+            "description": ""
+          },
+          {
+            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118639325-engineer-fu8y73.webp",
+            "items": [],
+            "title": "Desarrollo de preguntas para evaluaciones poligráficas Exploratorias (Preempleo - Rutina)",
+            "description": ""
           }
         ],
         "heroTagline": "¿Buscas perfeccionar tu técnica de entrevista pretest y dominar una de las la fases más críticas del examen poligráfico?",
@@ -892,44 +917,74 @@
           {
             "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
             "items": [],
-            "title": "Análisis de Respiración (RIN/RSC)",
-            "description": "Evaluación de patrones respiratorios como indicadores de estrés y respuesta fisiológica."
+            "title": "Latencia Inferior.",
+            "description": ""
           },
           {
             "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
             "items": [],
-            "title": "Análisis Cardiovascular (CVT/GSR)",
-            "description": "Interpretación de cambios en presión arterial y respuesta galvánica de la piel."
+            "title": "Latencia superior.",
+            "description": ""
           },
           {
             "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
             "items": [],
-            "title": "Zona de Comparación Relativa",
-            "description": "Técnica de comparación entre zonas de respuesta para identificar reacciones relevantes."
+            "title": "Ventana de inicio de respuesta fija.",
+            "description": ""
           },
           {
             "icon": "/icons/Password-Desktop--Streamline-Ultimate.webp",
             "items": [],
-            "title": "Análisis de Artefactos",
-            "description": "Identificación y evaluación de respuestas causadas por movimiento o factores externos."
+            "title": "Ventana de inicio de respuesta permisiva.",
+            "description": ""
           },
           {
             "icon": "/icons/Task-Checklist--Streamline-Ultimate.webp",
             "items": [],
-            "title": "Scoring Automatizado",
-            "description": "Uso de software especializado para análisis cuantitativo y comparación de datos."
+            "title": "Ventana de Evaluación Fija.",
+            "description": ""
           },
           {
             "icon": "/icons/Monitor-Find--Streamline-Ultimate.webp",
             "items": [],
-            "title": "Interpretación Forense",
-            "description": "Estándares de análisis aplicados en contextos legales y periciales."
+            "title": "Ventana de Evaluación permisiva.",
+            "description": ""
           },
           {
             "icon": "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
             "items": [],
-            "title": "Reporte Técnico Profesional",
-            "description": "Redacción de conclusiones y dictámenes basados en análisis e interpretación de datos."
+            "title": "Reacciones simples en EDA y Cardio.",
+            "description": ""
+          },
+          {
+            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118361408-challenge-ufivoy.webp",
+            "items": [],
+            "title": "Reacciones Complejas en EDA y Cardio.",
+            "description": ""
+          },
+          {
+            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118383266-check-list-g8bemm.webp",
+            "items": [],
+            "title": "Plano cartesiano y el análisis de datos.",
+            "description": ""
+          },
+          {
+            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118402636-engineer-rwbwow.webp",
+            "items": [],
+            "title": "Variables extrañas y su impacto en el análisis de los datos.",
+            "description": ""
+          },
+          {
+            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118421370-brain-mj9erz.webp",
+            "items": [],
+            "title": "Criterios de tolerancia para la extracción de características.",
+            "description": ""
+          },
+          {
+            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118437807-briefcase-rdfbe4.webp",
+            "items": [],
+            "title": "Eventos de artefactos y su impacto en el análisis de datos.",
+            "description": ""
           }
         ],
         "heroTagline": "Transforme trazados fisiológicos en decisiones técnicas basadas en evidencia.",
@@ -1054,80 +1109,6 @@
       "template": "basico"
     },
     {
-      "id": "modelos-de-entrevista-investigativa",
-      "title": "Modelos de Entrevista Investigativa",
-      "desc": "Formación en técnicas de obtención de información de alta calidad, basadas en principios de respeto y efectividad forense.",
-      "image": "/formaciones/entrevista.webp",
-      "href": "/modelos-de-entrevista-investigativa",
-      "published": true,
-      "pageContent": {
-        "heroDesc": "Esta formación especializada está diseñada para llevar tus habilidades al siguiente nivel, implementando los protocolos internacionales basados en ciencia que maximizan la obtención de información verídica y mitigan el riesgo de falsas confesiones.",
-        "template": "graficas",
-        "aboutDesc": "Modalidad: Presencial o en línea.",
-        "heroImage": "/formaciones/entrevista.webp",
-        "heroTitle": "Especialización en Modelos de Entrevista Investigativa",
-        "aboutTitle": "Ejes Temáticos",
-        "focusAreas": [
-          {
-            "items": [
-              "Evolución y Ciencia de la Entrevista Forense: Transición de los métodos coercitivos tradicionales hacia los modelos basados en evidencia científica.",
-              "El Modelo PEACE: Estructuración metodológica de la entrevista corporativa y judicial (Planificación, Explicación, Relato, Cierre y Evaluación).",
-              "El Protocolo ORBIT (OxForenses): Gestión de la resistencia, negociación táctica e interacciones con perfiles complejos o no cooperativos bajo principios humanitarios.",
-              "La Técnica SUE (Strategic Use of Evidence): Manejo y presentación estratégica de la evidencia para evaluar la consistencia del relato.",
-              "Entrevista Cognitiva (EC) y Entrevista Cognitiva Mejorada (MCI): Técnicas avanzadas de reactivación de huellas de memoria y transferencia de control para optimizar el recuerdo de testigos y víctimas."
-            ],
-            "title": "Ejes Temáticos"
-          }
-        ],
-        "customCards": [],
-        "heroTagline": "¿Buscas transformar tus entrevistas tradicionales en entrevistas de alta calidad basadas en el respeto y la efectividad forense?",
-        "contactPhone": "099 371 2790",
-        "fichaTecnica": [
-          {
-            "title": "⏱️ 30 horas de duración",
-            "description": "Formación de alto nivel con enfoque analítico."
-          },
-          {
-            "title": "📚 45 lecciones",
-            "description": "Lecciones especializadas en la materia."
-          },
-          {
-            "title": "📄 Plantillas de planeación y bitácoras de entrevista forense descargables.",
-            "description": "Material práctico descargable."
-          },
-          {
-            "title": "📊 +100 Diapositivas académicas descargables.",
-            "description": "Diapositivas académicas descargables."
-          },
-          {
-            "title": "✏️ Evaluaciones de caso práctico y Quizzes interactivos.",
-            "description": "Evaluaciones continuas interactiva."
-          },
-          {
-            "title": "📺 Acceso por 3 meses (pregrabado)",
-            "description": "Material pregrabado disponible."
-          },
-          {
-            "title": "✅ 30 días de garantía.",
-            "description": "Garantía de satisfacción total."
-          },
-          {
-            "title": "🔐 Acceso a la comunidad ONE TRUE.",
-            "description": "Acceso exclusivo a la red académica."
-          },
-          {
-            "title": "🎓 Diploma de finalización.",
-            "description": "Diploma oficial al concluir."
-          }
-        ],
-        "contactWhatsapp": "https://api.whatsapp.com/send?phone=0993712790",
-        "isComplementary": true,
-        "contactWhatsappText": "+593 98 129 6179"
-      },
-      "created_at": "2026-06-10T00:08:25.01446+00:00",
-      "template": "graficas"
-    },
-    {
       "id": "elicitacion-conversacional",
       "title": "Elicitación Conversacional",
       "desc": "Formación avanzada en técnicas de obtención de información sutil y estratégica mediante interacciones fluidas y persuasivas.",
@@ -1155,7 +1136,50 @@
             "title": "Ejes Temáticos"
           }
         ],
-        "customCards": [],
+        "customCards": [
+          {
+            "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Fundamentos y Arquitectura de la Elicitación:",
+            "description": "Diferencias entre interrogatorio, entrevista y obtención sutil de información en entornos de contrainteligencia.\n"
+          },
+          {
+            "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Dinámicas de la Comunicación Persuasiva:",
+            "description": "El uso del rapport estratégico, empatía táctica y neutralización de barreras psicológicas conscientes."
+          },
+          {
+            "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Disparadores Cognitivos y Vulnerabilidades del Discurso:",
+            "description": "Explotación ética de tendencias humanas (necesidad de corregir, deseo de reconocimiento, validación social y sesgo de reciprocidad).\n"
+          },
+          {
+            "icon": "/icons/Password-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Ingeniería de Preguntas y Estímulos Conversacionales:",
+            "description": "Diseño de narrativas de apariencia natural para la activación micro-selectiva de memoria sin generar reactividad.\n"
+          },
+          {
+            "icon": "/icons/Task-Checklist--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Estrategias Avanzadas de Extracción de información:",
+            "description": "Técnicas de asunción deliberada, declaraciones provocativas y contrastes de información para la confirmación de datos no públicos.\n"
+          },
+          {
+            "icon": "/icons/Monitor-Find--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Detección de Inconsistencias en Flujos Pasivos:",
+            "description": "Identificación de indicadores de ocultamiento, desvío conductual y evasión en entornos no restrictivos.\n"
+          },
+          {
+            "icon": "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Aplicación en la Gestión de Riesgos Corporativos:",
+            "description": "Protocolos de elicitación aplicados a auditorías de seguridad, debida diligencia (due diligence) e investigaciones internas.\n"
+          }
+        ],
         "heroTagline": "¿Quieres dominar la obtención estratégica de información mediante interacciones fluidas, estrategias de persuasión argumentativa y técnicas científicamente comprobadas?",
         "contactPhone": "099 371 2790",
         "fichaTecnica": [
@@ -1204,6 +1228,111 @@
       "template": "graficas"
     },
     {
+      "id": "modelos-de-entrevista-investigativa",
+      "title": "Modelos de Entrevista Investigativa",
+      "desc": "Formación en técnicas de obtención de información de alta calidad, basadas en principios de respeto y efectividad forense.",
+      "image": "/formaciones/entrevista.webp",
+      "href": "/modelos-de-entrevista-investigativa",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "Esta formación especializada está diseñada para llevar tus habilidades al siguiente nivel, implementando los protocolos internacionales basados en ciencia que maximizan la obtención de información verídica y mitigan el riesgo de falsas confesiones.",
+        "template": "graficas",
+        "aboutDesc": "Modalidad: Presencial o en línea.",
+        "heroImage": "/formaciones/entrevista.webp",
+        "heroTitle": "Especialización en Modelos de Entrevista Investigativa",
+        "aboutTitle": "Ejes Temáticos",
+        "focusAreas": [
+          {
+            "items": [
+              "Evolución y Ciencia de la Entrevista Forense: Transición de los métodos coercitivos tradicionales hacia los modelos basados en evidencia científica.",
+              "El Modelo PEACE: Estructuración metodológica de la entrevista corporativa y judicial (Planificación, Explicación, Relato, Cierre y Evaluación).",
+              "El Protocolo ORBIT (OxForenses): Gestión de la resistencia, negociación táctica e interacciones con perfiles complejos o no cooperativos bajo principios humanitarios.",
+              "La Técnica SUE (Strategic Use of Evidence): Manejo y presentación estratégica de la evidencia para evaluar la consistencia del relato.",
+              "Entrevista Cognitiva (EC) y Entrevista Cognitiva Mejorada (MCI): Técnicas avanzadas de reactivación de huellas de memoria y transferencia de control para optimizar el recuerdo de testigos y víctimas."
+            ],
+            "title": "Ejes Temáticos"
+          }
+        ],
+        "customCards": [
+          {
+            "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Evolución y Ciencia de la Entrevista Forense:",
+            "description": "Transición de los métodos coercitivos tradicionales hacia los modelos basados en evidencia científica.\n"
+          },
+          {
+            "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "El Modelo PEACE:",
+            "description": "Estructuración metodológica de la entrevista corporativa y judicial (Planificación, Explicación, Relato, Cierre y Evaluación).\n"
+          },
+          {
+            "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "El Protocolo ORBIT (OxForenses):",
+            "description": "Gestión de la resistencia, negociación táctica e interacciones con perfiles complejos o no cooperativos bajo principios humanitarios.\n"
+          },
+          {
+            "icon": "/icons/Password-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "La Técnica SUE (Strategic Use of Evidence):",
+            "description": "Manejo y presentación estratégica de la evidencia para evaluar la consistencia del relato.\n"
+          },
+          {
+            "icon": "/icons/Task-Checklist--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Entrevista Cognitiva (EC) y Entrevista Cognitiva Mejorada (MCI):",
+            "description": "Técnicas avanzadas de reactivación de huellas de memoria y transferencia de control para optimizar el recuerdo de testigos y víctimas.\n"
+          }
+        ],
+        "heroTagline": "¿Buscas transformar tus entrevistas tradicionales en entrevistas de alta calidad basadas en el respeto y la efectividad forense?",
+        "contactPhone": "099 371 2790",
+        "fichaTecnica": [
+          {
+            "title": "⏱️ 30 horas de duración",
+            "description": "Formación de alto nivel con enfoque analítico."
+          },
+          {
+            "title": "📚 45 lecciones",
+            "description": "Lecciones especializadas en la materia."
+          },
+          {
+            "title": "📄 Plantillas de planeación y bitácoras de entrevista forense descargables.",
+            "description": "Material práctico descargable."
+          },
+          {
+            "title": "📊 +100 Diapositivas académicas descargables.",
+            "description": "Diapositivas académicas descargables."
+          },
+          {
+            "title": "✏️ Evaluaciones de caso práctico y Quizzes interactivos.",
+            "description": "Evaluaciones continuas interactiva."
+          },
+          {
+            "title": "📺 Acceso por 3 meses (pregrabado)",
+            "description": "Material pregrabado disponible."
+          },
+          {
+            "title": "✅ 30 días de garantía.",
+            "description": "Garantía de satisfacción total."
+          },
+          {
+            "title": "🔐 Acceso a la comunidad ONE TRUE.",
+            "description": "Acceso exclusivo a la red académica."
+          },
+          {
+            "title": "🎓 Diploma de finalización.",
+            "description": "Diploma oficial al concluir."
+          }
+        ],
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=0993712790",
+        "isComplementary": true,
+        "contactWhatsappText": "+593 98 129 6179"
+      },
+      "created_at": "2026-06-10T00:08:25.01446+00:00",
+      "template": "graficas"
+    },
+    {
       "id": "control-de-calidad-en-poligrafia",
       "title": "Control de Calidad en Poligrafía",
       "desc": "Protocolos de auditoría, revisión por pares y mejora continua en la práctica profesional. Garantía de rigor técnico y cumplimiento normativo.",
@@ -1246,44 +1375,74 @@
           {
             "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
             "items": [],
-            "title": "Auditoría de Procedimientos",
-            "description": "Revisión sistemática del cumplimiento de estándares en cada examinación."
+            "title": "Estándares de Práctica (APA-ASTM):",
+            "description": "Marco normativo internacional que rige la profesión.\n"
           },
           {
             "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
             "items": [],
-            "title": "Validación de Datos",
-            "description": "Verificación de la integridad y consistencia en registros poligráficos."
+            "title": "Bases del Aseguramiento de Calidad (QA):",
+            "description": "Principios preventivos para mantener la integridad del proceso.\n"
           },
           {
             "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
             "items": [],
-            "title": "Revisión por Pares",
-            "description": "Evaluación cruzada de casos entre examinadores certificados."
+            "title": "Bases del Control de Calidad (CQ):",
+            "description": "Metodologías de supervisión técnica directa.\n"
           },
           {
             "icon": "/icons/Password-Desktop--Streamline-Ultimate.webp",
             "items": [],
-            "title": "Calibración de Equipos",
-            "description": "Mantenimiento preventivo y control de precisión instrumental."
+            "title": "Auditoría de la Etapa Previa",
+            "description": "Revisión de la logística, selección de objetivos y preparación de la examinación.\n"
           },
           {
             "icon": "/icons/Task-Checklist--Streamline-Ultimate.webp",
             "items": [],
-            "title": "Análisis de Discrepancias",
-            "description": "Investigación de variaciones en resultados e identificación de causas."
+            "title": "Auditoría de la Entrevista Pre-Test",
+            "description": "Supervisión de la fase de entrevista previa a la prueba.\n"
           },
           {
             "icon": "/icons/Monitor-Find--Streamline-Ultimate.webp",
             "items": [],
-            "title": "Documentación de Conformidad",
-            "description": "Registro exhaustivo de auditorías y mejoras implementadas."
+            "title": "Auditoría de la Prueba In-Test:",
+            "description": "Verificación de la correcta administración de la etapa de toma de data fisiológica.\n"
           },
           {
             "icon": "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
             "items": [],
-            "title": "Mejora Continua",
-            "description": "Actualización de protocolos basada en hallazgos de auditoría."
+            "title": "Auditoría del Análisis de Datos:",
+            "description": "Revisión profunda de la interpretación de trazados fisiológicos.\n"
+          },
+          {
+            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118785255-engineer-lkcn80.webp",
+            "items": [],
+            "title": "Auditoría de la Entrevista Post-Test:",
+            "description": "Evaluación del manejo del evaluado tras la examinación.\n"
+          },
+          {
+            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118801189-grow-up-together-orqyje.webp",
+            "items": [],
+            "title": "Sistemas de Calificación Manual y CQ: ",
+            "description": "Protocolo de puntuación manual ESS-M.\n"
+          },
+          {
+            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118833912-check-list-z4ofri.webp",
+            "items": [],
+            "title": "Sistema de Calificación Algorítmico OSS-3:",
+            "description": "Auditoría del análisis computarizado avanzado.\n"
+          },
+          {
+            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118868264-challenge-irwggf.webp",
+            "items": [],
+            "title": "Evaluación Teórica del Control de Calidad:",
+            "description": "Validación de los conocimientos científicos y normativos en PDD.\n"
+          },
+          {
+            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118881991-briefcase-r043oy.webp",
+            "items": [],
+            "title": "Evaluación Práctica del Proceso Integral:",
+            "description": "Ejecución real de una auditoría completa de control de calidad.\n"
           }
         ],
         "heroTagline": "Certifíquese como Auditor Profesional en Control de Calidad en Poligrafía con la única academia en Ecuador acreditada por la APA.",
@@ -1294,6 +1453,7 @@
             "description": "100% en línea"
           },
           {
+            "link": "/calendario-academico",
             "title": "Fechas",
             "description": "Consulte nuestra próxima convocatoria."
           },
@@ -1337,7 +1497,56 @@
             "title": "Ejes Temáticos"
           }
         ],
-        "customCards": [],
+        "customCards": [
+          {
+            "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Epistemología y bases científicas de la evaluación de la credibilidad.",
+            "description": "Evaluación de patrones respiratorios como indicadores de estrés y respuesta fisiológica."
+          },
+          {
+            "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Psicología del testimonio: Funcionamiento, límites y exactitud de la memoria humana.",
+            "description": "Interpretación de cambios en presión arterial y respuesta galvánica de la piel."
+          },
+          {
+            "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Carga cognitiva y su aplicación práctica en la detección de indicadores de engaño.",
+            "description": "Técnica de comparación entre zonas de respuesta para identificar reacciones relevantes."
+          },
+          {
+            "icon": "/icons/Password-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Evaluación de la credibilidad mediante la fenomenología del recuerdo (Memorias reales vs. Falsas memorias).",
+            "description": "Identificación y evaluación de respuestas causadas por movimiento o factores externos."
+          },
+          {
+            "icon": "/icons/Task-Checklist--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Modelos cognitivos y psicofisiológicos estandarizados de credibilidad.",
+            "description": "Uso de software especializado para análisis cuantitativo y comparación de datos."
+          },
+          {
+            "icon": "/icons/Monitor-Find--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Análisis de contenido verbal y evaluación analítica de declaraciones.",
+            "description": "Estándares de análisis aplicados en contextos legales y periciales."
+          },
+          {
+            "icon": "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Sesgos cognitivos, vulnerabilidades del testimonio y toma de decisiones forenses.",
+            "description": "Redacción de conclusiones y dictámenes basados en análisis e interpretación de datos."
+          },
+          {
+            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781119805801-check-list-dapt91.webp",
+            "items": [],
+            "title": "Protocolos internacionales de control de calidad y buenas prácticas.",
+            "description": ""
+          }
+        ],
         "heroTagline": "¿Buscas dominar el análisis científico del testimonio y aplicar las técnicas de evaluación de credibilidad más avanzadas del mundo?",
         "contactPhone": "099 371 2790",
         "fichaTecnica": [
@@ -1388,17 +1597,6 @@
   ],
   "blogs": [
     {
-      "id": "verdad-o-mentira",
-      "title": "¿Verdad o Mentira? Todo lo que debes saber antes de contratar una prueba de Polígrafo.",
-      "image": "/blog/1.webp",
-      "link": "/blog/verdad-o-mentira",
-      "published": true,
-      "publishDate": "15 de Noviembre, 2024",
-      "readTime": "5 min de lectura",
-      "content": "<h2 class=\"text-2xl font-bold mt-0 mb-6\" style=\"color: #48255A\">Introducción</h2>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Tomar la decisión de evaluar la confianza de tu personal o investigar un incidente delicado (como un robo o fraude interno) no es fácil. Seguramente has escuchado hablar del polígrafo o detector de mentiras, pero es normal que surjan dudas: ¿Realmente funciona? ¿Es legal? ¿Qué tan complicado es?</p>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">En mi experiencia ayudando a empresas a seleccionar candidatos confiables, he notado que la falta de información clara es el principal obstáculo. Por eso, he recopilado las preguntas más habituales que recibo sobre la poligrafía y las he respondido de forma sencilla. El objetivo es que tengas toda la información sobre la mesa para tomar una decisión objetiva y segura para tu empresa.</p>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Las pruebas de polígrafo son una herramienta forense ampliamente utilizada en procesos de selección, investigaciones internas y evaluaciones de confiabilidad. Sin embargo, existen muchos mitos y malinterpretaciones sobre cómo funcionan y qué tan precisas son. En este artículo, te ayudaremos a separar la verdad de la ficción.</p>\n\n<h2 class=\"text-2xl font-bold mt-12 mb-6\" style=\"color: #48255A\">Lo que necesitas saber sobre las pruebas de polígrafo (Preguntas Frecuentes)</h2>\n\n<h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            1. ¿Qué tan confiable es realmente el polígrafo o también llamado \"detector de mentiras\"?\n          </h3>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Esta es la duda número uno. A diferencia de lo que se ve en las películas, el polígrafo es un instrumento científico, no mágico. Estudios internacionales han demostrado que, cuando la prueba es realizada por un profesional certificado, la precisión de los resultados supera el 90%. Actualmente, es la tecnología más precisa para evaluar la credibilidad de una persona, superando a otras herramientas de evaluación de credibilidad.</p>\n\n<h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            2. ¿Cómo funciona una prueba de polígrafo? ¿Es solo conectar cables?\n          </h3>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">No, es un proceso mucho más completo y humano. Una prueba de Polígrafo profesional consta de tres etapas claras:</p>\n\n<ul class=\"list-disc list-inside mb-6 text-lg leading-relaxed text-gray-700\">\n  <li><strong>La entrevista previa (Pre-test):</strong> Conversamos con la persona para entender su contexto y explicarle el procedimiento.</li>\n  <li><strong>La fase de prueba (In-test):</strong> Aquí es donde se usa el polígrafo para registrar las reacciones psicofisiológicas del cuerpo mientras se hacen las preguntas.</li>\n  <li><strong>El análisis:</strong> Interpretamos esos datos para entregarte un resultado objetivo.</li>\n</ul>\n\n<h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            3. ¿Cuánto tiempo tarda todo el proceso?\n          </h3>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Para garantizar un resultado de calidad, no podemos apresurarnos. Una prueba de polígrafo bien hecha dura normalmente entre 90 y 120 minutos según estándares internacionales. Este tiempo es necesario para que la persona evaluada esté tranquila y el procedimiento se haga correctamente.</p>\n\n<h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            4. ¿Qué se necesita para hacerle la prueba a un empleado o candidato?\n          </h3>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">El requisito más importante es el consentimiento. La poligrafía es un proceso voluntario; la persona debe firmar una autorización escrita aceptando someterse a la evaluación. No se puede obligar a nadie, ya que la cooperación es clave para el éxito de la prueba, nosotros nos encargamos de todo.</p>\n\n<h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            5. ¿Puedo hacer todas las preguntas que quiera?\n          </h3>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Muchas veces los clientes quieren aprovechar para preguntar de todo, pero para que la prueba de polígrafo sea efectiva, debemos enfocarnos. Aunque en la entrevista previa se tocan muchos temas, durante la prueba instrumental (con el equipo conectado) nos centramos generalmente en 3 o 4 preguntas clave relacionadas directamente con el objetivo (ej. \"¿Robaste el dinero de la caja?\", \"¿Has cometido fraude en tu empleo anterior?\"). Esto garantiza mayor precisión.</p>\n\n<h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            6. ¿Tengo que llevar a mi personal a sus oficinas o pueden venir a mi empresa?\n          </h3>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Sabemos que la logística a veces es complicada. Por eso, las pruebas de polígrafo pueden realizarse en tus instalaciones si así lo prefieres. Solo necesitamos un espacio privado, libre de distracciones, con un escritorio y dos sillas. Nosotros nos encargamos del resto.</p>\n\n<h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            7. ¿Cuánto tardan en entregarme los resultados?\n          </h3>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Entendemos que en situaciones de robos o contratación, el tiempo es dinero. Por lo general, entregamos los resultados en tan solo 4 horas después de haber concluido las pruebas y los informes técnicos en 24 horas.</p>\n\n<h2 class=\"text-2xl font-bold mt-12 mb-6\" style=\"color: #48255A\">Conclusión: La tranquilidad de decidir con la verdad</h2>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Contratar un servicio de poligrafía no se trata solo de \"atrapar a alguien\", sino de crear un ambiente de trabajo seguro y honesto. Ya sea que necesites filtrar a un nuevo candidato o resolver un incidente interno, ahora sabes cómo funciona esta herramienta.</p>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Si tienes más dudas o necesitas asesoría sobre qué tipo de prueba es la ideal para tu caso, no dudes en contactarnos. Estamos aquí para ayudarte a descubrir la verdad.</p>",
-      "created_at": "2026-06-06T16:11:47.217222+00:00"
-    },
-    {
       "id": "garantiza-la-verdad",
       "title": "Garantiza la Verdad: 10 Requisitos Clave para una Prueba de Polígrafo Confiable y Exitosa.",
       "image": "/blog/3.webp",
@@ -1419,6 +1617,17 @@
       "readTime": "6 min de lectura",
       "content": "<h2 class=\"text-2xl font-bold mt-0 mb-6\" style=\"color: #48255A\">\n            Introducción\n          </h2>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            ¿Sientes que necesitas evaluar la confiabilidad de alguien en tu empresa, pero no estás seguro de cómo hacerlo? No te preocupes, es una duda muy frecuente. Sabes que el polígrafo (o detector de mentiras) es la herramienta adecuada, pero quizás no sabías que existen diferentes tipos de pruebas diseñadas para situaciones muy distintas.\n          </p>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            Elegir la prueba incorrecta puede llevarte a no obtener las respuestas que buscas. Por eso, en OneTrue, hemos preparado esta guía sencilla. Nuestro objetivo es ayudarte a identificar tu situación actual para que elijas la prueba de polígrafo exacta que te dará la tranquilidad y la información objetiva que necesitas para tomar decisiones acertadas.\n          </p>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            ¡Vamos a verlo!\n          </p>\n\n          <h2 class=\"text-2xl font-bold mt-12 mb-6\" style=\"color: #48255A\">\n            Los 3 tipos principales de pruebas de polígrafo\n          </h2>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            No todas las pruebas son iguales. Dependiendo de si estás contratando, evaluando a tu personal actual o resolviendo un problema, el enfoque cambia por completo. Aquí te explicamos las tres categorías clave:\n          </p>\n\n          <h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            1. Prueba de Preempleo: Para elegir al mejor candidato\n          </h3>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            Esta es, quizás, la más conocida y contratada. Su objetivo es filtrar y seleccionar al personal más confiable antes de que ingresen a tu empresa.\n          </p>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            <strong>¿Cuándo la necesitas?</strong>\n          </p>\n\n          <ul class=\"list-disc list-inside mb-6 text-lg leading-relaxed text-gray-700\">\n            <li>Estás en pleno proceso de contratación de nuevo personal.</li>\n            <li>El puesto a cubrir es sensible (manejo de dinero, información confidencial, seguridad).</li>\n          </ul>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            <strong>¿Qué evalúa?</strong>\n          </p>\n\n          <ul class=\"list-disc list-inside mb-6 text-lg leading-relaxed text-gray-700\">\n            <li>Verifica la veracidad de la información en su currículum y solicitud.</li>\n            <li>Explora temas de integridad como: antecedentes laborales negativos no declarados, historial de robos en empleos anteriores, consumo de sustancias ilegales, o vínculos con actividades ilícitas.</li>\n          </ul>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            <strong>El Beneficio Principal:</strong> Prevenir es mejor que lamentar. Te ayuda a evitar contratar a personas que podrían representar un riesgo futuro para tu organización, asegurando un equipo de trabajo íntegro desde el primer día.\n          </p>\n\n          <h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            2. Prueba de Rutina o Permanencia: Para mantener la confianza\n          </h3>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            La confianza no es algo de una sola vez; hay que mantenerla. Esta prueba se aplica al personal que ya trabaja contigo.\n          </p>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            <strong>¿Cuándo la necesitas?</strong>\n          </p>\n\n          <ul class=\"list-disc list-inside mb-6 text-lg leading-relaxed text-gray-700\">\n            <li>De forma periódica (por ejemplo, cada tres meses, cada seis meses o cada año) para empleados en puestos clave, el rango del tiempo está en función de los riesgos que maneje cada persona.</li>\n            <li>Cuando vas a promover a alguien a un cargo de mayor responsabilidad.</li>\n          </ul>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            <strong>¿Qué evalúa?</strong>\n          </p>\n\n          <ul class=\"list-disc list-inside mb-6 text-lg leading-relaxed text-gray-700\">\n            <li>Se enfoca en el comportamiento del empleado durante el tiempo que ha estado en tu empresa.</li>\n            <li>Busca asegurar que no hayan incurrido en faltas graves como robo hormiga, fuga de información, violaciones a políticas de seguridad o beneficios indebidos desde su última evaluación o ingreso.</li>\n          </ul>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            <strong>El Beneficio Principal:</strong> Actúa como un poderoso disuasivo contra malas prácticas y te permite detectar focos rojos a tiempo, manteniendo un ambiente laboral sano y seguro.\n          </p>\n\n          <h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            3. Prueba Específica o de Investigación: Para resolver un incidente\n          </h3>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            Esta prueba es reactiva. Se utiliza cuando lamentablemente ya ha ocurrido un hecho concreto y negativo dentro de la empresa.\n          </p>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            <strong>¿Cuándo la necesitas?</strong>\n          </p>\n\n          <ul class=\"list-disc list-inside mb-6 text-lg leading-relaxed text-gray-700\">\n            <li>Se ha detectado un robo interno, fraude, abuso de confianza, acoso o filtración de información confidencial.</li>\n            <li>Hay sospechosos identificados pero no pruebas contundentes.</li>\n          </ul>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            <strong>¿Qué evalúa?</strong>\n          </p>\n\n          <ul class=\"list-disc list-inside mb-6 text-lg leading-relaxed text-gray-700\">\n            <li>A diferencia de las otras, esta prueba se centra exclusivamente en el incidente en cuestión.</li>\n            <li>Las preguntas buscan determinar si la persona evaluada participó directamente, tiene conocimiento de quién lo hizo, o se benefició del hecho.</li>\n          </ul>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            <strong>El Beneficio Principal:</strong> Es una herramienta crucial para esclarecer la verdad en situaciones críticas, ayudando a identificar a los responsables y, muy importante, a descartar a los inocentes, permitiendo tomar medidas disciplinarias o legales basadas en información objetiva.\n          </p>\n\n          <h2 class=\"text-2xl font-bold mt-12 mb-6\" style=\"color: #48255A\">\n            Guía rápida: ¿Cuál es tu caso?\n          </h2>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            Para hacértelo aún más fácil, responde a esta simple pregunta: ¿En qué situación te encuentras ahora mismo?\n          </p>\n\n          <ul class=\"list-none mb-8 text-lg leading-relaxed text-gray-700\">\n            <li class=\"mb-4\">\n              <strong style=\"color: #700FA3\">🔴 \"Estoy a punto de contratar a alguien nuevo.\"</strong>\n              <br />→ Necesitas una Prueba de Preempleo.\n            </li>\n            <li class=\"mb-4\">\n              <strong style=\"color: #700FA3\">🟡 \"Quiero asegurarme de que mi personal actual sigue siendo confiable.\"</strong>\n              <br />→ Necesitas una Prueba de Rutina/Permanencia.\n            </li>\n            <li class=\"mb-4\">\n              <strong style=\"color: #700FA3\">🟣 \"Pasó algo malo en la empresa (robo, fraude) y necesito saber quién fue.\"</strong>\n              <br />→ Necesitas una Prueba Específica de Investigación.\n            </li>\n          </ul>\n\n          <h2 class=\"text-2xl font-bold mt-12 mb-6\" style=\"color: #48255A\">\n            Conclusión\n          </h2>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            Como ves, el polígrafo es una herramienta versátil que se adapta a tus necesidades. Elegir el tipo correcto de prueba es el primer paso para obtener resultados útiles y confiables.\n          </p>\n\n          <p class=\"text-lg leading-relaxed mb-6 text-gray-700\">\n            En OneTrue somos expertos en aplicar cada una de estas evaluaciones con el máximo rigor científico y profesionalismo. Si después de leer esto aún tienes dudas sobre cuál es la ideal para tu caso particular, no dudes en contactarnos. Estaremos encantados de asesorarte gratuitamente para que tomes la mejor decisión para tu empresa.\n          </p>",
       "created_at": "2026-06-06T16:11:47.451442+00:00"
+    },
+    {
+      "id": "verdad-o-mentira",
+      "title": "¿Verdad o Mentira? Todo lo que debes saber antes de contratar una prueba de Polígrafo.",
+      "image": "/blog/1.webp",
+      "link": "/blog/verdad-o-mentira",
+      "published": true,
+      "publishDate": "15 de Noviembre, 2024",
+      "readTime": "5 min de lectura",
+      "content": "<h2 class=\"text-2xl font-bold mt-0 mb-6\" style=\"color: #48255A\">Introducción</h2>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Tomar la decisión de evaluar la confianza de tu personal o investigar un incidente delicado (como un robo o fraude interno) no es fácil. Seguramente has escuchado hablar del polígrafo o detector de mentiras, pero es normal que surjan dudas: ¿Realmente funciona? ¿Es legal? ¿Qué tan complicado es?</p>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">En mi experiencia ayudando a empresas a seleccionar candidatos confiables, he notado que la falta de información clara es el principal obstáculo. Por eso, he recopilado las preguntas más habituales que recibo sobre la poligrafía y las he respondido de forma sencilla. El objetivo es que tengas toda la información sobre la mesa para tomar una decisión objetiva y segura para tu empresa.</p>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Las pruebas de polígrafo son una herramienta forense ampliamente utilizada en procesos de selección, investigaciones internas y evaluaciones de confiabilidad. Sin embargo, existen muchos mitos y malinterpretaciones sobre cómo funcionan y qué tan precisas son. En este artículo, te ayudaremos a separar la verdad de la ficción.</p>\n\n<h2 class=\"text-2xl font-bold mt-12 mb-6\" style=\"color: #48255A\">Lo que necesitas saber sobre las pruebas de polígrafo (Preguntas Frecuentes)</h2>\n\n<h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            1. ¿Qué tan confiable es realmente el polígrafo o también llamado \"detector de mentiras\"?\n          </h3>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Esta es la duda número uno. A diferencia de lo que se ve en las películas, el polígrafo es un instrumento científico, no mágico. Estudios internacionales han demostrado que, cuando la prueba es realizada por un profesional certificado, la precisión de los resultados supera el 90%. Actualmente, es la tecnología más precisa para evaluar la credibilidad de una persona, superando a otras herramientas de evaluación de credibilidad.</p>\n\n<h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            2. ¿Cómo funciona una prueba de polígrafo? ¿Es solo conectar cables?\n          </h3>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">No, es un proceso mucho más completo y humano. Una prueba de Polígrafo profesional consta de tres etapas claras:</p>\n\n<ul class=\"list-disc list-inside mb-6 text-lg leading-relaxed text-gray-700\">\n  <li><strong>La entrevista previa (Pre-test):</strong> Conversamos con la persona para entender su contexto y explicarle el procedimiento.</li>\n  <li><strong>La fase de prueba (In-test):</strong> Aquí es donde se usa el polígrafo para registrar las reacciones psicofisiológicas del cuerpo mientras se hacen las preguntas.</li>\n  <li><strong>El análisis:</strong> Interpretamos esos datos para entregarte un resultado objetivo.</li>\n</ul>\n\n<h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            3. ¿Cuánto tiempo tarda todo el proceso?\n          </h3>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Para garantizar un resultado de calidad, no podemos apresurarnos. Una prueba de polígrafo bien hecha dura normalmente entre 90 y 120 minutos según estándares internacionales. Este tiempo es necesario para que la persona evaluada esté tranquila y el procedimiento se haga correctamente.</p>\n\n<h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            4. ¿Qué se necesita para hacerle la prueba a un empleado o candidato?\n          </h3>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">El requisito más importante es el consentimiento. La poligrafía es un proceso voluntario; la persona debe firmar una autorización escrita aceptando someterse a la evaluación. No se puede obligar a nadie, ya que la cooperación es clave para el éxito de la prueba, nosotros nos encargamos de todo.</p>\n\n<h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            5. ¿Puedo hacer todas las preguntas que quiera?\n          </h3>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Muchas veces los clientes quieren aprovechar para preguntar de todo, pero para que la prueba de polígrafo sea efectiva, debemos enfocarnos. Aunque en la entrevista previa se tocan muchos temas, durante la prueba instrumental (con el equipo conectado) nos centramos generalmente en 3 o 4 preguntas clave relacionadas directamente con el objetivo (ej. \"¿Robaste el dinero de la caja?\", \"¿Has cometido fraude en tu empleo anterior?\"). Esto garantiza mayor precisión.</p>\n\n<h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            6. ¿Tengo que llevar a mi personal a sus oficinas o pueden venir a mi empresa?\n          </h3>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Sabemos que la logística a veces es complicada. Por eso, las pruebas de polígrafo pueden realizarse en tus instalaciones si así lo prefieres. Solo necesitamos un espacio privado, libre de distracciones, con un escritorio y dos sillas. Nosotros nos encargamos del resto.</p>\n\n<h3 class=\"text-xl font-bold mt-8 mb-4\" style=\"color: #700FA3\">\n            7. ¿Cuánto tardan en entregarme los resultados?\n          </h3>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Entendemos que en situaciones de robos o contratación, el tiempo es dinero. Por lo general, entregamos los resultados en tan solo 4 horas después de haber concluido las pruebas y los informes técnicos en 24 horas.</p>\n\n<h2 class=\"text-2xl font-bold mt-12 mb-6\" style=\"color: #48255A\">Conclusión: La tranquilidad de decidir con la verdad</h2>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Contratar un servicio de poligrafía no se trata solo de \"atrapar a alguien\", sino de crear un ambiente de trabajo seguro y honesto. Ya sea que necesites filtrar a un nuevo candidato o resolver un incidente interno, ahora sabes cómo funciona esta herramienta.</p>\n\n<p class=\"text-lg leading-relaxed mb-6 text-gray-700\">Si tienes más dudas o necesitas asesoría sobre qué tipo de prueba es la ideal para tu caso, no dudes en contactarnos. Estamos aquí para ayudarte a descubrir la verdad.</p>",
+      "created_at": "2026-06-06T16:11:47.217222+00:00"
     }
   ],
   "podcasts": [

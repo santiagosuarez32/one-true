@@ -8,6 +8,7 @@ export default function Ebook() {
   const cardRef = useRef<HTMLDivElement>(null);
 
   const [email, setEmail] = useState("");
+  const [empresa, setEmpresa] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
   const [puesto, setPuesto] = useState("");
   const [rubro, setRubro] = useState("");
@@ -115,6 +116,7 @@ export default function Ebook() {
         },
         body: JSON.stringify({
           email,
+          empresa,
           whatsapp,
           puesto,
           rubro,
@@ -188,10 +190,10 @@ export default function Ebook() {
 
         {/* Right Column: Form Card */}
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-          <div ref={cardRef} className="bg-white rounded p-5 sm:p-8 md:p-10 shadow-[0_20px_50px_rgba(72,37,90,0.08)] border border-neutral-100 w-full max-w-[550px]">
+          <div ref={cardRef} className="bg-white rounded-2xl p-5 sm:p-6 shadow-[0_20px_50px_rgba(72,37,90,0.08)] border border-neutral-100 w-full max-w-[600px]">
             
             {/* Ebook Mockup Image Container */}
-            <div className="w-full h-[220px] bg-neutral-100 rounded mb-8 relative overflow-hidden flex items-center justify-center">
+            <div className="w-full h-[120px] bg-neutral-100 rounded mb-4 relative overflow-hidden flex items-center justify-center">
               {/* Fallback pattern / gradient instead of image so it doesn't look broken */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#700FA3]/10 to-[#FFC107]/10"></div>
               <img 
@@ -217,90 +219,113 @@ export default function Ebook() {
                 </p>
               </div>
             ) : (
-              <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+              <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
                 {error && (
-                  <div className="p-4 bg-red-50 border border-red-200 rounded text-red-650 text-xs font-semibold leading-relaxed">
+                  <div className="p-3 bg-red-50 border border-red-200 rounded text-red-650 text-xs font-semibold leading-relaxed">
                     ⚠️ {error}
                   </div>
                 )}
 
-                <div className="flex flex-col gap-1.5 text-left">
-                  <label className="text-xs font-bold text-neutral-500 uppercase tracking-wider" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                    Correo Electrónico
-                  </label>
-                  <input 
-                    type="email" 
-                    placeholder="Correo corporativo o personal" 
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-5 py-4 rounded border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all font-semibold"
-                    required
-                    disabled={loading}
-                  />
-                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3">
+                  {/* Correo Electrónico */}
+                  <div className="flex flex-col gap-1 text-left">
+                    <label className="text-[10px] font-bold text-neutral-500 uppercase tracking-wider" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                      Correo Electrónico
+                    </label>
+                    <input 
+                      type="email" 
+                      placeholder="Correo corporativo o personal" 
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="w-full px-4 py-2 rounded border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all text-sm font-semibold"
+                      required
+                      disabled={loading}
+                    />
+                  </div>
 
-                <div className="flex flex-col gap-1.5 text-left">
-                  <label className="text-xs font-bold text-neutral-500 uppercase tracking-wider" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                    Número de WhatsApp / Teléfono
-                  </label>
-                  <input 
-                    type="tel" 
-                    placeholder="Ej: +593 99 999 9999" 
-                    value={whatsapp}
-                    onChange={(e) => setWhatsapp(e.target.value)}
-                    className="w-full px-5 py-4 rounded border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all font-semibold"
-                    required
-                    disabled={loading}
-                  />
-                </div>
+                  {/* Nombre de la Empresa */}
+                  <div className="flex flex-col gap-1 text-left">
+                    <label className="text-[10px] font-bold text-neutral-500 uppercase tracking-wider" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                      Nombre de la Empresa
+                    </label>
+                    <input 
+                      type="text" 
+                      placeholder="Ej: Mi Empresa S.A." 
+                      value={empresa}
+                      onChange={(e) => setEmpresa(e.target.value)}
+                      className="w-full px-4 py-2 rounded border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all text-sm font-semibold"
+                      required
+                      disabled={loading}
+                    />
+                  </div>
 
-                <div className="flex flex-col gap-1.5 text-left">
-                  <label className="text-xs font-bold text-neutral-500 uppercase tracking-wider" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                    ¿Qué puesto tienes en tu empresa?
-                  </label>
-                  <input 
-                    type="text" 
-                    placeholder="Ej: Director de RRHH, Gerente de Seguridad..." 
-                    value={puesto}
-                    onChange={(e) => setPuesto(e.target.value)}
-                    className="w-full px-5 py-4 rounded border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all font-semibold"
-                    required
-                    disabled={loading}
-                  />
-                </div>
+                  {/* WhatsApp */}
+                  <div className="flex flex-col gap-1 text-left">
+                    <label className="text-[10px] font-bold text-neutral-500 uppercase tracking-wider" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                      WhatsApp / Teléfono
+                    </label>
+                    <input 
+                      type="tel" 
+                      placeholder="Ej: +593 99 999 9999" 
+                      value={whatsapp}
+                      onChange={(e) => setWhatsapp(e.target.value)}
+                      className="w-full px-4 py-2 rounded border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all text-sm font-semibold"
+                      required
+                      disabled={loading}
+                    />
+                  </div>
 
-                <div className="flex flex-col gap-1.5 text-left">
-                  <label className="text-xs font-bold text-neutral-500 uppercase tracking-wider" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                    ¿A qué se dedica tu empresa? (Rubro)
-                  </label>
-                  <input 
-                    type="text" 
-                    placeholder="Ej: Logística, Seguridad, Retail..." 
-                    value={rubro}
-                    onChange={(e) => setRubro(e.target.value)}
-                    className="w-full px-5 py-4 rounded border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all font-semibold"
-                    required
-                    disabled={loading}
-                  />
-                </div>
+                  {/* Puesto */}
+                  <div className="flex flex-col gap-1 text-left">
+                    <label className="text-[10px] font-bold text-neutral-500 uppercase tracking-wider" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                      ¿Qué puesto tienes?
+                    </label>
+                    <input 
+                      type="text" 
+                      placeholder="Ej: Director de RRHH..." 
+                      value={puesto}
+                      onChange={(e) => setPuesto(e.target.value)}
+                      className="w-full px-4 py-2 rounded border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all text-sm font-semibold"
+                      required
+                      disabled={loading}
+                    />
+                  </div>
 
-                <div className="flex flex-col gap-1.5 text-left">
-                  <label className="text-xs font-bold text-neutral-500 uppercase tracking-wider" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                    ¿Cuántas personas trabajan en tu empresa?
-                  </label>
-                  <input 
-                    type="text" 
-                    placeholder="Ej: 1-10, 11-50, más de 200..." 
-                    value={cantPersonas}
-                    onChange={(e) => setCantPersonas(e.target.value)}
-                    className="w-full px-5 py-4 rounded border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all font-semibold"
-                    required
-                    disabled={loading}
-                  />
+                  {/* Rubro */}
+                  <div className="flex flex-col gap-1 text-left">
+                    <label className="text-[10px] font-bold text-neutral-500 uppercase tracking-wider" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                      ¿A qué se dedica tu empresa?
+                    </label>
+                    <input 
+                      type="text" 
+                      placeholder="Ej: Logística, Seguridad, Retail..." 
+                      value={rubro}
+                      onChange={(e) => setRubro(e.target.value)}
+                      className="w-full px-4 py-2 rounded border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all text-sm font-semibold"
+                      required
+                      disabled={loading}
+                    />
+                  </div>
+
+                  {/* Cantidad de Personas */}
+                  <div className="flex flex-col gap-1 text-left">
+                    <label className="text-[10px] font-bold text-neutral-500 uppercase tracking-wider" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                      ¿Cuántas personas trabajan?
+                    </label>
+                    <input 
+                      type="text" 
+                      placeholder="Ej: 11-50, más de 200..." 
+                      value={cantPersonas}
+                      onChange={(e) => setCantPersonas(e.target.value)}
+                      className="w-full px-4 py-2 rounded border border-neutral-200 bg-neutral-50/50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:border-[#700FA3] transition-all text-sm font-semibold"
+                      required
+                      disabled={loading}
+                    />
+                  </div>
                 </div>
                 
-                <p className="text-[11px] text-neutral-500 leading-relaxed font-light text-center mt-1" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                  Al solicitar el Ebook, aceptas que tus datos sean recopilados para gestionar la descarga y realizar un contacto y seguimiento comercial posterior, de acuerdo con nuestra{" "}
+                <p className="text-[10px] text-neutral-500 leading-relaxed font-light text-center mt-1" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                  Al solicitar el Ebook, aceptas nuestra{" "}
                   <a href="/politica-de-privacidad" className="text-[#700FA3] hover:underline font-bold" style={{ fontSize: "inherit" }}>
                     Política de Privacidad
                   </a>.
@@ -310,12 +335,12 @@ export default function Ebook() {
                   type="submit"
                   aria-label="Descargar u obtener Ebook gratuito de Poligrafía"
                   disabled={loading}
-                  className="w-full mt-2 px-6 py-4 bg-[#700FA3] text-white font-bold rounded hover:bg-[#5a0c82] transition-colors duration-300 text-lg shadow-[0_4px_20px_rgba(112,15,163,0.3)] flex items-center justify-center gap-2 disabled:opacity-75 disabled:cursor-not-allowed cursor-pointer"
+                  className="w-full mt-1 px-5 py-3 bg-[#700FA3] text-white font-bold rounded hover:bg-[#5a0c82] transition-colors duration-300 text-base shadow-[0_4px_15px_rgba(112,15,163,0.25)] flex items-center justify-center gap-2 disabled:opacity-75 disabled:cursor-not-allowed cursor-pointer"
                   style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                 >
                   {loading ? (
                     <>
-                      <div className="h-5 w-5 animate-spin rounded-full border-2 border-white border-l-transparent" />
+                      <div className="h-4 w-4 animate-spin rounded-full border-2 border-white border-l-transparent" />
                       Procesando...
                     </>
                   ) : (

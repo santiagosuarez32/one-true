@@ -3,7 +3,7 @@ import crypto from "crypto";
 
 export async function POST(request: Request) {
   try {
-    const { email, whatsapp, puesto, rubro, cantPersonas } = await request.json();
+    const { email, empresa, whatsapp, puesto, rubro, cantPersonas } = await request.json();
 
     if (!email) {
       return NextResponse.json({ error: "El correo electrónico es obligatorio" }, { status: 400 });
@@ -35,7 +35,11 @@ export async function POST(request: Request) {
     const memberPayload = {
       email_address: email.trim(),
       status_if_new: "subscribed",
-      status: "subscribed" // Force status to subscribed
+      status: "subscribed", // Force status to subscribed
+      merge_fields: {
+        COMPANY: (empresa || "").trim(),
+        PHONE: (whatsapp || "").trim()
+      }
     };
 
     const memberRes = await fetch(memberUrl, {
@@ -83,7 +87,7 @@ export async function POST(request: Request) {
 
     // 3. Add a detailed Note to the subscriber (POST /3.0/lists/{list_id}/members/{subscriber_hash}/notes)
     const notesUrl = `https://${serverPrefix}.api.mailchimp.com/3.0/lists/${listId}/members/${subscriberHash}/notes`;
-    const noteText = `Descarga de Ebook.\nWhatsApp: ${whatsapp || "No provisto"}\nPuesto: ${puesto || "No especificado"}\nRubro de Empresa: ${rubro || "No especificado"}\nNúmero de Empleados: ${cantPersonas || "No especificado"}`;
+    const noteText = `Descarga de Ebook.\nEmpresa: ${empresa || "No especificada"}\nWhatsApp: ${whatsapp || "No provisto"}\nPuesto: ${puesto || "No especificado"}\nRubro de Empresa: ${rubro || "No especificado"}\nNúmero de Empleados: ${cantPersonas || "No especificado"}`;
     
     const notesPayload = {
       note: noteText

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -305,15 +306,33 @@ export default function CalificacionGraficasPage({ course }: { course: Course })
               const icon = emojiMatch ? emojiMatch[0] : "📌";
               const titleClean = feat.title.replace(icon, "").trim();
 
-              return (
-                <div key={index} className="flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+              const cardContent = (
+                <>
                   <div className="text-4xl mb-3">{icon}</div>
-                  <h3 className="text-lg font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
+                  <h3 className="text-lg font-bold text-[#48255A] mb-3 group-hover:text-[#700FA3] transition-colors" style={{ fontFamily: "var(--font-montserrat), sans-serif", lineHeight: "1.3" }}>
                     {titleClean}
                   </h3>
                   <p className="text-[#525252] text-sm leading-relaxed font-light" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                     {feat.description}
                   </p>
+                </>
+              );
+
+              if ((feat as any).link) {
+                return (
+                  <Link
+                    key={index}
+                    href={(feat as any).link}
+                    className="flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:border-[#700FA3]/40 cursor-pointer group"
+                  >
+                    {cardContent}
+                  </Link>
+                );
+              }
+
+              return (
+                <div key={index} className="flex flex-col bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                  {cardContent}
                 </div>
               );
             })}

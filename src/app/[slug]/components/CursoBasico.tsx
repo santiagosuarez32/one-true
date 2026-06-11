@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -429,22 +430,40 @@ export default function CursoBasicoPoligrafiaPage({ course }: { course: Course }
                   title: "Carrera de Futuro", 
                   description: "Acceda a oportunidades laborales en agencias gubernamentales, inteligencia y seguridad corporativa privada." 
                 }
-              ]).map((item, idx) => (
-                <li key={idx} className="flex items-start gap-3 py-1">
-                  <div className="w-6 h-6 rounded flex items-center justify-center bg-[#700FA3] text-white shrink-0 mt-0.5 shadow-md">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span 
-                    className="text-base text-[#525252] font-medium leading-relaxed"
-                    style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                  >
-                    <strong className="font-bold text-[#48255A]">{item.title}: </strong>
-                    {item.description || (item as any).text}
-                  </span>
-                </li>
-              ))}
+              ]).map((item, idx) => {
+                const itemContent = (
+                  <>
+                    <div className="w-6 h-6 rounded flex items-center justify-center bg-[#700FA3] text-white shrink-0 mt-0.5 shadow-md group-hover:bg-[#5C0B87]">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <span 
+                      className="text-base text-[#525252] font-medium leading-relaxed text-left"
+                      style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                    >
+                      <strong className="font-bold text-[#48255A] group-hover:text-[#700FA3] transition-colors">{item.title}: </strong>
+                      {item.description || (item as any).text}
+                    </span>
+                  </>
+                );
+
+                if ((item as any).link) {
+                  return (
+                    <li key={idx} className="py-1">
+                      <Link href={(item as any).link} className="flex items-start gap-3 group hover:translate-x-1 transition-all duration-300">
+                        {itemContent}
+                      </Link>
+                    </li>
+                  );
+                }
+
+                return (
+                  <li key={idx} className="flex items-start gap-3 py-1">
+                    {itemContent}
+                  </li>
+                );
+              })}
             </ul>
 
             <a
