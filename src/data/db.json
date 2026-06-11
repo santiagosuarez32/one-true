@@ -1847,14 +1847,14 @@
   ],
   "settings": [
     {
+      "key": "ebook_filename",
+      "value": "ebook-2026-prueba",
+      "created_at": "2026-06-10T06:00:53.108211+00:00"
+    },
+    {
       "key": "ebook_pdf_url",
       "value": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/ebooks/1781071235704-kc8p9y-ebook-junio-2026--1-.pdf",
       "created_at": "2026-06-10T05:38:10.990942+00:00"
-    },
-    {
-      "key": "ebook_filename",
-      "value": "ebook-2026",
-      "created_at": "2026-06-10T06:00:53.108211+00:00"
     }
   ]
 }
