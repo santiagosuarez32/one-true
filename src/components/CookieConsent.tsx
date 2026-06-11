@@ -2,11 +2,15 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function CookieConsent() {
+  const pathname = usePathname();
   const [showConsent, setShowConsent] = useState(false);
 
   useEffect(() => {
+    if (pathname !== "/") return;
+
     // Check if consent has already been saved in localStorage
     const consent = localStorage.getItem("onetrue_cookies_accepted");
     if (!consent) {
@@ -16,7 +20,7 @@ export default function CookieConsent() {
       }, 1500);
       return () => clearTimeout(timer);
     }
-  }, []);
+  }, [pathname]);
 
   const handleAccept = () => {
     localStorage.setItem("onetrue_cookies_accepted", "true");
@@ -28,6 +32,7 @@ export default function CookieConsent() {
     setShowConsent(false);
   };
 
+  if (pathname !== "/") return null;
   if (!showConsent) return null;
 
   return (

@@ -184,7 +184,11 @@ export async function getDb(): Promise<DatabaseSchema> {
         settings: settingsRes.data || []
       };
       // Save locally as backup cache
-      await fs.writeFile(dbPath, JSON.stringify(db, null, 2), "utf8");
+      try {
+        await fs.writeFile(dbPath, JSON.stringify(db, null, 2), "utf8");
+      } catch (writeErr) {
+        console.warn("Could not write local db.json cache (expected on Vercel):", writeErr);
+      }
       return db;
     } else {
       console.warn("Supabase returned table errors, using local db.json cache:", {
@@ -217,7 +221,11 @@ export async function getDb(): Promise<DatabaseSchema> {
 }
 
 export async function writeDb(data: DatabaseSchema): Promise<void> {
-  await fs.writeFile(dbPath, JSON.stringify(data, null, 2), "utf8");
+  try {
+    await fs.writeFile(dbPath, JSON.stringify(data, null, 2), "utf8");
+  } catch (writeErr) {
+    console.warn("Could not write local db.json cache (expected on Vercel):", writeErr);
+  }
 }
 
 /* ==================== Services API ==================== */

@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import { useContactSubmit } from "@/hooks/useContactSubmit";
 import { FaLinkedin, FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { Monitor, Brain, Fingerprint, Globe, UserFocus, Devices, BookOpen, Certificate, Medal, Shield, Microscope, Crown } from "@phosphor-icons/react";
 
@@ -15,7 +16,7 @@ const phosphorIconMap: Record<string, React.ComponentType<any>> = {
 };
 
 export default function CursoBasicoPoligrafiaPage({ course }: { course: Course }) {
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  const { loading, error, success: formSubmitted, submitForm, setSuccess: setFormSubmitted } = useContactSubmit(`Formulario de Curso: ${course.title || "Curso Básico"}`);
   const [country, setCountry] = useState("ec");
 
   const {
@@ -708,31 +709,56 @@ export default function CursoBasicoPoligrafiaPage({ course }: { course: Course }
                 {!formSubmitted ? (
                   <div>
                     <form 
-                      onSubmit={(e) => {
+                      onSubmit={async (e) => {
                         e.preventDefault();
-                        setFormSubmitted(true);
+                        const form = e.currentTarget;
+                        const formData = new FormData(form);
+                        const prefixes: Record<string, string> = {
+                          ec: "+593", co: "+57", pe: "+51", cl: "+56", ar: "+54", mx: "+52", es: "+34", us: "+1"
+                        };
+                        const phonePrefix = prefixes[country] || "+593";
+                        const rawPhone = formData.get("telefono") as string || "";
+                        const fullPhone = `${phonePrefix} ${rawPhone}`;
+
+                        await submitForm({
+                          nombre: formData.get("nombre"),
+                          apellido: formData.get("apellido"),
+                          email: formData.get("email"),
+                          telefono: fullPhone,
+                          ciudad: formData.get("ciudad"),
+                          mensaje: formData.get("mensaje"),
+                        });
                       }}
                       className="flex flex-col gap-3"
                     >
+                      {error && (
+                        <div className="p-3 bg-red-50 border border-red-200 rounded text-red-655 text-xs font-semibold">
+                          ⚠️ {error}
+                        </div>
+                      )}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                         <div className="flex flex-col gap-1">
                           <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Nombre *</label>
                           <input 
+                            name="nombre"
                             type="text" 
                             placeholder="Tu nombre" 
                             className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                             required 
+                            disabled={loading}
                           />
                         </div>
                         <div className="flex flex-col gap-1">
                           <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Apellido *</label>
                           <input 
+                            name="apellido"
                             type="text" 
                             placeholder="Tu apellido" 
                             className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                             required 
+                            disabled={loading}
                           />
                         </div>
                       </div>
@@ -741,11 +767,13 @@ export default function CursoBasicoPoligrafiaPage({ course }: { course: Course }
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Correo electrónico *</label>
                         <div className="relative">
                           <input 
+                            name="email"
                             type="email" 
                             placeholder="correo@empresa.com" 
                             className="px-4 py-2.5 pr-10 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                             required 
+                            disabled={loading}
                           />
                           <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-[#700FA3]">
                             <svg className="w-5 h-5 text-[#700FA3]" viewBox="0 0 20 20" fill="currentColor">
@@ -776,6 +804,7 @@ export default function CursoBasicoPoligrafiaPage({ course }: { course: Course }
                                 backgroundSize: '1.1em 1.1em',
                                 backgroundRepeat: 'no-repeat',
                               }}
+                              disabled={loading}
                             >
                               <option value="ec">+593</option>
                               <option value="co">+57</option>
@@ -788,11 +817,13 @@ export default function CursoBasicoPoligrafiaPage({ course }: { course: Course }
                             </select>
                           </div>
                           <input 
+                            name="telefono"
                             type="tel" 
                             placeholder="+593 099 371 2790" 
                             className="flex-1 px-4 py-2.5 bg-transparent border-none text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-0 text-sm font-medium" 
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                             required 
+                            disabled={loading}
                           />
                           <div className="pr-3 text-[#700FA3] pointer-events-none">
                             <svg className="w-5 h-5 text-[#700FA3]" viewBox="0 0 20 20" fill="currentColor">
@@ -805,22 +836,26 @@ export default function CursoBasicoPoligrafiaPage({ course }: { course: Course }
                       <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Ciudad *</label>
                         <input 
+                          name="ciudad"
                           type="text" 
                           placeholder="Tu ciudad" 
                           className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                           style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                           required 
+                          disabled={loading}
                         />
                       </div>
 
                       <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Mensaje *</label>
                         <textarea 
+                          name="mensaje"
                           placeholder="Escribe tu mensaje aquí..." 
                           rows={2} 
                           className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium resize-none" 
                           style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                           required 
+                          disabled={loading}
                         ></textarea>
                       </div>
 
@@ -841,6 +876,7 @@ export default function CursoBasicoPoligrafiaPage({ course }: { course: Course }
                             id="aceptar-curso" 
                             className="w-4 h-4 rounded border-neutral-300 text-[#700FA3] focus:ring-[#700FA3] cursor-pointer" 
                             required 
+                            disabled={loading}
                           />
                           <label htmlFor="aceptar-curso" className="text-xs font-bold text-neutral-700 cursor-pointer select-none" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                             Aceptar
@@ -850,10 +886,11 @@ export default function CursoBasicoPoligrafiaPage({ course }: { course: Course }
 
                       <button
                         type="submit"
-                        className="mt-2 px-8 py-3.5 bg-[#700FA3] hover:bg-[#5C0B87] text-white font-bold rounded transition-all duration-300 w-full shadow-lg shadow-[#700FA3]/25 hover:scale-[1.01] active:scale-[0.99] text-base"
+                        disabled={loading}
+                        className="mt-2 px-8 py-3.5 bg-[#700FA3] hover:bg-[#5C0B87] text-white font-bold rounded transition-all duration-300 w-full shadow-lg shadow-[#700FA3]/25 hover:scale-[1.01] active:scale-[0.99] text-base disabled:opacity-75 disabled:cursor-not-allowed cursor-pointer"
                         style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                       >
-                        Cotizar ahora
+                        {loading ? "Enviando..." : "Cotizar ahora"}
                       </button>
 
                       <div className="flex flex-col items-center gap-1.5 mt-5 pt-4 border-t border-neutral-100 w-full">

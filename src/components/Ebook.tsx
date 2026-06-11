@@ -212,20 +212,9 @@ export default function Ebook() {
                 <h3 className="text-2xl font-bold text-[#48255A] mb-3" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                   ¡Registro Exitoso!
                 </h3>
-                <p className="text-sm text-neutral-500 mb-8 leading-relaxed max-w-sm" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                  Tu Ebook se ha descargado de forma automática. Si la descarga no inició, haz clic en el botón de abajo.
+                <p className="text-sm text-neutral-500 mb-4 leading-relaxed max-w-sm" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                  Tu Ebook se ha descargado de forma automática.
                 </p>
-                
-                <button
-                  onClick={triggerDownload}
-                  className="w-full px-6 py-4 bg-[#700FA3] text-white font-bold rounded hover:bg-[#5a0c82] transition-colors duration-300 text-base shadow-[0_4px_20px_rgba(112,15,163,0.3)] flex items-center justify-center gap-2 cursor-pointer"
-                  style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                  </svg>
-                  Descargar de nuevo
-                </button>
               </div>
             ) : (
               <form className="flex flex-col gap-4" onSubmit={handleSubmit}>

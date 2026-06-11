@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { useContactSubmit } from "@/hooks/useContactSubmit";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -8,7 +9,7 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { Course } from "@/lib/cms";
 
 export default function CoursePageTemplate({ course }: { course: Course }) {
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  const { loading, error, success, submitForm, setSuccess } = useContactSubmit(`Formulario de Curso: ${course.title}`);
   const [country, setCountry] = useState("ec");
 
   const {
@@ -363,28 +364,49 @@ export default function CoursePageTemplate({ course }: { course: Course }) {
 
             <div className="lg:col-span-6 relative">
               <div className="bg-white rounded p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.35)] border border-neutral-100 relative overflow-hidden transition-all duration-500">
-                {!formSubmitted ? (
+                {!success ? (
                   <form
-                    onSubmit={(e) => {
+                    onSubmit={async (e) => {
                       e.preventDefault();
-                      setFormSubmitted(true);
+                      const form = e.currentTarget;
+                      const formData = new FormData(form);
+                      const prefixes: Record<string, string> = {
+                        ec: "+593", co: "+57", pe: "+51", cl: "+56", ar: "+54", mx: "+52", es: "+34", us: "+1"
+                      };
+                      const phonePrefix = prefixes[country] || "+593";
+                      const rawPhone = formData.get("telefono") as string || "";
+                      const fullPhone = `${phonePrefix} ${rawPhone}`;
+
+                      await submitForm({
+                        nombre: formData.get("nombre"),
+                        apellido: formData.get("apellido"),
+                        email: formData.get("email"),
+                        telefono: fullPhone,
+                        ciudad: formData.get("ciudad"),
+                        mensaje: formData.get("mensaje"),
+                      });
                     }}
                     className="flex flex-col gap-3"
                   >
+                    {error && (
+                      <div className="p-3 bg-red-50 border border-red-200 rounded text-red-650 text-xs font-semibold">
+                        ⚠️ {error}
+                      </div>
+                    )}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                       <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Nombre *</label>
-                        <input type="text" placeholder="Tu nombre" className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" style={{ fontFamily: "var(--font-montserrat), sans-serif" }} required />
+                        <input name="nombre" type="text" placeholder="Tu nombre" className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" style={{ fontFamily: "var(--font-montserrat), sans-serif" }} required disabled={loading} />
                       </div>
                       <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Apellido *</label>
-                        <input type="text" placeholder="Tu apellido" className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" style={{ fontFamily: "var(--font-montserrat), sans-serif" }} required />
+                        <input name="apellido" type="text" placeholder="Tu apellido" className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" style={{ fontFamily: "var(--font-montserrat), sans-serif" }} required disabled={loading} />
                       </div>
                     </div>
 
                     <div className="flex flex-col gap-1">
                       <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Correo electrónico *</label>
-                      <input type="email" placeholder="correo@empresa.com" className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" style={{ fontFamily: "var(--font-montserrat), sans-serif" }} required />
+                      <input name="email" type="email" placeholder="correo@empresa.com" className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" style={{ fontFamily: "var(--font-montserrat), sans-serif" }} required disabled={loading} />
                     </div>
 
                     <div className="flex flex-col gap-1">
@@ -392,7 +414,7 @@ export default function CoursePageTemplate({ course }: { course: Course }) {
                       <div className="relative flex items-center border-0 rounded bg-neutral-50 focus-within:ring-2 focus-within:ring-[#700FA3]/20 focus-within:bg-white focus-within:shadow-md transition-all overflow-hidden">
                         <div className="flex items-center gap-2 pl-3 border-r border-neutral-200/60 bg-transparent shrink-0">
                           <img src={`https://flagcdn.com/w20/${country}.png`} alt={country} className="w-5 h-auto object-contain select-none" />
-                          <select value={country} onChange={(e) => setCountry(e.target.value)} className="bg-transparent border-0 py-2.5 pl-1 pr-6 text-sm font-semibold text-neutral-700 outline-none focus:ring-0 cursor-pointer appearance-none" style={{ fontFamily: "var(--font-montserrat), sans-serif", backgroundImage: `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E")`, backgroundPosition: 'right 0.1rem center', backgroundSize: '1.1em 1.1em', backgroundRepeat: 'no-repeat' }}>
+                          <select value={country} onChange={(e) => setCountry(e.target.value)} className="bg-transparent border-0 py-2.5 pl-1 pr-6 text-sm font-semibold text-neutral-700 outline-none focus:ring-0 cursor-pointer appearance-none" style={{ fontFamily: "var(--font-montserrat), sans-serif", backgroundImage: `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E")`, backgroundPosition: 'right 0.1rem center', backgroundSize: '1.1em 1.1em', backgroundRepeat: 'no-repeat' }} disabled={loading}>
                             <option value="ec">+593</option>
                             <option value="co">+57</option>
                             <option value="pe">+51</option>
@@ -403,18 +425,18 @@ export default function CoursePageTemplate({ course }: { course: Course }) {
                             <option value="us">+1</option>
                           </select>
                         </div>
-                        <input type="tel" placeholder="098 129 6179" className="flex-1 px-4 py-2.5 bg-transparent border-none text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-0 text-sm font-medium" style={{ fontFamily: "var(--font-montserrat), sans-serif" }} required />
+                        <input name="telefono" type="tel" placeholder="098 129 6179" className="flex-1 px-4 py-2.5 bg-transparent border-none text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-0 text-sm font-medium" style={{ fontFamily: "var(--font-montserrat), sans-serif" }} required disabled={loading} />
                       </div>
                     </div>
 
                     <div className="flex flex-col gap-1">
                       <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Ciudad *</label>
-                      <input type="text" placeholder="Tu ciudad" className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" style={{ fontFamily: "var(--font-montserrat), sans-serif" }} required />
+                      <input name="ciudad" type="text" placeholder="Tu ciudad" className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" style={{ fontFamily: "var(--font-montserrat), sans-serif" }} required disabled={loading} />
                     </div>
 
                     <div className="flex flex-col gap-1">
                       <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Mensaje *</label>
-                      <textarea placeholder="Escribe tu mensaje aquí..." rows={2} className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium resize-none" style={{ fontFamily: "var(--font-montserrat), sans-serif" }} required></textarea>
+                      <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." rows={2} className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium resize-none" style={{ fontFamily: "var(--font-montserrat), sans-serif" }} required disabled={loading}></textarea>
                     </div>
 
                     <div className="flex flex-col gap-4 mt-2">
@@ -425,13 +447,13 @@ export default function CoursePageTemplate({ course }: { course: Course }) {
                         <a href="/terminos-y-condiciones" className="text-[#700FA3] hover:underline font-bold" style={{ fontSize: "inherit" }}>términos establecidos en ella</a>.
                       </p>
                       <div className="flex items-center gap-3">
-                        <input type="checkbox" id="aceptar-cpt" className="w-4 h-4 rounded border-neutral-300 text-[#700FA3] focus:ring-[#700FA3] cursor-pointer" required />
+                        <input type="checkbox" id="aceptar-cpt" className="w-4 h-4 rounded border-neutral-300 text-[#700FA3] focus:ring-[#700FA3] cursor-pointer" required disabled={loading} />
                         <label htmlFor="aceptar-cpt" className="text-xs font-bold text-neutral-700 cursor-pointer select-none" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Aceptar</label>
                       </div>
                     </div>
 
-                    <button type="submit" className="mt-2 px-8 py-3.5 bg-[#700FA3] hover:bg-[#5C0B87] text-white font-bold rounded transition-all duration-300 w-full shadow-lg shadow-[#700FA3]/25 hover:scale-[1.01] active:scale-[0.99] text-base" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                      Cotizar ahora
+                    <button type="submit" disabled={loading} className="mt-2 px-8 py-3.5 bg-[#700FA3] hover:bg-[#5C0B87] text-white font-bold rounded transition-all duration-300 w-full shadow-lg shadow-[#700FA3]/25 hover:scale-[1.01] active:scale-[0.99] text-base disabled:opacity-75 disabled:cursor-not-allowed cursor-pointer" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                      {loading ? "Enviando..." : "Cotizar ahora"}
                     </button>
 
                     <div className="flex flex-col items-center gap-1.5 mt-5 pt-4 border-t border-neutral-100 w-full">
@@ -458,7 +480,7 @@ export default function CoursePageTemplate({ course }: { course: Course }) {
                   </form>
                 ) : (
                   <div className="flex flex-col items-center text-center py-10">
-                    <div className="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mb-6 animate-bounce">
+                    <div className="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mb-6">
                       <svg className="w-10 h-10 text-green-500" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                       </svg>
@@ -467,7 +489,7 @@ export default function CoursePageTemplate({ course }: { course: Course }) {
                     <p className="text-neutral-500 text-sm font-light max-w-sm mb-8 leading-relaxed" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                       Muchas gracias por ponerte en contacto con nosotros. Tu mensaje ha sido recibido con éxito. Un representante de One True se comunicará contigo lo antes posible.
                     </p>
-                    <button onClick={() => setFormSubmitted(false)} className="px-6 py-3 border-2 border-[#700FA3] text-[#700FA3] hover:bg-[#700FA3] hover:text-white font-bold rounded transition-all duration-300 text-sm" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                    <button onClick={() => setSuccess(false)} className="px-6 py-3 border-2 border-[#700FA3] text-[#700FA3] hover:bg-[#700FA3] hover:text-white font-bold rounded transition-all duration-300 text-sm cursor-pointer" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                       Volver al formulario
                     </button>
                   </div>

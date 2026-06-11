@@ -4,9 +4,10 @@ import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import { useContactSubmit } from "@/hooks/useContactSubmit";
 
 export default function CotizaPage() {
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  const { loading, error: submitError, success: formSubmitted, submitForm, setSuccess: setFormSubmitted } = useContactSubmit("Formulario de Cotización General");
   const [country, setCountry] = useState("ec");
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [formData, setFormData] = useState({
@@ -38,10 +39,24 @@ export default function CotizaPage() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
-      setFormSubmitted(true);
+      const prefixes: Record<string, string> = {
+        ec: "+593", co: "+57", pe: "+51", cl: "+56", ar: "+54", mx: "+52", es: "+34", us: "+1"
+      };
+      const phonePrefix = prefixes[country] || "+593";
+      const fullPhone = `${phonePrefix} ${formData.telefono.trim()}`;
+
+      await submitForm({
+        nombre: formData.nombre,
+        apellido: formData.apellido,
+        email: formData.email,
+        telefono: fullPhone,
+        empresa: formData.empresa,
+        servicio: formData.servicio,
+        mensaje: formData.mensaje,
+      });
     }
   };
 
@@ -124,6 +139,11 @@ export default function CotizaPage() {
                   onSubmit={handleSubmit}
                   className="flex flex-col gap-2"
                 >
+                  {submitError && (
+                    <div className="p-3 bg-red-50 border border-red-200 rounded text-red-650 text-xs font-semibold">
+                      ⚠️ {submitError}
+                    </div>
+                  )}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     <div className="flex flex-col gap-0.5">
                       <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Nombre *</label>
@@ -134,6 +154,7 @@ export default function CotizaPage() {
                         onChange={(e) => { setFormData({...formData, nombre: e.target.value}); if(errors.nombre) setErrors({...errors, nombre: ""})}}
                         className={`px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium ${errors.nombre ? 'focus:ring-red-400 ring-2 ring-red-200' : 'focus:ring-[#700FA3]/20'}`}
                         style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                        disabled={loading}
                       />
                       {errors.nombre && <span className="text-xs text-red-500 mt-1">{errors.nombre}</span>}
                     </div>
@@ -146,6 +167,7 @@ export default function CotizaPage() {
                         onChange={(e) => { setFormData({...formData, apellido: e.target.value}); if(errors.apellido) setErrors({...errors, apellido: ""})}}
                         className={`px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium ${errors.apellido ? 'focus:ring-red-400 ring-2 ring-red-200' : 'focus:ring-[#700FA3]/20'}`}
                         style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                        disabled={loading}
                       />
                       {errors.apellido && <span className="text-xs text-red-500 mt-1">{errors.apellido}</span>}
                     </div>
@@ -161,6 +183,7 @@ export default function CotizaPage() {
                         onChange={(e) => { setFormData({...formData, email: e.target.value}); if(errors.email) setErrors({...errors, email: ""})}}
                         className={`px-4 py-2.5 pr-10 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium ${errors.email ? 'focus:ring-red-400 ring-2 ring-red-200' : 'focus:ring-[#700FA3]/20'}`}
                         style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                        disabled={loading}
                       />
                       <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-[#700FA3]">
                         <svg className="w-5 h-5 text-[#700FA3]" viewBox="0 0 20 20" fill="currentColor">
@@ -189,6 +212,7 @@ export default function CotizaPage() {
                             backgroundRepeat: "no-repeat",
                             paddingRight: "1.2rem"
                           }}
+                          disabled={loading}
                         >
                           <option value="ec">+593</option>
                           <option value="co">+57</option>
@@ -207,6 +231,7 @@ export default function CotizaPage() {
                         onChange={(e) => { setFormData({...formData, telefono: e.target.value}); if(errors.telefono) setErrors({...errors, telefono: ""})}}
                         className={`flex-1 px-4 py-2.5 bg-transparent border-none text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-0 text-sm font-medium ${errors.telefono ? 'outline-red-500 outline-1' : ''}`}
                         style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                        disabled={loading}
                       />
                       <div className="pr-3 text-[#700FA3] pointer-events-none">
                         <svg className="w-5 h-5 text-[#700FA3]" viewBox="0 0 20 20" fill="currentColor">
@@ -226,6 +251,7 @@ export default function CotizaPage() {
                       onChange={(e) => { setFormData({...formData, empresa: e.target.value}); if(errors.empresa) setErrors({...errors, empresa: ""})}}
                       className={`px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium ${errors.empresa ? 'focus:ring-red-400 ring-2 ring-red-200' : 'focus:ring-[#700FA3]/20'}`}
                       style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                      disabled={loading}
                     />
                     {errors.empresa && <span className="text-xs text-red-500 mt-1">{errors.empresa}</span>}
                   </div>
@@ -237,6 +263,7 @@ export default function CotizaPage() {
                       onChange={(e) => { setFormData({...formData, servicio: e.target.value}); if(errors.servicio) setErrors({...errors, servicio: ""})}}
                       className={`px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 focus:outline-none focus:ring-2 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium ${errors.servicio ? 'focus:ring-red-400 ring-2 ring-red-200' : 'focus:ring-[#700FA3]/20'}`}
                       style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                      disabled={loading}
                     >
                       <option value="">Selecciona un servicio</option>
                       <option value="poligrafo">Pruebas de Polígrafo</option>
@@ -262,6 +289,7 @@ export default function CotizaPage() {
                       onChange={(e) => { setFormData({...formData, mensaje: e.target.value}); if(errors.mensaje) setErrors({...errors, mensaje: ""})}}
                       className={`px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium resize-none ${errors.mensaje ? 'focus:ring-red-400 ring-2 ring-red-200' : 'focus:ring-[#700FA3]/20'}`}
                       style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                      disabled={loading}
                     />
                     {errors.mensaje && <span className="text-xs text-red-500 mt-1">{errors.mensaje}</span>}
                   </div>
@@ -284,6 +312,7 @@ export default function CotizaPage() {
                         checked={formData.aceptar}
                         onChange={(e) => { setFormData({...formData, aceptar: e.target.checked}); if(errors.aceptar) setErrors({...errors, aceptar: ""})}}
                         className={`w-4 h-4 rounded border-neutral-300 text-[#700FA3] focus:ring-[#700FA3] cursor-pointer mt-1 ${errors.aceptar ? 'ring-2 ring-red-200' : ''}`}
+                        disabled={loading}
                       />
                       <label htmlFor="aceptar-cotiza" className="text-xs font-bold text-neutral-700 cursor-pointer select-none" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                         Aceptar
@@ -292,8 +321,13 @@ export default function CotizaPage() {
                     {errors.aceptar && <span className="text-xs text-red-500">{errors.aceptar}</span>}
                   </div>
 
-                  <button type="submit" className="mt-2 px-8 py-3.5 bg-[#700FA3] hover:bg-[#5C0B87] text-white font-bold rounded transition-all duration-300 w-full shadow-lg shadow-[#700FA3]/25 hover:scale-[1.01] active:scale-[0.99] text-base" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                    Solicitar cotización
+                  <button 
+                    type="submit" 
+                    disabled={loading}
+                    className="mt-2 px-8 py-3.5 bg-[#700FA3] hover:bg-[#5C0B87] text-white font-bold rounded transition-all duration-300 w-full shadow-lg shadow-[#700FA3]/25 hover:scale-[1.01] active:scale-[0.99] text-base disabled:opacity-75 disabled:cursor-not-allowed cursor-pointer" 
+                    style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                  >
+                    {loading ? "Enviando..." : "Solicitar cotización"}
                   </button>
 
                   <div className="flex flex-col items-center gap-1.5 mt-5 pt-4 border-t border-neutral-100 w-full">

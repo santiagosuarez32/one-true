@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import { useContactSubmit } from "@/hooks/useContactSubmit";
 
 interface PruebaClientProps {
   initialData: any;
@@ -12,7 +13,7 @@ interface PruebaClientProps {
 
 export default function PruebaClient({ initialData }: PruebaClientProps) {
   const dbData = initialData;
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  const { loading, error, success: formSubmitted, submitForm, setSuccess: setFormSubmitted } = useContactSubmit("Formulario de Honestidad, Ética y Valores");
   const [country, setCountry] = useState("ec");
 
   return (
@@ -526,32 +527,57 @@ export default function PruebaClient({ initialData }: PruebaClientProps) {
                   /* FORMULARIO ACTIVO */
                   <div>
                     <form 
-                      onSubmit={(e) => {
+                      onSubmit={async (e) => {
                         e.preventDefault();
-                        setFormSubmitted(true);
+                        const form = e.currentTarget;
+                        const formData = new FormData(form);
+                        const prefixes: Record<string, string> = {
+                          ec: "+593", co: "+57", pe: "+51", cl: "+56", ar: "+54", mx: "+52", es: "+34", us: "+1"
+                        };
+                        const phonePrefix = prefixes[country] || "+593";
+                        const rawPhone = formData.get("telefono") as string || "";
+                        const fullPhone = `${phonePrefix} ${rawPhone}`;
+
+                        await submitForm({
+                          nombre: formData.get("nombre"),
+                          apellido: formData.get("apellido"),
+                          email: formData.get("email"),
+                          telefono: fullPhone,
+                          ciudad: formData.get("ciudad"),
+                          mensaje: formData.get("mensaje"),
+                        });
                       }}
                       className="flex flex-col gap-3"
                     >
+                      {error && (
+                        <div className="p-3 bg-red-50 border border-red-200 rounded text-red-650 text-xs font-semibold">
+                          ⚠️ {error}
+                        </div>
+                      )}
                       {/* Fila 1: Nombre y Apellido */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                         <div className="flex flex-col gap-1">
                           <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Nombre *</label>
                           <input 
+                            name="nombre"
                             type="text" 
                             placeholder="Tu nombre" 
                             className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                             required 
+                            disabled={loading}
                           />
                         </div>
                         <div className="flex flex-col gap-1">
                           <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Apellido *</label>
                           <input 
+                            name="apellido"
                             type="text" 
                             placeholder="Tu apellido" 
                             className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                             required 
+                            disabled={loading}
                           />
                         </div>
                       </div>
@@ -561,11 +587,13 @@ export default function PruebaClient({ initialData }: PruebaClientProps) {
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Correo electrónico *</label>
                         <div className="relative">
                           <input 
+                            name="email"
                             type="email" 
                             placeholder="correo@empresa.com" 
                             className="px-4 py-2.5 pr-10 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                             required 
+                            disabled={loading}
                           />
                           <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-[#700FA3]">
                             <svg className="w-5 h-5 text-[#700FA3]" viewBox="0 0 20 20" fill="currentColor">
@@ -597,6 +625,7 @@ export default function PruebaClient({ initialData }: PruebaClientProps) {
                                 backgroundSize: '1.1em 1.1em',
                                 backgroundRepeat: 'no-repeat',
                               }}
+                              disabled={loading}
                             >
                               <option value="ec">+593</option>
                               <option value="co">+57</option>
@@ -609,11 +638,13 @@ export default function PruebaClient({ initialData }: PruebaClientProps) {
                             </select>
                           </div>
                           <input 
+                            name="telefono"
                             type="tel" 
                             placeholder="098 129 6179" 
                             className="flex-1 px-4 py-2.5 bg-transparent border-none text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-0 text-sm font-medium" 
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                             required 
+                            disabled={loading}
                           />
                           <div className="pr-3 text-[#700FA3] pointer-events-none">
                             <svg className="w-5 h-5 text-[#700FA3]" viewBox="0 0 20 20" fill="currentColor">
@@ -627,11 +658,13 @@ export default function PruebaClient({ initialData }: PruebaClientProps) {
                       <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Ciudad *</label>
                         <input 
+                          name="ciudad"
                           type="text" 
                           placeholder="Tu ciudad" 
                           className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" 
                           style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                           required 
+                          disabled={loading}
                         />
                       </div>
 
@@ -639,11 +672,13 @@ export default function PruebaClient({ initialData }: PruebaClientProps) {
                       <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Mensaje *</label>
                         <textarea 
+                          name="mensaje"
                           placeholder="Escribe tu mensaje aquí..." 
                           rows={2} 
                           className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium resize-none" 
                           style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                           required 
+                          disabled={loading}
                         ></textarea>
                       </div>
 
@@ -657,10 +692,11 @@ export default function PruebaClient({ initialData }: PruebaClientProps) {
                         <div className="flex items-center gap-4">
                           <button 
                             type="submit" 
-                            className="px-6 py-2.5 bg-[#700FA3] hover:bg-[#5f0a8c] text-white font-bold transition-all duration-300 rounded shadow-md hover:shadow-lg text-sm w-fit cursor-pointer"
+                            disabled={loading}
+                            className="px-6 py-2.5 bg-[#700FA3] hover:bg-[#5f0a8c] text-white font-bold transition-all duration-300 rounded shadow-md hover:shadow-lg text-sm w-fit cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed"
                             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                           >
-                            Enviar
+                            {loading ? "Enviando..." : "Enviar"}
                           </button>
 
                           <a 

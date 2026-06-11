@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { useContactSubmit } from "@/hooks/useContactSubmit";
 
 interface ContactoFormAvanzadosProps {
   contactPhone?: string;
@@ -13,7 +14,7 @@ export default function ContactoFormAvanzados({
   contactWhatsapp = "https://api.whatsapp.com/send?phone=593099371290&text=Hola!%20Deseo%20conocer%20mas%20informacion%20sobre%20los%20Cursos%20Avanzados%20en%20Poligrafia.",
   contactWhatsappText = "+593 099 371 2790",
 }: ContactoFormAvanzadosProps) {
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  const { loading, error, success, submitForm, setSuccess } = useContactSubmit("Formulario de Cursos Avanzados");
   const [country, setCountry] = useState("ec");
 
   return (
@@ -144,29 +145,50 @@ export default function ContactoFormAvanzados({
 
           <div className="lg:col-span-6 relative">
             <div className="bg-white rounded p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.35)] border border-neutral-100 relative overflow-hidden transition-all duration-500">
-              {!formSubmitted ? (
+              {!success ? (
                 <form
-                  onSubmit={(e) => {
+                  onSubmit={async (e) => {
                     e.preventDefault();
-                    setFormSubmitted(true);
+                    const form = e.currentTarget;
+                    const formData = new FormData(form);
+                    const prefixes: Record<string, string> = {
+                      ec: "+593", co: "+57", pe: "+51", cl: "+56", ar: "+54", mx: "+52", es: "+34", us: "+1"
+                    };
+                    const phonePrefix = prefixes[country] || "+593";
+                    const rawPhone = formData.get("telefono") as string || "";
+                    const fullPhone = `${phonePrefix} ${rawPhone}`;
+
+                    await submitForm({
+                      nombre: formData.get("nombre"),
+                      apellido: formData.get("apellido"),
+                      email: formData.get("email"),
+                      telefono: fullPhone,
+                      ciudad: formData.get("ciudad"),
+                      mensaje: formData.get("mensaje"),
+                    });
                   }}
                   className="flex flex-col gap-3"
                 >
+                  {error && (
+                    <div className="p-3 bg-red-50 border border-red-200 rounded text-red-600 text-xs font-semibold">
+                      ⚠️ {error}
+                    </div>
+                  )}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                     <div className="flex flex-col gap-1">
                       <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Nombre *</label>
-                      <input type="text" placeholder="Tu nombre" className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" style={{ fontFamily: "var(--font-montserrat), sans-serif" }} required />
+                      <input name="nombre" type="text" placeholder="Tu nombre" className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" style={{ fontFamily: "var(--font-montserrat), sans-serif" }} required disabled={loading} />
                     </div>
                     <div className="flex flex-col gap-1">
                       <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Apellido *</label>
-                      <input type="text" placeholder="Tu apellido" className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" style={{ fontFamily: "var(--font-montserrat), sans-serif" }} required />
+                      <input name="apellido" type="text" placeholder="Tu apellido" className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" style={{ fontFamily: "var(--font-montserrat), sans-serif" }} required disabled={loading} />
                     </div>
                   </div>
 
                   <div className="flex flex-col gap-1">
                     <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Correo electrónico *</label>
                     <div className="relative">
-                      <input type="email" placeholder="correo@empresa.com" className="px-4 py-2.5 pr-10 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" style={{ fontFamily: "var(--font-montserrat), sans-serif" }} required />
+                      <input name="email" type="email" placeholder="correo@empresa.com" className="px-4 py-2.5 pr-10 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" style={{ fontFamily: "var(--font-montserrat), sans-serif" }} required disabled={loading} />
                       <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-[#700FA3]">
                         <svg className="w-5 h-5 text-[#700FA3]" viewBox="0 0 20 20" fill="currentColor">
                           <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
@@ -192,6 +214,7 @@ export default function ContactoFormAvanzados({
                             backgroundSize: "1.1em 1.1em",
                             backgroundRepeat: "no-repeat",
                           }}
+                          disabled={loading}
                         >
                           <option value="ec">+593</option>
                           <option value="co">+57</option>
@@ -203,7 +226,7 @@ export default function ContactoFormAvanzados({
                           <option value="us">+1</option>
                         </select>
                       </div>
-                      <input type="tel" placeholder="+593 099 371 2790" className="flex-1 px-4 py-2.5 bg-transparent border-none text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-0 text-sm font-medium" style={{ fontFamily: "var(--font-montserrat), sans-serif" }} required />
+                      <input name="telefono" type="tel" placeholder="+593 099 371 2790" className="flex-1 px-4 py-2.5 bg-transparent border-none text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-0 text-sm font-medium" style={{ fontFamily: "var(--font-montserrat), sans-serif" }} required disabled={loading} />
                       <div className="pr-3 text-[#700FA3] pointer-events-none">
                         <svg className="w-5 h-5 text-[#700FA3]" viewBox="0 0 20 20" fill="currentColor">
                           <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
@@ -214,12 +237,12 @@ export default function ContactoFormAvanzados({
 
                   <div className="flex flex-col gap-1">
                     <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Ciudad *</label>
-                    <input type="text" placeholder="Tu ciudad" className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" style={{ fontFamily: "var(--font-montserrat), sans-serif" }} required />
+                    <input name="ciudad" type="text" placeholder="Tu ciudad" className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium" style={{ fontFamily: "var(--font-montserrat), sans-serif" }} required disabled={loading} />
                   </div>
 
                   <div className="flex flex-col gap-1">
                     <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Mensaje *</label>
-                    <textarea placeholder="Indícanos qué módulo avanzado te interesa..." rows={2} className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium resize-none" style={{ fontFamily: "var(--font-montserrat), sans-serif" }} required />
+                    <textarea name="mensaje" placeholder="Indícanos qué módulo avanzado te interesa..." rows={2} className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium resize-none" style={{ fontFamily: "var(--font-montserrat), sans-serif" }} required disabled={loading} />
                   </div>
 
                   <div className="flex flex-col gap-4 mt-2">
@@ -234,15 +257,15 @@ export default function ContactoFormAvanzados({
                       </a>.
                     </p>
                     <div className="flex items-center gap-3">
-                      <input type="checkbox" id="aceptar-avanzados" className="w-4 h-4 rounded border-neutral-300 text-[#700FA3] focus:ring-[#700FA3] cursor-pointer" required />
+                      <input type="checkbox" id="aceptar-avanzados" className="w-4 h-4 rounded border-neutral-300 text-[#700FA3] focus:ring-[#700FA3] cursor-pointer" required disabled={loading} />
                       <label htmlFor="aceptar-avanzados" className="text-xs font-bold text-neutral-700 cursor-pointer select-none" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                         Aceptar
                       </label>
                     </div>
                   </div>
 
-                  <button type="submit" className="mt-2 px-8 py-3.5 bg-[#700FA3] hover:bg-[#5C0B87] text-white font-bold rounded transition-all duration-300 w-full shadow-lg shadow-[#700FA3]/25 hover:scale-[1.01] active:scale-[0.99] text-base" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                    Cotizar ahora
+                  <button type="submit" disabled={loading} className="mt-2 px-8 py-3.5 bg-[#700FA3] hover:bg-[#5C0B87] text-white font-bold rounded transition-all duration-300 w-full shadow-lg shadow-[#700FA3]/25 hover:scale-[1.01] active:scale-[0.99] text-base disabled:opacity-75 disabled:cursor-not-allowed cursor-pointer" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                    {loading ? "Enviando..." : "Cotizar ahora"}
                   </button>
 
                   <div className="flex flex-col items-center gap-1.5 mt-5 pt-4 border-t border-neutral-100 w-full">
@@ -282,7 +305,7 @@ export default function ContactoFormAvanzados({
                   <p className="text-neutral-500 text-sm font-light max-w-sm mb-8 leading-relaxed" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                     Gracias por su interés en nuestros cursos avanzados. Un asesor de One True se comunicará con usted pronto.
                   </p>
-                  <button onClick={() => setFormSubmitted(false)} className="px-6 py-3 border-2 border-[#700FA3] text-[#700FA3] hover:bg-[#700FA3] hover:text-white font-bold rounded transition-all duration-300 text-sm" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                  <button onClick={() => setSuccess(false)} className="px-6 py-3 border-2 border-[#700FA3] text-[#700FA3] hover:bg-[#700FA3] hover:text-white font-bold rounded transition-all duration-300 text-sm cursor-pointer" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                     Volver al formulario
                   </button>
                 </div>

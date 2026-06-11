@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import { useContactSubmit } from "@/hooks/useContactSubmit";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -83,7 +84,7 @@ function AnimatedCounter({ end, suffix = "", duration = 2000, fontSize = "clamp(
 
 export default function ServicePageTemplate({ service, allServices }: { service: Service; allServices: Service[] }) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  const { loading, error, success, submitForm, setSuccess } = useContactSubmit(`Formulario de ${service.title}`);
   const [country, setCountry] = useState("ec");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -570,28 +571,49 @@ export default function ServicePageTemplate({ service, allServices }: { service:
             {/* Lado Derecho: Formulario */}
             <div className="lg:col-span-6 relative">
               <div className="bg-white rounded p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.35)] border border-neutral-100 relative overflow-hidden transition-all duration-500">
-                {!formSubmitted ? (
+                {!success ? (
                   <form
-                    onSubmit={(e) => {
+                    onSubmit={async (e) => {
                       e.preventDefault();
-                      setFormSubmitted(true);
+                      const form = e.currentTarget;
+                      const formData = new FormData(form);
+                      const prefixes: Record<string, string> = {
+                        ec: "+593", co: "+57", pe: "+51", cl: "+56", ar: "+54", mx: "+52", es: "+34", us: "+1"
+                      };
+                      const phonePrefix = prefixes[country] || "+593";
+                      const rawPhone = formData.get("telefono") as string || "";
+                      const fullPhone = `${phonePrefix} ${rawPhone}`;
+
+                      await submitForm({
+                        nombre: formData.get("nombre"),
+                        apellido: formData.get("apellido"),
+                        email: formData.get("email"),
+                        telefono: fullPhone,
+                        ciudad: formData.get("ciudad"),
+                        mensaje: formData.get("mensaje"),
+                      });
                     }}
                     className="flex flex-col gap-3"
                   >
+                    {error && (
+                      <div className="p-3 bg-red-50 border border-red-200 rounded text-red-650 text-xs font-semibold">
+                        ⚠️ {error}
+                      </div>
+                    )}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                       <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Nombre *</label>
-                        <input type="text" placeholder="Tu nombre" className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white text-sm font-medium" required />
+                        <input name="nombre" type="text" placeholder="Tu nombre" className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white text-sm font-medium" required disabled={loading} />
                       </div>
                       <div className="flex flex-col gap-1">
                         <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Apellido *</label>
-                        <input type="text" placeholder="Tu apellido" className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white text-sm font-medium" required />
+                        <input name="apellido" type="text" placeholder="Tu apellido" className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white text-sm font-medium" required disabled={loading} />
                       </div>
                     </div>
 
                     <div className="flex flex-col gap-1">
                       <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Correo electrónico *</label>
-                      <input type="email" placeholder="correo@empresa.com" className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white text-sm font-medium" required />
+                      <input name="email" type="email" placeholder="correo@empresa.com" className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white text-sm font-medium" required disabled={loading} />
                     </div>
 
                     <div className="flex flex-col gap-1">
@@ -609,6 +631,7 @@ export default function ServicePageTemplate({ service, allServices }: { service:
                               backgroundSize: "1.1em 1.1em",
                               backgroundRepeat: "no-repeat",
                             }}
+                            disabled={loading}
                           >
                             <option value="ec">+593</option>
                             <option value="co">+57</option>
@@ -617,18 +640,18 @@ export default function ServicePageTemplate({ service, allServices }: { service:
                             <option value="us">+1</option>
                           </select>
                         </div>
-                        <input type="tel" placeholder="098 129 6179" className="flex-1 px-4 py-2.5 bg-transparent border-none text-neutral-800 focus:outline-none text-sm font-medium" required />
+                        <input name="telefono" type="tel" placeholder="098 129 6179" className="flex-1 px-4 py-2.5 bg-transparent border-none text-neutral-800 focus:outline-none text-sm font-medium" required disabled={loading} />
                       </div>
                     </div>
 
                     <div className="flex flex-col gap-1">
                       <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Ciudad *</label>
-                      <input type="text" placeholder="Tu ciudad" className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white text-sm font-medium" required />
+                      <input name="ciudad" type="text" placeholder="Tu ciudad" className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white text-sm font-medium" required disabled={loading} />
                     </div>
 
                     <div className="flex flex-col gap-1">
                       <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Mensaje *</label>
-                      <textarea placeholder="Cuéntanos más sobre tus necesidades..." rows={2} className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white text-sm font-medium resize-none" required />
+                      <textarea name="mensaje" placeholder="Cuéntanos más sobre tus necesidades..." rows={2} className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white text-sm font-medium resize-none" required disabled={loading} />
                     </div>
 
                     <div className="flex flex-col gap-4 mt-2">
@@ -643,15 +666,15 @@ export default function ServicePageTemplate({ service, allServices }: { service:
                         </a>.
                       </p>
                       <div className="flex items-center gap-3">
-                        <input type="checkbox" id="aceptar-term" className="w-4 h-4 rounded border-neutral-300 text-[#700FA3] cursor-pointer" required />
+                        <input type="checkbox" id="aceptar-term" className="w-4 h-4 rounded border-neutral-300 text-[#700FA3] cursor-pointer" required disabled={loading} />
                         <label htmlFor="aceptar-term" className="text-xs font-bold text-neutral-700 cursor-pointer select-none">
                           Aceptar
                         </label>
                       </div>
                     </div>
 
-                    <button type="submit" className="mt-2 px-8 py-3.5 bg-[#700FA3] hover:bg-[#5C0B87] text-white font-bold rounded transition-all w-full shadow-lg shadow-[#700FA3]/25 text-base" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
-                      Cotizar ahora
+                    <button type="submit" disabled={loading} className="mt-2 px-8 py-3.5 bg-[#700FA3] hover:bg-[#5C0B87] text-white font-bold rounded transition-all w-full shadow-lg shadow-[#700FA3]/25 text-base disabled:opacity-75 disabled:cursor-not-allowed cursor-pointer" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                      {loading ? "Enviando..." : "Cotizar ahora"}
                     </button>
 
                     <div className="flex flex-col items-center gap-1.5 mt-5 pt-4 border-t border-neutral-100 w-full">
@@ -691,7 +714,7 @@ export default function ServicePageTemplate({ service, allServices }: { service:
                     <p className="text-neutral-500 text-sm font-light max-w-sm mb-8 leading-relaxed" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                       Gracias por su interés. Un asesor de One True se comunicará con usted lo antes posible.
                     </p>
-                    <button onClick={() => setFormSubmitted(false)} className="px-6 py-3 border-2 border-[#700FA3] text-[#700FA3] hover:bg-[#700FA3] hover:text-white font-bold rounded transition-all text-sm" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                    <button onClick={() => setSuccess(false)} className="px-6 py-3 border-2 border-[#700FA3] text-[#700FA3] hover:bg-[#700FA3] hover:text-white font-bold rounded transition-all text-sm cursor-pointer" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                       Volver al formulario
                     </button>
                   </div>
