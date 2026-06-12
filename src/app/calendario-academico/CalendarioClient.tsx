@@ -34,6 +34,8 @@ interface CalendarIntake {
   href: string;
   published: boolean;
   sortOrder: number;
+  buttonType?: string;
+  brochureSize?: string;
 }
 
 interface CalendarioClientProps {
@@ -415,38 +417,74 @@ export default function CalendarioClient({ initialCourses, initialIntakes }: Cal
 
                 {/* Button Action */}
                 <div className="mt-auto pt-5 border-t border-neutral-100">
-                  {intake.brochureUrl ? (
-                    <button
-                      onClick={(e) => handleDownload(e, intake.brochureUrl!, intake.title, intake.brochureFileName)}
-                      className={`block w-full text-center py-3 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 shadow-md cursor-pointer flex items-center justify-center gap-2 ${
-                        intake.isFeatured
-                          ? "bg-[#FFC107] text-[#411A56] hover:brightness-110 shadow-[#FFC107]/20"
-                          : "bg-[#700FA3] text-white hover:bg-[#5C0B87] shadow-[#700FA3]/15"
-                      }`}
-                      style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                    >
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                      </svg>
-                      Descargar Brochure
-                    </button>
-                  ) : intake.isFeatured ? (
-                    <Link
-                      href={`/cotiza?servicio=${intake.courseId}`}
-                      className="block w-full text-center py-3 bg-[#FFC107] text-[#411A56] hover:brightness-110 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 shadow-md shadow-[#FFC107]/20 cursor-pointer"
-                      style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                    >
-                      Solicitar Plaza
-                    </Link>
-                  ) : (
-                    <Link
-                      href={intake.href}
-                      className="block w-full text-center py-3 bg-[#700FA3] text-white hover:bg-[#5C0B87] rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 shadow-md shadow-[#700FA3]/15 cursor-pointer"
-                      style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                    >
-                      Ver Información
-                    </Link>
-                  )}
+                  {(() => {
+                    const btnType = intake.buttonType || "default";
+                    
+                    let showBrochure = false;
+                    if (btnType === "brochure" && intake.brochureUrl) {
+                      showBrochure = true;
+                    } else if (btnType === "info") {
+                      showBrochure = false;
+                    } else {
+                      showBrochure = !!intake.brochureUrl;
+                    }
+
+                    if (showBrochure) {
+                      return (
+                        <button
+                          onClick={(e) => handleDownload(e, intake.brochureUrl!, intake.title, intake.brochureFileName)}
+                          className={`block w-full text-center py-3 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 shadow-md cursor-pointer flex items-center justify-center gap-2 ${
+                            intake.isFeatured
+                              ? "bg-[#FFC107] text-[#411A56] hover:brightness-110 shadow-[#FFC107]/20"
+                              : "bg-[#700FA3] text-white hover:bg-[#5C0B87] shadow-[#700FA3]/15"
+                          }`}
+                          style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                        >
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                          </svg>
+                          Descargar Brochure
+                        </button>
+                      );
+                    } else if (btnType === "info") {
+                      return (
+                        <Link
+                          href={intake.href}
+                          className={`block w-full text-center py-3 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 shadow-md cursor-pointer ${
+                            intake.isFeatured
+                              ? "bg-[#FFC107] text-[#411A56] hover:brightness-110 shadow-[#FFC107]/20"
+                              : "bg-[#700FA3] text-white hover:bg-[#5C0B87] shadow-[#700FA3]/15"
+                          }`}
+                          style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                        >
+                          Más Información
+                        </Link>
+                      );
+                    } else {
+                      // Default non-brochure logic (depends on featured)
+                      if (intake.isFeatured) {
+                        return (
+                          <Link
+                            href={`/cotiza?servicio=${intake.courseId}`}
+                            className="block w-full text-center py-3 bg-[#FFC107] text-[#411A56] hover:brightness-110 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 shadow-md shadow-[#FFC107]/20 cursor-pointer"
+                            style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                          >
+                            Solicitar Plaza
+                          </Link>
+                        );
+                      } else {
+                        return (
+                          <Link
+                            href={intake.href}
+                            className="block w-full text-center py-3 bg-[#700FA3] text-white hover:bg-[#5C0B87] rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 shadow-md shadow-[#700FA3]/15 cursor-pointer"
+                            style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                          >
+                            Más Información
+                          </Link>
+                        );
+                      }
+                    }
+                  })()}
                 </div>
               </div>
             ))}

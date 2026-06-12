@@ -1109,141 +1109,6 @@
       "template": "basico"
     },
     {
-      "id": "control-de-calidad-en-poligrafia",
-      "title": "Control de Calidad en Poligrafía",
-      "desc": "Protocolos de auditoría, revisión por pares y mejora continua en la práctica profesional. Garantía de rigor técnico y cumplimiento normativo.",
-      "image": "/cursos-avanzados/control-de-calidad-poligrafia.webp",
-      "href": "/control-de-calidad-en-poligrafia",
-      "published": true,
-      "pageContent": {
-        "heroDesc": "La excelencia en poligrafía se logra a través de una supervisión rigurosa. Este programa académico de 40 horas le otorga las competencias necesarias para auditar cada fase del proceso de evaluación, asegurando que los resultados sean técnica y legalmente incuestionables.",
-        "template": "control-calidad",
-        "aboutDesc": "",
-        "heroImage": "/servicios/1.webp",
-        "heroTitle": "Especialización Avanzada: Control de Calidad en Poligrafía",
-        "aboutTitle": "Ejes Temáticos:",
-        "focusAreas": [
-          {
-            "items": [
-              "Estándares de Práctica (APA-ASTM): Marco normativo internacional que rige la profesión.",
-              "Bases del Aseguramiento de Calidad (QA): Principios preventivos para mantener la integridad del proceso.",
-              "Bases del Control de Calidad (CQ): Metodologías de supervisión técnica directa.",
-              "Auditoría de la Etapa Previa: Revisión de la logística, selección de objetivos y preparación de la examinación.",
-              "Auditoría de la Entrevista Pre-Test: Supervisión de la fase de entrevista previa a la prueba.",
-              "Auditoría de la Prueba In-Test: Verificación de la correcta administración de la etapa de toma de data fisiológica.",
-              "Auditoría del Análisis de Datos: Revisión profunda de la interpretación de trazados fisiológicos.",
-              "Auditoría de la Entrevista Post-Test: Evaluación del manejo del evaluado tras la examinación.",
-              "Sistemas de Calificación Manual y CQ: Protocolo de puntuación manual ESS-M.",
-              "Sistema de Calificación Algorítmico OSS-3: Auditoría del análisis computarizado avanzado.",
-              "Evaluación Teórica del Control de Calidad: Validación de los conocimientos científicos y normativos en PDD.",
-              "Evaluación Práctica del Proceso Integral: Ejecución real de una auditoría completa de control de calidad.",
-              ""
-            ],
-            "title": "Ejes Temáticos",
-            "iconPaths": [
-              "M27.648 39.7c0 13.904 11.447 25.217 25.516 25.217s25.5-11.312 25.5-25.217a24.71 24.71 0 0 0-2.78-11.457c-1.654-3.2-4.024-6.058-6.878-8.302v-2.443c0-5.292-1.704-9.778-4.926-12.973C61.215 1.672 57.342.066 53.187 0a.87.87 0 0 0-.043 0c-4.158.065-8.033 1.672-10.9 4.524-3.224 3.194-4.927 7.68-4.927 12.973v2.443a25.54 25.54 0 0 0-6.878 8.302c-1.845 3.57-2.78 7.424-2.78 11.457zm44.387 12.6a22.85 22.85 0 0 1-18.871 9.916c-7.844 0-14.775-3.938-18.876-9.918v-3.36c0-5.464 3.526-7.155 7.72-8.368l8.472 4.913c.976.62 1.828.93 2.68.93s1.705-.3 2.68-.93l8.473-4.913c4.193 1.214 7.72 2.904 7.72 8.37v3.36zm-26.4-12.76c1.4-.62 2.137-1.917 2.584-2.96a15.43 15.43 0 0 0 .849.344c1.46.534 2.783.8 4.106.8s2.646-.267 4.102-.8a15.4 15.4 0 0 0 .85-.344c.446 1.045 1.184 2.34 2.584 2.96l-6.263 3.632a1.15 1.15 0 0 0-.051.031c-1.075.688-1.372.688-2.448 0l-.05-.03-6.262-3.63zm30.32.16a22.19 22.19 0 0 1-1.29 7.47c-.774-6.183-5.648-8.096-10.156-9.353l-.033-.01-1.5-.407-.958-.255c-.723-.194-1.163-1.092-1.467-1.86 4.334-2.777 7.708-7.484 8.368-11.878 4.508 4.237 7.047 10.042 7.047 16.3zm-22.78-37c5.98.104 12.385 4.3 13.064 13.2-1.392-.376-2.108-1.098-2.856-1.853-1.046-1.056-2.348-2.37-5.1-1.67l-1.96.5c-1.63.43-2.446.647-3.148.647s-1.528-.217-3.167-.65l-1.947-.507c-2.748-.7-4.05.613-5.094 1.668-.75.755-1.466 1.48-2.862 1.855.68-8.923 7.087-13.108 13.07-13.212zm-13.13 15.988c2.625-.478 3.904-1.767 4.87-2.743.93-.938 1.243-1.253 2.463-.943l1.923.5c1.8.48 2.808.742 3.872.742s2.053-.262 3.854-.74L58.962 15c1.225-.312 1.538.005 2.47.944.967.975 2.244 2.263 4.866 2.74v3.193c0 4.72-4.66 10.568-9.97 12.513-2.327.854-3.978.854-6.3 0-5.312-1.946-9.97-7.794-9.97-12.513v-3.193zm-2.6 4.72c.66 4.393 4.035 9.1 8.37 11.878-.304.767-.745 1.665-1.464 1.86l-.955.254-1.505.405a1.26 1.26 0 0 0-.075.021c-4.5 1.257-9.354 3.175-10.127 9.343a22.18 22.18 0 0 1-1.3-7.47c0-6.25 2.54-12.054 7.047-16.3zm38.193-6.053l-2.087-1.9c-.58-.477-1.44-.4-1.922.175a1.34 1.34 0 0 0 .177 1.9l1.902 1.722C79.23 24.722 82.27 31.98 82.27 39.7s-3.04 14.977-8.562 20.435c-11.4 11.268-29.948 11.268-41.347 0C26.84 54.677 23.8 47.42 23.8 39.7s3.04-14.977 8.563-20.435c.53-.525 1.028-.983 1.52-1.4a1.34 1.34 0 0 0 .148-1.903c-.5-.566-1.352-.63-1.925-.146a29.31 29.31 0 0 0-1.673 1.54C24.395 23.324 21.07 31.26 21.07 39.7a31.12 31.12 0 0 0 6 18.439l-6.165 6.094-.126-.125a2.36 2.36 0 0 0-1.669-.682 2.36 2.36 0 0 0-1.67.683l-4.22 4.175c-.01.01-.02.017-.03.026s-.018.02-.027.03l-3.2 3.16a1.34 1.34 0 0 0 .001 1.908c.533.527 1.398.526 1.93-.001l2.26-2.236 7.036 6.954-9.977 9.86a4.96 4.96 0 0 1-3.517 1.435c-1.333 0-2.582-.5-3.518-1.436a4.87 4.87 0 0 1-1.45-3.477c0-1.317.515-2.553 1.45-3.477l3.56-3.518a1.34 1.34 0 0 0 0-1.908c-.533-.527-1.397-.527-1.93 0l-3.56 3.518A7.52 7.52 0 0 0 0 84.508c0 2.04.8 3.952 2.248 5.385a7.69 7.69 0 0 0 5.449 2.227c2.064 0 4-.8 5.448-2.227l15.2-15c.445-.44.7-1.027.7-1.653s-.245-1.213-.7-1.653l-.123-.122 6.168-6.097c5.55 3.947 12.102 5.922 18.654 5.922 8.186 0 16.372-3.08 22.604-9.24C81.676 56.074 85 48.14 85 39.698s-3.325-16.375-9.362-22.343zM23.122 76.22l-7.037-6.955 3.023-3 7.038 6.957-3.024 2.988zm3.16-6.67l-3.448-3.408 5.936-5.868a32.34 32.34 0 0 0 1.66 1.769c.58.573 1.176 1.12 1.787 1.638L26.28 69.55z"
-            ],
-            "description": "",
-            "iconViewBox": "0 0 85 93"
-          }
-        ],
-        "customCards": [
-          {
-            "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Estándares de Práctica (APA-ASTM):",
-            "description": "Marco normativo internacional que rige la profesión.\n"
-          },
-          {
-            "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Bases del Aseguramiento de Calidad (QA):",
-            "description": "Principios preventivos para mantener la integridad del proceso.\n"
-          },
-          {
-            "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Bases del Control de Calidad (CQ):",
-            "description": "Metodologías de supervisión técnica directa.\n"
-          },
-          {
-            "icon": "/icons/Password-Desktop--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Auditoría de la Etapa Previa",
-            "description": "Revisión de la logística, selección de objetivos y preparación de la examinación.\n"
-          },
-          {
-            "icon": "/icons/Task-Checklist--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Auditoría de la Entrevista Pre-Test",
-            "description": "Supervisión de la fase de entrevista previa a la prueba.\n"
-          },
-          {
-            "icon": "/icons/Monitor-Find--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Auditoría de la Prueba In-Test:",
-            "description": "Verificación de la correcta administración de la etapa de toma de data fisiológica.\n"
-          },
-          {
-            "icon": "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Auditoría del Análisis de Datos:",
-            "description": "Revisión profunda de la interpretación de trazados fisiológicos.\n"
-          },
-          {
-            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118785255-engineer-lkcn80.webp",
-            "items": [],
-            "title": "Auditoría de la Entrevista Post-Test:",
-            "description": "Evaluación del manejo del evaluado tras la examinación.\n"
-          },
-          {
-            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118801189-grow-up-together-orqyje.webp",
-            "items": [],
-            "title": "Sistemas de Calificación Manual y CQ: ",
-            "description": "Protocolo de puntuación manual ESS-M.\n"
-          },
-          {
-            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118833912-check-list-z4ofri.webp",
-            "items": [],
-            "title": "Sistema de Calificación Algorítmico OSS-3:",
-            "description": "Auditoría del análisis computarizado avanzado.\n"
-          },
-          {
-            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118868264-challenge-irwggf.webp",
-            "items": [],
-            "title": "Evaluación Teórica del Control de Calidad:",
-            "description": "Validación de los conocimientos científicos y normativos en PDD.\n"
-          },
-          {
-            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118881991-briefcase-r043oy.webp",
-            "items": [],
-            "title": "Evaluación Práctica del Proceso Integral:",
-            "description": "Ejecución real de una auditoría completa de control de calidad.\n"
-          }
-        ],
-        "heroTagline": "Certifíquese como Auditor Profesional en Control de Calidad en Poligrafía con la única academia en Ecuador acreditada por la APA.",
-        "contactPhone": "099 371 2790",
-        "fichaTecnica": [
-          {
-            "title": "Modalidad",
-            "description": "100% en línea"
-          },
-          {
-            "title": "Fechas",
-            "description": "Consulte nuestra próxima convocatoria."
-          },
-          {
-            "title": "Horarios",
-            "description": "Lunes a viernes (19:00 a 22:00) y dos sábados (08:00 a 13:00)."
-          }
-        ],
-        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True",
-        "contactWhatsappText": "+593 98 129 6179"
-      },
-      "created_at": "2026-06-06T16:11:46.990366+00:00",
-      "template": "control-calidad"
-    },
-    {
       "id": "elicitacion-conversacional",
       "title": "Elicitación Conversacional",
       "desc": "Formación avanzada en técnicas de obtención de información sutil y estratégica mediante interacciones fluidas y persuasivas.",
@@ -1468,6 +1333,142 @@
       "template": "graficas"
     },
     {
+      "id": "control-de-calidad-en-poligrafia",
+      "title": "Control de Calidad en Poligrafía",
+      "desc": "Protocolos de auditoría, revisión por pares y mejora continua en la práctica profesional. Garantía de rigor técnico y cumplimiento normativo.",
+      "image": "/cursos-avanzados/control-de-calidad-poligrafia.webp",
+      "href": "/control-de-calidad-en-poligrafia",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "La excelencia en poligrafía se logra a través de una supervisión rigurosa. Este programa académico de 40 horas le otorga las competencias necesarias para auditar cada fase del proceso de evaluación, asegurando que los resultados sean técnica y legalmente incuestionables.",
+        "template": "control-calidad",
+        "aboutDesc": "",
+        "heroImage": "/servicios/1.webp",
+        "heroTitle": "Especialización Avanzada: Control de Calidad en Poligrafía",
+        "aboutTitle": "Ejes Temáticos:",
+        "focusAreas": [
+          {
+            "items": [
+              "Estándares de Práctica (APA-ASTM): Marco normativo internacional que rige la profesión.",
+              "Bases del Aseguramiento de Calidad (QA): Principios preventivos para mantener la integridad del proceso.",
+              "Bases del Control de Calidad (CQ): Metodologías de supervisión técnica directa.",
+              "Auditoría de la Etapa Previa: Revisión de la logística, selección de objetivos y preparación de la examinación.",
+              "Auditoría de la Entrevista Pre-Test: Supervisión de la fase de entrevista previa a la prueba.",
+              "Auditoría de la Prueba In-Test: Verificación de la correcta administración de la etapa de toma de data fisiológica.",
+              "Auditoría del Análisis de Datos: Revisión profunda de la interpretación de trazados fisiológicos.",
+              "Auditoría de la Entrevista Post-Test: Evaluación del manejo del evaluado tras la examinación.",
+              "Sistemas de Calificación Manual y CQ: Protocolo de puntuación manual ESS-M.",
+              "Sistema de Calificación Algorítmico OSS-3: Auditoría del análisis computarizado avanzado.",
+              "Evaluación Teórica del Control de Calidad: Validación de los conocimientos científicos y normativos en PDD.",
+              "Evaluación Práctica del Proceso Integral: Ejecución real de una auditoría completa de control de calidad.",
+              ""
+            ],
+            "title": "Ejes Temáticos",
+            "iconPaths": [
+              "M27.648 39.7c0 13.904 11.447 25.217 25.516 25.217s25.5-11.312 25.5-25.217a24.71 24.71 0 0 0-2.78-11.457c-1.654-3.2-4.024-6.058-6.878-8.302v-2.443c0-5.292-1.704-9.778-4.926-12.973C61.215 1.672 57.342.066 53.187 0a.87.87 0 0 0-.043 0c-4.158.065-8.033 1.672-10.9 4.524-3.224 3.194-4.927 7.68-4.927 12.973v2.443a25.54 25.54 0 0 0-6.878 8.302c-1.845 3.57-2.78 7.424-2.78 11.457zm44.387 12.6a22.85 22.85 0 0 1-18.871 9.916c-7.844 0-14.775-3.938-18.876-9.918v-3.36c0-5.464 3.526-7.155 7.72-8.368l8.472 4.913c.976.62 1.828.93 2.68.93s1.705-.3 2.68-.93l8.473-4.913c4.193 1.214 7.72 2.904 7.72 8.37v3.36zm-26.4-12.76c1.4-.62 2.137-1.917 2.584-2.96a15.43 15.43 0 0 0 .849.344c1.46.534 2.783.8 4.106.8s2.646-.267 4.102-.8a15.4 15.4 0 0 0 .85-.344c.446 1.045 1.184 2.34 2.584 2.96l-6.263 3.632a1.15 1.15 0 0 0-.051.031c-1.075.688-1.372.688-2.448 0l-.05-.03-6.262-3.63zm30.32.16a22.19 22.19 0 0 1-1.29 7.47c-.774-6.183-5.648-8.096-10.156-9.353l-.033-.01-1.5-.407-.958-.255c-.723-.194-1.163-1.092-1.467-1.86 4.334-2.777 7.708-7.484 8.368-11.878 4.508 4.237 7.047 10.042 7.047 16.3zm-22.78-37c5.98.104 12.385 4.3 13.064 13.2-1.392-.376-2.108-1.098-2.856-1.853-1.046-1.056-2.348-2.37-5.1-1.67l-1.96.5c-1.63.43-2.446.647-3.148.647s-1.528-.217-3.167-.65l-1.947-.507c-2.748-.7-4.05.613-5.094 1.668-.75.755-1.466 1.48-2.862 1.855.68-8.923 7.087-13.108 13.07-13.212zm-13.13 15.988c2.625-.478 3.904-1.767 4.87-2.743.93-.938 1.243-1.253 2.463-.943l1.923.5c1.8.48 2.808.742 3.872.742s2.053-.262 3.854-.74L58.962 15c1.225-.312 1.538.005 2.47.944.967.975 2.244 2.263 4.866 2.74v3.193c0 4.72-4.66 10.568-9.97 12.513-2.327.854-3.978.854-6.3 0-5.312-1.946-9.97-7.794-9.97-12.513v-3.193zm-2.6 4.72c.66 4.393 4.035 9.1 8.37 11.878-.304.767-.745 1.665-1.464 1.86l-.955.254-1.505.405a1.26 1.26 0 0 0-.075.021c-4.5 1.257-9.354 3.175-10.127 9.343a22.18 22.18 0 0 1-1.3-7.47c0-6.25 2.54-12.054 7.047-16.3zm38.193-6.053l-2.087-1.9c-.58-.477-1.44-.4-1.922.175a1.34 1.34 0 0 0 .177 1.9l1.902 1.722C79.23 24.722 82.27 31.98 82.27 39.7s-3.04 14.977-8.562 20.435c-11.4 11.268-29.948 11.268-41.347 0C26.84 54.677 23.8 47.42 23.8 39.7s3.04-14.977 8.563-20.435c.53-.525 1.028-.983 1.52-1.4a1.34 1.34 0 0 0 .148-1.903c-.5-.566-1.352-.63-1.925-.146a29.31 29.31 0 0 0-1.673 1.54C24.395 23.324 21.07 31.26 21.07 39.7a31.12 31.12 0 0 0 6 18.439l-6.165 6.094-.126-.125a2.36 2.36 0 0 0-1.669-.682 2.36 2.36 0 0 0-1.67.683l-4.22 4.175c-.01.01-.02.017-.03.026s-.018.02-.027.03l-3.2 3.16a1.34 1.34 0 0 0 .001 1.908c.533.527 1.398.526 1.93-.001l2.26-2.236 7.036 6.954-9.977 9.86a4.96 4.96 0 0 1-3.517 1.435c-1.333 0-2.582-.5-3.518-1.436a4.87 4.87 0 0 1-1.45-3.477c0-1.317.515-2.553 1.45-3.477l3.56-3.518a1.34 1.34 0 0 0 0-1.908c-.533-.527-1.397-.527-1.93 0l-3.56 3.518A7.52 7.52 0 0 0 0 84.508c0 2.04.8 3.952 2.248 5.385a7.69 7.69 0 0 0 5.449 2.227c2.064 0 4-.8 5.448-2.227l15.2-15c.445-.44.7-1.027.7-1.653s-.245-1.213-.7-1.653l-.123-.122 6.168-6.097c5.55 3.947 12.102 5.922 18.654 5.922 8.186 0 16.372-3.08 22.604-9.24C81.676 56.074 85 48.14 85 39.698s-3.325-16.375-9.362-22.343zM23.122 76.22l-7.037-6.955 3.023-3 7.038 6.957-3.024 2.988zm3.16-6.67l-3.448-3.408 5.936-5.868a32.34 32.34 0 0 0 1.66 1.769c.58.573 1.176 1.12 1.787 1.638L26.28 69.55z"
+            ],
+            "description": "",
+            "iconViewBox": "0 0 85 93"
+          }
+        ],
+        "customCards": [
+          {
+            "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Estándares de Práctica (APA-ASTM):",
+            "description": "Marco normativo internacional que rige la profesión.\n"
+          },
+          {
+            "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Bases del Aseguramiento de Calidad (QA):",
+            "description": "Principios preventivos para mantener la integridad del proceso.\n"
+          },
+          {
+            "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Bases del Control de Calidad (CQ):",
+            "description": "Metodologías de supervisión técnica directa.\n"
+          },
+          {
+            "icon": "/icons/Password-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Auditoría de la Etapa Previa",
+            "description": "Revisión de la logística, selección de objetivos y preparación de la examinación.\n"
+          },
+          {
+            "icon": "/icons/Task-Checklist--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Auditoría de la Entrevista Pre-Test",
+            "description": "Supervisión de la fase de entrevista previa a la prueba.\n"
+          },
+          {
+            "icon": "/icons/Monitor-Find--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Auditoría de la Prueba In-Test:",
+            "description": "Verificación de la correcta administración de la etapa de toma de data fisiológica.\n"
+          },
+          {
+            "icon": "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Auditoría del Análisis de Datos:",
+            "description": "Revisión profunda de la interpretación de trazados fisiológicos.\n"
+          },
+          {
+            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118785255-engineer-lkcn80.webp",
+            "items": [],
+            "title": "Auditoría de la Entrevista Post-Test:",
+            "description": "Evaluación del manejo del evaluado tras la examinación.\n"
+          },
+          {
+            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118801189-grow-up-together-orqyje.webp",
+            "items": [],
+            "title": "Sistemas de Calificación Manual y CQ: ",
+            "description": "Protocolo de puntuación manual ESS-M.\n"
+          },
+          {
+            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118833912-check-list-z4ofri.webp",
+            "items": [],
+            "title": "Sistema de Calificación Algorítmico OSS-3:",
+            "description": "Auditoría del análisis computarizado avanzado.\n"
+          },
+          {
+            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118868264-challenge-irwggf.webp",
+            "items": [],
+            "title": "Evaluación Teórica del Control de Calidad:",
+            "description": "Validación de los conocimientos científicos y normativos en PDD.\n"
+          },
+          {
+            "icon": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/card-icons/1781118881991-briefcase-r043oy.webp",
+            "items": [],
+            "title": "Evaluación Práctica del Proceso Integral:",
+            "description": "Ejecución real de una auditoría completa de control de calidad.\n"
+          }
+        ],
+        "heroTagline": "Certifíquese como Auditor Profesional en Control de Calidad en Poligrafía con la única academia en Ecuador acreditada por la APA.",
+        "contactPhone": "099 371 2790",
+        "fichaTecnica": [
+          {
+            "title": "Modalidad",
+            "description": "100% en línea"
+          },
+          {
+            "link": "/calendario-academico",
+            "title": "Fechas",
+            "description": "Consulte nuestra próxima convocatoria."
+          },
+          {
+            "title": "Horarios",
+            "description": "Lunes a viernes (19:00 a 22:00) y dos sábados (08:00 a 13:00)."
+          }
+        ],
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True",
+        "contactWhatsappText": "+593 98 129 6179"
+      },
+      "created_at": "2026-06-06T16:11:46.990366+00:00",
+      "template": "control-calidad"
+    },
+    {
       "id": "evaluacion-forense-de-la-credibilidad",
       "title": "Evaluación Forense de la Credibilidad",
       "desc": "Análisis científico del testimonio y detección de indicadores de engaño mediante protocolos estandarizados.",
@@ -1619,7 +1620,7 @@
     },
     {
       "id": "verdad-o-mentira",
-      "title": "¿Verdad o Mentirsa? Todo lo que debes saber antes de contratar una prueba de Polígrafo.",
+      "title": "¿Verdad o Mentira? Todo lo que debes saber antes de contratar una prueba de Polígrafo.",
       "image": "/blog/1.webp",
       "link": "/blog/verdad-o-mentira",
       "published": true,
@@ -1711,44 +1712,6 @@
   ],
   "calendarIntakes": [
     {
-      "id": "sistema-calificacion-ess-m-conv",
-      "title": "Actualización en Poligrafía (ESS-M)",
-      "courseId": "sistema-calificacion-ess-m",
-      "category": "avanzado",
-      "badgeText": "100% ONLINE",
-      "badgeColor": "green",
-      "dateDisplay": "Sep 2026",
-      "durationDisplay": "15 horas",
-      "year": 2026,
-      "modalityType": "online",
-      "durationType": "corto",
-      "isFeatured": false,
-      "brochureUrl": "",
-      "href": "/sistema-calificacion-ess-m",
-      "published": true,
-      "sortOrder": 20,
-      "created_at": "2026-06-10T05:04:48.041507+00:00"
-    },
-    {
-      "id": "control-de-calidad-en-poligrafia-conv",
-      "title": "Control de Calidad en Poligrafía",
-      "courseId": "control-de-calidad-en-poligrafia",
-      "category": "avanzado",
-      "badgeText": "100% ONLINE",
-      "badgeColor": "green",
-      "dateDisplay": "Oct - Nov 2026",
-      "durationDisplay": "40 horas",
-      "year": 2026,
-      "modalityType": "online",
-      "durationType": "corto",
-      "isFeatured": false,
-      "brochureUrl": "",
-      "href": "/control-de-calidad-en-poligrafia",
-      "published": true,
-      "sortOrder": 30,
-      "created_at": "2026-06-10T05:04:48.268823+00:00"
-    },
-    {
       "id": "entrevista-pretest-conv",
       "title": "Entrevista Pretest",
       "courseId": "entrevista-pretest",
@@ -1765,7 +1728,10 @@
       "href": "/entrevista-pretest",
       "published": true,
       "sortOrder": 40,
-      "created_at": "2026-06-10T05:04:48.491596+00:00"
+      "created_at": "2026-06-10T05:04:48.491596+00:00",
+      "brochureFileName": null,
+      "buttonType": "default",
+      "brochureSize": null
     },
     {
       "id": "calificacion-graficas-analisis-datos-conv",
@@ -1784,7 +1750,10 @@
       "href": "/calificacion-graficas-analisis-datos",
       "published": true,
       "sortOrder": 50,
-      "created_at": "2026-06-10T05:04:48.714995+00:00"
+      "created_at": "2026-06-10T05:04:48.714995+00:00",
+      "brochureFileName": null,
+      "buttonType": "default",
+      "brochureSize": null
     },
     {
       "id": "tecnicas-poligraficas-conv",
@@ -1803,7 +1772,10 @@
       "href": "/tecnicas-poligraficas",
       "published": true,
       "sortOrder": 60,
-      "created_at": "2026-06-10T05:04:48.938877+00:00"
+      "created_at": "2026-06-10T05:04:48.938877+00:00",
+      "brochureFileName": null,
+      "buttonType": "default",
+      "brochureSize": null
     },
     {
       "id": "elicitacion-conversacional-conv",
@@ -1822,7 +1794,10 @@
       "href": "/formaciones-complementarias",
       "published": true,
       "sortOrder": 70,
-      "created_at": "2026-06-10T05:04:49.163093+00:00"
+      "created_at": "2026-06-10T05:04:49.163093+00:00",
+      "brochureFileName": null,
+      "buttonType": "default",
+      "brochureSize": null
     },
     {
       "id": "curso-basico-en-poligrafia-conv",
@@ -1841,19 +1816,66 @@
       "href": "/curso-basico-en-poligrafia",
       "published": true,
       "sortOrder": 10,
-      "created_at": "2026-06-10T05:04:47.753542+00:00"
+      "created_at": "2026-06-10T05:04:47.753542+00:00",
+      "brochureFileName": null,
+      "buttonType": "default",
+      "brochureSize": null
+    },
+    {
+      "id": "control-de-calidad-en-poligrafia-conv",
+      "title": "Control de Calidad en Poligrafía",
+      "courseId": "control-de-calidad-en-poligrafia",
+      "category": "avanzado",
+      "badgeText": "100% ONLINE",
+      "badgeColor": "green",
+      "dateDisplay": "Oct - Nov 2026",
+      "durationDisplay": "40 horas",
+      "year": 2026,
+      "modalityType": "online",
+      "durationType": "corto",
+      "isFeatured": true,
+      "brochureUrl": "",
+      "href": "/control-de-calidad-en-poligrafia",
+      "published": true,
+      "sortOrder": 30,
+      "created_at": "2026-06-10T05:04:48.268823+00:00",
+      "brochureFileName": null,
+      "buttonType": "default",
+      "brochureSize": null
+    },
+    {
+      "id": "sistema-calificacion-ess-m-conv",
+      "title": "Actualización en Poligrafía (ESS-M) MODIFIED",
+      "courseId": "sistema-calificacion-ess-m",
+      "category": "avanzado",
+      "badgeText": "100% ONLINE",
+      "badgeColor": "green",
+      "dateDisplay": "Sep 2026 MODIFIED",
+      "durationDisplay": "15 horas",
+      "year": 2026,
+      "modalityType": "online",
+      "durationType": "corto",
+      "isFeatured": false,
+      "brochureUrl": "",
+      "href": "/sistema-calificacion-ess-m",
+      "published": true,
+      "sortOrder": 20,
+      "created_at": "2026-06-10T05:04:48.041507+00:00",
+      "brochureFileName": null,
+      "buttonType": "default",
+      "brochureSize": null
     }
   ],
   "settings": [
     {
+      "key": "ebook_filename",
+      "value": "ebook-2026-prueba",
+      "created_at": "2026-06-10T06:00:53.108211+00:00"
+    },
+    {
       "key": "ebook_pdf_url",
       "value": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/ebooks/1781071235704-kc8p9y-ebook-junio-2026--1-.pdf",
       "created_at": "2026-06-10T05:38:10.990942+00:00"
-    },
-    {
-      "key": "ebook_filename",
-      "value": "ebook-2026",
-      "created_at": "2026-06-10T06:00:53.108211+00:00"
     }
   ]
 }

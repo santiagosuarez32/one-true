@@ -134,6 +134,8 @@ export type CalendarIntake = {
   href: string;
   published: boolean;
   sortOrder: number;
+  buttonType?: string;
+  brochureSize?: string;
 };
 
 export type Setting = {
@@ -450,9 +452,11 @@ export async function saveCalendarIntake(intake: CalendarIntake): Promise<void> 
     const { error } = await supabase.from("calendar_intakes").upsert(intake);
     if (error) {
       console.error(`Supabase sync failed for calendar intake ${intake.id}:`, error.message);
+      throw new Error(`Error de base de datos Supabase: ${error.message}`);
     }
-  } catch (err) {
+  } catch (err: any) {
     console.error(`Failed to push calendar intake ${intake.id} to Supabase:`, err);
+    throw err;
   }
 }
 
@@ -466,9 +470,11 @@ export async function deleteCalendarIntake(id: string): Promise<void> {
     const { error } = await supabase.from("calendar_intakes").delete().eq("id", id);
     if (error) {
       console.error(`Supabase delete failed for calendar intake ${id}:`, error.message);
+      throw new Error(`Error de base de datos Supabase al eliminar: ${error.message}`);
     }
-  } catch (err) {
+  } catch (err: any) {
     console.error(`Failed to delete calendar intake ${id} from Supabase:`, err);
+    throw err;
   }
 }
 
@@ -496,9 +502,11 @@ export async function saveSetting(key: string, value: string): Promise<void> {
       .upsert({ key, value });
     if (error) {
       console.error(`Supabase settings sync failed for setting ${key}:`, error.message);
+      throw new Error(`Error de base de datos Supabase al guardar configuración: ${error.message}`);
     }
-  } catch (err) {
+  } catch (err: any) {
     console.error(`Failed to push setting ${key} to Supabase:`, err);
+    throw err;
   }
 }
 

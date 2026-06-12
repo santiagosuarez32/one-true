@@ -1712,44 +1712,6 @@
   ],
   "calendarIntakes": [
     {
-      "id": "sistema-calificacion-ess-m-conv",
-      "title": "Actualización en Poligrafía (ESS-M)",
-      "courseId": "sistema-calificacion-ess-m",
-      "category": "avanzado",
-      "badgeText": "100% ONLINE",
-      "badgeColor": "green",
-      "dateDisplay": "Sep 2026",
-      "durationDisplay": "15 horas",
-      "year": 2026,
-      "modalityType": "online",
-      "durationType": "corto",
-      "isFeatured": false,
-      "brochureUrl": "",
-      "href": "/sistema-calificacion-ess-m",
-      "published": true,
-      "sortOrder": 20,
-      "created_at": "2026-06-10T05:04:48.041507+00:00"
-    },
-    {
-      "id": "control-de-calidad-en-poligrafia-conv",
-      "title": "Control de Calidad en Poligrafía",
-      "courseId": "control-de-calidad-en-poligrafia",
-      "category": "avanzado",
-      "badgeText": "100% ONLINE",
-      "badgeColor": "green",
-      "dateDisplay": "Oct - Nov 2026",
-      "durationDisplay": "40 horas",
-      "year": 2026,
-      "modalityType": "online",
-      "durationType": "corto",
-      "isFeatured": false,
-      "brochureUrl": "",
-      "href": "/control-de-calidad-en-poligrafia",
-      "published": true,
-      "sortOrder": 30,
-      "created_at": "2026-06-10T05:04:48.268823+00:00"
-    },
-    {
       "id": "entrevista-pretest-conv",
       "title": "Entrevista Pretest",
       "courseId": "entrevista-pretest",
@@ -1766,7 +1728,10 @@
       "href": "/entrevista-pretest",
       "published": true,
       "sortOrder": 40,
-      "created_at": "2026-06-10T05:04:48.491596+00:00"
+      "created_at": "2026-06-10T05:04:48.491596+00:00",
+      "brochureFileName": null,
+      "buttonType": "default",
+      "brochureSize": null
     },
     {
       "id": "calificacion-graficas-analisis-datos-conv",
@@ -1785,7 +1750,10 @@
       "href": "/calificacion-graficas-analisis-datos",
       "published": true,
       "sortOrder": 50,
-      "created_at": "2026-06-10T05:04:48.714995+00:00"
+      "created_at": "2026-06-10T05:04:48.714995+00:00",
+      "brochureFileName": null,
+      "buttonType": "default",
+      "brochureSize": null
     },
     {
       "id": "tecnicas-poligraficas-conv",
@@ -1804,7 +1772,10 @@
       "href": "/tecnicas-poligraficas",
       "published": true,
       "sortOrder": 60,
-      "created_at": "2026-06-10T05:04:48.938877+00:00"
+      "created_at": "2026-06-10T05:04:48.938877+00:00",
+      "brochureFileName": null,
+      "buttonType": "default",
+      "brochureSize": null
     },
     {
       "id": "elicitacion-conversacional-conv",
@@ -1823,7 +1794,10 @@
       "href": "/formaciones-complementarias",
       "published": true,
       "sortOrder": 70,
-      "created_at": "2026-06-10T05:04:49.163093+00:00"
+      "created_at": "2026-06-10T05:04:49.163093+00:00",
+      "brochureFileName": null,
+      "buttonType": "default",
+      "brochureSize": null
     },
     {
       "id": "curso-basico-en-poligrafia-conv",
@@ -1842,19 +1816,66 @@
       "href": "/curso-basico-en-poligrafia",
       "published": true,
       "sortOrder": 10,
-      "created_at": "2026-06-10T05:04:47.753542+00:00"
+      "created_at": "2026-06-10T05:04:47.753542+00:00",
+      "brochureFileName": null,
+      "buttonType": "default",
+      "brochureSize": null
+    },
+    {
+      "id": "sistema-calificacion-ess-m-conv",
+      "title": "Actualización en Poligrafía (ESS-M) MODIFIED",
+      "courseId": "sistema-calificacion-ess-m",
+      "category": "avanzado",
+      "badgeText": "100% ONLINE",
+      "badgeColor": "green",
+      "dateDisplay": "Sep 2026 MODIFIED",
+      "durationDisplay": "15 horas",
+      "year": 2026,
+      "modalityType": "online",
+      "durationType": "corto",
+      "isFeatured": false,
+      "brochureUrl": "",
+      "href": "/sistema-calificacion-ess-m",
+      "published": true,
+      "sortOrder": 20,
+      "created_at": "2026-06-10T05:04:48.041507+00:00",
+      "brochureFileName": null,
+      "buttonType": "default",
+      "brochureSize": null
+    },
+    {
+      "id": "control-de-calidad-en-poligrafia-conv",
+      "title": "Control de Calidad en Poligrafía",
+      "courseId": "control-de-calidad-en-poligrafia",
+      "category": "avanzado",
+      "badgeText": "100% ONLINE",
+      "badgeColor": "green",
+      "dateDisplay": "Jun - Ago 2027",
+      "durationDisplay": "40 horas",
+      "year": 2026,
+      "modalityType": "online",
+      "durationType": "corto",
+      "isFeatured": true,
+      "brochureUrl": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/brochures/1781281852141-7zhd6n-control-de-calidad--octubre-noviembre-2026.pdf",
+      "href": "/control-de-calidad-en-poligrafia",
+      "published": true,
+      "sortOrder": 30,
+      "created_at": "2026-06-10T05:04:48.268823+00:00",
+      "brochureFileName": null,
+      "buttonType": "brochure",
+      "brochureSize": "686.98 KB"
     }
   ],
   "settings": [
     {
+      "key": "ebook_filename",
+      "value": "ebook-2026-prueba",
+      "created_at": "2026-06-10T06:00:53.108211+00:00"
+    },
+    {
       "key": "ebook_pdf_url",
       "value": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/ebooks/1781071235704-kc8p9y-ebook-junio-2026--1-.pdf",
       "created_at": "2026-06-10T05:38:10.990942+00:00"
-    },
-    {
-      "key": "ebook_filename",
-      "value": "ebook-2026",
-      "created_at": "2026-06-10T06:00:53.108211+00:00"
     }
   ]
 }

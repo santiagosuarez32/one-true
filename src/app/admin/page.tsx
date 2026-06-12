@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { Manrope } from "next/font/google";
 import { supabase } from "@/lib/supabase";
 import { Service, Course, Blog, Podcast, CalendarIntake, DatabaseSchema } from "@/lib/cms";
+import { compressPdf, formatBytes } from "@/lib/pdfCompressor";
 
 const manrope = Manrope({ subsets: ["latin"], weight: ["500", "600", "700", "800"] });
 
@@ -510,6 +511,7 @@ export default function AdminDashboard() {
 
   const [ebookPdfUrl, setEbookPdfUrl] = useState("");
   const [ebookFileName, setEbookFileName] = useState("");
+  const [ebookSize, setEbookSize] = useState("");
   const [savingSettings, setSavingSettings] = useState(false);
 
   // Backup & Restore states
@@ -596,6 +598,10 @@ export default function AdminDashboard() {
       if (foundName) {
         setEbookFileName(foundName.value);
       }
+      const foundSize = db.settings.find(s => s.key === "ebook_size");
+      if (foundSize) {
+        setEbookSize(foundSize.value);
+      }
     }
   }, [db]);
 
@@ -622,9 +628,19 @@ export default function AdminDashboard() {
         })
       });
 
-      const [resUrl, resName] = await Promise.all([saveUrl, saveName]);
+      const saveSize = fetch("/api/cms", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "settings",
+          action: "save",
+          data: { key: "ebook_size", value: ebookSize }
+        })
+      });
 
-      if (resUrl.ok && resName.ok) {
+      const [resUrl, resName, resSize] = await Promise.all([saveUrl, saveName, saveSize]);
+
+      if (resUrl.ok && resName.ok && resSize.ok) {
         showToast("ok", "Configuración de Ebook guardada correctamente");
         fetchData();
       } else {
@@ -962,7 +978,9 @@ export default function AdminDashboard() {
         brochureFileName: "",
         href: "",
         published: false,
-        sortOrder: ((db.calendarIntakes || []).length + 1) * 10
+        sortOrder: ((db.calendarIntakes || []).length + 1) * 10,
+        buttonType: "default",
+        brochureSize: ""
       });
     } else {
       setEditingPodcast({
@@ -1271,6 +1289,8 @@ export default function AdminDashboard() {
                     label="Archivo del Ebook (PDF)"
                     value={ebookPdfUrl}
                     onChange={setEbookPdfUrl}
+                    onSizeChange={setEbookSize}
+                    fileSize={ebookSize}
                     pathPrefix="ebooks"
                   />
 
@@ -1619,7 +1639,7 @@ export default function AdminDashboard() {
                             {activeTab === "services" && ` — Plantilla: ${item.template}`}
                             {activeTab === "complementarias" && ` — Formación Complementaria`}
                             {activeTab === "podcasts" && ` — Duración: ${item.duration} | Tema: ${item.topic} | Orden: ${item.sortOrder ?? 0}`}
-                            {activeTab === "calendar" && ` — Fechas: ${item.dateDisplay} | Mod: ${item.modalityType} | Orden: ${item.sortOrder}`}
+                            {activeTab === "calendar" && ` — Fechas: ${item.dateDisplay} | Mod: ${item.modalityType} | Orden: ${item.sortOrder}${item.brochureSize ? ` | Tamaño: ${item.brochureSize}` : ""}`}
                           </p>
                         </div>
 
@@ -3390,6 +3410,8 @@ function SideEditorForm({
                     label="Archivo del Brochure (PDF o Word)"
                     value={form.brochureUrl || ""}
                     onChange={(val) => updateField("brochureUrl", val)}
+                    onSizeChange={(size) => updateField("brochureSize", size)}
+                    fileSize={form.brochureSize}
                     pathPrefix="brochures"
                   />
 
@@ -3423,6 +3445,21 @@ function SideEditorForm({
                       </button>
                     </div>
                   </div>
+                </div>
+
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                    Tipo de Botón de Acción
+                    <select
+                      value={form.buttonType || "default"}
+                      onChange={(e) => updateField("buttonType", e.target.value)}
+                      className="mt-1.5 w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 outline-none focus:ring-2"
+                    >
+                      <option value="default">Automático (según Brochure / Destacado)</option>
+                      <option value="brochure">Forzar "Descargar Brochure"</option>
+                      <option value="info">Forzar "Más Información"</option>
+                    </select>
+                  </label>
                 </div>
               </div>
             )}
@@ -3796,14 +3833,20 @@ function DocumentUploadBox({
   label,
   value,
   onChange,
+  onSizeChange,
+  fileSize,
   pathPrefix = "brochures"
 }: {
   label: string;
   value: string;
   onChange: (val: string) => void;
+  onSizeChange?: (size: string) => void;
+  fileSize?: string;
   pathPrefix?: string;
 }) {
   const [uploading, setUploading] = useState(false);
+  const [compressing, setCompressing] = useState(false);
+  const [compressProgress, setCompressProgress] = useState("");
   const [error, setError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -3829,14 +3872,35 @@ function DocumentUploadBox({
     setUploading(true);
     setError(null);
     try {
-      const filename = file.name.toLowerCase().replace(/[^a-z0-9.]/g, "-");
+      let fileToUpload = file;
+      let finalSizeStr = formatBytes(file.size);
+
+      if (file.name.endsWith(".pdf") || file.type === "application/pdf") {
+        setCompressing(true);
+        setCompressProgress("Iniciando compresión...");
+        try {
+          const compressed = await compressPdf(file, 0.82, 2.2, (pageNum, totalPages) => {
+            setCompressProgress(`Comprimiendo PDF (Pág. ${pageNum} de ${totalPages})...`);
+          });
+          fileToUpload = compressed.pdfFile;
+          finalSizeStr = compressed.stats.compressedSize;
+        } catch (compErr) {
+          console.error("PDF compression failed, uploading original:", compErr);
+          fileToUpload = file;
+          finalSizeStr = formatBytes(file.size);
+        } finally {
+          setCompressing(false);
+        }
+      }
+
+      const filename = fileToUpload.name.toLowerCase().replace(/[^a-z0-9.]/g, "-");
       const rand = Math.random().toString(36).substring(2, 8);
       const filePath = `${pathPrefix}/${Date.now()}-${rand}-${filename}`;
 
       const { error: uploadError } = await supabase.storage
         .from("imagenes")
-        .upload(filePath, file, {
-          contentType: file.type || "application/octet-stream",
+        .upload(filePath, fileToUpload, {
+          contentType: fileToUpload.type || "application/octet-stream",
           cacheControl: "3600",
           upsert: false
         });
@@ -3850,6 +3914,9 @@ function DocumentUploadBox({
         .getPublicUrl(filePath);
 
       onChange(data.publicUrl);
+      if (onSizeChange) {
+        onSizeChange(finalSizeStr);
+      }
     } catch (err: any) {
       console.error("Document upload failed:", err);
       setError(err.message || "Error al subir el documento.");
@@ -3879,8 +3946,11 @@ function DocumentUploadBox({
         {value && (
           <button
             type="button"
-            onClick={() => onChange("")}
-            className="text-[10px] font-bold text-red-600 hover:underline"
+            onClick={() => {
+              onChange("");
+              if (onSizeChange) onSizeChange("");
+            }}
+            className="text-[10px] font-bold text-red-650 hover:underline cursor-pointer"
           >
             Quitar
           </button>
@@ -3890,7 +3960,9 @@ function DocumentUploadBox({
       {/* Input URL */}
       <input
         value={value}
-        onChange={(e) => onChange(e.target.value)}
+        onChange={(e) => {
+          onChange(e.target.value);
+        }}
         placeholder="ej: /brochures/documento.pdf o pegar URL absoluta"
         className="w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2 font-mono"
         onFocus={(e) => (e.currentTarget.style.boxShadow = `0 0 0 2px #700FA322`)}
@@ -3915,12 +3987,14 @@ function DocumentUploadBox({
         {uploading ? (
           <div className="flex items-center gap-2">
             <div className="h-4 w-4 animate-spin rounded-full border-2 border-neutral-400 border-l-transparent" />
-            <span className="text-xs font-semibold text-neutral-500">Subiendo archivo...</span>
+            <span className="text-xs font-semibold text-neutral-500">
+              {compressing ? compressProgress : "Subiendo archivo..."}
+            </span>
           </div>
         ) : value ? (
           <div className="flex flex-col items-center gap-1.5">
             <span className="text-xs font-semibold text-green-700 bg-green-50 px-3 py-1 rounded-full border border-green-200 truncate max-w-[250px]" title={value}>
-              📄 Archivo Cargado
+              📄 Archivo Cargado {fileSize ? `(${fileSize})` : ""}
             </span>
             <span className="text-[10px] font-bold text-neutral-400 group-hover:text-neutral-600">Hacé clic para reemplazar el documento</span>
           </div>

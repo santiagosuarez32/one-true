@@ -23,6 +23,7 @@ export default function EbookPage() {
   const [success, setSuccess] = useState(false);
   const [ebookPdfUrl, setEbookPdfUrl] = useState("/ebook-poligrafia.pdf");
   const [ebookFileName, setEbookFileName] = useState("One-True-Guia-Poligrafia-Confiable.pdf");
+  const [ebookSize, setEbookSize] = useState("");
 
   useEffect(() => {
     // Fetch ebook settings dynamically
@@ -39,6 +40,10 @@ export default function EbookPage() {
             const foundName = data.settings.find((s: any) => s.key === "ebook_filename");
             if (foundName && foundName.value) {
               setEbookFileName(foundName.value);
+            }
+            const foundSize = data.settings.find((s: any) => s.key === "ebook_size");
+            if (foundSize && foundSize.value) {
+              setEbookSize(foundSize.value);
             }
           }
         }
@@ -207,7 +212,7 @@ export default function EbookPage() {
             </h2>
 
             <p className="text-lg mb-4 leading-relaxed max-w-lg" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: "700", color: "#FFFFFF" }}>
-              Descarga nuestro Ebook gratuito con la entrega del mes. Nuestro equipo trabaja constantemente para seguir trayendo nuevos ebooks gratuitos una vez al mes.
+              Descarga nuestro Ebook gratuito con la entrega del mes{ebookSize ? ` (PDF, ${ebookSize})` : ""}. Nuestro equipo trabaja constantemente para seguir trayendo nuevos ebooks gratuitos una vez al mes.
             </p>
           </div>
 
@@ -367,7 +372,7 @@ export default function EbookPage() {
                         Procesando...
                       </>
                     ) : (
-                      "Obtener Ebook Gratis"
+                      `Obtener Ebook Gratis${ebookSize ? ` (${ebookSize})` : ""}`
                     )}
                   </button>
                 </form>

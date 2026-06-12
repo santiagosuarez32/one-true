@@ -1731,25 +1731,6 @@
       "created_at": "2026-06-10T05:04:48.041507+00:00"
     },
     {
-      "id": "control-de-calidad-en-poligrafia-conv",
-      "title": "Control de Calidad en Poligrafía",
-      "courseId": "control-de-calidad-en-poligrafia",
-      "category": "avanzado",
-      "badgeText": "100% ONLINE",
-      "badgeColor": "green",
-      "dateDisplay": "Oct - Nov 2026",
-      "durationDisplay": "40 horas",
-      "year": 2026,
-      "modalityType": "online",
-      "durationType": "corto",
-      "isFeatured": false,
-      "brochureUrl": "",
-      "href": "/control-de-calidad-en-poligrafia",
-      "published": true,
-      "sortOrder": 30,
-      "created_at": "2026-06-10T05:04:48.268823+00:00"
-    },
-    {
       "id": "entrevista-pretest-conv",
       "title": "Entrevista Pretest",
       "courseId": "entrevista-pretest",
@@ -1843,6 +1824,25 @@
       "published": true,
       "sortOrder": 10,
       "created_at": "2026-06-10T05:04:47.753542+00:00"
+    },
+    {
+      "id": "control-de-calidad-en-poligrafia-conv",
+      "title": "Control de Calidad en Poligrafía",
+      "courseId": "control-de-calidad-en-poligrafia",
+      "category": "avanzado",
+      "badgeText": "100% ONLINE",
+      "badgeColor": "green",
+      "dateDisplay": "Oct - Nov 2026",
+      "durationDisplay": "40 horas",
+      "year": 2026,
+      "modalityType": "online",
+      "durationType": "corto",
+      "isFeatured": true,
+      "brochureUrl": "",
+      "href": "/control-de-calidad-en-poligrafia",
+      "published": true,
+      "sortOrder": 30,
+      "created_at": "2026-06-10T05:04:48.268823+00:00"
     }
   ],
   "settings": [
