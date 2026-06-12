@@ -882,7 +882,9 @@ export default function TecnicasPoligraficasPage({ course }: { course: Course })
       </section>
 
       <Footer />
-      <FloatingWhatsApp />
+      
+      {/* WhatsApp Button */}
+      <FloatingWhatsApp phone={contactPhone} />
     </main>
   );
 }

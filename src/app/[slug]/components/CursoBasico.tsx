@@ -992,7 +992,7 @@ export default function CursoBasicoPoligrafiaPage({ course }: { course: Course }
       <Footer />
       
       {/* WhatsApp Button */}
-      <FloatingWhatsApp />
+      <FloatingWhatsApp phone={contactPhone} />
     </main>
   );
 }

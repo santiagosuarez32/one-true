@@ -75,7 +75,15 @@ export default function FloatingWhatsApp({
   // 2) Lógica normal (no crea nodos ni usa document hasta mounted)
   if (!mounted) return null;
 
-  const href = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  // Normalizar número de teléfono para WhatsApp
+  let cleanPhone = phone.replace(/\D/g, "");
+  if (cleanPhone.startsWith("0")) {
+    cleanPhone = "593" + cleanPhone.slice(1);
+  } else if (cleanPhone.length === 9 && !cleanPhone.startsWith("593")) {
+    cleanPhone = "593" + cleanPhone;
+  }
+
+  const href = `https://wa.me/${cleanPhone || "593981296179"}?text=${encodeURIComponent(message)}`;
 
   const fabStyle: React.CSSProperties = {
     right,

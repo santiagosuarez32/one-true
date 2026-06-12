@@ -61,6 +61,40 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileAccordion, setMobileAccordion] = useState<string | null>(null);
   const [isBlogPage, setIsBlogPage] = useState(false);
+  const [evaluationsList, setEvaluationsList] = useState([
+    { label: "Vetting", href: "/vetting" },
+    { label: "Estudio de Confiabilidad 360º", href: "/estudio-de-confiabilidad-360" },
+    { label: "Visitas Domiciliarias", href: "/visitas-domiciliarias" },
+    { label: "Pruebas Toxicológicas", href: "/pruebas-toxicologicas" },
+    { label: "Evaluaciones Psicométricas", href: "/evaluaciones-psicometricas" },
+    { label: "Prueba de honestidad ética y valores", href: "/prueba-de-honestidad-etica-y-valores" }
+  ]);
+
+  useEffect(() => {
+    async function loadDynamicServices() {
+      try {
+        const res = await fetch("/api/cms");
+        if (res.ok) {
+          const db = await res.json();
+          if (db && Array.isArray(db.services)) {
+            // Filter out published services that are not the main "pruebas-poligraficas" (which has its own direct link)
+            const dynamicServices = db.services
+              .filter((s: any) => s.published && s.id !== "pruebas-poligraficas")
+              .map((s: any) => ({
+                label: s.title,
+                href: s.href || `/${s.id}`
+              }));
+            if (dynamicServices.length > 0) {
+              setEvaluationsList(dynamicServices);
+            }
+          }
+        }
+      } catch (err) {
+        console.error("Error loading services in Navbar:", err);
+      }
+    }
+    loadDynamicServices();
+  }, []);
 
   useEffect(() => {
     const isBlog = typeof window !== 'undefined' && window.location.pathname.includes('/blog/');
@@ -140,14 +174,6 @@ export default function Navbar() {
     fill: "#FFFFFF",
   };
 
-  const evaluationsList = [
-    { label: "Vetting", href: "/vetting" },
-    { label: "Estudio de Confiabilidad 360º", href: "/estudio-de-confiabilidad-360" },
-    { label: "Visitas Domiciliarias", href: "/visitas-domiciliarias" },
-    { label: "Pruebas Toxicológicas", href: "/pruebas-toxicologicas" },
-    { label: "Evaluaciones Psicométricas", href: "/evaluaciones-psicometricas" },
-    { label: "Prueba de honestidad ética y valores", href: "/prueba-de-honestidad-etica-y-valores" }
-  ];
 
   const academiaList = [
     { label: "Curso Básico en Poligrafía 400 H", href: "/curso-basico-en-poligrafia" },

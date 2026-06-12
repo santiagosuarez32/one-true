@@ -72,7 +72,8 @@
         "heroTagline": "Nuestras soluciones",
         "contactPhone": "0981296179",
         "heroUnderlined": "Polígrafo",
-        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True",
+        "contactWhatsappText": "+593 98 129 6179"
       },
       "created_at": "2026-06-06T16:11:44.014975+00:00"
     },
@@ -130,7 +131,8 @@
         "contactPhone": "0981296179",
         "heroUnderlined": "Toxicológicas",
         "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True",
-        "showOtherSolutions": false
+        "showOtherSolutions": false,
+        "contactWhatsappText": "+593 98 129 6179"
       },
       "created_at": "2026-06-06T16:11:45.005459+00:00"
     },
@@ -184,7 +186,8 @@
         "contactPhone": "0981296179",
         "heroUnderlined": "Candidatos",
         "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True",
-        "showOtherSolutions": false
+        "showOtherSolutions": false,
+        "contactWhatsappText": "+593 98 129 6179"
       },
       "created_at": "2026-06-06T16:11:44.306955+00:00"
     },
@@ -1712,25 +1715,6 @@
   ],
   "calendarIntakes": [
     {
-      "id": "sistema-calificacion-ess-m-conv",
-      "title": "Actualización en Poligrafía (ESS-M)",
-      "courseId": "sistema-calificacion-ess-m",
-      "category": "avanzado",
-      "badgeText": "100% ONLINE",
-      "badgeColor": "green",
-      "dateDisplay": "Sep 2026",
-      "durationDisplay": "15 horas",
-      "year": 2026,
-      "modalityType": "online",
-      "durationType": "corto",
-      "isFeatured": false,
-      "brochureUrl": "",
-      "href": "/sistema-calificacion-ess-m",
-      "published": true,
-      "sortOrder": 20,
-      "created_at": "2026-06-10T05:04:48.041507+00:00"
-    },
-    {
       "id": "entrevista-pretest-conv",
       "title": "Entrevista Pretest",
       "courseId": "entrevista-pretest",
@@ -1747,7 +1731,10 @@
       "href": "/entrevista-pretest",
       "published": true,
       "sortOrder": 40,
-      "created_at": "2026-06-10T05:04:48.491596+00:00"
+      "created_at": "2026-06-10T05:04:48.491596+00:00",
+      "brochureFileName": null,
+      "buttonType": "default",
+      "brochureSize": null
     },
     {
       "id": "calificacion-graficas-analisis-datos-conv",
@@ -1766,7 +1753,10 @@
       "href": "/calificacion-graficas-analisis-datos",
       "published": true,
       "sortOrder": 50,
-      "created_at": "2026-06-10T05:04:48.714995+00:00"
+      "created_at": "2026-06-10T05:04:48.714995+00:00",
+      "brochureFileName": null,
+      "buttonType": "default",
+      "brochureSize": null
     },
     {
       "id": "tecnicas-poligraficas-conv",
@@ -1785,7 +1775,10 @@
       "href": "/tecnicas-poligraficas",
       "published": true,
       "sortOrder": 60,
-      "created_at": "2026-06-10T05:04:48.938877+00:00"
+      "created_at": "2026-06-10T05:04:48.938877+00:00",
+      "brochureFileName": null,
+      "buttonType": "default",
+      "brochureSize": null
     },
     {
       "id": "elicitacion-conversacional-conv",
@@ -1804,26 +1797,32 @@
       "href": "/formaciones-complementarias",
       "published": true,
       "sortOrder": 70,
-      "created_at": "2026-06-10T05:04:49.163093+00:00"
+      "created_at": "2026-06-10T05:04:49.163093+00:00",
+      "brochureFileName": null,
+      "buttonType": "default",
+      "brochureSize": null
     },
     {
-      "id": "curso-basico-en-poligrafia-conv",
-      "title": "Curso Básico de Poligrafía",
-      "courseId": "curso-basico-en-poligrafia",
-      "category": "certificacion",
-      "badgeText": "CERTIFICACIÓN COMPLETA - 100% PRESENCIAL",
-      "badgeColor": "blue",
-      "dateDisplay": "Fechas: Feb - Abr 2027",
-      "durationDisplay": "Duración: 400 horas",
-      "year": 2027,
-      "modalityType": "presencial",
-      "durationType": "certificacion",
-      "isFeatured": true,
-      "brochureUrl": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/brochures/1781068053105-ohy1fk-ebook-junio-2026--1-.pdf",
-      "href": "/curso-basico-en-poligrafia",
+      "id": "sistema-calificacion-ess-m-conv",
+      "title": "Actualización en Poligrafía (ESS-M) MODIFIED",
+      "courseId": "sistema-calificacion-ess-m",
+      "category": "avanzado",
+      "badgeText": "100% ONLINE",
+      "badgeColor": "green",
+      "dateDisplay": "Sep 2026 MODIFIED",
+      "durationDisplay": "15 horas",
+      "year": 2026,
+      "modalityType": "online",
+      "durationType": "corto",
+      "isFeatured": false,
+      "brochureUrl": "",
+      "href": "/sistema-calificacion-ess-m",
       "published": true,
-      "sortOrder": 10,
-      "created_at": "2026-06-10T05:04:47.753542+00:00"
+      "sortOrder": 30,
+      "created_at": "2026-06-10T05:04:48.041507+00:00",
+      "brochureFileName": null,
+      "buttonType": "default",
+      "brochureSize": null
     },
     {
       "id": "control-de-calidad-en-poligrafia-conv",
@@ -1832,17 +1831,42 @@
       "category": "avanzado",
       "badgeText": "100% ONLINE",
       "badgeColor": "green",
-      "dateDisplay": "Oct - Nov 2026",
+      "dateDisplay": "Jun - Ago 2027",
       "durationDisplay": "40 horas",
       "year": 2026,
       "modalityType": "online",
       "durationType": "corto",
       "isFeatured": true,
-      "brochureUrl": "",
+      "brochureUrl": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/brochures/1781282247148-zmzesy-control-de-calidad--octubre-noviembre-2026.pdf",
       "href": "/control-de-calidad-en-poligrafia",
       "published": true,
-      "sortOrder": 30,
-      "created_at": "2026-06-10T05:04:48.268823+00:00"
+      "sortOrder": 20,
+      "created_at": "2026-06-10T05:04:48.268823+00:00",
+      "brochureFileName": "Control-de-calidad-poligrafia",
+      "buttonType": "brochure",
+      "brochureSize": "1.57 MB"
+    },
+    {
+      "id": "curso-basico-en-poligrafia-conv",
+      "title": "Curso Básico de Poligrafía",
+      "courseId": "curso-basico-en-poligrafia",
+      "category": "certificacion",
+      "badgeText": "CERTIFICACIÓN COMPLETA - 100% PRESENCIAL",
+      "badgeColor": "blue",
+      "dateDisplay": "Fechas: Jun - Ago 2027",
+      "durationDisplay": "Duración: 400 horas",
+      "year": 2027,
+      "modalityType": "presencial",
+      "durationType": "certificacion",
+      "isFeatured": true,
+      "brochureUrl": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/brochures/1781282313701-5d6k80-brochure-formaci-n-en-poligraf-a-junio-agosto-2027.pdf",
+      "href": "/curso-basico-en-poligrafia",
+      "published": true,
+      "sortOrder": 10,
+      "created_at": "2026-06-10T05:04:47.753542+00:00",
+      "brochureFileName": "Curso-basico-poligrafia",
+      "buttonType": "brochure",
+      "brochureSize": "1.25 MB"
     }
   ],
   "settings": [

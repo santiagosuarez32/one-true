@@ -28,7 +28,7 @@ export type Service = {
     heroImage: string;
     aboutTitle: string;
     aboutDesc: string;
-    aboutCards: { title: string; text: string }[];
+    aboutCards: { title: string; text: string; icon?: string; items?: string[] }[];
     whyTitle: string;
     whyPoints: { title: string; text: string }[];
     whyImage1?: string;
@@ -36,12 +36,15 @@ export type Service = {
     faqs?: { q: string; a: string }[];
     contactPhone: string;
     contactWhatsapp?: string;
+    contactWhatsappText?: string;
     showOtherSolutions?: boolean;
     showFaqs?: boolean;
+    aboutCardsLayout?: "yellow" | "icon";
   };
   seoTitle?: string;
   seoDescription?: string;
   seoKeywords?: string;
+  created_at?: string;
 };
 
 export type FocusArea = {
@@ -177,8 +180,13 @@ export async function getDb(): Promise<DatabaseSchema> {
         ...c,
         template: c.template || c.pageContent?.template
       }));
+      const sortedServices = [...(servicesRes.data || [])].sort((a, b) => {
+        const timeA = a.created_at ? new Date(a.created_at).getTime() : 0;
+        const timeB = b.created_at ? new Date(b.created_at).getTime() : 0;
+        return timeA - timeB;
+      });
       const db: DatabaseSchema = {
-        services: servicesRes.data || [],
+        services: sortedServices,
         courses: dbCourses,
         blogs: blogsRes.data || [],
         podcasts: podcastsRes.data || [],
@@ -208,8 +216,13 @@ export async function getDb(): Promise<DatabaseSchema> {
   try {
     const data = await fs.readFile(dbPath, "utf8");
     const parsed = JSON.parse(data);
+    const sortedServices = [...(parsed.services || [])].sort((a, b) => {
+      const timeA = a.created_at ? new Date(a.created_at).getTime() : 0;
+      const timeB = b.created_at ? new Date(b.created_at).getTime() : 0;
+      return timeA - timeB;
+    });
     return {
-      services: parsed.services || [],
+      services: sortedServices,
       courses: parsed.courses || [],
       blogs: parsed.blogs || [],
       podcasts: parsed.podcasts || [],

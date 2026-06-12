@@ -864,7 +864,7 @@ export default function CalificacionGraficasPage({ course }: { course: Course })
       </section>
 
       <Footer />
-      <FloatingWhatsApp />
+      <FloatingWhatsApp phone={contactPhone} />
     </main>
   );
 }

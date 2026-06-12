@@ -883,7 +883,7 @@ export default function SistemaCalificacionESSMPage({ course }: { course: Course
       </section>
 
       <Footer />
-      <FloatingWhatsApp />
+      <FloatingWhatsApp phone={contactPhone} />
     </main>
   );
 }

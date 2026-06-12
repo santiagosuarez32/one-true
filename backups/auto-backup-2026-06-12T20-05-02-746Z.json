@@ -72,9 +72,183 @@
         "heroTagline": "Nuestras soluciones",
         "contactPhone": "0981296179",
         "heroUnderlined": "Polígrafo",
-        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True",
+        "contactWhatsappText": "+593 98 129 6179"
       },
       "created_at": "2026-06-06T16:11:44.014975+00:00"
+    },
+    {
+      "id": "vetting",
+      "title": "Vetting",
+      "desc": "Proteja la integridad de su empresa desde el primer día. Filtramos riesgos mediante el rastreo exhaustivo en más de 190 bases de datos nacionales e internacionales (Interpol/OFAC) para garantizar contrataciones 100% seguras.",
+      "image": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services/1780796702388-2-9pc6yy.webp",
+      "cta": "Ver detalles del servicio",
+      "href": "/vetting",
+      "template": "vetting",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "No se conforme con la buena impresión de una entrevista. Validamos la integridad de su futuro talento humano con un análisis profundo de antecedentes de riesgos.",
+        "whyTitle": "El Valor para su Empresa",
+        "aboutDesc": "Cruzamos información en tiempo real en +190 bases de datos para detectar alertas legales, financieras o de reputación:",
+        "heroImage": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services-hero/1780768705224-chatgpt-image-5-jun-2026--02-0-6ef2ty.webp",
+        "heroTitle": "Verificación Integral de",
+        "whyImage1": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services-why/1780974176352-primer-bkl7ro.webp",
+        "whyImage2": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services-why/1780974178485-segunda-9xwijd.webp",
+        "whyPoints": [
+          {
+            "text": "Evite infiltraciones, fraudes o personal no apto.",
+            "title": "Reducción de Riesgos"
+          },
+          {
+            "text": "Resultados técnicos, claros y listos para la toma de decisiones.",
+            "title": "Reportes Ágiles"
+          },
+          {
+            "text": "Estándares de Compliance para su departamento de RR.HH.",
+            "title": "Cumplimiento"
+          }
+        ],
+        "aboutCards": [
+          {
+            "text": "Función Judicial, Policía Nacional y SUPA.",
+            "title": "Historial Legal"
+          },
+          {
+            "text": "Registro Civil y Agencia Nacional de Tránsito.",
+            "title": "Perfil Ciudadano"
+          },
+          {
+            "text": "Listas de control internacional (OFAC, Interpol y Europol).",
+            "title": "Seguridad Global"
+          }
+        ],
+        "aboutTitle": "¿Qué analizamos?",
+        "heroTagline": "Transformamos la incertidumbre en decisiones seguras.",
+        "contactPhone": "0981296179",
+        "heroUnderlined": "Candidatos",
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True",
+        "showOtherSolutions": false,
+        "contactWhatsappText": "+593 98 129 6179"
+      },
+      "created_at": "2026-06-06T16:11:44.306955+00:00"
+    },
+    {
+      "id": "estudio-de-confiabilidad-360",
+      "title": "Estudio de Confiabilidad 360°",
+      "desc": "Confirmamos la honestidad y estabilidad de sus candidatos. Validamos trayectorias (laborales y académicas) y realizamos un análisis profundo de salud financiera y endeudamiento.",
+      "image": "/servicios/3.webp",
+      "cta": "Ver detalles del servicio",
+      "href": "/estudio-de-confiabilidad-360",
+      "template": "vetting",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "Una hoja de vida no lo dice todo. Mitigamos el riesgo de contratación mediante la verificación rigurosa de la experiencia declarada y el análisis del entorno financiero del candidato, identificando vulnerabilidades antes de que afecten a su empresa.\n",
+        "whyTitle": "Valor Estratégico para su Empresa",
+        "aboutDesc": "Llevamos a cabo un cruce completo de información comercial, legal e historial laboral:",
+        "heroImage": "/servicios/3.webp",
+        "heroTitle": "Estudio de Confiabilidad",
+        "whyImage1": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services-why/1780974241855-primer-h83p4j.webp",
+        "whyImage2": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services-why/1780974243657-segunda-1rzqt5.webp",
+        "whyPoints": [
+          {
+            "text": "Identifique candidatos con presiones financieras que puedan comprometer la integridad del cargo.",
+            "title": "Prevención de Riesgos"
+          },
+          {
+            "text": "Detecte inconsistencias o títulos inexistentes de forma inmediata.",
+            "title": "Cero Falsificaciones"
+          },
+          {
+            "text": "Reportes técnicos que avalan la idoneidad moral y profesional del postulante.",
+            "title": "Seguridad en la Toma de Decisión"
+          }
+        ],
+        "aboutCards": [
+          {
+            "text": "Verificación directa de sus tres últimas referencias laborales, verificamos cómo fue su desempeño laboral con sus superiores, constatamos los motivos reales de salida.",
+            "title": "Validación de su Trayectoria laboral"
+          },
+          {
+            "text": "Rastreo profundo de antecedentes legales, judiciales y listas de control internacional.",
+            "title": "Vetting en +190 Bases de Datos"
+          },
+          {
+            "text": "Evaluamos niveles de endeudamiento y comportamiento crediticio para detectar posibles factores de riesgo o vulnerabilidad.",
+            "title": "Análisis de Salud Financiera"
+          },
+          {
+            "text": "Verificación de la autenticidad de sus títulos académicos registrados y reportados.",
+            "title": "Verificación Académica"
+          }
+        ],
+        "aboutTitle": "¿Qué analizamos?",
+        "heroTagline": "Confirme la honestidad, el pasado y la estabilidad de su talento humano.",
+        "contactPhone": "0981296179",
+        "heroUnderlined": "360°",
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True",
+        "showOtherSolutions": false,
+        "contactWhatsappText": "+593 98 129 6179"
+      },
+      "created_at": "2026-06-06T16:11:44.532465+00:00"
+    },
+    {
+      "id": "visitas-domiciliarias",
+      "title": "Visitas Domiciliarias",
+      "desc": "Evaluamos el entorno socioeconómico y familiar de sus candidatos en el terreno. Prevenimos riesgos de vulnerabilidad y confirmamos la coherencia entre el estilo de vida y el perfil declarado.",
+      "image": "/servicios/4.webp",
+      "cta": "Ver detalles del servicio",
+      "href": "/visitas-domiciliarias",
+      "template": "vetting",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "La seguridad de su empresa no termina en la oficina. Nuestro servicio de visita domiciliaria permite conocer el entorno real del candidato, identificando factores de riesgo, niveles de vulnerabilidad y la veracidad de su situación socioeconómica.",
+        "whyTitle": "Beneficios para su Organización",
+        "aboutDesc": "¿Qué evaluamos en el terreno?",
+        "heroImage": "/domicilio/hero.webp",
+        "heroTitle": "Visitas",
+        "whyImage1": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services-why/1781049093320-4-e0l2ta.webp",
+        "whyImage2": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services-why/1781049104401-segunda-d5m9a0.webp",
+        "whyPoints": [
+          {
+            "text": "Detecte a tiempo situaciones personales que puedan comprometer la lealtad del empleado.",
+            "title": "Prevención de Vulnerabilidades"
+          },
+          {
+            "text": "Evite la contratación de personal con entornos que faciliten actos ilícitos.",
+            "title": "Mitigación de Riesgos"
+          },
+          {
+            "text": "Proteja sus activos asegurándose de que el entorno del candidato sea estable y confiable.",
+            "title": "Seguridad Patrimonial"
+          }
+        ],
+        "aboutCards": [
+          {
+            "text": "Validación de la ubicación geográfica y condiciones de habitabilidad del candidato.",
+            "title": "Verificación de Entorno"
+          },
+          {
+            "text": "Identificación del núcleo familiar y detección de posibles conflictos o riesgos externos.",
+            "title": "Análisis Socio-Familiar"
+          },
+          {
+            "text": "Contrastamos que el nivel de vida sea consistente con los ingresos y el cargo al que postula.",
+            "title": "Coherencia de Vida"
+          },
+          {
+            "text": "Obtención de información complementaria sobre la conducta y reputación en su comunidad.",
+            "title": "Referencias de Vecindad"
+          }
+        ],
+        "aboutTitle": "Nuestros especialistas realizan una inspección profesional y ética centrada en:",
+        "heroTagline": "Verificación de campo para una visión 360° de su futuro colaborador.",
+        "contactPhone": "0981296179",
+        "heroUnderlined": "Domiciliarias",
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True",
+        "showOtherSolutions": false,
+        "contactWhatsappText": "+593 98 129 6179"
+      },
+      "created_at": "2026-06-06T16:11:44.772206+00:00"
     },
     {
       "id": "pruebas-toxicologicas",
@@ -130,63 +304,10 @@
         "contactPhone": "0981296179",
         "heroUnderlined": "Toxicológicas",
         "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True",
-        "showOtherSolutions": false
+        "showOtherSolutions": false,
+        "contactWhatsappText": "+593 98 129 6179"
       },
       "created_at": "2026-06-06T16:11:45.005459+00:00"
-    },
-    {
-      "id": "vetting",
-      "title": "Vetting",
-      "desc": "Proteja la integridad de su empresa desde el primer día. Filtramos riesgos mediante el rastreo exhaustivo en más de 190 bases de datos nacionales e internacionales (Interpol/OFAC) para garantizar contrataciones 100% seguras.",
-      "image": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services/1780796702388-2-9pc6yy.webp",
-      "cta": "Ver detalles del servicio",
-      "href": "/vetting",
-      "template": "vetting",
-      "published": true,
-      "pageContent": {
-        "heroDesc": "No se conforme con la buena impresión de una entrevista. Validamos la integridad de su futuro talento humano con un análisis profundo de antecedentes de riesgos.",
-        "whyTitle": "El Valor para su Empresa",
-        "aboutDesc": "Cruzamos información en tiempo real en +190 bases de datos para detectar alertas legales, financieras o de reputación:",
-        "heroImage": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services-hero/1780768705224-chatgpt-image-5-jun-2026--02-0-6ef2ty.webp",
-        "heroTitle": "Verificación Integral de",
-        "whyImage1": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services-why/1780974176352-primer-bkl7ro.webp",
-        "whyImage2": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services-why/1780974178485-segunda-9xwijd.webp",
-        "whyPoints": [
-          {
-            "text": "Evite infiltraciones, fraudes o personal no apto.",
-            "title": "Reducción de Riesgos"
-          },
-          {
-            "text": "Resultados técnicos, claros y listos para la toma de decisiones.",
-            "title": "Reportes Ágiles"
-          },
-          {
-            "text": "Estándares de Compliance para su departamento de RR.HH.",
-            "title": "Cumplimiento"
-          }
-        ],
-        "aboutCards": [
-          {
-            "text": "Función Judicial, Policía Nacional y SUPA.",
-            "title": "Historial Legal"
-          },
-          {
-            "text": "Registro Civil y Agencia Nacional de Tránsito.",
-            "title": "Perfil Ciudadano"
-          },
-          {
-            "text": "Listas de control internacional (OFAC, Interpol y Europol).",
-            "title": "Seguridad Global"
-          }
-        ],
-        "aboutTitle": "¿Qué analizamos?",
-        "heroTagline": "Transformamos la incertidumbre en decisiones seguras.",
-        "contactPhone": "0981296179",
-        "heroUnderlined": "Candidatos",
-        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True",
-        "showOtherSolutions": false
-      },
-      "created_at": "2026-06-06T16:11:44.306955+00:00"
     },
     {
       "id": "evaluaciones-psicometricas",
@@ -246,67 +367,10 @@
         "contactPhone": "0981296179",
         "heroUnderlined": "Psicométricas",
         "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True",
-        "showOtherSolutions": false
+        "showOtherSolutions": false,
+        "contactWhatsappText": "+593 98 129 6179"
       },
       "created_at": "2026-06-06T16:11:45.238815+00:00"
-    },
-    {
-      "id": "estudio-de-confiabilidad-360",
-      "title": "Estudio de Confiabilidad 360°",
-      "desc": "Confirmamos la honestidad y estabilidad de sus candidatos. Validamos trayectorias (laborales y académicas) y realizamos un análisis profundo de salud financiera y endeudamiento.",
-      "image": "/servicios/3.webp",
-      "cta": "Ver detalles del servicio",
-      "href": "/estudio-de-confiabilidad-360",
-      "template": "vetting",
-      "published": true,
-      "pageContent": {
-        "heroDesc": "Una hoja de vida no lo dice todo. Mitigamos el riesgo de contratación mediante la verificación rigurosa de la experiencia declarada y el análisis del entorno financiero del candidato, identificando vulnerabilidades antes de que afecten a su empresa.\n",
-        "whyTitle": "Valor Estratégico para su Empresa",
-        "aboutDesc": "Llevamos a cabo un cruce completo de información comercial, legal e historial laboral:",
-        "heroImage": "/servicios/3.webp",
-        "heroTitle": "Estudio de Confiabilidad",
-        "whyImage1": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services-why/1780974241855-primer-h83p4j.webp",
-        "whyImage2": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services-why/1780974243657-segunda-1rzqt5.webp",
-        "whyPoints": [
-          {
-            "text": "Identifique candidatos con presiones financieras que puedan comprometer la integridad del cargo.",
-            "title": "Prevención de Riesgos"
-          },
-          {
-            "text": "Detecte inconsistencias o títulos inexistentes de forma inmediata.",
-            "title": "Cero Falsificaciones"
-          },
-          {
-            "text": "Reportes técnicos que avalan la idoneidad moral y profesional del postulante.",
-            "title": "Seguridad en la Toma de Decisión"
-          }
-        ],
-        "aboutCards": [
-          {
-            "text": "Verificación directa de sus tres últimas referencias laborales, verificamos cómo fue su desempeño laboral con sus superiores, constatamos los motivos reales de salida.",
-            "title": "Validación de su Trayectoria laboral"
-          },
-          {
-            "text": "Rastreo profundo de antecedentes legales, judiciales y listas de control internacional.",
-            "title": "Vetting en +190 Bases de Datos"
-          },
-          {
-            "text": "Evaluamos niveles de endeudamiento y comportamiento crediticio para detectar posibles factores de riesgo o vulnerabilidad.",
-            "title": "Análisis de Salud Financiera"
-          },
-          {
-            "text": "Verificación de la autenticidad de sus títulos académicos registrados y reportados.",
-            "title": "Verificación Académica"
-          }
-        ],
-        "aboutTitle": "¿Qué analizamos?",
-        "heroTagline": "Confirme la honestidad, el pasado y la estabilidad de su talento humano.",
-        "contactPhone": "0981296179",
-        "heroUnderlined": "360°",
-        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True",
-        "showOtherSolutions": false
-      },
-      "created_at": "2026-06-06T16:11:44.532465+00:00"
     },
     {
       "id": "prueba-de-honestidad-etica-y-valores",
@@ -394,67 +458,10 @@
           }
         ],
         "heroUnderlined": "Ética y Valores",
-        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True"
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True",
+        "contactWhatsappText": "+593 98 129 6179"
       },
       "created_at": "2026-06-06T16:11:45.483517+00:00"
-    },
-    {
-      "id": "visitas-domiciliarias",
-      "title": "Visitas Domiciliarias",
-      "desc": "Evaluamos el entorno socioeconómico y familiar de sus candidatos en el terreno. Prevenimos riesgos de vulnerabilidad y confirmamos la coherencia entre el estilo de vida y el perfil declarado.",
-      "image": "/servicios/4.webp",
-      "cta": "Ver detalles del servicio",
-      "href": "/visitas-domiciliarias",
-      "template": "vetting",
-      "published": true,
-      "pageContent": {
-        "heroDesc": "La seguridad de su empresa no termina en la oficina. Nuestro servicio de visita domiciliaria permite conocer el entorno real del candidato, identificando factores de riesgo, niveles de vulnerabilidad y la veracidad de su situación socioeconómica.",
-        "whyTitle": "Beneficios para su Organización",
-        "aboutDesc": "¿Qué evaluamos en el terreno?",
-        "heroImage": "/domicilio/hero.webp",
-        "heroTitle": "Visitas",
-        "whyImage1": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services-why/1781049093320-4-e0l2ta.webp",
-        "whyImage2": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/services-why/1781049104401-segunda-d5m9a0.webp",
-        "whyPoints": [
-          {
-            "text": "Detecte a tiempo situaciones personales que puedan comprometer la lealtad del empleado.",
-            "title": "Prevención de Vulnerabilidades"
-          },
-          {
-            "text": "Evite la contratación de personal con entornos que faciliten actos ilícitos.",
-            "title": "Mitigación de Riesgos"
-          },
-          {
-            "text": "Proteja sus activos asegurándose de que el entorno del candidato sea estable y confiable.",
-            "title": "Seguridad Patrimonial"
-          }
-        ],
-        "aboutCards": [
-          {
-            "text": "Validación de la ubicación geográfica y condiciones de habitabilidad del candidato.",
-            "title": "Verificación de Entorno"
-          },
-          {
-            "text": "Identificación del núcleo familiar y detección de posibles conflictos o riesgos externos.",
-            "title": "Análisis Socio-Familiar"
-          },
-          {
-            "text": "Contrastamos que el nivel de vida sea consistente con los ingresos y el cargo al que postula.",
-            "title": "Coherencia de Vida"
-          },
-          {
-            "text": "Obtención de información complementaria sobre la conducta y reputación en su comunidad.",
-            "title": "Referencias de Vecindad"
-          }
-        ],
-        "aboutTitle": "Nuestros especialistas realizan una inspección profesional y ética centrada en:",
-        "heroTagline": "Verificación de campo para una visión 360° de su futuro colaborador.",
-        "contactPhone": "0981296179",
-        "heroUnderlined": "Domiciliarias",
-        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593981296179&text=%C2%A1Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20One%20True",
-        "showOtherSolutions": false
-      },
-      "created_at": "2026-06-06T16:11:44.772206+00:00"
     }
   ],
   "courses": [
@@ -1026,208 +1033,6 @@
       "template": "graficas"
     },
     {
-      "id": "curso-basico-en-poligrafia",
-      "title": "Certificación en Poligrafía (400H)",
-      "desc": "Forma parte de la próxima generación de expertos en evaluación de la credibilidad.",
-      "image": "/servicios/7.webp",
-      "href": "/curso-basico-en-poligrafia",
-      "published": true,
-      "pageContent": {
-        "heroDesc": "Inicie su carrera en una de las disciplinas forenses de mayor demanda global. Nuestro programa académico integral le brinda las herramientas teóricas, técnicas y prácticas para desempeñarse como un poligrafista de élite, respaldado por el reconocimiento de la American Polygraph Association (APA).",
-        "template": "basico",
-        "aboutDesc": "Un entrenamiento riguroso diseñado para alcanzar la excelencia profesional:",
-        "heroImage": "/servicios/7.webp",
-        "heroTitle": "Certificación en Poligrafía (400H)",
-        "aboutTitle": "¿Qué obtendrá en esta formación?",
-        "customCards": [
-          {
-            "icon": "Monitor",
-            "items": [],
-            "title": "Dominio Técnico",
-            "description": "Instrucción profunda en el uso de instrumentos de última generación y software especializado."
-          },
-          {
-            "icon": "Brain",
-            "items": [],
-            "title": "Metodología Científica",
-            "description": "Formación en técnicas de entrevista, fisiología, psicología, análisis de datos, y sistemas de puntuación validados."
-          },
-          {
-            "icon": "Fingerprint",
-            "items": [],
-            "title": "Práctica Forense",
-            "description": "Desarrollo de habilidades reales mediante simulaciones y casos supervisados por instructores senior."
-          },
-          {
-            "icon": "Globe",
-            "items": [],
-            "title": "Aval Internacional",
-            "description": "Certificación reconocida que le permite ejercer bajo los estándares de la APA a nivel mundial."
-          }
-        ],
-        "heroTagline": "Acreditada por la APA",
-        "contactPhone": "+593 99 371 2790",
-        "fichaTecnica": [
-          {
-            "title": "Experiencia Docente",
-            "description": "Aprenda de instructores activos con amplia trayectoria en el ámbito forense y de seguridad."
-          },
-          {
-            "title": "Networking de Élite",
-            "description": "Forme parte de una comunidad profesional de poligrafistas en toda la región."
-          },
-          {
-            "title": "Carrera de Futuro",
-            "description": "Acceda a oportunidades laborales en agencias gubernamentales, inteligencia y seguridad corporativa privada."
-          }
-        ],
-        "svgFocusAreas": [
-          {
-            "icon": "UserFocus",
-            "title": "Kit y Software Forense Incluido",
-            "description": "Todo lo que necesitas para ejercer con éxito. Olvídate de costos ocultos: desde el primer día accedes a las licencias de software especializado, manuales de vanguardia y guías periciales avaladas que exigen los estándares de la industria."
-          },
-          {
-            "icon": "Devices",
-            "title": "Comunidad y Respaldo Continuo",
-            "description": "Tu formación no termina al graduarte. Te integras a una red viva de soporte técnico y consultoría para resolver tus primeros casos reales. El respaldo experto de tus instructores te acompaña durante toda tu trayectoria"
-          },
-          {
-            "icon": "Medal",
-            "title": "Certificación de Éxito Asegurado",
-            "description": "Inversión con cero riesgo. Si cumples con el plan y superas las evaluaciones, garantizamos tu incorporación técnica definitiva y la preparación total exigida para postular como miembro activo a las asociaciones globales más influyentes."
-          },
-          {
-            "icon": "Shield",
-            "title": "Acceso y Filtro de Admisión",
-            "description": "No es para todos. Mantenemos el estándar de la comunidad mediante un riguroso proceso de selección de perfiles honorables. Si eres admitido, te aseguras de conectar y hacer networking con la verdadera élite profesional del sector."
-          }
-        ],
-        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593993712790&text=Hola,%20deseo%20más%20información."
-      },
-      "created_at": "2026-06-09T21:29:28.020251+00:00",
-      "template": "basico"
-    },
-    {
-      "id": "elicitacion-conversacional",
-      "title": "Elicitación Conversacional",
-      "desc": "Formación avanzada en técnicas de obtención de información sutil y estratégica mediante interacciones fluidas y persuasivas.",
-      "image": "/formaciones/elicitacion.webp",
-      "href": "/elicitacion-conversacional",
-      "published": true,
-      "pageContent": {
-        "heroDesc": "Esta formación especializada está diseñada para llevar tus habilidades al siguiente nivel, permitiéndote recopilar datos críticos sin levantar sospechas ni activar mecanismos defensivos en la administración de riesgos corporativos.",
-        "template": "graficas",
-        "aboutDesc": "Modalidad: Presencial o en línea.",
-        "heroImage": "/formaciones/elicitacion.webp",
-        "heroTitle": "Especialización en Elicitación Conversacional",
-        "aboutTitle": "Ejes Temáticos",
-        "focusAreas": [
-          {
-            "items": [
-              "Fundamentos y Arquitectura de la Elicitación: Diferencias entre interrogatorio, entrevista y obtención sutil de información en entornos de contrainteligencia.",
-              "Dinámicas de la Comunicación Persuasiva: El uso del rapport estratégico, empatía táctica y neutralización de barreras psicológicas conscientes.",
-              "Disparadores Cognitivos y Vulnerabilidades del Discurso: Explotación ética de tendencias humanas (necesidad de corregir, deseo de reconocimiento, validación social y sesgo de reciprocidad).",
-              "Ingeniería de Preguntas y Estímulos Conversacionales: Diseño de narrativas de apariencia natural para la activación micro-selectiva de memoria sin generar reactividad.",
-              "Estrategias Avanzadas de Extracción de información: Técnicas de asunción deliberada, declaraciones provocativas y contrastes de información para la confirmación de datos no públicos.",
-              "Detección de Inconsistencias en Flujos Pasivos: Identificación de indicadores de ocultamiento, desvío conductual y evasión en entornos no restrictivos.",
-              "Aplicación en la Gestión de Riesgos Corporativos: Protocolos de elicitación aplicados a auditorías de seguridad, debida diligencia (due diligence) e investigaciones internas."
-            ],
-            "title": "Ejes Temáticos"
-          }
-        ],
-        "customCards": [
-          {
-            "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Fundamentos y Arquitectura de la Elicitación:",
-            "description": "Diferencias entre interrogatorio, entrevista y obtención sutil de información en entornos de contrainteligencia.\n"
-          },
-          {
-            "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Dinámicas de la Comunicación Persuasiva:",
-            "description": "El uso del rapport estratégico, empatía táctica y neutralización de barreras psicológicas conscientes."
-          },
-          {
-            "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Disparadores Cognitivos y Vulnerabilidades del Discurso:",
-            "description": "Explotación ética de tendencias humanas (necesidad de corregir, deseo de reconocimiento, validación social y sesgo de reciprocidad).\n"
-          },
-          {
-            "icon": "/icons/Password-Desktop--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Ingeniería de Preguntas y Estímulos Conversacionales:",
-            "description": "Diseño de narrativas de apariencia natural para la activación micro-selectiva de memoria sin generar reactividad.\n"
-          },
-          {
-            "icon": "/icons/Task-Checklist--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Estrategias Avanzadas de Extracción de información:",
-            "description": "Técnicas de asunción deliberada, declaraciones provocativas y contrastes de información para la confirmación de datos no públicos.\n"
-          },
-          {
-            "icon": "/icons/Monitor-Find--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Detección de Inconsistencias en Flujos Pasivos:",
-            "description": "Identificación de indicadores de ocultamiento, desvío conductual y evasión en entornos no restrictivos.\n"
-          },
-          {
-            "icon": "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
-            "items": [],
-            "title": "Aplicación en la Gestión de Riesgos Corporativos:",
-            "description": "Protocolos de elicitación aplicados a auditorías de seguridad, debida diligencia (due diligence) e investigaciones internas.\n"
-          }
-        ],
-        "heroTagline": "¿Quieres dominar la obtención estratégica de información mediante interacciones fluidas, estrategias de persuasión argumentativa y técnicas científicamente comprobadas?",
-        "contactPhone": "099 371 2790",
-        "fichaTecnica": [
-          {
-            "title": "⏱️ 15 horas de duración",
-            "description": "Formación de alto nivel con enfoque analítico."
-          },
-          {
-            "title": "📚 35 lecciones",
-            "description": "Lecciones especializadas en la materia."
-          },
-          {
-            "title": "📄 Guiones de práctica y matrices de planificación conversacional descargables.",
-            "description": "Material práctico descargable."
-          },
-          {
-            "title": "📊 +80 Diapositivas académicas descargables.",
-            "description": "Diapositivas académicas descargables."
-          },
-          {
-            "title": "✏️ Ejercicios y Quizzes interactivos.",
-            "description": "Evaluaciones continuas interactiva."
-          },
-          {
-            "title": "📺 Acceso por 3 meses (pregrabado)",
-            "description": "Material pregrabado disponible."
-          },
-          {
-            "title": "✅ 30 días de garantía.",
-            "description": "Garantía de satisfacción total."
-          },
-          {
-            "title": "🔐 Acceso a la comunidad ONE TRUE.",
-            "description": "Acceso exclusivo a la red académica."
-          },
-          {
-            "title": "🎓 Diploma de finalización.",
-            "description": "Diploma oficial al concluir."
-          }
-        ],
-        "contactWhatsapp": "https://api.whatsapp.com/send?phone=0993712790",
-        "isComplementary": true,
-        "contactWhatsappText": "+593 98 129 6179"
-      },
-      "created_at": "2026-06-10T00:06:44.999126+00:00",
-      "template": "graficas"
-    },
-    {
       "id": "modelos-de-entrevista-investigativa",
       "title": "Modelos de Entrevista Investigativa",
       "desc": "Formación en técnicas de obtención de información de alta calidad, basadas en principios de respeto y efectividad forense.",
@@ -1467,6 +1272,209 @@
       },
       "created_at": "2026-06-06T16:11:46.990366+00:00",
       "template": "control-calidad"
+    },
+    {
+      "id": "curso-basico-en-poligrafia",
+      "title": "Certificación en Poligrafía (400H)",
+      "desc": "Forma parte de la próxima generación de expertos en evaluación de la credibilidad.",
+      "image": "/servicios/7.webp",
+      "href": "/curso-basico-en-poligrafia",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "Inicie su carrera en una de las disciplinas forenses de mayor demanda global. Nuestro programa académico integral le brinda las herramientas teóricas, técnicas y prácticas para desempeñarse como un poligrafista de élite, respaldado por el reconocimiento de la American Polygraph Association (APA).",
+        "template": "basico",
+        "aboutDesc": "Un entrenamiento riguroso diseñado para alcanzar la excelencia profesional:",
+        "heroImage": "/servicios/7.webp",
+        "heroTitle": "Certificación en Poligrafía (400H)",
+        "aboutTitle": "¿Qué obtendrá en esta formación?",
+        "customCards": [
+          {
+            "icon": "Monitor",
+            "items": [],
+            "title": "Dominio Técnico",
+            "description": "Instrucción profunda en el uso de instrumentos de última generación y software especializado."
+          },
+          {
+            "icon": "Brain",
+            "items": [],
+            "title": "Metodología Científica",
+            "description": "Formación en técnicas de entrevista, fisiología, psicología, análisis de datos, y sistemas de puntuación validados."
+          },
+          {
+            "icon": "Fingerprint",
+            "items": [],
+            "title": "Práctica Forense",
+            "description": "Desarrollo de habilidades reales mediante simulaciones y casos supervisados por instructores senior."
+          },
+          {
+            "icon": "Globe",
+            "items": [],
+            "title": "Aval Internacional",
+            "description": "Certificación reconocida que le permite ejercer bajo los estándares de la APA a nivel mundial."
+          }
+        ],
+        "heroTagline": "Acreditada por la APA",
+        "contactPhone": "+593 99 371 2790",
+        "fichaTecnica": [
+          {
+            "title": "Experiencia Docente",
+            "description": "Aprenda de instructores activos con amplia trayectoria en el ámbito forense y de seguridad."
+          },
+          {
+            "title": "Networking de Élite",
+            "description": "Forme parte de una comunidad profesional de poligrafistas en toda la región."
+          },
+          {
+            "title": "Carrera de Futuro",
+            "description": "Acceda a oportunidades laborales en agencias gubernamentales, inteligencia y seguridad corporativa privada."
+          }
+        ],
+        "svgFocusAreas": [
+          {
+            "icon": "UserFocus",
+            "title": "Kit y Software Forense Incluido",
+            "description": "Todo lo que necesitas para ejercer con éxito. Olvídate de costos ocultos: desde el primer día accedes a las licencias de software especializado, manuales de vanguardia y guías periciales avaladas que exigen los estándares de la industria."
+          },
+          {
+            "icon": "Devices",
+            "title": "Comunidad y Respaldo Continuo",
+            "description": "Tu formación no termina al graduarte. Te integras a una red viva de soporte técnico y consultoría para resolver tus primeros casos reales. El respaldo experto de tus instructores te acompaña durante toda tu trayectoria"
+          },
+          {
+            "icon": "Medal",
+            "title": "Certificación de Éxito Asegurado",
+            "description": "Inversión con cero riesgo. Si cumples con el plan y superas las evaluaciones, garantizamos tu incorporación técnica definitiva y la preparación total exigida para postular como miembro activo a las asociaciones globales más influyentes."
+          },
+          {
+            "icon": "Shield",
+            "title": "Acceso y Filtro de Admisión",
+            "description": "No es para todos. Mantenemos el estándar de la comunidad mediante un riguroso proceso de selección de perfiles honorables. Si eres admitido, te aseguras de conectar y hacer networking con la verdadera élite profesional del sector."
+          }
+        ],
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=593993712790&text=Hola,%20deseo%20más%20información.",
+        "contactWhatsappText": "+593 099 371 2790"
+      },
+      "created_at": "2026-06-09T21:29:28.020251+00:00",
+      "template": "basico"
+    },
+    {
+      "id": "elicitacion-conversacional",
+      "title": "Elicitación Conversacional",
+      "desc": "Formación avanzada en técnicas de obtención de información sutil y estratégica mediante interacciones fluidas y persuasivas.",
+      "image": "/formaciones/elicitacion.webp",
+      "href": "/elicitacion-conversacional",
+      "published": true,
+      "pageContent": {
+        "heroDesc": "Esta formación especializada está diseñada para llevar tus habilidades al siguiente nivel, permitiéndote recopilar datos críticos sin levantar sospechas ni activar mecanismos defensivos en la administración de riesgos corporativos.",
+        "template": "graficas",
+        "aboutDesc": "Modalidad: Presencial o en línea.",
+        "heroImage": "/formaciones/elicitacion.webp",
+        "heroTitle": "Especialización en Elicitación Conversacional",
+        "aboutTitle": "Ejes Temáticos",
+        "focusAreas": [
+          {
+            "items": [
+              "Fundamentos y Arquitectura de la Elicitación: Diferencias entre interrogatorio, entrevista y obtención sutil de información en entornos de contrainteligencia.",
+              "Dinámicas de la Comunicación Persuasiva: El uso del rapport estratégico, empatía táctica y neutralización de barreras psicológicas conscientes.",
+              "Disparadores Cognitivos y Vulnerabilidades del Discurso: Explotación ética de tendencias humanas (necesidad de corregir, deseo de reconocimiento, validación social y sesgo de reciprocidad).",
+              "Ingeniería de Preguntas y Estímulos Conversacionales: Diseño de narrativas de apariencia natural para la activación micro-selectiva de memoria sin generar reactividad.",
+              "Estrategias Avanzadas de Extracción de información: Técnicas de asunción deliberada, declaraciones provocativas y contrastes de información para la confirmación de datos no públicos.",
+              "Detección de Inconsistencias en Flujos Pasivos: Identificación de indicadores de ocultamiento, desvío conductual y evasión en entornos no restrictivos.",
+              "Aplicación en la Gestión de Riesgos Corporativos: Protocolos de elicitación aplicados a auditorías de seguridad, debida diligencia (due diligence) e investigaciones internas."
+            ],
+            "title": "Ejes Temáticos"
+          }
+        ],
+        "customCards": [
+          {
+            "icon": "/icons/Browser-Page-Account--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Fundamentos y Arquitectura de la Elicitación:",
+            "description": "Diferencias entre interrogatorio, entrevista y obtención sutil de información en entornos de contrainteligencia.\n"
+          },
+          {
+            "icon": "/icons/Browser-Hand--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Dinámicas de la Comunicación Persuasiva:",
+            "description": "El uso del rapport estratégico, empatía táctica y neutralización de barreras psicológicas conscientes."
+          },
+          {
+            "icon": "/icons/Touchpad-Finger--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Disparadores Cognitivos y Vulnerabilidades del Discurso:",
+            "description": "Explotación ética de tendencias humanas (necesidad de corregir, deseo de reconocimiento, validación social y sesgo de reciprocidad).\n"
+          },
+          {
+            "icon": "/icons/Password-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Ingeniería de Preguntas y Estímulos Conversacionales:",
+            "description": "Diseño de narrativas de apariencia natural para la activación micro-selectiva de memoria sin generar reactividad.\n"
+          },
+          {
+            "icon": "/icons/Task-Checklist--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Estrategias Avanzadas de Extracción de información:",
+            "description": "Técnicas de asunción deliberada, declaraciones provocativas y contrastes de información para la confirmación de datos no públicos.\n"
+          },
+          {
+            "icon": "/icons/Monitor-Find--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Detección de Inconsistencias en Flujos Pasivos:",
+            "description": "Identificación de indicadores de ocultamiento, desvío conductual y evasión en entornos no restrictivos.\n"
+          },
+          {
+            "icon": "/icons/Touch-Id-Desktop--Streamline-Ultimate.webp",
+            "items": [],
+            "title": "Aplicación en la Gestión de Riesgos Corporativos:",
+            "description": "Protocolos de elicitación aplicados a auditorías de seguridad, debida diligencia (due diligence) e investigaciones internas.\n"
+          }
+        ],
+        "heroTagline": "¿Quieres dominar la obtención estratégica de información mediante interacciones fluidas, estrategias de persuasión argumentativa y técnicas científicamente comprobadas?",
+        "contactPhone": "099 371 2790",
+        "fichaTecnica": [
+          {
+            "title": "⏱️ 15 horas de duración",
+            "description": "Formación de alto nivel con enfoque analítico."
+          },
+          {
+            "title": "📚 35 lecciones",
+            "description": "Lecciones especializadas en la materia."
+          },
+          {
+            "title": "📄 Guiones de práctica y matrices de planificación conversacional descargables.",
+            "description": "Material práctico descargable."
+          },
+          {
+            "title": "📊 +80 Diapositivas académicas descargables.",
+            "description": "Diapositivas académicas descargables."
+          },
+          {
+            "title": "✏️ Ejercicios y Quizzes interactivos.",
+            "description": "Evaluaciones continuas interactiva."
+          },
+          {
+            "title": "📺 Acceso por 3 meses (pregrabado)",
+            "description": "Material pregrabado disponible."
+          },
+          {
+            "title": "✅ 30 días de garantía.",
+            "description": "Garantía de satisfacción total."
+          },
+          {
+            "title": "🔐 Acceso a la comunidad ONE TRUE.",
+            "description": "Acceso exclusivo a la red académica."
+          },
+          {
+            "title": "🎓 Diploma de finalización.",
+            "description": "Diploma oficial al concluir."
+          }
+        ],
+        "contactWhatsapp": "https://api.whatsapp.com/send?phone=0993712790",
+        "isComplementary": true,
+        "contactWhatsappText": "+593 98 129 6179"
+      },
+      "created_at": "2026-06-10T00:06:44.999126+00:00",
+      "template": "graficas"
     },
     {
       "id": "evaluacion-forense-de-la-credibilidad",
@@ -1712,25 +1720,6 @@
   ],
   "calendarIntakes": [
     {
-      "id": "sistema-calificacion-ess-m-conv",
-      "title": "Actualización en Poligrafía (ESS-M)",
-      "courseId": "sistema-calificacion-ess-m",
-      "category": "avanzado",
-      "badgeText": "100% ONLINE",
-      "badgeColor": "green",
-      "dateDisplay": "Sep 2026",
-      "durationDisplay": "15 horas",
-      "year": 2026,
-      "modalityType": "online",
-      "durationType": "corto",
-      "isFeatured": false,
-      "brochureUrl": "",
-      "href": "/sistema-calificacion-ess-m",
-      "published": true,
-      "sortOrder": 20,
-      "created_at": "2026-06-10T05:04:48.041507+00:00"
-    },
-    {
       "id": "entrevista-pretest-conv",
       "title": "Entrevista Pretest",
       "courseId": "entrevista-pretest",
@@ -1747,7 +1736,10 @@
       "href": "/entrevista-pretest",
       "published": true,
       "sortOrder": 40,
-      "created_at": "2026-06-10T05:04:48.491596+00:00"
+      "created_at": "2026-06-10T05:04:48.491596+00:00",
+      "brochureFileName": null,
+      "buttonType": "default",
+      "brochureSize": null
     },
     {
       "id": "calificacion-graficas-analisis-datos-conv",
@@ -1766,7 +1758,10 @@
       "href": "/calificacion-graficas-analisis-datos",
       "published": true,
       "sortOrder": 50,
-      "created_at": "2026-06-10T05:04:48.714995+00:00"
+      "created_at": "2026-06-10T05:04:48.714995+00:00",
+      "brochureFileName": null,
+      "buttonType": "default",
+      "brochureSize": null
     },
     {
       "id": "tecnicas-poligraficas-conv",
@@ -1785,7 +1780,10 @@
       "href": "/tecnicas-poligraficas",
       "published": true,
       "sortOrder": 60,
-      "created_at": "2026-06-10T05:04:48.938877+00:00"
+      "created_at": "2026-06-10T05:04:48.938877+00:00",
+      "brochureFileName": null,
+      "buttonType": "default",
+      "brochureSize": null
     },
     {
       "id": "elicitacion-conversacional-conv",
@@ -1804,26 +1802,32 @@
       "href": "/formaciones-complementarias",
       "published": true,
       "sortOrder": 70,
-      "created_at": "2026-06-10T05:04:49.163093+00:00"
+      "created_at": "2026-06-10T05:04:49.163093+00:00",
+      "brochureFileName": null,
+      "buttonType": "default",
+      "brochureSize": null
     },
     {
-      "id": "curso-basico-en-poligrafia-conv",
-      "title": "Curso Básico de Poligrafía",
-      "courseId": "curso-basico-en-poligrafia",
-      "category": "certificacion",
-      "badgeText": "CERTIFICACIÓN COMPLETA - 100% PRESENCIAL",
-      "badgeColor": "blue",
-      "dateDisplay": "Fechas: Feb - Abr 2027",
-      "durationDisplay": "Duración: 400 horas",
-      "year": 2027,
-      "modalityType": "presencial",
-      "durationType": "certificacion",
-      "isFeatured": true,
-      "brochureUrl": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/brochures/1781068053105-ohy1fk-ebook-junio-2026--1-.pdf",
-      "href": "/curso-basico-en-poligrafia",
+      "id": "sistema-calificacion-ess-m-conv",
+      "title": "Actualización en Poligrafía (ESS-M) MODIFIED",
+      "courseId": "sistema-calificacion-ess-m",
+      "category": "avanzado",
+      "badgeText": "100% ONLINE",
+      "badgeColor": "green",
+      "dateDisplay": "Sep 2026 MODIFIED",
+      "durationDisplay": "15 horas",
+      "year": 2026,
+      "modalityType": "online",
+      "durationType": "corto",
+      "isFeatured": false,
+      "brochureUrl": "",
+      "href": "/sistema-calificacion-ess-m",
       "published": true,
-      "sortOrder": 10,
-      "created_at": "2026-06-10T05:04:47.753542+00:00"
+      "sortOrder": 30,
+      "created_at": "2026-06-10T05:04:48.041507+00:00",
+      "brochureFileName": null,
+      "buttonType": "default",
+      "brochureSize": null
     },
     {
       "id": "control-de-calidad-en-poligrafia-conv",
@@ -1832,29 +1836,59 @@
       "category": "avanzado",
       "badgeText": "100% ONLINE",
       "badgeColor": "green",
-      "dateDisplay": "Oct - Nov 2026",
+      "dateDisplay": "Jun - Ago 2027",
       "durationDisplay": "40 horas",
       "year": 2026,
       "modalityType": "online",
       "durationType": "corto",
       "isFeatured": true,
-      "brochureUrl": "",
+      "brochureUrl": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/brochures/1781282247148-zmzesy-control-de-calidad--octubre-noviembre-2026.pdf",
       "href": "/control-de-calidad-en-poligrafia",
       "published": true,
-      "sortOrder": 30,
-      "created_at": "2026-06-10T05:04:48.268823+00:00"
+      "sortOrder": 20,
+      "created_at": "2026-06-10T05:04:48.268823+00:00",
+      "brochureFileName": "Control-de-calidad-poligrafia",
+      "buttonType": "brochure",
+      "brochureSize": "1.57 MB"
+    },
+    {
+      "id": "curso-basico-en-poligrafia-conv",
+      "title": "Curso Básico de Poligrafía",
+      "courseId": "curso-basico-en-poligrafia",
+      "category": "certificacion",
+      "badgeText": "CERTIFICACIÓN COMPLETA - 100% PRESENCIAL",
+      "badgeColor": "blue",
+      "dateDisplay": "Fechas: Jun - Ago 2027",
+      "durationDisplay": "Duración: 400 horas",
+      "year": 2027,
+      "modalityType": "presencial",
+      "durationType": "certificacion",
+      "isFeatured": true,
+      "brochureUrl": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/brochures/1781282313701-5d6k80-brochure-formaci-n-en-poligraf-a-junio-agosto-2027.pdf",
+      "href": "/curso-basico-en-poligrafia",
+      "published": true,
+      "sortOrder": 10,
+      "created_at": "2026-06-10T05:04:47.753542+00:00",
+      "brochureFileName": "Curso-basico-poligrafia",
+      "buttonType": "brochure",
+      "brochureSize": "1.25 MB"
     }
   ],
   "settings": [
     {
-      "key": "ebook_filename",
-      "value": "ebook-2026-prueba",
-      "created_at": "2026-06-10T06:00:53.108211+00:00"
+      "key": "ebook_pdf_url",
+      "value": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/ebooks/1781294596801-mjrj76-ebook-junio-2026.pdf",
+      "created_at": "2026-06-10T05:38:10.990942+00:00"
     },
     {
-      "key": "ebook_pdf_url",
-      "value": "https://scjptltrknigahwflgkp.supabase.co/storage/v1/object/public/imagenes/ebooks/1781071235704-kc8p9y-ebook-junio-2026--1-.pdf",
-      "created_at": "2026-06-10T05:38:10.990942+00:00"
+      "key": "ebook_size",
+      "value": "1.8 MB",
+      "created_at": "2026-06-12T20:03:37.307762+00:00"
+    },
+    {
+      "key": "ebook_filename",
+      "value": "Ebook-2026",
+      "created_at": "2026-06-10T06:00:53.108211+00:00"
     }
   ]
 }

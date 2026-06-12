@@ -953,7 +953,7 @@ export default function ControlDeCalidadEnPoligrafiaPage({ course }: { course: C
       </section>
 
       <Footer />
-      <FloatingWhatsApp />
+      <FloatingWhatsApp phone={contactPhone} />
     </main>
   );
 }

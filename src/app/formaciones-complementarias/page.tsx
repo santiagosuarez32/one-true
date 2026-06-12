@@ -48,12 +48,18 @@ const focusAreas = [
 
 export default async function FormacionesComplementariasPage() {
   let displayCourses: any[] = [];
+  let allCourses: any[] = [];
   try {
-    const courses = await getCourses();
-    displayCourses = courses.filter((c: any) => c.published && c.pageContent?.isComplementary === true);
+    allCourses = await getCourses();
+    displayCourses = allCourses.filter((c: any) => c.published && c.pageContent?.isComplementary === true);
   } catch (err) {
     console.error("Error loading complementarias courses:", err);
   }
+
+  const courseWithContact = allCourses.find((c: any) => c.pageContent?.contactPhone || c.pageContent?.contactWhatsappText);
+  const contactPhone = courseWithContact?.pageContent?.contactPhone || "099 371 2790";
+  const contactWhatsapp = courseWithContact?.pageContent?.contactWhatsapp || "https://api.whatsapp.com/send?phone=593993712790&text=Hola!%20Deseo%20conocer%20mas%20informacion%20sobre%20las%20Formaciones%20Complementarias.";
+  const contactWhatsappText = courseWithContact?.pageContent?.contactWhatsappText || "+593 99 371 2790";
 
   return (
     <main className="min-h-screen bg-white text-[#525252] selection:bg-[#FFC107] selection:text-[#411A56]">
@@ -359,13 +365,13 @@ export default async function FormacionesComplementariasPage() {
 
       {/* ── FORMULARIO DE CONTACTO ── */}
       <ContactoFormAvanzados
-        contactPhone="099 371 2790"
-        contactWhatsapp="https://api.whatsapp.com/send?phone=593993712790&text=Hola!%20Deseo%20conocer%20mas%20informacion%20sobre%20las%20Formaciones%20Complementarias."
-        contactWhatsappText="+593 99 371 2790"
+        contactPhone={contactPhone}
+        contactWhatsapp={contactWhatsapp}
+        contactWhatsappText={contactWhatsappText}
       />
 
       <Footer />
-      <FloatingWhatsApp />
+      <FloatingWhatsApp phone={contactPhone} />
     </main>
   );
 }

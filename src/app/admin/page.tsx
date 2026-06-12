@@ -758,7 +758,7 @@ export default function AdminDashboard() {
       downloadAnchor.setAttribute("download", `manual-backup-${timestamp}.json`);
       document.body.appendChild(downloadAnchor);
       downloadAnchor.click();
-      downloadAnchor.removeChild(downloadAnchor);
+      document.body.removeChild(downloadAnchor);
       showToast("ok", "Copia de seguridad descargada a tu PC.");
     } catch (err) {
       showToast("err", "Error al generar archivo de descarga.");
@@ -1433,7 +1433,7 @@ export default function AdminDashboard() {
                     </button>
                   </div>
 
-                  <div className="rounded-xl border border-neutral-200 overflow-hidden bg-white">
+                  <div className="rounded-xl border border-neutral-200 overflow-hidden bg-white max-h-[400px] overflow-y-auto">
                     {loadingBackups ? (
                       <div className="py-12 flex flex-col items-center justify-center gap-2">
                         <div className="h-6 w-6 animate-spin rounded-full border-2 border-[#700FA3] border-l-transparent" />
@@ -1444,7 +1444,7 @@ export default function AdminDashboard() {
                     ) : (
                       <div className="overflow-x-auto">
                         <table className="w-full text-left text-xs border-collapse">
-                          <thead>
+                          <thead className="sticky top-0 bg-neutral-50 z-10 shadow-[0_1px_0_rgba(0,0,0,0.05)]">
                             <tr className="bg-neutral-50 text-neutral-500 font-bold border-b border-neutral-200">
                               <th className="px-4 py-3 font-bold">Tipo</th>
                               <th className="px-4 py-3 font-bold">Nombre del Archivo</th>
@@ -2216,6 +2216,23 @@ function SideEditorForm({
                     />
                   </label>
                 </div>
+
+                {/* Cards Layout Style Selector */}
+                <div className="flex items-center justify-between rounded-xl border border-neutral-300 bg-neutral-50 px-4 py-3 gap-4">
+                  <div>
+                    <span className="block text-xs font-bold uppercase tracking-wider text-neutral-600">Diseño de las Tarjetas</span>
+                    <span className="text-[10px] text-neutral-500 font-semibold">Elegí si mostrar tarjetas con borde amarillo simple o con iconos y sub-ítems</span>
+                  </div>
+                  <select
+                    value={form.pageContent?.aboutCardsLayout || "yellow"}
+                    onChange={(e) => updateNestedContentField("aboutCardsLayout", e.target.value)}
+                    className="bg-white border border-neutral-350 rounded-lg px-2.5 py-2 text-xs text-neutral-800 outline-none w-56 font-bold"
+                  >
+                    <option value="yellow">Borde Amarillo (Simple)</option>
+                    <option value="icon">Con Iconos y Sub-ítems (Ejes)</option>
+                  </select>
+                </div>
+
                 <div className="space-y-3">
                   <div className="flex items-center justify-between border-b border-neutral-200 pb-2">
                     <div>
@@ -2315,50 +2332,54 @@ function SideEditorForm({
                       {form.pageContent.aboutCards.map((card: any, idx: number) => (
                         <div key={idx} className="relative rounded-xl border border-neutral-200 bg-neutral-50 p-4 flex gap-3 flex-col">
                           <div className="flex gap-3 items-center flex-wrap">
-                            <div className="h-10 w-10 shrink-0 rounded border border-neutral-200 bg-white flex items-center justify-center overflow-hidden shadow-2xs">
-                              {card.icon && (card.icon.startsWith("/") || card.icon.startsWith("http")) ? (
-                                <img src={card.icon} alt="Icono" className="h-full w-full object-contain p-0.5" />
-                              ) : form.id === "prueba-de-honestidad-etica-y-valores" ? (
-                                <img src={`/icons/eje${(idx % 3) + 1}.svg`} alt="Por defecto" className="h-full w-full object-contain p-0.5 opacity-60" />
-                              ) : (
-                                <span className="text-[10px] text-neutral-400 font-bold">Img</span>
-                              )}
-                            </div>
-                            <input
-                              value={card.icon || ""}
-                              onChange={(e) => handleUpdateListItem("aboutCards", idx, "icon", e.target.value)}
-                              placeholder="Icono (Emoji o URL)"
-                              className="bg-white border border-neutral-300 rounded px-2.5 py-1 text-xs text-neutral-800 placeholder-neutral-400 w-48 outline-none font-bold"
-                            />
-                            <input
-                              type="file"
-                              id={`file-about-card-${idx}`}
-                              accept="image/*"
-                              className="hidden"
-                              onChange={async (e) => {
-                                const files = e.target.files;
-                                if (!files || files.length === 0) return;
-                                try {
-                                  const url = await compressAndUploadImage(files[0], "service-icons");
-                                  handleUpdateListItem("aboutCards", idx, "icon", url);
-                                } catch (err) {
-                                  console.error("Error upload:", err);
-                                  alert("Error al subir la imagen");
-                                }
-                              }}
-                            />
-                            <button
-                              type="button"
-                              onClick={() => document.getElementById(`file-about-card-${idx}`)?.click()}
-                              className="rounded border border-neutral-300 bg-white px-2.5 py-1 text-2xs font-bold text-neutral-700 hover:bg-neutral-50 transition shrink-0"
-                            >
-                              Subir foto
-                            </button>
+                            {form.pageContent?.aboutCardsLayout === "icon" && (
+                              <>
+                                <div className="h-10 w-10 shrink-0 rounded border border-neutral-200 bg-white flex items-center justify-center overflow-hidden shadow-2xs">
+                                  {card.icon && (card.icon.startsWith("/") || card.icon.startsWith("http")) ? (
+                                    <img src={card.icon} alt="Icono" className="h-full w-full object-contain p-0.5" />
+                                  ) : form.id === "prueba-de-honestidad-etica-y-valores" ? (
+                                    <img src={`/icons/eje${(idx % 3) + 1}.svg`} alt="Por defecto" className="h-full w-full object-contain p-0.5 opacity-60" />
+                                  ) : (
+                                    <span className="text-[10px] text-neutral-400 font-bold">Img</span>
+                                  )}
+                                </div>
+                                <input
+                                  value={card.icon || ""}
+                                  onChange={(e) => handleUpdateListItem("aboutCards", idx, "icon", e.target.value)}
+                                  placeholder="Icono (Emoji o URL)"
+                                  className="bg-white border border-neutral-300 rounded px-2.5 py-1 text-xs text-neutral-800 placeholder-neutral-400 w-48 outline-none font-bold"
+                                />
+                                <input
+                                  type="file"
+                                  id={`file-about-card-${idx}`}
+                                  accept="image/*"
+                                  className="hidden"
+                                  onChange={async (e) => {
+                                    const files = e.target.files;
+                                    if (!files || files.length === 0) return;
+                                    try {
+                                      const url = await compressAndUploadImage(files[0], "service-icons");
+                                      handleUpdateListItem("aboutCards", idx, "icon", url);
+                                    } catch (err) {
+                                      console.error("Error upload:", err);
+                                      alert("Error al subir la imagen");
+                                    }
+                                  }}
+                                />
+                                <button
+                                  type="button"
+                                  onClick={() => document.getElementById(`file-about-card-${idx}`)?.click()}
+                                  className="rounded border border-neutral-300 bg-white px-2.5 py-1 text-2xs font-bold text-neutral-700 hover:bg-neutral-50 transition shrink-0"
+                                >
+                                  Subir foto
+                                </button>
+                              </>
+                            )}
                             
                             <input
                               value={card.title || ""}
                               onChange={(e) => handleUpdateListItem("aboutCards", idx, "title", e.target.value)}
-                              placeholder="Título del Eje"
+                              placeholder={form.pageContent?.aboutCardsLayout === "icon" ? "Título del Eje" : "Título de la Tarjeta"}
                               className="bg-white border border-neutral-300 rounded px-2.5 py-1 text-xs text-neutral-800 placeholder-neutral-400 flex-1 min-w-[150px] outline-none font-bold"
                             />
                             <button
@@ -2378,13 +2399,15 @@ function SideEditorForm({
                             className="bg-white border border-neutral-300 rounded px-2.5 py-1.5 text-xs text-neutral-800 placeholder-neutral-400 outline-none resize-y"
                           />
 
-                          <textarea
-                            rows={4}
-                            value={card.items ? card.items.join('\n') : ""}
-                            onChange={(e) => handleUpdateListItem("aboutCards", idx, "items", e.target.value.split('\n'))}
-                            placeholder="Sub-ítems (uno por línea, ej: Honestidad: Mide la inclinación...)"
-                            className="bg-white border border-neutral-300 rounded px-2.5 py-1.5 text-xs text-neutral-800 placeholder-neutral-400 outline-none resize-y"
-                          />
+                          {form.pageContent?.aboutCardsLayout === "icon" && (
+                            <textarea
+                              rows={4}
+                              value={card.items ? card.items.join('\n') : ""}
+                              onChange={(e) => handleUpdateListItem("aboutCards", idx, "items", e.target.value.split('\n'))}
+                              placeholder="Sub-ítems (uno por línea, ej: Honestidad: Mide la inclinación...)"
+                              className="bg-white border border-neutral-300 rounded px-2.5 py-1.5 text-xs text-neutral-800 placeholder-neutral-400 outline-none resize-y"
+                            />
+                          )}
                         </div>
                       ))}
                     </div>
@@ -2639,7 +2662,7 @@ function SideEditorForm({
                 )}
 
                 {/* Contacts */}
-                <div className="grid gap-4 sm:grid-cols-2">
+                <div className="grid gap-4 sm:grid-cols-3">
                   <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
                     Teléfono de Contacto
                     <input
@@ -2658,6 +2681,18 @@ function SideEditorForm({
                       value={form.pageContent?.contactWhatsapp || ""}
                       onChange={(e) => updateNestedContentField("contactWhatsapp", e.target.value)}
                       placeholder="Enlace API de WhatsApp..."
+                      className="mt-1.5 w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2 font-mono"
+                      onFocus={(e) => (e.currentTarget.style.boxShadow = `0 0 0 2px #700FA322`)}
+                      onBlur={(e) => (e.currentTarget.style.boxShadow = "none")}
+                    />
+                  </label>
+
+                  <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                    Texto de WhatsApp
+                    <input
+                      value={form.pageContent?.contactWhatsappText || ""}
+                      onChange={(e) => updateNestedContentField("contactWhatsappText", e.target.value)}
+                      placeholder="ej: +593 98 129 6179"
                       className="mt-1.5 w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2 font-mono"
                       onFocus={(e) => (e.currentTarget.style.boxShadow = `0 0 0 2px #700FA322`)}
                       onBlur={(e) => (e.currentTarget.style.boxShadow = "none")}
@@ -3056,7 +3091,7 @@ function SideEditorForm({
                 </div>
 
                 {/* Contact phone/whatsapp */}
-                <div className="grid gap-4 sm:grid-cols-2">
+                <div className="grid gap-4 sm:grid-cols-3">
                   <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
                     Teléfono Contacto Curso
                     <input
@@ -3076,6 +3111,18 @@ function SideEditorForm({
                       onChange={(e) => updateNestedContentField("contactWhatsapp", e.target.value)}
                       placeholder="Enlace completo..."
                       className="mt-1.5 w-full bg-white border border-neutral-355 rounded-lg px-3 py-2 text-xs text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2 font-mono"
+                      onFocus={(e) => (e.currentTarget.style.boxShadow = `0 0 0 2px #700FA322`)}
+                      onBlur={(e) => (e.currentTarget.style.boxShadow = "none")}
+                    />
+                  </label>
+
+                  <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                    Texto de WhatsApp
+                    <input
+                      value={form.pageContent?.contactWhatsappText || ""}
+                      onChange={(e) => updateNestedContentField("contactWhatsappText", e.target.value)}
+                      placeholder="ej: +593 98 129 6179"
+                      className="mt-1.5 w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2 font-mono"
                       onFocus={(e) => (e.currentTarget.style.boxShadow = `0 0 0 2px #700FA322`)}
                       onBlur={(e) => (e.currentTarget.style.boxShadow = "none")}
                     />
