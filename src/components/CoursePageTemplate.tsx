@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { Course } from "@/lib/cms";
+import { COUNTRIES, COUNTRY_PREFIXES } from "@/lib/countries";
 
 export default function CoursePageTemplate({ course }: { course: Course }) {
   const { loading, error, success, submitForm, setSuccess } = useContactSubmit(`Formulario de Curso: ${course.title}`);
@@ -390,10 +391,7 @@ export default function CoursePageTemplate({ course }: { course: Course }) {
                       e.preventDefault();
                       const form = e.currentTarget;
                       const formData = new FormData(form);
-                      const prefixes: Record<string, string> = {
-                        ec: "+593", co: "+57", pe: "+51", cl: "+56", ar: "+54", mx: "+52", es: "+34", us: "+1"
-                      };
-                      const phonePrefix = prefixes[country] || "+593";
+                      const phonePrefix = COUNTRY_PREFIXES[country] || "+593";
                       const rawPhone = formData.get("telefono") as string || "";
                       const fullPhone = `${phonePrefix} ${rawPhone}`;
 
@@ -434,15 +432,12 @@ export default function CoursePageTemplate({ course }: { course: Course }) {
                       <div className="relative flex items-center border-0 rounded bg-neutral-50 focus-within:ring-2 focus-within:ring-[#700FA3]/20 focus-within:bg-white focus-within:shadow-md transition-all overflow-hidden">
                         <div className="flex items-center gap-2 pl-3 border-r border-neutral-200/60 bg-transparent shrink-0">
                           <img src={`https://flagcdn.com/w20/${country}.png`} alt={country} className="w-5 h-auto object-contain select-none" />
-                          <select value={country} onChange={(e) => setCountry(e.target.value)} className="bg-transparent border-0 py-2.5 pl-1 pr-6 text-sm font-semibold text-neutral-700 outline-none focus:ring-0 cursor-pointer appearance-none" style={{ fontFamily: "var(--font-montserrat), sans-serif", backgroundImage: `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E")`, backgroundPosition: 'right 0.1rem center', backgroundSize: '1.1em 1.1em', backgroundRepeat: 'no-repeat' }} disabled={loading}>
-                            <option value="ec">+593</option>
-                            <option value="co">+57</option>
-                            <option value="pe">+51</option>
-                            <option value="cl">+56</option>
-                            <option value="ar">+54</option>
-                            <option value="mx">+52</option>
-                            <option value="es">+34</option>
-                            <option value="us">+1</option>
+                          <select value={country} onChange={(e) => setCountry(e.target.value)} className="bg-transparent border-0 py-2.5 pl-1 pr-6 text-sm font-semibold text-neutral-700 outline-none focus:ring-0 cursor-pointer appearance-none max-w-[120px]" style={{ fontFamily: "var(--font-montserrat), sans-serif", backgroundImage: `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E")`, backgroundPosition: 'right 0.1rem center', backgroundSize: '1.1em 1.1em', backgroundRepeat: 'no-repeat' }} disabled={loading}>
+                            {COUNTRIES.map((c) => (
+                              <option key={c.code} value={c.code}>
+                                {c.prefix} ({c.name})
+                              </option>
+                            ))}
                           </select>
                         </div>
                         <input name="telefono" type="tel" placeholder="098 129 6179" className="flex-1 px-4 py-2.5 bg-transparent border-none text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-0 text-sm font-medium" style={{ fontFamily: "var(--font-montserrat), sans-serif" }} required disabled={loading} />

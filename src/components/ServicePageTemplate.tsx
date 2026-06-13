@@ -8,6 +8,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { FaLinkedin, FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { Service } from "@/lib/cms";
+import { COUNTRIES, COUNTRY_PREFIXES } from "@/lib/countries";
 
 interface CounterProps {
   end: number;
@@ -623,10 +624,7 @@ export default function ServicePageTemplate({ service, allServices }: { service:
                       e.preventDefault();
                       const form = e.currentTarget;
                       const formData = new FormData(form);
-                      const prefixes: Record<string, string> = {
-                        ec: "+593", co: "+57", pe: "+51", cl: "+56", ar: "+54", mx: "+52", es: "+34", us: "+1"
-                      };
-                      const phonePrefix = prefixes[country] || "+593";
+                      const phonePrefix = COUNTRY_PREFIXES[country] || "+593";
                       const rawPhone = formData.get("telefono") as string || "";
                       const fullPhone = `${phonePrefix} ${rawPhone}`;
 
@@ -652,7 +650,7 @@ export default function ServicePageTemplate({ service, allServices }: { service:
                         <input name="nombre" type="text" placeholder="Tu nombre" className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white text-sm font-medium" required disabled={loading} />
                       </div>
                       <div className="flex flex-col gap-1">
-                        <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Apellido *</label>
+                        <label className="text-xs font-semibold text-neutral-650" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Apellido *</label>
                         <input name="apellido" type="text" placeholder="Tu apellido" className="px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 focus:outline-none focus:ring-2 focus:ring-[#700FA3]/20 focus:bg-white text-sm font-medium" required disabled={loading} />
                       </div>
                     </div>
@@ -670,7 +668,7 @@ export default function ServicePageTemplate({ service, allServices }: { service:
                           <select
                             value={country}
                             onChange={(e) => setCountry(e.target.value)}
-                            className="bg-transparent border-0 py-2.5 pl-1 pr-6 text-sm font-semibold text-neutral-700 outline-none cursor-pointer appearance-none"
+                            className="bg-transparent border-0 py-2.5 pl-1 pr-6 text-sm font-semibold text-neutral-700 outline-none cursor-pointer appearance-none max-w-[120px]"
                             style={{
                               backgroundImage: `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E")`,
                               backgroundPosition: "right 0.1rem center",
@@ -679,11 +677,11 @@ export default function ServicePageTemplate({ service, allServices }: { service:
                             }}
                             disabled={loading}
                           >
-                            <option value="ec">+593</option>
-                            <option value="co">+57</option>
-                            <option value="pe">+51</option>
-                            <option value="cl">+56</option>
-                            <option value="us">+1</option>
+                            {COUNTRIES.map((c) => (
+                              <option key={c.code} value={c.code}>
+                                {c.prefix} ({c.name})
+                              </option>
+                            ))}
                           </select>
                         </div>
                         <input name="telefono" type="tel" placeholder="098 129 6179" className="flex-1 px-4 py-2.5 bg-transparent border-none text-neutral-800 focus:outline-none text-sm font-medium" required disabled={loading} />

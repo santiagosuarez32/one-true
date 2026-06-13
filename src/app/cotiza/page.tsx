@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { useContactSubmit } from "@/hooks/useContactSubmit";
+import { COUNTRIES, COUNTRY_PREFIXES } from "@/lib/countries";
 
 export default function CotizaPage() {
   const { loading, error: submitError, success: formSubmitted, submitForm, setSuccess: setFormSubmitted } = useContactSubmit("Formulario de Cotización General");
@@ -42,10 +43,7 @@ export default function CotizaPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
-      const prefixes: Record<string, string> = {
-        ec: "+593", co: "+57", pe: "+51", cl: "+56", ar: "+54", mx: "+52", es: "+34", us: "+1"
-      };
-      const phonePrefix = prefixes[country] || "+593";
+      const phonePrefix = COUNTRY_PREFIXES[country] || "+593";
       const fullPhone = `${phonePrefix} ${formData.telefono.trim()}`;
 
       await submitForm({
@@ -203,7 +201,7 @@ export default function CotizaPage() {
                         <select
                           value={country}
                           onChange={(e) => setCountry(e.target.value)}
-                          className="bg-transparent border-0 py-2.5 px-1 text-sm font-semibold text-neutral-700 outline-none focus:ring-0 cursor-pointer appearance-none"
+                          className="max-w-[120px] bg-transparent border-0 py-2.5 px-1 text-sm font-semibold text-neutral-700 outline-none focus:ring-0 cursor-pointer appearance-none"
                           style={{
                             fontFamily: "var(--font-montserrat), sans-serif",
                             backgroundImage: `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E")`,
@@ -214,14 +212,11 @@ export default function CotizaPage() {
                           }}
                           disabled={loading}
                         >
-                          <option value="ec">+593</option>
-                          <option value="co">+57</option>
-                          <option value="pe">+51</option>
-                          <option value="cl">+56</option>
-                          <option value="ar">+54</option>
-                          <option value="mx">+52</option>
-                          <option value="es">+34</option>
-                          <option value="us">+1</option>
+                          {COUNTRIES.map((c) => (
+                            <option key={c.code} value={c.code}>
+                              {c.prefix} ({c.name})
+                            </option>
+                          ))}
                         </select>
                       </div>
                       <input
