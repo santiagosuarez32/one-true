@@ -533,14 +533,35 @@ const backupsDir = (process.env.VERCEL || process.cwd().startsWith("/var/task"))
 
 export async function createBackup(isAuto: boolean = false): Promise<string> {
   const db = await getDb();
-  await fs.mkdir(backupsDir, { recursive: true });
   
   const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
   const prefix = isAuto ? "auto-backup" : "manual-backup";
   const filename = `${prefix}-${timestamp}.json`;
-  const filePath = path.join(backupsDir, filename);
-  
-  await fs.writeFile(filePath, JSON.stringify(db, null, 2), "utf8");
+  const jsonStr = JSON.stringify(db, null, 2);
+
+  // 1. Upload to Supabase Storage
+  try {
+    const { error: uploadErr } = await supabase.storage
+      .from("imagenes")
+      .upload(`backups/${filename}`, Buffer.from(jsonStr), {
+        contentType: "application/json",
+        upsert: true
+      });
+    if (uploadErr) {
+      console.error("Failed to upload backup to Supabase storage:", uploadErr.message);
+    }
+  } catch (err) {
+    console.error("Error uploading backup to Supabase storage:", err);
+  }
+
+  // 2. Write to local filesystem as cache/fallback
+  try {
+    await fs.mkdir(backupsDir, { recursive: true });
+    const filePath = path.join(backupsDir, filename);
+    await fs.writeFile(filePath, jsonStr, "utf8");
+  } catch (err) {
+    console.warn("Could not write local backup cache:", err);
+  }
   
   if (isAuto) {
     await rotateAutoBackups();
@@ -549,79 +570,152 @@ export async function createBackup(isAuto: boolean = false): Promise<string> {
 }
 
 export async function rotateAutoBackups(): Promise<void> {
+  // 1. Rotate in Supabase Storage
   try {
-    await fs.mkdir(backupsDir, { recursive: true });
-    const files = await fs.readdir(backupsDir);
-    
-    // Filter automatic backups
-    const autoBackups = files
-      .filter(f => f.startsWith("auto-backup-") && f.endsWith(".json"))
-      .map(f => ({
-        name: f,
-        path: path.join(backupsDir, f),
-        time: 0
-      }));
-      
-    for (const b of autoBackups) {
-      const stats = await fs.stat(b.path);
-      b.time = stats.mtimeMs;
+    const { data: storageFiles, error: storageErr } = await supabase.storage
+      .from("imagenes")
+      .list("backups", { limit: 100 });
+
+    if (!storageErr && storageFiles) {
+      const autoStorage = storageFiles
+        .filter(f => f.name.startsWith("auto-backup-") && f.name.endsWith(".json"))
+        .map(f => ({
+          name: f.name,
+          time: new Date(f.created_at || f.updated_at || 0).getTime()
+        }));
+
+      // Sort oldest to newest
+      autoStorage.sort((a, b) => a.time - b.time);
+
+      if (autoStorage.length > 15) {
+        const toDelete = autoStorage.slice(0, autoStorage.length - 15);
+        const pathsToDelete = toDelete.map(f => `backups/${f.name}`);
+        const { error: deleteErr } = await supabase.storage
+          .from("imagenes")
+          .remove(pathsToDelete);
+        if (deleteErr) {
+          console.error("Failed to delete rotated backups from Supabase storage:", deleteErr.message);
+        }
+      }
     }
-    
-    // Sort oldest to newest
-    autoBackups.sort((a, b) => a.time - b.time);
-    
-    // Keep only the last 15. Delete the rest.
-    if (autoBackups.length > 15) {
-      const toDelete = autoBackups.slice(0, autoBackups.length - 15);
-      for (const file of toDelete) {
-        try {
-          await fs.unlink(file.path);
-        } catch (unlinkErr: any) {
-          if (unlinkErr.code !== "ENOENT") {
-            throw unlinkErr;
+  } catch (err) {
+    console.error("Failed to rotate auto backups in Supabase storage:", err);
+  }
+
+  // 2. Rotate local backups
+  try {
+    if (await fs.stat(backupsDir).catch(() => null)) {
+      const localFiles = await fs.readdir(backupsDir);
+      const autoLocal = [];
+      for (const file of localFiles) {
+        if (file.startsWith("auto-backup-") && file.endsWith(".json")) {
+          const filePath = path.join(backupsDir, file);
+          const stats = await fs.stat(filePath).catch(() => null);
+          if (stats) {
+            autoLocal.push({
+              name: file,
+              path: filePath,
+              time: stats.mtimeMs
+            });
+          }
+        }
+      }
+      autoLocal.sort((a, b) => a.time - b.time);
+      if (autoLocal.length > 15) {
+        const toDeleteLocal = autoLocal.slice(0, autoLocal.length - 15);
+        for (const file of toDeleteLocal) {
+          await fs.unlink(file.path).catch(() => null);
+        }
+      }
+    }
+  } catch (localErr) {
+    console.warn("Failed to rotate local backups:", localErr);
+  }
+}
+
+export async function listBackups(): Promise<any[]> {
+  const backupsMap = new Map<string, any>();
+
+  // 1. Fetch from Supabase Storage
+  try {
+    const { data: files, error } = await supabase.storage
+      .from("imagenes")
+      .list("backups", { limit: 100 });
+
+    if (!error && files) {
+      for (const item of files) {
+        if ((item.name.startsWith("auto-backup-") || item.name.startsWith("manual-backup-")) && item.name.endsWith(".json")) {
+          backupsMap.set(item.name, {
+            id: item.name,
+            name: item.name,
+            type: item.name.startsWith("auto-backup-") ? "auto" : "manual",
+            date: item.created_at || item.updated_at || new Date().toISOString(),
+            size: item.metadata?.size || 0
+          });
+        }
+      }
+    } else if (error) {
+      console.warn("Supabase storage list backups failed:", error.message);
+    }
+  } catch (err) {
+    console.warn("Error listing backups from Supabase storage:", err);
+  }
+
+  // 2. Fetch from local filesystem for local dev or fallback
+  try {
+    if (await fs.stat(backupsDir).catch(() => null)) {
+      const files = await fs.readdir(backupsDir);
+      for (const file of files) {
+        if ((file.startsWith("auto-backup-") || file.startsWith("manual-backup-")) && file.endsWith(".json")) {
+          if (!backupsMap.has(file)) {
+            const filePath = path.join(backupsDir, file);
+            const stats = await fs.stat(filePath).catch(() => null);
+            if (stats) {
+              backupsMap.set(file, {
+                id: file,
+                name: file,
+                type: file.startsWith("auto-backup-") ? "auto" : "manual",
+                date: stats.mtime.toISOString(),
+                size: stats.size
+              });
+            }
           }
         }
       }
     }
   } catch (err) {
-    console.error("Failed to rotate auto backups:", err);
+    console.warn("Error reading local backups list:", err);
   }
-}
 
-export async function listBackups(): Promise<any[]> {
-  try {
-    await fs.mkdir(backupsDir, { recursive: true });
-    const files = await fs.readdir(backupsDir);
-    
-    const backups = [];
-    for (const file of files) {
-      if ((file.startsWith("auto-backup-") || file.startsWith("manual-backup-")) && file.endsWith(".json")) {
-        const filePath = path.join(backupsDir, file);
-        const stats = await fs.stat(filePath);
-        backups.push({
-          id: file,
-          name: file,
-          type: file.startsWith("auto-backup-") ? "auto" : "manual",
-          date: stats.mtime.toISOString(),
-          size: stats.size
-        });
-      }
-    }
-    
-    // Sort newest first
-    return backups.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-  } catch (err) {
-    console.error("Failed to list backups:", err);
-    return [];
-  }
+  const list = Array.from(backupsMap.values());
+  // Sort newest first
+  return list.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 export async function deleteBackupFile(filename: string): Promise<void> {
-  const resolvedPath = path.resolve(backupsDir, filename);
-  if (!resolvedPath.startsWith(backupsDir)) {
-    throw new Error("Acceso no autorizado al archivo de backup.");
+  // 1. Delete from Supabase Storage
+  try {
+    const { error } = await supabase.storage
+      .from("imagenes")
+      .remove([`backups/${filename}`]);
+    if (error) {
+      console.error("Failed to delete backup from Supabase storage:", error.message);
+    }
+  } catch (err) {
+    console.error("Error deleting backup from Supabase storage:", err);
   }
-  await fs.unlink(resolvedPath);
+
+  // 2. Delete from local filesystem if exists
+  try {
+    const resolvedPath = path.resolve(backupsDir, filename);
+    if (resolvedPath.startsWith(backupsDir)) {
+      if (await fs.stat(resolvedPath).catch(() => null)) {
+        await fs.unlink(resolvedPath);
+      }
+    }
+  } catch (err) {
+    console.warn("Could not delete local backup file:", err);
+  }
 }
 
 export async function restoreBackup(backupData: DatabaseSchema): Promise<void> {
@@ -709,12 +803,42 @@ export async function restoreBackup(backupData: DatabaseSchema): Promise<void> {
 }
 
 export async function restoreBackupFromFile(filename: string): Promise<void> {
-  const resolvedPath = path.resolve(backupsDir, filename);
-  if (!resolvedPath.startsWith(backupsDir)) {
-    throw new Error("Acceso no autorizado al archivo de backup.");
+  let jsonStr: string | null = null;
+
+  // 1. Try downloading from Supabase Storage
+  try {
+    const { data: blob, error } = await supabase.storage
+      .from("imagenes")
+      .download(`backups/${filename}`);
+
+    if (!error && blob) {
+      jsonStr = await blob.text();
+    } else if (error) {
+      console.warn(`Supabase storage download backup ${filename} failed, falling back to local file:`, error.message);
+    }
+  } catch (err) {
+    console.warn(`Error downloading backup ${filename} from Supabase storage, falling back to local file:`, err);
   }
-  const data = await fs.readFile(resolvedPath, "utf8");
-  const backupData = JSON.parse(data) as DatabaseSchema;
+
+  // 2. Fall back to local file
+  if (!jsonStr) {
+    try {
+      const resolvedPath = path.resolve(backupsDir, filename);
+      if (!resolvedPath.startsWith(backupsDir)) {
+        throw new Error("Acceso no autorizado al archivo de backup.");
+      }
+      jsonStr = await fs.readFile(resolvedPath, "utf8");
+    } catch (err: any) {
+      console.error(`Could not read local backup file ${filename}:`, err);
+      throw new Error(`No se pudo leer el archivo de copia de seguridad: ${err.message || err}`);
+    }
+  }
+
+  if (!jsonStr) {
+    throw new Error("No se pudo obtener el archivo de copia de seguridad de ninguna ubicación.");
+  }
+
+  const backupData = JSON.parse(jsonStr) as DatabaseSchema;
   await restoreBackup(backupData);
 }
 
