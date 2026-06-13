@@ -542,8 +542,8 @@ export async function createBackup(isAuto: boolean = false): Promise<string> {
   // 1. Upload to Supabase Storage
   try {
     const { error: uploadErr } = await supabase.storage
-      .from("imagenes")
-      .upload(`backups/${filename}`, Buffer.from(jsonStr), {
+      .from("backups")
+      .upload(filename, Buffer.from(jsonStr), {
         contentType: "application/json",
         upsert: true
       });
@@ -573,8 +573,8 @@ export async function rotateAutoBackups(): Promise<void> {
   // 1. Rotate in Supabase Storage
   try {
     const { data: storageFiles, error: storageErr } = await supabase.storage
-      .from("imagenes")
-      .list("backups", { limit: 100 });
+      .from("backups")
+      .list("", { limit: 100 });
 
     if (!storageErr && storageFiles) {
       const autoStorage = storageFiles
@@ -589,9 +589,9 @@ export async function rotateAutoBackups(): Promise<void> {
 
       if (autoStorage.length > 15) {
         const toDelete = autoStorage.slice(0, autoStorage.length - 15);
-        const pathsToDelete = toDelete.map(f => `backups/${f.name}`);
+        const pathsToDelete = toDelete.map(f => f.name);
         const { error: deleteErr } = await supabase.storage
-          .from("imagenes")
+          .from("backups")
           .remove(pathsToDelete);
         if (deleteErr) {
           console.error("Failed to delete rotated backups from Supabase storage:", deleteErr.message);
@@ -639,8 +639,8 @@ export async function listBackups(): Promise<any[]> {
   // 1. Fetch from Supabase Storage
   try {
     const { data: files, error } = await supabase.storage
-      .from("imagenes")
-      .list("backups", { limit: 100 });
+      .from("backups")
+      .list("", { limit: 100 });
 
     if (!error && files) {
       for (const item of files) {
@@ -696,8 +696,8 @@ export async function deleteBackupFile(filename: string): Promise<void> {
   // 1. Delete from Supabase Storage
   try {
     const { error } = await supabase.storage
-      .from("imagenes")
-      .remove([`backups/${filename}`]);
+      .from("backups")
+      .remove([filename]);
     if (error) {
       console.error("Failed to delete backup from Supabase storage:", error.message);
     }
@@ -808,8 +808,8 @@ export async function restoreBackupFromFile(filename: string): Promise<void> {
   // 1. Try downloading from Supabase Storage
   try {
     const { data: blob, error } = await supabase.storage
-      .from("imagenes")
-      .download(`backups/${filename}`);
+      .from("backups")
+      .download(filename);
 
     if (!error && blob) {
       jsonStr = await blob.text();
