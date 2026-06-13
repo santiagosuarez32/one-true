@@ -524,7 +524,12 @@ export async function saveSetting(key: string, value: string): Promise<void> {
 }
 
 /* ==================== Backups API ==================== */
-const backupsDir = path.join(process.cwd(), "backups");
+// On Vercel (Serverless Functions), the filesystem is read-only except for '/tmp'.
+// We check for process.env.VERCEL or if the working directory matches Vercel's standard /var/task.
+const backupsDir = (process.env.VERCEL || process.cwd().startsWith("/var/task"))
+  ? path.join("/tmp", "backups")
+  : path.join(process.cwd(), "backups");
+
 
 export async function createBackup(isAuto: boolean = false): Promise<string> {
   const db = await getDb();
