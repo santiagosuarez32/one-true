@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { useContactSubmit } from "@/hooks/useContactSubmit";
 import { COUNTRIES, COUNTRY_PREFIXES } from "@/lib/countries";
+import PhoneCountrySelect from "@/components/PhoneCountrySelect";
 
 export default function CotizaPage() {
   const { loading, error: submitError, success: formSubmitted, submitForm, setSuccess: setFormSubmitted } = useContactSubmit("Formulario de Cotización General");
@@ -195,45 +196,15 @@ export default function CotizaPage() {
 
                   <div className="flex flex-col gap-1">
                     <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Número de teléfono *</label>
-                    <div className="relative flex items-center border-0 rounded bg-neutral-50 focus-within:ring-2 focus-within:ring-[#700FA3]/20 focus-within:bg-white focus-within:shadow-md transition-all overflow-hidden">
-                      <div className="flex items-center gap-2 pl-3 pr-2 border-r border-neutral-200/60 bg-transparent shrink-0">
-                        <img src={`https://flagcdn.com/w20/${country}.png`} alt={country} className="w-5 h-auto object-contain select-none" />
-                        <select
-                          value={country}
-                          onChange={(e) => setCountry(e.target.value)}
-                          className="max-w-[120px] bg-transparent border-0 py-2.5 px-1 text-sm font-semibold text-neutral-700 outline-none focus:ring-0 cursor-pointer appearance-none"
-                          style={{
-                            fontFamily: "var(--font-montserrat), sans-serif",
-                            backgroundImage: `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E")`,
-                            backgroundPosition: "right 0.1rem center",
-                            backgroundSize: "1.1em 1.1em",
-                            backgroundRepeat: "no-repeat",
-                            paddingRight: "1.2rem"
-                          }}
-                          disabled={loading}
-                        >
-                          {COUNTRIES.map((c) => (
-                            <option key={c.code} value={c.code}>
-                              {c.prefix} ({c.name})
-                            </option>
-                          ))}
-                        </select>
-                      </div>
-                      <input
-                        type="tel"
-                        placeholder="098 129 6179"
-                        value={formData.telefono}
-                        onChange={(e) => { setFormData({...formData, telefono: e.target.value}); if(errors.telefono) setErrors({...errors, telefono: ""})}}
-                        className={`flex-1 px-4 py-2.5 bg-transparent border-none text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-0 text-sm font-medium ${errors.telefono ? 'outline-red-500 outline-1' : ''}`}
-                        style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
-                        disabled={loading}
-                      />
-                      <div className="pr-3 text-[#700FA3] pointer-events-none">
-                        <svg className="w-5 h-5 text-[#700FA3]" viewBox="0 0 20 20" fill="currentColor">
-                          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                        </svg>
-                      </div>
-                    </div>
+                    <PhoneCountrySelect
+                      country={country}
+                      setCountry={setCountry}
+                      loading={loading}
+                      phoneValue={formData.telefono}
+                      onPhoneChange={(val) => { setFormData({...formData, telefono: val}); if(errors.telefono) setErrors({...errors, telefono: ""})}}
+                      phoneError={!!errors.telefono}
+                      hasIcon
+                    />
                     {errors.telefono && <span className="text-xs text-red-500 mt-1">{errors.telefono}</span>}
                   </div>
 

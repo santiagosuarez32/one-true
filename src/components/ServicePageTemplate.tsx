@@ -9,6 +9,7 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { FaLinkedin, FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { Service } from "@/lib/cms";
 import { COUNTRIES, COUNTRY_PREFIXES } from "@/lib/countries";
+import PhoneCountrySelect from "@/components/PhoneCountrySelect";
 
 interface CounterProps {
   end: number;
@@ -662,30 +663,7 @@ export default function ServicePageTemplate({ service, allServices }: { service:
 
                     <div className="flex flex-col gap-1">
                       <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Número de teléfono *</label>
-                      <div className="relative flex items-center border-0 rounded bg-neutral-50 overflow-hidden">
-                        <div className="flex items-center gap-2 pl-3 border-r border-neutral-200/60 bg-transparent shrink-0">
-                          <img src={`https://flagcdn.com/w20/${country}.png`} alt={country} className="w-5 h-auto object-contain select-none" />
-                          <select
-                            value={country}
-                            onChange={(e) => setCountry(e.target.value)}
-                            className="bg-transparent border-0 py-2.5 pl-1 pr-6 text-sm font-semibold text-neutral-700 outline-none cursor-pointer appearance-none max-w-[120px]"
-                            style={{
-                              backgroundImage: `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E")`,
-                              backgroundPosition: "right 0.1rem center",
-                              backgroundSize: "1.1em 1.1em",
-                              backgroundRepeat: "no-repeat",
-                            }}
-                            disabled={loading}
-                          >
-                            {COUNTRIES.map((c) => (
-                              <option key={c.code} value={c.code}>
-                                {c.prefix} ({c.name})
-                              </option>
-                            ))}
-                          </select>
-                        </div>
-                        <input name="telefono" type="tel" placeholder="098 129 6179" className="flex-1 px-4 py-2.5 bg-transparent border-none text-neutral-800 focus:outline-none text-sm font-medium" required disabled={loading} />
-                      </div>
+                      <PhoneCountrySelect country={country} setCountry={setCountry} loading={loading} />
                     </div>
 
                     <div className="flex flex-col gap-1">
