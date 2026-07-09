@@ -70,8 +70,8 @@ export default function PhoneCountrySelect({ country, setCountry, loading, hasIc
           className="flex items-center gap-1.5 cursor-pointer py-2.5 pl-1 pr-2 hover:bg-neutral-100 rounded transition-colors"
           onClick={() => !loading && setShowDropdown(!showDropdown)}
         >
-          <img src={`https://flagcdn.com/w20/${country}.png`} alt={country} className="w-5 h-auto object-contain select-none" />
-          <span className="text-sm font-semibold text-neutral-700 select-none min-w-[36px] text-center" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+          <img src={`https://flagcdn.com/w40/${country}.png`} alt={country} className="w-5 h-3.5 object-cover rounded-[2px] shrink-0 border border-neutral-200/50 shadow-2xs select-none" />
+          <span className="text-sm font-medium text-neutral-700 select-none min-w-[36px] text-center" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
             {COUNTRIES.find(c => c.code === country)?.prefix}
           </span>
           <svg className={`w-3.5 h-3.5 text-neutral-500 transition-transform ${showDropdown ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -87,7 +87,7 @@ export default function PhoneCountrySelect({ country, setCountry, loading, hasIc
                 placeholder="Buscar país o código..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-3 py-2 text-sm bg-neutral-50 border border-neutral-200 rounded focus:outline-none focus:border-[#700FA3] focus:ring-1 focus:ring-[#700FA3] transition-all"
+                className="w-full px-3 py-2 text-sm bg-neutral-50 border border-neutral-200 rounded focus:outline-none focus:border-[#700FA3] focus:ring-1 focus:ring-[#700FA3] transition-all font-medium"
                 onClick={(e) => e.stopPropagation()}
                 style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
               />
@@ -124,9 +124,9 @@ export default function PhoneCountrySelect({ country, setCountry, loading, hasIc
                       setSearchTerm("");
                     }}
                   >
-                    <img src={`https://flagcdn.com/w20/${c.code}.png`} alt={c.name} className="w-5 h-auto object-contain shadow-sm" />
+                    <img src={`https://flagcdn.com/w40/${c.code}.png`} alt={c.name} className="w-5 h-3.5 object-cover rounded-[2px] shrink-0 border border-neutral-200/50 shadow-2xs" />
                     <span className="text-sm font-medium text-neutral-700 flex-1 truncate" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>{c.name}</span>
-                    <span className="text-xs font-semibold text-neutral-400" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>{c.prefix}</span>
+                    <span className="text-xs font-medium text-neutral-400" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>{c.prefix}</span>
                   </div>
                 ))
               ) : (

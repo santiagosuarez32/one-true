@@ -13,6 +13,9 @@ CREATE TABLE IF NOT EXISTS public.services (
     template TEXT NOT NULL,
     published BOOLEAN NOT NULL DEFAULT false,
     "pageContent" JSONB NOT NULL DEFAULT '{}'::jsonb,
+    "seoTitle" TEXT,
+    "seoDescription" TEXT,
+    "seoKeywords" TEXT,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
 );
 
@@ -25,6 +28,9 @@ CREATE TABLE IF NOT EXISTS public.courses (
     href TEXT NOT NULL,
     published BOOLEAN NOT NULL DEFAULT false,
     "pageContent" JSONB NOT NULL DEFAULT '{}'::jsonb,
+    "seoTitle" TEXT,
+    "seoDescription" TEXT,
+    "seoKeywords" TEXT,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
 );
 
@@ -38,6 +44,9 @@ CREATE TABLE IF NOT EXISTS public.blogs (
     "publishDate" TEXT NOT NULL,
     "readTime" TEXT NOT NULL,
     content TEXT NOT NULL,
+    "seoTitle" TEXT,
+    "seoDescription" TEXT,
+    "seoKeywords" TEXT,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
 );
 
@@ -63,42 +72,50 @@ ALTER TABLE public.blogs ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.podcasts ENABLE ROW LEVEL SECURITY;
 
 -- 5. Create Policies for public read-only access (SELECT)
+DROP POLICY IF EXISTS "Allow public read-only access on services" ON public.services;
 CREATE POLICY "Allow public read-only access on services" 
     ON public.services FOR SELECT 
     USING (true);
 
+DROP POLICY IF EXISTS "Allow public read-only access on courses" ON public.courses;
 CREATE POLICY "Allow public read-only access on courses" 
     ON public.courses FOR SELECT 
     USING (true);
 
+DROP POLICY IF EXISTS "Allow public read-only access on blogs" ON public.blogs;
 CREATE POLICY "Allow public read-only access on blogs" 
     ON public.blogs FOR SELECT 
     USING (true);
 
+DROP POLICY IF EXISTS "Allow public read-only access on podcasts" ON public.podcasts;
 CREATE POLICY "Allow public read-only access on podcasts" 
     ON public.podcasts FOR SELECT 
     USING (true);
 
 -- 6. Create Policies for write access (INSERT, UPDATE, DELETE) for authenticated users/admins
 -- Note: service_role key automatically bypasses RLS, but these policies ensure admin session writes are permitted
+DROP POLICY IF EXISTS "Allow authenticated write access on services" ON public.services;
 CREATE POLICY "Allow authenticated write access on services" 
     ON public.services FOR ALL 
     TO authenticated 
     USING (true) 
     WITH CHECK (true);
 
+DROP POLICY IF EXISTS "Allow authenticated write access on courses" ON public.courses;
 CREATE POLICY "Allow authenticated write access on courses" 
     ON public.courses FOR ALL 
     TO authenticated 
     USING (true) 
     WITH CHECK (true);
 
+DROP POLICY IF EXISTS "Allow authenticated write access on blogs" ON public.blogs;
 CREATE POLICY "Allow authenticated write access on blogs" 
     ON public.blogs FOR ALL 
     TO authenticated 
     USING (true) 
     WITH CHECK (true);
 
+DROP POLICY IF EXISTS "Allow authenticated write access on podcasts" ON public.podcasts;
 CREATE POLICY "Allow authenticated write access on podcasts" 
     ON public.podcasts FOR ALL 
     TO authenticated 
@@ -121,6 +138,8 @@ CREATE TABLE IF NOT EXISTS public.calendar_intakes (
     "isFeatured" BOOLEAN NOT NULL DEFAULT false,
     "brochureUrl" TEXT,
     "brochureFileName" TEXT,
+    "brochureSize" TEXT,
+    "buttonType" TEXT DEFAULT 'default',
     href TEXT NOT NULL,
     published BOOLEAN NOT NULL DEFAULT false,
     "sortOrder" INTEGER NOT NULL DEFAULT 0,
@@ -129,13 +148,37 @@ CREATE TABLE IF NOT EXISTS public.calendar_intakes (
 
 ALTER TABLE public.calendar_intakes ENABLE ROW LEVEL SECURITY;
 
+DROP POLICY IF EXISTS "Allow public read-only access on calendar_intakes" ON public.calendar_intakes;
 CREATE POLICY "Allow public read-only access on calendar_intakes" 
     ON public.calendar_intakes FOR SELECT 
     USING (true);
 
+DROP POLICY IF EXISTS "Allow authenticated write access on calendar_intakes" ON public.calendar_intakes;
 CREATE POLICY "Allow authenticated write access on calendar_intakes" 
     ON public.calendar_intakes FOR ALL 
     TO authenticated 
     USING (true) 
     WITH CHECK (true);
+
+-- 8. Create settings table
+CREATE TABLE IF NOT EXISTS public.settings (
+    key TEXT PRIMARY KEY,
+    value TEXT NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
+);
+
+ALTER TABLE public.settings ENABLE ROW LEVEL SECURITY;
+
+DROP POLICY IF EXISTS "Allow public read-only access on settings" ON public.settings;
+CREATE POLICY "Allow public read-only access on settings" 
+    ON public.settings FOR SELECT 
+    USING (true);
+
+DROP POLICY IF EXISTS "Allow authenticated write access on settings" ON public.settings;
+CREATE POLICY "Allow authenticated write access on settings" 
+    ON public.settings FOR ALL 
+    TO authenticated 
+    USING (true) 
+    WITH CHECK (true);
+
 

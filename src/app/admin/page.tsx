@@ -14,7 +14,7 @@ const PURPLE = "#700FA3";
 const PURPLE_HOVER = "#5C0B87";
 const ACCENT_YELLOW = "#FFC107";
 
-type Tab = "services" | "courses" | "complementarias" | "blogs" | "podcasts" | "calendar" | "ebook" | "backups";
+type Tab = "services" | "courses" | "complementarias" | "blogs" | "podcasts" | "calendar" | "ebook" | "popup" | "backups";
 
 function prepopulateCourseDefaults(course: any) {
   if (!course) return course;
@@ -512,6 +512,19 @@ export default function AdminDashboard() {
   const [ebookPdfUrl, setEbookPdfUrl] = useState("");
   const [ebookFileName, setEbookFileName] = useState("");
   const [ebookSize, setEbookSize] = useState("");
+  const [ebookTitle, setEbookTitle] = useState("Guía práctica para saber si estoy contratando un servicio de poligrafía confiable.");
+  const [ebookDescription, setEbookDescription] = useState("Descarga nuestro Ebook gratuito con la entrega del mes (PDF). Nuestro equipo trabaja constantemente para seguir trayendo nuevos ebooks gratuitos una vez al mes.");
+  const [ebookTagline, setEbookTagline] = useState("Ebook gratuito");
+  const [ebookCoverImage, setEbookCoverImage] = useState("/blog/1.webp");
+  
+  const [popupEnabled, setPopupEnabled] = useState(false);
+  const [popupTitle, setPopupTitle] = useState("¡Nueva Certificación!");
+  const [popupDescription, setPopupDescription] = useState("Inscríbete hoy en nuestro próximo curso avanzado de poligrafía avalado por la APA.");
+  const [popupImage, setPopupImage] = useState("");
+  const [popupCtaText, setPopupCtaText] = useState("Ver detalles");
+  const [popupCtaUrl, setPopupCtaUrl] = useState("/calendario-academico");
+  const [popupDelay, setPopupDelay] = useState("3");
+
   const [savingSettings, setSavingSettings] = useState(false);
 
   // Backup & Restore states
@@ -602,6 +615,50 @@ export default function AdminDashboard() {
       if (foundSize) {
         setEbookSize(foundSize.value);
       }
+      const foundTitle = db.settings.find(s => s.key === "ebook_title");
+      if (foundTitle && foundTitle.value) {
+        setEbookTitle(foundTitle.value);
+      }
+      const foundDesc = db.settings.find(s => s.key === "ebook_description");
+      if (foundDesc && foundDesc.value) {
+        setEbookDescription(foundDesc.value);
+      }
+      const foundTag = db.settings.find(s => s.key === "ebook_tagline");
+      if (foundTag && foundTag.value) {
+        setEbookTagline(foundTag.value);
+      }
+      const foundCover = db.settings.find(s => s.key === "ebook_cover_image");
+      if (foundCover && foundCover.value) {
+        setEbookCoverImage(foundCover.value);
+      }
+      const foundPopupEnabled = db.settings.find(s => s.key === "popup_enabled");
+      if (foundPopupEnabled) {
+        setPopupEnabled(foundPopupEnabled.value === "true");
+      }
+      const foundPopupTitle = db.settings.find(s => s.key === "popup_title");
+      if (foundPopupTitle && foundPopupTitle.value) {
+        setPopupTitle(foundPopupTitle.value);
+      }
+      const foundPopupDesc = db.settings.find(s => s.key === "popup_description");
+      if (foundPopupDesc && foundPopupDesc.value) {
+        setPopupDescription(foundPopupDesc.value);
+      }
+      const foundPopupImage = db.settings.find(s => s.key === "popup_image");
+      if (foundPopupImage && foundPopupImage.value) {
+        setPopupImage(foundPopupImage.value);
+      }
+      const foundPopupCtaText = db.settings.find(s => s.key === "popup_cta_text");
+      if (foundPopupCtaText && foundPopupCtaText.value) {
+        setPopupCtaText(foundPopupCtaText.value);
+      }
+      const foundPopupCtaUrl = db.settings.find(s => s.key === "popup_cta_url");
+      if (foundPopupCtaUrl && foundPopupCtaUrl.value) {
+        setPopupCtaUrl(foundPopupCtaUrl.value);
+      }
+      const foundPopupDelay = db.settings.find(s => s.key === "popup_delay");
+      if (foundPopupDelay && foundPopupDelay.value) {
+        setPopupDelay(foundPopupDelay.value);
+      }
     }
   }, [db]);
 
@@ -638,9 +695,51 @@ export default function AdminDashboard() {
         })
       });
 
-      const [resUrl, resName, resSize] = await Promise.all([saveUrl, saveName, saveSize]);
+      const saveTitle = fetch("/api/cms", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "settings",
+          action: "save",
+          data: { key: "ebook_title", value: ebookTitle }
+        })
+      });
 
-      if (resUrl.ok && resName.ok && resSize.ok) {
+      const saveDesc = fetch("/api/cms", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "settings",
+          action: "save",
+          data: { key: "ebook_description", value: ebookDescription }
+        })
+      });
+
+      const saveTag = fetch("/api/cms", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "settings",
+          action: "save",
+          data: { key: "ebook_tagline", value: ebookTagline }
+        })
+      });
+
+      const saveCover = fetch("/api/cms", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "settings",
+          action: "save",
+          data: { key: "ebook_cover_image", value: ebookCoverImage }
+        })
+      });
+
+      const [resUrl, resName, resSize, resTitle, resDesc, resTag, resCover] = await Promise.all([
+        saveUrl, saveName, saveSize, saveTitle, saveDesc, saveTag, saveCover
+      ]);
+
+      if (resUrl.ok && resName.ok && resSize.ok && resTitle.ok && resDesc.ok && resTag.ok && resCover.ok) {
         showToast("ok", "Configuración de Ebook guardada correctamente");
         fetchData();
       } else {
@@ -648,6 +747,104 @@ export default function AdminDashboard() {
       }
     } catch {
       showToast("err", "Error al guardar la configuración del Ebook.");
+    } finally {
+      setSavingSettings(false);
+    }
+  };
+
+  const handleSavePopupSettings = async () => {
+    setSavingSettings(true);
+    try {
+      const saveEnabled = fetch("/api/cms", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "settings",
+          action: "save",
+          data: { key: "popup_enabled", value: popupEnabled ? "true" : "false" }
+        })
+      });
+
+      const saveTitle = fetch("/api/cms", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "settings",
+          action: "save",
+          data: { key: "popup_title", value: popupTitle }
+        })
+      });
+
+      const saveDesc = fetch("/api/cms", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "settings",
+          action: "save",
+          data: { key: "popup_description", value: popupDescription }
+        })
+      });
+
+      const saveImage = fetch("/api/cms", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "settings",
+          action: "save",
+          data: { key: "popup_image", value: popupImage }
+        })
+      });
+
+      const saveCtaText = fetch("/api/cms", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "settings",
+          action: "save",
+          data: { key: "popup_cta_text", value: popupCtaText }
+        })
+      });
+
+      const saveCtaUrl = fetch("/api/cms", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "settings",
+          action: "save",
+          data: { key: "popup_cta_url", value: popupCtaUrl }
+        })
+      });
+
+      const saveDelay = fetch("/api/cms", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "settings",
+          action: "save",
+          data: { key: "popup_delay", value: popupDelay }
+        })
+      });
+
+      const [resEnabled, resTitle, resDesc, resImage, resCtaText, resCtaUrl, resDelay] = await Promise.all([
+        saveEnabled, saveTitle, saveDesc, saveImage, saveCtaText, saveCtaUrl, saveDelay
+      ]);
+
+      if (
+        resEnabled.ok && 
+        resTitle.ok && 
+        resDesc.ok && 
+        resImage.ok && 
+        resCtaText.ok && 
+        resCtaUrl.ok && 
+        resDelay.ok
+      ) {
+        showToast("ok", "Configuración del Popup guardada correctamente");
+        fetchData();
+      } else {
+        throw new Error();
+      }
+    } catch {
+      showToast("err", "Error al guardar la configuración del Popup.");
     } finally {
       setSavingSettings(false);
     }
@@ -1219,6 +1416,16 @@ export default function AdminDashboard() {
               <span className="text-xs font-medium px-2 py-0.5 rounded bg-neutral-200 text-neutral-700">1</span>
             </button>
             <button
+              onClick={() => { setActiveTab("popup"); setSearch(""); }}
+              className={`flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold transition-all ${
+                activeTab === "popup" ? "bg-neutral-100 text-neutral-900 border-l-4 pl-2" : "text-neutral-600 hover:bg-neutral-50"
+              }`}
+              style={activeTab === "popup" ? { borderLeftColor: PURPLE } : undefined}
+            >
+              <span>Popup Emergente</span>
+              <span className="text-xs font-medium px-2 py-0.5 rounded bg-neutral-200 text-neutral-700">1</span>
+            </button>
+            <button
               onClick={() => { setActiveTab("backups"); setSearch(""); }}
               className={`flex items-center justify-between rounded-lg px-3 py-2 text-sm font-semibold transition-all ${
                 activeTab === "backups" ? "bg-neutral-100 text-neutral-900 border-l-4 pl-2" : "text-neutral-600 hover:bg-neutral-50"
@@ -1234,7 +1441,7 @@ export default function AdminDashboard() {
         {/* Dashboard Main Workspace */}
         <section className="space-y-6 lg:col-span-9">
           {/* Dashboard Metrics */}
-          {activeTab !== "ebook" && activeTab !== "backups" && (
+          {activeTab !== "ebook" && activeTab !== "popup" && activeTab !== "backups" && (
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
               <MetricCard title={`Total ${activeTab === "services" ? "Servicios" : activeTab === "courses" ? "Cursos" : activeTab === "complementarias" ? "Formaciones" : activeTab === "blogs" ? "Artículos" : activeTab === "calendar" ? "Convocatorias" : "Episodios"}`} value={activeMetrics.total} />
               <MetricCard title="Publicados" value={activeMetrics.published} accent />
@@ -1243,7 +1450,7 @@ export default function AdminDashboard() {
           )}
 
           {/* Action Row */}
-          {activeTab !== "ebook" && activeTab !== "backups" && (
+          {activeTab !== "ebook" && activeTab !== "popup" && activeTab !== "backups" && (
             <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div className="relative w-full sm:w-80">
                 <input
@@ -1309,11 +1516,214 @@ export default function AdminDashboard() {
                     />
                     <p className="text-[10px] text-neutral-400 font-semibold mt-0.5">Define cómo se llamará el archivo cuando el usuario lo guarde en su dispositivo.</p>
                   </div>
+
+                  <div className="space-y-1.5 w-full">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                      Etiqueta (Tagline)
+                    </label>
+                    <input
+                      type="text"
+                      value={ebookTagline}
+                      onChange={(e) => setEbookTagline(e.target.value)}
+                      placeholder="Ej: Ebook gratuito"
+                      className="w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2 font-semibold"
+                      onFocus={(e) => (e.currentTarget.style.boxShadow = `0 0 0 2px #700FA322`)}
+                      onBlur={(e) => (e.currentTarget.style.boxShadow = "none")}
+                    />
+                    <p className="text-[10px] text-neutral-400 font-semibold mt-0.5">La etiqueta pequeña que aparece arriba del título.</p>
+                  </div>
+
+                  <div className="space-y-1.5 w-full">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                      Título del Ebook
+                    </label>
+                    <input
+                      type="text"
+                      value={ebookTitle}
+                      onChange={(e) => setEbookTitle(e.target.value)}
+                      placeholder="Ej: Guía práctica para saber si estoy contratando..."
+                      className="w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2 font-semibold"
+                      onFocus={(e) => (e.currentTarget.style.boxShadow = `0 0 0 2px #700FA322`)}
+                      onBlur={(e) => (e.currentTarget.style.boxShadow = "none")}
+                    />
+                    <p className="text-[10px] text-neutral-400 font-semibold mt-0.5">El título principal que describe el Ebook en la sección y página de descarga.</p>
+                  </div>
+
+                  <div className="space-y-1.5 w-full">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                      Descripción del Ebook
+                    </label>
+                    <textarea
+                      rows={3}
+                      value={ebookDescription}
+                      onChange={(e) => setEbookDescription(e.target.value)}
+                      placeholder="Ej: Descarga nuestro Ebook gratuito..."
+                      className="w-full bg-white border border-neutral-355 rounded-lg px-3 py-2 text-xs text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2 resize-y font-semibold"
+                      onFocus={(e) => (e.currentTarget.style.boxShadow = `0 0 0 2px #700FA322`)}
+                      onBlur={(e) => (e.currentTarget.style.boxShadow = "none")}
+                    />
+                    <p className="text-[10px] text-neutral-400 font-semibold mt-0.5">El párrafo descriptivo que acompaña al título.</p>
+                  </div>
+
+                  <ImageUploadBox
+                    label="Imagen de Portada (650x180 px recomendado)"
+                    value={ebookCoverImage}
+                    onChange={setEbookCoverImage}
+                    pathPrefix="ebooks"
+                  />
                 </div>
 
                 <div className="flex justify-start">
                   <button
                     onClick={handleSaveEbookSettings}
+                    disabled={savingSettings}
+                    className="rounded-full px-6 py-2.5 font-semibold text-white transition-colors flex items-center gap-2 cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed"
+                    style={{ backgroundColor: PURPLE }}
+                    onMouseEnter={(e) => !savingSettings && ((e.currentTarget as HTMLButtonElement).style.backgroundColor = PURPLE_HOVER)}
+                    onMouseLeave={(e) => !savingSettings && ((e.currentTarget as HTMLButtonElement).style.backgroundColor = PURPLE)}
+                  >
+                    {savingSettings ? (
+                      <>
+                        <div className="h-4 w-4 animate-spin rounded-full border-2 border-white border-l-transparent" />
+                        Guardando...
+                      </>
+                    ) : (
+                      "Guardar Configuración"
+                    )}
+                  </button>
+                </div>
+              </div>
+            </div>
+          ) : activeTab === "popup" ? (
+            <div className="rounded-2xl border border-neutral-200 bg-white overflow-hidden shadow-sm p-6 sm:p-8 space-y-6 animate-fade-in">
+              <div>
+                <h2 className="text-lg font-extrabold text-neutral-850 font-bold" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Configuración del Popup Emergente</h2>
+                <p className="text-xs text-neutral-500 font-semibold mt-1">Configura un anuncio publicitario o informativo que se muestre de forma automática al usuario cuando visite tu sitio web.</p>
+              </div>
+
+              <div className="border-t border-neutral-200 pt-6 space-y-6">
+                <div className="max-w-xl space-y-5">
+                  
+                  {/* Enabled Toggle */}
+                  <div className="flex items-center justify-between p-4 bg-neutral-50 rounded-xl border border-neutral-250">
+                    <div>
+                      <span className="block text-xs font-bold uppercase tracking-wider text-neutral-700">Estado del Popup</span>
+                      <span className="text-[10px] text-neutral-400 font-semibold mt-0.5">Habilita o desactiva la visualización del anuncio emergente en el sitio.</span>
+                    </div>
+                    <button
+                      onClick={() => setPopupEnabled(!popupEnabled)}
+                      className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none ${
+                        popupEnabled ? "bg-[#700FA3]" : "bg-neutral-200"
+                      }`}
+                    >
+                      <span
+                        className={`pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out ${
+                          popupEnabled ? "translate-x-5" : "translate-x-0"
+                        }`}
+                      />
+                    </button>
+                  </div>
+
+                  {/* Title */}
+                  <div className="space-y-1.5 w-full">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                      Título del Anuncio
+                    </label>
+                    <input
+                      type="text"
+                      value={popupTitle}
+                      onChange={(e) => setPopupTitle(e.target.value)}
+                      placeholder="Ej: ¡Nueva Certificación disponible!"
+                      className="w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2 font-semibold"
+                      onFocus={(e) => (e.currentTarget.style.boxShadow = `0 0 0 2px #700FA322`)}
+                      onBlur={(e) => (e.currentTarget.style.boxShadow = "none")}
+                    />
+                    <p className="text-[10px] text-neutral-400 font-semibold mt-0.5">El título principal que encabeza el popup.</p>
+                  </div>
+
+                  {/* Description */}
+                  <div className="space-y-1.5 w-full">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                      Descripción o Contenido
+                    </label>
+                    <textarea
+                      rows={3}
+                      value={popupDescription}
+                      onChange={(e) => setPopupDescription(e.target.value)}
+                      placeholder="Ej: Inscríbete hoy en nuestro próximo curso avanzado..."
+                      className="w-full bg-white border border-neutral-355 rounded-lg px-3 py-2 text-xs text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2 resize-y font-semibold"
+                      onFocus={(e) => (e.currentTarget.style.boxShadow = `0 0 0 2px #700FA322`)}
+                      onBlur={(e) => (e.currentTarget.style.boxShadow = "none")}
+                    />
+                    <p className="text-[10px] text-neutral-400 font-semibold mt-0.5">El mensaje de texto principal que verá el usuario.</p>
+                  </div>
+
+                  {/* Image upload */}
+                  <ImageUploadBox
+                    label="Imagen Promocional (Opcional - Formato Horizontal)"
+                    value={popupImage}
+                    onChange={setPopupImage}
+                    pathPrefix="popups"
+                  />
+
+                  {/* CTA Text */}
+                  <div className="space-y-1.5 w-full">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                      Texto del Botón (CTA)
+                    </label>
+                    <input
+                      type="text"
+                      value={popupCtaText}
+                      onChange={(e) => setPopupCtaText(e.target.value)}
+                      placeholder="Ej: Ver detalles"
+                      className="w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2 font-semibold"
+                      onFocus={(e) => (e.currentTarget.style.boxShadow = `0 0 0 2px #700FA322`)}
+                      onBlur={(e) => (e.currentTarget.style.boxShadow = "none")}
+                    />
+                    <p className="text-[10px] text-neutral-400 font-semibold mt-0.5">Deja este campo y el de enlace vacíos si no deseas incluir un botón.</p>
+                  </div>
+
+                  {/* CTA URL */}
+                  <div className="space-y-1.5 w-full">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                      Enlace de Redirección (URL)
+                    </label>
+                    <input
+                      type="text"
+                      value={popupCtaUrl}
+                      onChange={(e) => setPopupCtaUrl(e.target.value)}
+                      placeholder="Ej: /calendario-academico o https://wa.me/..."
+                      className="w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2 font-semibold"
+                      onFocus={(e) => (e.currentTarget.style.boxShadow = `0 0 0 2px #700FA322`)}
+                      onBlur={(e) => (e.currentTarget.style.boxShadow = "none")}
+                    />
+                    <p className="text-[10px] text-neutral-400 font-semibold mt-0.5">Destino al hacer clic en el botón.</p>
+                  </div>
+
+                  {/* Delay */}
+                  <div className="space-y-1.5 w-full">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-neutral-600">
+                      Tiempo de Retardo (Segundos)
+                    </label>
+                    <input
+                      type="number"
+                      min={0}
+                      max={60}
+                      value={popupDelay}
+                      onChange={(e) => setPopupDelay(e.target.value)}
+                      placeholder="Ej: 3"
+                      className="w-full bg-white border border-neutral-350 rounded-lg px-3 py-2 text-xs text-neutral-800 placeholder-neutral-400 outline-none focus:ring-2 font-semibold"
+                      onFocus={(e) => (e.currentTarget.style.boxShadow = `0 0 0 2px #700FA322`)}
+                      onBlur={(e) => (e.currentTarget.style.boxShadow = "none")}
+                    />
+                    <p className="text-[10px] text-neutral-400 font-semibold mt-0.5">Cuántos segundos tardará en aparecer una vez cargada la página.</p>
+                  </div>
+
+                </div>
+
+                <div className="flex justify-start">
+                  <button
+                    onClick={handleSavePopupSettings}
                     disabled={savingSettings}
                     className="rounded-full px-6 py-2.5 font-semibold text-white transition-colors flex items-center gap-2 cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed"
                     style={{ backgroundColor: PURPLE }}

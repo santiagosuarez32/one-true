@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Lenis from "lenis";
+import "lenis/dist/lenis.css";
 
 export default function SmoothScroll({
   children,
@@ -49,6 +50,12 @@ export default function SmoothScroll({
       window.dispatchEvent(event);
     });
 
+    const handleStop = () => lenis.stop();
+    const handleStart = () => lenis.start();
+
+    window.addEventListener("lenis-stop", handleStop);
+    window.addEventListener("lenis-start", handleStart);
+
     // Restore scroll position on page load
     const handleLoad = () => {
       if (window.history.state?.scrollY !== undefined) {
@@ -74,6 +81,8 @@ export default function SmoothScroll({
     rafIdRef.current = requestAnimationFrame(raf);
 
     return () => {
+      window.removeEventListener("lenis-stop", handleStop);
+      window.removeEventListener("lenis-start", handleStart);
       window.removeEventListener("load", handleLoad);
       window.removeEventListener("beforeunload", handleBeforeUnload);
       if (rafIdRef.current) {

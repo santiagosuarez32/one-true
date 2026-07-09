@@ -10,6 +10,9 @@ import { FaLinkedin, FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { Service } from "@/lib/cms";
 import { COUNTRIES, COUNTRY_PREFIXES } from "@/lib/countries";
 import PhoneCountrySelect from "@/components/PhoneCountrySelect";
+import { HCaptchaWidget, HCaptchaRef } from "@/components/HCaptchaWidget";
+import { validateHumanName } from "@/lib/validation";
+import Image from "next/image";
 
 interface CounterProps {
   end: number;
@@ -86,6 +89,8 @@ function AnimatedCounter({ end, suffix = "", duration = 2000, fontSize = "clamp(
 
 export default function ServicePageTemplate({ service, allServices }: { service: Service; allServices: Service[] }) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [hcaptchaToken, setHcaptchaToken] = useState("");
+  const hcaptchaRef = useRef<HCaptchaRef>(null);
   const { loading, error, success, submitForm, setSuccess } = useContactSubmit(`Formulario de ${service.title}`);
   const [country, setCountry] = useState("ec");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -157,12 +162,12 @@ export default function ServicePageTemplate({ service, allServices }: { service:
           }}
         />
 
-        <img 
+        <Image 
           src={pageContent.heroImage}
           alt={`One True ${service.title}`}
-          fetchPriority="high"
-          loading="eager"
-          decoding="async"
+          fill
+          priority
+          sizes="100vw"
           className="absolute inset-0 w-full h-full object-cover object-right-top z-0 opacity-40 mix-blend-overlay pointer-events-none"
         />
 
@@ -339,19 +344,23 @@ export default function ServicePageTemplate({ service, allServices }: { service:
           <div className="w-full lg:w-1/2 relative flex justify-center lg:justify-start">
             <div className="relative w-full max-w-md">
               <div className="rounded-3xl overflow-hidden shadow-2xl relative z-10 border-4 border-white">
-                <img 
+                <Image 
                   src={pageContent.whyImage1 || "/pruebas-poligrafo/primer.webp"}
                   alt="Servicios One True" 
-                  loading="lazy"
+                  width={600}
+                  height={750}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="w-full h-auto object-cover aspect-[4/5]"
                 />
               </div>
               
               <div className="absolute -bottom-12 -right-12 w-2/3 rounded-3xl overflow-hidden shadow-xl z-20 border-4 border-white hidden md:block">
-                <img 
+                <Image 
                   src={pageContent.whyImage2 || "/pruebas-poligrafo/segunda.webp"}
                   alt="Análisis de confianza One True" 
-                  loading="lazy"
+                  width={400}
+                  height={400}
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="w-full h-auto object-cover aspect-square"
                 />
               </div>
@@ -477,11 +486,12 @@ export default function ServicePageTemplate({ service, allServices }: { service:
                     }}
                   />
                   <div className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-100 rounded-t-2xl z-0">
-                    <img
+                    <Image
                       src={item.image}
                       alt={item.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="w-full h-full object-cover transition-all duration-700 group-hover:brightness-75"
-                      loading="lazy"
                     />
                   </div>
                   <div className="p-6 flex flex-col flex-1 relative z-20">
@@ -623,20 +633,44 @@ export default function ServicePageTemplate({ service, allServices }: { service:
                   <form
                     onSubmit={async (e) => {
                       e.preventDefault();
+                      if (!hcaptchaToken) return;
+
                       const form = e.currentTarget;
                       const formData = new FormData(form);
+
+                      const rawName = (formData.get("nombre") as string) || "";
+                      const rawSurname = (formData.get("apellido") as string) || "";
+
+                      const nameCheck = validateHumanName(rawName);
+                      if (!nameCheck.isValid) {
+                        alert(`Nombre inválido: ${nameCheck.error}`);
+                        return;
+                      }
+
+                      const surnameCheck = validateHumanName(rawSurname);
+                      if (!surnameCheck.isValid) {
+                        alert(`Apellido inválido: ${surnameCheck.error}`);
+                        return;
+                      }
+
                       const phonePrefix = COUNTRY_PREFIXES[country] || "+593";
-                      const rawPhone = formData.get("telefono") as string || "";
+                      const rawPhone = (formData.get("telefono") as string) || "";
                       const fullPhone = `${phonePrefix} ${rawPhone}`;
 
-                      await submitForm({
-                        nombre: formData.get("nombre"),
-                        apellido: formData.get("apellido"),
+                      const res = await submitForm({
+                        nombre: rawName,
+                        apellido: rawSurname,
                         email: formData.get("email"),
                         telefono: fullPhone,
                         ciudad: formData.get("ciudad"),
                         mensaje: formData.get("mensaje"),
+                        hcaptcha_token: hcaptchaToken,
                       });
+
+                      if (!res) {
+                        hcaptchaRef.current?.reset();
+                        setHcaptchaToken("");
+                      }
                     }}
                     className="flex flex-col gap-3"
                   >
@@ -687,13 +721,20 @@ export default function ServicePageTemplate({ service, allServices }: { service:
                           términos establecidos en ella
                         </a>.
                       </p>
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-2.5">
                         <input type="checkbox" id="aceptar-term" className="w-4 h-4 rounded border-neutral-300 text-[#700FA3] cursor-pointer" required disabled={loading} />
-                        <label htmlFor="aceptar-term" className="text-xs font-bold text-neutral-700 cursor-pointer select-none">
+                        <label htmlFor="aceptar-term" className="text-xs font-bold text-neutral-700 cursor-pointer select-none leading-none">
                           Aceptar
                         </label>
                       </div>
                     </div>
+
+                    <HCaptchaWidget
+                      ref={hcaptchaRef}
+                      onVerify={(token) => setHcaptchaToken(token)}
+                      onExpire={() => setHcaptchaToken("")}
+                      className="mt-2 mb-1"
+                    />
 
                     <button type="submit" disabled={loading} className="mt-2 px-8 py-3.5 bg-[#700FA3] hover:bg-[#5C0B87] text-white font-bold rounded transition-all w-full shadow-lg shadow-[#700FA3]/25 text-base disabled:opacity-75 disabled:cursor-not-allowed cursor-pointer" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                       {loading ? "Enviando..." : "Cotizar ahora"}

@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import CookieConsent from "@/components/CookieConsent";
+import CustomPopup from "@/components/CustomPopup";
 
 
 const montserrat = Montserrat({
@@ -13,14 +14,14 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://somosonetrue.com"),
+  metadataBase: new URL("https://www.somosonetrue.com"),
   title: "One True | Servicios Profesionales de Polígrafo en Ecuador",
   description: "Expertos en evaluación de confianza y poligrafía forense en Ecuador. Servicios de vetting de antecedentes, estudios de confiabilidad 360° y visitas domiciliarias en Quito y Guayaquil para proteger la seguridad de su empresa.",
   keywords: ["poligrafo ecuador", "vetting ecuador", "pruebas de poligrafo quito", "verificacion de antecedentes guayaquil", "estudios de confiabilidad", "seleccion de personal", "seguridad corporativa", "evaluacion de confianza", "One True"],
   openGraph: {
     title: "One True | Servicios Profesionales de Polígrafo en Ecuador",
     description: "Expertos en evaluación de confianza y poligrafía forense en Ecuador. Servicios de vetting de antecedentes, estudios de confiabilidad 360° y visitas domiciliarias en Quito y Guayaquil para proteger la seguridad de su empresa.",
-    url: "https://somosonetrue.com",
+    url: "https://www.somosonetrue.com",
     siteName: "One True Ecuador",
     images: [
       {
@@ -52,6 +53,49 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-5FM8TG92');`}
         </Script>
         {/* End Google Tag Manager */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "WebSite",
+                  "@id": "https://www.somosonetrue.com/#website",
+                  "url": "https://www.somosonetrue.com/",
+                  "name": "One True",
+                  "description": "Servicios Profesionales de Polígrafo y Evaluaciones de Confianza en Ecuador",
+                  "publisher": {
+                    "@id": "https://www.somosonetrue.com/#organization"
+                  }
+                },
+                {
+                  "@type": "Organization",
+                  "@id": "https://www.somosonetrue.com/#organization",
+                  "name": "One True",
+                  "url": "https://www.somosonetrue.com/",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.somosonetrue.com/navbar.webp"
+                  },
+                  "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+593-98-129-6179",
+                    "contactType": "customer service",
+                    "areaServed": "EC",
+                    "availableLanguage": "Spanish"
+                  },
+                  "sameAs": [
+                    "https://www.linkedin.com/in/david-coli-fiallo-75679a198",
+                    "https://www.facebook.com/share/1F8T24NNKE/",
+                    "https://www.instagram.com/somosonetrue",
+                    "https://youtube.com/@somosonetrue"
+                  ]
+                }
+              ]
+            })
+          }}
+        />
         {/*
           Back/forward navigation serves a server-rendered page that does not
           re-hydrate, leaving client components (e.g. the scroll-aware Navbar)
@@ -97,6 +141,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           {children}
         </SmoothScroll>
         <CookieConsent />
+        <CustomPopup />
       </body>
     </html>
   );

@@ -23,6 +23,30 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/nosotros",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/category/:path*",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/venenatis-tellus-metus-culputate-scelerisque",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/quisque-sagittis-purus-neque-aliquam",
+        destination: "/",
+        permanent: true,
+      },
+    ];
+  },
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback = {

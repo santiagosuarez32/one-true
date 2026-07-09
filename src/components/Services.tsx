@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Image from "next/image";
 
 export default function Services({ initialServices = [] }: { initialServices?: any[] }) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -185,14 +186,12 @@ export default function Services({ initialServices = [] }: { initialServices?: a
 
               {/* Card Image Cover (Full Bleed on Top/Left/Right) */}
               <div className="relative w-full aspect-[4/3] overflow-hidden bg-neutral-100 rounded-t-2xl z-0">
-                <img
+                <Image
                   src={item.image}
                   alt={`Servicio de ${item.title} en Ecuador - One True`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="w-full h-full object-cover transition-all duration-700 group-hover:brightness-75"
-                  loading="lazy"
-                  onError={(e) => {
-                    e.currentTarget.src = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80";
-                  }}
                 />
               </div>
 

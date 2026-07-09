@@ -11,6 +11,8 @@ const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PU
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 
+import { unstable_cache } from "next/cache";
+
 export type Service = {
   id: string;
   title: string;
@@ -156,7 +158,12 @@ export type DatabaseSchema = {
 };
 
 export async function getDb(): Promise<DatabaseSchema> {
-  const safeSettingsQuery = async () => {
+  return await getCachedDb();
+}
+
+const getCachedDb = unstable_cache(
+  async () => {
+    const safeSettingsQuery = async () => {
     try {
       return await supabase.from("settings").select("*");
     } catch (err: any) {
@@ -233,7 +240,7 @@ export async function getDb(): Promise<DatabaseSchema> {
     console.error("Error reading db.json, returning empty structure:", error);
     return { services: [], courses: [], blogs: [], podcasts: [], calendarIntakes: [], settings: [] };
   }
-}
+}, ["one-true-db-cache"], { revalidate: 300, tags: ["cms-db"] });
 
 export async function writeDb(data: DatabaseSchema): Promise<void> {
   try {

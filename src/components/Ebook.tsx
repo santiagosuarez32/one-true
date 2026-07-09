@@ -20,6 +20,10 @@ export default function Ebook() {
   const [ebookPdfUrl, setEbookPdfUrl] = useState("/ebook-poligrafia.pdf");
   const [ebookFileName, setEbookFileName] = useState("One-True-Guia-Poligrafia-Confiable.pdf");
   const [ebookSize, setEbookSize] = useState("");
+  const [ebookTitle, setEbookTitle] = useState("Guía práctica para saber si estoy contratando un servicio de poligrafía confiable.");
+  const [ebookDescription, setEbookDescription] = useState("Descarga nuestro Ebook gratuito con la entrega del mes (PDF). Nuestro equipo trabaja constantemente para seguir trayendo nuevos ebooks gratuitos una vez al mes.");
+  const [ebookTagline, setEbookTagline] = useState("Ebook gratuito");
+  const [ebookCoverImage, setEbookCoverImage] = useState("/blog/1.webp");
 
   useEffect(() => {
     // Fetch ebook settings dynamically
@@ -40,6 +44,22 @@ export default function Ebook() {
             const foundSize = data.settings.find((s: any) => s.key === "ebook_size");
             if (foundSize && foundSize.value) {
               setEbookSize(foundSize.value);
+            }
+            const foundTitle = data.settings.find((s: any) => s.key === "ebook_title");
+            if (foundTitle && foundTitle.value) {
+              setEbookTitle(foundTitle.value);
+            }
+            const foundDesc = data.settings.find((s: any) => s.key === "ebook_description");
+            if (foundDesc && foundDesc.value) {
+              setEbookDescription(foundDesc.value);
+            }
+            const foundTag = data.settings.find((s: any) => s.key === "ebook_tagline");
+            if (foundTag && foundTag.value) {
+              setEbookTagline(foundTag.value);
+            }
+            const foundCover = data.settings.find((s: any) => s.key === "ebook_cover_image");
+            if (foundCover && foundCover.value) {
+              setEbookCoverImage(foundCover.value);
             }
           }
         }
@@ -168,7 +188,7 @@ export default function Ebook() {
                 fontFamily: "var(--font-montserrat), sans-serif",
               }}
             >
-              Ebook gratuito
+              {ebookTagline}
             </span>
           </div>
           
@@ -185,11 +205,11 @@ export default function Ebook() {
               width: "100%",
             }}
           >
-            Guía práctica para saber si estoy contratando un servicio de poligrafía confiable.
+            {ebookTitle}
           </h2>
 
           <p className="text-lg text-neutral-600 mb-4 leading-relaxed max-w-lg" style={{ fontFamily: "var(--font-montserrat), sans-serif", fontWeight: "700" }}>
-            Descarga nuestro Ebook gratuito con la entrega del mes (PDF). Nuestro equipo trabaja constantemente para seguir trayendo nuevos ebooks gratuitos una vez al mes.
+            {ebookDescription}
           </p>
         </div>
 
@@ -202,8 +222,8 @@ export default function Ebook() {
               {/* Fallback pattern / gradient instead of image so it doesn't look broken */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#700FA3]/10 to-[#FFC107]/10"></div>
               <img 
-                src="/blog/1.webp" 
-                alt="Portada del Ebook One True: Guía práctica para contratar un servicio de poligrafía confiable en Ecuador" 
+                src={ebookCoverImage} 
+                alt={`Portada del Ebook One True: ${ebookTitle}`} 
                 className="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-multiply"
               />
             </div>

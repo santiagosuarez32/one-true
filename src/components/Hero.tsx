@@ -90,7 +90,7 @@ export default function Hero() {
           background-size: cover;
           background-repeat: no-repeat;
         }
-        @media (min-width: 768px) {
+        @media (min-width: 1024px) {
           .hero-slide-bg {
             background-position: right top;
             background-size: contain;
@@ -100,7 +100,7 @@ export default function Hero() {
         .hero-overlay {
           background: linear-gradient(to bottom, rgba(112,15,163,0.96) 0%, rgba(112,15,163,0.82) 45%, rgba(112,15,163,0.55) 100%);
         }
-        @media (min-width: 768px) {
+        @media (min-width: 1024px) {
           .hero-overlay {
             background: linear-gradient(to right, #700FA3 0%, #700FA3 35%, rgba(112, 15, 163, 0.9) 48%, rgba(112, 15, 163, 0.6) 60%, rgba(112, 15, 163, 0.3) 72%, rgba(112, 15, 163, 0.05) 86%, transparent 100%);
           }

@@ -37,7 +37,7 @@ function parseSpanishDate(dateStr: string): Date {
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://somosonetrue.com";
+  const baseUrl = "https://www.somosonetrue.com";
   
   const staticPages: MetadataRoute.Sitemap = [
     {

@@ -1,8 +1,63 @@
 import { NextResponse } from "next/server";
+import { validateHumanName } from "@/lib/validation";
 
 export async function POST(request: Request) {
   try {
-    const { form_name, nombre, apellido, email, telefono, ciudad, mensaje, empresa, servicio } = await request.json();
+    const { form_name, nombre, apellido, email, telefono, ciudad, mensaje, empresa, servicio, website_url_hp, hcaptcha_token } = await request.json();
+
+    // Anti-spam Honeypot check: reject if bot filled hidden field
+    if (website_url_hp && typeof website_url_hp === "string" && website_url_hp.trim() !== "") {
+      return NextResponse.json({ error: "Spam detectado." }, { status: 400 });
+    }
+
+    // Validate Nombre & Apellido against keyboard mashing / gibberish
+    if (nombre && typeof nombre === "string") {
+      const nameCheck = validateHumanName(nombre);
+      if (!nameCheck.isValid) {
+        return NextResponse.json({ error: `Nombre inválido: ${nameCheck.error}` }, { status: 400 });
+      }
+    }
+
+    if (apellido && typeof apellido === "string") {
+      const surnameCheck = validateHumanName(apellido);
+      if (!surnameCheck.isValid) {
+        return NextResponse.json({ error: `Apellido inválido: ${surnameCheck.error}` }, { status: 400 });
+      }
+    }
+
+    // Verify hCaptcha Token
+    const hcaptchaSecret = process.env.HCAPTCHA_SECRET_KEY;
+    const hcaptchaSitekey = process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY;
+
+    if (!hcaptcha_token) {
+      return NextResponse.json(
+        { error: "Por favor completa la verificación de seguridad hCaptcha." },
+        { status: 400 }
+      );
+    }
+
+    const verifyParams = new URLSearchParams();
+    verifyParams.append("secret", hcaptchaSecret || "");
+    verifyParams.append("response", hcaptcha_token);
+    verifyParams.append("sitekey", hcaptchaSitekey || "");
+
+    const hcaptchaRes = await fetch("https://api.hcaptcha.com/siteverify", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: verifyParams.toString(),
+    });
+
+    const hcaptchaData = await hcaptchaRes.json();
+
+    if (!hcaptchaData.success) {
+      console.error("hCaptcha verification failed:", hcaptchaData);
+      return NextResponse.json(
+        { error: "La verificación de hCaptcha falló o expiró. Por favor inténtalo de nuevo." },
+        { status: 400 }
+      );
+    }
 
     const serviceId = process.env.EMAILJS_SERVICE_ID;
     const templateId = process.env.EMAILJS_TEMPLATE_ID;

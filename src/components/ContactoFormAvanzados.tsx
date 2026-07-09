@@ -4,6 +4,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { useContactSubmit } from "@/hooks/useContactSubmit";
 import { COUNTRIES, COUNTRY_PREFIXES } from "@/lib/countries";
 import PhoneCountrySelect from "@/components/PhoneCountrySelect";
+import { HCaptchaWidget, HCaptchaRef } from "@/components/HCaptchaWidget";
+import { validateHumanName } from "@/lib/validation";
 
 interface ContactoFormAvanzadosProps {
   contactPhone?: string;
@@ -18,6 +20,8 @@ export default function ContactoFormAvanzados({
 }: ContactoFormAvanzadosProps) {
   const { loading, error, success, submitForm, setSuccess } = useContactSubmit("Formulario de Cursos Avanzados");
   const [country, setCountry] = useState("ec");
+  const [hcaptchaToken, setHcaptchaToken] = useState("");
+  const hcaptchaRef = useRef<HCaptchaRef>(null);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -155,20 +159,44 @@ export default function ContactoFormAvanzados({
                 <form
                   onSubmit={async (e) => {
                     e.preventDefault();
+                    if (!hcaptchaToken) return;
+
                     const form = e.currentTarget;
                     const formData = new FormData(form);
+
+                    const rawName = (formData.get("nombre") as string) || "";
+                    const rawSurname = (formData.get("apellido") as string) || "";
+
+                    const nameCheck = validateHumanName(rawName);
+                    if (!nameCheck.isValid) {
+                      alert(`Nombre inválido: ${nameCheck.error}`);
+                      return;
+                    }
+
+                    const surnameCheck = validateHumanName(rawSurname);
+                    if (!surnameCheck.isValid) {
+                      alert(`Apellido inválido: ${surnameCheck.error}`);
+                      return;
+                    }
+
                     const phonePrefix = COUNTRY_PREFIXES[country] || "+593";
-                    const rawPhone = formData.get("telefono") as string || "";
+                    const rawPhone = (formData.get("telefono") as string) || "";
                     const fullPhone = `${phonePrefix} ${rawPhone}`;
 
-                    await submitForm({
-                      nombre: formData.get("nombre"),
-                      apellido: formData.get("apellido"),
+                    const res = await submitForm({
+                      nombre: rawName,
+                      apellido: rawSurname,
                       email: formData.get("email"),
                       telefono: fullPhone,
                       ciudad: formData.get("ciudad"),
                       mensaje: formData.get("mensaje"),
+                      hcaptcha_token: hcaptchaToken,
                     });
+
+                    if (!res) {
+                      hcaptchaRef.current?.reset();
+                      setHcaptchaToken("");
+                    }
                   }}
                   className="flex flex-col gap-3"
                 >
@@ -227,13 +255,20 @@ export default function ContactoFormAvanzados({
                         términos establecidos en ella
                       </a>.
                     </p>
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2.5">
                       <input type="checkbox" id="aceptar-avanzados" className="w-4 h-4 rounded border-neutral-300 text-[#700FA3] focus:ring-[#700FA3] cursor-pointer" required disabled={loading} />
-                      <label htmlFor="aceptar-avanzados" className="text-xs font-bold text-neutral-700 cursor-pointer select-none" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                      <label htmlFor="aceptar-avanzados" className="text-xs font-bold text-neutral-700 cursor-pointer select-none leading-none" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                         Aceptar
                       </label>
                     </div>
                   </div>
+
+                  <HCaptchaWidget
+                    ref={hcaptchaRef}
+                    onVerify={(token) => setHcaptchaToken(token)}
+                    onExpire={() => setHcaptchaToken("")}
+                    className="mt-2 mb-1"
+                  />
 
                   <button type="submit" disabled={loading} className="mt-2 px-8 py-3.5 bg-[#700FA3] hover:bg-[#5C0B87] text-white font-bold rounded transition-all duration-300 w-full shadow-lg shadow-[#700FA3]/25 hover:scale-[1.01] active:scale-[0.99] text-base disabled:opacity-75 disabled:cursor-not-allowed cursor-pointer" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                     {loading ? "Enviando..." : "Cotizar ahora"}

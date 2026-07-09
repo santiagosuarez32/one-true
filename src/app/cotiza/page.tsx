@@ -1,17 +1,22 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { useContactSubmit } from "@/hooks/useContactSubmit";
 import { COUNTRIES, COUNTRY_PREFIXES } from "@/lib/countries";
 import PhoneCountrySelect from "@/components/PhoneCountrySelect";
+import ServiceSelect from "@/components/ServiceSelect";
+import { HCaptchaWidget, HCaptchaRef } from "@/components/HCaptchaWidget";
+import { validateHumanName } from "@/lib/validation";
 
 export default function CotizaPage() {
   const { loading, error: submitError, success: formSubmitted, submitForm, setSuccess: setFormSubmitted } = useContactSubmit("Formulario de Cotización General");
   const [country, setCountry] = useState("ec");
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [hcaptchaToken, setHcaptchaToken] = useState("");
+  const hcaptchaRef = useRef<HCaptchaRef>(null);
   const [formData, setFormData] = useState({
     nombre: "",
     apellido: "",
@@ -26,8 +31,16 @@ export default function CotizaPage() {
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
 
-    if (!formData.nombre.trim()) newErrors.nombre = "El nombre es requerido";
-    if (!formData.apellido.trim()) newErrors.apellido = "El apellido es requerido";
+    const nameVal = validateHumanName(formData.nombre);
+    if (!nameVal.isValid) {
+      newErrors.nombre = nameVal.error || "Nombre inválido";
+    }
+
+    const surnameVal = validateHumanName(formData.apellido);
+    if (!surnameVal.isValid) {
+      newErrors.apellido = surnameVal.error || "Apellido inválido";
+    }
+
     if (!formData.email.trim()) newErrors.email = "El email es requerido";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email))
       newErrors.email = "Email inválido";
@@ -36,6 +49,7 @@ export default function CotizaPage() {
     if (!formData.servicio) newErrors.servicio = "Selecciona un servicio";
     if (!formData.mensaje.trim()) newErrors.mensaje = "El mensaje es requerido";
     if (!formData.aceptar) newErrors.aceptar = "Debes aceptar los términos";
+    if (!hcaptchaToken) newErrors.captcha = "Por favor completa la verificación hCaptcha";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -47,7 +61,7 @@ export default function CotizaPage() {
       const phonePrefix = COUNTRY_PREFIXES[country] || "+593";
       const fullPhone = `${phonePrefix} ${formData.telefono.trim()}`;
 
-      await submitForm({
+      const res = await submitForm({
         nombre: formData.nombre,
         apellido: formData.apellido,
         email: formData.email,
@@ -55,7 +69,13 @@ export default function CotizaPage() {
         empresa: formData.empresa,
         servicio: formData.servicio,
         mensaje: formData.mensaje,
+        hcaptcha_token: hcaptchaToken,
       });
+
+      if (!res) {
+        hcaptchaRef.current?.reset();
+        setHcaptchaToken("");
+      }
     }
   };
 
@@ -224,25 +244,15 @@ export default function CotizaPage() {
 
                   <div className="flex flex-col gap-1">
                     <label className="text-xs font-semibold text-neutral-600" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>Servicio de interés *</label>
-                    <select
+                    <ServiceSelect
                       value={formData.servicio}
-                      onChange={(e) => { setFormData({...formData, servicio: e.target.value}); if(errors.servicio) setErrors({...errors, servicio: ""})}}
-                      className={`px-4 py-2.5 rounded border-0 bg-neutral-50 text-neutral-800 focus:outline-none focus:ring-2 focus:bg-white focus:shadow-md transition-all w-full text-sm font-medium ${errors.servicio ? 'focus:ring-red-400 ring-2 ring-red-200' : 'focus:ring-[#700FA3]/20'}`}
-                      style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+                      onChange={(val) => {
+                        setFormData({ ...formData, servicio: val });
+                        if (errors.servicio) setErrors({ ...errors, servicio: "" });
+                      }}
                       disabled={loading}
-                    >
-                      <option value="">Selecciona un servicio</option>
-                      <option value="poligrafo">Pruebas de Polígrafo</option>
-                      <option value="vetting">Vetting</option>
-                      <option value="confiabilidad">Estudio de Confiabilidad 360°</option>
-                      <option value="visitas">Visitas Domiciliarias</option>
-                      <option value="toxicologicas">Pruebas Toxicológicas</option>
-                      <option value="psicometricas">Evaluaciones Psicométricas</option>
-                      <option value="honestidad">Prueba de Honestidad, Ética y Valores</option>
-                      <option value="curso-basico">Curso Básico en Poligrafía 400 H</option>
-                      <option value="cursos-avanzados">Cursos Avanzados de Poligrafía</option>
-                      <option value="formaciones">Formaciones Complementarias</option>
-                    </select>
+                      error={!!errors.servicio}
+                    />
                     {errors.servicio && <span className="text-xs text-red-500 mt-1">{errors.servicio}</span>}
                   </div>
 
@@ -271,21 +281,32 @@ export default function CotizaPage() {
                         términos
                       </a>.
                     </p>
-                    <div className="flex items-start gap-3">
+                    <div className="flex items-center gap-2.5">
                       <input
                         type="checkbox"
                         id="aceptar-cotiza"
                         checked={formData.aceptar}
                         onChange={(e) => { setFormData({...formData, aceptar: e.target.checked}); if(errors.aceptar) setErrors({...errors, aceptar: ""})}}
-                        className={`w-4 h-4 rounded border-neutral-300 text-[#700FA3] focus:ring-[#700FA3] cursor-pointer mt-1 ${errors.aceptar ? 'ring-2 ring-red-200' : ''}`}
+                        className={`w-4 h-4 rounded border-neutral-300 text-[#700FA3] focus:ring-[#700FA3] cursor-pointer ${errors.aceptar ? 'ring-2 ring-red-200' : ''}`}
                         disabled={loading}
                       />
-                      <label htmlFor="aceptar-cotiza" className="text-xs font-bold text-neutral-700 cursor-pointer select-none" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+                      <label htmlFor="aceptar-cotiza" className="text-xs font-bold text-neutral-700 cursor-pointer select-none leading-none" style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
                         Aceptar
                       </label>
                     </div>
                     {errors.aceptar && <span className="text-xs text-red-500">{errors.aceptar}</span>}
                   </div>
+
+                  <HCaptchaWidget
+                    ref={hcaptchaRef}
+                    onVerify={(token) => {
+                      setHcaptchaToken(token);
+                      if (errors.captcha) setErrors({ ...errors, captcha: "" });
+                    }}
+                    onExpire={() => setHcaptchaToken("")}
+                    className="mt-2 mb-1"
+                  />
+                  {errors.captcha && <span className="text-xs text-red-500 text-center font-medium">{errors.captcha}</span>}
 
                   <button 
                     type="submit" 
