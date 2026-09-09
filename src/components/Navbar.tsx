@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { Phone } from "lucide-react";
 
 interface MobileAccordionProps {
   label: string;
@@ -363,7 +364,16 @@ export default function Navbar() {
         </div>
 
         {/* Right Column: Action Button & Hamburger Toggle */}
-        <div className="flex items-center gap-4 justify-end shrink-0">
+        <div className="flex items-center gap-3 xl:gap-4 justify-end shrink-0">
+          <a
+            href="tel:+593981296179"
+            aria-label="Llamar al 098 1296179"
+            className="hidden lg:inline-flex items-center gap-1.5 rounded border border-[#5F0091] bg-[#5F0091] px-2 py-2 text-[#FFC107]! text-[11px] xl:text-sm 2xl:text-base font-semibold whitespace-nowrap shadow-lg transition-all hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FFC107]"
+            style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+          >
+            <Phone aria-hidden="true" className="h-4 w-4 shrink-0" />
+            <span className="text-[#FFC107]!">098 1296179</span>
+          </a>
           <a
             href="/cotiza"
             className="hidden lg:block rounded transition-all hover:brightness-110 shadow-lg whitespace-nowrap lg:px-4 lg:py-2 lg:text-xs xl:px-6 xl:py-2.5 xl:text-sm 2xl:px-8 2xl:py-3 2xl:text-base"
@@ -381,6 +391,14 @@ export default function Navbar() {
             }}
           >
             Cotiza gratis
+          </a>
+
+          <a
+            href="tel:+593981296179"
+            aria-label="Llamar al 098 1296179"
+            className={`lg:hidden relative flex h-11 w-11 items-center justify-center rounded-lg text-white! transition-colors hover:text-[#FFC107]! focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FFC107] ${isMobileMenuOpen ? "invisible pointer-events-none" : ""}`}
+          >
+            <Phone aria-hidden="true" className="h-6 w-6" />
           </a>
 
           {/* Hamburger Menu Toggle (visible only on mobile/tablet) - animated morphing icon */}
@@ -428,8 +446,8 @@ export default function Navbar() {
         style={{ background: "linear-gradient(160deg, #5C0B87 0%, #45086a 100%)" }}
       >
         {/* Drawer Header (close is handled by the morphing hamburger which stays on top) */}
-        <div className="flex shrink-0 items-center border-b border-white/10 px-6 py-5">
-          <a href="/" onClick={closeMobileMenu} aria-label="Ir a la página de inicio de One True" className="inline-flex">
+        <div className="flex shrink-0 items-center border-b border-white/10 px-6 pt-11 pb-5">
+          <a href="/" onClick={closeMobileMenu} aria-label="Ir a la página de inicio de One True" className="inline-flex -translate-y-1.5">
             <img src="/navbar.webp" alt="One True Ecuador Logo" className="h-9 w-auto object-contain" />
           </a>
         </div>
@@ -476,7 +494,17 @@ export default function Navbar() {
         </nav>
 
         {/* Sticky Action Button */}
-        <div className="shrink-0 border-t border-white/10 p-5">
+        <div className="shrink-0 border-t border-white/10 p-5 space-y-3">
+          <a
+            href="tel:+593981296179"
+            onClick={closeMobileMenu}
+            aria-label="Llamar al 098 1296179"
+            className="flex items-center justify-center gap-2 rounded border border-[#5F0091] bg-[#5F0091] py-3 text-[#FFC107]! text-base font-semibold shadow-lg transition-all hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FFC107]"
+            style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+          >
+            <Phone aria-hidden="true" className="h-4 w-4 shrink-0" />
+            <span className="text-[#FFC107]!">098 1296179</span>
+          </a>
           <a
             href="/cotiza"
             onClick={closeMobileMenu}

@@ -1,0 +1,15 @@
+[mcp_servers.playwright]
+command = "cmd"
+args = [
+    "/c",
+    "npx",
+    "-y",
+    "@playwright/mcp@latest",
+]
+
+[mcp_servers.stitch]
+command = "npx"
+args = [
+    "-y",
+    "@getbridge/mcp-stitch",
+]
