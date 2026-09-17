@@ -207,9 +207,9 @@ export default function Navbar() {
       `}} />
       <div className="w-full max-w-[1600px] mx-auto flex items-center justify-between relative">
         {/* Left Column: Logo */}
-        <div className="w-[150px] sm:w-[160px] lg:w-[170px] xl:w-[200px] 2xl:w-[220px] flex items-center justify-start shrink-0">
+        <div className="w-[110px] sm:w-[160px] lg:w-[170px] xl:w-[200px] 2xl:w-[220px] flex items-center justify-start shrink-0">
           <a href="/" aria-label="Ir a la página de inicio de One True" className="inline-flex">
-            <img src="/navbar.webp" alt="One True Ecuador Logo" className="h-14 sm:h-14 md:h-18 w-auto object-contain" />
+            <img src="/navbar.webp" alt="One True Ecuador Logo" className="h-11 sm:h-14 md:h-18 w-auto object-contain" />
           </a>
         </div>
 
@@ -364,7 +364,7 @@ export default function Navbar() {
         </div>
 
         {/* Right Column: Action Button & Hamburger Toggle */}
-        <div className="flex items-center gap-3 xl:gap-4 justify-end shrink-0">
+        <div className="flex items-center gap-2 sm:gap-3 xl:gap-4 justify-end shrink-0">
           <a
             href="tel:+593981296179"
             aria-label="Llamar al 098 1296179"
@@ -394,17 +394,19 @@ export default function Navbar() {
           </a>
 
           <a
-            href="tel:+593981296179"
-            aria-label="Llamar al 098 1296179"
-            className={`lg:hidden relative flex h-11 w-11 items-center justify-center rounded-lg text-white! transition-colors hover:text-[#FFC107]! focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FFC107] ${isMobileMenuOpen ? "invisible pointer-events-none" : ""}`}
+            href="/cotiza"
+            aria-label="Cotice aquí"
+            className={`lg:hidden relative inline-flex h-11 items-center justify-center gap-2 rounded-full bg-[#FFC107] px-2 text-[13px] font-bold text-[#5F0091]! shadow-lg transition-all hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FFC107] sm:px-3.5 sm:text-sm ${isMobileMenuOpen ? "invisible pointer-events-none" : ""}`}
+            style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
           >
-            <Phone aria-hidden="true" className="h-6 w-6" />
+            <Phone aria-hidden="true" className="h-[18px] w-[18px] shrink-0 sm:h-5 sm:w-5" />
+            <span className="whitespace-nowrap">Cotice aquí</span>
           </a>
 
           {/* Hamburger Menu Toggle (visible only on mobile/tablet) - animated morphing icon */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden relative z-[60] mr-2 sm:mr-4 flex h-11 w-11 items-center justify-start rounded-lg text-white! focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFC107]/70 transition-colors"
+            className="lg:hidden relative z-[60] sm:mr-4 flex h-11 w-11 items-center justify-start rounded-lg text-white! focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFC107]/70 transition-colors"
             aria-label={isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={isMobileMenuOpen}
           >
