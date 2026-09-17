@@ -394,8 +394,8 @@ export default function Navbar() {
           </a>
 
           <a
-            href="/cotiza"
-            aria-label="Cotice aquí"
+            href="tel:+593981296179"
+            aria-label="Llamar al 098 1296179"
             className={`lg:hidden relative inline-flex h-11 items-center justify-center gap-2 rounded-full bg-[#FFC107] px-2 text-[13px] font-bold text-[#5F0091]! shadow-lg transition-all hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FFC107] sm:px-3.5 sm:text-sm ${isMobileMenuOpen ? "invisible pointer-events-none" : ""}`}
             style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
           >
