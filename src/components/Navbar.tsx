@@ -375,7 +375,7 @@ export default function Navbar() {
             <span className="text-[#FFC107]!">098 1296179</span>
           </a>
           <a
-            href="/cotiza"
+            href="tel:0981296179"
             className="hidden lg:block rounded transition-all hover:brightness-110 shadow-lg whitespace-nowrap lg:px-4 lg:py-2 lg:text-xs xl:px-6 xl:py-2.5 xl:text-sm 2xl:px-8 2xl:py-3 2xl:text-base"
             style={{
               fontFamily: "var(--font-montserrat), sans-serif",
@@ -508,7 +508,7 @@ export default function Navbar() {
             <span className="text-[#FFC107]!">098 1296179</span>
           </a>
           <a
-            href="/cotiza"
+            href="tel:0981296179"
             onClick={closeMobileMenu}
             aria-label="Cotizar gratis servicio de poligrafía y seguridad"
             className="block w-full rounded py-3.5 text-base shadow-lg transition-all hover:brightness-110"
